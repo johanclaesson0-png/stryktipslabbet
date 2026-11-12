@@ -6,6 +6,7 @@ test fixtures, and internal snapshots. This script never invents live data.
 """
 from datetime import datetime, timezone
 from pathlib import Path
+import csv
 import json
 import math
 import shutil
@@ -79,6 +80,7 @@ def main():
     shutil.copy2(root / "status.html", dest / "status.html")
     shutil.copy2(root / "veckans-analys.html", dest / "veckans-analys.html")
     shutil.copy2(root / "fordjupning.html", dest / "fordjupning.html")
+    shutil.copy2(root / "spela-sjalv.html", dest / "spela-sjalv.html")
 
     now = datetime.now(timezone.utc)
     status = {
@@ -217,6 +219,105 @@ def main():
             "settled": paid,
             "current": instant(item["reg_close_time"]) > now,
         })
+
+    # 100-kronorssystem publiceras bara när de kan jämföras med en redan
+    # godkänd förhandsanalys. Ingen utbetalning gissas eller rekonstrueras.
+    base_by_draw = {a["draw_number"]: a for a in report_index}
+    for row in public_rounds:
+        n = row["draw_number"]
+        solo_source = root / "data" / "personal" / (str(n) + ".json")
+        solo_valid = False
+        solo_settled = False
+        try:
+            original = base_by_draw[n]
+            solo = json.loads(solo_source.read_text(encoding="utf-8"))
+            if (solo.get("schema") == "stryktipslabbet-personal-100-v1" and
+                solo.get("model_version") == original["model_version"] and
+                solo.get("draw_number") == n and
+                solo.get("original_observed_at_utc") == original["observed_at_utc"] and
+                solo.get("source_snapshot_sha256") == original.get("source_snapshot_sha256") and
+                solo.get("reg_close_time") == original["reg_close_time"] and
+                solo.get("max_budget") == 100 and
+                len(solo["systems"]) == 3):
+                solo_valid = True
+                for s in solo["systems"]:
+                    selections = s["choices"]
+                    if (len(selections) != 13 or
+                        any(not c or any(x not in "1X2" for x in c) or len(set(c)) != len(c) for c in selections)):
+                        solo_valid = False
+                        break
+                    costs = math.prod(len(c) for c in selections)
+                    if costs != s["cost"] or not 1 <= costs <= 100:
+                        solo_valid = False
+                        break
+                    p13 = math.prod(
+                        sum(m["p"]["1X2".index(x)] for x in c)
+                        for m, c in zip(original["matches"], selections)
+                    )
+                    if abs(p13 - s["probability_all_13"]) > 0.000001:
+                        solo_valid = False
+                        break
+            if solo_valid:
+                path = dest / "data" / "personal" / (str(n) + ".json")
+                path.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(solo_source, path)
+                if n in verified_result_draws:
+                    original_result = json.loads(
+                        (root / "data" / "results" / (str(n) + ".json")).read_text(encoding="utf-8"))
+                    payout_file = root / "data" / "personal_settlements" / (str(n) + ".json")
+                    if payout_file.exists():
+                        record = json.loads(payout_file.read_text(encoding="utf-8"))
+                        if (record.get("schema") == "stryktipslabbet-personal-settlement-v1" and
+                            record.get("draw_number") == n and
+                            record.get("source_snapshot_sha256") == original.get("source_snapshot_sha256") and
+                            record.get("source_observed_at_utc") == original["observed_at_utc"] and
+                            record.get("outcome") == original_result["outcome"] and
+                            record.get("payouts") == original_result["payouts"] and
+                            len(record.get("systems", [])) == 3):
+                            target = dest / "data" / "personal_settlements" / (str(n) + ".json")
+                            target.parent.mkdir(parents=True, exist_ok=True)
+                            shutil.copy2(payout_file, target)
+                            solo_settled = True
+        except (OSError, ValueError, TypeError, KeyError, ZeroDivisionError, json.JSONDecodeError):
+            pass
+        row["personal_available"] = solo_valid
+        row["personal_settled"] = solo_settled
+
+    # Enbart offentlig sammanfattning av den kronologiska äldre Elo-modellen.
+    # Den nya oddsmodellen får inte ärva det äldre testets resultat.
+    path = root / "data" / "2024-2026-elo-100kr-jamforelse.csv"
+    if path.exists():
+        with path.open("r", encoding="utf-8", newline="") as f:
+            history = list(csv.DictReader(f, delimiter=";"))
+        if len(history) >= 100:
+            budgets = {}
+            for budget in (100, 1800):
+                suffix = str(budget)
+                budgets[suffix] = {
+                    "spent": sum(int(r["cost"+suffix]) for r in history),
+                    "rounds_with_10_or_more": sum(
+                        any(int(r["n"+str(k)+"_"+suffix]) > 0 for k in (10, 11, 12, 13))
+                        for r in history
+                    ),
+                    "rows_13": sum(int(r["n13_"+suffix]) for r in history),
+                    "rows_12": sum(int(r["n12_"+suffix]) for r in history),
+                    "rows_11": sum(int(r["n11_"+suffix]) for r in history),
+                    "rows_10": sum(int(r["n10_"+suffix]) for r in history),
+                    "expected_13": round(sum(float(r["p13_"+suffix]) for r in history), 6),
+                }
+            public_history = {
+                "schema": "stryktipslabbet-solo-elo-history-v1",
+                "model": "experimentell historisk Elo, inte dagens oddsmodell",
+                "n_rounds": len(history),
+                "from": history[0]["date"], "to": history[-1]["date"],
+                "budgets": budgets,
+                "note": "Utdelningar för alla 105 omgångar är inte fullständigt verifierade; tabellen visar träffar, inte avkastning."
+            }
+            (dest / "data" / "solo-history.json").write_text(
+                json.dumps(public_history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    status["personal_100_analyses_published"] = sum(bool(r["personal_available"]) for r in public_rounds)
+    status["personal_100_settlements_published"] = sum(bool(r["personal_settled"]) for r in public_rounds)
+
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
         "generated_at_utc": now.isoformat(),
