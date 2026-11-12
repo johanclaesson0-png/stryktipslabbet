@@ -218,6 +218,26 @@ def create_settlement(analysis, result):
     close = instant(analysis["reg_close_time"])
     if not valid_result(result, {analysis["draw_number"]: close}, instant(result["observed_at_utc"])):
         raise ValueError("Officiellt facit/utdelning är inte validerat")
+    match_scores = []
+    for item, actual in zip(analysis["matches"], result["outcome"]):
+        true_index = SIGNS.index(actual)
+        forecast = item["p"]
+        brier = sum((p - (1.0 if j == true_index else 0.0)) ** 2
+                    for j, p in enumerate(forecast))
+        match_scores.append({
+            "number": item["number"],
+            "outcome": actual,
+            "predicted": SIGNS[max(range(3), key=lambda j: forecast[j])],
+            "brier": round(brier, 8),
+            "log_loss": round(-math.log(max(forecast[true_index], 1e-12)), 8)
+        })
+    match_quality = {
+        "n": len(match_scores),
+        "top_pick_correct": sum(m["outcome"] == m["predicted"] for m in match_scores),
+        "mean_brier": round(sum(m["brier"] for m in match_scores) / 13, 7),
+        "mean_log_loss": round(sum(m["log_loss"] for m in match_scores) / 13, 7),
+        "matches": match_scores
+    }
     all_systems = []
     for s in analysis["systems"]:
         d = correct_rows(s["choices"], result["outcome"])
@@ -240,6 +260,7 @@ def create_settlement(analysis, result):
         "outcome": result["outcome"],
         "payouts": result["payouts"],
         "systems": all_systems,
+        "forecast_quality": match_quality,
         "hypothetical": True,
         "note": "Rättat experiment: hypotetiska matematiska system, inga bekräftade spelade insatser."
     }
