@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Datastatus – Stryktipslabbet</title>
+<style>body{margin:0;background:#0c111b;color:#e9f0f8;font:15px system-ui,Arial,sans-serif}main{max-width:720px;margin:50px auto;padding:20px}a{color:#93b8ff}.card{background:#141d2b;border:1px solid #2a384d;border-radius:16px;padding:24px;margin:20px 0}h1{margin-top:0}.k{color:#a7b6c9;font-size:13px}p{line-height:1.6}.ok{color:#65e3b5}.warn{color:#f8c57a}.bad{color:#ff9393}.row{padding:12px 0;border-top:1px solid #2a384d;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.row b{text-align:right}</style></head>
+<body><main><a href="./index.html">← Till Stryktipslabbet</a><div class="card"><h1>Datastatus</h1><p id="state">Kontrollerar publicerad datastatus…</p><div id="rows"></div><p class="k">Observationstider är inte garanterade spelstoppsögonblick. Första fungerande schemakörningen behöver vara aktiverad på GitHub. Den inbyggda kupongen kan vara äldre än dagens datum.</p></div><p class="k">18+ · Spela ansvarsfullt · <a href="https://stodlinjen.se/">Stödlinjen</a></p></main>
+<script>
+const s=document.getElementById('state'), rows=document.getElementById('rows');
+const add=(k,v)=>{const d=document.createElement('div');d.className='row';const l=document.createElement('span'),b=document.createElement('b');l.textContent=k;b.textContent=v;d.append(l,b);rows.append(d)};
+const date=x=>x?new Date(x).toLocaleString('sv-SE',{dateStyle:'medium',timeStyle:'short'}):'–';
+(async()=>{try{const r=await fetch('./data/status.json',{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const o=await r.json();if(o.schema!=='stryktipslabbet-public-status-v8')throw Error('Okänd datastatus');
+let age=o.latest_observed_at_utc?(Date.now()-Date.parse(o.latest_observed_at_utc))/3600000:Infinity;
+if(!o.snapshot_available){s.className='bad';s.textContent='Ingen verifierbar publicerad kupongobservation finns ännu.'}
+else if(!o.snapshot_usable_now){s.className='warn';s.textContent='Senaste observationens spelstopp har passerat. Inväntar nästa giltiga kupong.'}
+else if(age>8){s.className='warn';s.textContent='Kupongen är fortfarande spelbar enligt arkivet, men observationen är över åtta timmar gammal.'}
+else{s.className='ok';s.textContent='En kvalificerad kupongobservation är publicerad. Det betyder inte att uppgifterna är live just nu.'}
+add('Omgång',String(o.latest_draw_number??'–'));add('Observerad',date(o.latest_observed_at_utc));add('Spelstopp',date(o.reg_close_time));add('Publiceringen byggdes',date(o.generated_at_utc));add('Antal publicerade facit',String(o.results_published||0));}
+catch(e){s.className='bad';s.textContent='Kunde inte läsa publicerad datastatus: '+e.message}})();
+</script></body></html>
