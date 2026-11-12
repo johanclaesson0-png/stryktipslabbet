@@ -55,7 +55,7 @@ def optimize(rows, budget=BUDGET):
     """
     if len(rows) != 13:
         raise ValueError("Exakt 13 matcher krävs")
-    if not 1 <= budget <= 100000:
+    if not 1 <= budget <= 2000000:
         raise ValueError("Ogiltig budget")
     dp = {1: (0.0, ())}
     for row in rows:
