@@ -1,973 +1,115 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="sv">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Stryktipslabbet 8.0 — 105 historiska kuponger, systemtest och utdelning</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101924"><title>Stryktipslabbet – enkla tips för ert lag</title>
 <style>
-:root { --bg:#0c111b;--panel:#141d2b;--panel2:#192537;--line:#2a384d;--ink:#e9f0f8;--soft:#a7b6c9;--muted:#72839a;--mint:#65e3b5;--blue:#93b8ff;--amber:#f8c57a;--red:#ff9393 }
-*{box-sizing:border-box}body{background:radial-gradient(circle at 75% -10%,#1d344a 0%,transparent 33%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin:0;font-size:14px}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--mint);outline-offset:2px}header{padding:27px max(calc((100vw - 1240px)/2),24px) 18px;border-bottom:1px solid var(--line)}.headtop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.logo{display:flex;gap:12px;align-items:center}.brandmark{background:linear-gradient(135deg,#65e3b5,#528dc5);color:#07121b;font-weight:900;font-size:19px;width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;letter-spacing:-2px}.brandname{font-size:21px;font-weight:800;letter-spacing:-.7px}.brandname span{color:var(--mint)}.eyebrow{font-size:11px;color:var(--muted);font-weight:800;letter-spacing:2px;text-transform:uppercase}.subtitle{color:var(--soft);margin:8px 0 0;max-width:670px;line-height:1.6}.flag{background:#372d1d;color:var(--amber);border:1px solid #665035;padding:9px 12px;border-radius:9px;font-weight:700;font-size:12px}.wrap{max-width:1240px;margin:0 auto;padding:24px}.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:22px;overflow-x:auto}.tab{border:0;background:transparent;color:var(--soft);padding:14px 16px;font-weight:700;white-space:nowrap;border-bottom:2px solid transparent}.tab.active{border-bottom-color:var(--mint);color:var(--mint)}.grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.panelpad{padding:20px}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:15px;flex-wrap:wrap}h1,h2,h3,p{margin-top:0}h2{font-size:18px;letter-spacing:-.35px;margin-bottom:4px}h3{font-size:15px;margin-bottom:10px}.small{font-size:12px;color:var(--soft);line-height:1.55}.muted{color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.metric .v{font-size:24px;font-weight:800;letter-spacing:-.8px;margin-top:8px}.metric .l{font-size:12px;color:var(--soft)}.metric .sub{font-size:11px;color:var(--muted);margin-top:6px}.mint{color:var(--mint)}.amber{color:var(--amber)}.red{color:var(--red)}.blue{color:var(--blue)}.match{border-top:1px solid var(--line);padding:14px 18px}.matchrow{display:grid;grid-template-columns:26px minmax(0,1.2fr) minmax(150px,1.45fr) 78px;align-items:center;gap:13px}.n{color:var(--muted);font-weight:800}.fixture{font-weight:700;line-height:1.35;overflow-wrap:anywhere}.faceline{display:flex;gap:5px;margin-top:5px;font-size:11px;color:var(--soft)}.tinytag{border-radius:5px;background:#23344c;color:var(--blue);padding:2px 5px}.prob{display:flex;gap:5px;align-items:stretch}.sign{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:9px;min-width:45px;flex:1;padding:7px 4px;text-align:center;line-height:1.5}.sign strong{display:block;font-size:14px}.sign span{font-size:11px;color:var(--muted)}.sign.sel{background:#123e37;border-color:#368f70}.sign.sel strong,.sign.sel span{color:#8af4cd}.sign.hi .edge{color:var(--mint)}.edge{font-size:10px!important}.value{text-align:right;font-weight:800;font-size:14px}.edit{border:0;border-radius:7px;padding:6px 9px;margin-top:5px;background:#23354d;color:var(--blue);font-size:11px}.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--soft);padding:12px 18px;background:#101927}.sideitem{padding:11px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px}.controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:10px;padding:11px 15px;background:#233347;color:var(--ink);font-weight:750}.btn:hover{background:#2a4058}.btn.primary{background:var(--mint);color:#0c1e22;border-color:var(--mint)}.btn.primary:hover{background:#8deccd}.btn.ghost{background:transparent}.btn.warn{border-color:#865746;color:#ffd0ae}.input{border:1px solid var(--line);background:#0d1724;color:var(--ink);border-radius:9px;padding:10px 11px;width:100%;min-width:0}.field{display:flex;flex-direction:column;gap:6px}.field label{color:var(--soft);font-size:12px;font-weight:700}.editgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0}.editgrid.names{grid-template-columns:1fr 1fr}.note{border-left:3px solid var(--mint);padding:12px 13px;background:#182d35;line-height:1.55;color:#c9e4e1;border-radius:0 8px 8px 0}.warning{border-left-color:var(--amber);background:#33291d;color:#ffe2b8}.bars{display:flex;height:14px;border-radius:8px;overflow:hidden;background:#111b26;margin-top:8px}.bars span:nth-child(1){background:#56d4aa}.bars span:nth-child(2){background:#edbf7c}.bars span:nth-child(3){background:#91b5f3}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 10px;border-top:1px solid var(--line)}th{color:var(--soft);font-size:11px;text-transform:uppercase;letter-spacing:.4px}td.num{text-align:right;font-variant-numeric:tabular-nums}.pill{display:inline-block;border-radius:6px;padding:3px 7px;background:#24374c;color:var(--blue);font-weight:700;font-size:11px}.footer{padding:25px 0;color:var(--muted);font-size:12px;line-height:1.6}.w100{width:100%}.sidebox{margin-bottom:12px}.hidden{display:none!important}textarea{min-height:245px;resize:vertical;font-family:ui-monospace,Consolas,monospace;font-size:12px;line-height:1.7}.stats2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.notice{background:#101a27;border:1px solid var(--line);border-radius:10px;padding:13px;margin:14px 0;color:var(--soft);line-height:1.6}.kbd{background:#24354b;border:1px solid #45566d;border-radius:4px;padding:2px 5px}.input.smallinput{width:100px}input[type=range]{width:100%;accent-color:var(--mint)}.scenario-grid{display:grid;grid-template-columns:220px 1fr;gap:20px}.resultcard{display:flex;flex-direction:column;gap:10px}.resultitem{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:8px}.footlinks a{color:var(--blue)}
-@media(max-width:980px){.grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.matchrow{grid-template-columns:24px minmax(0,1fr) minmax(135px,1.25fr) 60px;gap:8px}.side-panel{order:-1}}
-@media(max-width:560px){header{padding:18px}.wrap{padding:14px}.flag{font-size:10px}.metrics{gap:8px}.metric{padding:12px}.metric .v{font-size:19px}.match{padding:13px 10px}.matchrow{grid-template-columns:20px minmax(80px,1fr) minmax(129px,1.35fr);gap:6px}.value{display:flex;grid-column:2 / 4;justify-content:space-between;align-items:center;padding-top:4px}.sign{min-width:37px;padding:5px 1px}.sign strong{font-size:12px}.sign span{font-size:10px}.editgrid.names{grid-template-columns:1fr}.scenario-grid{grid-template-columns:1fr}.panelpad{padding:15px}}
-
-
-.strategygrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.strategycard{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}.strategycard.featured{border-color:#3b8d7b;box-shadow:inset 0 3px var(--mint)}.strategy-head{padding:18px 18px 12px}.strategy-head h3{font-size:18px;margin:0 0 7px}.strategy-head .desc{min-height:38px}.strategy-content{padding:2px 18px 16px;flex:1}.strategy-number{font-size:29px;font-weight:800;letter-spacing:-.6px;color:var(--mint)}.strategy-prob{font-size:22px;font-weight:800}.strategy-stat{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--line)}.strategy-choices{font:12px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--soft);background:var(--panel2);border-radius:10px;padding:10px;line-height:1.7;overflow-wrap:anywhere}.strategy-actions{display:flex;gap:8px;margin-top:13px;flex-wrap:wrap}.strategy-actions .btn{flex:1;min-width:92px}.dividerline{height:1px;background:var(--line);margin:20px 0}.archiveform{display:grid;grid-template-columns:2fr 1fr;gap:12px}.archiverow{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--line)}.archiverow b{color:var(--ink)}.archiverow .small{margin-top:4px}.labelButton{display:inline-flex;align-items:center;justify-content:center;cursor:pointer}.tagdemo{font-size:11px;color:var(--amber);background:#302719;padding:4px 7px;border-radius:5px}.compareresult{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.compMini{background:var(--panel2);padding:12px;border:1px solid var(--line);border-radius:12px}.compMini b{display:block;font-size:17px;margin:7px 0}.compMini .small{font-size:11px}#archiveStats .resultitem{padding:10px 0}.noteStrong{color:var(--amber)}
-@media(max-width:970px){.strategygrid{grid-template-columns:1fr}.strategy-head .desc{min-height:0}.compareresult{grid-template-columns:1fr 1fr}}@media(max-width:560px){.archiveform,.compareresult{grid-template-columns:1fr}.strategycard{min-width:0}}
-
-/* Historikmodul */
-.btcalrow{display:grid;grid-template-columns:70px 1fr 200px;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
-.btcaltrack{height:8px;background:#0c1723;border-radius:10px;margin-bottom:4px;overflow:hidden}
-.btcaltrack span{display:block;height:100%;border-radius:10px}
-#historik .metrics{margin-top:0}#historik a{color:var(--blue)}
-@media(max-width:620px){.btcalrow{grid-template-columns:52px 1fr;gap:6px}.btcalrow>div:last-child{grid-column:2}.btcalrow .small{font-size:11px}#historik .controls>.field{flex:1;min-width:135px}}
-#v5historyPanel .metrics, #rotation .metrics{margin-top:12px}
-#rotation table.compact, #v5historyPanel table.compact{width:100%;border-collapse:collapse}
-#rotation table.compact th,#rotation table.compact td{padding:10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
-#rotation table.compact th:first-child,#rotation table.compact td:first-child{text-align:left}
-#rotation table.compact th{font-size:12px;color:var(--muted)}
-#rotation .panel{min-width:0}
-@media (min-width:900px){.tabs{flex-wrap:wrap;overflow-x:visible}}
-
-/* Stryktipslabbet 7 · decision studio & provenance */
-.v7-hero{display:grid;grid-template-columns:1.3fr .7fr;gap:16px;margin-bottom:18px}
-.v7-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
-.v7-box{padding:15px;background:#111c2b;border:1px solid var(--line);border-radius:12px;min-width:0}
-.v7-box .big{font-weight:760;font-size:23px;margin:9px 0 0}
-.v7-strip{height:9px;background:#0b1622;border-radius:20px;overflow:hidden;margin:8px 0}
-.v7-strip span{height:100%;display:block;background:linear-gradient(90deg,var(--mint),#5299e0);border-radius:20px;min-width:1px}
-.v7-variants{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.v7-variant{border:1px solid var(--line);border-radius:13px;padding:16px;background:#111e30;min-width:0}
-.v7-variant h3{margin:0 0 10px}
-.v7-data-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.v7-data-grid .field{min-width:0}
-.v7-data-grid input{min-width:0;width:100%}
-.v7-num{font-variant-numeric:tabular-nums}
-.v7-summary-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
-.v7-summary-row span:first-child{color:var(--soft)}
-.v7-status{border-left:3px solid var(--blue);padding:10px 12px;background:#0e1b2b;color:var(--ink);border-radius:5px}
-.v7-risk{border-left-color:var(--amber)}
-.v7-success{border-left-color:var(--mint)}
-.v7-inline{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-#v7ScenarioTable{overflow-x:auto}
-#v7ScenarioTable table{min-width:570px}
-#v7ScenarioTable th,#v7ScenarioTable td{text-align:right;padding:11px 9px;white-space:nowrap}
-#v7ScenarioTable th:first-child,#v7ScenarioTable td:first-child{text-align:left}
-#v7Studio input[type=number]{font-variant-numeric:tabular-nums}
-@media(max-width:1000px){.v7-hero{grid-template-columns:1fr}.v7-variants{grid-template-columns:1fr}.v7-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.v7-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v7-data-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v7-box .big{font-size:20px}}
+:root{color-scheme:dark;--bg:#0b1420;--surface:#162436;--surface2:#203247;--stroke:#2b4258;--text:#f4f8fc;--muted:#b4c6d8;--mint:#76e5b2;--yellow:#ffcf88;--blue:#aed1ff}
+*{box-sizing:border-box}body{margin:0;color:var(--text);background:radial-gradient(ellipse 100% 45% at 70% -20%,#254962,transparent 85%),var(--bg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Arial}
+a{color:var(--blue)}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+main{max-width:1024px;margin:auto;padding:18px 20px 55px}header{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:4px 0 24px;flex-wrap:wrap}
+.brand{font-weight:850;letter-spacing:-.7px;font-size:23px}.brand span{color:var(--mint)}.nav{display:flex;gap:14px;flex-wrap:wrap;font-size:13px}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.08;letter-spacing:-1px;margin:10px 0 12px}h2{font-size:22px;letter-spacing:-.5px;margin:0 0 10px}h3{font-size:18px;margin:0 0 6px}p{margin:8px 0 12px}.muted{color:var(--muted)}.eyebrow{font-size:12px;color:var(--mint);text-transform:uppercase;letter-spacing:1.5px;font-weight:800}
+.panel{background:var(--surface);border:1px solid var(--stroke);padding:22px;border-radius:17px;margin-top:18px}
+.intro{padding:30px 0 12px;max-width:740px}.lead{font-size:19px;color:#d5e3ef;line-height:1.6}.small{font-size:13px;color:var(--muted)}
+.status{padding:12px 15px;border-radius:10px;background:#28323e;border-left:4px solid var(--yellow);margin:15px 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}
+.stats div{padding:14px;background:#111e2b;border:1px solid var(--stroke);border-radius:12px}.stats strong{display:block;font-size:20px}.stats small{font-size:12px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.step{padding:13px;border:1px solid var(--stroke);border-radius:12px;background:#142337}.step b{display:block;margin-bottom:5px}.number{display:inline-grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#285048;color:var(--mint);font-weight:800;margin-right:7px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:16px}
+.card{border:1px solid var(--stroke);background:var(--surface);border-radius:16px;padding:19px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.card.selected{border-color:var(--mint);box-shadow:0 0 0 1px #76e5b288}
+.card p{font-size:13px;color:var(--muted);min-height:56px}.card .price{font-size:26px;font-weight:850;letter-spacing:-.5px}
+.card button{margin-top:auto}.button{color:#081a23;background:var(--mint);border:0;border-radius:9px;padding:11px 13px;font-weight:800}.button.secondary{background:#2b4257;color:var(--text);border:1px solid #4b677d}.button:hover{filter:brightness(1.07)}
+.tag{display:inline-block;border:1px solid #40576a;border-radius:99px;color:#e0eff8;font-size:12px;padding:3px 9px;width:max-content}
+.details{display:none}.details.open{display:block}.match{display:grid;grid-template-columns:38px 1fr 115px;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #2b4053}.match span{font-size:13px;color:var(--muted)}.match b{font-size:14px}.signs{justify-self:end;display:flex;gap:4px}.sign{width:30px;text-align:center;padding:6px 0;border:1px solid #4b5d70;border-radius:7px;color:var(--muted);font-weight:700}.sign.on{background:#215b54;color:#bdfbe1;border-color:#439d87}
+.tips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}.tip{background:#101c2b;padding:14px;border-radius:10px;border:1px solid #27394d}.tip b{color:var(--text)}.tip p{font-size:13px;color:var(--muted);margin:6px 0 0}
+.footer{margin-top:25px;padding-top:20px;border-top:1px solid var(--stroke);font-size:12px;color:var(--muted)}
+@media(max-width:760px){main{padding:14px 13px 48px}.cards,.steps,.stats,.tips{grid-template-columns:1fr}.panel{padding:16px}.intro{padding:22px 0 5px}.lead{font-size:17px}.card p{min-height:unset}.match{grid-template-columns:28px 1fr 107px;gap:6px}.sign{width:28px}}
 </style>
 </head>
-<body>
-<header><div class="headtop"><div class="logo"><div class="brandmark">1X2</div><div><div class="eyebrow">Matchanalys · sannolikheter · system</div><div class="brandname">STRYKTIPS<span>LABBET</span></div></div></div><div class="flag" id="sourceFlag">● KUPONG 4979 · DATERAT UTDRAG (EJ LIVE)</div></div><p class="subtitle">För ett 10-personers tipslag: 1 800 kr per omgång. Jämför tre system, analysera streckvärde och följ ett öppet facit även de veckor du inte tippar. <a href="./veckans-analys.html" style="color:#6be4bb;font-weight:800;white-space:nowrap">⚽ Veckans automatiska analys</a> · <a href="./status.html" style="color:#93b8ff;white-space:nowrap">Kontrollera datastatus</a></p></header>
-<main class="wrap">
-<nav class="tabs" id="tabs"><button class="tab active" data-tab="overview">Kuponganalys</button><button class="tab" data-tab="compare">Tre strategier</button><button class="tab" data-tab="studio">Beslutsstudio</button><button class="tab" data-tab="builder">Bygg system</button><button class="tab" data-tab="scenario">Egen prognos</button><button class="tab" data-tab="settle">Rätta kupongen</button><button class="tab" data-tab="data">Data &amp; import</button><button class="tab" data-tab="archive">Omgångsarkiv</button><button class="tab" data-tab="historik">Historik · 2 år</button><button class="tab" data-tab="rotation">Lagets turordning</button><button class="tab" data-tab="quality">Datakvalitet &amp; odds</button></nav>
-<div class="metrics" id="metrics"></div><section class="tabpage hidden" id="compare">
-<div class="panel panelpad" style="margin-bottom:18px">
-<div class="sectionhead"><div><h2>Tre strategier – samma 1 800-kronorstak</h2><p class="small">Tre matematiska M-system byggda från samma matchprognoser. Vi räknar 13-rättschansen exakt givet prognoserna och markerar skrällprofilen separat. Ett lägre streck kan ge högre utdelning, men är inte en garanti.</p></div><div class="pill" id="compareSource">Inlästa odds</div></div>
-<div class="controls"><div class="field" style="min-width:180px"><label for="cmpBudget">Budgettak (kr)</label><input class="input" id="cmpBudget" max="50000" min="1" step="1" type="number" value="1800"/></div><div style="align-self:end"><button class="btn" id="recalcCompare">Räkna om alla tre</button></div></div>
-<div class="notice" id="compareInfo">Systemen är beräknade ur marginaljusterade odds eller dina egna prognoser, inte en tränad oberoende matchmodell.</div>
-</div>
-<div class="strategygrid" id="compareCards"></div>
-<div class="grid" style="margin-top:18px"><div class="panel panelpad"><h3>Varför blir systemen olika?</h3><p class="small">Balanserad maximerar sannolikheten att få alla rätt. Värde och jackpot premierar successivt understreckade tecken genom en <em>streckbaserad sökfunktion</em>. Det är en experimentell metod för systemurval – <strong>inte</strong> verifierat positivt väntevärde eller en prognos över vinsten.</p><div class="small">Sannolikheten för 13 rätt = produkten av summan av inkluderade teckens sannolikheter i varje match. Minst en rad med 12+ är sannolikheten att samtliga matchutfall utom högst ett finns med bland garderingarna.</div></div><div class="panel panelpad"><h3>Så används verktyget</h3><p class="small">Välj <b>Använd systemet</b> för att flytta tecknen till Kuponganalys och Bygg system. Gå sedan till Omgångsarkiv och frys en jämförelse före spelstopp. Efter matcherna fyller du i rätt rad och de officiella utdelningarna.</p><button class="btn primary w100" id="goArchive">Gå till omgångsarkivet</button></div></div>
+<body><main>
+<header><div class="brand">STRYKTIPS<span>LABBET</span> ⚽</div><nav class="nav"><a href="./veckans-analys.html">Alla tips</a><a href="./fordjupning.html">Fördjupning</a><a href="./status.html">Uppdateringar</a></nav></header>
+<section class="intro"><div class="eyebrow">För er som är 10 personer i tipslaget</div><h1>Vad ska vi tippa i helgen?</h1>
+<p class="lead">Här får ni tre färdiga förslag på hur ni kan välja tecken i Stryktipsets 13 matcher. Vi jämför dem innan ni bestämmer er.</p></section>
+<div id="status" class="status" role="status">Hämtar senaste tipsförslagen …</div>
+<div class="stats" id="stats"><div><small>Budget i laget</small><strong>1 800 kr</strong></div><div><small>Matcher varje omgång</small><strong>13</strong></div><div><small>Vår tur att tippa</small><strong>Ungefär var 10:e vecka</strong></div></div>
+<section class="panel"><h2>Så använder du sidan</h2><div class="steps">
+<div class="step"><b><span class="number">1</span>Välj ett förslag</b><span class="small">Vi visar tre sätt att välja tecken.</span></div>
+<div class="step"><b><span class="number">2</span>Titta på matcherna</b><span class="small">Se vilka matcher vi tror på och var vi garderar.</span></div>
+<div class="step"><b><span class="number">3</span>Kopiera till Svenska Spel</b><span class="small">Ni bestämmer själva om ni vill lämna in förslaget.</span></div>
+</div></section>
+<section style="margin-top:26px"><h2>Välj hur ni vill tippa</h2>
+<p class="muted">Alla förslag håller sig under 1 800 kr. Skillnaden ligger i vilka matcher vi garderar.</p><div class="cards" id="cards"></div>
 </section>
-<section class="tabpage" id="overview"><div class="grid"><div class="panel"><div class="panelpad sectionhead"><div><h2>Veckans 13 matcher</h2><div class="small">Kupongen för 14 november 2026. Odds och streck är en daterad ögonblicksbild från 12 november kl. 08:06, inte en liveström. Sannolikheter kommer från marginaljusterade odds.</div></div><span class="pill">Omgång 4979 · 12 nov kl 08:06</span></div><div class="legend"><span class="mint">● + Positiv streckskillnad</span><span class="red">● – Negativ streckskillnad</span><span>Välj 1, X eller 2 för att bygga ditt system</span></div><div id="matches"></div></div><aside class="side-panel"><div class="panel panelpad sidebox"><h3>Största skillnaderna</h3><div class="small">Tecken som är mer sannolika enligt oddsmarknaden än deras andel av spelade streck.</div><div id="topvalues"></div></div><div class="panel panelpad"><h3>Hur ska siffrorna tolkas?</h3><p class="small">Marknadssannolikheten är <b>inte</b> en självständig prognos. Den kommer från inmatade 1X2-odds, med spelbolagens marginal borttagen. Ett positivt streckvärde är inte samma sak som en verifierad positiv avkastning.</p><p class="small">För att bedöma verkligt systemvärde krävs även en modell av hur många andra som spelar varje kombination och den faktiska vinstpoolen.</p></div></aside></div></section>
-<section class="tabpage hidden" id="builder"><div class="grid"><div class="panel"><div class="panelpad sectionhead"><div><h2>Bygg ditt 13-matcherssystem</h2><div class="small">Klicka på tecken nedan. Minst ett tecken måste vara valt i varje match.</div></div><button class="btn ghost" id="resetSigns">Återställ till favoriter</button></div><div id="builderMatches"></div></div><aside class="side-panel"><div class="panel panelpad sidebox"><h3>Systemoptimeraren</h3><div class="field"><label for="budget">Maxbudget i kronor</label><input class="input" id="budget" max="50000" min="1" step="1" type="number" value="1800"/></div><div class="field" style="margin:12px 0"><label for="strategy">Strategi</label><select class="input" id="strategy"><option value="safe">Högst träffchans</option><option selected="" value="balanced">Balanserad</option><option value="value">Mer mot understreckade tecken</option></select></div><button class="btn primary w100" id="optimize">Bygg automatiskt</button><p class="small" style="margin:12px 0 0">Systemoptimeringen är en förenklad modell. Värdeinriktningen är en heuristik, inte en beräkning av faktisk förväntad vinst.</p></div><div class="panel panelpad"><h3>Din kupong</h3><div id="systemSummary"></div><button class="btn w100" id="copySystem" style="margin-top:12px">Kopiera systemet</button></div></aside></div></section>
-<section class="tabpage hidden" id="scenario"><div class="grid"><div class="panel panelpad"><div class="sectionhead"><div><h2>Vad händer om du bedömer matchen annorlunda?</h2><p class="small">Här ändrar du sannolikheterna manuellt. De ersätter oddsprognosen i analyser och systemoptimering.</p></div></div><div class="scenario-grid"><div><div class="field"><label for="scenarioMatch">Välj match</label><select class="input" id="scenarioMatch"></select></div><p class="small" style="margin-top:15px">Tryck på en match, ändra fördelningen och välj <strong>Aktivera egen prognos</strong>. Ditt systems sannolikheter räknas då om.</p></div><div><h3 id="scenarioTitle"></h3><div id="scenarioInputs"></div><div class="controls" style="margin-top:18px"><button class="btn primary" id="activateScenario">Aktivera egen prognos</button><button class="btn ghost" id="clearScenario">Återställ till odds</button></div><div class="notice" id="scenarioStatus"></div></div></div></div><aside class="panel panelpad side-panel"><h3>Metod och begränsning</h3><div class="note">Du kan pröva ett scenario som ”hemmaforwarden saknas” genom att sänka hemmalagets vinstchans. Verktyget gissar inte självt hur mycket en skada påverkar laget.</div><p class="small" style="margin-top:14px">En senare version kan beräkna effekterna automatiskt från spelar-, formations- och skadedata. Fram till dess är varje justering uttryckligen din egen bedömning.</p></aside></div></section>
-<section class="tabpage hidden" id="settle"><div class="grid"><div class="panel panelpad"><h2>Rätta systemet</h2><p class="small">Klistra in 13 tecken i kupongordning. Ange omgångens officiella utdelning per rad för varje vinstgrupp.</p><div class="field"><label for="correctRow">Rätt rad (t.ex. 1X2112X111X22)</label><input class="input" id="correctRow" maxlength="24" placeholder="13 tecken: 1, X eller 2"/></div><div class="editgrid"><div class="field"><label for="pay13">13 rätt · kr</label><input class="input" id="pay13" min="0" type="number" value="500000"/></div><div class="field"><label for="pay12">12 rätt · kr</label><input class="input" id="pay12" min="0" type="number" value="6000"/></div><div class="field"><label for="pay11">11 rätt · kr</label><input class="input" id="pay11" min="0" type="number" value="300"/></div><div class="field"><label for="pay10">10 rätt · kr</label><input class="input" id="pay10" min="0" type="number" value="50"/></div></div><button class="btn primary" id="settleBtn">Rätta kupongen</button><div id="settleOutput" style="margin-top:18px"></div></div><aside class="panel panelpad side-panel"><h3>Faktisk rättning, inte en prognos</h3><p class="small">När du anger den officiella rätta raden räknar verktyget exakt hur många av dina M-systemrader som fått 13, 12, 11 och 10 rätt. Totalsumman bygger på de utdelningsbelopp du själv matat in.</p><p class="small">Reducerade system med särskilda R/U-nycklar stöds inte i demoversionen.</p></aside></div></section>
-<section class="tabpage hidden" id="data"><div class="grid"><div class="panel panelpad"><h2>Importera 13 matcher</h2><p class="small">En rad per match, semikolonseparerat: <span class="kbd">Hemmalag;Bortalag;Odds1;OddsX;Odds2;Streck1;StreckX;Streck2</span>. Ange streck i procent (0–100), odds med punkt eller komma.</p><textarea class="input" id="importText" placeholder="Lag A;Lag B;2.05;3.40;3.70;52;24;24" spellcheck="false"></textarea><div class="controls" style="margin-top:12px"><button class="btn primary" id="importBtn">Importera 13 matcher</button><button class="btn" id="csvBtn">Ladda ned CSV</button><button class="btn ghost warn" id="demoBtn">Återställ kupong 4979</button></div><div class="controls" style="margin-top:13px"><button class="btn" id="fetchLive">Försök hämta kupong från Svenska Spel</button></div><p class="small" style="margin-top:8px">Experimentell direktläsning av en publikt dokumenterad endpoint. Den kan stoppas av webbläsarens CORS-skydd eller ändrad API-struktur. Vid fel visas ingen låtsaskupong.</p><div class="notice" id="importStatus">Dina ändringar lagras lokalt i denna webbläsare. Ingen information skickas till någon server av denna fil.</div><p class="small" style="margin:14px 0 0">Källa för den inbyggda kupongbilden: <a href="https://stryktipsettips.se/stryktipset-streck/" rel="noopener noreferrer" target="_blank">Stryktipsettips.se, 12 november 2026 kl. 08:06</a> (uppger Svenska Spel som datakälla). Streck, odds och matcher kan ändras. Kontrollera på Svenska Spel innan spel.</p></div><aside class="panel panelpad side-panel"><h3>Datakopplingar</h3><div class="sideitem"><div><b>Svenska Spel</b><div class="small">Kupong, streck, odds, omsättning, resultat</div></div><span class="pill">Testfunktion</span></div><div class="sideitem"><div><b>Football-Data</b><div class="small">Historik och ligastatistik</div></div><span class="pill">Planerat</span></div><div class="sideitem"><div><b>Externa odds</b><div class="small">Konsensus och oddsrörelser</div></div><span class="pill">Planerat</span></div><p class="small" style="margin-top:18px">Verktyget fungerar utan server. Knappen för Svenska Spel gör ett testanrop från webbläsaren och kan stoppas av källans CORS-inställningar eller ett ändrat API. För stabil uppdatering och automatisk historik behövs en separat tjänst som körs regelbundet.</p></aside></div></section>
-<section class="tabpage hidden" id="archive">
-<div class="grid"><div class="panel panelpad"><h2>Frys tre system före avspark</h2><p class="small">Spara samma tre strategier och inmatad kupong i en tidsstämplad ögonblicksbild. Då kan vi rätta dem utan att efterhandsändra sannolikheterna. Data lagras i just den här webbläsaren.</p>
-<div class="archiveform"><div class="field"><label for="archiveName">Omgång eller datum</label><input class="input" id="archiveName" placeholder="t.ex. Vecka 46 / 14 november" value="Omgång 4979 · 14 november 2026"/></div><div class="field"><label for="archiveOwner">Vems tur?</label><select class="input" id="archiveOwner"><option value="Modelltest">Modelltest</option><option value="Jag tippar">Jag tippar</option><option value="Annan i laget">Annan i laget</option></select></div></div>
-<div class="controls" style="margin-top:13px"><button class="btn primary" id="saveArchive">Frys kupong och tre system</button><button class="btn" id="exportArchive">Exportera arkiv (JSON)</button><label class="btn labelButton" for="importArchiveFile">Importera arkiv (JSON)</label><input accept=".json,application/json" hidden="" id="importArchiveFile" type="file"/></div><div class="notice" id="archiveNotice">Arkivet är tomt. Spara en prognos före spelstopp för att påbörja en ärlig resultatjämförelse.</div>
-<div class="dividerline"></div><h3>Sparade omgångar</h3><div id="archiveList"></div></div>
-<aside class="side-panel"><div class="panel panelpad sidebox"><h3>Historiskt facit</h3><div id="archiveStats"></div><p class="small">Summeringarna avser endast rättade, icke-demonstrativa omgångar. Få omgångar säger mycket lite om framtida avkastning.</p></div><div class="panel panelpad"><h3>Metod: jämför rättvist</h3><p class="small">Vi sparar prognos, streck, tecken, metodversion och tidpunkt. Både vinnare och förlorare räknas. Exempeldata utesluts ur ordinarie statistik. Att importera gamla resultat utan en dokumenterad förhandsprognos är inte backtesting.</p></div></aside></div>
-<div class="panel panelpad" id="archiveEditor" style="margin-top:18px"><h2>Rätta en sparad omgång</h2><div class="field"><label for="archiveSelect">Välj omgång</label><select class="input" id="archiveSelect"></select></div><div class="small" id="archiveSelectedMeta" style="margin:12px 0"></div><div class="field"><label for="archiveOutcome">Rätt rad (13 tecken)</label><input class="input" id="archiveOutcome" maxlength="26" placeholder="1X211X21..."/></div>
-<div class="editgrid"><div class="field"><label for="archivePay13">13 rätt · kr per rad</label><input class="input" id="archivePay13" min="0" type="number" value="0"/></div><div class="field"><label for="archivePay12">12 rätt · kr per rad</label><input class="input" id="archivePay12" min="0" type="number" value="0"/></div><div class="field"><label for="archivePay11">11 rätt · kr per rad</label><input class="input" id="archivePay11" min="0" type="number" value="0"/></div><div class="field"><label for="archivePay10">10 rätt · kr per rad</label><input class="input" id="archivePay10" min="0" type="number" value="0"/></div></div>
-<div class="controls" style="margin-top:14px"><button class="btn primary" id="settleArchive">Spara resultat och jämför</button><button class="btn ghost warn" id="deleteArchive">Ta bort vald omgång</button></div><div id="archiveSettlement" style="margin-top:16px"></div></div>
+<section class="panel details" id="details"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px"><div><h2 id="choiceTitle">Era tecken</h2><p id="choiceInfo" class="small"></p></div><button class="button" id="copy" type="button">Kopiera kupongen</button></div>
+<div id="matches"></div><p class="small">Grönmarkerat = ett tecken som ingår i förslaget. Flera gröna tecken i en match betyder att vi garderar den. Siffrorna är inte en garanti för ett visst resultat.</p>
 </section>
-<section class="tabpage hidden" id="historik">
-<div class="panel panelpad" id="v5historyPanel" style="margin-bottom:18px">
-  <div class="sectionhead"><div><h2>Historiskt utfall: insats och utdelning</h2>
-    <p class="small">Elo-prognoserna beräknades i turordning före respektive omgångs facit; utbetalningarna är offentlig efterhandsinformation. Resultaten gäller <b>simulerade M-system</b>, inte inskickade kuponger.</p>
-  </div><span class="pill">Version 6 · 105 omgångar</span></div>
-  <div class="metrics" id="v5HistoricalMetrics"></div>
-  <div class="notice"><b>Avkastning är bara jämförbar på exakt samma urval:</b> för varje strategi visar vi insats och utbetalt på samma omgångar där alla fyra officiella utdelningsbelopp är kända. Omgångar utan verifierad utdelning är <b>inte</b> nollvinst; de exkluderas från netto och ROI.</div>
-  <div class="controls" style="margin:12px 0"><button class="btn primary" id="v5FetchOfficial">Försök komplettera från Svenska Spels offentliga API</button><button class="btn" id="v5Export">Exportera uppdaterad historik (CSV)</button></div>
-  <div id="v5FetchStatus" class="small">Automatisk import är experimentell och kan blockeras av CORS eller av att det odokumenterade API:t förändras. Ett fristående Python-skript finns också att ladda ner.</div>
-</div>
-
-<div class="sectionhead"><div><h2>Historiskt test · två år tillbaka</h2><p class="small">Jämför förutsägelser som bygger på tidigare matcher med det resultat som faktiskt kom. 12 nov 2024–11 nov 2026 som standard.</p></div><span class="pill">Walk-forward · inget framtidsläckage</span></div>
-<div class="panel panelpad" id="v4modeltest" style="margin-bottom:18px">
- <div class="sectionhead"><div><h2>105 omgångar · verklig tvåårs-rättning</h2><p class="small">Tre matematiska M-system per omgång, varje system byggt från sannolikheter som modellen räknade fram innan den omgångens resultat matades in. Fast budgettak 1 800 kr.</p></div><span class="pill">Walk-forward · 2024–2026</span></div>
- <div class="note warning" style="margin-bottom:16px"><b>Begränsning:</b> Detta är ett <b>resultatbaserat Elo-experiment</b>, inte ett historiskt test av dagens odds-/streckmodell. Vi saknar verifierade förhandsodds och förhandsstreck för alla 105 omgångarna. Därför är favoritkritisk och skrällprofil <em>testprofiler</em>, inte bevisat spelvärde. Utdelningsjämförelsen omfattar endast de omgångar där faktisk utdelning kunnat verifieras.</div>
- <div class="strategygrid" id="v4BacktestCards"></div>
- <div class="notice" id="v4MoneyStatus"></div>
- <div class="sectionhead" style="margin-top:22px"><div><h3>Rätta och jämför omgång för omgång</h3><p class="small">Välj strategi. De fyra rättkolumnerna visar <b>antal vinnande enkelrader</b>, inte bara högsta rättantal.</p></div><select class="input" style="max-width:270px" id="v4Strategy"><option value="0">Balanserat</option><option value="1">Favoritkritisk testprofil</option><option value="2">Skrälltest</option></select></div>
- <div class="tablewrap" style="max-height:480px;overflow:auto"><table><thead><tr><th>Omgång</th><th>Rätt rad</th><th>Insats</th><th>13</th><th>12</th><th>11</th><th>10</th><th>Utbetalt</th></tr></thead><tbody id="v4RoundRows"></tbody></table></div>
- <div class="dividerline"></div>
- <div class="sectionhead"><div><h3>Komplettera med fler historiska utdelningar</h3><p class="small">Importera CSV med <span class="kbd">Omgång;Utd13;Utd12;Utd11;Utd10</span>. Inlästa värden visas separat som <b>ej oberoende kontrollerade</b>. Ett fullständigt tvåårigt ROI kräver utdelning för alla 105 omgångar.</p></div><label class="btn labelButton">Importera utdelningar <input type="file" id="v4PayoutFile" accept=".csv,.txt,text/csv" class="hidden" /></label></div>
- <div class="sectionhead"><div><h3>Fullt test av ursprungliga tre strategier</h3><p class="small">För att testa <b>värdeorienterad och jackpot</b> på riktigt importerar du 13 förhandsrader per omgång med både odds och streck: <span class="kbd">Omgång;MatchNr;Odds1;OddsX;Odds2;Streck1;StreckX;Streck2;Insamlad;Spelstopp</span>. Ange ISO-tidstämplar; efter spelstopp utesluts. Officiell utdelning hämtas från tabellen ovan när sådan finns.</p></div><label class="btn labelButton">Importera odds + streck <input type="file" id="v4FullFile" accept=".csv,.txt,text/csv" class="hidden" /></label></div>
- <div id="v4FullResult" class="notice">Ingen fullständigt tidsverifierad förhandskupong importerad. Resultatmodellens tvåårstest visas ovan.</div>
- <p class="small" style="margin-top:12px">Källor: <a href="https://github.com/andreyhgl/stryktipset-results" target="_blank" rel="noopener noreferrer">historiska resultat från Svenska Spel sammanställda på GitHub</a>; <a href="https://stryktipsetresultat.com/resultatarkiv/" target="_blank" rel="noopener noreferrer">utdelningar från offentliga historikarkiv</a>. Ingen av källorna ger full tvåårshistorik med tidsstämplade förhandsstreck och förhandsodds.</p>
-</div>
-<div class="notice"><b>Två olika modeller, två olika datakrav.</b> Resultatmodellen här använder lagens historiska resultat, med en förenklad Elo-beräkning och hemmafördel. Den ordinarie modellen i Kuponganalys utgår från 1X2-odds. För att göra <b>samma historiska oddsprognoser</b> krävs verkliga odds från före respektive match – de finns inte i resultatarkivet. Därför kan dessa resultat <b>inte</b> användas för att hävda att en av våra tre systemstrategier skulle ha gått med vinst.</div>
-<div class="controls" style="margin:0 0 16px"><div class="field"><label for="btStart">Från och med</label><input class="input" id="btStart" type="date" value="2024-11-12"/></div><div class="field"><label for="btEnd">Till och med</label><input class="input" id="btEnd" type="date" value="2026-11-11"/></div><div style="align-self:end"><button class="btn primary" id="btFetch">Hämta och kör om analysen</button></div><div style="align-self:end"><button class="btn" id="btExport">Exportera prognoser (CSV)</button></div></div>
-<div class="notice" id="btStatus">Visar en daterad beräkning från 12 november 2026. Hämta data för att granska varje match. Om nätåtkomst blockeras kan CSV-filen importeras.</div>
-<div class="metrics" id="btStats"></div>
-<div class="grid"><div class="panel panelpad"><h3>Är modellen rätt kalibrerad?</h3><div id="btCalib"></div></div><aside class="side-panel"><div class="panel panelpad sidebox"><h3>Så läser du testet</h3><p class="small"><b>Brier:</b> summan av kvadrerade avvikelser för 1, X och 2 per match. Lägre är bättre. <b>Log loss:</b> straffar särskilt säkra men felaktiga tips. <b>Baslinje:</b> fasta 1X2-frekvenser beräknade enbart från historik före teststart.</p><p class="small">Vårt mål är inte bara hög träffprocent. En modell som säger 40 % bör också få rätt cirka 40 % av gångerna.</p></div><div class="panel panelpad"><h3>Källor</h3><p class="small"><a href="https://github.com/andreyhgl/stryktipset-results" target="_blank" rel="noopener noreferrer">Stryktipset-results</a> hämtar öppna resultat från Svenska Spel. Den publicerade filen ger slutresultat och lag, men inte historiska förhandsodds eller streck.</p><p class="small">Resultatmodellen värmer upp med tidigare omgångar från 2020 och uppdaterar lagbetygen först <b>efter att hela omgångens prognoser är beräknade</b>.</p></div></aside></div>
-<div id="btSummary" style="margin-top:14px"></div>
-<div id="btDetailsSection" class="hidden">
-<div class="grid" style="margin-top:16px"><div class="panel panelpad"><h3>Årsvis jämförelse</h3><div id="btAnnual"></div></div><aside class="panel panelpad"><h3>Förväntad jämfört med faktisk fördelning</h3><div id="btSigns"></div></aside></div>
-<div class="grid" style="margin-top:18px"><div class="panel panelpad"><h3>Senaste 12 omgångarna i urvalet</h3><div id="btRounds"></div></div><aside class="panel panelpad"><h3>Se en enskild omgång</h3><p class="small">Välj omgång nedan så visas samtliga matchprognoser och facit.</p><select class="input" id="btDrawSelect"></select></aside></div>
-<div class="panel panelpad" style="margin-top:14px"><h3>Match för match · prognos mot facit</h3><div id="btMatchDetails"></div></div></div>
-<div class="panel panelpad" style="margin-top:20px"><div class="sectionhead"><div><h3>Komplettera med historiska odds</h3><p class="small">Då kan vi testa <b>den oddsbaserade modell som Kuponganalys faktiskt använder</b>.</p></div></div>
-<p class="small">Importera en semikolonseparerad CSV med kolumnerna <span class="kbd">Omgång;MatchNr;Odds1;OddsX;Odds2</span>. Exempel: <span class="kbd">4978;1;2,50;3,45;2,85</span>. Odds måste vara insamlade före matchstart, annars uppstår efterhandsbias. För jämförbarhet krävs samma matcher.</p>
-<div class="controls"><button class="btn" id="btOddsTemplate">Ladda ned odds-mall</button><label class="btn labelButton" for="btOddsFile">Importera historiska odds (CSV)</label><input type="file" accept=".csv,text/csv,text/plain" id="btOddsFile" hidden=""/><label class="btn labelButton" for="btSourceFile">Importera resultatarkiv (CSV)</label><input type="file" accept=".csv,text/csv,text/plain" id="btSourceFile" hidden=""/></div>
-<div class="notice" id="btOddsResult">Historiska odds har inte importerats. Oddsbaserad jämförelse saknas.</div>
-</div>
-<div class="footer">Modellformel: rating startar på 1500, hemmafördel +70 Elo, ratingförändring 30 per match multiplicerat med skillnad mellan faktiskt och förväntat poängutfall; ratings krymps med n/(n+8), krysschans ca 17–25,5 % beroende på styrkeskillnad. Varken modellparametrar eller baslinjens frekvenser väljs genom att titta på testperiodens utfall. Ingen vinstprognos eller avkastningsgaranti.</div>
-</section>
-<div class="footer footlinks"><b>Metodnot.</b> Sannolikheterna baseras endast på inmatade odds eller manuella scenarier. Beräkningarna utgår från oberoende matchutfall, inte någon bevisat kalibrerad fotbollsmodell. Alla kupongberäkningar gäller matematiska M-system à 1 kr per rad. Systemet kan analyseras, men inte lämnas in här. 18+ · Spela ansvarsfullt · <a href="https://www.stodlinjen.se/">Stödlinjen</a>. Prototyp 5.0: systemprofilerna är experimentella och bygger på historisk Elo, inte verifierade förhandsodds och förhandsstreck. Varje prognos bör frysas före spelstopp för att räknas till historiskt facit.</div>
-
-<section class="tabpage hidden" id="rotation">
- <div class="panel panelpad" style="margin-bottom:16px"><div class="sectionhead"><div><h2>10 personer – din tur var tionde omgång</h2><p class="small">Ange vilken av tio möjliga startpositioner som skulle ha varit din. Modellen testar då endast omgångarna i den turordningen. Det är en känslighetsanalys: vi vet inte vilken faktisk tur du hade historiskt.</p></div><span class="pill">1 800 kr / spelomgång</span></div>
- <div class="controls"><div class="field" style="min-width:225px"><label for="v5Rotation">Din historiska plats i turordningen</label><select class="input" id="v5Rotation"><option value="all">Hela laget: alla 105 omgångar</option><option value="0">Tur 1 av 10</option><option value="1">Tur 2 av 10</option><option value="2">Tur 3 av 10</option><option value="3">Tur 4 av 10</option><option value="4">Tur 5 av 10</option><option value="5">Tur 6 av 10</option><option value="6">Tur 7 av 10</option><option value="7">Tur 8 av 10</option><option value="8">Tur 9 av 10</option><option value="9">Tur 10 av 10</option></select></div><div style="align-self:end"><button class="btn" id="v5ShowAll">Visa hela laget</button></div></div>
- <div id="v5RotationMetrics" class="metrics" style="margin-top:14px"></div>
- <div id="v5RotationTable" style="overflow-x:auto"></div><p class="small" id="v5RotationExplain"></p>
- </div>
- <div class="panel panelpad"><h3>Hur mycket påverkar turordningen?</h3><p class="small">Varje rad nedan är ett av de tio hypotetiska startlägena. För varje position visas antal simulerade 13-rättsomgångar i den balanserade modellen. Nettot visas endast där utdelning är kontrollerad, inte som full tvåårsavkastning.</p><div id="v5RotationAll" style="overflow-x:auto"></div></div>
-</section>
-
-<section class="tabpage hidden" id="quality">
- <div class="sectionhead"><div><h2>Datakvalitet och förhandsodds</h2><p class="small">Här syns vad som faktiskt går att testa på två års historik, och vad vi fortfarande saknar. Importera ligornas originalfiler och jämför odds med Elo <b>på exakt samma matcher</b>.</p></div><span class="pill">Version 7 · källkontroll</span></div>
- <div class="metrics" id="v6Coverage"></div>
- <div class="panel panelpad" style="margin:16px 0">
- <div class="sectionhead"><div><h2>1. Matcha historiska marknadsodds</h2><p class="small">Hämta CSV-filerna för säsongerna 2024/25, 2025/26 och 2026/27 manuellt från <a target="_blank" rel="noopener noreferrer" href="https://www.football-data.co.uk/downloadm.php">Football-Data</a>. De engelska ligorna E0–E3 är en bra början. Välj sedan flera filer samtidigt nedan. Vi laddar endast upp filerna i din egen webbläsare, ingen server tar emot dem.</p></div></div>
- <div class="notice"><b>Kontroller för varje match:</b> exakt igenkända lag (med en liten lista över kända namnvarianter), rätt datumintervall, unik kandidat och korrekt 1/X/2 i den externa filen. Omatchade eller tvetydiga matcher får inga påhittade odds. <b>Öppningsodds</b> används i första hand: <span class="kbd">AvgH / AvgD / AvgA</span>, <span class="kbd">B365H / B365D / B365A</span> eller <span class="kbd">home_open / draw_open / away_open</span>. Vi använder inte slutodds när öppningsodds saknas.</div>
- <div class="controls" style="margin-top:16px"><label class="btn labelButton" for="v6FootballFiles">Välj historiska odds-CSV</label><input id="v6FootballFiles" type="file" multiple accept=".csv,text/csv,text/plain" hidden><button class="btn" id="v6DownloadOdds" disabled>Importfil för Historik (CSV)</button><button class="btn" id="v6AuditDownload" disabled>Källrapport (CSV)</button><button class="btn ghost" id="v6Clear">Rensa importen</button></div>
- <div id="v6ImportState" class="notice" style="margin-top:12px">Inga historiska odds importerade. Börja med att öppna fliken <b>Historik · 2 år</b> och välja <b>Hämta och kör om analysen</b>, eller importera resultatfilen från <a target="_blank" rel="noopener noreferrer" href="https://github.com/andreyhgl/stryktipset-results">det öppna resultatarkivet</a>. Därefter väljer du ligafilerna här.</div>
- <div id="v6MarketComparison" style="margin-top:14px"></div>
- <div class="tablewrap" style="margin-top:14px;max-height:360px;overflow:auto"><table><thead><tr><th>Omgång</th><th>Match</th><th>Marknad 1/X/2</th><th>Facit</th><th>Källa</th></tr></thead><tbody id="v6MatchedRows"><tr><td colspan="5" class="small">Inga importerade matcher</td></tr></tbody></table></div>
- </div>
- <div class="grid">
- <div class="panel panelpad"><h3>2. Komplettera officiellt facit och utdelning</h3><p class="small">I <b>Historik · 2 år</b> finns redan en funktion för att importera fyra utdelningsnivåer. I det uppdaterade paketet ingår också en fristående insamlare som hämtar både <b>resultat och retroaktivt observerade slutstreck</b> från Svenska Spel när API:t är tillgängligt.</p><p class="small">Slutstreck som hämtas efteråt är användbara som historisk referens, men de <b>märks inte om till tidigare observationer</b>. Verkliga värdestrategier kräver en sparad kupongsnapshot från den tid då ett spelbeslut skulle fattas.</p></div>
- <aside class="panel panelpad"><h3>3. Vad krävs för en rättvis ROI?</h3><p class="small"><b>Träffprecision:</b> förhandsodds + verkligt facit, utan streck eller utdelning.</p><p class="small"><b>Ekonomiskt facit:</b> den frysta systemkupongen, faktisk radkostnad och officiell utdelning för samma omgång.</p><p class="small"><b>Streckvärdestrategi:</b> både odds och streck som var kända <em>innan</em> spelstopp – med källa och tidsstämpel för varje match. Efterhandsstreck kan inte ersätta dessa.</p></aside>
- </div>
- <div class="note warning" style="margin-top:16px"><b>Databegränsning:</b> Football-Datas öppningsodds är en oberoende marknadsbaseline, inte Svenska Spels egna historiska odds. Filerna innehåller vanligtvis inte en exakt tidpunkt då oddset noterades. Vi visar därför <b>matchbaserad oddsutvärdering</b>, inte ett bevis på att ett spel hade kunnat lämnas in till just de oddsen vid spelstopp.</div>
-</section>
-
-<section class="tabpage hidden" id="studio">
-  <div class="sectionhead"><div><h2>Beslutsstudio · 1 800 kr</h2><p class="small">Jämför matematisk träffchans och en frivillig <b>utdelningssimulering</b> innan du fryser kupongen. Observerade odds är en utgångspunkt, inte en egen validerad prognos.</p></div><span class="pill">Version 7 · exakt M-systemsmatematik</span></div>
-  <div class="v7-hero">
-    <div class="panel panelpad"><h3>1. Vilken data arbetar vi med?</h3><div id="v7Provenance" class="v7-status v7-risk">Kontrollerar källstatus…</div><div class="controls" style="margin-top:14px"><button class="btn primary" id="v7RefreshStudio">Räkna om de tre systemen</button><button class="btn" id="v7UseHosted">Hämta senaste från mitt dataarkiv</button><label class="btn labelButton" for="v7SnapshotFile">Importera tidsstämplad kupong (JSON)</label><input id="v7SnapshotFile" type="file" accept=".json,application/json" hidden></div><div id="v7HostedStatus" class="small" style="margin-top:9px"></div><p class="small" style="margin-top:12px">För automatisk insamling finns ett fristående läsprogram och ett exempel för schemaläggning i ZIP-paketet. Det aktiveras inte av att du öppnar den här filen.</p></div>
-    <aside class="panel panelpad"><h3>Så tolkar du resultaten</h3><p class="small"><b>Träffchans</b> – beräknad sannolikhet att kupongen innehåller minst en rad med 10, 11, 12 eller 13 rätt.</p><p class="small"><b>Förväntade rader</b> – genomsnittligt antal vinnande enkelrader per omgång, inte chansen att de inträffar.</p><p class="small"><b>Scenarioutdelning</b> – egen vald hypotetisk utdelning per rättklass. Den är <b>inte</b> en prognos för Svenska Spels utdelning eller sann avkastning.</p></aside>
-  </div>
-  <div class="v7-variants" id="v7Comparisons"></div>
-  <div class="panel panelpad" style="margin-top:18px"><div class="sectionhead"><div><h3>2. Hur många vinnande enkelrader förväntas?</h3><p class="small">Exakt förväntat antal rader i varje rättklass, givet modellens sannolikheter och oberoende matchutfall. Det kan vara bråktal även om ett verkligt utfall alltid ger heltalsrader.</p></div></div><div id="v7Expected"></div></div>
-  <div class="panel panelpad" style="margin-top:18px"><div class="sectionhead"><div><h3>3. Testa en egen utdelningsbild</h3><p class="small">Ange belopp i kr per vinnande rad. Fälten är avsiktligt tomma – inga framtida utdelningar är kända.</p></div></div>
-    <div class="v7-data-grid">
-      <div class="field"><label for="v7Pay13">13 rätt, kr</label><input class="input" type="number" id="v7Pay13" placeholder="Ditt antagande" min="0" step="1"></div>
-      <div class="field"><label for="v7Pay12">12 rätt, kr</label><input class="input" type="number" id="v7Pay12" placeholder="Ditt antagande" min="0" step="1"></div>
-      <div class="field"><label for="v7Pay11">11 rätt, kr</label><input class="input" type="number" id="v7Pay11" placeholder="Ditt antagande" min="0" step="1"></div>
-      <div class="field"><label for="v7Pay10">10 rätt, kr</label><input class="input" type="number" id="v7Pay10" placeholder="Ditt antagande" min="0" step="1"></div>
-    </div>
-    <div class="controls" style="margin-top:14px"><button class="btn primary" id="v7CalculateScenario">Beräkna mitt scenario</button><button class="btn ghost" id="v7ClearScenario">Rensa</button></div>
-    <div id="v7ScenarioMessage" class="notice" style="margin-top:12px">Ange fyra hypotetiska belopp för att beräkna förväntat utbetalt och break-even under dessa antaganden.</div>
-    <div id="v7ScenarioTable" style="margin-top:12px"></div>
-    <p class="small">Simuleringen antar samma utdelning oavsett vilka tecken som faller ut. Det stämmer sällan i verkligheten: utdelningen beror på den rätta radens popularitet, poolens omsättning och antalet andra vinnare. Siffrorna är därför en känslighetsanalys, inte ett uppskattat spelvärde.</p>
-  </div>
-  <div class="panel panelpad" style="margin-top:18px"><h3>4. Underlag för veckans beslut</h3><div id="v7DecisionSummary"></div><div class="controls" style="margin-top:14px"><button class="btn" id="v7GoCompare">Se systemen och tecknen</button><button class="btn" id="v7GoArchive">Frys kupongen före spelstopp</button></div></div>
-  <div class="panel panelpad" style="margin-top:18px"><div class="sectionhead"><div><h3>5. Läs in officiellt facit efter avslutad omgång</h3><p class="small">Importera resultatfilen som den fristående insamlaren sparar i <code>data/results/{omgång}.json</code>. Endast kuponger som verkligen frysts i arkivet före spelstopp och har samma omgångsnummer kan rättas automatiskt.</p></div></div>
-    <div class="controls"><label class="btn labelButton" for="v7ResultsFile">Importera resultatfil (JSON)</label><input id="v7ResultsFile" type="file" accept=".json,application/json" hidden><button class="btn" id="v7SeeArchive">Se rättade arkiv</button></div>
-    <div id="v7ResultsStatus" class="notice" style="margin-top:12px">Inget facit importerat. Resultat och utdelningar lagras separat från prognoserna.</div>
-    <p class="small">Importerat JSON-material är inte automatiskt autentiserat. Filens ursprung, tider och belopp måste kontrolleras för skarpa slutsatser. Det gamla tvåårstestet fortsätter vara ett separat resultatbaserat experiment.</p>
-  </div>
-</section>
-</main>
-<script>
-'use strict';
-const SAMPLE=[
- ['Sverige', 'Bosnien & Hercegovina', 1.52, 4.6, 6.25, 56, 21, 23],
- ['Portugal', 'Danmark', 1.5, 4.8, 6.75, 53, 24, 23],
- ['Norge', 'Wales', 1.26, 6.5, 13.0, 50, 23, 27],
- ['Rumänien', 'Polen', 4.1, 3.85, 1.89, 42, 25, 33],
- ['Nordirland', 'Ukraina', 2.45, 3.15, 3.25, 44, 28, 28],
- ['Österrike', 'Irland', 1.61, 4.1, 6.0, 49, 24, 27],
- ['Georgien', 'Ungern', 3.05, 3.15, 2.4, 41, 26, 33],
- ['Milton Keynes Dons', 'Burton', 1.67, 4.0, 4.6, 48, 26, 26],
- ['Sheffield W', 'Plymouth', 2.12, 3.75, 3.05, 45, 26, 29],
- ['Stockport', 'Reading', 1.82, 3.8, 3.95, 48, 25, 27],
- ['Wimbledon', 'Blackpool', 2.8, 3.4, 2.43, 43, 27, 30],
- ['Wigan', 'Barnsley', 2.35, 3.55, 2.8, 46, 26, 28],
- ['Swindon', 'Grimsby', 3.3, 3.55, 2.02, 42, 29, 29]
-];
-const ICONS=['1','X','2'];
-const encode=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const round=(v,n=1)=>Number.isFinite(v)?v.toFixed(n):'–';
-const formatKr=n=>new Intl.NumberFormat('sv-SE',{maximumFractionDigits:0}).format(n)+' kr';
-function initFromSample(){return SAMPLE.map(row=>({home:row[0],away:row[1],odds:row.slice(2,5),streck:row.slice(5,8),chosen:[],manual:null}));}
-let data;try{const saved=JSON.parse(localStorage.getItem('stryktipslabbet-v2'));data=Array.isArray(saved)&&saved.length===13?saved:initFromSample()}catch{data=initFromSample()}
-function validMatch(m){return m&&typeof m.home==='string'&&typeof m.away==='string'&&Array.isArray(m.odds)&&m.odds.length===3&&m.odds.every(x=>Number.isFinite(+x)&&+x>1)&&Array.isArray(m.streck)&&m.streck.length===3&&m.streck.every(x=>Number.isFinite(+x)&&+x>=0)&&m.streck.reduce((a,b)=>a+(+b),0)>0}
-if(!data.every(validMatch))data=initFromSample();
-for(const m of data){m.chosen=Array.isArray(m.chosen)?m.chosen.filter(x=>Number.isInteger(x)&&x>=0&&x<3):[];if(!m.chosen.length)m.chosen=[bestIndex(m)];}
-function probabilities(m){const raw=m.odds.map(o=>1/(+o)),sum=raw.reduce((a,b)=>a+b,0);return raw.map(x=>x/sum)}
-function activeProb(m){if(m.manual&&Array.isArray(m.manual)&&m.manual.length===3&&m.manual.every(v=>Number.isFinite(+v)&&+v>=0)&&m.manual.reduce((a,b)=>a+(+b),0)>0){const sum=m.manual.reduce((a,b)=>a+(+b),0);return m.manual.map(x=>(+x)/sum)}return probabilities(m)}
-function normalizedStreck(m){let s=m.streck.map(x=>+x);let total=s.reduce((a,b)=>a+b,0);return s.map(x=>x/total)}
-function bestIndex(m){const p=probabilities(m);return p.indexOf(Math.max(...p))}
-function persist(){try{localStorage.setItem('stryktipslabbet-v2',JSON.stringify(data))}catch{}}
-function rowCost(){return data.reduce((r,m)=>r*m.chosen.length,1)}
-function maxCorrectDist(){let d=[1];for(const m of data){const p=activeProb(m),covered=m.chosen.reduce((s,i)=>s+p[i],0),next=Array(d.length+1).fill(0);d.forEach((v,j)=>{next[j]+=v*(1-covered);next[j+1]+=v*covered});d=next}return d}
-function coverage(t){return maxCorrectDist().slice(t).reduce((a,b)=>a+b,0)}
-function coverage13(){return data.reduce((v,m)=>v*m.chosen.reduce((s,i)=>s+activeProb(m)[i],0),1)}
-function topSignals(){const x=[];data.forEach((m,i)=>{const p=activeProb(m),s=normalizedStreck(m);for(let j=0;j<3;j++)x.push({i,j,diff:100*(p[j]-s[j]),p:p[j],s:s[j]})});return x.sort((a,b)=>b.diff-a.diff)}
-function signButton(m,i,j){let p=activeProb(m),s=normalizedStreck(m),d=(p[j]-s[j])*100;return `<button class="sign ${m.chosen.includes(j)?'sel':''} ${d>4?'hi':''}" data-toggle="${i}:${j}" aria-pressed="${m.chosen.includes(j)}"><strong>${ICONS[j]}</strong><span>${round(p[j]*100,0)}% <span class="edge ${d>0?'mint':d<0?'red':''}">${d>=0?'+':''}${round(d,0)}</span></span></button>`}
-function matchHtml(m,i,ed){const p=activeProb(m),s=normalizedStreck(m),max=Math.max(...p.map((x,j)=>100*(x-s[j])));return `<div class="match"><div class="matchrow"><div class="n">${i+1}.</div><div><div class="fixture">${encode(m.home)} – ${encode(m.away)}</div><div class="faceline">${m.manual?'<span class="tinytag">Egen prognos</span>':'<span>Oddsbaserat</span>'} <span>· streck ${m.streck.map(v=>Math.round(+v)).join(' / ')}</span></div></div><div class="prob">${[0,1,2].map(j=>signButton(m,i,j)).join('')}</div><div class="value"><div class="${max>=0?'mint':'red'}">+${round(max,1)} pp</div><button class="edit" data-edit="${i}">${ed?'Ändra':'Redigera'}</button></div></div><div id="edit${i}" class="hidden"></div></div>`}
-function renderMatches(id,ed){document.getElementById(id).innerHTML=data.map((m,i)=>matchHtml(m,i,ed)).join('')}
-function renderOverview(){renderMatches('matches',false);const top=topSignals().slice(0,6);document.getElementById('topvalues').innerHTML=top.map(t=>`<div class="sideitem"><div><b>${t.i+1}. ${encode(data[t.i].home)}–${encode(data[t.i].away)}</b><div class="small">Tecken ${ICONS[t.j]} · sannolikhet ${round(t.p*100)}% · streck ${round(t.s*100)}%</div></div><b class="mint">+${round(t.diff,1)} pp</b></div>`).join('')}
-function renderMetrics(){const cost=rowCost(),chance=coverage13();let valueSigns=topSignals().filter(x=>x.diff>3).length;document.getElementById('metrics').innerHTML=`<div class="metric"><div class="l">Systemkostnad</div><div class="v">${formatKr(cost)}</div><div class="sub">${cost.toLocaleString('sv-SE')} matematiska rader</div></div><div class="metric"><div class="l">13 rätt, modellchans</div><div class="v mint">${round(chance*100,3)} %</div><div class="sub">Givet inmatade sannolikheter</div></div><div class="metric"><div class="l">Minst en rad med 12+</div><div class="v">${round(coverage(12)*100,2)} %</div><div class="sub">13 rätt ingår</div></div><div class="metric"><div class="l">Streckskillnader över +3 pp</div><div class="v">${valueSigns}</div><div class="sub">Av 39 möjliga 1X2-tecken</div></div>`}
-function renderBuilder(){renderMatches('builderMatches',true);const counts=data.reduce((a,m)=>(a[m.chosen.length]++,a),[0,0,0,0]);const d=maxCorrectDist();document.getElementById('systemSummary').innerHTML=`<div class="resultcard"><div class="resultitem"><span class="small">Totalt</span><strong class="mint">${formatKr(rowCost())}</strong></div><div class="resultitem"><span class="small">Spikar / halva / hela</span><strong>${counts[1]} / ${counts[2]} / ${counts[3]}</strong></div><div class="resultitem"><span class="small">Chans 13 rätt</span><strong>${round(100*d[13],3)} %</strong></div><div class="resultitem"><span class="small">Chans minst en 12:a</span><strong>${round(100*(d[12]+d[13]),2)} %</strong></div><div class="resultitem"><span class="small">Chans minst en 10:a</span><strong>${round(100*d.slice(10).reduce((a,b)=>a+b,0),2)} %</strong></div></div><div class="notice">Sannolikheten för minst en rad med ett visst rättantal är inte samma sak som sannolikheten att gå med vinst. Vi har ännu inte modellerat utdelningen.</div>`}
-function showEdit(i){let node=document.getElementById('edit'+i);if(!node)return;if(!node.classList.contains('hidden')){node.classList.add('hidden');return}let m=data[i];node.classList.remove('hidden');node.innerHTML=`<div class="editgrid names"><div class="field"><label>Hemmalag</label><input class="input" data-attr="home" value="${encode(m.home)}"></div><div class="field"><label>Bortalag</label><input class="input" data-attr="away" value="${encode(m.away)}"></div></div><div class="small">Odds (decimalform)</div><div class="editgrid">${['1','X','2'].map((x,j)=>`<div class="field"><label>Odds ${x}</label><input class="input" type="number" min="1.01" step="0.01" data-odds="${j}" value="${m.odds[j]}"></div>`).join('')}</div><div class="small">Folkets streck i procent</div><div class="editgrid">${['1','X','2'].map((x,j)=>`<div class="field"><label>Streck ${x}</label><input class="input" type="number" min="0" max="100" step="1" data-streck="${j}" value="${m.streck[j]}"></div>`).join('')}</div><div class="controls"><button class="btn primary" data-save="${i}">Spara matchen</button><button class="btn ghost" data-cancel="${i}">Avbryt</button></div>`}
-function num(s){return Number(String(s).replace(',','.'))}
-function saveMatch(i){const node=document.getElementById('edit'+i),m=data[i],odds=[...node.querySelectorAll('[data-odds]')].map(x=>num(x.value)),streck=[...node.querySelectorAll('[data-streck]')].map(x=>num(x.value)),home=node.querySelector('[data-attr="home"]').value.trim(),away=node.querySelector('[data-attr="away"]').value.trim();if(!home||!away||odds.some(x=>!Number.isFinite(x)||x<=1)||streck.some(x=>!Number.isFinite(x)||x<0||x>100)||streck.reduce((a,b)=>a+b,0)<50){alert('Kontrollera lagnamn, odds över 1,00 och streck mellan 0 och 100.');return}Object.assign(m,{home,away,odds,streck,manual:null});persist();renderAll()}
-function renderScenario(){const selector=document.getElementById('scenarioMatch'),idx=Number(selector.value||0);selector.innerHTML=data.map((m,i)=>`<option value="${i}">${i+1}. ${encode(m.home)} – ${encode(m.away)}</option>`).join('');selector.value=String(Math.min(12,idx));renderScenarioDetails()}
-function renderScenarioDetails(){const idx=Number(document.getElementById('scenarioMatch').value),m=data[idx],p=activeProb(m);document.getElementById('scenarioTitle').textContent=`${idx+1}. ${m.home} – ${m.away}`;document.getElementById('scenarioInputs').innerHTML=['1 · Hemmaseger','X · Oavgjort','2 · Bortaseger'].map((x,j)=>`<div class="field" style="margin-bottom:12px"><label>${x}: <strong id="pval${j}">${round(p[j]*100,0)}%</strong></label><input type="range" min="0" max="100" step="1" value="${Math.round(p[j]*100)}" data-prob="${j}"></div>`).join('');document.getElementById('scenarioStatus').textContent=m.manual?'Egen prognos aktiv för den här matchen.':'Visar sannolikheterna från inmatade odds. Ingen egen prognos är aktiv.'}
-function normalizedSliders(changed){const slides=[...document.querySelectorAll('[data-prob]')],values=slides.map(x=>+x.value),rest=100-values[changed],other=[0,1,2].filter(i=>i!==changed),s=values[other[0]]+values[other[1]],a=s?Math.round(rest*values[other[0]]/s):Math.round(rest/2);values[other[0]]=a;values[other[1]]=rest-a;slides.forEach((x,j)=>{x.value=values[j];document.getElementById('pval'+j).textContent=values[j]+'%';})}
-function activateScenario(){const idx=Number(document.getElementById('scenarioMatch').value),a=[...document.querySelectorAll('[data-prob]')].map(x=>+x.value);if(a.reduce((x,y)=>x+y,0)!==100){alert('Sannolikheterna behöver bli 100 %.');return}data[idx].manual=a.map(v=>v/100);persist();renderAll()}
-function drawData(){document.getElementById('importText').value=data.map(m=>[m.home,m.away,...m.odds,...m.streck].join(';')).join('\n')}
-function importCSV(){const lines=document.getElementById('importText').value.trim().split(/\r?\n/).filter(x=>x.trim());if(lines.length!==13){document.getElementById('importStatus').textContent=`Fick ${lines.length} rader. Det krävs exakt 13.`;return}let rows=[];for(let i=0;i<13;i++){const cols=lines[i].split(';');if(cols.length!==8){document.getElementById('importStatus').textContent=`Rad ${i+1}: ange exakt åtta semikolonseparerade fält.`;return}const [home,away]=cols.slice(0,2).map(s=>s.trim()),odds=cols.slice(2,5).map(num),streck=cols.slice(5,8).map(num);const m={home,away,odds,streck,chosen:[],manual:null};if(!validMatch(m)||streck.some(x=>x>100)){document.getElementById('importStatus').textContent=`Rad ${i+1}: kontrollera lagnamn, odds och streck.`;return}m.chosen=[bestIndex(m)];rows.push(m)}data=rows;setSource('CSV-import');persist();renderAll();document.getElementById('importStatus').textContent='13 matcher importerade från CSV! Kupongen och alla beräkningar har uppdaterats.'}
-function exportCsv(){const dataText='Hemmalag;Bortalag;Odds1;OddsX;Odds2;Streck1;StreckX;Streck2\n'+data.map(m=>[m.home,m.away,...m.odds,...m.streck].join(';')).join('\n');const blob=new Blob(['\ufeff'+dataText],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='stryktipslabbet-kupong.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
-function settle(){let s=document.getElementById('correctRow').value.toUpperCase().replace(/[^1X2]/g,'');if(s.length!==13){document.getElementById('settleOutput').innerHTML='<div class="note warning">Rätt rad måste innehålla exakt 13 tecken (1, X eller 2).</div>';return}let dist=[1];for(let i=0;i<13;i++){const m=data[i],idx=ICONS.indexOf(s[i]),isIn=m.chosen.includes(idx),sz=m.chosen.length,newdist=Array(dist.length+1).fill(0);for(let k=0;k<dist.length;k++){if(isIn){newdist[k+1]+=dist[k];newdist[k]+=(sz-1)*dist[k]}else{newdist[k]+=sz*dist[k]}}dist=newdist}let amount=0;const html=[13,12,11,10].map(k=>{const pay=Number(document.getElementById('pay'+k).value)||0;amount+=dist[k]*pay;return `<div class="resultitem"><span>${k} rätt: <b>${dist[k].toLocaleString('sv-SE')} rader</b></span><b>${formatKr(dist[k]*pay)}</b></div>`}).join('');document.getElementById('settleOutput').innerHTML=`<h3>Resultat mot rätt rad ${s}</h3><div class="resultcard">${html}</div><div class="sideitem"><span>Totala vinster enligt dina belopp</span><strong class="mint">${formatKr(amount)}</strong></div><div class="sideitem"><span>Insats</span><strong>${formatKr(rowCost())}</strong></div><div class="sideitem"><span>Netto</span><strong class="${amount>=rowCost()?'mint':'red'}">${formatKr(amount-rowCost())}</strong></div><p class="small" style="margin-top:15px">Utdelningsbeloppen är dina inmatade värden, inte hämtade officiella belopp.</p>`}
-function resetSigns(){for(const m of data)m.chosen=[activeProb(m).indexOf(Math.max(...activeProb(m)))];persist();renderAll()}
-function optimize(){
- const budget=Math.floor(+document.getElementById('budget').value), strategy=document.getElementById('strategy').value;
- if(!Number.isFinite(budget)||budget<1||budget>50000){alert('Ange en budget mellan 1 och 50 000 kr.');return}
- const alphas={safe:0,balanced:0.14,value:0.42};
- const result=optimizeStrategy(budget,alphas[strategy]??0.14);
- if(!result){alert('Ingen möjlig kombination.');return}
- data.forEach((m,i)=>m.chosen=result.choices[i].slice());persist();renderAll();
-}
-function copySystem(){let s=data.map((m,i)=>`${String(i+1).padStart(2,'0')}. ${m.home} – ${m.away}: ${m.chosen.map(j=>ICONS[j]).join('')}`).join('\n');s+=`\nRader: ${rowCost()} | Chans 13: ${round(coverage13()*100,3)}% (oddsbaserad)`;if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(s).then(()=>alert('Systemet kopierat.')).catch(()=>prompt('Kopiera systemet:',s));else prompt('Kopiera systemet:',s)}
-function renderAll(){renderMetrics();renderOverview();renderBuilder();renderScenario();drawData();renderStrategies();renderArchive();updateSourceFlag()}
-document.addEventListener('click',e=>{const tab=e.target.closest('[data-tab]');if(tab){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b===tab));document.querySelectorAll('.tabpage').forEach(p=>p.classList.toggle('hidden',p.id!==tab.dataset.tab));document.getElementById('metrics').classList.toggle('hidden',['historik','rotation'].includes(tab.dataset.tab));return}const t=e.target.closest('[data-toggle]');if(t){const [i,j]=t.dataset.toggle.split(':').map(Number),m=data[i];if(m.chosen.includes(j)){if(m.chosen.length>1)m.chosen=m.chosen.filter(x=>x!==j)}else m.chosen.push(j);persist();renderAll();return}let edit=e.target.closest('[data-edit]');if(edit){showEdit(+edit.dataset.edit);return}let save=e.target.closest('[data-save]');if(save){saveMatch(+save.dataset.save);return}let cancel=e.target.closest('[data-cancel]');if(cancel){document.getElementById('edit'+cancel.dataset.cancel).classList.add('hidden');return}});
-document.getElementById('resetSigns').onclick=resetSigns;document.getElementById('optimize').onclick=optimize;document.getElementById('copySystem').onclick=copySystem;document.getElementById('scenarioMatch').onchange=renderScenarioDetails;document.getElementById('activateScenario').onclick=activateScenario;document.getElementById('clearScenario').onclick=()=>{data[+document.getElementById('scenarioMatch').value].manual=null;persist();renderAll()};document.getElementById('scenarioInputs').addEventListener('input',e=>{let s=e.target.closest('[data-prob]');if(s)normalizedSliders(+s.dataset.prob)});document.getElementById('settleBtn').onclick=settle;document.getElementById('importBtn').onclick=importCSV;document.getElementById('csvBtn').onclick=exportCsv;document.getElementById('demoBtn').onclick=()=>{if(confirm('Återställ alla 13 matcher, val och prognoser till den inbyggda kupongbilden från 12 november 08:06?')){data=initFromSample();data.forEach(m=>m.chosen=[bestIndex(m)]);setSource('Kupong 4979 · 12 nov 08:06');persist();renderAll();document.getElementById('importStatus').textContent='Inbyggd kupongbild från 12 november 08:06 återställd. Strecken kan ha ändrats sedan dess.'}};
-const STRATEGIES=[
- {key:'balanced',label:'Balanserat',desc:'Prioriterar störst möjlighet att få alla 13 rätt.',alpha:0,tag:'Högst träffchans'},
- {key:'value',label:'Värdeorienterat',desc:'Lyfter fram tecken med bättre balans mellan chans och streck.',alpha:0.43,tag:'Streckskillnader'},
- {key:'jackpot',label:'Jackpotstrategi',desc:'Söker fler lågstreckade utfall på bekostnad av träffchansen.',alpha:0.85,tag:'Hög skrällprofil'}
-];
-const ARCHIVE_KEY='stryktipslabbet-arkiv-v2';
-let archive=[];
-try{const a=JSON.parse(localStorage.getItem(ARCHIVE_KEY));if(Array.isArray(a))archive=a.filter(x=>x&&x.id&&Array.isArray(x.systems)&&x.systems.length===3&&x.matchCount===13).slice(-150)}catch{}
-let sourceState='Kupong 4979 · 12 nov 08:06';try{sourceState=localStorage.getItem('stryktipslabbet-data-source-v2')||sourceState}catch{}
-let lastStrategies=[];
-let selectedArchiveId=null;
-const svDate=s=>{try{return new Date(s).toLocaleString('sv-SE',{dateStyle:'short',timeStyle:'short'})}catch{return s}};
-function setSource(s){sourceState=s;try{localStorage.setItem('stryktipslabbet-data-source-v2',s)}catch{} updateSourceFlag()}
-function updateSourceFlag(){const f=document.getElementById('sourceFlag');if(f)f.textContent=sourceState==='Demo'?'● DEMO / INGEN VERIFIERAD LIVEDATA':`● Källa: ${sourceState} · kontrollera spelstopp`;const e=document.getElementById('compareSource');if(e)e.textContent=sourceState==='Demo'?'Demodata':sourceState}
-function budgetForCompare(){const b=Number(document.getElementById('cmpBudget').value);return Number.isFinite(b)&&b>=1&&b<=50000?Math.floor(b):1800}
-function optimizeStrategy(budget,alpha){
- if(!Number.isFinite(budget)||budget<1||budget>50000)return null;
- let dp=new Map([[1,{score:0,choices:[]}]]);
- for(const m of data){
-   const p=activeProb(m),s=normalizedStreck(m),nx=new Map();
-   for(const [cost,st] of dp){
-     for(let mask=1;mask<8;mask++){
-       const sel=[0,1,2].filter(j=>mask&(1<<j)),nc=cost*sel.length;
-       if(nc>budget)continue;
-       const weighted=sel.reduce((a,j)=>a+p[j]/Math.pow(Math.max(s[j],0.035),alpha),0);
-       if(weighted<=0)continue;
-       const score=st.score+Math.log(weighted),prev=nx.get(nc);
-       if(!prev||score>prev.score)nx.set(nc,{score,choices:[...st.choices,sel]});
-     }
-   }
-   dp=nx;
+<section class="panel"><h2>Vad betyder orden?</h2><div class="tips">
+<div class="tip"><b>1, X och 2</b><p>1 = hemmalaget vinner. X = oavgjort. 2 = bortalaget vinner.</p></div>
+<div class="tip"><b>Spik</b><p>Vi väljer bara ett tecken i en match.</p></div>
+<div class="tip"><b>Gardering</b><p>Vi tar med två eller tre tecken för att minska risken att åka ut på matchen. Det kostar fler rader.</p></div>
+<div class="tip"><b>En rad</b><p>En bestämd kombination av 13 tecken. Varje rad kostar 1 kr.</p></div>
+<div class="tip"><b>Folkets streck</b><p>Visar hur stor andel av de spelade raderna som har ett visst tecken.</p></div>
+<div class="tip"><b>Modellens chans</b><p>Vår uppskattning utifrån speloddsen. Det är ingen säker förutsägelse och inget bevis för spelvärde.</p></div>
+</div></section>
+<p class="footer">Stryktipslabbet visar analyser, men lämnar inte in några spel. Våra tips bygger på de odds och streck som verkligen hämtats före spelstopp. Uppgifterna kan vara gamla – kontrollera alltid tiden. 18+ · Spela ansvarsfullt. <a href="https://stodlinjen.se/">Stödlinjen</a>.</p>
+</main><script>
+const el=id=>document.getElementById(id), fmt=x=>Number(x).toLocaleString('sv-SE',{maximumFractionDigits:0})+' kr';
+let analysis=null;
+const names={balanserad:['Störst chans till 13 rätt','Vi väljer garderingar för att öka chansen att ha med rätt tecken.','Börja här'],varde:['Fler tecken som andra väljer bort','Vi lägger lite större vikt vid tecken som få andra tippar. Mer chansning, inte garanterat bättre.','Experiment'],skrall:['Lite större chansning','Vi vågar välja fler oväntade resultat. Chansen till 13 rätt kan då bli lägre.','Experiment']};
+function status(text,ok=false){el('status').textContent=text;el('status').style.borderLeftColor=ok?'#76e5b2':'#ffcf88'}
+function pct(p){return (100*p).toLocaleString('sv-SE',{maximumFractionDigits:2})+' %'}
+function date(s){return new Date(s).toLocaleString('sv-SE',{timeZone:'Europe/Stockholm',dateStyle:'medium',timeStyle:'short'})}
+function label(name){const x=names[name];return x?x[0]:name}
+function drawCards(){
+ const wrap=el('cards');wrap.replaceChildren();
+ for(const sys of analysis.systems){
+  const [name,desc,tag]=names[sys.key]||[sys.name,'', 'Förslag'];
+  const card=document.createElement('article');card.className='card';
+  const badge=document.createElement('span');badge.className='tag';badge.textContent=tag;card.append(badge);
+  const head=document.createElement('h3');head.textContent=name;card.append(head);
+  const description=document.createElement('p');description.textContent=desc;card.append(description);
+  const price=document.createElement('div');price.className='price';price.textContent=fmt(sys.cost);card.append(price);
+  const info=document.createElement('div');info.className='small';info.textContent='Modellens uppskattning för 13 rätt: '+pct(sys.p13_estimate)+' · '+(1800-sys.cost)+' kr av budgeten används inte';card.append(info);
+  const button=document.createElement('button');button.type='button';button.className='button'+(sys.key==='balanserad'?'':' secondary');button.textContent='Visa tecknen';button.onclick=()=>show(sys,card);card.append(button);wrap.append(card);
  }
- let best=null;
- for(const [cost,st] of dp){if(!best||st.score>best.score)best={cost,score:st.score,choices:st.choices}}
- return best;
 }
-function correctCounts(choices,row){
- let dist=[1];for(let i=0;i<13;i++){
-  const sel=choices[i],idx=ICONS.indexOf(row[i]);const yes=sel.includes(idx),z=sel.length,next=Array(dist.length+1).fill(0);
-  for(let k=0;k<dist.length;k++){if(yes){next[k+1]+=dist[k];next[k]+=(z-1)*dist[k]}else next[k]+=z*dist[k]}
-  dist=next;
- }
- return dist;
-}
-function systemStats(choices){
- let size=1,chance=1,rare=0,pop=0;let d=[1];let counts=[0,0,0,0];
- choices.forEach((sel,i)=>{
-  const p=activeProb(data[i]),s=normalizedStreck(data[i]);const cover=sel.reduce((sum,j)=>sum+p[j],0);
-  chance*=cover;size*=sel.length;counts[sel.length]++;
-  const f=sel.reduce((sum,j)=>sum+p[j]*(s[j]<0.25?1:0),0);
-  if(cover>0){rare+=f/cover;pop+=sel.reduce((sum,j)=>sum+p[j]*s[j],0)/cover}
-  const next=Array(d.length+1).fill(0);d.forEach((v,j)=>{next[j]+=v*(1-cover);next[j+1]+=v*cover});d=next;
+function show(sys,card){
+ document.querySelectorAll('.card').forEach(x=>x.classList.toggle('selected',x===card));
+ el('choiceTitle').textContent=label(sys.key)+' – så hade vi tippat';
+ el('choiceInfo').textContent='Omgång '+analysis.draw_number+' · '+sys.rows+' rader · '+fmt(sys.cost);
+ const items=el('matches');items.replaceChildren();
+ analysis.matches.forEach((m,i)=>{
+  const row=document.createElement('div');row.className='match';
+  const no=document.createElement('span');no.textContent=m.number+'.';row.append(no);
+  const title=document.createElement('b');title.textContent=m.home+' – '+m.away;row.append(title);
+  const signs=document.createElement('div');signs.className='signs';
+  for(const x of '1X2'){const s=document.createElement('div');s.className='sign'+(sys.choices[i].includes(x)?' on':'');s.textContent=x;signs.append(s)}row.append(signs);items.append(row);
  });
- return {cost:size,p13:chance,p12:d[12]+d[13],rare,meanPop:pop/13,counts};
+ el('details').classList.add('open');el('details').scrollIntoView({behavior:'smooth',block:'start'});
+ el('copy').onclick=async()=>{
+  const body='Stryktipslabbet – omgång '+analysis.draw_number+'\n'+label(sys.key)+'\n'+
+    analysis.matches.map((m,i)=>(i+1)+'. '+m.home+' – '+m.away+': '+sys.choices[i]).join('\n')+
+    '\nKostnad: '+fmt(sys.cost)+'\nObserverat: '+date(analysis.observed_at_utc);
+  try{await navigator.clipboard.writeText(body);el('copy').textContent='Kopierat!'}catch{window.prompt('Kopiera tecknen:',body)}
+ };
 }
-function renderStrategies(){
- const budget=budgetForCompare();document.querySelector('#compare h2').textContent='Tre strategier – samma budgettak på '+budget.toLocaleString('sv-SE')+' kr';lastStrategies=STRATEGIES.map(def=>{
-  const opt=optimizeStrategy(budget,def.alpha);return opt?{...def,...opt,stats:systemStats(opt.choices)}:null
- }).filter(Boolean);
- const el=document.getElementById('compareCards');if(!el)return;
- el.innerHTML=lastStrategies.map((t,i)=>`<article class="strategycard ${i===0?'featured':''}"><div class="strategy-head"><div class="eyebrow">${t.tag}</div><h3>${t.label}</h3><p class="small desc">${t.desc}</p></div><div class="strategy-content"><div class="strategy-number">${formatKr(t.cost)}</div><div class="small">${t.cost.toLocaleString('sv-SE')} rader av max ${budget.toLocaleString('sv-SE')}</div><div class="strategy-stat" style="margin-top:16px"><span class="small">Sannolikhet 13 rätt</span><strong class="strategy-prob">${round(t.stats.p13*100,3)} %</strong></div><div class="strategy-stat"><span class="small">Minst en rad med 12+</span><b>${round(t.stats.p12*100,2)} %</b></div><div class="strategy-stat"><span class="small">Spikar / halva / hela</span><b>${t.stats.counts[1]} / ${t.stats.counts[2]} / ${t.stats.counts[3]}</b></div><div class="strategy-stat"><span class="small">Förväntade tecken under 25 % streck*</span><b>${round(t.stats.rare,2)}</b></div><div class="strategy-choices">${t.choices.map((sel,j)=>`${String(j+1).padStart(2,'0')} ${sel.map(k=>ICONS[k]).join('')}`).join(' &nbsp;·&nbsp; ')}</div><div class="strategy-actions"><button class="btn primary" data-apply-strategy="${i}">Använd systemet</button><button class="btn" data-copy-strategy="${i}">Kopiera</button></div></div></article>`).join('');
- const inf=document.getElementById('compareInfo');inf.innerHTML=`En M-kupong kan inte nå precis 1 800 kr. De tre strategierna använder högst budgettaket. <b>*Skrällmåttet</b> är ett genomsnitt över matchutfall <em>givet att alla 13 täcks</em>, inte en utdelningsprognos. ${sourceState==='Demo'?'<b>All data är fiktiv.</b>':''}`;
-}
-function tabSelect(id){const b=document.querySelector(`[data-tab="${id}"]`);if(b)b.click()}
-function copyStrategy(i){const t=lastStrategies[i];if(!t)return;const str=`Stryktipslabbet · ${t.label}\nBudgettak: ${budgetForCompare()} kr · M-system ${t.cost} rader\n`+t.choices.map((sel,j)=>`${j+1}. ${data[j].home} – ${data[j].away}: ${sel.map(k=>ICONS[k]).join('')}`).join('\n')+`\nBeräknad 13-rättschans: ${round(t.stats.p13*100,3)} % · källa ${sourceState}`;
- if(navigator.clipboard?.writeText)navigator.clipboard.writeText(str).then(()=>alert('Systemet kopierat.')).catch(()=>prompt('Kopiera systemet:',str));else prompt('Kopiera systemet:',str)
-}
-function persistArchive(){try{localStorage.setItem(ARCHIVE_KEY,JSON.stringify(archive))}catch{alert('Lagringsutrymmet är fullt. Exportera arkivet som JSON.') }}
-function saveSnapshot(){
- const name=(document.getElementById('archiveName').value||'').trim();if(!name){alert('Ange omgång eller datum så att du kan känna igen arkivet.');return}
- if(!lastStrategies.length){alert('Beräkna strategierna först.');return}
- const id='a'+Date.now()+'-'+Math.floor(Math.random()*10000);
- const snap={id,label:name.slice(0,100),owner:document.getElementById('archiveOwner').value,savedAt:new Date().toISOString(),source:sourceState,isDemo:sourceState==='Demo',matchCount:13,budget:budgetForCompare(),modelVersion:'2.0-streckheuristik',matches:data.map(m=>({home:m.home,away:m.away,odds:[...m.odds],streck:[...m.streck],probs:activeProb(m)})),systems:lastStrategies.map(t=>({key:t.key,label:t.label,alpha:t.alpha,cost:t.cost,p13:t.stats.p13,p12:t.stats.p12,rare:t.stats.rare,choices:t.choices.map(x=>[...x])})),outcome:null,payouts:null};
- archive.push(snap);if(archive.length>150)archive=archive.slice(-150);selectedArchiveId=id;persistArchive();renderArchive();document.getElementById('archiveNotice').textContent=`${name} är sparad som en fryst ögonblicksbild${snap.isDemo?' (demo – ingår inte i facitstatistiken)':''}. Kontrollera att du sparade före spelstopp.`;
-}
-function settlement(snap){if(!snap?.outcome||!snap?.payouts)return null;return snap.systems.map(t=>{
- const d=correctCounts(t.choices,snap.outcome),winnings=[13,12,11,10].reduce((sum,k)=>sum+(d[k]||0)*(snap.payouts[k]||0),0);return {...t,dist:d,winnings,net:winnings-t.cost}
- })}
-function selectArchive(id){selectedArchiveId=id;renderArchive()}
-function renderArchive(){
- const list=document.getElementById('archiveList'),select=document.getElementById('archiveSelect');if(!list||!select)return;
- if(!archive.length)selectedArchiveId=null;
- if(!selectedArchiveId||!archive.some(x=>x.id===selectedArchiveId))selectedArchiveId=archive.length?archive[archive.length-1].id:null;
- const numReal=archive.filter(x=>!x.isDemo&&x.outcome).length;
- list.innerHTML=archive.length?[...archive].reverse().map(s=>`<div class="archiverow"><div><b>${encode(s.label)}</b> ${s.isDemo?'<span class="tagdemo">DEMO</span>':''}<div class="small">${encode(s.owner||'Modelltest')} · ${svDate(s.savedAt)} · ${s.outcome?'Rättad':'Inväntar facit'} · ${formatKr(s.budget)}</div></div><button class="btn ${s.id===selectedArchiveId?'primary':'ghost'}" data-select-archive="${encode(s.id)}">${s.id===selectedArchiveId?'Vald':'Visa / rätta'}</button></div>`).join(''):'<p class="small">Inga sparade omgångar ännu.</p>';
- select.innerHTML=archive.length?archive.map(s=>`<option value="${encode(s.id)}">${encode(s.label)}${s.outcome?' ✓':''}</option>`).join(''):'<option value="">Inga sparade omgångar</option>';
- if(selectedArchiveId)select.value=selectedArchiveId;
- const snap=archive.find(s=>s.id===selectedArchiveId);document.getElementById('archiveEditor').style.opacity=snap?'1':'.55';
- if(snap){
- document.getElementById('archiveSelectedMeta').textContent=`Fryst ${svDate(snap.savedAt)} · källa ${snap.source} · ${snap.owner||'Modelltest'}. ${snap.isDemo?'Demodata – räknas inte till ordinarie facit.':''}`;
- document.getElementById('archiveOutcome').value=snap.outcome||'';
- [13,12,11,10].forEach(k=>{document.getElementById('archivePay'+k).value=snap.payouts?.[k]??0});
- }else{document.getElementById('archiveSelectedMeta').textContent='Frys en kupong för att kunna rätta den.';document.getElementById('archiveOutcome').value=''}
- const results=settlement(snap);
- document.getElementById('archiveSettlement').innerHTML=results?`<div class="compareresult">${results.map(t=>`<div class="compMini"><div class="small">${t.label}</div><b class="${t.net>=0?'mint':'red'}">${t.net>=0?'+':''}${formatKr(t.net)}</b><div class="small">${formatKr(t.winnings)} utdelat · ${t.cost} kr insats</div><div class="small" style="margin-top:8px">13/12/11/10 rätt: ${[13,12,11,10].map(k=>t.dist[k]).join(' / ')}</div></div>`).join('')}</div>`:'<p class="small">Ange rätt rad och officiell utdelning för att jämföra de tre frysta systemen.</p>';
- const real=archive.filter(x=>!x.isDemo&&x.outcome&&x.payouts);
- let out=`<div class="resultitem"><span class="small">Rättade omgångar (ej demo)</span><b>${numReal}</b></div>`;
- if(real.length){for(let i=0;i<3;i++){const entries=real.map(s=>settlement(s)?.[i]).filter(Boolean),stake=entries.reduce((a,t)=>a+t.cost,0),win=entries.reduce((a,t)=>a+t.winnings,0),roi=stake?100*(win/stake-1):0;out+=`<div class="resultitem"><span class="small">${STRATEGIES[i].label}</span><b class="${roi>=0?'mint':'red'}">${roi>=0?'+':''}${round(roi,1)} %</b></div>`}}else out+='<p class="small">Ännu inget riktigt historiskt facit. Demoresultat och ännu inte rättade omgångar räknas inte.</p>';
- document.getElementById('archiveStats').innerHTML=out;
-}
-function settleArchived(){const snap=archive.find(s=>s.id===selectedArchiveId);if(!snap){alert('Välj en omgång.');return}
- const row=document.getElementById('archiveOutcome').value.toUpperCase().replace(/[^1X2]/g,'');if(row.length!==13){alert('Rätt rad ska innehålla exakt 13 tecken 1, X eller 2.');return}
- const p={};for(const k of [13,12,11,10]){p[k]=Number(document.getElementById('archivePay'+k).value);if(!Number.isFinite(p[k])||p[k]<0){alert(`Kontrollera utdelningen för ${k} rätt`);return}}
- snap.outcome=row;snap.payouts=p;persistArchive();renderArchive();document.getElementById('archiveNotice').textContent=`${snap.label} är rättad. Tre frysta system jämförda med samma facit och utdelningar.`;
-}
-function downloadFile(name,content,mime){const blob=new Blob([content],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
-function exportArchive(){downloadFile('stryktipslabbet-arkiv.json',JSON.stringify({format:'stryktipslabbet-archive-v2',exportedAt:new Date().toISOString(),archive},null,2),'application/json;charset=utf-8')}
-async function importArchive(e){const file=e.target.files?.[0];if(!file)return;
- try{const payload=JSON.parse(await file.text()),rows=Array.isArray(payload)?payload:payload.archive;
-  if(!Array.isArray(rows)||!rows.every(s=>s&&typeof s.id==='string'&&s.matchCount===13&&Array.isArray(s.systems)&&s.systems.length===3&&s.systems.every(t=>Array.isArray(t.choices)&&t.choices.length===13&&t.choices.every(sel=>Array.isArray(sel)&&sel.length>=1&&sel.length<=3&&sel.every(j=>Number.isInteger(j)&&j>=0&&j<3))))){throw Error('Fel format på arkivet')}
-  const old=new Set(archive.map(s=>s.id));let n=0;rows.forEach(s=>{if(!old.has(s.id)){archive.push(s);old.add(s.id);n++}});archive=archive.slice(-150);persistArchive();renderArchive();document.getElementById('archiveNotice').textContent=`Importerade ${n} nya frysta omgångar. Befintliga dubbletter lämnades oförändrade.`;
- }catch(err){alert('Kunde inte importera arkivet: '+err.message)}finally{e.target.value=''}
-}
-function clearArchived(){const snap=archive.find(s=>s.id===selectedArchiveId);if(!snap)return;if(!confirm(`Ta bort omgången "${snap.label}" och dess resultat?`))return;archive=archive.filter(x=>x.id!==selectedArchiveId);selectedArchiveId=null;persistArchive();renderArchive()}
-function numericAPI(x){const v=num(x);return Number.isFinite(v)?v:NaN}
-function findDraws(payload){const found=[],visited=new Set();function rec(obj,depth){if(!obj||typeof obj!=='object'||depth>7||visited.has(obj))return;visited.add(obj);if(Array.isArray(obj.events)&&obj.events.length===13)found.push(obj);for(const v of Object.values(obj))if(v&&typeof v==='object')if(Array.isArray(v))v.slice(0,30).forEach(x=>rec(x,depth+1));else rec(v,depth+1)}rec(payload,0);return found}
-async function fetchLive(){const btn=document.getElementById('fetchLive'),notice=document.getElementById('importStatus');btn.disabled=true;btn.textContent='Försöker läsa kupongen…';notice.textContent='Kontaktar Svenska Spels publika API. Om anslutningen blockeras används ingen ersättningsdata.';
+async function init(){
  try{
-  const abort=new AbortController(),timeout=setTimeout(()=>abort.abort(),12000);let res;
-  try{res=await fetch('https://api.spela.svenskaspel.se/draw/1/stryktipset/draws',{mode:'cors',cache:'no-store',signal:abort.signal})}finally{clearTimeout(timeout)}
-  if(!res.ok)throw Error(`HTTP ${res.status}`);const root=await res.json(),draws=findDraws(root);
-  if(!draws.length)throw Error('Det kom inga 13-matcherskuponger med väntad struktur.');
-  const valid=[],errors=[];for(const d of draws){try{const matches=d.events.slice().sort((a,b)=>(+a.eventNumber||0)-(+b.eventNumber||0)).map(ev=>{
-   const home=ev.participants?.find(x=>x.type==='home')?.name||ev.description?.split('-')[0]?.trim();const away=ev.participants?.find(x=>x.type==='away')?.name||ev.description?.split('-')[1]?.trim();const odds=['home','draw','away'].map(k=>numericAPI(ev.odds?.[k]));const streck=['home','draw','away'].map(k=>numericAPI(ev.distribution?.[k]));return {home,away,odds,streck,chosen:[],manual:null}
-  });if(matches.every(validMatch)){valid.push({d,matches})}else errors.push('Odds/streck saknas')}catch(e){errors.push(e.message)}}
-  if(!valid.length)throw Error('Det går inte att läsa alla 13 matcher med kompletta odds/streck. '+errors.slice(0,1).join(''));
-  const now=Date.now(),next=valid.map(z=>({...z,stamp:Date.parse(z.d.regCloseTime||z.d.closeTime||'')||0})).sort((a,b)=>{
-   const aa=a.stamp>=now?a.stamp:Infinity,bb=b.stamp>=now?b.stamp:Infinity;return aa-bb||b.stamp-a.stamp})[0];
-  data=next.matches;data.forEach(m=>m.chosen=[bestIndex(m)]);const drawNo=next.d.drawNumber||next.d.drawId||'okänt';setSource('Svenska Spel API, omgång '+drawNo);persist();renderAll();notice.textContent='13 matcher hämtade från API:t. Kontrollera omgång, spelstopp och odds hos Svenska Spel innan du använder informationen.';
- }catch(err){notice.textContent=`Direktimport misslyckades (${err.message}). Eventuellt är CORS blockerat eller API-formatet ändrat. CSV-importen fungerar fortfarande; inga matchdata ändrades.`
- }finally{btn.disabled=false;btn.textContent='Försök hämta kupong från Svenska Spel'}
+  const r=await fetch('./data/analysis-index.json',{cache:'no-store'});if(!r.ok)throw Error('Kan inte läsa sparad analys');
+  const manifest=await r.json();if(manifest.schema!=='stryktipslabbet-public-analysis-index-v1')throw Error('Fel format');
+  if(!manifest.draws?.length){status('Inga automatiska förslag finns ännu. Gå till Alla tips eller kontrollera Uppdateringar.');return}
+  const current=manifest.draws.find(x=>x.current);
+  if(!current){status('Senaste omgången är avslutad. Nya tips visas när nästa kupong har hämtats.');return}
+  const q=await fetch('./data/analysis/'+current.draw_number+'.json',{cache:'no-store'});if(!q.ok)throw Error('Förslaget kan inte läsas');
+  const data=await q.json();if(data.schema!=='stryktipslabbet-frozen-analysis-v1'||data.matches?.length!==13||data.systems?.length!==3)throw Error('Ogiltigt förslag');
+  if(Date.now()>=Date.parse(data.reg_close_time)){status('Spelstopp har passerat. Gå till Alla tips för historiska omgångar.');return}
+  analysis=data;
+  const hours=(Date.now()-Date.parse(data.observed_at_utc))/36e5;
+  status('Tips för omgång '+data.draw_number+' · Senast hämtat '+date(data.observed_at_utc)+'. Spelstopp '+date(data.reg_close_time)+'. '+(hours>8?'Uppgifterna är äldre än åtta timmar – kontrollera före spel.':'Kontrollera alltid oddsen före spel.'),hours<=8);
+  drawCards();
+ }catch(e){status('Det går inte att visa de senaste tipsen just nu. '+e.message+' Se Uppdateringar för status.')}
 }
-// New controls; event handlers are registered once.
-document.addEventListener('click',event=>{
- const a=event.target.closest('[data-apply-strategy]');if(a){const t=lastStrategies[+a.dataset.applyStrategy];if(!t)return;data.forEach((m,i)=>m.chosen=t.choices[i].slice());persist();renderAll();tabSelect('builder');return}
- const c=event.target.closest('[data-copy-strategy]');if(c){copyStrategy(+c.dataset.copyStrategy);return}
- const v=event.target.closest('[data-select-archive]');if(v){selectArchive(v.dataset.selectArchive);return}
-});
-document.getElementById('cmpBudget').addEventListener('change',()=>{document.getElementById('budget').value=budgetForCompare();renderStrategies()});
-document.getElementById('recalcCompare').onclick=renderStrategies;
-document.getElementById('goArchive').onclick=()=>tabSelect('archive');
-document.getElementById('saveArchive').onclick=saveSnapshot;
-document.getElementById('exportArchive').onclick=exportArchive;
-document.getElementById('importArchiveFile').addEventListener('change',importArchive);
-document.getElementById('archiveSelect').onchange=e=>selectArchive(e.target.value);
-document.getElementById('settleArchive').onclick=settleArchived;
-document.getElementById('deleteArchive').onclick=clearArchived;
-document.getElementById('fetchLive').onclick=fetchLive;
-
-// Stryktipslabbet 3.0 · Historiskt facit. Resultatmodellen är inte oddsmodellen.
-const HIST_SOURCE_URL='https://raw.githubusercontent.com/andreyhgl/stryktipset-results/main/results.csv';
-const HIST_START='2024-11-12',HIST_END='2026-11-11';
-const HIST_PRECOMPUTED={
-  asof:'2026-11-12',period:[HIST_START,HIST_END],source:'andreyhgl/stryktipset-results / Svenska Spel',
-  n:1365,draws:105,train:3133,correct:595,probHit:0.430607069263929,
-  brier:0.6430503995114516,baseBrier:0.6512387333269226,
-  logloss:1.0646924639816013,baseLogloss:1.0756721628354515,
-  calibration:[
-    {min:10,max:20,n:17,p:0.17749435872889896,o:0.11764705882352941},
-    {min:20,max:30,n:1614,p:0.24811291758964696,o:0.24783147459727387},
-    {min:30,max:40,n:1422,p:0.35081560620588664,o:0.34810126582278483},
-    {min:40,max:50,n:912,p:0.4307545271470829,o:0.4309210526315789},
-    {min:50,max:60,n:120,p:0.5298949657650798,o:0.5583333333333333},
-    {min:60,max:70,n:10,p:0.623303023643409,o:0.8}
-  ]
-};
-let histSourceRows=null,histReport=null,histImportedOdds=null;
-function histCSVLine(line,sep=','){
-  const result=[];let cell='',quoted=false;
-  for(let i=0;i<line.length;i++){
-    const x=line[i];if(x==='"'){if(quoted&&line[i+1]==='"'){cell+='"';i++}else quoted=!quoted;}
-    else if(x===sep&&!quoted){result.push(cell.trim());cell='';}else cell+=x;
-  }result.push(cell.trim());return result;
-}
-function histParseSource(csv){
-  let lines=csv.replace(/^\ufeff/,'').trim().split(/\r?\n/);if(!lines[0].startsWith('outcome,'))throw Error('Arkivet har ett oväntat kolumnformat.');
-  const rows=[];let invalid=0;
-  for(const line of lines.slice(1)){
-    if(!line.trim())continue;const f=histCSVLine(line);
-    if(f.length!==10||!['1','X','2'].includes(f[0])||!/^\d{4}-\d{2}-\d{2}$/.test(f[8])||!/^\d+$/.test(f[9])||!f[3]||!f[4]){invalid++;continue}
-    rows.push({out:f[0],home:f[3],away:f[4],date:f[8],draw:f[9]});
-  }
-  if(rows.length<1000||invalid>100)throw Error('För få giltiga matcher i arkivet. Avbröt utan att ändra facit.');
-  return rows;
-}
-function histModelReport(rows,first,last){
-  if(!(first<=last))throw Error('Startdatum måste vara tidigare än slutdatum.');
-  const groupMap=new Map();for(const r of rows){if(!groupMap.has(r.draw))groupMap.set(r.draw,[]);groupMap.get(r.draw).push(r)}
-  const draws=[...groupMap.entries()].map(([id,rs])=>({id,date:rs[0].date,rs})).sort((a,b)=>a.date.localeCompare(b.date)||(+a.id)-(+b.id));
-  const train=rows.filter(r=>r.date<first),testDraws=draws.filter(d=>d.date>=first&&d.date<=last);
-  if(train.length<100||!testDraws.length)throw Error('Det saknas tillräcklig historik före urvalet eller matcher i intervallet.');
-  const baseCount=[0,0,0];for(const r of train)baseCount[ICONS.indexOf(r.out)]++;
-  const base=baseCount.map(v=>(v+1)/(train.length+3)); // Endast historik före startdatum.
-  const rating=new Map(),get=key=>rating.get(key)||{r:1500,n:0};
-  const key=name=>name.toLowerCase().trim();
-  const pred=row=>{
-    const h=get(key(row.home)),a=get(key(row.away));
-    const strengthH=(h.r-1500)*h.n/(h.n+8),strengthA=(a.r-1500)*a.n/(a.n+8);
-    const z=strengthH-strengthA+70;
-    const pX=Math.min(.30,Math.max(.17,.255-.047*Math.min(1,Math.abs(z)/480)));
-    const pHome=1/(1+Math.exp(-z/380));
-    return {p:[(1-pX)*pHome,pX,(1-pX)*(1-pHome)],seen:Math.min(h.n,a.n)};
-  };
-  const all=[],drawResults=[],bins=Array.from({length:10},(_,i)=>({min:i*10,max:(i+1)*10,n:0,p:0,o:0}));
-  let loss=0,bloss=0,brier=0,bbrier=0,n=0,correct=0,predHit=0;
-  const observations=[0,0,0],expected=[0,0,0],yearStats={};
-  for(const d of draws){
-    // Prognoser för hela omgången beräknas innan någon av matcherna används för att uppdatera ratings.
-    const pending=[];let dc=0,de=0,dloss=0;
-    for(let j=0;j<d.rs.length;j++){
-      const r=d.rs[j],pr=pred(r),p=pr.p,idx=ICONS.indexOf(r.out),fav=p.indexOf(Math.max(...p));
-      if(d.date>=first&&d.date<=last){
-        const ls=-Math.log(p[idx]),bs=p.reduce((sum,v,k)=>sum+(v-(k===idx?1:0))**2,0);
-        const lsB=-Math.log(base[idx]),bsB=base.reduce((sum,v,k)=>sum+(v-(k===idx?1:0))**2,0);
-        n++;correct+=Number(fav===idx);predHit+=p[fav];loss+=ls;bloss+=lsB;brier+=bs;bbrier+=bsB;
-        dc+=Number(fav===idx);de+=p[fav];dloss+=ls;observations[idx]++;
-        const y=d.date.slice(0,4);if(!yearStats[y])yearStats[y]={n:0,correct:0,brier:0,baseBrier:0};
-        yearStats[y].n++;yearStats[y].correct+=(fav===idx);yearStats[y].brier+=bs;yearStats[y].baseBrier+=bsB;
-        p.forEach((v,k)=>{expected[k]+=v;let b=bins[Math.min(9,Math.floor(v*10))];b.n++;b.p+=v;b.o+=Number(k===idx)});
-        all.push({date:d.date,draw:d.id,matchNo:j+1,home:r.home,away:r.away,p,out:r.out,favorite:ICONS[fav],hit:fav===idx,loss:ls,brier:bs});
-      }
-      pending.push({r,p});
-    }
-    for(const {r,p} of pending){
-      const hk=key(r.home),ak=key(r.away);if(hk===ak)continue;
-      const h=get(hk),a=get(ak),result=r.out==='1'?1:r.out==='X'?0.5:0;
-      const shift=30*(result-(p[0]+0.5*p[1]));
-      rating.set(hk,{r:h.r+shift,n:h.n+1});rating.set(ak,{r:a.r-shift,n:a.n+1});
-    }
-    if(d.date>=first&&d.date<=last)drawResults.push({id:d.id,date:d.date,matches:d.rs.length,correct:dc,expected:de,logloss:dloss/d.rs.length});
-  }
-  if(!n)throw Error('Inga matcher inom valt intervall.');
-  return {n,draws:drawResults.length,train:train.length,correct,probHit:predHit/n, brier:brier/n,baseBrier:bbrier/n,logloss:loss/n,baseLogloss:bloss/n,
-    observations,expected,bins:bins.filter(x=>x.n>=10).map(b=>({...b,p:b.p/b.n,o:b.o/b.n})),
-    annual:Object.entries(yearStats).map(([year,v])=>({year,n:v.n,correct:v.correct/nanone(v.n),brier:v.brier/v.n,baseBrier:v.baseBrier/v.n})),
-    rows:all,rounds:drawResults,first,last,base};
-}
-function nanone(n){return n||1}
-function histPct(x,digits=1){return (100*x).toLocaleString('sv-SE',{minimumFractionDigits:digits,maximumFractionDigits:digits})+' %'}
-function histN(x,d=3){return x.toLocaleString('sv-SE',{minimumFractionDigits:d,maximumFractionDigits:d})}
-function histCard(label,value,desc){return `<div class="metric"><div class="l">${label}</div><div class="v">${value}</div><div class="sub">${desc}</div></div>`}
-function histShowSnapshot(){
- const r=HIST_PRECOMPUTED;
- document.getElementById('btStats').innerHTML=histCard('Matcher i test','1 365','105 omgångar, 12 nov 2024–11 nov 2026')+
- histCard('Träff på mest sannolika tecken','43,6 %','595 av 1 365 matcher')+
- histCard('Brier · resultatmodell','0,643','Enkel historisk baslinje: 0,651')+
- histCard('Log loss · resultatmodell','1,065','Enkel historisk baslinje: 1,076');
- document.getElementById('btCalib').innerHTML=histCalibration(r.calibration);
- document.getElementById('btSummary').innerHTML='<div class="note warning">Verifierad ögonblicksberäkning på ett publikt resultatarkiv, utförd 12 november 2026. Detta är <b>en enklare resultat-/Elo-modell</b> och <b>inte</b> den ordinarie oddsmodellen. Klicka ”Hämta och kör om analysen” för matcher, omgångar och exporterbara prognoser.</div>';
-}
-function histCalibration(bins){return `<div class="small" style="margin-bottom:12px">Om modellen anger cirka 40 % chans bör utfallet inträffa ungefär 40 % av gångerna. Varje match bidrar med tre observationer, en för 1, X och 2.</div>`+bins.map(b=>`<div class="btcalrow"><div class="small">${b.min}–${b.max}%</div><div><div class="btcaltrack"><span style="width:${Math.min(100,b.p*100)}%;background:var(--blue)"></span></div><div class="btcaltrack"><span style="width:${Math.min(100,b.o*100)}%;background:var(--mint)"></span></div></div><div class="small">${histPct(b.p,1)} / <b class="mint">${histPct(b.o,1)}</b> <span class="muted">(n=${b.n})</span></div></div>`).join('')+`<p class="small" style="margin-top:10px"><span class="blue">■</span> Modellsannolikhet · <span class="mint">■</span> Verklig frekvens. Få observationer i ytterkanterna ger osäkra staplar.</p>`}
-function histDrawDetails(){
- if(!histReport)return;
- const id=document.getElementById('btDrawSelect').value;
- const rows=histReport.rows.filter(r=>r.draw===id);
- document.getElementById('btMatchDetails').innerHTML=`<div class="tablewrap"><table><thead><tr><th>Match</th><th>Prognos 1/X/2</th><th>Modellens val</th><th>Utfall</th></tr></thead><tbody>`+rows.map(r=>`<tr><td><b>${r.matchNo}.</b> ${encode(r.home)} – ${encode(r.away)}</td><td>${r.p.map(p=>Math.round(p*100)+'%').join(' / ')}</td><td>${r.favorite}</td><td><b class="${r.hit?'mint':'red'}">${r.out}</b></td></tr>`).join('')+`</tbody></table></div>`;
-}
-function histRenderFull(r){
- document.getElementById('btStats').innerHTML=histCard('Matcher i test',r.n.toLocaleString('sv-SE'),`${r.draws} omgångar · ${r.train.toLocaleString('sv-SE')} äldre träningsmatcher`)+
- histCard('Träff på topptecknet',histPct(r.correct/r.n),`${r.correct} träffar · förväntat ${histPct(r.probHit)}`)+
- histCard('Brier · resultatmodell',histN(r.brier),`Baslinje: ${histN(r.baseBrier)} · lägre är bättre`)+
- histCard('Log loss · resultatmodell',histN(r.logloss),`Baslinje: ${histN(r.baseLogloss)} · lägre är bättre`);
- document.getElementById('btCalib').innerHTML=histCalibration(r.bins);
- const dif=r.baseBrier-r.brier;
- document.getElementById('btSummary').innerHTML=`<div class="note">Testet använder bara resultat som fanns <b>före respektive omgång</b>. Brier-skillnad mot historisk baslinje: <b class="${dif>0?'mint':'red'}">${dif>=0?'+':''}${histN(dif,4)}</b> poäng till resultatmodellens fördel. <b>Skillnaden är liten och visar inte någon säkerställd spelmässig fördel.</b> Saknade förhandsodds och streck gör att vi ännu inte kan backtesta de tre systemstrategiernas utdelning.</div>`;
- document.getElementById('btSigns').innerHTML=['1','X','2'].map((s,i)=>`<div class="sideitem"><span><b>${s}</b> · modellens förväntade / verkliga andel</span><strong>${histPct(r.expected[i]/r.n)} / <span class="mint">${histPct(r.observations[i]/r.n)}</span></strong></div>`).join('');
- document.getElementById('btAnnual').innerHTML=`<div class="tablewrap"><table><thead><tr><th>År</th><th>Matcher</th><th>Topptips rätt</th><th>Brier modell</th><th>Brier baslinje</th></tr></thead><tbody>`+r.annual.map(v=>`<tr><td>${v.year}</td><td>${v.n}</td><td>${histPct(v.correct)}</td><td>${histN(v.brier)}</td><td>${histN(v.baseBrier)}</td></tr>`).join('')+`</tbody></table></div>`;
- document.getElementById('btDrawSelect').innerHTML=r.rounds.slice().reverse().map(d=>`<option value="${d.id}">${d.date} · omgång ${d.id} · ${d.correct} av ${d.matches} topptecken rätt</option>`).join('');
- document.getElementById('btRounds').innerHTML=`<div class="tablewrap"><table><thead><tr><th>Omgång</th><th>Datum</th><th>Träff på topptecken</th><th>Förväntade träffar</th><th>Log loss</th></tr></thead><tbody>`+r.rounds.slice().reverse().slice(0,12).map(d=>`<tr><td>${d.id}</td><td>${d.date}</td><td>${d.correct}/${d.matches}</td><td>${histN(d.expected,1)}</td><td>${histN(d.logloss)}</td></tr>`).join('')+`</tbody></table></div>`;
- document.getElementById('btDetailsSection').classList.remove('hidden');histDrawDetails();
-}
-async function histFetch(){
- const btn=document.getElementById('btFetch'),status=document.getElementById('btStatus');btn.disabled=true;btn.textContent='Läser historiken…';
- try{
-   const controller=new AbortController(),t=setTimeout(()=>controller.abort(),20000);let res;
-   try{res=await fetch(HIST_SOURCE_URL,{cache:'no-store',signal:controller.signal})}finally{clearTimeout(t)}
-   if(!res.ok)throw Error('HTTP '+res.status);
-   const csv=await res.text(),arr=histParseSource(csv);
-   histSourceRows=arr;histImportedOdds=null;
-   histRecalc();status.textContent=`Hämtade ${arr.length.toLocaleString('sv-SE')} historiska matcher från GitHub-arkivet (källan bygger på Svenska Spels resultat). Testperiod och historisk modell har räknats om.`;
- }catch(e){status.textContent=`Kunde inte läsa den externa filen (${e.message}). Den inbyggda, daterade sammanfattningen visas fortfarande. CSV-import går också att använda.`;}
- finally{btn.disabled=false;btn.textContent='Hämta och kör om analysen'}
-}
-function histRecalc(){if(!histSourceRows)return;
- try{const start=document.getElementById('btStart').value,end=document.getElementById('btEnd').value;
-   const r=histModelReport(histSourceRows,start,end);histReport=r;histRenderFull(r);
-   document.getElementById('btStatus').textContent=`Omräknat på ${r.n} matcher i ${r.draws} omgångar. Inga matchresultat från testperioden används för att förutsäga tidigare matcher.`;
-   document.getElementById('btOddsResult').textContent='Historiska odds har inte importerats. Oddsbaserad jämförelse saknas.';
- }catch(e){document.getElementById('btStatus').textContent='Kunde inte räkna om: '+e.message}
-}
-function histImportSource(e){const file=e.target.files?.[0];if(!file)return;file.text().then(t=>{try{histSourceRows=histParseSource(t);histImportedOdds=null;histRecalc();document.getElementById('btStatus').textContent='Historik importerad från '+file.name+'. Källa och datakvalitet behöver verifieras separat.';}catch(err){document.getElementById('btStatus').textContent='Ogiltig historik: '+err.message}}).finally(()=>e.target.value='')}
-function histOddsImport(e){const file=e.target.files?.[0];if(!file)return;file.text().then(t=>{try{
- if(!histReport)throw Error('Hämta först matchresultaten för tvåårsperioden.');
- const byKey=new Map(histReport.rows.map(r=>[r.draw+':'+r.matchNo,r]));let n=0,correct=0,brier=0,logloss=0,matchedModelBrier=0,matchedModelLogloss=0,matchedModelCorrect=0,oddRows=[],invalid=0;const used=new Set();
- for(const line of t.replace(/^\ufeff/,'').trim().split(/\r?\n/)){
-  if(!line.trim()||/^(omgång|omgang|draw)/i.test(line.trim()))continue;
-  const parts=histCSVLine(line,';');if(parts.length!==5){invalid++;continue}
-  const draw=parts[0],no=Number(parts[1]),odds=parts.slice(2).map(v=>Number(v.replace(',','.')));
-  if(!Number.isInteger(no)||no<1||no>13||!odds.every(x=>Number.isFinite(x)&&x>1)){invalid++;continue}
-  const row=byKey.get(draw+':'+no);if(!row||used.has(draw+':'+no))continue;used.add(draw+':'+no);
-  const inv=odds.map(v=>1/v),sum=inv.reduce((a,b)=>a+b,0),p=inv.map(x=>x/sum),idx=ICONS.indexOf(row.out),fav=p.indexOf(Math.max(...p));
-  const bs=p.reduce((a,x,k)=>a+(x-(k===idx?1:0))**2,0);
-  n++;correct+=Number(idx===fav);brier+=bs;logloss-=Math.log(p[idx]);matchedModelBrier+=row.brier;matchedModelLogloss+=row.loss;matchedModelCorrect+=Number(row.hit);oddRows.push({draw,no,p,score:bs,home:row.home,away:row.away});
- }
- if(!n)throw Error('Ingen rad matchade omgång och matchnummer i historiken.');
- histImportedOdds=oddRows;
- const out=document.getElementById('btOddsResult');out.innerHTML=`<div class="note"><b>Oddsmodellens verkliga historietest (på importerade odds):</b> ${n} matchningar. Träff på mest sannolika tecken: <b>${histPct(correct/n)}</b>. Brier: <b>${histN(brier/n)}</b>. Log loss: <b>${histN(logloss/n)}</b>. <br><b>Resultatmodell på exakt samma ${n} matcher:</b> topptips rätt ${histPct(matchedModelCorrect/n)}, Brier ${histN(matchedModelBrier/n)}, log loss ${histN(matchedModelLogloss/n)}. <br><span class="small">Beräknat som marginaljusterade 1X2-odds precis som i Kuponganalys. Jämför bara direkt med resultatmodellen om exakt samma matcher ingår. Du ansvarar för att oddsen verkligen är daterade före avspark; verktyget kan inte verifiera tidstämpeln.</span></div>`;
- if(invalid)out.innerHTML+=`<p class="small">${invalid} felaktigt formaterade rader ignorerades.</p>`;
- }catch(err){document.getElementById('btOddsResult').textContent='Kunde inte läsa oddsen: '+err.message}
- }).finally(()=>e.target.value='')}
-function histOddsTemplate(){if(!histReport){alert('Ladda historiken först.');return}const rows=['Omgång;MatchNr;Odds1;OddsX;Odds2'];for(const r of histReport.rows)rows.push([r.draw,r.matchNo,'','',''].join(';'));downloadFile('stryktipslabbet-odds-mall.csv','\ufeff'+rows.join('\n'),'text/csv;charset=utf-8')}
-function histExport(){if(!histReport){alert('Ladda historiken först.');return}
- const lines=['Datum;Omgång;MatchNr;Hemmalag;Bortalag;P1;PX;P2;Utfall;Modellens val;Träff'];
- for(const r of histReport.rows)lines.push([r.date,r.draw,r.matchNo,r.home.replace(/;/g,','),r.away.replace(/;/g,','),...r.p.map(x=>x.toFixed(6)),r.out,r.favorite,r.hit?1:0].join(';'));
- downloadFile('stryktipslabbet-historiska-prognoser.csv','\ufeff'+lines.join('\n'),'text/csv;charset=utf-8');
-}
-document.getElementById('btFetch').addEventListener('click',histFetch);
-document.getElementById('btStart').addEventListener('change',histRecalc);
-document.getElementById('btEnd').addEventListener('change',histRecalc);
-document.getElementById('btDrawSelect').addEventListener('change',histDrawDetails);
-document.getElementById('btSourceFile').addEventListener('change',histImportSource);
-document.getElementById('btOddsFile').addEventListener('change',histOddsImport);
-document.getElementById('btExport').addEventListener('click',histExport);
-document.getElementById('btOddsTemplate').addEventListener('click',histOddsTemplate);
-histShowSnapshot();
-
-
-// Version 4.0: frozen historical experiment. Historical payouts are used only when available.
-const V4_DATA=[{"id":4874,"date":"2024-11-16","outcome":"11XXX2XXX121X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00647},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00647},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00333}]},{"id":4875,"date":"2024-11-23","outcome":"21X2X211X2XXX","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01181},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01181},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00934}]},{"id":4876,"date":"2024-11-30","outcome":"2X1121X1X2XX2","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01068},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01068},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00871}]},{"id":4877,"date":"2024-12-07","outcome":"211X12X221122","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":1,"p13":0.00868},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00851},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00493}]},{"id":4878,"date":"2024-12-14","outcome":"1XX121121X222","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01287},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01287},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01028}]},{"id":4879,"date":"2024-12-21","outcome":"22X21211X11X2","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00825},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00825},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00579}]},{"id":4880,"date":"2024-12-26","outcome":"121112XX11112","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00976},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00976},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00653}]},{"id":4881,"date":"2024-12-29","outcome":"2X21X1X22X111","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01136},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01136},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01136}]},{"id":4882,"date":"2025-01-04","outcome":"XX11121XX1XX2","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01112},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01112},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00896}]},{"id":4883,"date":"2025-01-11","outcome":"1221XX1X21X22","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01148},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01148},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01148}]},{"id":4884,"date":"2025-01-18","outcome":"X22212X111X21","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00924},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00924},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0063}]},{"id":4885,"date":"2025-01-25","outcome":"11222111112X1","sys":[{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.0141},{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.0141},{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.0141}]},{"id":4886,"date":"2025-02-01","outcome":"121222211XX22","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01166},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01166},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01166}]},{"id":4887,"date":"2025-02-08","outcome":"122222XXX1XX2","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00799},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00799},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00439}]},{"id":4888,"date":"2025-02-15","outcome":"21X1221X22X21","sys":[{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.00792},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.00792},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00446}]},{"id":4889,"date":"2025-02-22","outcome":"1222221111111","sys":[{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01486},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01486},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01486}]},{"id":4890,"date":"2025-03-01","outcome":"1X112X12X2122","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01154},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01154},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00961}]},{"id":4891,"date":"2025-03-08","outcome":"X2111X1121111","sys":[{"cost":1728,"n13":0,"n12":0,"n11":4,"n10":40,"p13":0.01568},{"cost":1728,"n13":0,"n12":0,"n11":4,"n10":40,"p13":0.01568},{"cost":1728,"n13":0,"n12":0,"n11":4,"n10":40,"p13":0.01568}]},{"id":4892,"date":"2025-03-15","outcome":"2XX2221X1212X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00988},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00988},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00816}]},{"id":4893,"date":"2025-03-22","outcome":"X1X21112XXX1X","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00593},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00593},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0033}]},{"id":4894,"date":"2025-03-29","outcome":"X1XX1111112X1","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00709},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00706},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00422}]},{"id":4895,"date":"2025-04-05","outcome":"112X1111XX211","sys":[{"cost":1728,"n13":0,"n12":2,"n11":22,"n10":104,"p13":0.00764},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.00761},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":1,"p13":0.00442}]},{"id":4896,"date":"2025-04-12","outcome":"XX22221XX2211","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01387},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01387},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01387}]},{"id":4897,"date":"2025-04-19","outcome":"11X2X11X1X2XX","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00776},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00776},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0055}]},{"id":4898,"date":"2025-04-26","outcome":"111211X2X112X","sys":[{"cost":1728,"n13":0,"n12":1,"n11":12,"n10":63,"p13":0.01126},{"cost":1728,"n13":0,"n12":1,"n11":12,"n10":63,"p13":0.01126},{"cost":1728,"n13":0,"n12":1,"n11":12,"n10":63,"p13":0.01126}]},{"id":4899,"date":"2025-05-03","outcome":"2X12222212112","sys":[{"cost":1536,"n13":0,"n12":0,"n11":2,"n10":20,"p13":0.00886},{"cost":1536,"n13":0,"n12":0,"n11":2,"n10":20,"p13":0.00886},{"cost":1728,"n13":0,"n12":1,"n11":12,"n10":63,"p13":0.00605}]},{"id":4900,"date":"2025-05-10","outcome":"22X222X1X121X","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00941},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00941},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0066}]},{"id":4901,"date":"2025-05-17","outcome":"1122X12111211","sys":[{"cost":1536,"n13":0,"n12":0,"n11":2,"n10":20,"p13":0.00619},{"cost":1536,"n13":0,"n12":0,"n11":2,"n10":20,"p13":0.00619},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":1,"p13":0.00329}]},{"id":4902,"date":"2025-05-25","outcome":"2212X22X21X11","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0143},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0143},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0143}]},{"id":4903,"date":"2025-05-31","outcome":"1211XX2X21111","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00593},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00593},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00327}]},{"id":4904,"date":"2025-06-07","outcome":"21XX11122211X","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.00562},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00502},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00312}]},{"id":4905,"date":"2025-06-14","outcome":"21X2122X11121","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00637},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00637},{"cost":1536,"n13":0,"n12":0,"n11":2,"n10":20,"p13":0.00345}]},{"id":4906,"date":"2025-06-22","outcome":"211221X2211X1","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00603},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00603},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00336}]},{"id":4907,"date":"2025-06-28","outcome":"XXX112XXXX221","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00583},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00525},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00302}]},{"id":4908,"date":"2025-07-05","outcome":"1121X1XX21211","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.0066},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.0066},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00398}]},{"id":4909,"date":"2025-07-12","outcome":"1111111211111","sys":[{"cost":1536,"n13":1,"n12":11,"n11":54,"n10":156,"p13":0.0062},{"cost":1536,"n13":1,"n12":11,"n11":54,"n10":156,"p13":0.0062},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.00306}]},{"id":4910,"date":"2025-07-19","outcome":"X2212XXX1X112","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00604},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00604},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00348}]},{"id":4911,"date":"2025-07-26","outcome":"XX1221211X212","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00564},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00564},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00289}]},{"id":4912,"date":"2025-08-02","outcome":"X2X222X111121","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00725},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00717},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00549}]},{"id":4913,"date":"2025-08-09","outcome":"2122X21112X12","sys":[{"cost":1728,"n13":0,"n12":2,"n11":22,"n10":104,"p13":0.00799},{"cost":1536,"n13":0,"n12":0,"n11":4,"n10":36,"p13":0.00784},{"cost":1728,"n13":0,"n12":1,"n11":12,"n10":63,"p13":0.00479}]},{"id":4914,"date":"2025-08-16","outcome":"2X112X2121111","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.0116},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.0116},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.0116}]},{"id":4915,"date":"2025-08-23","outcome":"1111112122XX1","sys":[{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.01073},{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.01073},{"cost":1728,"n13":0,"n12":0,"n11":4,"n10":40,"p13":0.00726}]},{"id":4916,"date":"2025-08-30","outcome":"X212121X2X1X1","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00947},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00947},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00767}]},{"id":4917,"date":"2025-09-06","outcome":"X111X12112111","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0064},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00637},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00299}]},{"id":4918,"date":"2025-09-13","outcome":"X2X111X21X222","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01343},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01343},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01343}]},{"id":4919,"date":"2025-09-20","outcome":"11X22XX212222","sys":[{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.00789},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.00789},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00566}]},{"id":4920,"date":"2025-09-27","outcome":"X2211X12XXXX1","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01236},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01236},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01028}]},{"id":4921,"date":"2025-10-04","outcome":"1112X111212X1","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01327},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01327},{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.01087}]},{"id":4922,"date":"2025-10-11","outcome":"X1X11221X1212","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00654},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00649},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00381}]},{"id":4923,"date":"2025-10-18","outcome":"2111X12112111","sys":[{"cost":1728,"n13":0,"n12":2,"n11":22,"n10":104,"p13":0.01152},{"cost":1728,"n13":0,"n12":2,"n11":22,"n10":104,"p13":0.01152},{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.00945}]},{"id":4924,"date":"2025-10-25","outcome":"1121111XX121X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00989},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00989},{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.00804}]},{"id":4925,"date":"2025-11-01","outcome":"1221X111X2211","sys":[{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.01008},{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.01008},{"cost":1728,"n13":1,"n12":12,"n11":63,"n10":190,"p13":0.00663}]},{"id":4926,"date":"2025-11-08","outcome":"1X1112X122111","sys":[{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01175},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01175},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01175}]},{"id":4927,"date":"2025-11-15","outcome":"1211111XXX12X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00669},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00668},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00421}]},{"id":4928,"date":"2025-11-22","outcome":"12X11212X1X11","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.0101},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.0101},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00688}]},{"id":4929,"date":"2025-11-29","outcome":"22111111121XX","sys":[{"cost":1728,"n13":0,"n12":2,"n11":22,"n10":104,"p13":0.01378},{"cost":1728,"n13":0,"n12":2,"n11":22,"n10":104,"p13":0.01378},{"cost":1728,"n13":0,"n12":2,"n11":22,"n10":104,"p13":0.01378}]},{"id":4930,"date":"2025-12-06","outcome":"XX111121X1111","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01262},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01262},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01262}]},{"id":4931,"date":"2025-12-13","outcome":"1211X11121X12","sys":[{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01461},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01461},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01461}]},{"id":4932,"date":"2025-12-20","outcome":"2121XX21X1111","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.0139},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.0139},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.0139}]},{"id":4933,"date":"2025-12-27","outcome":"2112X12XX11XX","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01103},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01103},{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.00966}]},{"id":4934,"date":"2026-01-04","outcome":"XXX12X2221122","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01074},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01074},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01074}]},{"id":4935,"date":"2026-01-10","outcome":"22X111221X2X1","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01392},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01392},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01392}]},{"id":4936,"date":"2026-01-17","outcome":"X11X211X22XX2","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01562},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01562},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01562}]},{"id":4937,"date":"2026-01-24","outcome":"1X11XX1221XX2","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01065},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01065},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00711}]},{"id":4938,"date":"2026-01-31","outcome":"112X22X1X2112","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01242},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01242},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00989}]},{"id":4939,"date":"2026-02-07","outcome":"2122X21X21X21","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01481},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01481},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01481}]},{"id":4940,"date":"2026-02-14","outcome":"12X21212X211X","sys":[{"cost":1536,"n13":0,"n12":0,"n11":2,"n10":20,"p13":0.00727},{"cost":1536,"n13":0,"n12":0,"n11":2,"n10":20,"p13":0.00727},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00554}]},{"id":4941,"date":"2026-02-21","outcome":"1XXX2X22X1121","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0105},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0105},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0105}]},{"id":4942,"date":"2026-02-28","outcome":"2122211122X11","sys":[{"cost":1728,"n13":0,"n12":1,"n11":12,"n10":63,"p13":0.01241},{"cost":1728,"n13":0,"n12":1,"n11":12,"n10":63,"p13":0.01241},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01007}]},{"id":4943,"date":"2026-03-07","outcome":"2X1XX11X11221","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00725},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00719},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0055}]},{"id":4944,"date":"2026-03-14","outcome":"X122XX22111X2","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01421},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01421},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01129}]},{"id":4945,"date":"2026-03-21","outcome":"X11221212X11X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00983},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00983},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.00823}]},{"id":4946,"date":"2026-03-28","outcome":"1X11111X1111X","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.00614},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.00614},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00293}]},{"id":4947,"date":"2026-04-04","outcome":"1121XX2212122","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01018},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01018},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00731}]},{"id":4948,"date":"2026-04-11","outcome":"1X2222111X21X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00901},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00901},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00739}]},{"id":4949,"date":"2026-04-18","outcome":"2X212X2221X22","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01107},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01107},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01107}]},{"id":4950,"date":"2026-04-25","outcome":"111121X2221XX","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.01735},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.01735},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.01735}]},{"id":4951,"date":"2026-05-02","outcome":"111X222X1222X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01234},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01234},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01234}]},{"id":4952,"date":"2026-05-09","outcome":"1X12122221X2X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01013},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01008},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00728}]},{"id":4953,"date":"2026-05-17","outcome":"1X21X2XXX1211","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00879},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00879},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00642}]},{"id":4954,"date":"2026-05-24","outcome":"222X1111XX2X1","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01263},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01263},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.01263}]},{"id":4955,"date":"2026-05-30","outcome":"X1111X1X12X11","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00714},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00714},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00511}]},{"id":4956,"date":"2026-06-06","outcome":"21112X1X22X21","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.00614},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00553},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00398}]},{"id":4957,"date":"2026-06-13","outcome":"X12XX1222XX21","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00535},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00481},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.003}]},{"id":4958,"date":"2026-06-20","outcome":"11X21XX211X22","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.0074},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":8,"p13":0.0074},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00482}]},{"id":4959,"date":"2026-06-27","outcome":"21X12X2X1111X","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00563},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00506},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00311}]},{"id":4960,"date":"2026-07-04","outcome":"222111X121212","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00589},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00589},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00353}]},{"id":4961,"date":"2026-07-11","outcome":"XX11X11111112","sys":[{"cost":1728,"n13":0,"n12":2,"n11":22,"n10":104,"p13":0.00667},{"cost":1536,"n13":0,"n12":0,"n11":4,"n10":36,"p13":0.00663},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00301}]},{"id":4962,"date":"2026-07-18","outcome":"X21X212122212","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00732},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00732},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0052}]},{"id":4963,"date":"2026-07-25","outcome":"1X212XX21XX22","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00649},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00649},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00377}]},{"id":4964,"date":"2026-08-01","outcome":"11X1211212221","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.0061},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.0061},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00365}]},{"id":4965,"date":"2026-08-08","outcome":"21211X22121X2","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00679},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00675},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.00371}]},{"id":4966,"date":"2026-08-15","outcome":"X211222X1X122","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01065},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01065},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00875}]},{"id":4967,"date":"2026-08-22","outcome":"11121X2X1X2XX","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00851},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00838},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.0048}]},{"id":4968,"date":"2026-08-29","outcome":"2X2221X111X22","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01022},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01022},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00815}],"payouts":[590909,5919,357,91]},{"id":4969,"date":"2026-09-05","outcome":"XX21XX211221X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01159},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01159},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01159}],"payouts":[764705,6227,383,98]},{"id":4970,"date":"2026-09-12","outcome":"2XXX22X1X1212","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01325},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01325},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01325}],"payouts":[10000000,38372,1531,312]},{"id":4971,"date":"2026-09-19","outcome":"2111XX2XX12XX","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01141},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01141},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.01141}],"payouts":[0,60213,2888,592]},{"id":4972,"date":"2026-09-26","outcome":"22X21X121XXXX","sys":[{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00705},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00705},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00449}],"payouts":[6357957,30267,1429,304]},{"id":4973,"date":"2026-10-03","outcome":"22122X111X211","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00727},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00716},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.00461}],"payouts":[59266,736,49,16]},{"id":4974,"date":"2026-10-10","outcome":"X1X2112X1212X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00959},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00959},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":0,"p13":0.00756}],"payouts":[46731,827,67,23]},{"id":4975,"date":"2026-10-17","outcome":"22111222X2112","sys":[{"cost":1728,"n13":1,"n12":12,"n11":63,"n10":190,"p13":0.01406},{"cost":1728,"n13":1,"n12":12,"n11":63,"n10":190,"p13":0.01406},{"cost":1728,"n13":1,"n12":12,"n11":63,"n10":190,"p13":0.01406}],"payouts":[60840,861,61,19]},{"id":4976,"date":"2026-10-24","outcome":"212111X1X212X","sys":[{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01011},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.01011},{"cost":1728,"n13":0,"n12":0,"n11":1,"n10":12,"p13":0.00653}],"payouts":[399293,6043,371,99]},{"id":4977,"date":"2026-10-31","outcome":"X12111X2X1112","sys":[{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01121},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01121},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.009}],"payouts":[539682,2509,148,39]},{"id":4978,"date":"2026-11-07","outcome":"11X111111X112","sys":[{"cost":1728,"n13":0,"n12":0,"n11":2,"n10":22,"p13":0.0114},{"cost":1536,"n13":0,"n12":0,"n11":0,"n10":4,"p13":0.01119},{"cost":1728,"n13":0,"n12":0,"n11":0,"n10":2,"p13":0.00799}],"payouts":[1444444,7346,405,98]}];
-const V4_LABELS=['Balanserat','Favoritkritisk testprofil','Skrälltest'];
-const V4_DETAILS=[
- 'Maximerar sannolikhet för 13 rätt med Elo-prognoser.',
- 'Minskar favoriternas vikt till 89 % vid val av system. Ingen historisk streckdata ingår.',
- 'Minskar favoriternas vikt till 77 %. Ett skrällexperiment, inte en påvisad värdestrategi.'
-];
-let v4ImportedPayouts={};
-const v4Format=n=>new Intl.NumberFormat('sv-SE',{maximumFractionDigits:0}).format(n)+' kr';
-function v4PayoutFor(r){return r.payouts||v4ImportedPayouts[r.id]||null}
-function v4Money(r,s){const p=v4PayoutFor(r);return p?s.n13*p[0]+s.n12*p[1]+s.n11*p[2]+s.n10*p[3]:null}
-function v4Render(){
- const id=+(document.getElementById('v4Strategy').value||0),verified=V4_DATA.filter(r=>r.payouts),u=V4_DATA.filter(r=>v4PayoutFor(r)),c=document.getElementById('v4BacktestCards');
- c.innerHTML=V4_LABELS.map((name,j)=>{const x=V4_DATA.map(r=>r.sys[j]),spent=x.reduce((s,v)=>s+v.cost,0),h13=x.reduce((s,v)=>s+v.n13,0),h12=x.reduce((s,v)=>s+v.n12,0),e=x.reduce((s,v)=>s+v.p13,0),win=u.reduce((s,r)=>s+v4Money(r,r.sys[j]),0),spentKnown=u.reduce((s,r)=>s+r.sys[j].cost,0);
- return `<div class="strategycard ${j===id?'featured':''}"><div class="strategy-head"><div class="eyebrow">TESTPROFIL ${j+1} · 105 OMGÅNGAR</div><h3>${name}</h3><p class="small desc">${V4_DETAILS[j]}</p></div><div class="strategy-content"><div class="strategy-stat"><span class="small">13-rättsrader</span><strong class="strategy-prob">${h13}</strong></div><div class="strategy-stat"><span class="small">12-rättsrader</span><b>${h12}</b></div><div class="strategy-stat"><span class="small">Modellens förväntade 13:or</span><b>${e.toLocaleString('sv-SE',{maximumFractionDigits:2})}</b></div><div class="strategy-stat"><span class="small">Total insats, 105 omgångar</span><b>${v4Format(spent)}</b></div><div class="strategy-stat"><span class="small">Utbetalt på ${u.length} omgångar med känd utdelning</span><b>${v4Format(win)}</b></div><div class="strategy-stat"><span class="small">Insats på samma ${u.length} omgångar</span><b>${v4Format(spentKnown)}</b></div><button class="btn ${j===id?'primary':''} w100" data-v4sel="${j}">Visa omgångar</button></div></div>`}).join('');
- const known=verified.length,notverified=u.length-known;
- document.getElementById('v4MoneyStatus').innerHTML=`<b>Utdelningsgrad:</b> ${known} av 105 omgångar har separat verifierade utdelningar, ytterligare ${notverified} har manuellt importerade uppgifter. <b>Fullständig tvåårsavkastning kan alltså inte anges.</b> De tre profilerna är historiska experiment utan förhandsstreck, och utbetalning på urvalet är inte ett mått på förväntad framtida avkastning.`;
- document.getElementById('v4RoundRows').innerHTML=[...V4_DATA].reverse().map(r=>{const s=r.sys[id],money=v4Money(r,s),p=v4PayoutFor(r),tag=r.payouts?'Kontrollerad':p?'Importerad':'Saknas';return `<tr><td><b>${r.id}</b><div class="small">${r.date}</div></td><td class="num" style="font-family:ui-monospace,monospace;white-space:nowrap">${r.outcome}</td><td class="num">${s.cost.toLocaleString('sv-SE')} kr</td><td class="num">${s.n13}</td><td class="num">${s.n12}</td><td class="num">${s.n11}</td><td class="num">${s.n10}</td><td class="num">${money===null?'—':v4Format(money)}<div class="small">${tag}</div></td></tr>`}).join('');
-}
-document.addEventListener('click',e=>{const b=e.target.closest('[data-v4sel]');if(b){document.getElementById('v4Strategy').value=b.dataset.v4sel;v4Render()}});
-document.getElementById('v4Strategy').addEventListener('change',v4Render);
-function v4CSV(text){return text.replace(/^\ufeff/,'').trim().split(/\r?\n/).map(l=>l.split(';').map(z=>z.trim()))}
-document.getElementById('v4PayoutFile').addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;try{let data=v4CSV(await f.text()),count=0;for(const row of data.slice(1)){if(row.length<5)continue;const id=+row[0],nums=row.slice(1,5).map(z=>Number(z.replace(',','.')));if(!V4_DATA.some(r=>r.id===id)||nums.some(v=>!Number.isFinite(v)||v<0))continue;if(V4_DATA.some(r=>r.id===id&&r.payouts))continue;v4ImportedPayouts[id]=nums;count++;}v4Render();alert(`Importerade ${count} utdelningsomgångar som ännu inte oberoende verifierats.`)}catch(err){alert('Kunde inte läsa filen: '+err.message)}e.target.value=''});
-function v4OptWithP(p,streck,alpha,budget=1800){
- let dp=new Map([[1,{score:0,choices:[]}]]);for(let m=0;m<13;m++){const nx=new Map();for(const [cost,x] of dp)for(let mask=1;mask<8;mask++){const sel=[0,1,2].filter(k=>mask&(1<<k)),nc=cost*sel.length;if(nc>budget)continue;const weighted=sel.reduce((z,k)=>z+p[m][k]/Math.pow(Math.max(streck[m][k],0.035),alpha),0);if(weighted<=0)continue;const score=x.score+Math.log(weighted);if(!nx.has(nc)||nx.get(nc).score<score)nx.set(nc,{score,choices:[...x.choices,sel]})}dp=nx}
- let best=null;for(const [cost,x] of dp)if(!best||x.score>best.score)best={cost,...x};return best
-}
-function v4Count(c,out){let d=[1];for(let i=0;i<13;i++){let yes=c[i].includes('1X2'.indexOf(out[i])),z=c[i].length,next=Array(d.length+1).fill(0);for(let j=0;j<d.length;j++){if(yes){next[j+1]+=d[j];next[j]+=(z-1)*d[j]}else next[j]+=z*d[j]}d=next;}return d}
-// Strict time filtering: never silently label late snapshots as a genuine backtest.
-document.getElementById('v4FullFile').addEventListener('change',async e=>{
- const f=e.target.files?.[0];if(!f)return;const out=document.getElementById('v4FullResult');
- try{const raw=v4CSV(await f.text()),sets=new Map();let rejected=0;for(const a of raw.slice(1)){
-   if(a.length<10)continue;const id=+a[0],no=+a[1],nums=a.slice(2,8).map(x=>Number(x.replace(',','.'))),stamp=a[8],stop=a[9];
-   if(!V4_DATA.some(r=>r.id===id)||!Number.isInteger(no)||no<1||no>13||nums.slice(0,3).some(x=>!Number.isFinite(x)||x<=1)||nums.slice(3).some(x=>!Number.isFinite(x)||x<0)||nums.slice(3).reduce((s,v)=>s+v,0)<=0||!stamp||!stop||!Number.isFinite(Date.parse(stamp))||!Number.isFinite(Date.parse(stop))||Date.parse(stamp)>=Date.parse(stop)){rejected++;continue;}
-   if(!sets.has(id))sets.set(id,new Map());sets.get(id).set(no,nums)
- }
- let accepted=[],win=[0,0,0],stake=[0,0,0],counts=[0,0,0],withMoney=0;
- for(const [id,rows] of sets){if(rows.size!==13)continue;const round=V4_DATA.find(r=>r.id===id),p=[],s=[];if(!round)continue;for(let i=1;i<=13;i++){const rr=rows.get(i);if(!rr)throw Error('Matchnummer saknas i omgång '+id);let inv=rr.slice(0,3).map(o=>1/o),sum=inv.reduce((z,v)=>z+v,0),streck=rr.slice(3).map(v=>v/rr.slice(3).reduce((z,y)=>z+y,0));p.push(inv.map(v=>v/sum));s.push(streck)}
-   const results=[0,.43,.85].map((alpha,j)=>{let best=v4OptWithP(p,s,alpha),dist=v4Count(best.choices,round.outcome),money=v4PayoutFor(round)?[13,12,11,10].reduce((a,k)=>a+dist[k]*v4PayoutFor(round)[13-k],0):null;stake[j]+=best.cost;counts[j]+=dist[13]||0;if(money!==null)win[j]+=money;return {cost:best.cost,correct13:dist[13],correct12:dist[12],winnings:money}});
-   accepted.push({id,date:round.date,payout:!!v4PayoutFor(round),results});if(v4PayoutFor(round))withMoney++;
- }
- accepted.sort((a,b)=>a.id-b.id);
- if(!accepted.length)throw Error('Inga kompletta omgångar med 13 giltiga, förhandsdaterade matchrader.');
- out.innerHTML=`<b>Historiskt odds- och strecktest:</b> ${accepted.length} kompletta omgångar med 13 före-spelstopp-rader; ${rejected} ogiltiga eller sena rader ignorerades. <b>${withMoney} omgångar</b> har dessutom känd utdelning. ${['Balanserat','Värdeorienterat','Jackpot'].map((name,j)=>`<div class="resultitem"><span>${name}</span><b>${counts[j]} trettonrättsrader · ${v4Format(stake[j])} satsat · ${win[j]?v4Format(win[j])+' känd utbetalning':'utbetalning saknas eller 0'}</b></div>`).join('')}<p class="small">Utbetalt räknas bara för omgångar med känd utdelning. Summerad insats avser alla ${accepted.length} omgångar. Beräkna <b>inte</b> ROI genom att dividera de två om urvalen skiljer sig. Tidsstämplarnas äkthet kan inte kontrolleras utan oberoende arkiv.</p>`;
- }catch(err){out.textContent='Import misslyckades: '+err.message}e.target.value='';
-});
-v4Render();
-
-
-// V5 history payouts: real settled distributions, NEVER masquerading as historic pre-close odds.
-const V5_EXTRA_PAYOUTS={"4889":[151133,1579,85,20],"4890":[34034,513,39,0],"4909":[6495,118,0,0],"4910":[145750,1108,78,25],"4916":[1392774,15271,839,199],"4917":[49364,787,55,18],"4918":[353834,5468,339,88],"4919":[3319570,59278,3286,735],"4925":[41436,364,27,0],"4949":[27133,488,39,0],"4950":[47619,388,29,0],"4954":[970175,12916,592,127],"4955":[121748,1831,114,32],"4961":[17782,212,16,0],"4962":[35248,352,26,0],"4963":[773697,8077,503,125],"4964":[37933,286,19,0],"4965":[526040,3791,234,66],"4966":[425845,6038,334,87],"4967":[1522223,32159,1498,284]};
-for(const [id,arr] of Object.entries(V5_EXTRA_PAYOUTS)) {
- const r=V4_DATA.find(x=>x.id===+id);
- if(r&&!r.payouts) r.payouts=arr;
-}
-const v5ApiVerifiedIds=new Set();
-const v5Fmt=n=>new Intl.NumberFormat('sv-SE',{maximumFractionDigits:0}).format(n);
-function v5Subset(){const s=document.getElementById('v5Rotation').value;return V4_DATA.filter((r,i)=>s==='all'||i%10===+s)}
-function v5Aggregate(arr){return V4_LABELS.map((label,j)=>{
- const totalSpend=arr.reduce((a,r)=>a+r.sys[j].cost,0), paid=arr.filter(r=>v4PayoutFor(r)),paidCost=paid.reduce((a,r)=>a+r.sys[j].cost,0),winnings=paid.reduce((a,r)=>a+v4Money(r,r.sys[j]),0),
- h13=arr.reduce((a,r)=>a+r.sys[j].n13,0),h12=arr.reduce((a,r)=>a+r.sys[j].n12,0);
- return {name:label,rounds:arr.length,complete:paid.length,totalSpend,paidCost,winnings,profit:winnings-paidCost,roi:paidCost?100*(winnings/paidCost-1):null,h13,h12};
-})}
-function v5SummaryTable(arr){const x=v5Aggregate(arr);return `<table class="compact"><thead><tr><th>Strategi</th><th>13 rätt</th><th>12 rätt</th><th>Insats, alla</th><th>Utbetalt*</th><th>Netto*</th><th>ROI* (känt urval)</th></tr></thead><tbody>${x.map(v=>`<tr><td><b>${v.name}</b><div class="small">${v.complete}/${v.rounds} med utdelning</div></td><td>${v.h13}</td><td>${v.h12}</td><td>${v5Fmt(v.totalSpend)} kr</td><td>${v5Fmt(v.winnings)} kr</td><td>${v.complete?`${v.profit>=0?'+':''}${v5Fmt(v.profit)} kr`:'—'}</td><td>${v.roi===null?'—':`${v.roi>=0?'+':''}${v.roi.toFixed(1)} %`}</td></tr>`).join('')}</tbody></table><p class="small">* Utbetalt, netto och ROI baseras <b>enbart</b> på ${arr.filter(r=>v4PayoutFor(r)).length} omgångar med verifierad eller importerad utdelning. Insats för samma urval dras av i nettot. Urvalet är ofullständigt och kan vara starkt missvisande för avkastningen under hela tvåårsperioden. Inga 13-rättsgarantier eller avkastningsprognoser.</p>`;}
-function v5Render(){
- const n=V4_DATA.filter(r=>v4PayoutFor(r)).length;
- const total=V4_DATA.reduce((a,r)=>a+r.sys[0].cost,0);
- document.getElementById('v5HistoricalMetrics').innerHTML=`<div class="metric"><div class="l">Testade omgångar</div><div class="v">105</div><div class="small">2024–2026</div></div><div class="metric"><div class="l">Utdelning tillgänglig</div><div class="v">${n} / 105</div><div class="small">Resterande saknas</div></div><div class="metric"><div class="l">Insats – balanserad</div><div class="v">${v5Fmt(total)} kr</div><div class="small">Hypotetisk, alla omgångar</div></div>`;
- const sel=v5Subset(),complete=sel.filter(r=>v4PayoutFor(r)).length;
- document.getElementById('v5RotationMetrics').innerHTML=`<div class="metric"><div class="l">Omgångar i urvalet</div><div class="v">${sel.length}</div><div class="small">${sel[0]?.date||'–'} – ${sel.at(-1)?.date||'–'}</div></div><div class="metric"><div class="l">Med utdelning</div><div class="v">${complete}</div><div class="small">${sel.length-complete} saknas</div></div>`;
- document.getElementById('v5RotationTable').innerHTML=v5SummaryTable(sel);
- document.getElementById('v5RotationExplain').textContent='Utfallet gäller system som modellen i efterhand konstruerat genom att gå igenom gamla matcher i tidsordning, utan efterhandsresultat som prognosdata. Alternativprofilerna är inte fulla historiska värdemodeller.';
- document.getElementById('v5RotationAll').innerHTML=`<table class="compact"><thead><tr><th>Tur</th><th>Omgångar</th><th>13 rätt</th><th>Med utd.</th><th>Netto vid känd utd.</th></tr></thead><tbody>${Array.from({length:10},(_,i)=>{const sub=V4_DATA.filter((r,j)=>j%10===i),z=v5Aggregate(sub)[0];return `<tr><td><b>${i+1}</b></td><td>${sub.length}</td><td>${z.h13}</td><td>${z.complete}</td><td>${z.complete?`${z.profit>=0?'+':''}${v5Fmt(z.profit)} kr`:'—'}</td></tr>`}).join('')}</tbody></table>`;
-}
-document.getElementById('v5Rotation').addEventListener('change',v5Render);
-document.getElementById('v5ShowAll').addEventListener('click',()=>{document.getElementById('v5Rotation').value='all';v5Render()});
-document.getElementById('v4PayoutFile').addEventListener('change',()=>setTimeout(v5Render,250));
-function v5CSV(){let rows=[['Datum','Omgång','Rätt_rad','Strategi','Kostnad','13_rader','12_rader','11_rader','10_rader','P13_modell','Utd13','Utd12','Utd11','Utd10','Utdelning_känd','Vinst_utbetalt','Netto','Källstatus'].join(';')];
- for(const r of V4_DATA) for(let j=0;j<3;j++){const s=r.sys[j],p=v4PayoutFor(r),money=v4Money(r,s),status=r.payouts?'publicerad_sammanställning':v5ApiVerifiedIds.has(r.id)?'svenska_spel_api':p?'manuellt_importerad':'saknas';rows.push([r.date,r.id,r.outcome,V4_LABELS[j],s.cost,s.n13,s.n12,s.n11,s.n10,s.p13,...(p||['','','','']),+!!p,money===null?'':money,money===null?'':money-s.cost,status].join(';'))}return rows.join('\n')}
-function v5Download(name,body){let blob=new Blob(['\ufeff'+body],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();URL.revokeObjectURL(url)}
-document.getElementById('v5Export').addEventListener('click',()=>v5Download('stryktipslabbet-v5-historik-uppdaterad.csv',v5CSV()));
-// Official /result payload: payout only. Do not import historic odds or crowd from this endpoint.
-function v5MoneyNumber(v){if(v===null||v===undefined)return null;const n=Number(String(v).replace(/\s|\u00a0/g,'').replace(',','.'));return Number.isFinite(n)&&n>=0?n:null}
-function v5ParseOfficial(data,round){const raw=data?.result;if(!raw||raw.drawNumber!==round.id||raw.productName!=='Stryktipset')throw Error('Fel omgång eller svar');if(!Array.isArray(raw.events)||raw.events.length!==13)throw Error('Ofullständigt facit');let ev=[...raw.events].sort((a,b)=>a.eventNumber-b.eventNumber);if(ev.some((e,i)=>e.eventNumber!==i+1||!'1X2'.includes(e.outcome)))throw Error('Ogiltigt facit');if(ev.map(e=>e.outcome).join('')!==round.outcome)throw Error('Facit skiljer sig från vår historik (möjligen lottad match)');const p={};for(const x of raw.distribution||[]){let k=String(x.name||'').match(/^(1[0-3]) rätt$/);if(k)p[+k[1]]=v5MoneyNumber(x.amount)}if([13,12,11,10].some(k=>p[k]===null||p[k]===undefined))throw Error('Någon utdelningsnivå saknas');return [p[13],p[12],p[11],p[10]]}
-let v5Fetching=false;
-document.getElementById('v5FetchOfficial').addEventListener('click',async()=>{
- if(v5Fetching)return;v5Fetching=true;const btn=document.getElementById('v5FetchOfficial'),status=document.getElementById('v5FetchStatus');btn.disabled=true;
- let ok=0,failed=0,firstError='',candidates=V4_DATA.filter(r=>!v4PayoutFor(r));
- for(let i=0;i<candidates.length;i++){
-  const r=candidates[i];status.textContent=`Försöker hämta officiella resultat: ${i+1} av ${candidates.length} · ${ok} lyckade, ${failed} misslyckade`;
-  try{const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),11000),url=`https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/${r.id}/result`;
-   let response;try{response=await fetch(url,{signal:ctrl.signal,headers:{Accept:'application/json'}})}finally{clearTimeout(timer)}
-   if(!response.ok)throw Error(`HTTP ${response.status}`);let arr=v5ParseOfficial(await response.json(),r);v4ImportedPayouts[r.id]=arr;v5ApiVerifiedIds.add(r.id);ok++;
-  }catch(e){failed++;if(!firstError)firstError=e.message||String(e);if(i===0&&/Failed to fetch|NetworkError|Load failed|CORS/i.test(firstError))break;}
-  if(i%5===0){v4Render();v5Render()}await new Promise(resolve=>setTimeout(resolve,650));
- }
- status.textContent=`Resultat: ${ok} nya kompletta utdelningar, ${failed} misslyckade. ${firstError?`Första fel: ${firstError}. `:''}Resultatarkivet uppdateras enbart med verifierat facit och fyra nivåer. Vid CORS-problem, använd Python-insamlaren och CSV-import.`;
- v4Render();v5Render();btn.disabled=false;v5Fetching=false;
-});
-v4Render();v5Render();
-
-renderAll();
-</script>
-
-<script>
-/* Stryktipslabbet 6: external OPENING-odds cross-reference, never synthetic data. */
-let v6Imported=[],v6Stats=null;
-const v6Money=n=>new Intl.NumberFormat('sv-SE').format(n);
-const v6Aliases={
- 'man utd':'manchester united','man united':'manchester united','manchester utd':'manchester united',
- 'man city':'manchester city','manchester c':'manchester city',
- 'nottm forest':'nottingham forest','nott forest':'nottingham forest','nottm':'nottingham forest','nottingham':'nottingham forest',
- 'spurs':'tottenham','tottenham hotspur':'tottenham','newcastle utd':'newcastle','newcastle united':'newcastle',
- 'brighton and hove albion':'brighton','brighton hove albion':'brighton',
- 'wolves':'wolverhampton','wolverhampton wanderers':'wolverhampton',
- 'west brom':'west bromwich','west bromwich albion':'west bromwich',
- 'sheffield utd':'sheffield united','sheffield u':'sheffield united',
- 'sheffield weds':'sheffield wednesday','sheffield w':'sheffield wednesday',
- 'qpr':'queens park rangers','queens park r':'queens park rangers',
- 'blackburn rovers':'blackburn','bristol rovers':'bristol rovers',
- 'leicester city':'leicester','leeds united':'leeds','norwich city':'norwich',
- 'hull city':'hull','stoke city':'stoke','cardiff city':'cardiff',
- 'birmingham city':'birmingham','swansea city':'swansea',
- 'peterborough united':'peterborough','oxford united':'oxford',
- 'afc wimbledon':'wimbledon','milton keynes dons':'mk dons',
- 'ipswich town':'ipswich','luton town':'luton','bradford city':'bradford',
- 'coventry city':'coventry','huddersfield town':'huddersfield',
- 'bristol city':'bristol city','plymouth argyle':'plymouth','wigan athletic':'wigan',
- 'port vale':'port vale','grimsby town':'grimsby','swindon town':'swindon',
- 'stockport county':'stockport','charlton athletic':'charlton'
-};
-function v6Norm(s){let t=String(s||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/&/g,' and ').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();return v6Aliases[t]||t;}
-function v6Date(s){
- const a=String(s||'').trim();let m=a.match(/^(\d{4})-(\d\d)-(\d\d)/);
- if(m)return `${m[1]}-${m[2]}-${m[3]}`;
- m=a.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{2,4})/);
- if(m){let y=+m[3];if(y<100)y+=y>=90?1900:2000;return `${y}-${m[2].padStart(2,'0')}-${m[1].padStart(2,'0')}`;}
- return null;
-}
-const v6NormDateDays=(a,b)=> (Date.parse(b+'T12:00:00Z')-Date.parse(a+'T12:00:00Z'))/86400000;
-function v6Columns(header){const h=header.map(x=>x.trim().replace(/^\ufeff/,''));const index=(...a)=>a.map(s=>h.findIndex(c=>c.toLowerCase()===s.toLowerCase())).find(i=>i>=0)??-1;
- const common={date:index('Date'),home:index('HomeTeam','home_team','Home'),away:index('AwayTeam','away_team','Away'),result:index('FTR','FResult','full_time_result')};
- const models=[['home_open','draw_open','away_open','publicerad_öppningsserie'],['AvgH','AvgD','AvgA','avg_före_stopp'],['B365H','B365D','B365A','bet365_före_stopp'],['WHH','WHD','WHA','williamhill_före_stopp'],['PSH','PSD','PSA','pinnacle_före_stopp']];
- const chosen=models.map(([a,b,c,kind])=>({inds:[index(a),index(b),index(c)],kind})).find(x=>x.inds.every(i=>i>=0));
- if(!chosen||common.date<0||common.home<0||common.away<0)throw Error('Hittar inte datum, lag eller tre öppningsodds. Stöd: home_open/draw_open/away_open, AvgH/D/A, B365H/D/A, WHH/D/A, PSH/D/A');
- return {...common,odds:chosen.inds,kind:chosen.kind};
-}
-function v6FileParse(text,source){
- let lines=text.replace(/^\ufeff/,'').split(/\r?\n/).filter(x=>x.trim());if(lines.length<2)return {rows:[],bad:0};
- const header=histCSVLine(lines[0],','),cols=v6Columns(header),parsed=[],bad=[];
- for(let i=1;i<lines.length;i++){const z=histCSVLine(lines[i],','),day=v6Date(z[cols.date]),odds=cols.odds.map(j=>Number((z[j]||'').replace(',','.'))),home=z[cols.home],away=z[cols.away],res=cols.result>=0?(z[cols.result]||'').toUpperCase().trim():'';
- if(!day||!home||!away||odds.some(v=>!Number.isFinite(v)||v<=1||v>1000)){bad.push(i+1);continue}
- parsed.push({day,home,away,odds,res:res==='H'?'1':res==='D'?'X':res==='A'?'2':'',kind:cols.kind,source,line:i+1});
- }return {rows:parsed,bad:bad.length};
-}
-function v6Calibrate(comparisons){let n=comparisons.length,mb=0,eb=0,ml=0,el=0,mc=0,ec=0;
- for(const r of comparisons){let idx=ICONS.indexOf(r.out);for(let k=0;k<3;k++){mb+=(r.p[k]-(k===idx))**2;eb+=(r.elo[k]-(k===idx))**2}ml-=Math.log(r.p[idx]);el-=Math.log(r.elo[idx]);mc+=r.p.indexOf(Math.max(...r.p))===idx;ec+=r.elo.indexOf(Math.max(...r.elo))===idx;}
- return {n,marketBrier:mb/n,eloBrier:eb/n,marketLoss:ml/n,eloLoss:el/n,marketHit:mc/n,eloHit:ec/n};
-}
-function v6Render(){
- const pays=V4_DATA.filter(r=>v4PayoutFor(r)).length;
- const head=document.getElementById('v6Coverage');head.innerHTML=`<div class="metric"><div class="l">Omgångar med facit</div><div class="v">105 / 105</div><div class="small">13 resultat per kupong</div></div><div class="metric"><div class="l">Utdelningar registrerade</div><div class="v">${pays} / 105</div><div class="small">Ofullständig tvåårs-ROI</div></div><div class="metric"><div class="l">Matchade externa förhandsodds</div><div class="v">${v6Imported.length}</div><div class="small">${new Set(v6Imported.map(x=>x.draw)).size} omgångar, ej fulla system</div></div>`;
- document.getElementById('v6DownloadOdds').disabled=!v6Imported.length;document.getElementById('v6AuditDownload').disabled=!v6Imported.length;
- document.getElementById('v6MatchedRows').innerHTML=v6Imported.length?v6Imported.slice(0,80).map(z=>`<tr><td>${z.draw}<div class="small">${z.date}</div></td><td>${encode(z.home)} – ${encode(z.away)}</td><td>${z.odds.map(v=>v.toFixed(2)).join(' / ')}</td><td>${z.out}</td><td><span class="small">${encode(z.source)}</span></td></tr>`).join(''):'<tr><td colspan="5" class="small">Inga importerade matcher</td></tr>';
- const el=document.getElementById('v6MarketComparison');if(v6Imported.length){let s=v6Calibrate(v6Imported),fmt=x=>x.toFixed(3);el.innerHTML=`<h3>Test mot facit – exakt samma ${s.n} matcher</h3><table><thead><tr><th>Mått</th><th>Öppningsodds</th><th>Elo</th></tr></thead><tbody><tr><td>Brier (lägre bättre)</td><td><b>${fmt(s.marketBrier)}</b></td><td>${fmt(s.eloBrier)}</td></tr><tr><td>Log loss (lägre bättre)</td><td><b>${fmt(s.marketLoss)}</b></td><td>${fmt(s.eloLoss)}</td></tr><tr><td>Rätt favorittecken</td><td>${(s.marketHit*100).toFixed(1)} %</td><td>${(s.eloHit*100).toFixed(1)} %</td></tr></tbody></table><p class="small">Elo-prognoserna kommer från walk-forward-modellen som beräknades innan respektive omgång. Opening-odds kommer från importerade filer; inga historiska Svenska Spel-streck antas. Matcher med omtvistad identitet eller olika facit exkluderas.</p>`;}else el.innerHTML='';
-}
-async function v6ImportFiles(files){const report=document.getElementById('v6ImportState');
- if(!histReport){report.textContent='Du behöver först hämta eller importera resultatarkivet i Historik-fliken. Inget ändrades.';return}
- let all=[],bad=0,used=[],errors=[];
- for(const file of files){try{let got=v6FileParse(await file.text(),file.name);all.push(...got.rows);bad+=got.bad;used.push(file.name)}catch(e){errors.push(file.name+': '+e.message)}}
- let lookup=new Map();for(const row of all){const k=[v6Norm(row.home),v6Norm(row.away)].join('|');if(!lookup.has(k))lookup.set(k,[]);lookup.get(k).push(row)}
- const seen=new Set(),matches=[],unmatched=[],ambiguous=[],invalidOutcome=[];
- for(const r of histReport.rows){let k=[v6Norm(r.home),v6Norm(r.away)].join('|'),cands=(lookup.get(k)||[]).filter(q=>{let dt=v6NormDateDays(r.date,q.day);return dt>=0&&dt<=4});
- if(cands.length===0){unmatched.push(r);continue}if(cands.length>1){ambiguous.push(r);continue}
- const c=cands[0],idx=ICONS.indexOf(r.out);if(c.res&&c.res!==r.out){invalidOutcome.push(r);continue}
- const own=c.source+':'+c.line;if(seen.has(own)){ambiguous.push(r);continue}seen.add(own);
- const inv=c.odds.map(v=>1/v),sum=inv.reduce((a,b)=>a+b,0),p=inv.map(v=>v/sum);
- if(c.odds.some(v=>v<=1)||p.some(v=>!Number.isFinite(v))||idx<0){unmatched.push(r);continue}
- matches.push({...r,source:c.source,kind:c.kind,fixture:c.day,odds:c.odds,p,elo:r.p});
- }
- matches.sort((a,b)=>a.draw-b.draw||a.matchNo-b.matchNo);v6Imported=matches;v6Stats={bad,unmatched:unmatched.length,ambiguous:ambiguous.length,invalidOutcome:invalidOutcome.length,files:used,errors:errors};
- report.innerHTML=`<b>Import klar:</b> ${matches.length} av ${histReport.rows.length} historiska Stryktipsmatcher matchade med unika förhandsodds. <b>${unmatched.length}</b> saknar match, <b>${ambiguous.length}</b> hade flera kandidater och <b>${invalidOutcome.length}</b> hade olika facit och stoppades. ${bad} rader hade ofullständig data. <span class="small">${encode(errors.join(' | ')||'Inga filfel.')} ${encode(used.join(', '))}</span>`;
- v6Render();
-}
-document.getElementById('v6FootballFiles').addEventListener('change',async e=>{let files=[...e.target.files];if(files.length)await v6ImportFiles(files);e.target.value=''});
-document.getElementById('v6Clear').addEventListener('click',()=>{v6Imported=[];v6Stats=null;document.getElementById('v6ImportState').textContent='Importen har rensats. Historiska resultat och utdelningar påverkas inte.';v6Render()});
-document.getElementById('v6DownloadOdds').addEventListener('click',()=>{
- const rows=v6Imported.map(v=>[v.draw,v.matchNo,...v.odds].join(';'));
- v5Download('stryktipslabbet-v6-odds-till-historik.csv',['Omgång;MatchNr;Odds1;OddsX;Odds2',...rows].join('\n'));
-});
-document.getElementById('v6AuditDownload').addEventListener('click',()=>{
- const headers='Omgång;MatchNr;Hemmalag;Bortalag;Kupongdatum;Matchdatum;Odds1;OddsX;Odds2;Källdokument;Oddstyp;Evidens';
- const rows=v6Imported.map(v=>[v.draw,v.matchNo,v.home,v.away,v.date,v.fixture,...v.odds,v.source,v.kind,'Publicerade förhandsodds, exakt observationstid saknas'].join(';'));
- v5Download('stryktipslabbet-v6-odds-kallrapport.csv',[headers,...rows].join('\n'));
-});
-// When payout CSV is imported, the count and coverage report must update too.
-document.getElementById('v4PayoutFile').addEventListener('change',()=>setTimeout(v6Render,300));
-// Existing navigation requires tabs to be registered at startup, so our tab is in the DOM at parse time.
-v6Render();
-</script>
-
-<script>
-'use strict';
-/* Version 7: live data must be observed, not reconstructed from final historical values. */
-const V7_META_KEY='stryktipslabbet-live-meta-v7';
-const V7_API='https://api.spela.svenskaspel.se/draw/1/stryktipset';
-let v7Meta=null;
-try{v7Meta=JSON.parse(localStorage.getItem(V7_META_KEY)||'null')}catch{}
-const v7N=(x,d=1)=>Number(x).toLocaleString('sv-SE',{minimumFractionDigits:d,maximumFractionDigits:d});
-const v7Pct=x=>v7N(x*100,2)+' %';
-const v7When=t=>{try{return new Date(t).toLocaleString('sv-SE',{dateStyle:'medium',timeStyle:'short'})}catch{return '—'}};
-function v7WriteMeta(meta){v7Meta=meta;try{localStorage.setItem(V7_META_KEY,JSON.stringify(meta))}catch{}v7Render()}
-function v7SafeNum(x){if(x===null||x===undefined||x===''||typeof x==='boolean')return NaN;const v=Number(String(x).replace(/\s|\u00a0/g,'').replace(',','.'));return Number.isFinite(v)?v:NaN}
-function v7Triplet(obj,kind){if(!obj||typeof obj!=='object')throw Error('Saknade '+kind);const a=['one','x','two'].map(k=>v7SafeNum(obj[k]));if(a.some(x=>!Number.isFinite(x)))throw Error('Ogiltiga '+kind);if(kind==='odds'&&a.some(x=>x<=1))throw Error('Odds måste överstiga 1');if(kind==='streck'&&(a.some(x=>x<0||x>100)||Math.abs(a.reduce((a,b)=>a+b,0)-100)>1.1))throw Error('Streck ska summera till omkring 100 %');return a}
-function v7ParseDraw(d,observedAt){
- if(!d||d.productName!=='Stryktipset'||Number(d.productId)!==1)throw Error('Fel produkt');
- const num=Number(d.drawNumber),close=d.regCloseTime,closing=Date.parse(close);
- if(!Number.isInteger(num)||!Number.isFinite(closing))throw Error('Omgång eller spelstopp saknas');
- const now=Date.parse(observedAt);if(!Number.isFinite(now)||closing<=now)throw Error('Omgången är redan stängd');
- const allowed=new Set(['Open','NotOpened','Upcoming']);if(!allowed.has(d.drawState))throw Error('Omgången är inte öppen/kommande');
- const ev=d.drawEvents;if(!Array.isArray(ev)||ev.length!==13)throw Error('Kupongen har inte 13 matcher');
- const ordered=[...ev].sort((a,b)=>a.eventNumber-b.eventNumber);
- if(ordered.some((e,i)=>e.eventNumber!==i+1))throw Error('Matchnumren 1–13 är inte unika');
- const rows=ordered.map(e=>{
-  const match=e.match||{},participants=match.participants||[];
-  const home=participants.filter(x=>x.type==='home'),away=participants.filter(x=>x.type==='away');
-  if(home.length!==1||away.length!==1||!home[0].name?.trim()||!away[0].name?.trim())throw Error('Saknade lag i match '+e.eventNumber);
-  if(e.cancelled||['Started','InProgress','Finished','Cancelled'].includes(match.sportEventStatus))throw Error('Match har startat eller ställts in');
-  if(match.matchStart&&Date.parse(match.matchStart)<=now)throw Error('Match har redan startat: '+e.eventNumber);
-  const odds=v7Triplet(e.odds,'odds'),streck=v7Triplet(e.svenskaFolket,'streck');
-  return {home:home[0].name.trim(),away:away[0].name.trim(),odds,streck,chosen:[],manual:null,kickoff:match.matchStart||null};
- });
- return {rows,metadata:{drawNumber:num,closeTime:close,observedAt,source:'Svenska Spel, publikt API',sourceType:'pre_close_observed',snapshotVersion:7}};
-}
-async function v7FetchJSON(url){let controller=new AbortController(),t=setTimeout(()=>controller.abort(),15000);try{let response=await fetch(url,{cache:'no-store',mode:'cors',signal:controller.signal,headers:{Accept:'application/json'}});if(!response.ok)throw Error('HTTP '+response.status);return response.json()}finally{clearTimeout(t)}}
-function v7ApplySnapshot(snapshot,provenance){
- const valid=Array.isArray(snapshot.rows)&&snapshot.rows.length===13&&snapshot.rows.every(r=>validMatch(r)&&r.streck.every(x=>x<=100));
- if(!valid)throw Error('Saknar 13 fullständiga matcher med odds och streck');
- data=snapshot.rows.map(m=>({...m,chosen:[activeProb({...m,manual:null}).indexOf(Math.max(...probabilities(m)))],manual:null}));
- const m=snapshot.metadata;
- setSource(`${m.source} · omgång ${m.drawNumber} · ${v7When(m.observedAt)}`);
- try{persist()}catch{}v7WriteMeta({...m,provenance});renderAll();
-}
-async function v7FetchLive(){
- const btn=document.getElementById('fetchLive'),status=document.getElementById('importStatus');
- btn.disabled=true;btn.textContent='Hämtar kupong…';status.textContent='Söker öppen kommande kupong i Svenska Spels publika API.';
- try{
-  const list=await v7FetchJSON(V7_API+'/draws');
-  if(!Array.isArray(list.draws))throw Error('API:t saknar listan draws');
-  const now=Date.now(),eligible=list.draws.filter(d=>d&&Number.isInteger(Number(d.drawNumber))&&Date.parse(d.regCloseTime)>now&&['Open','NotOpened','Upcoming'].includes(d.drawState)).sort((a,b)=>Date.parse(a.regCloseTime)-Date.parse(b.regCloseTime));
-  if(!eligible.length)throw Error('Ingen kommande, öppen 13-matchersomgång i listan');
-  let full=await v7FetchJSON(V7_API+'/draws/'+eligible[0].drawNumber);
-  const snapshot=v7ParseDraw(full.draw,new Date().toISOString());
-  v7ApplySnapshot(snapshot,'api_direct_read');
-  status.textContent=`Importerade omgång ${snapshot.metadata.drawNumber}, observerad ${v7When(snapshot.metadata.observedAt)}. Spelstopp ${v7When(snapshot.metadata.closeTime)}. Frys systemet före spelstopp.`;
- }catch(e){status.textContent=`Ingen data ändrades. Liveimporten misslyckades: ${e.message}. Det kan bero på CORS, källans tillgänglighet eller ändrat API. Använd tidsstämplad JSON från insamlaren eller CSV.`}
- finally{btn.disabled=false;btn.textContent='Försök hämta kupong från Svenska Spel';v7Render()}
-}
-function v7SnapshotJSON(doc){
- if(!doc||doc.schema!=='stryktipslabbet-live-snapshot-v7'||!Array.isArray(doc.matches)||doc.matches.length!==13)throw Error('Inte ett igenkänt v7-kupongsnapshot');
- if(!Number.isInteger(Number(doc.draw_number))||!doc.observed_at_utc||!doc.reg_close_time)throw Error('Källmetadata saknas');
- const rows=[...doc.matches].sort((a,b)=>a.number-b.number).map((e,i)=>{
-  if(e.number!==i+1)throw Error('Matchnummer 1–13 saknas');
-  let r={home:e.home,away:e.away,odds:e.odds,streck:e.streck,chosen:[],manual:null};if(!validMatch(r))throw Error('Ogiltig match '+(i+1));
-  if(r.streck.some(x=>+x>100)||Math.abs(r.streck.reduce((a,b)=>a+(+b),0)-100)>1.1)throw Error('Streck summerar inte till 100 %');return r;
- });
- const asof=Date.parse(doc.observed_at_utc),close=Date.parse(doc.reg_close_time);
- if(!Number.isFinite(asof)||!Number.isFinite(close)||asof>=close||asof>Date.now()+300000)throw Error('Ogiltig observationstid: den måste ligga före spelstopp och får inte ligga i framtiden');
- return {rows,metadata:{drawNumber:Number(doc.draw_number),closeTime:doc.reg_close_time,observedAt:doc.observed_at_utc,source:doc.source||'Importerad tidsstämplad källa',sourceType:'pre_close_observed',snapshotVersion:7,sha256:doc.sha256||null}};
-}
-async function v7FileImport(event){const file=event.target.files?.[0];if(!file)return;try{const doc=JSON.parse(await file.text()),snap=v7SnapshotJSON(doc);v7ApplySnapshot(snap,'collector_json');document.getElementById('importStatus').textContent='Tidsstämplad kupong importerad från '+file.name+'. Ändringar sparas lokalt.';tabSelect('studio')}catch(e){alert('Kupongen kunde inte importeras: '+e.message)}finally{event.target.value=''}}
-function v7SystemMath(choices){
- let coverDist=[1],expected=[1],cost=1;
- for(let i=0;i<13;i++){
-  let p=activeProb(data[i]),sel=choices[i],s=sel.reduce((a,j)=>a+p[j],0),z=sel.length;
-  if(!sel.length||sel.some(j=>![0,1,2].includes(j)))throw Error('Ogiltigt system');
-  cost*=z;
-  const nextCover=Array(coverDist.length+1).fill(0),nextExpected=Array(expected.length+1).fill(0);
-  for(let k=0;k<coverDist.length;k++){nextCover[k]+=coverDist[k]*(1-s);nextCover[k+1]+=coverDist[k]*s;nextExpected[k]+=expected[k]*(z-s);nextExpected[k+1]+=expected[k]*s}
-  coverDist=nextCover;expected=nextExpected;
- }
- return {cost,coverDist,expected,probAtLeast:k=>coverDist.slice(k).reduce((a,b)=>a+b,0)};
-}
-function v7Provenance(){const el=document.getElementById('v7Provenance');if(!el)return;
- const isSame=v7Meta&&sourceState.includes('omgång '+v7Meta.drawNumber)&&sourceState.includes(v7Meta.source),real=isSame&&v7Meta.sourceType==='pre_close_observed';
- el.className='v7-status '+(real?'v7-success':'v7-risk');
- if(real){const future=Date.now()<Date.parse(v7Meta.closeTime);el.innerHTML=`<b>${encode(v7Meta.source)}</b> · omgång ${v7Meta.drawNumber}<div class="small" style="margin:7px 0">Observation ${v7When(v7Meta.observedAt)} · spelstopp ${v7When(v7Meta.closeTime)}</div><b>${future?'Observerad före spelstopp – kontrollera att inga förändringar skett.':'Historiskt observerad före spelstopp – ingen aktuell kupong.'}</b><div class="small">${v7Meta.provenance==='collector_json'?'Tid och källa kommer från den importerade filen och har inte kontrollerats mot servern här.':'Tidsstämpeln visar vår hämtningstid, inte en garanti om exakt källuppdatering.'}</div>`}
- else el.innerHTML=`<b>Inte tidsverifierad livekupong</b><div class="small" style="margin-top:7px">Aktuell källa: ${encode(sourceState)}. Uppgifterna kan vara en äldre ögonblicksbild, manuellt importerade eller demonstrationsdata. Hämta eller importera en ny tidsstämplad kupong innan spel.</div>`;
-}
-function v7Render(){
- const el=document.getElementById('v7Comparisons');if(!el)return;
- v7Provenance();if(!lastStrategies.length)return;
- const m=lastStrategies.map(t=>({t,calc:v7SystemMath(t.choices)}));
- el.innerHTML=m.map(({t,calc},i)=>`<article class="v7-variant"><h3>${encode(t.label)}</h3><div class="small">${v7N(calc.cost,0)} kr · ${t.stats.counts[1]} spikar, ${t.stats.counts[2]} halva, ${t.stats.counts[3]} hela</div>${[13,12,11,10].map(k=>`<div class="v7-summary-row"><span>Minst en ${k}-rättsrad</span><b class="v7-num ${k===13?'mint':''}">${v7Pct(calc.probAtLeast(k))}</b></div><div class="v7-strip"><span style="width:${Math.max(0.15,100*calc.probAtLeast(k))}%"></span></div>`).join('')}</article>`).join('');
- document.getElementById('v7Expected').innerHTML=`<div class="tablewrap"><table class="compact"><thead><tr><th>Profil</th><th>E[rader 13]</th><th>E[rader 12]</th><th>E[rader 11]</th><th>E[rader 10]</th></tr></thead><tbody>${m.map(({t,calc})=>`<tr><td>${encode(t.label)}</td>${[13,12,11,10].map(k=>`<td class="v7-num">${v7N(calc.expected[k],k===13?3:1)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
- const high=m.reduce((a,b)=>b.calc.probAtLeast(13)>a.calc.probAtLeast(13)?b:a,m[0]);
- document.getElementById('v7DecisionSummary').innerHTML=`<div class="v7-summary-row"><span>Högst beräknad chans till 13 rätt</span><b>${encode(high.t.label)} · ${v7Pct(high.calc.probAtLeast(13))}</b></div><div class="v7-summary-row"><span>Maxbudget</span><b>${v7N(budgetForCompare(),0)} kr</b></div><div class="v7-summary-row"><span>Högst beräknad träffchans ≠ bäst ekonomisk avkastning</span><b>Utdelningsdata krävs</b></div><p class="small">Dessa siffror beror på inmatade sannolikheter. Värde- och jackpotprofilerna har inga verifierade fördelar utan utfallsbaserat historiktest med samtida odds och streck.</p>`;
- const fields=[13,12,11,10].map(k=>document.getElementById('v7Pay'+k).value.trim());
- if(fields.every(Boolean))v7Calculate(false);
-}
-function v7Calculate(showErrors=true){
- const inputs=[13,12,11,10].map(k=>document.getElementById('v7Pay'+k).value.trim());
- if(inputs.some(x=>x==='')){if(showErrors)document.getElementById('v7ScenarioMessage').textContent='Ange alla fyra belopp, inklusive noll där du själv antar att utdelningen blir noll.';document.getElementById('v7ScenarioTable').innerHTML='';return}
- const payout=inputs.map(v7SafeNum);if(payout.some(v=>!Number.isFinite(v)||v<0||v>1e10)){document.getElementById('v7ScenarioMessage').textContent='Ange fyra giltiga belopp mellan 0 och 10 miljarder kr.';document.getElementById('v7ScenarioTable').innerHTML='';return}
- const rows=lastStrategies.map(t=>{const m=v7SystemMath(t.choices);const expected=[13,12,11,10].reduce((a,k,i)=>a+m.expected[k]*payout[i],0);const other=[12,11,10].reduce((a,k,i)=>a+m.expected[k]*payout[i+1],0);const needed=m.expected[13]>1e-12?Math.max(0,(m.cost-other)/m.expected[13]):null;return {t,m,expected,needed}});
- document.getElementById('v7ScenarioMessage').innerHTML='<b>Hypotetisk känslighetsanalys.</b> Förväntade belopp gäller bara <em>om</em> dina fyra inmatade utdelningsantaganden vore konstanta. De är varken uppmätta eller förutsagda utbetalningar.';
- document.getElementById('v7ScenarioTable').innerHTML=`<table class="compact"><thead><tr><th>Profil</th><th>Insats</th><th>E[utbetalt]*</th><th>E[netto]*</th><th>ROI*</th><th>13-utdelning för break-even**</th></tr></thead><tbody>${rows.map(({t,m,expected,needed})=>`<tr><td><b>${encode(t.label)}</b></td><td>${v7N(m.cost,0)} kr</td><td>${v7N(expected,0)} kr</td><td class="${expected>=m.cost?'mint':'red'}">${v7N(expected-m.cost,0)} kr</td><td class="${expected>=m.cost?'mint':'red'}">${v7N(100*(expected/m.cost-1),1)} %</td><td>${needed===null?'—':v7N(needed,0)+' kr'}</td></tr>`).join('')}</tbody></table><p class="small">* Enbart scenarioberäkning under användarens antaganden. **Den 13-rättsutdelning som skulle krävas för att scenariots förväntade utbetalning ska täcka systemkostnaden, när de övriga tre beloppen hålls fasta. Ingen rekommendation eller garanti.</p>`;
-}
-function v7Clear(){[13,12,11,10].forEach(k=>document.getElementById('v7Pay'+k).value='');document.getElementById('v7ScenarioTable').innerHTML='';document.getElementById('v7ScenarioMessage').textContent='Fälten är rensade. Fyll i egna hypotetiska utdelningar för att jämföra.'}
-// Upgrade the legacy live button to the documented drawEvents/match/participants schema.
-document.getElementById('fetchLive').onclick=v7FetchLive;
-document.getElementById('v7RefreshStudio').onclick=()=>{renderStrategies();v7Render()};
-document.getElementById('v7SnapshotFile').addEventListener('change',v7FileImport);
-document.getElementById('v7CalculateScenario').onclick=()=>v7Calculate(true);
-document.getElementById('v7ClearScenario').onclick=v7Clear;
-document.getElementById('v7GoCompare').onclick=()=>tabSelect('compare');
-document.getElementById('v7GoArchive').onclick=()=>tabSelect('archive');
-const v7OldRenderAll=renderAll;
-renderAll=function(){v7OldRenderAll();v7Render()};
-document.getElementById('recalcCompare').addEventListener('click',()=>setTimeout(v7Render,0));
-document.getElementById('cmpBudget').addEventListener('change',()=>setTimeout(v7Render,0));
-// Preserve source integrity when users explicitly replace the coupon.
-const v7OldImport=document.getElementById('importBtn').onclick;
-document.getElementById('importBtn').onclick=function(){v7OldImport();if(sourceState==='CSV-import')v7WriteMeta(null)};
-const v7OldDemo=document.getElementById('demoBtn').onclick;
-document.getElementById('demoBtn').onclick=function(){v7OldDemo();v7WriteMeta(null)};
-// A manual edit or override does not alter observed source data, but invalidates its status as a raw official snapshot.
-const v7OldSaveMatch=saveMatch;
-saveMatch=function(i){v7OldSaveMatch(i);setSource('Manuellt redigerad kupong');v7WriteMeta(null)};
-v7Render();
-</script>
-
-<script>
-'use strict';
-/* Preserve a traceable pre-close source ID on new archive freezes. */
-const v7PreviousFreeze=document.getElementById('saveArchive').onclick;
-document.getElementById('saveArchive').onclick=function(){
- const oldIDs=new Set(archive.map(a=>a.id));
- v7PreviousFreeze();
- const snap=archive.find(a=>!oldIDs.has(a.id));if(!snap)return;
- const matched=v7Meta&&sourceState.includes('omgång '+v7Meta.drawNumber)&&sourceState.includes(v7Meta.source);
- snap.drawNumber=matched?v7Meta.drawNumber:null;
- snap.liveMetadata=matched?JSON.parse(JSON.stringify(v7Meta)):null;
- snap.frozenBeforeClose=Boolean(matched&&Date.parse(snap.savedAt)<Date.parse(v7Meta.closeTime));
- snap.provenanceStatus=snap.frozenBeforeClose?(v7Meta.provenance==='collector_json'?'file_claimed_preclose':'observed_preclose'):'unverified_or_postclose';
- persistArchive();renderArchive();
- const notice=document.getElementById('archiveNotice');
- if(!snap.frozenBeforeClose)notice.textContent+=' OBS: denna arkivering är inte kvalificerad som en tidsverifierad observation före spelstopp.';
- else notice.textContent+=' Omgångsnummer, observationstid och spelstopp sparade som källmetadata.';
-};
-function v7ResultParse(doc){
- if(!doc||doc.schema!=='stryktipslabbet-result-v7')throw Error('Fel resultatformat');
- const id=Number(doc.draw_number),out=String(doc.outcome||'').toUpperCase();
- if(!Number.isFinite(Date.parse(doc.observed_at_utc))||Date.parse(doc.observed_at_utc)>Date.now()+300000)throw Error('Resultatfilens hämtningstid är ogiltig eller ligger i framtiden');
- if(!Number.isInteger(id)||id<=0||!/^([1X2]{13})$/.test(out))throw Error('Ogiltig omgång eller resultat');
- if(!doc.payouts||typeof doc.payouts!=='object')throw Error('Utdelning saknas');
- const payouts={};for(const k of [13,12,11,10]){const p=v7SafeNum(doc.payouts[String(k)]);if(!Number.isFinite(p)||p<0)throw Error('Ogiltig utdelning '+k);payouts[k]=p}
- return {id,out,payouts,observedAt:doc.observed_at_utc,source:doc.source};
-}
-async function v7ImportResult(e){
- const file=e.target.files?.[0];if(!file)return;
- const el=document.getElementById('v7ResultsStatus');
- try{
-  const v=v7ResultParse(JSON.parse(await file.text()));
-  const candidates=archive.filter(a=>a.drawNumber===v.id&&a.frozenBeforeClose&&!a.isDemo&&Date.parse(v.observedAt)>Date.parse(a.liveMetadata?.closeTime||''));
-  if(!candidates.length){el.textContent=`Resultat för omgång ${v.id} inläst, men ingen kvalificerad fryst kupong för den omgången finns i ditt lokala arkiv. Inget har ändrats. Arkivera framtida kuponger före spelstopp för automatisk rättning.`;return}
-  let filled=0,skipped=0;
-  for(const a of candidates){if(a.outcome){skipped++;continue}a.outcome=v.out;a.payouts={...v.payouts};a.resultSource={source:v.source||'Importerad resultatfil',observedAt:v.observedAt,importedAt:new Date().toISOString(),filename:file.name};filled++}
-  persistArchive();renderArchive();
-  el.innerHTML=`<b>Omgång ${v.id}</b>: ${filled} frysta kuponger rättade, ${skipped} tidigare rättade lämnades orörda. Facit: ${encode(v.out)}. Utdelning: 13/${v7N(v.payouts[13],0)} kr, 12/${v7N(v.payouts[12],0)} kr, 11/${v7N(v.payouts[11],0)} kr, 10/${v7N(v.payouts[10],0)} kr. Källa är angiven av filen och bör kontrolleras.`;
- }catch(error){el.textContent='Inga resultat ändrade: '+error.message}
- finally{e.target.value=''}
-}
-document.getElementById('v7ResultsFile').addEventListener('change',v7ImportResult);
-document.getElementById('v7SeeArchive').onclick=()=>tabSelect('archive');
-</script>
-
-<script>
-'use strict';
-async function v7LoadHosted(){
- const status=document.getElementById('v7HostedStatus');status.textContent='Läser data/latest.json från samma webbplats…';
- try{
-  const response=await fetch('./data/latest.json',{cache:'no-store'});
-  if(!response.ok)throw Error('HTTP '+response.status);
-  const raw=await response.json(),snap=v7SnapshotJSON(raw);
-  if(Date.parse(snap.metadata.closeTime)<=Date.now())throw Error('Arkivkupongens spelstopp har passerat');
-  v7ApplySnapshot(snap,'collector_json');
-  status.textContent='Importerade omgång '+snap.metadata.drawNumber+' från det egna arkivet, observerad enligt filen '+v7When(snap.metadata.observedAt)+'. Kontrollera att insamlingen är aktiv.';
- }catch(e){status.textContent='Det finns ingen användbar aktuell fil på den här webbadressen: '+e.message+'. Starta den schemalagda insamlingen eller importera JSON manuellt. Befintlig kupong påverkas inte.'}
-}
-document.getElementById('v7UseHosted').onclick=v7LoadHosted;
-</script>
-</body></html>
+init();
+</script></body></html>
