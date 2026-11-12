@@ -1,0 +1,62 @@
+name: Stryktipslabbet – samla och publicera
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17,47 * * * *'
+
+concurrency:
+  group: stryktipslabbet-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Hämta projektet
+        uses: actions/checkout@v4
+      - name: Installera Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Kör datakvalitetstester
+        run: python -m unittest discover -s tests -v
+      - name: Försök samla officiella observationer och facit
+        continue-on-error: true
+        run: python scripts/collect.py --outdir data
+      - name: Spara endast offentliga källobservationer
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- data/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Data: tidsstämplad kupong eller officiellt facit'
+            git push
+          fi
+      - name: Bygg säker publiceringsmapp
+        run: python scripts/publish.py
+      - name: Ladda upp Pages-artefakt
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicera Stryktipslabbet
+        id: deployment
+        uses: actions/deploy-pages@v4
