@@ -1,4 +1,4 @@
-# Stryktipslabbet 9.0
+# Stryktipslabbet 10.0
 
 **Stryktipslabbet** är en svensk mobilanpassad analysapp för Stryktipset, anpassad till ett tipslag med 10 deltagare och ett budgettak på **1 800 kr per omgång**. Den lämnar aldrig in spel.
 
@@ -47,3 +47,11 @@ Varje ny kvalificerad **förhandsobservation** från Svenska Spel (13 matcher, o
 Sannolikheterna beräknas som 1/odds och normaliseras för bookmaker-marginalen. De är *inte* en separat tränad fotbollsmodell. För värde- och skrällprofilerna styr folkstrecken ett heuristiskt urval, vilket inte ger vetenskapligt belägg för positivt väntevärde. Varje observation och dess system förblir frysta i data/analysis_history/. Den senaste giltiga prognosen före spelstopp sparas i data/analysis/<omgång>.json.
 
 När komplett officiellt facit och alla fyra utdelningsnivåerna finns beräknas hypotetiska vinster och netto i data/settlements/ och visas i Veckans analys. Inga insatser skickas in eller läggs automatiskt. Arkiveringen fortsätter varje vecka oavsett vem i laget som faktiskt tippar.
+
+## Eget spel (högst 100 kr)
+
+Webbadress: https://johanclaesson0-png.github.io/stryktipslabbet/spela-sjalv.html
+
+Den nya personliga 100-kronorsvyn bygger automatiskt tre system från den **samma frysta förhandsobservationen** som lagets 1 800-kronorsförslag, men kostar högst 100 kr per matematiskt system (normalt 96 kr). De sparas i `data/personal/` och rättas separat efter officiellt resultat i `data/personal_settlements/`. Inga riktiga spel läggs.
+
+Jämförelsen med **105 äldre omgångar** från `data/2024-2026-elo-100kr-jamforelse.csv` bygger på en förenklad historisk Elo-modell, INTE på den nya oddsmodellen. Historiken är därför en illustration av risk, systemstorlek och träffsäkerhet – inte bevis för framtida överavkastning. Andra spel (Topptipset och Europatipset) länkas som möjliga alternativ, men har **ännu ingen separat automatisk datainhämtning** i Stryktipslabbet. Slutliga beslut och insatser görs på Svenska Spels webbplats.
