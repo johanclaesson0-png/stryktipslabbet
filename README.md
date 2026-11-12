@@ -1,36 +1,37 @@
-# Stryktipslabbet 8.0 – redo för GitHub Pages
+# Stryktipslabbet 8.0
 
-Forskningsverktyg för ett tipslag med tio deltagare. Budget **högst 1 800 kr** per kupong. Ingen kuponginlämning sker. **18+ · Spela ansvarsfullt**.
+**Stryktipslabbet** är en svensk mobilanpassad analysapp för Stryktipset, anpassad till ett tipslag med 10 deltagare och ett budgettak på **1 800 kr per omgång**. Den lämnar aldrig in spel.
 
-## Publicera
+## Webbadresser när GitHub Pages har aktiverats
 
-1. Skapa ett **nytt och publikt** repository som heter `stryktipslabbet` på https://github.com/new. Observera att repository och Pages blir publika. Lägg aldrig upp privata andelslagsuppgifter eller spelkonton.
-2. Ladda upp hela **innehållet** i denna projektmapp till `main`. Kontrollera att även `.github/workflows/stryktipsobservation.yml` finns med (dold mapp). Om du använder GitHub Desktop kan du klona det tomma repositoryt och kopiera in dessa filer.
-3. I **Settings → Pages → Build and deployment → Source**, välj **GitHub Actions**. I **Settings → Actions → General → Workflow permissions** tillåt att `GITHUB_TOKEN` får skriva till repositoryt (read/write) för att spara insamlingens observationer.
-4. Öppna **Actions** → workflow **Stryktipslabbet – insamling och säker publicering** → **Run workflow**. Kontroller att tester, insamling, bygg och publicering visas. Om extern API-hämtning misslyckas visas fortfarande webbappen men utan levande data.
-5. Webbplatsen bör finnas under `https://DITT-GITHUB-NAMN.github.io/stryktipslabbet/`. Kontrollera den faktiska länken på **Settings → Pages**. På själva sidan finns länken **Kontrollera datastatus**.
+- App: https://johanclaesson0-png.github.io/stryktipslabbet/
+- Datastatus: https://johanclaesson0-png.github.io/stryktipslabbet/status.html
 
-Publicerade filer begränsas till `index.html`, `status.html`, `data/status.json`, en kvalificerad `data/latest.json` och upp till 30 validerade resultatfiler. Råarkiv, tester och datainsamlarkod publiceras **inte** som webbsidor. I ett *publikt repository* är de dock fortfarande synliga som kod/data, eftersom repositoryt i sig är publikt.
+Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → Build and deployment → Source** och välj **GitHub Actions**. Kontrollera under **Settings → Actions → General** att Actions får köras och att GitHub-tokenen har skrivbehörighet för arkivlagring. Kör därefter arbetsflödet manuellt via **Actions → Stryktipslabbet – samla och publicera → Run workflow**.
 
-## Hur ofta körs det?
+## Vad som finns i repositoryt
 
-Workflow kör schemalagt två gånger per timme (UTC minut 17 och 47). Insamlaren dämpar antalet anrop när spelstopp är långt bort: cirka 6h (>48 h till stopp), 2h (24–48 h), 1h (6–24 h) och 30min sista 6h. GitHub garanterar inte exakta körtider och kan pausa scheman. Resultat hämtas efter spelstopp och skrivs till separat facit. Data med obs-tid **efter** spelstopp används aldrig som pre-close.
+- index.html: Stryktipslabbet med beslutsstudio och historik.
+- status.html: visar senast publicerad observation och spelstopp.
+- scripts/collect.py: tidsstämplad, läsande insamling av framtida Stryktipsomgångar och officiellt facit.
+- scripts/publish.py: bygger enbart validerad publik webbinformation.
+- tests/test_pipeline.py: nio automatiserade testfall.
+- .github/workflows/stryktipslabbet.yml: bygg-, insamlings- och publiceringsflöde.
+- data/2024-2026-datatackning.csv och data/2024-2026-simulerade-system.csv: äldre experimentella backtests.
 
-Allt detta förutsätter att GitHub Actions är aktiverat och Svenska Spels odokumenterade publika API går att nå. Inga löften om realtidsleverans. Se `LAS_MIG.md` för matematisk metod och historiska begränsningar.
+Schemat försöker köras två gånger i timmen (minut 17 och 47 UTC) och dämpar API-frågor när spelstopp är långt bort. GitHub Actions kan försenas eller utebli. Svenska Spels offentliga API är odokumenterat och åtkomst kan inte garanteras. Liveinsamling får inte antas fungera innan verkliga GitHub-körningar bekräftats.
 
 ## Testa lokalt
 
-```bash
-python -m unittest discover -s tests -v
-python verktyg/bygg_publikt_v8.py --root . --output .site
-python -m http.server -d .site 8000
-```
+1. Kör: python -m unittest discover -s tests -v
+2. Valfritt, om Svenska Spels API är nåbart: python scripts/collect.py --outdir data
+3. Bygg publik webbplats: python scripts/publish.py
+4. Starta lokal webbserver: python -m http.server -d .site 8000
 
-Öppna http://localhost:8000/status.html eller http://localhost:8000/. Automatiserad insamling kan testas separat från GitHub.
+## Källstatus och integritet
 
-## Dataetik och integritet
+Offentliga GitHub-repositories är synliga för alla. Lägg inte upp personuppgifter, spelkonton, privata andelslag eller nycklar. Bygget publicerar bara webbapp, statussida och godkända dataposter som Pages-artifakt. Tidsstämplade råa publika API-svar i repositoryt är fortsatt offentligt åtkomliga.
 
-- Historiska systemresultat i demoarkivet är experiment, inte verifierad avkastning.
-- 105 omgångar har resultatfacit, men äldre förhandsodds och streck är ofullständiga.
-- Alla observationer kommer från offentligt API (när det fungerar); ingen kontoinloggning och inget spelkonto.
-- Spara eventuella privata kuponger/laguppgifter lokalt och **inte** i offentligt repository.
+De två historiska teståren omfattar 105 omgångar, men äldre historiska förhandsodds och folkstreck är inte komplett verifierade. Simulerade systemutfall är därför **inte bevis på faktisk ekonomisk överavkastning**. Efterhandsinhämtad data är aldrig giltig som samtida förhandsdata.
+
+18+ · Spela ansvarsfullt · https://stodlinjen.se/
