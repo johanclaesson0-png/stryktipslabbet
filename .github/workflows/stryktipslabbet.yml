@@ -31,6 +31,8 @@ jobs:
         run: python scripts/collect.py --outdir data
       - name: Skapa och frys tre system per observerad kupong
         run: python -m scripts.analyze --outdir data
+      - name: Bygg och rätta personliga 100-kronorssystem
+        run: python -m scripts.solo --outdir data
       - name: Spara endast offentliga källobservationer
         run: |
           git config user.name 'github-actions[bot]'
