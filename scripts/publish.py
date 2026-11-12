@@ -78,6 +78,7 @@ def main():
     shutil.copy2(root / "index.html", dest / "index.html")
     shutil.copy2(root / "status.html", dest / "status.html")
     shutil.copy2(root / "veckans-analys.html", dest / "veckans-analys.html")
+    shutil.copy2(root / "fordjupning.html", dest / "fordjupning.html")
 
     now = datetime.now(timezone.utc)
     status = {
