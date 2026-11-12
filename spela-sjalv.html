@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="sv"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1420"><title>Spela själv för 100 kr · Stryktipslabbet</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1420;--panel:#172638;--panel2:#203548;--border:#355069;--text:#edf6ff;--muted:#b7c7d7;--green:#70e4b1;--blue:#b7d5ff;--warn:#ffd597}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -10%,#264458,transparent 50%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1020px;margin:auto;padding:20px 20px 55px}a{color:var(--blue)}nav{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:22px}
+.brand{font-weight:850;font-size:22px;letter-spacing:-.5px}.brand span{color:var(--green)}.links{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;align-items:center}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:8px 0 12px;letter-spacing:-1px}h2{font-size:21px;margin:0 0 10px}h3{font-size:18px;margin:0 0 7px}p{margin:8px 0 15px}.small{font-size:13px;color:var(--muted)}.eyebrow{color:var(--green);font-weight:800;letter-spacing:1.2px;text-transform:uppercase;font-size:11px}
+.hero{max-width:780px;margin:20px 0 32px}.hero p{font-size:18px;color:#d9e6f2}
+.panel{padding:22px;margin-top:16px;border:1px solid var(--border);background:var(--panel);border-radius:16px}
+.notice{border-left:4px solid var(--warn);background:#2b3039;border-radius:9px;padding:12px 14px;margin:12px 0 20px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:17px 0}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:13px;padding:17px;display:flex;flex-direction:column;min-width:0}
+.card .price{font-size:30px;font-weight:850;color:var(--green);margin:7px 0}.card p{font-size:13px;color:var(--muted)}.card.selected{border-color:var(--green);box-shadow:0 0 0 1px #70e4b180}
+.btn{border:1px solid #416278;border-radius:9px;padding:10px 14px;background:var(--panel2);color:var(--text);font:inherit;font-weight:750;cursor:pointer}.btn.primary{color:#0b1b24;background:var(--green);border-color:var(--green)}.btn:hover{filter:brightness(1.12)}.btn:focus-visible,select:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.chip{display:inline-block;font-size:12px;color:var(--green);padding:4px 9px;border:1px solid #426e69;border-radius:18px;width:fit-content}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.metric{background:#112234;border:1px solid #315067;padding:13px;border-radius:11px}.metric b{display:block;font-size:22px;margin-top:3px}.metric small{color:var(--muted)}
+.match{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid #30475c}.match b{font-size:14px}.signs{display:flex;gap:4px}.sign{border:1px solid #486075;color:#a9becd;padding:5px 8px;border-radius:6px;font-weight:800;min-width:29px;text-align:center}.sign.chosen{background:#205c51;border-color:#47a38a;color:#b9ffdf}
+select{background:#132538;color:var(--text);border:1px solid #49667a;border-radius:9px;padding:10px;font:inherit;min-width:min(260px,100%)}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:12px 10px;border-bottom:1px solid #30475c;text-align:right;white-space:nowrap}td:first-child,th:first-child{text-align:left}th{color:var(--muted);font-size:12px}
+.links-more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:12px}.links-more>div{border:1px solid var(--border);border-radius:12px;padding:16px;background:#122337}.links-more h3{font-size:16px}
+#tipDetails[hidden],#soloResults[hidden],#currentSection[hidden]{display:none}
+.footer{border-top:1px solid var(--border);margin-top:27px;padding-top:16px;font-size:12px;color:var(--muted)}
+@media(max-width:760px){main{padding:16px 13px 40px}.cards,.links-more,.metrics{grid-template-columns:1fr}.panel{padding:16px}.hero p{font-size:16px}.match{grid-template-columns:27px minmax(0,1fr) auto}.sign{min-width:26px;padding:4px 6px}.match b{font-size:12px}.card .price{font-size:27px}}
+</style></head>
+<body><main>
+<nav><div class="brand">STRYKTIPS<span>LABBET</span></div><div class="links"><a href="./index.html">Lagets tips</a><a href="./veckans-analys.html">Alla omgångar</a><a href="./status.html">Datastatus</a></div></nav>
+<div class="hero"><div class="eyebrow">Nytt · eget spel</div><h1>Spela själv för cirka 100 kr</h1>
+<p>Du får tre förslag till Stryktipset, precis som för laget – men med mycket mindre insats. Det är ett eget, frivilligt spel och påverkar inte lagets kupong.</p></div>
+<div class="panel" style="margin-top:0"><div class="metrics"><div class="metric"><small>Högsta budget</small><b>100 kr</b></div><div class="metric"><small>Vanligt system</small><b>96 kr</b></div><div class="metric"><small>Lagets separata budget</small><b>1 800 kr</b></div></div>
+<p class="small">Varför 96 och inte 100 kr? Ett vanligt system måste bestå av ett antal hela rader. En helgardering och fem halvgarderingar ger 3 × 2 × 2 × 2 × 2 × 2 = 96 rader.</p></div>
+<div id="alert" class="notice" role="status">Hämtar dina egna 100-kronorsförslag …</div>
+<section id="currentSection" hidden>
+<div class="panel">
+<div class="row"><div><h2>Välj omgång</h2><p class="small">Tipsen visas tillsammans med tiden när oddsen hämtades.</p></div><select id="draws" aria-label="Välj omgång"></select></div>
+<p class="small" id="drawmeta"></p></div>
+<h2 style="margin-top:22px">Vilket förslag passar dig?</h2><div class="cards" id="systems"></div>
+<section class="panel" id="tipDetails" hidden><div class="row"><h2 id="pickTitle">Dina 13 matcher</h2><button class="btn primary" id="copy" type="button">Kopiera alla tecken</button></div>
+<p class="small" id="pickInfo"></p><div id="matches"></div><p class="small">Grönt = tecken du spelar. När två eller tre tecken är gröna garderar du matchen. Att gardera kostar fler rader.</p></section>
+<section class="panel" id="soloResults" hidden><h2>Så gick 100-kronorssystemen</h2><div class="metrics" id="settled"></div></section>
+</section>
+<section class="panel" style="margin-top:24px"><h2>Vad säger historiken?</h2><p>Vi har även testat en <b>äldre, enklare modell</b> mot verkliga resultat från 105 tidigare Stryktipsomgångar. Det är inte samma modell som används för dina nya förslag.</p>
+<div class="table-wrap"><table><thead><tr><th></th><th>Eget system</th><th>Större system</th></tr></thead><tbody>
+<tr><td>Insats per omgång</td><td>96 kr</td><td>i snitt 1 677 kr</td></tr>
+<tr><td>Totalt under 105 omgångar</td><td id="cost100">–</td><td id="cost1800">–</td></tr>
+<tr><td>Omgångar med minst 10 rätt på någon rad</td><td id="hits100">–</td><td id="hits1800">–</td></tr>
+<tr><td>Omgångar med 13 rätt</td><td id="jack100">–</td><td id="jack1800">–</td></tr>
+</tbody></table></div><p class="small">Observera: 10 rätt ger inte alltid utdelning. Historiken saknar kompletta utdelningsuppgifter och bevisar inte att något system är lönsamt. Ett mindre system innebär mindre möjlig förlust per omgång, men också färre chanser till alla rätt.</p></section>
+<section class="panel"><h2>Andra spel att jämföra</h2><p class="small">Det finns andra tipsspel som passar små insatser. De har ännu inte automatiska systemförslag i Stryktipslabbet, eftersom de måste använda sina egna kuponger och resultat.</p>
+<div class="links-more">
+<div><span class="chip">8 matcher</span><h3>Topptipset</h3><p class="small">Värt att undersöka för 100 kr: färre matcher att hålla reda på. Men <b>bara 8 rätt ger pengar</b>. Ett 96-raderssystem kan ha en hel- och fem halvgarderingar.</p><a href="https://spela.svenskaspel.se/topptipset">Se Topptipset</a></div>
+<div><span class="chip">13 matcher</span><h3>Europatipset</h3><p class="small">Fungerar ungefär som Stryktipset, fast med andra matcher. Samma 100-kronorsbegränsning gör att man ofta måste spika många matcher.</p><a href="https://spela.svenskaspel.se/europatipset">Se Europatipset</a></div>
+<div><span class="chip">13 matcher</span><h3>Stryktipset</h3><p class="small">Redan anslutet. Vi kan följa alla nya kuponger automatiskt och jämföra hur ditt mindre system står sig mot lagets större system.</p><a href="./veckans-analys.html">Se alla omgångar</a></div>
+</div></section>
+<section class="panel"><h2>En rimlig förväntan</h2><p>För ett eget spel på 96 kr är <b>96 kr hela den möjliga förlusten per omgång</b>. Om du spelar varje lördag blir det ungefär 5 000 kr i insatser på ett år. Spela bara med en summa som passar din egen budget.</p>
+<p class="small">Ingen modell kan lova vinster. Välj gärna en fast gräns och undvik att försöka spela tillbaka förluster.</p></section>
+<div class="footer">Stryktipslabbet är ett analysverktyg och lämnar aldrig in spel åt dig. Bara verifierade förhandsobservationer publiceras. <b>18+ · Spela ansvarsfullt</b> · <a href="https://stodlinjen.se/">Stödlinjen</a>.</div>
+</main><script>
+const el=id=>document.getElementById(id),cash=n=>Number(n).toLocaleString('sv-SE',{maximumFractionDigits:0})+' kr',
+pct=n=>(100*n).toLocaleString('sv-SE',{maximumFractionDigits:2})+' %',
+fmt=d=>new Date(d).toLocaleString('sv-SE',{dateStyle:'medium',timeStyle:'short',timeZone:'Europe/Stockholm'});
+let manifest=[],selected=null,solo=null,base=null;
+const names={balanserad:['Balanserat','Större fokus på tecknen som ser mest sannolika ut.','Börja här'],varde:['Färre folkfavoriter','Några fler ovanliga tecken. Det är ett experiment, inte säkert bättre.','Experiment'],skrall:['Mer chansning','Vågar välja fler överraskningar, men får ofta lägre chans till alla rätt.','Experiment']};
+function note(text,good=false){el('alert').textContent=text;el('alert').style.borderLeftColor=good?'#70e4b1':'#ffd597'}
+function element(parent,tag,text,cls){const node=document.createElement(tag);node.textContent=text;if(cls)node.className=cls;parent.append(node);return node}
+async function load(path){const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()}
+function showSystem(sys,card){
+ document.querySelectorAll('#systems>.card').forEach(x=>x.classList.toggle('selected',x===card));
+ el('tipDetails').hidden=false;el('pickTitle').textContent=names[sys.key][0]+' – din kupong';
+ el('pickInfo').textContent='Omgång '+base.draw_number+' · '+sys.rows+' rader · '+cash(sys.cost)+' · Ungefärlig chans till 13 rätt: '+pct(sys.probability_all_13);
+ const place=el('matches');place.replaceChildren();
+ base.matches.forEach((m,i)=>{const row=document.createElement('div');row.className='match';element(row,'span',(i+1)+'.','small');element(row,'b',m.home+' – '+m.away);const signs=element(row,'div','');signs.className='signs';for(const x of '1X2')element(signs,'span',x,'sign'+(sys.choices[i].includes(x)?' chosen':''));place.append(row)});
+ el('copy').onclick=async()=>{
+  const text='Stryktipslabbet · Eget spel · '+sys.name+'\nOmgång '+base.draw_number+'\n'+
+  base.matches.map((m,i)=>(i+1)+'. '+m.home+' – '+m.away+': '+sys.choices[i]).join('\n')+
+  '\nTotalt '+cash(sys.cost)+' · Oddsen observerades '+fmt(base.observed_at_utc);
+  try{await navigator.clipboard.writeText(text);el('copy').textContent='Kopierat!'}catch{window.prompt('Kopiera tecknen',text)}
+ };el('tipDetails').scrollIntoView({behavior:'smooth',block:'start'});
+}
+async function showRound(draw){
+ const row=manifest.find(x=>String(x.draw_number)===String(draw));if(!row)return;
+ el('tipDetails').hidden=true;el('soloResults').hidden=true;el('systems').replaceChildren();
+ try{
+  const [original,personal]=await Promise.all([
+     load('./data/analysis/'+row.draw_number+'.json'),load('./data/personal/'+row.draw_number+'.json')
+  ]);
+  if(original.schema!=='stryktipslabbet-frozen-analysis-v1'||personal.schema!=='stryktipslabbet-personal-100-v1'||
+     original.draw_number!==personal.draw_number||personal.original_observed_at_utc!==original.observed_at_utc)throw Error('Felaktig datakoppling');
+  base=original;solo=personal;
+  let stop=Date.parse(original.reg_close_time),created=Date.parse(personal.created_at_utc),age=(Date.now()-Date.parse(original.observed_at_utc))/3600000;
+  const past=Date.now()>=stop;
+  note(past?'Historisk omgång. Förslagen byggdes från odds observerade före spelstopp.':
+       age>8?'Förslagen är äldre än åtta timmar. Kontrollera senaste odds och streck innan du spelar.':
+       'Aktuella systemförslag finns. Kontrollera alltid senaste oddsen innan du spelar.',!past&&age<=8);
+  el('drawmeta').textContent='Omgång '+original.draw_number+' · Odds hämtade '+fmt(original.observed_at_utc)+
+      ' · Spelstopp '+fmt(original.reg_close_time)+(personal.derived_before_close?' · System framtaget före spelstopp':' · System beräknat senare från sparade förhandsodds');
+  for(const sys of personal.systems){
+    const [title,desc,badge]=names[sys.key]||[sys.name,'', 'Förslag'];
+    const card=element(el('systems'),'article','','card');
+    element(card,'span',badge,'chip');element(card,'h3',title);element(card,'p',desc);
+    element(card,'div',cash(sys.cost),'price');
+    element(card,'p','Modellens uppskattning av 13 rätt: '+pct(sys.probability_all_13)+
+       ' · '+(100-sys.cost)+' kr under budgetgränsen','small');
+    element(card,'p',sys.singles+' spikar, '+sys.doubles+' halvgarderingar, '+sys.triples+' helgarderingar','small');
+    const button=element(card,'button','Visa mina tecken','btn'+(sys.key==='balanserad'?' primary':''));button.onclick=()=>showSystem(sys,card);
+  }
+  if(row.personal_settled){
+    const settled=await load('./data/personal_settlements/'+row.draw_number+'.json');
+    if(settled.schema==='stryktipslabbet-personal-settlement-v1'&&settled.draw_number===original.draw_number){
+      el('soloResults').hidden=false;el('settled').replaceChildren();
+      for(const pay of settled.systems){const col=element(el('settled'),'div','','metric');element(col,'small',names[pay.key]?.[0]||pay.name);
+        element(col,'b',(pay.net>=0?'+':'')+cash(pay.net));element(col,'small','Utbetalt '+cash(pay.paid)+' på '+cash(pay.cost)+' insats');
+      }
+    }
+  }
+  el('currentSection').hidden=false;
+ }catch(e){note('Den här omgången kunde inte laddas: '+e.message)}
+}
+async function loadHistory(){
+ try{
+  const h=await load('./data/solo-history.json');
+  if(h.schema!=='stryktipslabbet-solo-elo-history-v1'||h.n_rounds<100)throw Error('Ogiltig historik');
+  el('cost100').textContent=cash(h.budgets['100'].spent);
+  el('cost1800').textContent=cash(h.budgets['1800'].spent);
+  el('hits100').textContent=h.budgets['100'].rounds_with_10_or_more+' av '+h.n_rounds;
+  el('hits1800').textContent=h.budgets['1800'].rounds_with_10_or_more+' av '+h.n_rounds;
+  el('jack100').textContent=''+h.budgets['100'].rows_13;
+  el('jack1800').textContent=''+h.budgets['1800'].rows_13;
+ }catch(e){el('hits100').textContent='Saknas';el('hits1800').textContent='Saknas'}
+}
+async function start(){
+ loadHistory();
+ try{
+  const m=await load('./data/analysis-index.json');
+  if(m.schema!=='stryktipslabbet-public-analysis-index-v1')throw Error('Oväntat format');
+  manifest=(m.draws||[]).filter(r=>r.personal_available);
+  if(!manifest.length){note('Den första 100-kronorsanalysen är ännu inte publicerad. Kontrollera igen efter nästa lyckade datakörning.');return}
+  const select=el('draws');
+  select.replaceChildren();
+  manifest.forEach(r=>{const opt=document.createElement('option');opt.value=r.draw_number;opt.textContent='Omgång '+r.draw_number+' · '+fmt(r.reg_close_time)+(r.personal_settled?' · Rättad':r.current?' · Kommande':' · Avslutad');select.append(opt)});
+  select.onchange=()=>showRound(select.value);
+  const first=manifest.find(r=>r.current)||manifest[0];select.value=first.draw_number;
+  await showRound(first.draw_number);
+ }catch(e){note('Kunde inte hämta veckans system: '+e.message)}
+}
+start();
+</script></body></html>
