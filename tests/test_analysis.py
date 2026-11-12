@@ -104,6 +104,10 @@ class AutomaticAnalysisTests(unittest.TestCase):
             self.assertEqual(paid["draw_number"], 9999)
             self.assertTrue(paid["hypothetical"])
             self.assertEqual(len(paid["systems"]), 3)
+            self.assertEqual(paid["forecast_quality"]["n"], 13)
+            self.assertGreaterEqual(paid["forecast_quality"]["mean_brier"], 0)
+            self.assertGreaterEqual(paid["forecast_quality"]["mean_log_loss"], 0)
+            self.assertEqual(len(paid["forecast_quality"]["matches"]), 13)
             for s in paid["systems"]:
                 self.assertAlmostEqual(s["paid"] - s["cost"], s["net"], places=2)
 
