@@ -43,7 +43,7 @@ select{background:#111d2b;color:var(--txt);padding:11px;border:1px solid #40536b
     <h2>Match för match</h2><p class="small muted">P = marknadsbaserad 1X2-sannolikhet, streck = folkets andel. Skillnaden är ingen garanti för spelvärde.</p>
     <div class="tablewrap"><table><thead><tr><th>Nr</th><th>Match</th><th>P 1 / X / 2</th><th>Streck 1 / X / 2</th><th>Största P−streck</th></tr></thead><tbody id="matches"></tbody></table></div>
   </section>
-  <section id="settlementBox" class="card" hidden><h2>Officiellt facit och hypotetiskt netto</h2><p id="outcome"></p><div id="settlement" class="grid"></div></section>
+  <section id="settlementBox" class="card" hidden><h2>Officiellt facit och hypotetiskt netto</h2><p id="outcome"></p><div id="quality" class="status" hidden></div><div id="settlement" class="grid"></div></section>
 </section>
 <div class="footer">Uppgifterna uppdateras bara när GitHub Actions lyckas hämta, analysera och publicera en observation. Om ett historiskt förhandstillfälle saknas visas inget efterhandskonstruerat system. <b>18+ · Spela ansvarsfullt.</b> <a href="https://stodlinjen.se/">Stödlinjen</a>.</div>
 </main>
@@ -112,6 +112,9 @@ async function show(number){
     const v=await get('./data/settlements/'+d.draw_number+'.json');
     if(v.schema!=='stryktipslabbet-settlement-v1'||v.draw_number!==d.draw_number)throw Error('Rättningen har fel format');
     el('settlementBox').hidden=false;el('outcome').textContent='Rätt rad: '+v.outcome.split('').join(' ')+' · Utdelningar från officiellt resultatflöde.';
+    const q=v.forecast_quality;
+    const qualityBox=el('quality');qualityBox.hidden=true;
+    if(q&&q.n===13){qualityBox.hidden=false;qualityBox.textContent='Modellprognoser · Rätt förstaval: '+q.top_pick_correct+' av 13 · Brier: '+Number(q.mean_brier).toLocaleString('sv-SE',{maximumFractionDigits:3})+' · Log loss: '+Number(q.mean_log_loss).toLocaleString('sv-SE',{maximumFractionDigits:3})+'. Lägre Brier/log loss är bättre.'}
     v.systems.forEach(s=>{
       const div=document.createElement('div');div.className='metric';
       txt(div,'span',s.name);
