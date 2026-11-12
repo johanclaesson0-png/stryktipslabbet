@@ -77,6 +77,7 @@ def main():
     (dest / "data").mkdir(parents=True)
     shutil.copy2(root / "index.html", dest / "index.html")
     shutil.copy2(root / "status.html", dest / "status.html")
+    shutil.copy2(root / "veckans-analys.html", dest / "veckans-analys.html")
 
     now = datetime.now(timezone.utc)
     status = {
@@ -108,11 +109,15 @@ def main():
             pass
 
     closes = {}
+    source_snapshots = {}
     for p in (root / "data" / "snapshots").glob("*/*.json"):
         try:
             snap = json.loads(p.read_text(encoding="utf-8"))
             if valid_snapshot(snap, now):
                 closes[snap["draw_number"]] = instant(snap["reg_close_time"])
+                prior = source_snapshots.get(snap["draw_number"])
+                if prior is None or instant(snap["observed_at_utc"]) > instant(prior["observed_at_utc"]):
+                    source_snapshots[snap["draw_number"]] = snap
         except (OSError, json.JSONDecodeError):
             pass
     good = []
@@ -128,6 +133,100 @@ def main():
         folder.mkdir(exist_ok=True)
         shutil.copy2(p, folder / (str(n) + ".json"))
     status["results_published"] = min(len(good), 30)
+
+    # Publicera bara analyser som bevisligen byggts från exakt de arkiverade
+    # uppgifterna före spelstopp. Tillåt inte importerade efterhandsodds.
+    def approved_analysis(a):
+        try:
+            if not isinstance(a, dict) or a.get("schema") != "stryktipslabbet-frozen-analysis-v1":
+                return False
+            if a.get("model_version") != "market-no-vig-v1" or a.get("budget_limit") != 1800:
+                return False
+            n = a["draw_number"]
+            src = source_snapshots.get(n)
+            if not src or a["observed_at_utc"] != src["observed_at_utc"]:
+                return False
+            if a["reg_close_time"] != src["reg_close_time"] or a.get("source_snapshot_sha256") != src.get("sha256"):
+                return False
+            if len(a["matches"]) != 13 or len(a["systems"]) != 3:
+                return False
+            for m, orig in zip(a["matches"], sorted(src["matches"], key=lambda row: row["number"])):
+                if (m["number"] != orig["number"] or m["home"] != orig["home"] or m["away"] != orig["away"] or
+                    m["odds"] != orig["odds"] or m["streck"] != orig["streck"]):
+                    return False
+                p = [1.0/x for x in orig["odds"]]
+                total = sum(p)
+                if len(m["p"]) != 3 or any(abs(m["p"][i] - p[i]/total) > .000001 for i in range(3)):
+                    return False
+            for system in a["systems"]:
+                c = system["choices"]
+                if len(c) != 13 or any(not isinstance(s, str) or not s or
+                                       "".join(t for t in "1X2" if t in s) != s for s in c):
+                    return False
+                if system["cost"] != math.prod(len(s) for s in c) or not 1 <= system["cost"] <= 1800:
+                    return False
+                if not 0 < system["p13_estimate"] <= 1:
+                    return False
+            return True
+        except (KeyError, TypeError, ValueError, ZeroDivisionError, OverflowError):
+            return False
+
+    report_index = []
+    verified_result_draws = {n for n, _ in good}
+    for p in (root / "data" / "analysis").glob("*.json"):
+        try:
+            item = json.loads(p.read_text(encoding="utf-8"))
+            if approved_analysis(item):
+                report_index.append(item)
+        except (OSError, json.JSONDecodeError):
+            pass
+    report_index.sort(key=lambda a: a["draw_number"], reverse=True)
+    for item in report_index[:52]:
+        n = item["draw_number"]
+        source = root / "data" / "analysis" / (str(n) + ".json")
+        destination = dest / "data" / "analysis" / (str(n) + ".json")
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
+    public_rounds = []
+    for item in report_index[:52]:
+        n = item["draw_number"]
+        settlement_file = root / "data" / "settlements" / (str(n) + ".json")
+        paid = False
+        if n in verified_result_draws and settlement_file.exists():
+            try:
+                settled = json.loads(settlement_file.read_text(encoding="utf-8"))
+                official = json.loads((root / "data" / "results" / (str(n) + ".json")).read_text(encoding="utf-8"))
+                if (settled.get("schema") == "stryktipslabbet-settlement-v1" and
+                    settled.get("draw_number") == n and
+                    settled.get("forecast_observed_at_utc") == item["observed_at_utc"] and
+                    settled.get("outcome") == official.get("outcome") and
+                    settled.get("payouts") == official.get("payouts") and
+                    settled.get("source_snapshot_sha256") == item.get("source_snapshot_sha256") and
+                    len(settled.get("systems", [])) == 3):
+                    target = dest / "data" / "settlements" / (str(n) + ".json")
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(settlement_file, target)
+                    paid = True
+            except (OSError, ValueError, KeyError, json.JSONDecodeError):
+                pass
+        public_rounds.append({
+            "draw_number": n,
+            "observed_at_utc": item["observed_at_utc"],
+            "reg_close_time": item["reg_close_time"],
+            "settled": paid,
+            "current": instant(item["reg_close_time"]) > now,
+        })
+    manifest = {
+        "schema": "stryktipslabbet-public-analysis-index-v1",
+        "generated_at_utc": now.isoformat(),
+        "draws": public_rounds,
+        "model_version": "market-no-vig-v1",
+    }
+    (dest / "data" / "analysis-index.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    status["automatic_analyses_published"] = len(public_rounds)
+    status["automatic_settlements_published"] = sum(d["settled"] for d in public_rounds)
+
     (dest / "data" / "status.json").write_text(
         json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Publika filer:", [str(p.relative_to(dest)) for p in dest.rglob("*") if p.is_file()])
