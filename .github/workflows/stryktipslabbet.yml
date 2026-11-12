@@ -30,7 +30,7 @@ jobs:
         continue-on-error: true
         run: python scripts/collect.py --outdir data
       - name: Skapa och frys tre system per observerad kupong
-        run: python scripts/analyze.py --outdir data
+        run: python -m scripts.analyze --outdir data
       - name: Spara endast offentliga källobservationer
         run: |
           git config user.name 'github-actions[bot]'
