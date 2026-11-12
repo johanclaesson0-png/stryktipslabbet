@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0c121e">
-<title>Veckans automatiska analys – Stryktipslabbet</title>
+<title>Veckans tips – Stryktipslabbet</title>
 <style>
 :root{color-scheme:dark;--bg:#0c121e;--panel:#152031;--panel2:#192a3d;--line:#2b3d51;--txt:#f0f6fd;--muted:#adc0d2;--mint:#6be4bb;--blue:#a6caff;--yellow:#f5cf83;--red:#fd969e}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -20%,#203e50,transparent 48%),var(--bg);color:var(--txt);font:15px system-ui,-apple-system,Segoe UI,sans-serif}
@@ -24,26 +24,26 @@ select{background:#111d2b;color:var(--txt);padding:11px;border:1px solid #40536b
 </head>
 <body>
 <main>
-<nav><div class="brand">STRYKTIPS<span>LABBET</span></div><a href="./index.html">Kuponganalys</a><a href="./status.html">Datastatus</a><a href="https://github.com/johanclaesson0-png/stryktipslabbet" rel="noopener">Källkod</a></nav>
+<nav><div class="brand">STRYKTIPS<span>LABBET</span></div><a href="./index.html">Börja här</a> · <a href="./fordjupning.html">Fördjupning</a><a href="./status.html">Datastatus</a><a href="https://github.com/johanclaesson0-png/stryktipslabbet" rel="noopener">Källkod</a></nav>
 <div class="hero">
-  <div><div class="eyebrow">Automatiska prognoser · varje omgång</div><h1>Veckans analys</h1><p class="muted">Tre matematiska system inom lagets tak på 1 800 kr, framtagna från observerade förhandsodds och folkstreck. Prognoserna fryses före spelstopp och rättas separat efteråt.</p></div>
-  <div class="card" style="margin:0"><span class="small muted">Datakälla</span><div><b>Svenska Spels publika kupongflöde</b></div><div class="small muted" style="margin-top:9px">Sannolikheterna är normaliserade odds, inte en egen tränad resultatmodell. Ingen kupong läggs automatiskt.</div></div>
+  <div><div class="eyebrow">Automatiska prognoser · varje omgång</div><h1>Veckans tips – alla detaljer</h1><p class="muted">Vi ger tre förslag med olika nivå av chansning. Varje förslag innehåller 13 matcher och kostar högst 1 800 kr. Efter matcherna ser vi hur tipsen gick.</p></div>
+  <div class="card" style="margin:0"><span class="small muted">Datakälla</span><div><b>Svenska Spels publika kupongflöde</b></div><div class="small muted" style="margin-top:9px">Chansen är en uppskattning från speloddsen – inget löfte om att vinna. Vi lämnar inte in några spel åt er.</div></div>
 </div>
 <div id="notice" class="status" role="status">Hämtar publicerade analyser …</div>
 <section class="card">
-  <div class="row"><div><h2>Välj omgång</h2><p class="small muted">Varje omgång sparas för jämförelse, även när någon annan i laget tippar.</p></div>
+  <div class="row"><div><h2>Vilken lördag vill du titta på?</h2><p class="small muted">Varje omgång sparas för jämförelse, även när någon annan i laget tippar.</p></div>
     <select id="draws" aria-label="Välj Stryktipsomgång" disabled><option>Laddar omgångar …</option></select>
   </div>
   <div id="meta" class="grid" style="margin-top:15px"></div>
 </section>
 <section id="report" hidden>
-  <div class="row"><h2>Tre systemprofiler</h2><span class="small muted">Samma förhandsobservation · max 1 800 kr</span></div>
+  <div class="row"><h2>Tre sätt att tippa</h2><span class="small muted">Samma förhandsobservation · max 1 800 kr</span></div>
   <div id="systems" class="grid" style="margin:14px 0"></div>
   <section class="card">
-    <h2>Match för match</h2><p class="small muted">P = marknadsbaserad 1X2-sannolikhet, streck = folkets andel. Skillnaden är ingen garanti för spelvärde.</p>
-    <div class="tablewrap"><table><thead><tr><th>Nr</th><th>Match</th><th>P 1 / X / 2</th><th>Streck 1 / X / 2</th><th>Största P−streck</th></tr></thead><tbody id="matches"></tbody></table></div>
+    <h2>Vad tror modellen om matcherna?</h2><p class="small muted">Chans = vår uppskattning utifrån oddsen. Folkets val = hur andra har tippat. Ett lågt streck är inte automatiskt ett bra spel.</p>
+    <div class="tablewrap"><table><thead><tr><th>Nr</th><th>Match</th><th>Chans 1 / X / 2</th><th>Folkets val 1 / X / 2</th><th>Största skillnad</th></tr></thead><tbody id="matches"></tbody></table></div>
   </section>
-  <section id="settlementBox" class="card" hidden><h2>Officiellt facit och hypotetiskt netto</h2><p id="outcome"></p><div id="quality" class="status" hidden></div><div id="settlement" class="grid"></div></section>
+  <section id="settlementBox" class="card" hidden><h2>Så gick det efter matcherna</h2><p id="outcome"></p><div id="quality" class="status" hidden></div><div id="settlement" class="grid"></div></section>
 </section>
 <div class="footer">Uppgifterna uppdateras bara när GitHub Actions lyckas hämta, analysera och publicera en observation. Om ett historiskt förhandstillfälle saknas visas inget efterhandskonstruerat system. <b>18+ · Spela ansvarsfullt.</b> <a href="https://stodlinjen.se/">Stödlinjen</a>.</div>
 </main>
@@ -84,12 +84,12 @@ async function show(number){
   addMetric(el('meta'),'Spelstopp (Stockholm)',dt(a.reg_close_time));
   a.systems.forEach(s=>{
     const card=document.createElement('article');card.className='system';
-    txt(card,'h3',s.name);
+    txt(card,'h3',({balanserad:'Störst chans till 13 rätt',varde:'Mer fokus på ovanliga tecken',skrall:'Lite större chansning'})[s.key]||s.name);
     txt(card,'div',kr(s.cost)+' · '+s.rows+' rader','big');
-    txt(card,'p','Beräknad chans 13 rätt: '+pct(s.p13_estimate,3));
-    txt(card,'p',s.spikes+' spikar · '+s.half+' halv · '+s.full+' hel','small muted');
+    txt(card,'p','Ungefärlig chans till 13 rätt: '+pct(s.p13_estimate,3));
+    txt(card,'p',s.spikes+' matcher med ett tecken · '+s.half+' med två · '+s.full+' med tre','small muted');
     txt(card,'p',s.choices.map((x,i)=>(i+1)+':'+x).join('  ·  '),'signs');
-    const btn=txt(card,'button','Kopiera systemet','btn');
+    const btn=txt(card,'button','Kopiera tecknen','btn');
     btn.onclick=async()=>{
       const content='Stryktipslabbet · Omgång '+a.draw_number+' · '+s.name+'\n'+
        'Observerad: '+dt(a.observed_at_utc)+'\n'+
@@ -114,7 +114,7 @@ async function show(number){
     el('settlementBox').hidden=false;el('outcome').textContent='Rätt rad: '+v.outcome.split('').join(' ')+' · Utdelningar från officiellt resultatflöde.';
     const q=v.forecast_quality;
     const qualityBox=el('quality');qualityBox.hidden=true;
-    if(q&&q.n===13){qualityBox.hidden=false;qualityBox.textContent='Modellprognoser · Rätt förstaval: '+q.top_pick_correct+' av 13 · Brier: '+Number(q.mean_brier).toLocaleString('sv-SE',{maximumFractionDigits:3})+' · Log loss: '+Number(q.mean_log_loss).toLocaleString('sv-SE',{maximumFractionDigits:3})+'. Lägre Brier/log loss är bättre.'}
+    if(q&&q.n===13){qualityBox.hidden=false;qualityBox.textContent='Modellen hade rätt favorit i '+q.top_pick_correct+' av 13 matcher. Statistiskt felmått (Brier): '+Number(q.mean_brier).toLocaleString('sv-SE',{maximumFractionDigits:3})+' · Log loss: '+Number(q.mean_log_loss).toLocaleString('sv-SE',{maximumFractionDigits:3})+'. Lägre Brier/log loss är bättre.'}
     v.systems.forEach(s=>{
       const div=document.createElement('div');div.className='metric';
       txt(div,'span',s.name);
