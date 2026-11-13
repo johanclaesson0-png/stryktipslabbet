@@ -1,0 +1,26 @@
+{
+  "schema": "stryktipslabbet-history-source-v1",
+  "source": "andreyhgl/stryktipset-results (offentligt resultatarkiv som hämtar Svenska Spels publika resultat-API)",
+  "source_url": "https://github.com/andreyhgl/stryktipset-results/blob/main/results.csv",
+  "source_api": "https://api.spela.svenskaspel.se/draw/1/stryktipset",
+  "imported_on": "2026-11-13",
+  "period_start": "2021-11-13",
+  "period_end": "2026-11-07",
+  "draws": 262,
+  "matches": 3406,
+  "fields": [
+    "draw_number",
+    "reg_close_date",
+    "matches_home_away",
+    "outcome",
+    "fulltime_score",
+    "country"
+  ],
+  "important_limits": [
+    "Arkivet innehåller observerade facit, inte säkert tidsfrysta historiska odds och streck.",
+    "Datumfältet är kupongens registreringsstopp som kalenderdatum, inte matchernas exakta avsparkstider.",
+    "Resultatsamlingen är en community-spegel av publika data; individuella resultatsvar behöver verifieras om officiell utdelning ska användas.",
+    "Före-spelstopp-prognoser kan inte rekonstrueras enbart ur resultaten.",
+    "Utdelningar och utbetalningar ingår inte i denna CSV."
+  ]
+}
