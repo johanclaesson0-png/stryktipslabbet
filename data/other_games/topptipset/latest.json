@@ -2,161 +2,36 @@
   "schema": "stryktipslabbet-other-game-v16",
   "game": "topptipset",
   "name": "Topptipset",
-  "draw_number": 4444,
-  "reg_close_time": "2026-11-14T19:44:00+00:00",
-  "observed_at_utc": "2026-11-13T23:17:03.660932+00:00",
-  "source_url": "https://api.spela.svenskaspel.se/draw/1/topptipset/draws/4444",
-  "source_snapshot_sha256": "f1c95023b8960b176d68c4a7aace397d2e4bc6a7f313bf80df9a7ec32eb01f19",
+  "draw_number": 4447,
+  "reg_close_time": "2026-11-14T21:59:00+00:00",
+  "observed_at_utc": "2026-11-13T23:18:38.793547+00:00",
+  "source_url": "https://api.spela.svenskaspel.se/draw/1/topptipset/draws/4447",
+  "source_snapshot_sha256": "2bd9d84211985b98bd7fb67ff49a2cf3c21de2b73dd91b192e24aaa50730638b",
+  "with_valid_odds": 6,
   "matches": [
     {
       "number": 1,
-      "home": "Sverige",
-      "away": "Bosnien & Hercegovina",
+      "home": "Chapecoense",
+      "away": "Vasco da Gama",
       "odds": [
-        1.5,
-        4.8,
-        6.75
+        7.0,
+        4.75,
+        1.5
       ],
       "streck": [
-        74.0,
-        15.0,
-        11.0
+        14.0,
+        24.0,
+        62.0
       ],
       "p": [
-        0.65158371,
-        0.20361991,
-        0.14479638
+        0.14004914,
+        0.206388206,
+        0.653562654
       ],
-      "match_start": "2026-11-14T20:45:00+01:00"
+      "match_start": "2026-11-15T00:30:00+01:00"
     },
     {
       "number": 2,
-      "home": "Portugal",
-      "away": "Danmark",
-      "odds": [
-        1.48,
-        4.9,
-        7.0
-      ],
-      "streck": [
-        79.0,
-        16.0,
-        5.0
-      ],
-      "p": [
-        0.660733549,
-        0.199568501,
-        0.13969795
-      ],
-      "match_start": "2026-11-14T20:45:00+01:00"
-    },
-    {
-      "number": 3,
-      "home": "Österrike",
-      "away": "Irland",
-      "odds": [
-        1.58,
-        4.2,
-        6.25
-      ],
-      "streck": [
-        63.0,
-        24.0,
-        13.0
-      ],
-      "p": [
-        0.613877131,
-        0.23093473,
-        0.155188139
-      ],
-      "match_start": "2026-11-14T20:45:00+01:00"
-    },
-    {
-      "number": 4,
-      "home": "Rumänien",
-      "away": "Polen",
-      "odds": [
-        4.25,
-        3.9,
-        1.85
-      ],
-      "streck": [
-        16.0,
-        25.0,
-        59.0
-      ],
-      "p": [
-        0.22794408,
-        0.2484006,
-        0.523655319
-      ],
-      "match_start": "2026-11-14T20:45:00+01:00"
-    },
-    {
-      "number": 5,
-      "home": "Nordirland",
-      "away": "Ukraina",
-      "odds": [
-        2.48,
-        3.15,
-        3.2
-      ],
-      "streck": [
-        43.0,
-        30.0,
-        27.0
-      ],
-      "p": [
-        0.390274121,
-        0.307263435,
-        0.302462444
-      ],
-      "match_start": "2026-11-14T20:45:00+01:00"
-    },
-    {
-      "number": 6,
-      "home": "Real Oviedo",
-      "away": "Girona",
-      "odds": [
-        2.43,
-        3.25,
-        2.9
-      ],
-      "streck": [
-        44.0,
-        31.0,
-        25.0
-      ],
-      "p": [
-        0.386753934,
-        0.289172942,
-        0.324073124
-      ],
-      "match_start": "2026-11-14T21:00:00+01:00"
-    },
-    {
-      "number": 7,
-      "home": "Mirassol",
-      "away": "Atletico Mineiro",
-      "odds": [
-        2.15,
-        3.65,
-        3.55
-      ],
-      "streck": [
-        40.0,
-        29.0,
-        31.0
-      ],
-      "p": [
-        0.455648352,
-        0.268395604,
-        0.275956044
-      ],
-      "match_start": "2026-11-14T22:30:00+01:00"
-    },
-    {
-      "number": 8,
       "home": "Banfield",
       "away": "Boca Juniors",
       "odds": [
@@ -165,9 +40,9 @@
         1.42
       ],
       "streck": [
-        22.0,
-        27.0,
-        51.0
+        11.0,
+        18.0,
+        71.0
       ],
       "p": [
         0.117423874,
@@ -175,6 +50,116 @@
         0.661542952
       ],
       "match_start": "2026-11-14T23:00:00+01:00"
+    },
+    {
+      "number": 3,
+      "home": "Club Nacional de Football",
+      "away": "Albion FC",
+      "odds": [
+        1.52,
+        3.85,
+        5.5
+      ],
+      "streck": [
+        81.0,
+        12.0,
+        7.0
+      ],
+      "p": [
+        0.598383587,
+        0.236244949,
+        0.165371464
+      ],
+      "match_start": "2026-11-15T00:00:00+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Queretaro",
+      "away": "Monterrey",
+      "odds": [
+        3.35,
+        3.7,
+        2.17
+      ],
+      "streck": [
+        26.0,
+        35.0,
+        39.0
+      ],
+      "p": [
+        0.289923628,
+        0.26249842,
+        0.447577952
+      ],
+      "match_start": "2026-11-15T00:00:00+01:00"
+    },
+    {
+      "number": 5,
+      "home": "Charleston Battery",
+      "away": "Louisville City FC",
+      "odds": [
+        2.1,
+        3.3,
+        2.88
+      ],
+      "streck": [
+        47.0,
+        29.0,
+        24.0
+      ],
+      "p": [
+        0.422738191,
+        0.269015212,
+        0.308246597
+      ],
+      "match_start": "2026-11-15T00:00:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "St. Vincent & Grenadines",
+      "away": "Belize",
+      "odds": null,
+      "streck": [
+        55.0,
+        18.0,
+        27.0
+      ],
+      "p": null,
+      "match_start": "2026-11-15T01:00:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Jamaica",
+      "away": "Mexiko",
+      "odds": [
+        5.8,
+        4.25,
+        1.54
+      ],
+      "streck": [
+        14.0,
+        17.0,
+        69.0
+      ],
+      "p": [
+        0.163107135,
+        0.222593266,
+        0.614299599
+      ],
+      "match_start": "2026-11-15T02:00:00+01:00"
+    },
+    {
+      "number": 8,
+      "home": "Nya Zeeland",
+      "away": "Indien",
+      "odds": null,
+      "streck": [
+        49.0,
+        25.0,
+        26.0
+      ],
+      "p": null,
+      "match_start": "2026-11-15T04:00:00+01:00"
     }
   ]
 }
