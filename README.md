@@ -1,4 +1,4 @@
-# Stryktipslabbet 14.0
+# Stryktipslabbet 16.0
 
 **Stryktipslabbet** är en svensk mobilanpassad analysapp för Stryktipset, anpassad till ett tipslag med 10 deltagare och ett budgettak på **1 800 kr per omgång**. Den lämnar aldrig in spel.
 
@@ -10,6 +10,7 @@
 - Spikvakten: https://johanclaesson0-png.github.io/stryktipslabbet/spikvakt.html
 - **Femårsarkiv och lagstatistik:** https://johanclaesson0-png.github.io/stryktipslabbet/datadjup.html
 - **Version 13 + 14 – marknadsrörelser och formmodell:** https://johanclaesson0-png.github.io/stryktipslabbet/marknad-och-form.html
+- **Version 15 + 16 – streckvärde, andra spel och spelarnas frånvaro:** https://johanclaesson0-png.github.io/stryktipslabbet/spelvarde-och-spelformer.html
 
 Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → Build and deployment → Source** och välj **GitHub Actions**. Kontrollera under **Settings → Actions → General** att Actions får köras och att GitHub-tokenen har skrivbehörighet för arkivlagring. Kör därefter arbetsflödet manuellt via **Actions → Stryktipslabbet – samla och publicera → Run workflow**.
 
@@ -135,3 +136,30 @@ När officiella resultat kommer sparar scripts/feature_model.py hypotetiska 10�
 **Begränsningar:** Vi saknar ännu tillräckligt många prospektiva rättade kuponger för att säga att formmodellen förbättrar sannolikheter eller utdelningar. De två modellerna bygger på olika sannolikhetsantaganden, och 13-rättschanserna kan därför inte jämföras som om båda vore kalibrerade. Vi saknar säker särmarkering av lottade matcher i framtida facit; detta måste lösas innan detaljerad fotbollskalibrering hävdas. Modellen påverkar inte originalets rekommendationer eller höjer insatsgränserna.
 
 Kör manuellt: python -m scripts.market_moves --outdir data ; python -m scripts.feature_model --outdir data ; python -m scripts.publish
+
+
+## Version 15: relativt streckvärde – inga påhittade vinster
+
+scripts/pool_value.py beräknar ett alternativt streckvärdesystem med exakt samma radkostnad som det balanserade systemet. Det visar sannolikheten för 13 rätt, modellens relativa streckvärde och folkets förenklade täckningsmassa. Folkets täckning bygger på ett oberoendeantagande som inte gäller exakt i riktiga spelpooler.
+
+V15 är INTE en bevisad modell för förväntad utdelning i kronor. Vi saknar säker kunskap om slutomsättning, jackpot och verklig gemensam radfördelning före spelstopp. Resultaten rättas hypotetiskt mot officiella utbetalningar efter spelstopp. Alla kupongprognoser fryses i förväg.
+
+## Version 16: Topptipset och Europatipset
+
+scripts/other_games.py hämtar och validerar skilda officiella kuponger för Topptipset (8 matcher, endast 8 rätt ger utdelning) och Europatipset (13 matcher, 10–13 rätt) från Svenska Spels öppna API. Varje produkt har separat omgångsnummer, källhash, dataarkiv och rättning. System för cirka 100 kr skapas bara om matchnummer, produkt, spelstopp, odds och streck är kompletta.
+
+API-listor: https://api.spela.svenskaspel.se/draw/1/topptipsetfamily/draws respektive https://api.spela.svenskaspel.se/draw/1/europatipset/draws. Om en kupong är publicerad men ännu saknar odds visas de verkliga matcherna tydligt som ofullständiga – inga odds eller tecken hittas på. Topptipset och Europatipset blandas aldrig med Stryktipset.
+
+## Senaste resultat och tillgängliga spelare
+
+Lagens fem senaste verifierbara matchresultat visas med datum, motståndare, mål och hemma/borta/neutral arena. Underliggande data kommer från OpenFootball och CC0-licensierade internationella landslagsresultat. Endast resultat som är daterade före kupongens observation får användas.
+
+scripts/player_availability.py har säker källgranskning men INTE automatisk levande skadehämtning. För en verifierad frånvarorapport krävs spelare, lag, status, HTTPS-källa, källa publicerad före förhandsobservation, kontrolltid högst sju dagar gammal och granskad källstatus. Utan sådan källa visas 'ej verifierat – okänt' – det betyder inte att laget är skadefritt.
+
+För att ansluta automatiska skador, avstängningar och laguppställningar behövs en avtalad leverantör eller officiell källa, API-nyckel/anslutning, stabila lag-/spelar-ID och licensvillkor som tillåter användningen. Möjliga externa tjänster att undersöka är SportsDataIO och soccer-data.co. Dessa är inte anslutna.
+
+## Hjälp för tabellen
+
+ODDS 1/X/2: marginalnormaliserad marknadssannolikhet för hemma/kryss/borta. FORM 1/X/2: formmodellens experimentella sannolikheter. MARKNADSSYSTEM: grundmodellens valda tecken, till exempel 1X. FORMSYSTEM: formmodellens tecken med samma radkostnad. DATATÄCKNING: om båda lagens tidigare resultat finns i tillräcklig omfattning.
+
+Version 15 och 16 använder inga riktiga spelkonton, lämnar aldrig in pengar och ändrar inte originalsystemets insatsgränser. 18+ – spela ansvarsfullt.
