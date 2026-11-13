@@ -136,6 +136,17 @@ async function showGame(game){
     try{await navigator.clipboard.writeText(text);btn.textContent='Kopierat!'}catch{window.prompt('Kopiera',text)}
    };
   });
+  try{
+    const settled=await get('./data/other_games/'+game+'/settlements/'+snap.draw_number+'.json');
+    if(settled.schema==='stryktipslabbet-other-game-settlement-v16' &&
+       settled.draw_number===snap.draw_number && settled.game===game){
+       const panel=mk(box,'div','','tile');mk(panel,'h3','Officiellt rättat (hypotetiska system)');
+       settled.systems.filter(s=>s.budget_limit===100).forEach(s=>{
+         mk(panel,'p',(s.profile==='balanserad'?'Balanserat':'Streckvärde')+': '+
+            (s.net>=0?'+':'')+kr(s.net)+' · '+s.covered_matches+' täckta matcher');
+       });
+    }
+  }catch(err){/* no official result yet */}
  }catch(err){
   const label=game==='topptipset'?'Topptipset':'Europatipset';
   mk(box,'p','Ingen verifierad förhandskupong ansluten just nu. '+label+' visas inte med påhittade odds eller matcher.','small');
