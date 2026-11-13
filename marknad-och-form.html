@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1724"><title>Marknad & formmodell · Stryktipslabbet</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1522;--surface:#152638;--surface2:#1d3346;--border:#38516a;--text:#f1f7ff;--muted:#b8c9d8;--mint:#79e2b8;--blue:#abcfff;--gold:#f5ce8c;--red:#fab7b3}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 65% -10%,#28495e,transparent 56%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1130px;margin:auto;padding:20px 18px 60px}nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px}.brand{font-size:21px;font-weight:850;letter-spacing:-.4px}.brand span{color:var(--mint)}.links{display:flex;gap:13px;flex-wrap:wrap;font-size:13px}a{color:var(--blue)}
+h1{font-size:clamp(32px,5vw,48px);letter-spacing:-1.3px;line-height:1.14;margin:5px 0 15px}h2{font-size:21px;margin:0 0 9px}h3{font-size:17px;margin:0 0 7px}p{margin:6px 0 13px}.lead{font-size:17px;color:#dce7f3;max-width:760px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mint);font-weight:850}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:19px;margin:17px 0}.notice{background:#293645;border-left:4px solid var(--gold);padding:12px 14px;border-radius:8px;margin:18px 0}.muted{color:var(--muted)}.small{font-size:12px;color:var(--muted)}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tile{border:1px solid var(--border);border-radius:12px;padding:15px;background:var(--surface2)}.tile big{display:block;color:var(--mint);font-size:26px;font-weight:800}.tile p{font-size:13px;color:var(--muted);margin:7px 0}
+select,button{font:inherit}select{background:#11283a;border:1px solid #536c85;color:var(--text);border-radius:9px;padding:10px;max-width:100%}button{border:1px solid #46806f;border-radius:9px;padding:9px 12px;background:#235248;color:#eafff6;cursor:pointer;font-weight:750}button:hover{filter:brightness(1.08)}button:focus-visible,select:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+.stats{display:flex;gap:12px;flex-wrap:wrap}.chip{display:inline-block;border:1px solid #538b7c;color:var(--mint);border-radius:99px;font-size:11px;padding:3px 9px}.alert{color:var(--gold)}
+.item{border-top:1px solid #30495f;padding:15px 0}.item:first-of-type{border-top:0}.match-title{display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap}.match-title strong{font-size:15px}.lines{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0}.delta{display:flex;justify-content:space-between;gap:9px;padding:6px 8px;background:#10283a;border-radius:6px;align-items:center;font-size:13px}.delta b{font-variant-numeric:tabular-nums}.delta span{color:var(--muted)}.positive{color:#80e3b4}.negative{color:#f0b3aa}
+details{margin:8px 0}summary{cursor:pointer;color:var(--blue);font-size:13px}.trend{width:100%;max-height:155px;padding:8px 0}.legend{font-size:11px;color:var(--muted)}.legend b{font-weight:800}.l1{color:#80e3b4}.lx{color:#f3c779}.l2{color:#97bcfa}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:9px 7px;border-bottom:1px solid #344a60;text-align:left}th{font-size:11px;color:var(--muted);text-transform:uppercase}td.num,th.num{text-align:right;white-space:nowrap}.scroll{overflow-x:auto}.foot{border-top:1px solid var(--border);padding-top:17px;margin-top:27px;font-size:12px;color:var(--muted)}
+@media(max-width:750px){main{padding:15px 12px 45px}.panel{padding:14px}.grid{grid-template-columns:1fr}.lead{font-size:16px}.lines{grid-template-columns:1fr}.tile big{font-size:22px}}
+</style></head><body><main>
+<nav><div class="brand">STRYKTIPS<span>LABBET</span></div><div class="links"><a href="./index.html">Lagets tips</a><a href="./spela-sjalv.html">Spela själv</a><a href="./spikvakt.html">Spikvakten</a><a href="./datadjup.html">Fem års data</a></div></nav>
+<div class="eyebrow">Version 13 + 14 · två nya perspektiv</div><h1>Marknadens rörelser &amp; den nya formmodellen</h1>
+<p class="lead">Se om oddsen eller folkets tips förändras – och om lagens faktiska form får vår testmodell att föreslå andra tecken. Grundmodellen med speloddsen finns kvar som jämförelse.</p>
+<div class="notice" id="notice" role="status">Hämtar förhandsanalyser …</div>
+<section class="panel"><div class="row"><div><h2>Välj omgång</h2><p class="small">Källorna och förslagen tidsstämplas före spelstopp.</p></div><select id="round" disabled aria-label="Omgång"><option>Hämtar …</option></select></div><p id="source" class="small"></p></section>
+<div class="grid"><div class="tile"><span class="chip">Version 13</span><big id="observations">–</big><p>Faktiska förhandsobservationer från Svenska Spel</p></div>
+<div class="tile"><span class="chip">Version 14</span><big id="coverage">–</big><p>Matcher där vi kan testa den utökade formmodellen</p></div>
+<div class="tile"><span class="chip">Samma budget</span><big>100 / 1 800 kr</big><p>Grundsystem och formmodell jämförs med exakt samma radantal</p></div></div>
+<section class="panel"><h2>1. Odds- och streckrörelser</h2><p class="small">Alla förändringar visas i <b>procentenheter</b> från första till senaste sparade observationen – inte från uppskattade historiska data. ”Odds” betyder här sannolikheten efter normalisering för spelbolagets marginal.</p>
+<div id="moves"><p class="muted">Ännu inga godkända rörelsedata.</p></div></section>
+<section class="panel"><div class="row"><div><h2>2. Oddsmodellen mot formmodellen</h2><p class="small">Laget får en testprognos från mål och lagform. Modellen är förregistrerad men ännu inte visad bättre.</p></div><select id="budget" aria-label="Budget"><option value="100">Eget spel · högst 100 kr</option><option value="1800">Tipslag · högst 1 800 kr</option></select></div>
+<div id="systems" class="grid"></div><p id="modelInfo" class="small"></p><div id="formTable" class="scroll"></div></section>
+<section class="panel"><h2>3. Fungerade den nya modellen bättre?</h2><p class="small">Vi börjar från nästa officiellt rättade förhandsprognos. Resultat från tidigare matcher får inte användas för att låtsas att de var förhandstips. Brier och log loss jämför sannolikhetsprognoser; lägre är bättre.</p><div id="settlement"><p class="muted">Ingen rättad v14-prognos ännu.</p></div><div id="progress" class="muted"></div></section>
+<div class="panel"><h2>Så ska du tolka detta</h2><p>En oddsrörelse betyder att uppskattningen förändrats mellan två tidpunkter, men säger inte varför. En stark form ger inte automatiskt ett bra spelvärde: bookmakeroddsen speglar ofta redan lagens styrka. Den nya modellen är därför bara ett <b>experiment</b> tills vi kan visa resultat på framtida kuponger.</p>
+<p class="small">Skador, xG, laguppställningar och dåtidens odds under fem år ingår inte i versionerna. Inga insatser läggs automatiskt.</p></div>
+<footer class="foot">Stryktipslabbet ger analysstöd, inte garantier för vinst. 18+ · Spela ansvarsfullt · <a href="https://stodlinjen.se/">Stödlinjen</a>.</footer>
+</main><script>
+const e=id=>document.getElementById(id);const f=n=>Number(n).toLocaleString('sv-SE',{maximumFractionDigits:2});const kr=n=>Number(n).toLocaleString('sv-SE',{maximumFractionDigits:0})+' kr';const pct=n=>f(100*n)+' %';const date=s=>new Date(s).toLocaleString('sv-SE',{dateStyle:'medium',timeStyle:'short',timeZone:'Europe/Stockholm'});
+const add=(node,tag,text,cls)=>{const c=document.createElement(tag);c.textContent=String(text??'–');if(cls)c.className=cls;node.append(c);return c};const clean=id=>e(id).replaceChildren();const get=async path=>{let r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()};
+let rows=[],moves=null,form=null,paid=null;
+function note(s,good){e('notice').textContent=s;e('notice').style.borderLeftColor=good?'#79e2b8':'#f5ce8c'}
+function chart(target,points){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 440 138');svg.setAttribute('class','trend');svg.setAttribute('role','img');svg.setAttribute('aria-label','Förändring i 1, X och 2 mellan de sparade observationerna');
+ const max=1,min=0,px=i=>25+(points.length===1?0:i*(390/(points.length-1))),py=v=>120-(v-min)/(max-min)*104;
+ for(const [j,color] of ['#80e3b4','#f3c779','#97bcfa'].entries()){
+  const path=document.createElementNS('http://www.w3.org/2000/svg','polyline');path.setAttribute('fill','none');path.setAttribute('stroke',color);path.setAttribute('stroke-width','2.6');path.setAttribute('points',points.map((x,i)=>px(i)+','+py(x.p[j])).join(' '));svg.append(path);
+ }
+ target.append(svg);
+}
+function renderMoves(){
+ const wrap=e('moves');wrap.replaceChildren();
+ if(!moves){add(wrap,'p','Inga rörelsedata från minst två observationer finns ännu.','small');return}
+ for(const m of moves.matches){const block=add(wrap,'article','','item');const title=add(block,'div','','match-title');
+  add(title,'strong',m.number+'. '+m.home+' – '+m.away);
+  if(m.notable_market_movement||m.notable_crowd_movement)add(title,'span','Tydlig rörelse','chip');
+  const line=add(block,'div','','lines');
+  ['1','X','2'].forEach((s,i)=>{const c=add(line,'div','','delta');add(c,'b',s);const move=m.market_delta_pp[i],crowd=m.streck_delta_pp[i];
+   add(c,'span','Odds '+(move>0?'+':'')+f(move)+' p.e. / Folket '+(crowd>0?'+':'')+f(crowd)+' p.e.');
+  });
+  const d=add(block,'details','');const summ=add(d,'summary','Visa oddshistoriken för matchen');
+  chart(d,m.observations);const label=add(d,'p','Grönt: 1 · Gult: X · Blått: 2. '+m.observations.length+' verifierade observationer från '+date(m.observations[0].at_utc)+' till '+date(m.observations.at(-1).at_utc)+'.','legend');
+ }
+}
+function renderForm(){
+ clean('systems');clean('formTable');
+ if(!form){e('modelInfo').textContent='Ingen verifierad experimentell formmodell ännu. Grundsystemet fungerar som tidigare.';return}
+ const b=form.budgets.find(x=>x.budget_limit===Number(e('budget').value));if(!b)return;
+ e('modelInfo').textContent=b.different_matches===0?
+    'I denna omgång väljer båda modellerna samma tecken. Extra formdata tvingar inte fram en ändring.':
+    'Modellerna väljer olika tecken på '+b.different_matches+' matcher. Det säger ännu inget om vilket system som är bättre.';
+ for(const d of [{label:'Oddsmodellen (referens)',choices:b.original_choices,prob:b.original_market_p13,why:'Endast marknadsodds'},{label:'Formmodellen (experiment)',choices:b.new_choices,prob:b.new_form_p13,why:'Odds + tidigare lagform'}]){
+  const tile=add(e('systems'),'article','','tile');add(tile,'span',d.label,'chip');add(tile,'big',kr(b.cost));
+  add(tile,'p','Modellens uppskattade chans till alla 13 rätt: '+pct(d.prob));
+  add(tile,'p',d.why,'small');
+  const button=add(tile,'button','Kopiera 13 tecken');button.onclick=async()=>{
+   let text=d.label+' · Omgång '+form.draw_number+'\n'+d.choices.map((c,i)=>(i+1)+'. '+form.matches[i].home+' – '+form.matches[i].away+': '+c).join('\n')+'\nInsats: '+kr(b.cost);
+   try{await navigator.clipboard.writeText(text);button.textContent='Kopierat!'}catch{window.prompt('Kopiera tecknen',text)}
+  };
+ }
+ const table=add(e('formTable'),'table','');const head=add(table,'thead','');const h=add(head,'tr','');
+ for(const name of ['Match','Odds 1/X/2','Form 1/X/2','Marknadssystem','Formsystem','Datatäckning'])add(h,'th',name);
+ const body=add(table,'tbody','');
+ for(let i=0;i<13;i++){const m=form.matches[i],tr=add(body,'tr','');
+  add(tr,'td',m.number+'. '+m.home+' – '+m.away);
+  add(tr,'td',m.market_p.map(p=>pct(p)).join(' / '));
+  add(tr,'td',m.form_p.map(p=>pct(p)).join(' / '));
+  add(tr,'td',b.original_choices[i]);
+  add(tr,'td',b.new_choices[i]);
+  add(tr,'td',m.used_form?'Form finns':'Marknadsodds enbart');
+ }
+ renderSettlement();
+}
+function renderSettlement(){
+ clean('settlement');const wrap=e('settlement');if(!paid||!form){add(wrap,'p','Väntar på ett officiellt resultat för den frysta modellen.','small');return}
+ const b=paid.budgets.find(x=>x.budget_limit===Number(e('budget').value));if(!b)return;
+ const grid=add(wrap,'div','','grid');
+ for(const r of [{name:'Oddsmodellen',data:b.market_system},{name:'Formmodellen',data:b.form_system}]){
+  const tile=add(grid,'div','','tile');add(tile,'h3',r.name);add(tile,'big',(r.data.net>=0?'+':'')+kr(r.data.net));
+  add(tile,'p',r.data.covered_matches+' matcher täckta · utbetalt '+kr(r.data.paid)+' på '+kr(r.data.cost)+' insats','small');
+ }
+ const q=paid.forecast_scores;add(wrap,'p','Brier (lägre är bättre): odds '+f(q.market_brier_sum/paid.n)+' · form '+f(q.form_brier_sum/paid.n)+
+  '. Log loss: odds '+f(q.market_log_loss_sum/paid.n)+' · form '+f(q.form_log_loss_sum/paid.n)+'.','small');
+}
+async function show(number){
+ const n=Number(number),row=rows.find(x=>x.draw_number===n);if(!row)return;
+ moves=form=paid=null;clean('moves');clean('systems');clean('formTable');clean('settlement');
+ try{
+  const [base,mv,ft,settled]=await Promise.all([
+    get('./data/analysis/'+n+'.json'),
+    row.moves_available?get('./data/market_moves/'+n+'.json').catch(()=>null):Promise.resolve(null),
+    row.v14_available?get('./data/form_model/'+n+'.json').catch(()=>null):Promise.resolve(null),
+    row.v14_settled?get('./data/form_model_settlements/'+n+'.json').catch(()=>null):Promise.resolve(null)
+  ]);
+  if(base.draw_number!==n)throw Error('Omgången stämmer inte');
+  if(mv?.observed_at_utc===base.observed_at_utc)moves=mv;
+  if(ft?.source_observed_at_utc===base.observed_at_utc)form=ft;
+  if(settled?.source_observed_at_utc===base.observed_at_utc)paid=settled;
+  e('observations').textContent=moves?moves.observation_count:'–';
+  e('coverage').textContent=form?form.matches_with_form+' / 13':'–';
+  e('source').textContent='Omgång '+n+' · Odds observerade '+date(base.observed_at_utc)+
+     ' · Spelstopp '+date(base.reg_close_time)+(form?' · Form fryst '+date(form.created_at_utc):'');
+  const past=Date.now()>=Date.parse(base.reg_close_time);
+  note((past?'Avslutad omgång – visar frysta förhandsprognoser. ':'Inför kommande omgång: ')+
+       (moves?'Rörelser från verkliga observationer. ':'Rörelsedata saknas. ')+
+       (form?'Formmodell finns som separat experiment.':'Formmodell saknas för den här omgången.'),!past);
+  renderMoves();renderForm();
+ }catch(ex){note('Kunde inte läsa kupongdata: '+ex.message,false)}
+}
+async function start(){
+ try{const index=await get('./data/analysis-index.json');rows=(index.draws||[]).filter(x=>x.moves_available||x.v14_available);
+  const sel=e('round');sel.replaceChildren();
+  if(!rows.length){note('Inga tidsfrysta version 13/14-rapporter publicerade ännu. Nya rapporter byggs bara före spelstopp.');return}
+  for(const row of rows){const opt=add(sel,'option','Omgång '+row.draw_number+(row.current?' · Kommande':' · Historisk'));opt.value=row.draw_number}
+  sel.disabled=false;sel.onchange=()=>show(sel.value);e('budget').onchange=renderForm;
+  const first=rows.find(x=>x.current)||rows[0];sel.value=first.draw_number;await show(first.draw_number);
+ }catch(ex){note('Kunde inte ladda analyserna: '+ex.message)}
+}
+start();
+</script></body></html>
