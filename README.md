@@ -1,4 +1,4 @@
-# Stryktipslabbet 10.0
+# Stryktipslabbet 11.0
 
 **Stryktipslabbet** är en svensk mobilanpassad analysapp för Stryktipset, anpassad till ett tipslag med 10 deltagare och ett budgettak på **1 800 kr per omgång**. Den lämnar aldrig in spel.
 
@@ -7,6 +7,7 @@
 - App: https://johanclaesson0-png.github.io/stryktipslabbet/
 - Datastatus: https://johanclaesson0-png.github.io/stryktipslabbet/status.html
 - Automatiska systemförslag: https://johanclaesson0-png.github.io/stryktipslabbet/veckans-analys.html
+- Spikvakten: https://johanclaesson0-png.github.io/stryktipslabbet/spikvakt.html
 
 Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → Build and deployment → Source** och välj **GitHub Actions**. Kontrollera under **Settings → Actions → General** att Actions får köras och att GitHub-tokenen har skrivbehörighet för arkivlagring. Kör därefter arbetsflödet manuellt via **Actions → Stryktipslabbet – samla och publicera → Run workflow**.
 
@@ -18,7 +19,7 @@ Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → 
 - scripts/collect.py: tidsstämplad, läsande insamling av framtida Stryktipsomgångar och officiellt facit.
 - scripts/analyze.py: räknar fram sannolikheter från observerade odds, optimerar tre matematiska system under budgettaket, arkiverar varianter före spelstopp och rättar mot officiellt facit.
 - scripts/publish.py: bygger enbart validerad publik webbinformation och de senast arkiverade omgångarna.
-- tests/test_pipeline.py och tests/test_analysis.py: 17 automatiserade testfall.
+- tests/test_pipeline.py, tests/test_analysis.py, tests/test_solo.py och tests/test_spikvakt.py: 29 automatiserade testfall.
 - .github/workflows/stryktipslabbet.yml: bygg-, insamlings- och publiceringsflöde.
 - data/2024-2026-datatackning.csv och data/2024-2026-simulerade-system.csv: äldre experimentella backtests.
 
@@ -29,8 +30,10 @@ Schemat försöker köras två gånger i timmen (minut 17 och 47 UTC) och dämpa
 1. Kör: python -m unittest discover -s tests -v
 2. Valfritt, om Svenska Spels API är nåbart: python scripts/collect.py --outdir data
 3. Kör analysen: python -m scripts.analyze --outdir data
-4. Bygg publik webbplats: python scripts/publish.py
-5. Starta lokal webbserver: python -m http.server -d .site 8000
+4. Kör eget läge: python -m scripts.solo --outdir data
+5. Frys Spikvakt före spelstopp: python -m scripts.spikvakt --outdir data
+6. Bygg publik webbplats: python -m scripts.publish
+7. Starta lokal webbserver: python -m http.server -d .site 8000
 
 ## Källstatus och integritet
 
@@ -64,3 +67,20 @@ Webbadress: https://johanclaesson0-png.github.io/stryktipslabbet/spela-sjalv.htm
 Den nya personliga 100-kronorsvyn bygger automatiskt tre system från den **samma frysta förhandsobservationen** som lagets 1 800-kronorsförslag, men kostar högst 100 kr per matematiskt system (normalt 96 kr). De sparas i `data/personal/` och rättas separat efter officiellt resultat i `data/personal_settlements/`. Inga riktiga spel läggs.
 
 Jämförelsen med **105 äldre omgångar** från `data/2024-2026-elo-100kr-jamforelse.csv` bygger på en förenklad historisk Elo-modell, INTE på den nya oddsmodellen. Historiken är därför en illustration av risk, systemstorlek och träffsäkerhet – inte bevis för framtida överavkastning. Andra spel (Topptipset och Europatipset) länkas som möjliga alternativ, men har **ännu ingen separat automatisk datainhämtning** i Stryktipslabbet. Slutliga beslut och insatser görs på Svenska Spels webbplats.
+
+## Spikvakten – nytt beslutsstöd i version 11
+
+Sida: https://johanclaesson0-png.github.io/stryktipslabbet/spikvakt.html
+
+**Syfte:** att hjälpa en ovan tippare att se *var* en spik är osäker, vad en extra gardering kostar och när oavgjort kan vara värt att studera.
+
+- **Spik-risk:** från den tidsstämplade, marginalnormaliserade 1X2-sannolikheten beräknas risken att spiken missar som 1−P(tecken). Spikar under 55 % sannolikhet markeras. Ett andratecken föreslås utifrån näst högsta modellchans och den nya systemkostnaden visas; andra garderingar kan behöva flyttas.
+- **Kryssvakt:** flaggar om ett system saknar X i en match där modellens P(X) är minst 27 %. P(X) och folkets X-streck visas separat; skillnaden är inte bevis på spelvärde.
+- **Kostnadsneutrala testförslag:** scripts/spikvakt.py optimerar två experimentella varianter: mindre riskfyllda spikar och mer fokus på X. Varje variant har exakt samma antal rader och kostnad som den balanserade grundmodellen – både i 100-kronorsläget och lagets 1 800-kronorsläge.
+- **Förhandsfrysning:** scriptet skapar inga nya experiment efter spelstopp, även om gamla förhandsodds finns kvar. Källtid, modellversion och fryst skapandetid lagras. Äldre rapportversioner sparas i data/spikvakt_history/.
+- **Rättning:** efter officiellt facit räknas 10/11/12/13-rättsrader, täckta matcher och hypotetiskt netto per förslag i data/spikvakt_settlements/. Publiceringen validerar tidsstämplade källvärden och förhandsversion.
+- **Testplan:** gränser och vikter är registrerade i källkoden under version spikvakt-fixed-2026-11-13-v1. Inga omgångar före införandet får räknas som framåttester. Jämför nya framtida omgångar mot den orörda grundmodellen.
+
+**Status:** funktionerna är byggda och testerna passerar. Det är ännu INTE visat att Spikvakten förbättrar träffsäkerhet eller utdelning. På vissa kuponger blir testförslagen identiska med grundmodellen. Förväntad avkastning kan inte beräknas utan tillförlitliga pott- och utdelningsdata. Lottade/inställda matcher bör framöver skiljas från spelade matcher i prognoskvalitetsmått.
+
+18+ – Spela ansvarsfullt och använd en fast förlustgräns.
