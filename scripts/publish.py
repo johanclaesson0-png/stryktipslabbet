@@ -631,7 +631,10 @@ def main():
                 a.get("reg_close_time") != original["reg_close_time"] or
                 not obs <= when < instant(original["reg_close_time"]) or
                 a["matches"] != original["matches"] or
-                len(a.get("systems", [])) != (2 if config["matches"] == 8 else 4)):
+                original.get("with_valid_odds") != sum(m["p"] is not None for m in original["matches"]) or
+                a.get("complete_odds") != all(m["p"] is not None for m in original["matches"]) or
+                len(a.get("systems", [])) != ((2 if config["matches"] == 8 else 4)
+                                               if a["complete_odds"] else 0)):
                 continue
             valid = True
             for s in a["systems"]:
