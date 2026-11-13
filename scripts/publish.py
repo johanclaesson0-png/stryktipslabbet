@@ -84,6 +84,7 @@ def main():
     shutil.copy2(root / "spikvakt.html", dest / "spikvakt.html")
     shutil.copy2(root / "datadjup.html", dest / "datadjup.html")
     shutil.copy2(root / "marknad-och-form.html", dest / "marknad-och-form.html")
+    shutil.copy2(root / "spelvarde-och-spelformer.html", dest / "spelvarde-och-spelformer.html")
 
     now = datetime.now(timezone.utc)
     status = {
@@ -532,6 +533,133 @@ def main():
         }
         (dest / "data" / "form-model-progress.json").write_text(
             json.dumps(scoreboard, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+    # V15: compare probability mass with simplified crowd popularity, NEVER
+    # present a calculated payout when actual pool/field information is missing.
+    from scripts.pool_value import validate as validate_pool, SETTLED as POOL_SETTLED
+    from scripts.other_games import (
+        SCHEMA as OTHER_SCHEMA, CATEGORIES, distribution as other_distribution
+    )
+    v15_count = v15_settled = v16_count = player_count = 0
+    for row in public_rounds:
+        n = row["draw_number"]
+        row["pool_value_available"] = False
+        row["pool_value_settled"] = False
+        row["player_report_available"] = False
+        base = base_by_draw.get(n)
+        if base is None:
+            continue
+        solo = root / "data" / "personal" / (str(n)+".json")
+        source = root / "data" / "pool_value" / (str(n)+".json")
+        if row.get("personal_available") and source.exists() and solo.exists():
+            try:
+                personal = json.loads(solo.read_text(encoding="utf-8"))
+                obj = json.loads(source.read_text(encoding="utf-8"))
+                if validate_pool(obj, base, personal):
+                    target = dest / "data" / "pool_value" / (str(n)+".json")
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(source, target)
+                    row["pool_value_available"] = True
+                    v15_count += 1
+                    settled_source = root / "data" / "pool_value_settlements" / (str(n)+".json")
+                    if n in verified_result_draws and settled_source.exists():
+                        paid = json.loads(settled_source.read_text(encoding="utf-8"))
+                        official = json.loads(
+                            (root / "data" / "results" / (str(n)+".json")).read_text(encoding="utf-8"))
+                        if (paid.get("schema") == POOL_SETTLED and paid.get("draw_number") == n and
+                            paid.get("source_snapshot_sha256") == obj.get("source_snapshot_sha256") and
+                            paid.get("report_created_at_utc") == obj["created_at_utc"] and
+                            paid.get("official_result_sha256") == official.get("sha256") and
+                            paid.get("outcome") == official["outcome"] and
+                            paid.get("payouts") == official["payouts"] and
+                            len(paid.get("budget_results", [])) == 2):
+                            out = dest / "data" / "pool_value_settlements" / (str(n)+".json")
+                            out.parent.mkdir(parents=True, exist_ok=True)
+                            shutil.copy2(settled_source, out)
+                            row["pool_value_settled"] = True
+                            v15_settled += 1
+            except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):
+                pass
+        # No injury information is invented: unknown is an explicit status.
+        report_path = root / "data" / "player_reports" / "analysis" / (str(n)+".json")
+        if report_path.exists():
+            try:
+                report = json.loads(report_path.read_text(encoding="utf-8"))
+                created = instant(report["created_at_utc"])
+                observed = instant(base["observed_at_utc"])
+                if (report.get("schema") != "stryktipslabbet-player-availability-v1" or
+                    report.get("draw_number") != n or
+                    report.get("source_observed_at_utc") != base["observed_at_utc"] or
+                    report.get("source_snapshot_sha256") != base.get("source_snapshot_sha256") or
+                    not observed <= created < instant(base["reg_close_time"]) or
+                    len(report.get("matches", [])) != 13):
+                    continue
+                if any((r["number"] != x["number"] or
+                        r["home"]["team"] != x["home"] or
+                        r["away"]["team"] != x["away"])
+                       for r, x in zip(report["matches"], base["matches"])):
+                    continue
+                target = dest / "data" / "player_reports" / "analysis" / (str(n)+".json")
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(report_path, target)
+                row["player_report_available"] = True
+                player_count += 1
+            except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):
+                pass
+    status["v15_analyses_published"] = v15_count
+    status["v15_settlements_published"] = v15_settled
+    status["player_reports_published"] = player_count
+
+    # V16 products stay completely separate from Stryktipset and each other.
+    # No guessed prize class or unknown product gets published.
+    for game, config in CATEGORIES.items():
+        path = root / "data" / "other_games" / game / "latest.json"
+        try:
+            original = json.loads(path.read_text(encoding="utf-8"))
+            n = original["draw_number"]
+            a = json.loads((root/"data"/"other_games"/game/"analysis"/(str(n)+".json"))
+                           .read_text(encoding="utf-8"))
+            when = instant(a["created_at_utc"])
+            obs = instant(original["observed_at_utc"])
+            if (original.get("schema") != OTHER_SCHEMA or original.get("game") != game or
+                len(original.get("matches", [])) != config["matches"] or
+                a.get("schema") != "stryktipslabbet-other-game-analysis-v16" or
+                a.get("game") != game or a["draw_number"] != n or
+                a.get("observed_at_utc") != original["observed_at_utc"] or
+                a.get("source_snapshot_sha256") != original["source_snapshot_sha256"] or
+                a.get("reg_close_time") != original["reg_close_time"] or
+                not obs <= when < instant(original["reg_close_time"]) or
+                a["matches"] != original["matches"] or
+                len(a.get("systems", [])) != (2 if config["matches"] == 8 else 4)):
+                continue
+            valid = True
+            for s in a["systems"]:
+                choices = s["choices"]
+                rows = math.prod(len(c) for c in choices)
+                p_all = math.prod(sum(m["p"]["1X2".index(x)] for x in c)
+                    for m,c in zip(original["matches"],choices))
+                if (len(choices) != config["matches"] or
+                    any(not c or any(ch not in "1X2" for ch in c) or len(set(c))!=len(c)
+                        for c in choices) or
+                    rows != s["cost"] or not 1 <= rows <= s["budget_limit"] or
+                    abs(p_all - s["estimated_all_correct"]) > 1e-6):
+                    valid = False
+                    break
+            if not valid:
+                continue
+            target = dest / "data" / "other_games" / game
+            target.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, target / "latest.json")
+            output=target/"analysis"/(str(n)+".json")
+            output.parent.mkdir(parents=True,exist_ok=True)
+            (output).write_text(json.dumps(a,ensure_ascii=False,indent=2)+"\n",
+                                encoding="utf-8")
+            v16_count += 1
+        except (OSError, KeyError, ValueError, TypeError, ZeroDivisionError,
+                OverflowError, json.JSONDecodeError):
+            continue
+    status["v16_other_games_live"] = v16_count
 
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
