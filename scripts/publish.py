@@ -338,7 +338,7 @@ def main():
             base = json.loads(base_path.read_text(encoding="utf-8"))
             solo = json.loads(solo_path.read_text(encoding="utf-8"))
             guard = json.loads(guard_path.read_text(encoding="utf-8"))
-            if not valid_personal(solo, base) or not validate_spikvakt(guard, base, solo):
+            if not validate_personal(solo, base) or not validate_spikvakt(guard, base, solo):
                 continue
             target = dest / "data" / "spikvakt" / (str(n) + ".json")
             target.parent.mkdir(parents=True, exist_ok=True)
