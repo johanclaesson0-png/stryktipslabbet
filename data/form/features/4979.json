@@ -4,13 +4,13 @@
   "source_observed_at_utc": "2026-11-13T15:30:46.070511+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
   "source_snapshot_sha256": "8a5c498214dd37fed3bc5e7fe3e141b0ddfdf81329463b7f2af4b6a87846101c",
-  "created_at_utc": "2026-11-13T15:50:25.759467+00:00",
+  "created_at_utc": "2026-11-13T15:52:00.582611+00:00",
   "cutoff_date_exclusive": "2026-11-13",
   "source": "OpenFootball football.json · CC0 1.0",
-  "league_files_read": 56,
-  "complete_matches": 4,
+  "league_files_read": 70,
+  "complete_matches": 11,
   "partial_matches": 2,
-  "missing_matches": 7,
+  "missing_matches": 0,
   "matches": [
     {
       "number": 1,
@@ -27,73 +27,73 @@
         11.0
       ],
       "home_form": {
-        "canonical_name": "sverige",
-        "games_available": 0,
+        "canonical_name": "sweden",
+        "games_available": 81,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 2.0,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.2,
+          "wins": 3,
+          "draws": 1,
+          "losses": 1
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.5,
+          "goals_for_per_game": 1.7,
+          "goals_against_per_game": 1.8,
+          "wins": 4,
+          "draws": 3,
+          "losses": 3
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
+          "n": 5,
+          "points_per_game": 2.2,
+          "goals_for_per_game": 2.2,
+          "goals_against_per_game": 1.4,
+          "wins": 3,
+          "draws": 2,
           "losses": 0
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-05",
+        "form_last5": "FVVOV"
       },
       "away_form": {
-        "canonical_name": "bosnien hercegovina",
-        "games_available": 0,
+        "canonical_name": "bosnia herzegovina",
+        "games_available": 70,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 1.0,
+          "wins": 2,
+          "draws": 2,
+          "losses": 1
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 1.2,
+          "wins": 3,
+          "draws": 5,
+          "losses": 2
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 1.2,
+          "wins": 1,
+          "draws": 3,
+          "losses": 1
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-05",
+        "form_last5": "FOVOV"
       },
-      "h2h_last5": 0,
-      "coverage": "saknas"
+      "h2h_last5": 1,
+      "coverage": "båda"
     },
     {
       "number": 2,
@@ -111,72 +111,72 @@
       ],
       "home_form": {
         "canonical_name": "portugal",
-        "games_available": 0,
+        "games_available": 87,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 2.4,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 1.0,
+          "wins": 4,
           "draws": 0,
-          "losses": 0
+          "losses": 1
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 2.3,
+          "goals_for_per_game": 1.9,
+          "goals_against_per_game": 0.8,
+          "wins": 7,
+          "draws": 2,
+          "losses": 1
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 3.0,
+          "goals_for_per_game": 3.2,
+          "goals_against_per_game": 0.8,
+          "wins": 5,
           "draws": 0,
           "losses": 0
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-04",
+        "form_last5": "FVVVV"
       },
       "away_form": {
-        "canonical_name": "danmark",
-        "games_available": 0,
+        "canonical_name": "denmark",
+        "games_available": 79,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 1.6,
+          "wins": 3,
           "draws": 0,
-          "losses": 0
+          "losses": 2
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.5,
+          "goals_for_per_game": 1.9,
+          "goals_against_per_game": 1.6,
+          "wins": 4,
+          "draws": 3,
+          "losses": 3
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 2.0,
+          "goals_against_per_game": 1.8,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-04",
+        "form_last5": "VFVFV"
       },
-      "h2h_last5": 0,
-      "coverage": "saknas"
+      "h2h_last5": 3,
+      "coverage": "båda"
     },
     {
       "number": 3,
@@ -193,73 +193,73 @@
         11.0
       ],
       "home_form": {
-        "canonical_name": "norge",
-        "games_available": 0,
+        "canonical_name": "norway",
+        "games_available": 73,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 0.6,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 2.0,
+          "wins": 1,
           "draws": 0,
-          "losses": 0
+          "losses": 4
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 10,
+          "points_per_game": 1.5,
+          "goals_for_per_game": 1.9,
+          "goals_against_per_game": 1.9,
+          "wins": 5,
           "draws": 0,
-          "losses": 0
+          "losses": 5
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 2.0,
+          "goals_for_per_game": 2.2,
+          "goals_against_per_game": 1.2,
+          "wins": 3,
+          "draws": 1,
+          "losses": 1
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-04",
+        "form_last5": "FVFFF"
       },
       "away_form": {
         "canonical_name": "wales",
-        "games_available": 0,
+        "games_available": 74,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 0.6,
+          "goals_for_per_game": 0.6,
+          "goals_against_per_game": 1.4,
+          "wins": 1,
           "draws": 0,
-          "losses": 0
+          "losses": 4
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.1,
+          "wins": 3,
+          "draws": 3,
+          "losses": 4
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 0.6,
+          "goals_for_per_game": 0.4,
+          "goals_against_per_game": 1.6,
+          "wins": 1,
           "draws": 0,
-          "losses": 0
+          "losses": 4
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-04",
+        "form_last5": "FFFVF"
       },
-      "h2h_last5": 0,
-      "coverage": "saknas"
+      "h2h_last5": 1,
+      "coverage": "båda"
     },
     {
       "number": 4,
@@ -276,73 +276,73 @@
         56.0
       ],
       "home_form": {
-        "canonical_name": "rumanien",
-        "games_available": 0,
+        "canonical_name": "romania",
+        "games_available": 72,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 0.6,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 2.8,
+          "wins": 1,
           "draws": 0,
-          "losses": 0
+          "losses": 4
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 0.7,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 2.2,
+          "wins": 2,
+          "draws": 1,
+          "losses": 7
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 2.4,
+          "goals_against_per_game": 1.4,
+          "wins": 3,
           "draws": 0,
-          "losses": 0
+          "losses": 2
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-05",
+        "form_last5": "VFFFF"
       },
       "away_form": {
-        "canonical_name": "polen",
-        "games_available": 0,
+        "canonical_name": "poland",
+        "games_available": 77,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.0,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 1.2,
+          "wins": 1,
+          "draws": 2,
+          "losses": 2
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.7,
+          "goals_against_per_game": 1.5,
+          "wins": 3,
+          "draws": 3,
+          "losses": 4
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 1.8,
+          "wins": 2,
           "draws": 0,
-          "losses": 0
+          "losses": 3
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-05",
+        "form_last5": "OOFVF"
       },
-      "h2h_last5": 0,
-      "coverage": "saknas"
+      "h2h_last5": 1,
+      "coverage": "båda"
     },
     {
       "number": 5,
@@ -359,73 +359,73 @@
         23.0
       ],
       "home_form": {
-        "canonical_name": "nordirland",
-        "games_available": 0,
+        "canonical_name": "northern ireland",
+        "games_available": 66,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 0.6,
+          "wins": 2,
+          "draws": 2,
+          "losses": 1
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.5,
+          "goals_for_per_game": 0.8,
+          "goals_against_per_game": 0.7,
+          "wins": 4,
+          "draws": 3,
+          "losses": 3
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 0.6,
+          "goals_against_per_game": 0.2,
+          "wins": 2,
+          "draws": 2,
+          "losses": 1
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-05",
+        "form_last5": "FVOVO"
       },
       "away_form": {
-        "canonical_name": "ukraina",
-        "games_available": 0,
+        "canonical_name": "ukraine",
+        "games_available": 75,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 0.8,
+          "goals_for_per_game": 0.6,
+          "goals_against_per_game": 1.4,
+          "wins": 1,
+          "draws": 1,
+          "losses": 3
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.3,
+          "goals_for_per_game": 0.9,
+          "goals_against_per_game": 1.4,
+          "wins": 4,
+          "draws": 1,
+          "losses": 5
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 0.8,
+          "goals_against_per_game": 1.2,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-05",
+        "form_last5": "FVOFF"
       },
-      "h2h_last5": 0,
-      "coverage": "saknas"
+      "h2h_last5": 2,
+      "coverage": "båda"
     },
     {
       "number": 6,
@@ -442,73 +442,73 @@
         13.0
       ],
       "home_form": {
-        "canonical_name": "osterrike",
-        "games_available": 0,
+        "canonical_name": "austria",
+        "games_available": 79,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 1.6,
+          "wins": 2,
+          "draws": 2,
+          "losses": 1
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 1.7,
+          "goals_against_per_game": 1.4,
+          "wins": 5,
+          "draws": 3,
+          "losses": 2
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
+          "n": 5,
+          "points_per_game": 3.0,
+          "goals_for_per_game": 2.6,
+          "goals_against_per_game": 0.6,
+          "wins": 5,
           "draws": 0,
           "losses": 0
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-04",
+        "form_last5": "FVVOO"
       },
       "away_form": {
-        "canonical_name": "irland",
-        "games_available": 0,
+        "canonical_name": "republic of ireland",
+        "games_available": 69,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.0,
+          "wins": 1,
+          "draws": 3,
+          "losses": 1
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.7,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 0.9,
+          "wins": 4,
+          "draws": 5,
+          "losses": 1
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.0,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 1.4,
+          "wins": 1,
+          "draws": 2,
+          "losses": 2
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-04",
+        "form_last5": "OFVOO"
       },
-      "h2h_last5": 0,
-      "coverage": "saknas"
+      "h2h_last5": 1,
+      "coverage": "båda"
     },
     {
       "number": 7,
@@ -525,73 +525,73 @@
         46.0
       ],
       "home_form": {
-        "canonical_name": "georgien",
-        "games_available": 0,
+        "canonical_name": "georgia",
+        "games_available": 70,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.0,
+          "goals_for_per_game": 0.4,
+          "goals_against_per_game": 0.4,
+          "wins": 1,
+          "draws": 2,
+          "losses": 2
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 1.0,
+          "goals_for_per_game": 0.8,
+          "goals_against_per_game": 1.1,
+          "wins": 2,
+          "draws": 4,
+          "losses": 4
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 0.8,
+          "wins": 1,
+          "draws": 3,
+          "losses": 1
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-05",
+        "form_last5": "VFOFO"
       },
       "away_form": {
-        "canonical_name": "ungern",
-        "games_available": 0,
+        "canonical_name": "hungary",
+        "games_available": 74,
         "last5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 5,
+          "points_per_game": 2.0,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 0.6,
+          "wins": 3,
+          "draws": 1,
+          "losses": 1
         },
         "last10": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0
+          "n": 10,
+          "points_per_game": 2.0,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 0.7,
+          "wins": 6,
+          "draws": 2,
+          "losses": 2
         },
         "venue5": {
-          "n": 0,
-          "points_per_game": null,
-          "goals_for_per_game": null,
-          "goals_against_per_game": null,
-          "wins": 0,
-          "draws": 0,
+          "n": 5,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.0,
+          "wins": 2,
+          "draws": 3,
           "losses": 0
         },
-        "last_match_date": null,
-        "form_last5": null
+        "last_match_date": "2026-10-05",
+        "form_last5": "VFOVV"
       },
-      "h2h_last5": 0,
-      "coverage": "saknas"
+      "h2h_last5": 1,
+      "coverage": "båda"
     },
     {
       "number": 8,
@@ -808,7 +808,7 @@
       },
       "away_form": {
         "canonical_name": "reading",
-        "games_available": 69,
+        "games_available": 115,
         "last5": {
           "n": 5,
           "points_per_game": 1.0,
@@ -891,7 +891,7 @@
       },
       "away_form": {
         "canonical_name": "blackpool",
-        "games_available": 69,
+        "games_available": 115,
         "last5": {
           "n": 5,
           "points_per_game": 0.8,
@@ -941,7 +941,7 @@
       ],
       "home_form": {
         "canonical_name": "wigan athletic",
-        "games_available": 69,
+        "games_available": 115,
         "last5": {
           "n": 5,
           "points_per_game": 2.4,
