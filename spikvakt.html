@@ -20,7 +20,7 @@ select{padding:10px;border-radius:9px;background:#14273a;color:var(--fg);border:
 <div class="panel"><h2>Tre förslag – exakt samma insats</h2><p class="small">Det första är grundmodellen. De andra två testar andra sätt att välja garderingar. <b>Ingen</b> strategi är bevisad bättre. Sannolikheten bygger bara på de hämtade speloddsen.</p><div class="cards" id="profiles"></div></div>
 <div class="split">
 <section class="panel"><h2>Osäkra spikar</h2><p class="small">En spik betyder ett enda tecken i matchen. Här visas de spikar som modellen bedömer har störst risk att missas.</p><div class="tablewrap"><table><thead><tr><th>Match</th><th>Spik</th><th>Risk att missa</th><th>Extra tecken</th><th>Ny kostnad</th></tr></thead><tbody id="spikes"></tbody></table></div><p class="small" id="spikeInfo"></p></section>
-<section class="panel"><h2>Oavgjort att titta på</h2><p class="small">Här har grundsystemet INTE kryss, trots att modellen bedömer att oavgjort har minst 27 % chans.</p><div class="tablewrap"><table><thead><tr><th>Match</th><th>Chans X</th><th>Ny kostnad med X</th></tr></thead><tbody id="drawsTable"></tbody></table></div><p class="small">”Ny kostnad” gäller bara om du lägger till X utan att ändra andra tecken. Om beloppet överskrider budgeten måste någon annan gardering tas bort.</p></section>
+<section class="panel"><h2>Oavgjort att titta på</h2><p class="small">Här har grundsystemet INTE kryss, trots att modellen bedömer att oavgjort har minst 27 % chans.</p><div class="tablewrap"><table><thead><tr><th>Match</th><th>Chans X</th><th>Folket valde X</th><th>Ny kostnad med X</th></tr></thead><tbody id="drawsTable"></tbody></table></div><p class="small">Chans X är vår uppskattning från oddsen; folkets X är andelen tipprader som valt oavgjort. Skillnaden bevisar inte spelvärde. ”Ny kostnad” gäller bara om du lägger till X utan att ändra andra tecken. Om beloppet överskrider budgeten måste någon annan gardering tas bort.</p></section>
 </div>
 <section class="panel" id="after" hidden><h2>Så gick det efter matcherna</h2><p class="small">Vi mäter alla testförslagen mot samma officiella resultat och utdelningar. Det är hypotetiska system, inte bekräftade inlämnade spel.</p><div class="tablewrap"><table><thead><tr><th>Förslag</th><th>Täckta matcher</th><th>Rader med 13 rätt</th><th>Netto</th></tr></thead><tbody id="afterRows"></tbody></table></div></section>
 <section class="panel"><h2>Vad vi försöker lära oss</h2><p>Med tiden följer vi om de nya sätten att välja tecken ger mer träffsäkra system än grundmodellen. Vi räknar också ut faktiska vinnande rader och netto när det finns ett officiellt facit.</p><p class="small">Riskgränsen 55 % och kryssgränsen 27 % är fasta testvärden. De har <b>inte</b> valts för att få historiska kuponger att se bättre ut. Resultat från efterhandstest och framtida observationer måste hållas isär.</p></section>
@@ -70,9 +70,9 @@ function draw(){
  ]);
  e('spikeInfo').textContent='Grundsystemet har '+rr.spikes.length+' spikar. ⚠ = mindre än 55 % chans. Extra tecken visar vilket andra tecken modellen föredrar och vad systemet skulle kosta utan att ta bort en annan gardering.';
  for(const x of rr.possible_draws) tableRow('drawsTable',[
-   x.number+'. '+x.home+' – '+x.away,PCT(x.x_probability),SEK(x.extra_row_cost_to_include_x_alone)
+   x.number+'. '+x.home+' – '+x.away,PCT(x.x_probability),x.crowd_x_percentage.toLocaleString('sv-SE')+' %',SEK(x.extra_row_cost_to_include_x_alone)
  ]);
- if(!rr.possible_draws.length)tableRow('drawsTable',['Inga matcher över gränsen','–','–']);
+ if(!rr.possible_draws.length)tableRow('drawsTable',['Inga matcher över gränsen','–','–','–']);
  showSettlement();
 }
 async function showSettlement(){
