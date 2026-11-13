@@ -45,7 +45,7 @@ jobs:
             git push
           fi
       - name: Bygg säker publiceringsmapp
-        run: python scripts/publish.py
+        run: python -m scripts.publish
       - name: Ladda upp Pages-artefakt
         uses: actions/upload-pages-artifact@v4
         with:
