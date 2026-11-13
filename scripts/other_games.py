@@ -284,6 +284,23 @@ def collect_product(data,game,now):
         write_json(folder/"analysis"/(str(num)+".json"),derived)
         imported+=1
         time.sleep(.1)
+    # "latest" must mean the nearest upcoming draw, not whichever family draw
+    # happened to be processed last.
+    available=[]
+    for close,num,_entry in found:
+        folder_for_draw=folder/"snapshots"/str(num)
+        for candidate in sorted(folder_for_draw.glob("*.json"), reverse=True)[:1]:
+            try:
+                payload=json.loads(candidate.read_text(encoding="utf-8"))
+                if (payload.get("game")==game and
+                    payload.get("draw_number")==num and
+                    instant(payload["observed_at_utc"])<close):
+                    available.append((close,num,payload))
+            except (ValueError, KeyError, TypeError, OSError, json.JSONDecodeError):
+                pass
+    if available:
+        available.sort(key=lambda item:(item[0],item[1]))
+        write_json(folder/"latest.json",available[0][2])
     return imported
 
 
