@@ -204,7 +204,7 @@ def update_leagues(data, now, limit=14):
     except (OSError, ValueError):
         state = {}
     done = 0
-    for season, leagues in SOURCES.items():
+    for season, leagues in sorted(SOURCES.items(), reverse=True):
         for code in leagues:
             dest = folder / season / (code + ".json")
             ref = season + "/" + code
