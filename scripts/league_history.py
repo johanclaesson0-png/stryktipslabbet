@@ -373,8 +373,14 @@ def result_for(team, match):
 
 def team_form(team, cutoff, db, venue):
     canonical = key_team(team)
-    rows = [result_for(canonical, m) for m in db if m["date"] < cutoff
-            and (m["home"] == canonical or m["away"] == canonical)]
+    rows = []
+    for m in db:
+        if m["date"] >= cutoff or (m["home"] != canonical and m["away"] != canonical):
+            continue
+        item = result_for(canonical, m)
+        item["opponent"] = m["away"] if m["home"] == canonical else m["home"]
+        item["competition"] = m.get("league", "okänd")
+        rows.append(item)
     rows.sort(key=lambda r: r["date"], reverse=True)
     recent5, recent10 = rows[:5], rows[:10]
     venue5 = [r for r in rows if r["venue"] == venue][:5]
@@ -397,6 +403,13 @@ def team_form(team, cutoff, db, venue):
         "games_available": len(rows),
         "last5": digest(recent5),
         "last10": digest(recent10),
+        "last5_matches": [
+            {"date": r["date"], "opponent": r["opponent"],
+             "goals_for": r["gf"], "goals_against": r["ga"],
+             "outcome": r["outcome"], "venue": r["venue"],
+             "competition": r["competition"]}
+            for r in recent5
+        ],
         "venue5": digest(venue5),
         "last_match_date": rows[0]["date"] if rows else None,
         "form_last5": "".join(r["outcome"] for r in reversed(recent5)) if recent5 else None,
