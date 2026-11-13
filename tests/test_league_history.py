@@ -2,7 +2,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 from tests.test_solo import sample, NOW
 from scripts.analyze import create_analysis
-from scripts.league_history import key_team, parse_source, team_form, build_features, result_for
+from scripts.league_history import key_team, parse_source, team_form, build_features, result_for, read_nationals
 
 class LeagueHistoryTests(unittest.TestCase):
     def test_aliases(self):
@@ -20,6 +20,21 @@ class LeagueHistoryTests(unittest.TestCase):
         self.assertEqual(len(out["matches"]),20)
         self.assertEqual(out["matches"][0]["home"],"manchester united")
         self.assertTrue(all(x["date"]!="2026-12-01" for x in out["matches"]))
+
+    def test_national_aliases_and_neutral_ground(self):
+        self.assertEqual(key_team("Sverige"),key_team("Sweden"))
+        self.assertEqual(key_team("Bosnien & Hercegovina"),key_team("Bosnia and Herzegovina"))
+        self.assertEqual(key_team("Nordirland"),key_team("Northern Ireland"))
+        self.assertEqual(key_team("Irland"),key_team("Republic of Ireland"))
+        game={"date":"2026-10-02","home":"ukraine","away":"northern ireland",
+              "home_goals":0,"away_goals":3,"neutral":True}
+        r=result_for("northern ireland",game)
+        self.assertEqual(r["venue"],"neutral")
+        sample=read_nationals(__import__("pathlib").Path(__file__).resolve().parents[1] /
+                              "data" / "form" / "national_team_results.csv")
+        self.assertGreater(len(sample),6000)
+        sweden=team_form("Sverige","2026-11-13",sample,"home")
+        self.assertGreater(sweden["last5"]["n"],3)
 
     def test_no_today_or_future_results_in_form(self):
         db=[
