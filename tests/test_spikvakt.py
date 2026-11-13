@@ -67,6 +67,9 @@ class SpikvaktTests(unittest.TestCase):
         self.assertEqual(len(results["possible_draws"]), 13)
         self.assertTrue(results["spikes"][0]["high_risk"])
         self.assertEqual(results["possible_draws"][0]["extra_row_cost_to_include_x_alone"], 2)
+        self.assertEqual(results["spikes"][0]["suggested_second_sign"], "X")
+        self.assertEqual(results["spikes"][0]["cost_if_added_without_rebalancing"], 2)
+        self.assertAlmostEqual(results["spikes"][0]["extra_outcome_probability"], .30)
         self.assertEqual(SPIKE_LIMIT, .55)
         self.assertEqual(DRAW_LIMIT, .27)
 
