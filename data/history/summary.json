@@ -1,6 +1,6 @@
 {
   "schema": "stryktipslabbet-five-years-v1",
-  "generated_at_utc": "2026-11-13T23:18:48.295725+00:00",
+  "generated_at_utc": "2026-11-13T23:19:32.699811+00:00",
   "from": "2021-11-13",
   "to": "2026-11-07",
   "rounds": 262,
@@ -4488,7 +4488,13 @@
           "score_away": 0,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 558246.0,
+        "12": 7476.0,
+        "11": 396.0,
+        "10": 96.0
+      }
     },
     {
       "draw": 4755,
@@ -4599,7 +4605,13 @@
           "score_away": 2,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 2067713.0,
+        "12": 9494.0,
+        "11": 480.0,
+        "10": 114.0
+      }
     },
     {
       "draw": 4756,
@@ -4710,7 +4722,13 @@
           "score_away": 5,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 142804.0,
+        "12": 1725.0,
+        "11": 104.0,
+        "10": 29.0
+      }
     },
     {
       "draw": 4757,
@@ -4821,7 +4839,13 @@
           "score_away": 0,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 1000000.0,
+        "12": 7475.0,
+        "11": 482.0,
+        "10": 132.0
+      }
     },
     {
       "draw": 4759,
@@ -4932,7 +4956,13 @@
           "score_away": 2,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 1223.0,
+        "12": 30.0,
+        "11": 0.0,
+        "10": 0.0
+      }
     },
     {
       "draw": 4760,
@@ -5043,7 +5073,13 @@
           "score_away": 0,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 1609451.0,
+        "12": 9143.0,
+        "11": 462.0,
+        "10": 109.0
+      }
     },
     {
       "draw": 4761,
@@ -5154,7 +5190,13 @@
           "score_away": 3,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 380217.0,
+        "12": 3617.0,
+        "11": 216.0,
+        "10": 51.0
+      }
     },
     {
       "draw": 4762,
@@ -5265,7 +5307,13 @@
           "score_away": 0,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 714285.0,
+        "12": 5980.0,
+        "11": 375.0,
+        "10": 98.0
+      }
     },
     {
       "draw": 4763,
@@ -30404,5 +30452,5 @@
     "Misstänkt lottade/administrativa tecken används för kupongresultat men inte modellens träning eller Brier.",
     "Systemträffar är inte samma sak som kronor i vinst."
   ],
-  "official_payout_draws": 192
+  "official_payout_draws": 200
 }
