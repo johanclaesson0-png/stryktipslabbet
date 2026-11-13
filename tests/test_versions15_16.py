@@ -123,6 +123,16 @@ class V16Tests(unittest.TestCase):
         self.assertIn("8",official["payouts"])
         self.assertNotIn("13",official["payouts"])
 
+    def test_partial_europatips_coupon_never_invents_odds(self):
+        fixture=other_fixture("europatipset",13)
+        fixture["draw"]["drawEvents"][5]["odds"]=None
+        draw=parse_draw(fixture,"europatipset",7777,NOW,"uri",b"raw")
+        self.assertEqual(draw["with_valid_odds"],12)
+        self.assertIsNone(draw["matches"][5]["p"])
+        analysis_doc=analyze(draw,NOW+timedelta(minutes=1))
+        self.assertFalse(analysis_doc["complete_odds"])
+        self.assertEqual(analysis_doc["systems"],[])
+
     def test_dont_guess_unknown_results(self):
         with self.assertRaises(ValueError):
             parse_result({"result":{"productName":"Europatipset","drawNumber":7777,
