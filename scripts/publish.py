@@ -663,6 +663,43 @@ def main():
                 OverflowError, json.JSONDecodeError):
             continue
     status["v16_other_games_live"] = v16_count
+    # Official future results for separately validated products. Never invent
+    # Topptipset 8-right or Europatipset 10–13-right distributions.
+    validated_other_results = 0
+    for game, config in CATEGORIES.items():
+        source = root / "data" / "other_games" / game
+        for path in sorted((source / "settlements").glob("*.json"))[-20:]:
+            try:
+                n = int(path.stem)
+                report = json.loads(path.read_text(encoding="utf-8"))
+                original = json.loads((source/"analysis"/path.name).read_text(encoding="utf-8"))
+                outcome_doc = json.loads((source/"results"/path.name).read_text(encoding="utf-8"))
+                if (report.get("schema") != "stryktipslabbet-other-game-settlement-v16" or
+                    report.get("game") != game or report.get("draw_number") != n or
+                    original.get("schema") != "stryktipslabbet-other-game-analysis-v16" or
+                    original.get("game") != game or original.get("draw_number") != n or
+                    report.get("source_snapshot_sha256") != original.get("source_snapshot_sha256") or
+                    report.get("observed_at_utc") != original.get("observed_at_utc") or
+                    report.get("official_result_sha256") != outcome_doc.get("sha256") or
+                    report.get("outcome") != outcome_doc.get("outcome") or
+                    report.get("payouts") != outcome_doc.get("payouts") or
+                    len(report.get("systems", [])) != len(original.get("systems", [])) or
+                    len(outcome_doc.get("outcome", "")) != config["matches"] or
+                    set(outcome_doc.get("payouts",{})) !=
+                        set(str(i) for i in config["outcome_prizes"])):
+                    continue
+                if not instant(original["created_at_utc"]) < instant(original["reg_close_time"]):
+                    continue
+                if instant(outcome_doc["observed_at_utc"]) < instant(original["reg_close_time"]):
+                    continue
+                path_out = dest / "data" / "other_games" / game / "settlements" / path.name
+                path_out.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(path, path_out)
+                validated_other_results += 1
+            except (ValueError, TypeError, KeyError, OSError, json.JSONDecodeError):
+                continue
+    status["v16_officially_settled"] = validated_other_results
+
 
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
