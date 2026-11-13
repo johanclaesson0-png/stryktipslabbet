@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-frozen-analysis-v1",
   "model_version": "market-no-vig-v1",
   "draw_number": 4979,
-  "observed_at_utc": "2026-11-12T21:57:02.865951+00:00",
+  "observed_at_utc": "2026-11-13T00:42:18.586582+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
   "source": "Svenska Spel publikt API",
-  "source_snapshot_sha256": "28bc8a4bf499c23631b72872dbf36971bd09fdb2d8d59fd7350511e208e4f1eb",
+  "source_snapshot_sha256": "2f04a37cd9ce4c0c78fdf0dc605f61dc7c9e85fde8219ac0cb58da6b19a23185",
   "budget_limit": 1800,
   "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
   "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
@@ -95,9 +95,9 @@
         1.89
       ],
       "streck": [
-        27.0,
+        26.0,
         24.0,
-        49.0
+        50.0
       ],
       "p": [
         0.236169488,
@@ -105,9 +105,9 @@
         0.512325344
       ],
       "edge": [
-        -0.033831,
+        -0.023831,
         0.011505,
-        0.022325
+        0.012325
       ]
     },
     {
@@ -195,9 +195,9 @@
         4.6
       ],
       "streck": [
-        60.0,
+        61.0,
         22.0,
-        18.0
+        17.0
       ],
       "p": [
         0.561626274,
@@ -205,9 +205,9 @@
         0.203894756
       ],
       "edge": [
-        -0.038374,
+        -0.048374,
         0.014479,
-        0.023895
+        0.033895
       ]
     },
     {
@@ -245,9 +245,9 @@
         3.95
       ],
       "streck": [
-        56.0,
+        57.0,
         23.0,
-        21.0
+        20.0
       ],
       "p": [
         0.515541817,
@@ -255,9 +255,9 @@
         0.237540787
       ],
       "edge": [
-        -0.044458,
+        -0.054458,
         0.016917,
-        0.027541
+        0.037541
       ]
     },
     {
@@ -373,7 +373,7 @@
         "1",
         "1",
         "1",
-        "2",
+        "X2",
         "1X2",
         "1",
         "1X2",
@@ -382,9 +382,9 @@
         "1X2",
         "1X2",
         "1X2",
-        "12"
+        "2"
       ],
-      "p13_estimate": 0.041736746,
+      "p13_estimate": 0.038598645,
       "spikes": 6,
       "half": 1,
       "full": 6
