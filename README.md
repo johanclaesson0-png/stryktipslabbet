@@ -1,4 +1,4 @@
-# Stryktipslabbet 12.0
+# Stryktipslabbet 14.0
 
 **Stryktipslabbet** är en svensk mobilanpassad analysapp för Stryktipset, anpassad till ett tipslag med 10 deltagare och ett budgettak på **1 800 kr per omgång**. Den lämnar aldrig in spel.
 
@@ -9,6 +9,7 @@
 - Automatiska systemförslag: https://johanclaesson0-png.github.io/stryktipslabbet/veckans-analys.html
 - Spikvakten: https://johanclaesson0-png.github.io/stryktipslabbet/spikvakt.html
 - **Femårsarkiv och lagstatistik:** https://johanclaesson0-png.github.io/stryktipslabbet/datadjup.html
+- **Version 13 + 14 – marknadsrörelser och formmodell:** https://johanclaesson0-png.github.io/stryktipslabbet/marknad-och-form.html
 
 Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → Build and deployment → Source** och välj **GitHub Actions**. Kontrollera under **Settings → Actions → General** att Actions får köras och att GitHub-tokenen har skrivbehörighet för arkivlagring. Kör därefter arbetsflödet manuellt via **Actions → Stryktipslabbet – samla och publicera → Run workflow**.
 
@@ -20,7 +21,7 @@ Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → 
 - scripts/collect.py: tidsstämplad, läsande insamling av framtida Stryktipsomgångar och officiellt facit.
 - scripts/analyze.py: räknar fram sannolikheter från observerade odds, optimerar tre matematiska system under budgettaket, arkiverar varianter före spelstopp och rättar mot officiellt facit.
 - scripts/publish.py: bygger enbart validerad publik webbinformation och de senast arkiverade omgångarna.
-- tests/test_pipeline.py, tests/test_analysis.py, tests/test_solo.py och tests/test_spikvakt.py: 39 automatiserade testfall.
+- tests/test_pipeline.py, tests/test_analysis.py, tests/test_solo.py och tests/test_spikvakt.py: 47 automatiserade testfall.
 - .github/workflows/stryktipslabbet.yml: bygg-, insamlings- och publiceringsflöde.
 - data/2024-2026-datatackning.csv och data/2024-2026-simulerade-system.csv: äldre experimentella backtests.
 
@@ -111,3 +112,26 @@ Skriptet beräknar endast statistik på matcher vars datum är **strikt före ku
 **Källvillkor:** football-data.co.uk har publicerade användningsbegränsningar för automatiserad inhämtning/AI. Ingen sådan källa hämtas automatiskt här; OpenFootball används för öppna licensierade resultat. Vi hämtar inte historiska förhandsodds från slutresultat.
 
 **Driftsättning:** GitHub Actions tar högst 14 nya ligafiler och åtta resultatutdelningar per körning. Den fulla ligahistoriken och kontrollen av gamla utdelningar fylls därför successivt på; datadjup.html visar hur mycket som verkligen är tillgängligt. Nya automatiska CI-tester säkerställer att dagens och framtida matchresultat inte får ingå i föregående dagars formtal. Svenska namn på landslag normaliseras mot den internationella datakällan. Förslagets 1X2-sannolikheter bygger fortfarande på normaliserade bookmakerodds; formdatan är tills vidare **beslutsstöd, inte automatiskt en del av sannolikhetsmodellen**, tills den kan valideras på framtida omgångar.
+
+
+## Version 13 – verkliga oddsrörelser och folkstreck
+
+I scripts/market_moves.py används arkiverade tidsstämplade förhandsobservationer i data/analysis_history/<omgång>/*.json, **inte resultat**. För varje 1/X/2 visas förändringen från första till senaste lagrade observation i procentenheter för både normaliserade oddssannolikheter och folkets streck. Över 3 procentenheter i oddssannolikhet eller 5 i folkstreck markeras som större rörelse.
+
+Rapporter skapas bara före spelstopp, fryses under data/market_moves/, föregående förhandsversioner sparas i data/market_moves_history/, och kan bara publiceras om de går att återuppbygga med källornas tidsstämplar och SHA256. Minst två oberoende observationstidpunkter krävs. En rörelse säger ingenting säkert om bakomliggande orsaker, vinnande strategi eller högre förväntad avkastning.
+
+## Version 14 – alternativ testprognos med lagform
+
+Skriptet scripts/feature_model.py jämför:
+1. Oförändrad **normaliserad oddsbaslinje** (ursprungliga sannolikheter och system).
+2. En **förregistrerad, försiktig formjustering** (version form-overlay-preregistered-2026-11-13-v14) utifrån de fem och tio senaste matchernas poäng/match, hemma-/bortaform och målskillnad.
+
+Formjusteringen är en **heuristisk experimentmodell, inte en kalibrerad maskininlärningsmodell**. Om något lag har mindre än tre tidigare daterade matcher används odifferensierad oddsbaslinje för den matchen. Den exakta justeringsvikten är fixerad till 0,25 före de kommande resultat som modellen ska utvärderas mot. Alla datapunkter måste vara från före observationens kalenderdatum; dokumentationens förhandsrapport måste i sin tur ha frysts efter observation och före spelstopp. Läs hur siffrorna tolkas i marknad-och-form-vyn.
+
+Både ditt eget system (normalt 96 kr) och lagets system (högst 1 800 kr) optimeras med **exakt samma totala radkostnad som baslinjen**, så att skillnader i antal rader inte förväxlas med skillnader i kvalitet. Om de nya data inte motiverar ändrade tecken visas samma system igen, utan att konstruera skillnader.
+
+När officiella resultat kommer sparar scripts/feature_model.py hypotetiska 10–13-rättsrader, netto per system och Brier/log loss per modell under data/form_model_settlements/. Stryktipslabbet publicerar bara rapporter som kan verifieras mot originalobservationens tidsstämpel, källhash och lagformsrapporten. Framtida aggregat hålls separat under data/form-model-progress.json. Ingen äldre Elo-backtest eller lagets inskickade historiska kuponger räknas som bevis för denna nya modell.
+
+**Begränsningar:** Vi saknar ännu tillräckligt många prospektiva rättade kuponger för att säga att formmodellen förbättrar sannolikheter eller utdelningar. De två modellerna bygger på olika sannolikhetsantaganden, och 13-rättschanserna kan därför inte jämföras som om båda vore kalibrerade. Vi saknar säker särmarkering av lottade matcher i framtida facit; detta måste lösas innan detaljerad fotbollskalibrering hävdas. Modellen påverkar inte originalets rekommendationer eller höjer insatsgränserna.
+
+Kör manuellt: python -m scripts.market_moves --outdir data ; python -m scripts.feature_model --outdir data ; python -m scripts.publish
