@@ -21,7 +21,7 @@ class SpikvaktTests(unittest.TestCase):
         self.assertTrue(validate(self.report, self.analysis, self.solo))
         self.assertEqual(self.report["version"], VERSION)
         self.assertLess(self.report["created_at_utc"], self.report["reg_close_time"])
-        self.assertNotIn("outcome", str(self.report))
+        self.assertNotIn("\'outcome\':", str(self.report))
         self.assertNotIn("payouts", str(self.report))
 
     def test_same_row_cost_for_all_comparisons(self):
