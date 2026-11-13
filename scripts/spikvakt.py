@@ -70,12 +70,17 @@ def risk_report(choices, matches):
         probs = match["p"]
         if len(c) == 1:
             p = probs[SIGNS.index(c)]
+            suggested = max((j for j in range(3) if SIGNS[j] not in c),
+                            key=lambda j: probs[j])
             flagged.append({
                 "number": i + 1,
                 "home": match["home"], "away": match["away"],
                 "chosen": c,
                 "estimated_miss_probability": round(1 - p, 6),
                 "high_risk": p < SPIKE_LIMIT,
+                "suggested_second_sign": SIGNS[suggested],
+                "extra_outcome_probability": round(probs[suggested], 6),
+                "cost_if_added_without_rebalancing": math.prod(len(x) for x in choices) * 2,
             })
         if "X" not in c and probs[1] >= DRAW_LIMIT:
             new_cost = math.prod(len(x) for x in choices) * (len(c) + 1) // len(c)
