@@ -1,0 +1,215 @@
+{
+  "schema": "stryktipslabbet-other-game-analysis-v16",
+  "game": "topptipset",
+  "name": "Topptipset",
+  "draw_number": 4444,
+  "matches": [
+    {
+      "number": 1,
+      "home": "Sverige",
+      "away": "Bosnien & Hercegovina",
+      "odds": [
+        1.5,
+        4.8,
+        6.75
+      ],
+      "streck": [
+        74.0,
+        15.0,
+        11.0
+      ],
+      "p": [
+        0.65158371,
+        0.20361991,
+        0.14479638
+      ],
+      "match_start": "2026-11-14T20:45:00+01:00"
+    },
+    {
+      "number": 2,
+      "home": "Portugal",
+      "away": "Danmark",
+      "odds": [
+        1.48,
+        4.9,
+        7.0
+      ],
+      "streck": [
+        79.0,
+        16.0,
+        5.0
+      ],
+      "p": [
+        0.660733549,
+        0.199568501,
+        0.13969795
+      ],
+      "match_start": "2026-11-14T20:45:00+01:00"
+    },
+    {
+      "number": 3,
+      "home": "Österrike",
+      "away": "Irland",
+      "odds": [
+        1.58,
+        4.2,
+        6.25
+      ],
+      "streck": [
+        63.0,
+        24.0,
+        13.0
+      ],
+      "p": [
+        0.613877131,
+        0.23093473,
+        0.155188139
+      ],
+      "match_start": "2026-11-14T20:45:00+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Rumänien",
+      "away": "Polen",
+      "odds": [
+        4.25,
+        3.9,
+        1.85
+      ],
+      "streck": [
+        16.0,
+        25.0,
+        59.0
+      ],
+      "p": [
+        0.22794408,
+        0.2484006,
+        0.523655319
+      ],
+      "match_start": "2026-11-14T20:45:00+01:00"
+    },
+    {
+      "number": 5,
+      "home": "Nordirland",
+      "away": "Ukraina",
+      "odds": [
+        2.48,
+        3.15,
+        3.2
+      ],
+      "streck": [
+        43.0,
+        30.0,
+        27.0
+      ],
+      "p": [
+        0.390274121,
+        0.307263435,
+        0.302462444
+      ],
+      "match_start": "2026-11-14T20:45:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "Real Oviedo",
+      "away": "Girona",
+      "odds": [
+        2.43,
+        3.25,
+        2.9
+      ],
+      "streck": [
+        44.0,
+        31.0,
+        25.0
+      ],
+      "p": [
+        0.386753934,
+        0.289172942,
+        0.324073124
+      ],
+      "match_start": "2026-11-14T21:00:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Mirassol",
+      "away": "Atletico Mineiro",
+      "odds": [
+        2.15,
+        3.65,
+        3.55
+      ],
+      "streck": [
+        40.0,
+        29.0,
+        31.0
+      ],
+      "p": [
+        0.455648352,
+        0.268395604,
+        0.275956044
+      ],
+      "match_start": "2026-11-14T22:30:00+01:00"
+    },
+    {
+      "number": 8,
+      "home": "Banfield",
+      "away": "Boca Juniors",
+      "odds": [
+        8.0,
+        4.25,
+        1.42
+      ],
+      "streck": [
+        22.0,
+        27.0,
+        51.0
+      ],
+      "p": [
+        0.117423874,
+        0.221033174,
+        0.661542952
+      ],
+      "match_start": "2026-11-14T23:00:00+01:00"
+    }
+  ],
+  "observed_at_utc": "2026-11-13T23:15:36.731317+00:00",
+  "source_snapshot_sha256": "100565a4b8e01ca47195f985e2574eea194489db31ce40da6f6cb6f71270c864",
+  "reg_close_time": "2026-11-14T19:44:00+00:00",
+  "created_at_utc": "2026-11-13T23:15:36.732384+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 81,
+      "choices": [
+        "1",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "2"
+      ],
+      "estimated_all_correct": 0.1748381
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 81,
+      "choices": [
+        "1",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "2"
+      ],
+      "estimated_all_correct": 0.1748381
+    }
+  ],
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
+}
