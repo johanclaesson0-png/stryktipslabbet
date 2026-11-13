@@ -33,6 +33,8 @@ jobs:
         run: python -m scripts.analyze --outdir data
       - name: Bygg och rätta personliga 100-kronorssystem
         run: python -m scripts.solo --outdir data
+      - name: Frys Spikvakt och jämför garderingar utan facit
+        run: python -m scripts.spikvakt --outdir data
       - name: Spara endast offentliga källobservationer
         run: |
           git config user.name 'github-actions[bot]'
