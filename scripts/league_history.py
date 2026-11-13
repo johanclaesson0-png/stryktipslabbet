@@ -7,6 +7,8 @@ Only dates STRICTLY before the observation day may enter pre-match features.
 No current injuries/lineups are invented or inferred.
 """
 import argparse
+import csv
+import io
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -125,6 +127,45 @@ ALIASES = {
     "ac milan":"milan",
     "milan":"milan",
     "paris saint germain":"paris saint germain",
+    "sverige":"sweden",
+    "norge":"norway",
+    "danmark":"denmark",
+    "finland":"finland",
+    "polen":"poland",
+    "rumanien":"romania",
+    "nordirland":"northern ireland",
+    "osterrike":"austria",
+    "irland":"republic of ireland",
+    "georgien":"georgia",
+    "ungern":"hungary",
+    "schweiz":"switzerland",
+    "bosnien hercegovina":"bosnia herzegovina",
+    "bosnia herzegovina":"bosnia herzegovina",
+    "slovenien":"slovenia",
+    "grekland":"greece",
+    "kroatien":"croatia",
+    "tjeckien":"czech republic",
+    "czechia":"czech republic",
+    "ukraina":"ukraine",
+    "spanien":"spain",
+    "tyskland":"germany",
+    "frankrike":"france",
+    "nederlanderna":"netherlands",
+    "belgien":"belgium",
+    "skottland":"scotland",
+    "england":"england",
+    "nordmakedonien":"north macedonia",
+    "serbien":"serbia",
+    "albanien":"albania",
+    "montenegro":"montenegro",
+    "estland":"estonia",
+    "litauen":"lithuania",
+    "lettland":"latvia",
+    "island":"iceland",
+    "turkiet":"turkey",
+    "turkiye":"turkey",
+    "cypern":"cyprus",
+    "luxemburg":"luxembourg",
     "psg":"paris saint germain",
 }
 
@@ -173,6 +214,79 @@ def parse_source(doc, season, league, fetched_at):
             "fetched_at_utc": fetched_at.isoformat(), "matches": matches}
 
 
+def read_nationals(path):
+    """Load public-domain men's national team results, including neutral venues."""
+    if not path.exists():
+        return []
+    matches = []
+    with path.open("r", encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f):
+            try:
+                d = datetime.strptime(r["date"], "%Y-%m-%d").date().isoformat()
+                h, a = key_team(r["home_team"]), key_team(r["away_team"])
+                hg, ag = int(r["home_score"]), int(r["away_score"])
+                if not ("2020-01-01" <= d <= "2027-12-31" and
+                        0 <= hg <= 30 and 0 <= ag <= 30 and h and a and h != a):
+                    continue
+                matches.append({
+                    "date": d, "home": h, "away": a,
+                    "home_goals": hg, "away_goals": ag,
+                    "neutral": r["neutral"].strip().upper() == "TRUE",
+                    "league": "men-national-teams", "season": d[:4],
+                })
+            except (ValueError, KeyError, TypeError, AttributeError):
+                continue
+    return matches
+
+
+def update_nationals(data, now):
+    """Daily bounded refresh; only commit the CSV when source rows changed."""
+    csv_path = data / "form" / "national_team_results.csv"
+    state_path = data / "form" / "national_fetch_state.json"
+    try:
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+        last = instant(state["checked_at_utc"])
+        if (now - last).total_seconds() < 24*3600:
+            return 0
+    except (OSError, KeyError, ValueError, TypeError):
+        pass
+    try:
+        url = "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
+        req = Request(url, headers={"User-Agent": "Stryktipslabbet/12.0 (public domain international results)"})
+        with urlopen(req, timeout=25) as response:
+            raw = response.read(6_000_001)
+        if len(raw) > 6_000_000:
+            raise ValueError("Landslagsarkiv för stort")
+        lines = raw.decode("utf-8-sig").replace("\r", "").split("\n")
+        if not lines or not lines[0].startswith("date,home_team,away_team,"):
+            raise ValueError("Landslagskällans kolumner har ändrats")
+        relevant = [line for line in lines[1:]
+                    if line[:10] >= "2020-01-01" and line[:10] <= now.date().isoformat()
+                    and re.match(r"^\d{4}-\d{2}-\d{2},", line)]
+        if len(relevant) < 4000:
+            raise ValueError("För få landskamper, källan kan vara ofullständig")
+        new = lines[0] + "\n" + "\n".join(relevant) + "\n"
+        current = csv_path.read_text(encoding="utf-8") if csv_path.exists() else ""
+        if new != current:
+            csv_path.parent.mkdir(parents=True,exist_ok=True)
+            csv_path.write_text(new,encoding="utf-8")
+            changed = 1
+        else:
+            changed = 0
+        write_json(state_path, {
+            "source": "martj42/international_results (CC0 1.0)",
+            "source_url": url,
+            "checked_at_utc": now.isoformat(),
+            "rows": len(relevant),
+        })
+        print("Landslagsdata:",len(relevant),"matcher,", "uppdaterad" if changed else "oförändrad")
+        return changed
+    except (OSError, ValueError, URLError, HTTPError, TimeoutError) as exc:
+        print("Landslagsuppdatering misslyckades, senast sparade fil används:",str(exc)[:120],
+              file=sys.stderr)
+        return 0
+
+
 def read_db(data):
     matches = []
     files = sorted((data / "form" / "leagues").glob("*/*.json"))
@@ -185,6 +299,7 @@ def read_db(data):
                 matches.append({**m, "season": x["season"], "league": x["league"]})
         except (ValueError, OSError, TypeError):
             continue
+    matches.extend(read_nationals(data / "form" / "national_team_results.csv"))
     # Cross-source duplicates are removed by team/date/score, not by league.
     seen = set()
     out = []
@@ -252,7 +367,7 @@ def result_for(team, match):
         gf, ga, own_home = match["away_goals"], match["home_goals"], False
     pts = 3 if gf > ga else 1 if gf == ga else 0
     return {"date": match["date"], "gf": gf, "ga": ga, "points": pts,
-            "venue": "home" if own_home else "away",
+            "venue": "neutral" if match.get("neutral") else "home" if own_home else "away",
             "outcome": "V" if gf > ga else "O" if gf == ga else "F"}
 
 
@@ -336,6 +451,7 @@ def main():
     args = ap.parse_args()
     data = Path(args.outdir)
     now = datetime.now(timezone.utc)
+    national_refreshed = update_nationals(data, now)
     got = update_leagues(data, now, max(0, min(30, args.limit)))
     db, nfiles = read_db(data)
     created = 0
@@ -349,7 +465,7 @@ def main():
             created += 1
         except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:
             print("Formrapport saknas:", f, exc, file=sys.stderr)
-    print("Nya källfiler:", got, "| ligamatcher:", len(db),
+    print("Nya källfiler:", got, "| landslagsuppdatering:", national_refreshed, "| ligamatcher och landskamper:", len(db),
           "| ligafiler:", nfiles, "| förhandsrapporter:", created)
 
 
