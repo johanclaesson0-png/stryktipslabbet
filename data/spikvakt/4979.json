@@ -5,7 +5,7 @@
   "source_observed_at_utc": "2026-11-13T13:32:38.343379+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
   "source_snapshot_sha256": "cc71c518d3435055257f79f395974e1f38c1c4cfda7cd622087646998936a3e2",
-  "created_at_utc": "2026-11-13T13:34:00.082858+00:00",
+  "created_at_utc": "2026-11-13T13:48:39.699989+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -40,7 +40,10 @@
             "away": "Reading",
             "chosen": "1",
             "estimated_miss_probability": 0.484458,
-            "high_risk": true
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.246917,
+            "cost_if_added_without_rebalancing": 2916
           },
           {
             "number": 8,
@@ -48,7 +51,10 @@
             "away": "Burton",
             "chosen": "1",
             "estimated_miss_probability": 0.438374,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.234479,
+            "cost_if_added_without_rebalancing": 2916
           },
           {
             "number": 6,
@@ -56,7 +62,10 @@
             "away": "Irland",
             "chosen": "1",
             "estimated_miss_probability": 0.394871,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.236148,
+            "cost_if_added_without_rebalancing": 2916
           },
           {
             "number": 1,
@@ -64,7 +73,10 @@
             "away": "Bosnien & Hercegovina",
             "chosen": "1",
             "estimated_miss_probability": 0.359454,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.206323,
+            "cost_if_added_without_rebalancing": 2916
           },
           {
             "number": 2,
@@ -72,7 +84,10 @@
             "away": "Danmark",
             "chosen": "1",
             "estimated_miss_probability": 0.346763,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.203535,
+            "cost_if_added_without_rebalancing": 2916
           },
           {
             "number": 3,
@@ -80,7 +95,10 @@
             "away": "Wales",
             "chosen": "1",
             "estimated_miss_probability": 0.209932,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.139955,
+            "cost_if_added_without_rebalancing": 2916
           }
         ],
         "possible_draws": []
@@ -163,7 +181,10 @@
             "away": "Polen",
             "chosen": "2",
             "estimated_miss_probability": 0.487675,
-            "high_risk": true
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.251505,
+            "cost_if_added_without_rebalancing": 192
           },
           {
             "number": 10,
@@ -171,7 +192,10 @@
             "away": "Reading",
             "chosen": "1",
             "estimated_miss_probability": 0.484458,
-            "high_risk": true
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.246917,
+            "cost_if_added_without_rebalancing": 192
           },
           {
             "number": 8,
@@ -179,7 +203,10 @@
             "away": "Burton",
             "chosen": "1",
             "estimated_miss_probability": 0.438374,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.234479,
+            "cost_if_added_without_rebalancing": 192
           },
           {
             "number": 6,
@@ -187,7 +214,10 @@
             "away": "Irland",
             "chosen": "1",
             "estimated_miss_probability": 0.394871,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.236148,
+            "cost_if_added_without_rebalancing": 192
           },
           {
             "number": 1,
@@ -195,7 +225,10 @@
             "away": "Bosnien & Hercegovina",
             "chosen": "1",
             "estimated_miss_probability": 0.359454,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.206323,
+            "cost_if_added_without_rebalancing": 192
           },
           {
             "number": 2,
@@ -203,7 +236,10 @@
             "away": "Danmark",
             "chosen": "1",
             "estimated_miss_probability": 0.346763,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.203535,
+            "cost_if_added_without_rebalancing": 192
           },
           {
             "number": 3,
@@ -211,7 +247,10 @@
             "away": "Wales",
             "chosen": "1",
             "estimated_miss_probability": 0.209932,
-            "high_risk": false
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.139955,
+            "cost_if_added_without_rebalancing": 192
           }
         ],
         "possible_draws": [
@@ -220,6 +259,8 @@
             "home": "Wimbledon",
             "away": "Blackpool",
             "x_probability": 0.276743,
+            "crowd_x_percentage": 29.0,
+            "x_minus_crowd_percentage_points": -1.326,
             "extra_row_cost_to_include_x_alone": 144,
             "requires_rebalancing": true
           }
