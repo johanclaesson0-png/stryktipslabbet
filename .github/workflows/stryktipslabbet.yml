@@ -62,11 +62,14 @@ jobs:
               fi
               echo "GitHub ändrades samtidigt, försöker uppdatera basen ($attempt/5)"
               git fetch origin main
-              git rebase origin/main
+              if ! git rebase origin/main; then
+                git rebase --abort
+                echo "::warning::Datafiler ändrades samtidigt i GitHub. Hoppar över lagringen den här körningen; försöker igen vid nästa schema. Webbplatsen publiceras ändå."
+                break
+              fi
             done
             if [ "$pushed" != "1" ]; then
-              echo "Kunde inte publicera nya data utan konflikt."
-              exit 1
+              echo "::warning::Nya data kunde inte sparas i repositoryt i denna körning, men finns kvar i webbpubliceringen."
             fi
           fi
       - name: Bygg säker publiceringsmapp
