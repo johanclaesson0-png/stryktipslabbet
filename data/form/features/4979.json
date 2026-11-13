@@ -4,7 +4,7 @@
   "source_observed_at_utc": "2026-11-13T22:42:10.465355+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
   "source_snapshot_sha256": "4c1b3b197d1cb0e1295545cbd162bf77121408c67b7a3622798dcb995a1ac5b8",
-  "created_at_utc": "2026-11-13T23:10:28.884723+00:00",
+  "created_at_utc": "2026-11-13T23:13:24.299866+00:00",
   "cutoff_date_exclusive": "2026-11-13",
   "source": "OpenFootball football.json · CC0 1.0",
   "league_files_read": 79,
@@ -47,6 +47,53 @@
           "draws": 3,
           "losses": 3
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-05",
+            "opponent": "romania",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-02",
+            "opponent": "bosnia herzegovina",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-28",
+            "opponent": "poland",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-25",
+            "opponent": "romania",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-30",
+            "opponent": "france",
+            "goals_for": 0,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 2.2,
@@ -80,6 +127,53 @@
           "draws": 5,
           "losses": 2
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-05",
+            "opponent": "poland",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-02",
+            "opponent": "sweden",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-28",
+            "opponent": "romania",
+            "goals_for": 4,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-25",
+            "opponent": "poland",
+            "goals_for": 0,
+            "goals_against": 0,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-07-01",
+            "opponent": "united states",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.2,
@@ -130,6 +224,53 @@
           "draws": 2,
           "losses": 1
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-04",
+            "opponent": "norway",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-01",
+            "opponent": "denmark",
+            "goals_for": 4,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-27",
+            "opponent": "norway",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-24",
+            "opponent": "wales",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-07-06",
+            "opponent": "spain",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 3.0,
@@ -163,6 +304,53 @@
           "draws": 3,
           "losses": 3
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-04",
+            "opponent": "wales",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-01",
+            "opponent": "portugal",
+            "goals_for": 2,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-27",
+            "opponent": "wales",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-24",
+            "opponent": "norway",
+            "goals_for": 2,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-07",
+            "opponent": "ukraine",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.4,
@@ -213,6 +401,53 @@
           "draws": 0,
           "losses": 5
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-04",
+            "opponent": "portugal",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-01",
+            "opponent": "wales",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-27",
+            "opponent": "portugal",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-24",
+            "opponent": "denmark",
+            "goals_for": 3,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-07-11",
+            "opponent": "england",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 2.0,
@@ -246,6 +481,53 @@
           "draws": 3,
           "losses": 4
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-04",
+            "opponent": "denmark",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-01",
+            "opponent": "norway",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-27",
+            "opponent": "denmark",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-24",
+            "opponent": "portugal",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-06",
+            "opponent": "romania",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 0.6,
@@ -296,6 +578,53 @@
           "draws": 1,
           "losses": 7
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-05",
+            "opponent": "sweden",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-02",
+            "opponent": "poland",
+            "goals_for": 0,
+            "goals_against": 6,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-28",
+            "opponent": "bosnia herzegovina",
+            "goals_for": 2,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-25",
+            "opponent": "sweden",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-06",
+            "opponent": "wales",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.8,
@@ -329,6 +658,53 @@
           "draws": 3,
           "losses": 4
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-05",
+            "opponent": "bosnia herzegovina",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-02",
+            "opponent": "romania",
+            "goals_for": 6,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-28",
+            "opponent": "sweden",
+            "goals_for": 1,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-25",
+            "opponent": "bosnia herzegovina",
+            "goals_for": 0,
+            "goals_against": 0,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-03",
+            "opponent": "nigeria",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.2,
@@ -379,6 +755,53 @@
           "draws": 3,
           "losses": 3
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-05",
+            "opponent": "georgia",
+            "goals_for": 0,
+            "goals_against": 0,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-02",
+            "opponent": "ukraine",
+            "goals_for": 3,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-28",
+            "opponent": "hungary",
+            "goals_for": 0,
+            "goals_against": 0,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-25",
+            "opponent": "georgia",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-08",
+            "opponent": "france",
+            "goals_for": 1,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.6,
@@ -412,6 +835,53 @@
           "draws": 1,
           "losses": 5
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-05",
+            "opponent": "hungary",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-02",
+            "opponent": "northern ireland",
+            "goals_for": 0,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-28",
+            "opponent": "georgia",
+            "goals_for": 0,
+            "goals_against": 0,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-25",
+            "opponent": "hungary",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-07",
+            "opponent": "denmark",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.4,
@@ -462,6 +932,53 @@
           "draws": 3,
           "losses": 2
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-04",
+            "opponent": "kosovo",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-01",
+            "opponent": "republic of ireland",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-27",
+            "opponent": "kosovo",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-24",
+            "opponent": "israel",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-07-02",
+            "opponent": "spain",
+            "goals_for": 0,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 3.0,
@@ -495,6 +1012,53 @@
           "draws": 5,
           "losses": 1
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-04",
+            "opponent": "israel",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-01",
+            "opponent": "austria",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-27",
+            "opponent": "israel",
+            "goals_for": 3,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-24",
+            "opponent": "kosovo",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-05",
+            "opponent": "canada",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.0,
@@ -545,6 +1109,53 @@
           "draws": 4,
           "losses": 4
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-05",
+            "opponent": "northern ireland",
+            "goals_for": 0,
+            "goals_against": 0,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-02",
+            "opponent": "hungary",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-28",
+            "opponent": "ukraine",
+            "goals_for": 0,
+            "goals_against": 0,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-25",
+            "opponent": "northern ireland",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-05",
+            "opponent": "bahrain",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.2,
@@ -578,6 +1189,53 @@
           "draws": 2,
           "losses": 2
         },
+        "last5_matches": [
+          {
+            "date": "2026-10-05",
+            "opponent": "ukraine",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "neutral",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-10-02",
+            "opponent": "georgia",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-28",
+            "opponent": "northern ireland",
+            "goals_for": 0,
+            "goals_against": 0,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-09-25",
+            "opponent": "ukraine",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "men-national-teams"
+          },
+          {
+            "date": "2026-06-09",
+            "opponent": "kazakhstan",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "men-national-teams"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.8,
@@ -628,6 +1286,53 @@
           "draws": 3,
           "losses": 1
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-29",
+            "opponent": "notts county",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-26",
+            "opponent": "swindon town",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-20",
+            "opponent": "harrogate town",
+            "goals_for": 4,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "cambridge united",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "notts county",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.4"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 2.2,
@@ -661,6 +1366,7 @@
           "draws": 0,
           "losses": 0
         },
+        "last5_matches": [],
         "venue5": {
           "n": 0,
           "points_per_game": null,
@@ -711,6 +1417,53 @@
           "draws": 3,
           "losses": 6
         },
+        "last5_matches": [
+          {
+            "date": "2026-05-02",
+            "opponent": "west bromwich albion",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-04-25",
+            "opponent": "oxford united",
+            "goals_for": 1,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-04-22",
+            "opponent": "middlesbrough",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-04-18",
+            "opponent": "charlton athletic",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-04-06",
+            "opponent": "leicester city",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.2,
@@ -744,6 +1497,53 @@
           "draws": 1,
           "losses": 6
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-29",
+            "opponent": "wycombe wanderers",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-26",
+            "opponent": "reading",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-20",
+            "opponent": "doncaster rovers",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "rotherham united",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "wycombe wanderers",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.3"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 0.8,
@@ -794,6 +1594,7 @@
           "draws": 0,
           "losses": 0
         },
+        "last5_matches": [],
         "venue5": {
           "n": 0,
           "points_per_game": null,
@@ -827,6 +1628,53 @@
           "draws": 4,
           "losses": 4
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-29",
+            "opponent": "peterborough united",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-26",
+            "opponent": "plymouth argyle",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-18",
+            "opponent": "luton town",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "bradford city",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "peterborough united",
+            "goals_for": 3,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 0.4,
@@ -877,6 +1725,53 @@
           "draws": 1,
           "losses": 6
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-29",
+            "opponent": "exeter city",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-26",
+            "opponent": "stevenage",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-20",
+            "opponent": "northampton town",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "mansfield town",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "exeter city",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.3"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.4,
@@ -910,6 +1805,53 @@
           "draws": 1,
           "losses": 4
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-29",
+            "opponent": "rotherham united",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-26",
+            "opponent": "doncaster rovers",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-20",
+            "opponent": "wigan athletic",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "lincoln city",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "rotherham united",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.3"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.8,
@@ -960,6 +1902,53 @@
           "draws": 1,
           "losses": 1
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-29",
+            "opponent": "burton albion",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-26",
+            "opponent": "bradford city",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-20",
+            "opponent": "blackpool",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "huddersfield town",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "burton albion",
+            "goals_for": 3,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 3.0,
@@ -993,6 +1982,53 @@
           "draws": 2,
           "losses": 3
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-29",
+            "opponent": "lincoln city",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-26",
+            "opponent": "mansfield town",
+            "goals_for": 3,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-20",
+            "opponent": "exeter city",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "leyton orient",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.3"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "lincoln city",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.3"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 1.6,
@@ -1043,6 +2079,53 @@
           "draws": 4,
           "losses": 3
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-29",
+            "opponent": "cheltenham town",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-26",
+            "opponent": "milton keynes dons",
+            "goals_for": 1,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-20",
+            "opponent": "crawley town",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "bristol rovers",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "cheltenham town",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.4"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 2.2,
@@ -1076,6 +2159,53 @@
           "draws": 1,
           "losses": 8
         },
+        "last5_matches": [
+          {
+            "date": "2025-12-26",
+            "opponent": "oldham athletic",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-20",
+            "opponent": "bromley",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-13",
+            "opponent": "notts county",
+            "goals_for": 0,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-12-09",
+            "opponent": "shrewsbury town",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.4"
+          },
+          {
+            "date": "2025-11-29",
+            "opponent": "tranmere rovers",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.4"
+          }
+        ],
         "venue5": {
           "n": 5,
           "points_per_game": 0.0,
