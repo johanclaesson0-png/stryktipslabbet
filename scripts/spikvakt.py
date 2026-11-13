@@ -88,6 +88,8 @@ def risk_report(choices, matches):
                 "number": i + 1,
                 "home": match["home"], "away": match["away"],
                 "x_probability": round(probs[1], 6),
+                "crowd_x_percentage": round(match["streck"][1], 3),
+                "x_minus_crowd_percentage_points": round(100 * probs[1] - match["streck"][1], 3),
                 "extra_row_cost_to_include_x_alone": new_cost,
                 "requires_rebalancing": True,
             })
