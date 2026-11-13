@@ -83,6 +83,7 @@ def main():
     shutil.copy2(root / "spela-sjalv.html", dest / "spela-sjalv.html")
     shutil.copy2(root / "spikvakt.html", dest / "spikvakt.html")
     shutil.copy2(root / "datadjup.html", dest / "datadjup.html")
+    shutil.copy2(root / "marknad-och-form.html", dest / "marknad-och-form.html")
 
     now = datetime.now(timezone.utc)
     status = {
@@ -430,6 +431,107 @@ def main():
         except (ValueError, TypeError, KeyError, OSError, json.JSONDecodeError):
             pass
     status["enriched_form_rounds"] = form_count
+
+
+    # Versions 13 and 14: publish only cryptographically linked, reproducible,
+    # pre-close observations. Unverified after-the-fact data is never backdated.
+    from scripts.market_moves import (history_for as market_history,
+                                      validate as validate_moves)
+    from scripts.feature_model import (validate as validate_v14,
+                                       SETTLEMENT as V14_SETTLEMENT)
+    moves_count = model_count = model_settled_count = 0
+    evaluated = []
+    for row in public_rounds:
+        n = row["draw_number"]
+        row["moves_available"] = False
+        row["v14_available"] = False
+        row["v14_settled"] = False
+        original = base_by_draw.get(n)
+        if original is None:
+            continue
+        market_source = root / "data" / "market_moves" / (str(n) + ".json")
+        if market_source.exists():
+            try:
+                obj = json.loads(market_source.read_text(encoding="utf-8"))
+                history = market_history(root / "data", original, now)
+                if len(history) >= 2 and validate_moves(obj, original, history):
+                    target = dest / "data" / "market_moves" / (str(n) + ".json")
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(market_source, target)
+                    row["moves_available"] = True
+                    moves_count += 1
+            except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):
+                pass
+        if not row.get("form_available") or not row.get("personal_available"):
+            continue
+        model_source = root / "data" / "form_model" / (str(n) + ".json")
+        try:
+            obj = json.loads(model_source.read_text(encoding="utf-8"))
+            form = json.loads(
+                (root / "data" / "form" / "features" / (str(n) + ".json")).read_text(encoding="utf-8"))
+            personal = json.loads(
+                (root / "data" / "personal" / (str(n) + ".json")).read_text(encoding="utf-8"))
+            if not validate_v14(obj, original, personal, form):
+                continue
+            target = dest / "data" / "form_model" / (str(n) + ".json")
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(model_source, target)
+            row["v14_available"] = True
+            model_count += 1
+
+            settled_file = root / "data" / "form_model_settlements" / (str(n) + ".json")
+            if not row["settled"] or not settled_file.exists() or n not in verified_result_draws:
+                continue
+            paid = json.loads(settled_file.read_text(encoding="utf-8"))
+            official = json.loads(
+                (root / "data" / "results" / (str(n) + ".json")).read_text(encoding="utf-8"))
+            if (paid.get("schema") != V14_SETTLEMENT or
+                paid.get("model_version") != obj["model_version"] or
+                paid.get("draw_number") != n or
+                paid.get("source_observed_at_utc") != obj["source_observed_at_utc"] or
+                paid.get("report_created_at_utc") != obj["created_at_utc"] or
+                paid.get("source_snapshot_sha256") != obj.get("source_snapshot_sha256") or
+                paid.get("form_sha256") != obj["form_sha256"] or
+                paid.get("official_result_sha256") != official.get("sha256") or
+                paid.get("outcome") != official["outcome"] or
+                paid.get("payouts") != official["payouts"] or
+                paid.get("n") != 13 or
+                len(paid.get("budgets", [])) != 2):
+                continue
+            target_result = dest / "data" / "form_model_settlements" / (str(n) + ".json")
+            target_result.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(settled_file, target_result)
+            row["v14_settled"] = True
+            model_settled_count += 1
+            evaluated.append(paid)
+        except (OSError, ValueError, TypeError, KeyError, ZeroDivisionError, json.JSONDecodeError):
+            pass
+    status["market_movement_rounds"] = moves_count
+    status["experimental_form_rounds"] = model_count
+    status["experimental_form_settled_rounds"] = model_settled_count
+
+    # Progress begins ONLY with genuinely prospective, dated experiments.
+    # No historical Elo or screenshot results are counted as live v14 proof.
+    if evaluated:
+        scores = {"market_brier_sum": 0., "form_brier_sum": 0.,
+                  "market_log_loss_sum": 0., "form_log_loss_sum": 0.}
+        for entry in evaluated:
+            for name in scores:
+                scores[name] += float(entry["forecast_scores"][name])
+        n = sum(entry["n"] for entry in evaluated)
+        scoreboard = {
+            "schema": "stryktipslabbet-form-model-progress-v1",
+            "model_version": "form-overlay-preregistered-2026-11-13-v14",
+            "settled_rounds": len(evaluated),
+            "match_signs_scored": n,
+            "brier_market": round(scores["market_brier_sum"]/n, 6),
+            "brier_form": round(scores["form_brier_sum"]/n, 6),
+            "log_loss_market": round(scores["market_log_loss_sum"]/n, 6),
+            "log_loss_form": round(scores["form_log_loss_sum"]/n, 6),
+            "note": "Bara frysta framtidsprognoser; lottade matcher ännu inte exkluderade och få omgångar ger osäker jämförelse.",
+        }
+        (dest / "data" / "form-model-progress.json").write_text(
+            json.dumps(scoreboard, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
