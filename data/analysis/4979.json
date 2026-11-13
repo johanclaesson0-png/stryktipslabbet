@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-frozen-analysis-v1",
   "model_version": "market-no-vig-v1",
   "draw_number": 4979,
-  "observed_at_utc": "2026-11-13T00:42:18.586582+00:00",
+  "observed_at_utc": "2026-11-13T06:00:36.759005+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
   "source": "Svenska Spel publikt API",
-  "source_snapshot_sha256": "2f04a37cd9ce4c0c78fdf0dc605f61dc7c9e85fde8219ac0cb58da6b19a23185",
+  "source_snapshot_sha256": "4beb7a82d16e29eda074402a9b8a9d09fe6683307db858eed961181b2df72cb6",
   "budget_limit": 1800,
   "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
   "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
@@ -20,9 +20,9 @@
         6.5
       ],
       "streck": [
-        66.0,
+        67.0,
         19.0,
-        15.0
+        14.0
       ],
       "p": [
         0.637757823,
@@ -30,9 +30,9 @@
         0.15011838
       ],
       "edge": [
-        -0.022242,
+        -0.032242,
         0.022124,
-        0.000118
+        0.010118
       ]
     },
     {
@@ -70,9 +70,9 @@
         13.0
       ],
       "streck": [
-        69.0,
+        70.0,
         16.0,
-        15.0
+        14.0
       ],
       "p": [
         0.780433574,
@@ -80,9 +80,9 @@
         0.07504169
       ],
       "edge": [
-        0.090434,
+        0.080434,
         -0.015475,
-        -0.074958
+        -0.064958
       ]
     },
     {
@@ -165,23 +165,23 @@
       "home": "Georgien",
       "away": "Ungern",
       "odds": [
-        3.05,
         3.15,
+        3.05,
         2.4
       ],
       "streck": [
-        30.0,
-        28.0,
+        29.0,
+        29.0,
         42.0
       ],
       "p": [
-        0.308728943,
         0.298928025,
+        0.308728943,
         0.392343032
       ],
       "edge": [
-        0.008729,
-        0.018928,
+        0.008928,
+        0.018729,
         -0.027657
       ]
     },
