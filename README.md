@@ -1,4 +1,4 @@
-# Stryktipslabbet 11.0
+# Stryktipslabbet 12.0
 
 **Stryktipslabbet** är en svensk mobilanpassad analysapp för Stryktipset, anpassad till ett tipslag med 10 deltagare och ett budgettak på **1 800 kr per omgång**. Den lämnar aldrig in spel.
 
@@ -8,6 +8,7 @@
 - Datastatus: https://johanclaesson0-png.github.io/stryktipslabbet/status.html
 - Automatiska systemförslag: https://johanclaesson0-png.github.io/stryktipslabbet/veckans-analys.html
 - Spikvakten: https://johanclaesson0-png.github.io/stryktipslabbet/spikvakt.html
+- **Femårsarkiv och lagstatistik:** https://johanclaesson0-png.github.io/stryktipslabbet/datadjup.html
 
 Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → Build and deployment → Source** och välj **GitHub Actions**. Kontrollera under **Settings → Actions → General** att Actions får köras och att GitHub-tokenen har skrivbehörighet för arkivlagring. Kör därefter arbetsflödet manuellt via **Actions → Stryktipslabbet – samla och publicera → Run workflow**.
 
@@ -19,7 +20,7 @@ Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → 
 - scripts/collect.py: tidsstämplad, läsande insamling av framtida Stryktipsomgångar och officiellt facit.
 - scripts/analyze.py: räknar fram sannolikheter från observerade odds, optimerar tre matematiska system under budgettaket, arkiverar varianter före spelstopp och rättar mot officiellt facit.
 - scripts/publish.py: bygger enbart validerad publik webbinformation och de senast arkiverade omgångarna.
-- tests/test_pipeline.py, tests/test_analysis.py, tests/test_solo.py och tests/test_spikvakt.py: 29 automatiserade testfall.
+- tests/test_pipeline.py, tests/test_analysis.py, tests/test_solo.py och tests/test_spikvakt.py: 38 automatiserade testfall.
 - .github/workflows/stryktipslabbet.yml: bygg-, insamlings- och publiceringsflöde.
 - data/2024-2026-datatackning.csv och data/2024-2026-simulerade-system.csv: äldre experimentella backtests.
 
@@ -84,3 +85,29 @@ Sida: https://johanclaesson0-png.github.io/stryktipslabbet/spikvakt.html
 **Status:** funktionerna är byggda och testerna passerar. Det är ännu INTE visat att Spikvakten förbättrar träffsäkerhet eller utdelning. På vissa kuponger blir testförslagen identiska med grundmodellen. Förväntad avkastning kan inte beräknas utan tillförlitliga pott- och utdelningsdata. Lottade/inställda matcher bör framöver skiljas från spelade matcher i prognoskvalitetsmått.
 
 18+ – Spela ansvarsfullt och använd en fast förlustgräns.
+
+
+## Version 12 – fem års historik och utökad förhandsinformation
+
+**Femårshistorik:** data/history/stryktipset-five-years.csv innehåller 262 kuponger och 3 406 matcher från 13 november 2021 till 7 november 2026. Källan är ett publikt resultatarkiv som speglar Svenska Spels publicerade omgångsfacit: https://github.com/andreyhgl/stryktipset-results. Källan och begränsningarna dokumenteras i data/history/source.json.
+
+**Kronologiskt modelltest:** scripts/history5.py går igenom omgångarna i tidsordning. Den använder en historisk, förenklad Elo-baslinje som bara känner till äldre kupongresultat. 2021/22 används som uppvärmning; 210 omgångar efter 13 november 2022 utvärderas med Brier score och matematiska 96/1800-system. Det är INTE ett test av dagens oddsmodell. Eftersom vi saknar säkra historiska förhandsodds/-streck får de inte rekonstrueras med efterhandsinformation. Resultatmått och per-år-statistik finns i data/history/summary.json.
+
+**Officiella utdelningar:** scripts/historical_payouts.py försöker stegvis kontrollera gamla utbetalningar mot Svenska Spels officiella resultat-API, högst åtta äldre omgångar per schemalagd körning. Endast bekräftade resultat och belopp lagras; enbart facit innebär inte automatiskt verifierat vinstbelopp. Matchresultat som verkar administrativt bestämda markeras separat i historikens prognoskvalitetsmätning.
+
+**Ligahistorik för aktuell form:** scripts/league_history.py hämtar matchresultat från OpenFootball / football.json, licens CC0-1.0: https://github.com/openfootball/football.json. Säsonger 2021/22–2026/27 och de stora engelska/europeiska ligor som finns i katalogen läses gradvis in. Aktuell säsong kan uppdateras högst dagligen; källmaterialet är ibland ofullständigt eller försenat och måste bedömas per lag.
+
+**Förhandsrapporter:** varje ny omgång kan visa:
+- Fem och tio senast tillgängliga ligamatcher (vinst, kryss, förlust).
+- Mål för och emot samt poäng per match.
+- Separat hemma-/bortaform.
+- Datum för senaste tillgängliga match och antal historiska matcher.
+- Tidigare möten i täckta ligor.
+- Sannolikheter från observerade odds och folkets streck.
+- Täckningsstatus per match (bra/delvis/saknas) och källor.
+
+Skriptet beräknar endast statistik på matcher vars datum är **strikt före kupongens förhandsobservation**. Rapporter skapas bara före spelstopp, är knutna till den exakta förhandsobservationen och visas via datadjup.html. Om en liga eller ett lag saknas visas detta tydligt. Vi lovar aldrig att vi har korrekta startelvor/skador utan en verifierad separat källa.
+
+**Källvillkor:** football-data.co.uk har publicerade användningsbegränsningar för automatiserad inhämtning/AI. Ingen sådan källa hämtas automatiskt här; OpenFootball används för öppna licensierade resultat. Vi hämtar inte historiska förhandsodds från slutresultat.
+
+**Driftsättning:** GitHub Actions tar högst 14 nya ligafiler och åtta resultatutdelningar per körning. Den fulla ligahistoriken och kontrollen av gamla utdelningar fylls därför successivt på; datadjup.html visar hur mycket som verkligen är tillgängligt. Nya automatiska CI-tester säkerställer att dagens och framtida matchresultat inte får ingå i föregående dagars formtal.
