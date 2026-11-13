@@ -4,10 +4,10 @@
   "source_observed_at_utc": "2026-11-13T15:30:46.070511+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
   "source_snapshot_sha256": "8a5c498214dd37fed3bc5e7fe3e141b0ddfdf81329463b7f2af4b6a87846101c",
-  "created_at_utc": "2026-11-13T15:47:05.419473+00:00",
+  "created_at_utc": "2026-11-13T15:47:49.642763+00:00",
   "cutoff_date_exclusive": "2026-11-13",
   "source": "OpenFootball football.json · CC0 1.0",
-  "league_files_read": 28,
+  "league_files_read": 42,
   "complete_matches": 4,
   "partial_matches": 2,
   "missing_matches": 7,
@@ -609,7 +609,7 @@
       ],
       "home_form": {
         "canonical_name": "milton keynes dons",
-        "games_available": 22,
+        "games_available": 68,
         "last5": {
           "n": 5,
           "points_per_game": 2.2,
@@ -692,7 +692,7 @@
       ],
       "home_form": {
         "canonical_name": "sheffield wednesday",
-        "games_available": 43,
+        "games_available": 89,
         "last5": {
           "n": 5,
           "points_per_game": 1.0,
@@ -725,7 +725,7 @@
       },
       "away_form": {
         "canonical_name": "plymouth argyle",
-        "games_available": 22,
+        "games_available": 68,
         "last5": {
           "n": 5,
           "points_per_game": 1.2,
@@ -756,7 +756,7 @@
         "last_match_date": "2025-12-29",
         "form_last5": "FFVVF"
       },
-      "h2h_last5": 0,
+      "h2h_last5": 2,
       "coverage": "båda"
     },
     {
@@ -808,7 +808,7 @@
       },
       "away_form": {
         "canonical_name": "reading",
-        "games_available": 23,
+        "games_available": 69,
         "last5": {
           "n": 5,
           "points_per_game": 1.0,
@@ -858,7 +858,7 @@
       ],
       "home_form": {
         "canonical_name": "wimbledon",
-        "games_available": 23,
+        "games_available": 69,
         "last5": {
           "n": 5,
           "points_per_game": 2.0,
@@ -891,7 +891,7 @@
       },
       "away_form": {
         "canonical_name": "blackpool",
-        "games_available": 23,
+        "games_available": 69,
         "last5": {
           "n": 5,
           "points_per_game": 0.8,
@@ -941,7 +941,7 @@
       ],
       "home_form": {
         "canonical_name": "wigan athletic",
-        "games_available": 23,
+        "games_available": 69,
         "last5": {
           "n": 5,
           "points_per_game": 2.4,
@@ -974,7 +974,7 @@
       },
       "away_form": {
         "canonical_name": "barnsley",
-        "games_available": 20,
+        "games_available": 66,
         "last5": {
           "n": 5,
           "points_per_game": 2.6,
@@ -1005,7 +1005,7 @@
         "last_match_date": "2025-12-29",
         "form_last5": "OVVVV"
       },
-      "h2h_last5": 0,
+      "h2h_last5": 2,
       "coverage": "båda"
     },
     {
@@ -1024,7 +1024,7 @@
       ],
       "home_form": {
         "canonical_name": "swindon town",
-        "games_available": 22,
+        "games_available": 68,
         "last5": {
           "n": 5,
           "points_per_game": 1.4,
@@ -1057,7 +1057,7 @@
       },
       "away_form": {
         "canonical_name": "grimsby town",
-        "games_available": 22,
+        "games_available": 68,
         "last5": {
           "n": 5,
           "points_per_game": 0.2,
@@ -1088,7 +1088,7 @@
         "last_match_date": "2025-12-26",
         "form_last5": "FFFFO"
       },
-      "h2h_last5": 1,
+      "h2h_last5": 3,
       "coverage": "båda"
     }
   ],
