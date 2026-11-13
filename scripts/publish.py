@@ -81,6 +81,7 @@ def main():
     shutil.copy2(root / "veckans-analys.html", dest / "veckans-analys.html")
     shutil.copy2(root / "fordjupning.html", dest / "fordjupning.html")
     shutil.copy2(root / "spela-sjalv.html", dest / "spela-sjalv.html")
+    shutil.copy2(root / "spikvakt.html", dest / "spikvakt.html")
 
     now = datetime.now(timezone.utc)
     status = {
@@ -317,6 +318,56 @@ def main():
                 json.dumps(public_history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     status["personal_100_analyses_published"] = sum(bool(r["personal_available"]) for r in public_rounds)
     status["personal_100_settlements_published"] = sum(bool(r["personal_settled"]) for r in public_rounds)
+
+
+    # Publicera Spikvakt enbart om den kan byggas om från *samma* tidsfrysta
+    # förhandskupong och modellversion. Ingen modell skapas bakåt i tiden.
+    from scripts.spikvakt import validate as validate_spikvakt, SETTLED as SPIKVAKT_SETTLED
+    from scripts.solo import validate as validate_personal
+    guard_count = guard_settled_count = 0
+    for row in public_rounds:
+        n = row["draw_number"]
+        row["guard_available"] = False
+        row["guard_settled"] = False
+        if not row.get("personal_available"):
+            continue
+        base_path = root / "data" / "analysis" / (str(n) + ".json")
+        solo_path = root / "data" / "personal" / (str(n) + ".json")
+        guard_path = root / "data" / "spikvakt" / (str(n) + ".json")
+        try:
+            base = json.loads(base_path.read_text(encoding="utf-8"))
+            solo = json.loads(solo_path.read_text(encoding="utf-8"))
+            guard = json.loads(guard_path.read_text(encoding="utf-8"))
+            if not valid_personal(solo, base) or not validate_spikvakt(guard, base, solo):
+                continue
+            target = dest / "data" / "spikvakt" / (str(n) + ".json")
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(guard_path, target)
+            row["guard_available"] = True
+            guard_count += 1
+            payout_file = root / "data" / "spikvakt_settlements" / (str(n) + ".json")
+            if n in verified_result_draws and payout_file.exists():
+                paid = json.loads(payout_file.read_text(encoding="utf-8"))
+                official = json.loads(
+                    (root / "data" / "results" / (str(n) + ".json")).read_text(encoding="utf-8"))
+                if (paid.get("schema") == SPIKVAKT_SETTLED and
+                    paid.get("version") == guard["version"] and
+                    paid.get("draw_number") == n and
+                    paid.get("source_observed_at_utc") == base["observed_at_utc"] and
+                    paid.get("report_created_at_utc") == guard["created_at_utc"] and
+                    paid.get("source_snapshot_sha256") == base.get("source_snapshot_sha256") and
+                    paid.get("result_sha256") == official.get("sha256") and
+                    paid.get("result_outcome") == official["outcome"] and
+                    len(paid.get("budgets", [])) == 2):
+                    dest_result = dest / "data" / "spikvakt_settlements" / (str(n) + ".json")
+                    dest_result.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(payout_file, dest_result)
+                    row["guard_settled"] = True
+                    guard_settled_count += 1
+        except (KeyError, ValueError, TypeError, OSError, json.JSONDecodeError):
+            continue
+    status["spikvakt_analyses_published"] = guard_count
+    status["spikvakt_settlements_published"] = guard_settled_count
 
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
