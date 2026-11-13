@@ -1,0 +1,815 @@
+{
+  "schema": "stryktipslabbet-league-results-v1",
+  "season": "2025-26",
+  "league": "es.2",
+  "source": "OpenFootball football.json · CC0 1.0",
+  "source_url": "https://raw.githubusercontent.com/openfootball/football.json/master/2025-26/es.2.json",
+  "fetched_at_utc": "2026-11-13T15:47:05.419473+00:00",
+  "matches": [
+    {
+      "date": "2025-08-15",
+      "home": "burgos",
+      "away": "cultural leonesa",
+      "home_goals": 5,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-15",
+      "home": "real valladolid",
+      "away": "ad ceuta",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-08-16",
+      "home": "granada",
+      "away": "deportivo la coruna",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-08-16",
+      "home": "malaga",
+      "away": "sd eibar",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-16",
+      "home": "racing santander",
+      "away": "cd castellon",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-17",
+      "home": "cadiz",
+      "away": "cd mirandes",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-08-17",
+      "home": "real sociedad b",
+      "away": "real zaragoza",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-08-17",
+      "home": "sd huesca",
+      "away": "cd leganes",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-17",
+      "home": "ud las palmas",
+      "away": "fc andorra",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-18",
+      "home": "sporting gijon",
+      "away": "cordoba",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-18",
+      "home": "ud almeria",
+      "away": "albacete",
+      "home_goals": 4,
+      "away_goals": 4
+    },
+    {
+      "date": "2025-08-22",
+      "home": "cd castellon",
+      "away": "real valladolid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-22",
+      "home": "cd leganes",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-22",
+      "home": "sd eibar",
+      "away": "granada",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-08-23",
+      "home": "ad ceuta",
+      "away": "sporting gijon",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-23",
+      "home": "cd mirandes",
+      "away": "sd huesca",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-23",
+      "home": "real zaragoza",
+      "away": "fc andorra",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-08-24",
+      "home": "cultural leonesa",
+      "away": "ud almeria",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-24",
+      "home": "malaga",
+      "away": "real sociedad b",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-08-25",
+      "home": "albacete",
+      "away": "racing santander",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-08-25",
+      "home": "cordoba",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-08-29",
+      "home": "real sociedad b",
+      "away": "ud almeria",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-08-29",
+      "home": "sporting gijon",
+      "away": "cultural leonesa",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-08-30",
+      "home": "cd castellon",
+      "away": "real zaragoza",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-30",
+      "home": "racing santander",
+      "away": "ad ceuta",
+      "home_goals": 4,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-31",
+      "home": "cadiz",
+      "away": "albacete",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-31",
+      "home": "fc andorra",
+      "away": "burgos",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-08-31",
+      "home": "granada",
+      "away": "cd mirandes",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-08-31",
+      "home": "ud las palmas",
+      "away": "malaga",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-01",
+      "home": "cd leganes",
+      "away": "deportivo la coruna",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-09-01",
+      "home": "sd huesca",
+      "away": "sd eibar",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-05",
+      "home": "albacete",
+      "away": "cd mirandes",
+      "home_goals": 1,
+      "away_goals": 4
+    },
+    {
+      "date": "2025-09-05",
+      "home": "cordoba",
+      "away": "cd castellon",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-06",
+      "home": "deportivo la coruna",
+      "away": "sporting gijon",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-09-06",
+      "home": "malaga",
+      "away": "granada",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-09-06",
+      "home": "real zaragoza",
+      "away": "real valladolid",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-07",
+      "home": "ad ceuta",
+      "away": "sd huesca",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-07",
+      "home": "real sociedad b",
+      "away": "cadiz",
+      "home_goals": 3,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-09-07",
+      "home": "ud almeria",
+      "away": "racing santander",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-09-08",
+      "home": "sd eibar",
+      "away": "fc andorra",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-09-12",
+      "home": "ud las palmas",
+      "away": "real sociedad b",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-13",
+      "home": "cadiz",
+      "away": "sd eibar",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-09-13",
+      "home": "cd mirandes",
+      "away": "deportivo la coruna",
+      "home_goals": 1,
+      "away_goals": 5
+    },
+    {
+      "date": "2025-09-13",
+      "home": "real valladolid",
+      "away": "ud almeria",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-13",
+      "home": "sd huesca",
+      "away": "malaga",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-09-14",
+      "home": "cd castellon",
+      "away": "ad ceuta",
+      "home_goals": 3,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-09-14",
+      "home": "fc andorra",
+      "away": "cordoba",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-14",
+      "home": "granada",
+      "away": "cd leganes",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-09-14",
+      "home": "racing santander",
+      "away": "cultural leonesa",
+      "home_goals": 2,
+      "away_goals": 4
+    },
+    {
+      "date": "2025-09-14",
+      "home": "sporting gijon",
+      "away": "burgos",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-09-19",
+      "home": "deportivo la coruna",
+      "away": "sd huesca",
+      "home_goals": 4,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-09-20",
+      "home": "cd leganes",
+      "away": "ud las palmas",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-20",
+      "home": "cultural leonesa",
+      "away": "cd castellon",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-09-20",
+      "home": "fc andorra",
+      "away": "cd mirandes",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-20",
+      "home": "ud almeria",
+      "away": "sporting gijon",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-21",
+      "home": "ad ceuta",
+      "away": "real zaragoza",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-09-21",
+      "home": "albacete",
+      "away": "real valladolid",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-09-21",
+      "home": "cordoba",
+      "away": "racing santander",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-09-21",
+      "home": "malaga",
+      "away": "cadiz",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-21",
+      "home": "sd eibar",
+      "away": "real sociedad b",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-22",
+      "home": "burgos",
+      "away": "granada",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-26",
+      "home": "cd mirandes",
+      "away": "real zaragoza",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-27",
+      "home": "racing santander",
+      "away": "fc andorra",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-09-27",
+      "home": "sd eibar",
+      "away": "deportivo la coruna",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-27",
+      "home": "ud las palmas",
+      "away": "ud almeria",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-28",
+      "home": "burgos",
+      "away": "malaga",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-28",
+      "home": "real sociedad b",
+      "away": "cordoba",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-28",
+      "home": "real valladolid",
+      "away": "cultural leonesa",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-28",
+      "home": "sd huesca",
+      "away": "granada",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-09-28",
+      "home": "sporting gijon",
+      "away": "albacete",
+      "home_goals": 3,
+      "away_goals": 4
+    },
+    {
+      "date": "2025-09-29",
+      "home": "cd leganes",
+      "away": "cd castellon",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-03",
+      "home": "ad ceuta",
+      "away": "sd eibar",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-04",
+      "home": "deportivo la coruna",
+      "away": "ud almeria",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-04",
+      "home": "fc andorra",
+      "away": "cd leganes",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-10-04",
+      "home": "granada",
+      "away": "real sociedad b",
+      "home_goals": 5,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-10-04",
+      "home": "sd huesca",
+      "away": "burgos",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-05",
+      "home": "cd castellon",
+      "away": "sporting gijon",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-05",
+      "home": "racing santander",
+      "away": "malaga",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-05",
+      "home": "real valladolid",
+      "away": "cd mirandes",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-05",
+      "home": "real zaragoza",
+      "away": "cordoba",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-05",
+      "home": "ud las palmas",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-11",
+      "home": "real sociedad b",
+      "away": "fc andorra",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-11",
+      "home": "ud almeria",
+      "away": "real zaragoza",
+      "home_goals": 4,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-10-12",
+      "home": "burgos",
+      "away": "real valladolid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-12",
+      "home": "cadiz",
+      "away": "sd huesca",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-12",
+      "home": "malaga",
+      "away": "deportivo la coruna",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-12",
+      "home": "sporting gijon",
+      "away": "racing santander",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-13",
+      "home": "cordoba",
+      "away": "cultural leonesa",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-18",
+      "home": "ad ceuta",
+      "away": "cd mirandes",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-18",
+      "home": "real zaragoza",
+      "away": "cultural leonesa",
+      "home_goals": 0,
+      "away_goals": 5
+    },
+    {
+      "date": "2025-10-19",
+      "home": "cd castellon",
+      "away": "albacete",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-19",
+      "home": "cd leganes",
+      "away": "malaga",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-19",
+      "home": "cordoba",
+      "away": "ud almeria",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-19",
+      "home": "racing santander",
+      "away": "deportivo la coruna",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-19",
+      "home": "real valladolid",
+      "away": "sporting gijon",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-10-19",
+      "home": "ud las palmas",
+      "away": "sd eibar",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-20",
+      "home": "cadiz",
+      "away": "burgos",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-10-24",
+      "home": "sd huesca",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-25",
+      "home": "albacete",
+      "away": "cordoba",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-10-25",
+      "home": "burgos",
+      "away": "real sociedad b",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-25",
+      "home": "cd mirandes",
+      "away": "racing santander",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2025-10-25",
+      "home": "cultural leonesa",
+      "away": "ad ceuta",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-26",
+      "home": "deportivo la coruna",
+      "away": "real valladolid",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-26",
+      "home": "malaga",
+      "away": "fc andorra",
+      "home_goals": 4,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-10-26",
+      "home": "sporting gijon",
+      "away": "real zaragoza",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-26",
+      "home": "ud almeria",
+      "away": "cd castellon",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-10-31",
+      "home": "racing santander",
+      "away": "real sociedad b",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-11-01",
+      "home": "albacete",
+      "away": "sd huesca",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-11-01",
+      "home": "cd leganes",
+      "away": "burgos",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-11-01",
+      "home": "cultural leonesa",
+      "away": "cd mirandes",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-11-01",
+      "home": "ud almeria",
+      "away": "sd eibar",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-11-02",
+      "home": "cd castellon",
+      "away": "malaga",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2025-11-02",
+      "home": "cordoba",
+      "away": "ad ceuta",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2025-11-02",
+      "home": "real zaragoza",
+      "away": "deportivo la coruna",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2025-11-03",
+      "home": "real valladolid",
+      "away": "granada",
+      "home_goals": 2,
+      "away_goals": 1
+    }
+  ]
+}
