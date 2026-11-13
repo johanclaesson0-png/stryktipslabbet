@@ -1,0 +1,320 @@
+{
+  "schema": "stryktipslabbet-spikvakt-v1",
+  "version": "spikvakt-fixed-2026-11-13-v1",
+  "draw_number": 4979,
+  "source_observed_at_utc": "2026-11-13T15:30:46.070511+00:00",
+  "reg_close_time": "2026-11-14T14:59:00+00:00",
+  "source_snapshot_sha256": "8a5c498214dd37fed3bc5e7fe3e141b0ddfdf81329463b7f2af4b6a87846101c",
+  "created_at_utc": "2026-11-13T15:30:46.243913+00:00",
+  "spike_threshold": 0.55,
+  "x_threshold": 0.27,
+  "safe_penalty": 0.85,
+  "draw_bonus": 0.9,
+  "budgets": [
+    {
+      "budget": 1800,
+      "baseline_cost": 1458,
+      "baseline_choices": [
+        "1",
+        "1",
+        "1",
+        "X2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2"
+      ],
+      "baseline_p13": 0.045005112,
+      "baseline_miss_risk_spikes": 1,
+      "baseline_x_included": 7,
+      "risk_report": {
+        "spikes": [
+          {
+            "number": 10,
+            "home": "Stockport",
+            "away": "Reading",
+            "chosen": "1",
+            "estimated_miss_probability": 0.484458,
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.246917,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 8,
+            "home": "Milton Keynes Dons",
+            "away": "Burton",
+            "chosen": "1",
+            "estimated_miss_probability": 0.438374,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.234479,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 6,
+            "home": "Österrike",
+            "away": "Irland",
+            "chosen": "1",
+            "estimated_miss_probability": 0.394871,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.236148,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 1,
+            "home": "Sverige",
+            "away": "Bosnien & Hercegovina",
+            "chosen": "1",
+            "estimated_miss_probability": 0.348416,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.20362,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 2,
+            "home": "Portugal",
+            "away": "Danmark",
+            "chosen": "1",
+            "estimated_miss_probability": 0.346763,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.203535,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 3,
+            "home": "Norge",
+            "away": "Wales",
+            "chosen": "1",
+            "estimated_miss_probability": 0.209932,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.139955,
+            "cost_if_added_without_rebalancing": 2916
+          }
+        ],
+        "possible_draws": []
+      },
+      "experiments": [
+        {
+          "key": "safe",
+          "name": "Färre osäkra spikar (test)",
+          "cost": 1458,
+          "choices": [
+            "1",
+            "1",
+            "1",
+            "X2",
+            "1X2",
+            "1",
+            "1X2",
+            "1",
+            "1X2",
+            "1",
+            "1X2",
+            "1X2",
+            "1X2"
+          ],
+          "estimated_p13": 0.045005112,
+          "miss_risk_spikes": 1,
+          "x_included": 7
+        },
+        {
+          "key": "draw",
+          "name": "Titta extra på kryss (test)",
+          "cost": 1458,
+          "choices": [
+            "1",
+            "1",
+            "1",
+            "X2",
+            "1X2",
+            "1",
+            "1X2",
+            "1",
+            "1X2",
+            "1",
+            "1X2",
+            "1X2",
+            "1X2"
+          ],
+          "estimated_p13": 0.045005112,
+          "miss_risk_spikes": 1,
+          "x_included": 7
+        }
+      ]
+    },
+    {
+      "budget": 100,
+      "baseline_cost": 96,
+      "baseline_choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "1X2",
+        "1",
+        "X2",
+        "1",
+        "12",
+        "1",
+        "12",
+        "12",
+        "12"
+      ],
+      "baseline_p13": 0.006161442,
+      "baseline_miss_risk_spikes": 2,
+      "baseline_x_included": 2,
+      "risk_report": {
+        "spikes": [
+          {
+            "number": 4,
+            "home": "Rumänien",
+            "away": "Polen",
+            "chosen": "2",
+            "estimated_miss_probability": 0.487675,
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.251505,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 10,
+            "home": "Stockport",
+            "away": "Reading",
+            "chosen": "1",
+            "estimated_miss_probability": 0.484458,
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.246917,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 8,
+            "home": "Milton Keynes Dons",
+            "away": "Burton",
+            "chosen": "1",
+            "estimated_miss_probability": 0.438374,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.234479,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 6,
+            "home": "Österrike",
+            "away": "Irland",
+            "chosen": "1",
+            "estimated_miss_probability": 0.394871,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.236148,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 1,
+            "home": "Sverige",
+            "away": "Bosnien & Hercegovina",
+            "chosen": "1",
+            "estimated_miss_probability": 0.348416,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.20362,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 2,
+            "home": "Portugal",
+            "away": "Danmark",
+            "chosen": "1",
+            "estimated_miss_probability": 0.346763,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.203535,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 3,
+            "home": "Norge",
+            "away": "Wales",
+            "chosen": "1",
+            "estimated_miss_probability": 0.209932,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.139955,
+            "cost_if_added_without_rebalancing": 192
+          }
+        ],
+        "possible_draws": [
+          {
+            "number": 11,
+            "home": "Wimbledon",
+            "away": "Blackpool",
+            "x_probability": 0.276743,
+            "crowd_x_percentage": 29.0,
+            "x_minus_crowd_percentage_points": -1.326,
+            "extra_row_cost_to_include_x_alone": 144,
+            "requires_rebalancing": true
+          }
+        ]
+      },
+      "experiments": [
+        {
+          "key": "safe",
+          "name": "Färre osäkra spikar (test)",
+          "cost": 96,
+          "choices": [
+            "1",
+            "1",
+            "1",
+            "2",
+            "1X2",
+            "1",
+            "X2",
+            "1",
+            "12",
+            "1",
+            "12",
+            "12",
+            "12"
+          ],
+          "estimated_p13": 0.006161442,
+          "miss_risk_spikes": 2,
+          "x_included": 2
+        },
+        {
+          "key": "draw",
+          "name": "Titta extra på kryss (test)",
+          "cost": 96,
+          "choices": [
+            "1",
+            "1",
+            "1",
+            "2",
+            "1X2",
+            "1",
+            "X2",
+            "1",
+            "12",
+            "1",
+            "12",
+            "12",
+            "12"
+          ],
+          "estimated_p13": 0.006161442,
+          "miss_risk_spikes": 2,
+          "x_included": 2
+        }
+      ]
+    }
+  ],
+  "disclaimer": "Experiment på förhandsodds, inte tränad förbättring eller påvisat spelvärde."
+}
