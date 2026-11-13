@@ -19,7 +19,7 @@ select{padding:10px;border-radius:9px;background:#14273a;color:var(--fg);border:
 <section id="content" hidden>
 <div class="panel"><h2>Tre förslag – exakt samma insats</h2><p class="small">Det första är grundmodellen. De andra två testar andra sätt att välja garderingar. <b>Ingen</b> strategi är bevisad bättre. Sannolikheten bygger bara på de hämtade speloddsen.</p><div class="cards" id="profiles"></div></div>
 <div class="split">
-<section class="panel"><h2>Osäkra spikar</h2><p class="small">En spik betyder ett enda tecken i matchen. Här visas de spikar som modellen bedömer har störst risk att missas.</p><div class="tablewrap"><table><thead><tr><th>Match</th><th>Spik</th><th>Risk att missa</th></tr></thead><tbody id="spikes"></tbody></table></div><p class="small" id="spikeInfo"></p></section>
+<section class="panel"><h2>Osäkra spikar</h2><p class="small">En spik betyder ett enda tecken i matchen. Här visas de spikar som modellen bedömer har störst risk att missas.</p><div class="tablewrap"><table><thead><tr><th>Match</th><th>Spik</th><th>Risk att missa</th><th>Extra tecken</th><th>Ny kostnad</th></tr></thead><tbody id="spikes"></tbody></table></div><p class="small" id="spikeInfo"></p></section>
 <section class="panel"><h2>Oavgjort att titta på</h2><p class="small">Här har grundsystemet INTE kryss, trots att modellen bedömer att oavgjort har minst 27 % chans.</p><div class="tablewrap"><table><thead><tr><th>Match</th><th>Chans X</th><th>Ny kostnad med X</th></tr></thead><tbody id="drawsTable"></tbody></table></div><p class="small">”Ny kostnad” gäller bara om du lägger till X utan att ändra andra tecken. Om beloppet överskrider budgeten måste någon annan gardering tas bort.</p></section>
 </div>
 <section class="panel" id="after" hidden><h2>Så gick det efter matcherna</h2><p class="small">Vi mäter alla testförslagen mot samma officiella resultat och utdelningar. Det är hypotetiska system, inte bekräftade inlämnade spel.</p><div class="tablewrap"><table><thead><tr><th>Förslag</th><th>Täckta matcher</th><th>Rader med 13 rätt</th><th>Netto</th></tr></thead><tbody id="afterRows"></tbody></table></div></section>
@@ -65,9 +65,10 @@ function draw(){
  const rr=group.risk_report;
  for(const x of rr.spikes) tableRow('spikes',[
    x.number+'. '+x.home+' – '+x.away,
-   x.chosen, PCT(x.estimated_miss_probability)+(x.high_risk?' ⚠':'')
+   x.chosen, PCT(x.estimated_miss_probability)+(x.high_risk?' ⚠':''),
+   x.suggested_second_sign+' (+'+PCT(x.extra_outcome_probability)+')',SEK(x.cost_if_added_without_rebalancing)
  ]);
- e('spikeInfo').textContent='Grundsystemet har '+rr.spikes.length+' spikar. De som är markerade med ⚠ bedöms ha lägre än 55 % chans att gå in.';
+ e('spikeInfo').textContent='Grundsystemet har '+rr.spikes.length+' spikar. ⚠ = mindre än 55 % chans. Extra tecken visar vilket andra tecken modellen föredrar och vad systemet skulle kosta utan att ta bort en annan gardering.';
  for(const x of rr.possible_draws) tableRow('drawsTable',[
    x.number+'. '+x.home+' – '+x.away,PCT(x.x_probability),SEK(x.extra_row_cost_to_include_x_alone)
  ]);
