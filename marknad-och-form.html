@@ -122,7 +122,19 @@ async function show(number){
   renderMoves();renderForm();
  }catch(ex){note('Kunde inte läsa kupongdata: '+ex.message,false)}
 }
+async function loadProgress(){
+ try{
+  const q=await get('./data/form-model-progress.json');
+  if(q.schema!=='stryktipslabbet-form-model-progress-v1')return;
+  e('progress').textContent='Framåttest: '+q.settled_rounds+' rättade omgångar, '+
+    q.match_signs_scored+' tecken. Brier odds: '+f(q.brier_market)+' · Brier form: '+f(q.brier_form)+
+    ' (lägre är bättre). Underlaget är fortfarande litet och kan omfatta lottade matcher.';
+ }catch(err){
+  e('progress').textContent='Vi har ännu inga officiellt rättade, tidsfrysta version 14-omgångar. Jämförelsen börjar när sådana finns.';
+ }
+}
 async function start(){
+ loadProgress();
  try{const index=await get('./data/analysis-index.json');rows=(index.draws||[]).filter(x=>x.moves_available||x.v14_available);
   const sel=e('round');sel.replaceChildren();
   if(!rows.length){note('Inga tidsfrysta version 13/14-rapporter publicerade ännu. Nya rapporter byggs bara före spelstopp.');return}
