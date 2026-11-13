@@ -61,7 +61,7 @@ class SpikvaktTests(unittest.TestCase):
         self.assertFalse(validate(bad, self.analysis, self.solo))
 
     def test_spike_and_draw_reporting(self):
-        p = [{"p": [.44, .30, .26], "home": "H", "away": "B"}] * 13
+        p = [{"p": [.44, .30, .26], "streck": [50, 20, 30], "home": "H", "away": "B"}] * 13
         results = risk_report(["1"] * 13, p)
         self.assertEqual(len(results["spikes"]), 13)
         self.assertEqual(len(results["possible_draws"]), 13)
@@ -70,6 +70,8 @@ class SpikvaktTests(unittest.TestCase):
         self.assertEqual(results["spikes"][0]["suggested_second_sign"], "X")
         self.assertEqual(results["spikes"][0]["cost_if_added_without_rebalancing"], 2)
         self.assertAlmostEqual(results["spikes"][0]["extra_outcome_probability"], .30)
+        self.assertEqual(results["possible_draws"][0]["crowd_x_percentage"], 20)
+        self.assertEqual(results["possible_draws"][0]["x_minus_crowd_percentage_points"], 10)
         self.assertEqual(SPIKE_LIMIT, .55)
         self.assertEqual(DRAW_LIMIT, .27)
 
