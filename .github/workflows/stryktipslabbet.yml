@@ -38,6 +38,10 @@ jobs:
       - name: Hämta öppna ligamatcher och bygg formtabeller
         continue-on-error: true
         run: python -m scripts.league_history --outdir data --limit 14
+      - name: Version 13 – frys historiska odds- och streckrörelser
+        run: python -m scripts.market_moves --outdir data
+      - name: Version 14 – jämför experimentell formmodell med marknadsmodellen
+        run: python -m scripts.feature_model --outdir data
       - name: Verifiera några äldre utdelningar från Svenska Spel
         continue-on-error: true
         run: python -m scripts.historical_payouts --outdir data --limit 8
