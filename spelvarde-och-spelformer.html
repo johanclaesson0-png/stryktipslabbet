@@ -120,6 +120,11 @@ async function showGame(game){
   mk(box,'p','Omgång '+snap.draw_number+' · odds observerade '+new Date(snap.observed_at_utc).toLocaleString('sv-SE'),'small');
   if(Date.now()>=Date.parse(snap.reg_close_time))mk(box,'p','Spelstopp passerat – historisk förhandskupong.','test');
   const systems=a.systems.filter(s=>s.budget_limit===100);
+  if(!a.complete_odds){
+    mk(box,'p','Verkliga '+a.matches.length+' matcher hämtade, men odds saknas i '+(a.matches.length-snap.with_valid_odds)+' matcher. Inga system skapas ännu.','test');
+    const ol=mk(box,'ol','');a.matches.forEach(m=>mk(ol,'li',m.home+' – '+m.away+(m.p?' · odds finns':' · odds saknas')));
+    return;
+  }
   systems.forEach(s=>{
    const d=mk(box,'details','');
    mk(d,'summary',(s.profile==='balanserad'?'Balanserat':'Streckvärde')+' · '+kr(s.cost)+' · chans alla rätt '+pct(s.estimated_all_correct));
