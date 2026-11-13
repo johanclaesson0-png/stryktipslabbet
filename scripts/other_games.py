@@ -222,7 +222,7 @@ def settlement(analysis,result):
                          "all_correct_rows":counts[len(result["outcome"])],
                          "covered_matches":sum(s in c for s,c in zip(result["outcome"],system["choices"])),
                          "paid":round(paid,2),"net":round(paid-system["cost"],2)})
-    return {"schema":SETTLED,"game":result["game"],"draw_number":result["draw_number"],
+    return {"schema":SETTLED_SCHEMA,"game":result["game"],"draw_number":result["draw_number"],
             "source_snapshot_sha256":analysis["source_snapshot_sha256"],
             "official_result_sha256":result["sha256"],"observed_at_utc":analysis["observed_at_utc"],
             "outcome":result["outcome"],"payouts":result["payouts"],
