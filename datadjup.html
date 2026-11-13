@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="sv"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1826"><title>Datadjup och fem års historik – Stryktipslabbet</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1421;--panel:#17283a;--panel2:#203347;--border:#38516a;--text:#f2f7fc;--muted:#b9cad9;--mint:#72dfb5;--gold:#f5c987;--link:#b5d5ff}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(ellipse at 70% -20%,#274c63,transparent 65%),var(--bg)}
+main{max-width:1120px;margin:auto;padding:17px 18px 50px}a{color:var(--link)}nav{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:25px}.brand{font-size:22px;font-weight:850;letter-spacing:-.7px}.brand span{color:var(--mint)}.links{display:flex;gap:15px;flex-wrap:wrap;font-size:13px}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.13;letter-spacing:-1px;margin:8px 0 13px}h2{font-size:22px;margin:0 0 11px;letter-spacing:-.2px}h3{font-size:17px;margin:0 0 7px}p{margin:8px 0 12px}.eyebrow{font-size:11px;font-weight:800;color:var(--mint);text-transform:uppercase;letter-spacing:1.5px}.lead{font-size:18px;color:#d7e6f4;max-width:770px}
+.card{border:1px solid var(--border);background:var(--panel);border-radius:14px;padding:18px;margin:17px 0}.status{border-left:4px solid var(--gold);padding:11px 14px;border-radius:9px;background:#2a3440;margin:16px 0}.subtle{font-size:13px;color:var(--muted)}.caps{font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);font-weight:750}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:15px 0}.kpi{background:#122638;border:1px solid #2b485c;border-radius:12px;padding:13px}.kpi b{display:block;font-size:25px;letter-spacing:-.4px;margin:3px 0;color:var(--mint)}.kpi small{color:var(--muted);font-size:11px}
+.barbox{display:grid;grid-template-columns:60px 1fr 68px;gap:8px;align-items:center;margin:8px 0}.barback{background:#2a3c4f;height:14px;border-radius:5px;overflow:hidden}.bar{height:100%;background:var(--mint);border-radius:5px}.bar.x{background:#d5b471}.bar.two{background:#9fbef6}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid #30495c;padding:10px 8px;text-align:left}th{font-size:11px;color:var(--muted);text-transform:uppercase}td.right,th.right{text-align:right;white-space:nowrap}.scroll{overflow-x:auto}
+.controls{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}select{background:#152839;color:var(--text);border-radius:9px;border:1px solid #4a6980;padding:10px 12px;font:inherit;max-width:100%}select:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+.fixture{padding:15px 0;border-bottom:1px solid #33495c}.fixture:last-child{border-bottom:0}.fixture-title{display:flex;gap:10px;justify-content:space-between;align-items:center}.fixture-title b{font-size:15px}.fixture-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}
+.team{border-radius:10px;background:#102234;border:1px solid #284458;padding:12px}.team b{font-size:14px}.stat{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #30475a;padding:5px 0}.stat:last-child{border-bottom:0}.stat span{font-size:12px;color:var(--muted)}.stat strong{font-size:13px}
+.label{display:inline-block;border-radius:99px;border:1px solid #4a6e67;padding:3px 9px;font-size:12px;color:#c0ffdd}.warning{color:var(--gold)}
+.rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.foot{font-size:12px;color:var(--muted);margin-top:28px;border-top:1px solid var(--border);padding-top:13px}
+@media(max-width:770px){main{padding:14px 12px 48px}.kpis,.rows{grid-template-columns:repeat(2,1fr)}.card{padding:14px}.fixture-grid{grid-template-columns:1fr}.lead{font-size:16px}.kpi b{font-size:21px}table{font-size:12px}}
+</style></head>
+<body><main>
+<nav><div class="brand">STRYKTIPS<span>LABBET</span></div><div class="links"><a href="./index.html">Lagets tips</a><a href="./spela-sjalv.html">Spela själv</a><a href="./spikvakt.html">Spikvakten</a><a href="./status.html">Datastatus</a></div></nav>
+<div class="eyebrow">Mer data – begripligt presenterat</div>
+<h1>Datadjup &amp; fem års historik</h1><p class="lead">Se hur tidigare Stryktipsomgångar faktiskt slutade. Inför nya omgångar får du dessutom se lagens form, hemma-/bortastatistik och hur de senaste matcherna gått.</p>
+<div id="notice" class="status" role="status">Hämtar historik och lagstatistik …</div>
+<section class="card"><h2>Fem års Stryktipsresultat</h2>
+<div class="kpis"><div class="kpi"><small>Avslutade omgångar</small><b id="numRounds">–</b></div><div class="kpi"><small>Matcher i arkivet</small><b id="numMatches">–</b></div><div class="kpi"><small>Femårsperiod</small><b id="years">–</b></div><div class="kpi"><small>Officiellt kontrollerade utdelningar</small><b id="paidRounds">–</b></div></div>
+<p class="subtle">Så ofta har 1, X och 2 blivit rätt tecken i de historiska kupongerna. Detta är historik, inte en prognos för nästa match.</p><div id="bars"></div></section>
+<section class="card"><h2>Hur klarar sig vår äldre modell över tid?</h2>
+<p>Vi testar en enkel resultatmodell i turordning: modellen måste tippa först, och får inte se resultatet förrän nästa omgång. Första året används för att skapa historik. Vi jämför också med en enklare modell som bara känner till den tidigare fördelningen av 1/X/2.</p>
+<div id="backtestStatus" class="subtle"></div><div class="scroll"><table><thead><tr><th>År</th><th class="right">Omgångar</th><th class="right">Träffar 10+ med 96 kr</th><th class="right">Träffar 10+ med högst 1 800 kr</th><th class="right">Brier: äldre modell</th><th class="right">Brier: enkel jämförelse</th></tr></thead><tbody id="backtestRows"></tbody></table></div>
+<p class="subtle">En ”träff 10+” betyder att systemet innehöll minst en rad med 10–13 rätt – det garanterar inte att någon utdelning betalades. Lägre Brier-värde betyder i genomsnitt bättre sannolikhetsbedömning. Testet använder INTE fem års historiska bookmakerodds, eftersom sådana inte ingår i det här arkivet.</p></section>
+<section class="card"><div class="controls"><div><h2>Granska en gammal omgång</h2><p class="subtle">Resultatet är känt i efterhand – inga påståenden om vad vi hade tippat då.</p></div><select id="historicDraw" aria-label="Välj historisk omgång" disabled><option>Laddar…</option></select></div><div id="historicDetails"></div></section>
+<section class="card"><div class="controls"><div><h2>Underliggande data inför kupongen</h2><p class="subtle">Fem/tio senaste matcher, hemma-/bortaform, mål och tidigare möten. Även vilka lag där vi saknar bra data.</p></div><select id="futureDraw" aria-label="Välj analyserad kupong" disabled><option>Laddar…</option></select></div><div id="futureCoverage" class="subtle"></div><div id="fixtures"></div></section>
+<section class="card"><h2>Vad finns – och vad saknas?</h2><div class="rows">
+<div><h3>Finns eller samlas in</h3><p class="subtle">Fem års Stryktipsresultat, officiellt kontrollerade utdelningar när de finns, 1X2-odds och folkets tecken från våra egna tidsstämplade observationer, lagens form och hemma-/bortaresultat från öppna europeiska ligadata.</p></div>
+<div><h3>Inte anslutet ännu</h3><p class="subtle">Pålitliga uppgifter om skador, förväntade startelvor, spelarövergångar och riktiga odds från fem år tillbaka. Dessa visas inte som fakta utan en kontrollerad källa. Vissa ligor och säsonger saknas i den öppna databasen.</p></div></div>
+<p class="subtle">Lagstatistik kommer från <a href="https://github.com/openfootball/football.json">OpenFootball (CC0)</a>. Kuponghistoriken kommer från <a href="https://github.com/andreyhgl/stryktipset-results">ett öppet resultatarkiv</a> med Svenska Spels publicerade resultat. Källa och observationstid lagras separat. Statistik får bara använda matcher daterade före kupongens observerade dag.</p>
+</section>
+<footer class="foot">Stryktipslabbet lämnar aldrig in spel. Att lägga till mer data garanterar inte att modellen blir bättre eller lönsam. 18+ · Spela ansvarsfullt · <a href="https://stodlinjen.se/">Stödlinjen</a>.</footer>
+</main>
+<script>
+const el=id=>document.getElementById(id), fmt=n=>Number(n).toLocaleString('sv-SE'),pct=n=>(100*n).toLocaleString('sv-SE',{maximumFractionDigits:1})+' %';
+const add=(node,tag,text,cls)=>{const x=document.createElement(tag);x.textContent=String(text);if(cls)x.className=cls;node.append(x);return x};
+const clear=id=>el(id).replaceChildren();let history=null,analysisIndex=null;
+async function get(path){const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('Serverfel '+r.status);return r.json()}
+function note(t,good=false){el('notice').textContent=t;el('notice').style.borderLeftColor=good?'#72dfb5':'#f5c987'}
+function historical(){
+ if(!history)return;
+ el('numRounds').textContent=fmt(history.rounds);el('numMatches').textContent=fmt(history.matches);
+ el('years').textContent=history.from.slice(0,4)+'–'+history.to.slice(0,4);
+ el('paidRounds').textContent=fmt(history.official_payout_draws||0);
+ const b=el('bars');b.replaceChildren();
+ for(const [i,s] of ['1','X','2'].entries()){
+  const n=history.outcomes[s],row=add(b,'div','','barbox');
+  add(row,'strong',s);const shell=add(row,'div','','barback');
+  const bar=add(shell,'div','','bar'+(i===1?' x':i===2?' two':''));bar.style.width=(100*n/history.matches)+'%';
+  add(row,'span',pct(n/history.matches));
+ }
+ clear('backtestRows');const back=history.backtest||{};
+ el('backtestStatus').textContent='Modelltest från '+(back.test_since||'–')+' · '+(back.test_draws||0)+' testomgångar. Resultaten ska ses som utforskande, inte en bevisad prognosfördel.';
+ for(const y of back.years||[]){const tr=document.createElement('tr');
+  for(const [i,v] of [y.year,y.draws,y.systems_96_10plus+' av '+y.draws,y.systems_1800_10plus+' av '+y.draws,y.elo_brier?.toFixed(3)||'–',y.rolling_baseline_brier?.toFixed(3)||'–'].entries())
+    add(tr,'td',v,i===0?'':'right');el('backtestRows').append(tr);
+ }
+ const select=el('historicDraw');select.replaceChildren();
+ for(const r of [...history.archive].reverse()){const o=document.createElement('option');o.value=r.draw;o.textContent='Omgång '+r.draw+' · '+r.date;select.append(o)}
+ select.disabled=false;select.onchange=oldDraw;oldDraw();
+}
+function oldDraw(){
+ const d=history.archive.find(x=>x.draw===Number(el('historicDraw').value));if(!d)return;
+ const target=el('historicDetails');target.replaceChildren();
+ add(target,'p','Rätt rad: '+d.outcome.split('').join(' · '),'label');
+ if(d.official_payouts){const p=d.official_payouts;add(target,'p','Officiell utdelning per vinnande rad: 13 rätt '+fmt(p['13'])+' kr · 12 rätt '+fmt(p['12'])+' kr · 11 rätt '+fmt(p['11'])+' kr · 10 rätt '+fmt(p['10'])+' kr','subtle')}
+ else add(target,'p','Officiell utdelning för den här omgången är ännu inte verifierad i arkivet.','subtle');
+ const table=add(target,'div','','scroll');const tab=add(table,'table','');const head=add(tab,'thead','');let h=add(head,'tr','');
+ for(const x of ['Nr','Match','Slutresultat','Rätt tecken'])add(h,'th',x);
+ const body=add(tab,'tbody','');
+ d.matches.forEach((m,i)=>{const tr=add(body,'tr','');add(tr,'td',i+1);add(tr,'td',m.home+' – '+m.away);add(tr,'td',m.score_home+'–'+m.score_away);add(tr,'td',m.outcome);});
+}
+function formStat(parent,label,value){const r=add(parent,'div','','stat');add(r,'span',label);add(r,'strong',value==null?'–':value)}
+function renderTeam(parent,title,form,venue){
+ const c=add(parent,'div','','team');add(c,'b',title);
+ if(!form?.last5?.n){add(c,'p','Ingen tillräcklig matchhistorik från de anslutna ligorna.','subtle warning');return}
+ const last5=form.last5,last10=form.last10,own=form.venue5;
+ formStat(c,'Form – fem senaste (V/O/F)',last5.wins+'/'+last5.draws+'/'+last5.losses);
+ formStat(c,'Poäng per match, senaste fem',last5.points_per_game);
+ formStat(c,'Poäng per match, senaste tio',last10.points_per_game);
+ formStat(c,'Gjorda mål per match, fem senaste',last5.goals_for_per_game);
+ formStat(c,'Insläppta mål per match, fem senaste',last5.goals_against_per_game);
+ formStat(c,(venue==='home'?'Hemma':'Borta')+' – poäng per match',own.points_per_game);
+ formStat(c,'Matchunderlag',form.games_available+' tidigare ligamatcher');
+ formStat(c,'Senaste matchen',form.last_match_date);
+}
+async function formRound(){
+ const n=Number(el('futureDraw').value);if(!n)return;
+ clear('fixtures');el('futureCoverage').textContent='Hämtar lagstatistik …';
+ try{
+  const d=await get('./data/form/features/'+n+'.json');
+  if(d.schema!=='stryktipslabbet-team-form-v1'||d.matches.length!==13)throw Error('Fel format');
+  el('futureCoverage').textContent='Omgång '+n+' · Förhandsdata '+d.source_observed_at_utc.slice(0,16).replace('T',' ')+' UTC · '+d.league_files_read+' ligafiler · Bra datatäckning i '+d.complete_matches+' matcher, delvis i '+d.partial_matches+', saknas i '+d.missing_matches+'.';
+  const container=el('fixtures');
+  for(const m of d.matches){const fixture=add(container,'div','','fixture');
+   const top=add(fixture,'div','','fixture-title');add(top,'b',m.number+'. '+m.home+' – '+m.away);
+   add(top,'span',m.coverage==='båda'?'Lagdata finns':m.coverage==='delvis'?'Delvis data':'Data saknas','label');
+   const info=add(fixture,'p','','subtle');
+   info.textContent='Oddsbaserad uppskattning: 1 '+pct(m.market_p[0])+' · X '+pct(m.market_p[1])+' · 2 '+pct(m.market_p[2])+
+        ' | Folkets tecken: '+m.streck.map(x=>x.toLocaleString('sv-SE',{maximumFractionDigits:0})+' %').join(' / ')+
+        ' · '+m.h2h_last5+' tidigare inbördes möten i datakällan.';
+   const grid=add(fixture,'div','','fixture-grid');
+   renderTeam(grid,m.home+' (hemmalag)',m.home_form,'home');
+   renderTeam(grid,m.away+' (bortalag)',m.away_form,'away');
+  }
+ }catch(err){el('futureCoverage').textContent='Ingen godkänd förhandsrapport för den här omgången: '+err.message}
+}
+async function init(){
+ try{history=await get('./data/history/summary.json');
+  if(history.schema!=='stryktipslabbet-five-years-v1'||history.rounds<200)throw Error('Historiken saknar verifierad struktur');
+  historical();note('Femårshistoriken är inläst. Lagstatistiken hämtas från separata källor och kan ha begränsad täckning.',true)}
+ catch(err){note('Femårshistoriken kunde inte läsas: '+err.message)}
+ try{analysisIndex=await get('./data/analysis-index.json');
+  const rows=(analysisIndex.draws||[]).filter(x=>x.form_available);
+  const select=el('futureDraw');select.replaceChildren();
+  if(!rows.length){el('futureCoverage').textContent='Ingen godkänd förhandsrapport om lagform har publicerats ännu. Den byggs automatiskt från nya kuponger.';return}
+  for(const r of rows){const o=document.createElement('option');o.value=r.draw_number;o.textContent='Omgång '+r.draw_number+(r.current?' · Kommande':' · Avslutad');select.append(o)}
+  select.disabled=false;select.onchange=formRound;
+  select.value=(rows.find(x=>x.current)||rows[0]).draw_number;await formRound();
+ }catch(err){el('futureCoverage').textContent='Det går inte att läsa kupongernas formdata: '+err.message}
+}
+init();
+</script></body></html>
