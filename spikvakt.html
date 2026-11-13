@@ -17,7 +17,7 @@ select{padding:10px;border-radius:9px;background:#14273a;color:var(--fg);border:
 <div class="notice" id="notice" role="status">Hämtar senaste Spikvakt-prognosen …</div>
 <section class="panel"><div class="row"><div><h2>Välj omgång och budget</h2><p class="small">100 kr privat eller högst 1 800 kr i laget. Vi jämför lika dyra system.</p></div><div class="row"><select id="draws" aria-label="Omgång" disabled><option>Laddar</option></select><select id="budgets" aria-label="Budget"><option value="100">Eget spel · 100 kr</option><option value="1800">Tipslaget · 1 800 kr</option></select></div></div><p id="source" class="small"></p></section>
 <section id="content" hidden>
-<div class="panel"><h2>Tre förslag – exakt samma insats</h2><p class="small">Det första är grundmodellen. De andra två testar andra sätt att välja garderingar. **Ingen** strategi är bevisad bättre. Sannolikheten bygger bara på de hämtade speloddsen.</p><div class="cards" id="profiles"></div></div>
+<div class="panel"><h2>Tre förslag – exakt samma insats</h2><p class="small">Det första är grundmodellen. De andra två testar andra sätt att välja garderingar. <b>Ingen</b> strategi är bevisad bättre. Sannolikheten bygger bara på de hämtade speloddsen.</p><div class="cards" id="profiles"></div></div>
 <div class="split">
 <section class="panel"><h2>Osäkra spikar</h2><p class="small">En spik betyder ett enda tecken i matchen. Här visas de spikar som modellen bedömer har störst risk att missas.</p><div class="tablewrap"><table><thead><tr><th>Match</th><th>Spik</th><th>Risk att missa</th></tr></thead><tbody id="spikes"></tbody></table></div><p class="small" id="spikeInfo"></p></section>
 <section class="panel"><h2>Oavgjort att titta på</h2><p class="small">Här har grundsystemet INTE kryss, trots att modellen bedömer att oavgjort har minst 27 % chans.</p><div class="tablewrap"><table><thead><tr><th>Match</th><th>Chans X</th><th>Ny kostnad med X</th></tr></thead><tbody id="drawsTable"></tbody></table></div><p class="small">”Ny kostnad” gäller bara om du lägger till X utan att ändra andra tecken. Om beloppet överskrider budgeten måste någon annan gardering tas bort.</p></section>
@@ -60,7 +60,7 @@ function draw(){
    'Utgår från normaliserade odds – vår jämförelsepunkt.',group.baseline_choices);
  for(const x of group.experiments)render(label[x.key]||x.key,x.cost,x.estimated_p13,
     x.miss_risk_spikes,x.x_included,
-    'Testförslag. Samma radantal, men garderingar kan ligga på andra matcher.',x.choices);
+    JSON.stringify(x.choices)===JSON.stringify(group.baseline_choices)?'Samma tecken som grundmodellen den här omgången.':'Testförslag. Samma radantal, men andra garderingar.',x.choices);
  e('spikes').replaceChildren();e('drawsTable').replaceChildren();
  const rr=group.risk_report;
  for(const x of rr.spikes) tableRow('spikes',[
