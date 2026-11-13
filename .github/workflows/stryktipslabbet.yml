@@ -35,6 +35,14 @@ jobs:
         run: python -m scripts.solo --outdir data
       - name: Frys Spikvakt och jämför garderingar utan facit
         run: python -m scripts.spikvakt --outdir data
+      - name: Hämta öppna ligamatcher och bygg formtabeller
+        continue-on-error: true
+        run: python -m scripts.league_history --outdir data --limit 14
+      - name: Verifiera några äldre utdelningar från Svenska Spel
+        continue-on-error: true
+        run: python -m scripts.historical_payouts --outdir data --limit 8
+      - name: Bygg fem års historik och kronologisk analys
+        run: python -m scripts.history5 --outdir data
       - name: Spara endast offentliga källobservationer
         run: |
           git config user.name 'github-actions[bot]'
