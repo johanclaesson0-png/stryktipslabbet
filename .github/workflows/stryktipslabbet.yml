@@ -42,6 +42,13 @@ jobs:
         run: python -m scripts.market_moves --outdir data
       - name: Version 14 – jämför experimentell formmodell med marknadsmodellen
         run: python -m scripts.feature_model --outdir data
+      - name: Version 15 – streckvärde och pottorienterade hypotetiska system
+        run: python -m scripts.pool_value --outdir data
+      - name: Version 16 – hämta och kontrollera Topptipset och Europatipset
+        continue-on-error: true
+        run: python -m scripts.other_games --outdir data
+      - name: Kontrollera spelarfrånvaro mot daterade källrapporter
+        run: python -m scripts.player_availability --outdir data
       - name: Verifiera några äldre utdelningar från Svenska Spel
         continue-on-error: true
         run: python -m scripts.historical_payouts --outdir data --limit 8
