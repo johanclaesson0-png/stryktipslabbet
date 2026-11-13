@@ -2,11 +2,11 @@
   "schema": "stryktipslabbet-personal-100-v1",
   "draw_number": 4979,
   "model_version": "market-no-vig-v1",
-  "original_observed_at_utc": "2026-11-13T06:00:36.759005+00:00",
+  "original_observed_at_utc": "2026-11-13T13:32:38.343379+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "created_at_utc": "2026-11-13T06:00:36.934810+00:00",
+  "created_at_utc": "2026-11-13T13:32:38.527231+00:00",
   "derived_before_close": true,
-  "source_snapshot_sha256": "4beb7a82d16e29eda074402a9b8a9d09fe6683307db858eed961181b2df72cb6",
+  "source_snapshot_sha256": "cc71c518d3435055257f79f395974e1f38c1c4cfda7cd622087646998936a3e2",
   "max_budget": 100,
   "note": "Hypotetiska system; sannolikheter bygger på normaliserade odds, ingen bekräftad överavkastning.",
   "systems": [
@@ -30,7 +30,7 @@
         "12",
         "12"
       ],
-      "probability_all_13": 0.006016322,
+      "probability_all_13": 0.00605707,
       "singles": 7,
       "doubles": 5,
       "triples": 1
@@ -38,27 +38,27 @@
     {
       "key": "varde",
       "name": "Streckvärde – experiment",
-      "cost": 81,
-      "rows": 81,
+      "cost": 96,
+      "rows": 96,
       "choices": [
         "1",
         "1",
         "1",
         "2",
-        "1X2",
+        "12",
         "1",
         "1X2",
         "1",
-        "1",
-        "1",
-        "1X2",
-        "1X2",
+        "12",
+        "12",
+        "12",
+        "12",
         "2"
       ],
-      "probability_all_13": 0.005904683,
-      "singles": 9,
-      "doubles": 0,
-      "triples": 4
+      "probability_all_13": 0.005423119,
+      "singles": 7,
+      "doubles": 5,
+      "triples": 1
     },
     {
       "key": "skrall",
@@ -70,9 +70,9 @@
         "1",
         "1",
         "2",
-        "1X2",
+        "12",
         "1",
-        "X2",
+        "1X2",
         "1",
         "12",
         "12",
@@ -80,7 +80,7 @@
         "12",
         "2"
       ],
-      "probability_all_13": 0.005451451,
+      "probability_all_13": 0.005423119,
       "singles": 7,
       "doubles": 5,
       "triples": 1
