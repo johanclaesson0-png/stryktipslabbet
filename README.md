@@ -20,7 +20,7 @@ Om webbadressen inte fungerar än: öppna repositoryts **Settings → Pages → 
 - scripts/collect.py: tidsstämplad, läsande insamling av framtida Stryktipsomgångar och officiellt facit.
 - scripts/analyze.py: räknar fram sannolikheter från observerade odds, optimerar tre matematiska system under budgettaket, arkiverar varianter före spelstopp och rättar mot officiellt facit.
 - scripts/publish.py: bygger enbart validerad publik webbinformation och de senast arkiverade omgångarna.
-- tests/test_pipeline.py, tests/test_analysis.py, tests/test_solo.py och tests/test_spikvakt.py: 38 automatiserade testfall.
+- tests/test_pipeline.py, tests/test_analysis.py, tests/test_solo.py och tests/test_spikvakt.py: 39 automatiserade testfall.
 - .github/workflows/stryktipslabbet.yml: bygg-, insamlings- och publiceringsflöde.
 - data/2024-2026-datatackning.csv och data/2024-2026-simulerade-system.csv: äldre experimentella backtests.
 
@@ -95,7 +95,7 @@ Sida: https://johanclaesson0-png.github.io/stryktipslabbet/spikvakt.html
 
 **Officiella utdelningar:** scripts/historical_payouts.py försöker stegvis kontrollera gamla utbetalningar mot Svenska Spels officiella resultat-API, högst åtta äldre omgångar per schemalagd körning. Endast bekräftade resultat och belopp lagras; enbart facit innebär inte automatiskt verifierat vinstbelopp. Matchresultat som verkar administrativt bestämda markeras separat i historikens prognoskvalitetsmätning.
 
-**Ligahistorik för aktuell form:** scripts/league_history.py hämtar matchresultat från OpenFootball / football.json, licens CC0-1.0: https://github.com/openfootball/football.json. Säsonger 2021/22–2026/27 och de stora engelska/europeiska ligor som finns i katalogen läses gradvis in. Aktuell säsong kan uppdateras högst dagligen; källmaterialet är ibland ofullständigt eller försenat och måste bedömas per lag.
+**Ligahistorik för aktuell form:** scripts/league_history.py hämtar matchresultat från OpenFootball / football.json, licens CC0-1.0: https://github.com/openfootball/football.json. Säsonger 2021/22–2026/27 och de stora engelska/europeiska ligor som finns i katalogen läses gradvis in. Dessutom ingår **landskamper för herrlandslag 2020–2026**, från martj42/international_results (CC0 1.0), https://github.com/martj42/international_results. Neutral-plan-matcher ingår i lagens totala form men räknas inte som hemma-/bortamatcher. Aktuell säsong kan uppdateras högst dagligen; källmaterialet är ibland ofullständigt eller försenat och måste bedömas per lag.
 
 **Förhandsrapporter:** varje ny omgång kan visa:
 - Fem och tio senast tillgängliga ligamatcher (vinst, kryss, förlust).
@@ -110,4 +110,4 @@ Skriptet beräknar endast statistik på matcher vars datum är **strikt före ku
 
 **Källvillkor:** football-data.co.uk har publicerade användningsbegränsningar för automatiserad inhämtning/AI. Ingen sådan källa hämtas automatiskt här; OpenFootball används för öppna licensierade resultat. Vi hämtar inte historiska förhandsodds från slutresultat.
 
-**Driftsättning:** GitHub Actions tar högst 14 nya ligafiler och åtta resultatutdelningar per körning. Den fulla ligahistoriken och kontrollen av gamla utdelningar fylls därför successivt på; datadjup.html visar hur mycket som verkligen är tillgängligt. Nya automatiska CI-tester säkerställer att dagens och framtida matchresultat inte får ingå i föregående dagars formtal.
+**Driftsättning:** GitHub Actions tar högst 14 nya ligafiler och åtta resultatutdelningar per körning. Den fulla ligahistoriken och kontrollen av gamla utdelningar fylls därför successivt på; datadjup.html visar hur mycket som verkligen är tillgängligt. Nya automatiska CI-tester säkerställer att dagens och framtida matchresultat inte får ingå i föregående dagars formtal. Svenska namn på landslag normaliseras mot den internationella datakällan. Förslagets 1X2-sannolikheter bygger fortfarande på normaliserade bookmakerodds; formdatan är tills vidare **beslutsstöd, inte automatiskt en del av sannolikhetsmodellen**, tills den kan valideras på framtida omgångar.
