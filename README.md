@@ -48,6 +48,15 @@ Sannolikheterna beräknas som 1/odds och normaliseras för bookmaker-marginalen.
 
 När komplett officiellt facit och alla fyra utdelningsnivåerna finns beräknas hypotetiska vinster och netto i data/settlements/ och visas i Veckans analys. Inga insatser skickas in eller läggs automatiskt. Arkiveringen fortsätter varje vecka oavsett vem i laget som faktiskt tippar.
 
+## Feedback och förbättringar från historiska kuponger
+
+Vi har analyserat **39 tidigare kuponger** och dokumenterat aggregerade fynd (felspikar, täckning av oavgjorda, garderingar och fallgropar i efterhandstest). Ingen privat lagkupong har lagts i det offentliga repositoryt.
+
+- [Läs analysen och prioriteringarna](docs/feedback-historiska-kuponger-2026.md)
+- [Följ utvecklingen i GitHub Issue #1](https://github.com/johanclaesson0-png/stryktipslabbet/issues/1)
+
+Resultaten är hypoteser att testa, **inte** bevis att en ändrad modell kommer att vinna oftare.
+
 ## Eget spel (högst 100 kr)
 
 Webbadress: https://johanclaesson0-png.github.io/stryktipslabbet/spela-sjalv.html
