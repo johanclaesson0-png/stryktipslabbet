@@ -169,6 +169,11 @@ def summarize(rounds):
         "years": [{"year":year, **{**row,"outcomes":{s:row["outcomes"][s] for s in SIGNS}}}
                   for year,row in sorted(years.items())],
         "backtest": test,
+        "archive": [{"draw":r["draw"],"date":r["date"],"outcome":"".join(m["outcome"] for m in r["matches"]),
+                     "matches":[{"home":m["home"],"away":m["away"],"outcome":m["outcome"],
+                                 "score_home":m["score_home"],"score_away":m["score_away"],
+                                 "played_consistent":m["played_consistent"]} for m in r["matches"]]}
+                    for r in rounds],
         "source":"community mirror of Svenska Spels public settled results: andreyhgl/stryktipset-results",
         "limits":[
             "De flesta gamla omgångar saknar dokumenterade förhandsodds, folkstreck och verifierade officiella utdelningar.",
@@ -187,6 +192,17 @@ def main():
     root = Path(args.outdir)
     rounds = read_rounds(root / "history" / "stryktipset-five-years.csv")
     report = summarize(rounds)
+    try:
+        payouts = json.loads((root / "history" / "payouts.json").read_text(encoding="utf-8"))
+        if payouts.get("schema") == "stryktipslabbet-historical-payouts-v1":
+            official = payouts.get("draws", {})
+            for r in report["archive"]:
+                entry = official.get(str(r["draw"]), {})
+                if entry.get("outcome") == r["outcome"]:
+                    r["official_payouts"] = entry.get("payouts")
+            report["official_payout_draws"] = sum("official_payouts" in r for r in report["archive"])
+    except (OSError, ValueError, TypeError):
+        report["official_payout_draws"] = 0
     write_json(root / "history" / "summary.json", report)
     print("Fem år:", report["rounds"], "omgångar,", report["matches"], "matcher,",
           report["backtest"]["test_draws"], "kronologiskt testade omgångar")
