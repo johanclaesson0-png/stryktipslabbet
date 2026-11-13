@@ -82,6 +82,7 @@ def main():
     shutil.copy2(root / "fordjupning.html", dest / "fordjupning.html")
     shutil.copy2(root / "spela-sjalv.html", dest / "spela-sjalv.html")
     shutil.copy2(root / "spikvakt.html", dest / "spikvakt.html")
+    shutil.copy2(root / "datadjup.html", dest / "datadjup.html")
 
     now = datetime.now(timezone.utc)
     status = {
@@ -368,6 +369,67 @@ def main():
             continue
     status["spikvakt_analyses_published"] = guard_count
     status["spikvakt_settlements_published"] = guard_settled_count
+
+
+    # Publicera endast verifierad aggregerad femårshistorik, INTE råa
+    # ligakällor eller påstådda historiska förhandsodds.
+    hpath = root / "data" / "history" / "summary.json"
+    try:
+        history = json.loads(hpath.read_text(encoding="utf-8"))
+        if (history.get("schema") == "stryktipslabbet-five-years-v1" and
+            200 <= history.get("rounds", 0) <= 400 and
+            history["matches"] == history["rounds"] * 13 and
+            len(history.get("archive", [])) == history["rounds"] and
+            sum(history["outcomes"].get(s, 0) for s in "1X2") == history["matches"] and
+            all(len(r.get("matches", [])) == 13 and
+                len(r.get("outcome", "")) == 13 for r in history["archive"])):
+            folder = dest / "data" / "history"
+            folder.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(hpath, folder / "summary.json")
+            status["historical_draws"] = history["rounds"]
+            status["historical_matches"] = history["matches"]
+            status["historical_verified_payouts"] = history.get("official_payout_draws", 0)
+    except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):
+        pass
+
+    # Enriched pre-close form only: same recorded source observation as the
+    # public 1X2 analysis. Source league cache remains private to the build.
+    form_count = 0
+    for row in public_rounds:
+        n = row["draw_number"]
+        row["form_available"] = False
+        original = base_by_draw.get(n)
+        path = root / "data" / "form" / "features" / (str(n) + ".json")
+        if not original or not path.exists():
+            continue
+        try:
+            form = json.loads(path.read_text(encoding="utf-8"))
+            created = instant(form["created_at_utc"])
+            observed = instant(original["observed_at_utc"])
+            if (form.get("schema") != "stryktipslabbet-team-form-v1" or
+                form.get("draw_number") != n or
+                form.get("source_observed_at_utc") != original["observed_at_utc"] or
+                form.get("reg_close_time") != original["reg_close_time"] or
+                form.get("source_snapshot_sha256") != original.get("source_snapshot_sha256") or
+                not observed <= created < instant(original["reg_close_time"]) or
+                form.get("cutoff_date_exclusive") != observed.date().isoformat() or
+                len(form.get("matches", [])) != 13):
+                continue
+            if any((m["number"] != orig["number"] or m["home"] != orig["home"] or
+                    m["away"] != orig["away"] or m["market_p"] != orig["p"] or
+                    m["streck"] != orig["streck"])
+                   for m, orig in zip(form["matches"], original["matches"])):
+                continue
+            path_out = dest / "data" / "form" / "features" / (str(n) + ".json")
+            path_out.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, path_out)
+            row["form_available"] = True
+            form_count += 1
+            status["league_files_read"] = max(status.get("league_files_read",0),
+                                               form.get("league_files_read",0))
+        except (ValueError, TypeError, KeyError, OSError, json.JSONDecodeError):
+            pass
+    status["enriched_form_rounds"] = form_count
 
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
