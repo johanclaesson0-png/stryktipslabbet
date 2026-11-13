@@ -103,9 +103,15 @@ def parse_draw(doc,game,number,now,url,raw):
         start=m.get("matchStart")
         if start and utc(start)<=now:
             raise ValueError("Match har börjat")
-        odds=triplet(x.get("odds"),"odds")
+        # A real future fixture may be listed before valid odds are offered.
+        # Keep the fixture but NEVER invent 1X2 probabilities or a system.
+        try:
+            odds=triplet(x.get("odds"),"odds")
+            p=[round(v,9) for v in probabilities(odds)]
+        except (ValueError, TypeError):
+            odds=None
+            p=None
         streck=triplet(x.get("svenskaFolket"),"streck")
-        p=[round(v,9) for v in probabilities(odds)]
         matches.append({"number":int(x["eventNumber"]),
                         "home":names["home"],"away":names["away"],
                         "odds":odds,"streck":streck,"p":p,
@@ -113,7 +119,9 @@ def parse_draw(doc,game,number,now,url,raw):
     return {"schema":SCHEMA,"game":game,"name":str(entry["productName"]),
             "draw_number":int(number),"reg_close_time":close.isoformat(),
             "observed_at_utc":now.isoformat(),"source_url":url,
-            "source_snapshot_sha256":sha256(raw).hexdigest(),"matches":matches}
+            "source_snapshot_sha256":sha256(raw).hexdigest(),
+            "with_valid_odds":sum(m["p"] is not None for m in matches),
+            "matches":matches}
 
 
 def optimize_n(ps,budget):
@@ -145,7 +153,8 @@ def analyze(snapshot,now):
     ms=snapshot["matches"];n=CATEGORIES[snapshot["game"]]["matches"]
     if len(ms)!=n or len({x["number"] for x in ms})!=n:
         raise ValueError("Ofullständig kupong")
-    budgets=[100] if n==8 else [100,1800]
+    complete=all(m["p"] is not None for m in ms)
+    budgets=([100] if n==8 else [100,1800]) if complete else []
     profiles=[]
     for budget in budgets:
         for key,exponent in (("balanserad",0),("streckvarde",.45)):
@@ -165,7 +174,9 @@ def analyze(snapshot,now):
             "source_snapshot_sha256":snapshot["source_snapshot_sha256"],
             "reg_close_time":snapshot["reg_close_time"],
             "created_at_utc":created.isoformat(),"systems":profiles,
-            "note":"Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."}
+            "complete_odds":complete,
+            "note":("Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
+                    if complete else "Verklig kupong men otillräckliga odds för systemförslag.")}
 
 
 def distribution(choices,outcome):
