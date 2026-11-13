@@ -1,0 +1,2670 @@
+{
+  "schema": "stryktipslabbet-league-results-v1",
+  "season": "2023-24",
+  "league": "es.1",
+  "source": "OpenFootball football.json · CC0 1.0",
+  "source_url": "https://raw.githubusercontent.com/openfootball/football.json/master/2023-24/es.1.json",
+  "fetched_at_utc": "2026-11-13T15:50:25.759467+00:00",
+  "matches": [
+    {
+      "date": "2023-08-11",
+      "home": "sevilla",
+      "away": "valencia",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-11",
+      "home": "ud almeria",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-12",
+      "home": "athletic club",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-12",
+      "home": "real sociedad de futbol",
+      "away": "girona",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-08-12",
+      "home": "ud las palmas",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-08-13",
+      "home": "getafe",
+      "away": "fc barcelona",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-08-13",
+      "home": "rc celta de vigo",
+      "away": "ca osasuna",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-13",
+      "home": "villarreal",
+      "away": "real betis balompie",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-14",
+      "home": "cadiz",
+      "away": "deportivo alaves",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-08-14",
+      "home": "club atletico de madrid",
+      "away": "granada",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-08-18",
+      "home": "rcd mallorca",
+      "away": "villarreal",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-08-18",
+      "home": "valencia",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-08-19",
+      "home": "ca osasuna",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-19",
+      "home": "real sociedad de futbol",
+      "away": "rc celta de vigo",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-08-19",
+      "home": "ud almeria",
+      "away": "real madrid",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-08-20",
+      "home": "fc barcelona",
+      "away": "cadiz",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-08-20",
+      "home": "girona",
+      "away": "getafe",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-08-20",
+      "home": "real betis balompie",
+      "away": "club atletico de madrid",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-08-21",
+      "home": "deportivo alaves",
+      "away": "sevilla",
+      "home_goals": 4,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-08-21",
+      "home": "granada",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-25",
+      "home": "rc celta de vigo",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-08-25",
+      "home": "ud las palmas",
+      "away": "real sociedad de futbol",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-08-26",
+      "home": "cadiz",
+      "away": "ud almeria",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-08-26",
+      "home": "granada",
+      "away": "rcd mallorca",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-26",
+      "home": "sevilla",
+      "away": "girona",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-27",
+      "home": "athletic club",
+      "away": "real betis balompie",
+      "home_goals": 4,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-27",
+      "home": "valencia",
+      "away": "ca osasuna",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-08-27",
+      "home": "villarreal",
+      "away": "fc barcelona",
+      "home_goals": 3,
+      "away_goals": 4
+    },
+    {
+      "date": "2023-08-28",
+      "home": "getafe",
+      "away": "deportivo alaves",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-08-28",
+      "home": "rayo vallecano de madrid",
+      "away": "club atletico de madrid",
+      "home_goals": 0,
+      "away_goals": 7
+    },
+    {
+      "date": "2023-09-01",
+      "home": "cadiz",
+      "away": "villarreal",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-01",
+      "home": "ud almeria",
+      "away": "rc celta de vigo",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-09-02",
+      "home": "deportivo alaves",
+      "away": "valencia",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-02",
+      "home": "real betis balompie",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-02",
+      "home": "real madrid",
+      "away": "getafe",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-02",
+      "home": "real sociedad de futbol",
+      "away": "granada",
+      "home_goals": 5,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-09-03",
+      "home": "ca osasuna",
+      "away": "fc barcelona",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-03",
+      "home": "girona",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-03",
+      "home": "rcd mallorca",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-15",
+      "home": "rayo vallecano de madrid",
+      "away": "deportivo alaves",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-16",
+      "home": "athletic club",
+      "away": "cadiz",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-16",
+      "home": "fc barcelona",
+      "away": "real betis balompie",
+      "home_goals": 5,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-16",
+      "home": "rc celta de vigo",
+      "away": "rcd mallorca",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-16",
+      "home": "valencia",
+      "away": "club atletico de madrid",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-17",
+      "home": "getafe",
+      "away": "ca osasuna",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-17",
+      "home": "real madrid",
+      "away": "real sociedad de futbol",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-17",
+      "home": "sevilla",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-17",
+      "home": "villarreal",
+      "away": "ud almeria",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-18",
+      "home": "granada",
+      "away": "girona",
+      "home_goals": 2,
+      "away_goals": 4
+    },
+    {
+      "date": "2023-09-22",
+      "home": "deportivo alaves",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-23",
+      "home": "ca osasuna",
+      "away": "sevilla",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-23",
+      "home": "fc barcelona",
+      "away": "rc celta de vigo",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-23",
+      "home": "girona",
+      "away": "rcd mallorca",
+      "home_goals": 5,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-09-23",
+      "home": "ud almeria",
+      "away": "valencia",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-24",
+      "home": "club atletico de madrid",
+      "away": "real madrid",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-24",
+      "home": "rayo vallecano de madrid",
+      "away": "villarreal",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-24",
+      "home": "real betis balompie",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-24",
+      "home": "real sociedad de futbol",
+      "away": "getafe",
+      "home_goals": 4,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-09-24",
+      "home": "ud las palmas",
+      "away": "granada",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-26",
+      "home": "rcd mallorca",
+      "away": "fc barcelona",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-26",
+      "home": "sevilla",
+      "away": "ud almeria",
+      "home_goals": 5,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-27",
+      "home": "athletic club",
+      "away": "getafe",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-27",
+      "home": "cadiz",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-27",
+      "home": "real madrid",
+      "away": "ud las palmas",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-27",
+      "home": "valencia",
+      "away": "real sociedad de futbol",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-27",
+      "home": "villarreal",
+      "away": "girona",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-28",
+      "home": "ca osasuna",
+      "away": "club atletico de madrid",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-28",
+      "home": "granada",
+      "away": "real betis balompie",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-28",
+      "home": "rc celta de vigo",
+      "away": "deportivo alaves",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-09-29",
+      "home": "fc barcelona",
+      "away": "sevilla",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-30",
+      "home": "getafe",
+      "away": "villarreal",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-09-30",
+      "home": "girona",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-09-30",
+      "home": "rayo vallecano de madrid",
+      "away": "rcd mallorca",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-09-30",
+      "home": "real sociedad de futbol",
+      "away": "athletic club",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-01",
+      "home": "club atletico de madrid",
+      "away": "cadiz",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-01",
+      "home": "deportivo alaves",
+      "away": "ca osasuna",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-01",
+      "home": "real betis balompie",
+      "away": "valencia",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-01",
+      "home": "ud almeria",
+      "away": "granada",
+      "home_goals": 3,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-10-02",
+      "home": "ud las palmas",
+      "away": "rc celta de vigo",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-06",
+      "home": "athletic club",
+      "away": "ud almeria",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-07",
+      "home": "cadiz",
+      "away": "girona",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-07",
+      "home": "rcd mallorca",
+      "away": "valencia",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-07",
+      "home": "real madrid",
+      "away": "ca osasuna",
+      "home_goals": 4,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-07",
+      "home": "sevilla",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-08",
+      "home": "club atletico de madrid",
+      "away": "real sociedad de futbol",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-08",
+      "home": "deportivo alaves",
+      "away": "real betis balompie",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-08",
+      "home": "granada",
+      "away": "fc barcelona",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-08",
+      "home": "rc celta de vigo",
+      "away": "getafe",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-08",
+      "home": "villarreal",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-20",
+      "home": "ca osasuna",
+      "away": "granada",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-21",
+      "home": "getafe",
+      "away": "real betis balompie",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-21",
+      "home": "rc celta de vigo",
+      "away": "club atletico de madrid",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-10-21",
+      "home": "real sociedad de futbol",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-21",
+      "home": "sevilla",
+      "away": "real madrid",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-22",
+      "home": "fc barcelona",
+      "away": "athletic club",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-22",
+      "home": "girona",
+      "away": "ud almeria",
+      "home_goals": 5,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-22",
+      "home": "ud las palmas",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-22",
+      "home": "villarreal",
+      "away": "deportivo alaves",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-23",
+      "home": "valencia",
+      "away": "cadiz",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-27",
+      "home": "girona",
+      "away": "rc celta de vigo",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-28",
+      "home": "cadiz",
+      "away": "sevilla",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-28",
+      "home": "fc barcelona",
+      "away": "real madrid",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-28",
+      "home": "rcd mallorca",
+      "away": "getafe",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-10-28",
+      "home": "ud almeria",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-29",
+      "home": "athletic club",
+      "away": "valencia",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-29",
+      "home": "club atletico de madrid",
+      "away": "deportivo alaves",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-29",
+      "home": "rayo vallecano de madrid",
+      "away": "real sociedad de futbol",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-10-29",
+      "home": "real betis balompie",
+      "away": "ca osasuna",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-10-30",
+      "home": "granada",
+      "away": "villarreal",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-11-03",
+      "home": "ud las palmas",
+      "away": "club atletico de madrid",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-04",
+      "home": "ca osasuna",
+      "away": "girona",
+      "home_goals": 2,
+      "away_goals": 4
+    },
+    {
+      "date": "2023-11-04",
+      "home": "rc celta de vigo",
+      "away": "sevilla",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-04",
+      "home": "real betis balompie",
+      "away": "rcd mallorca",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-11-04",
+      "home": "real sociedad de futbol",
+      "away": "fc barcelona",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-05",
+      "home": "deportivo alaves",
+      "away": "ud almeria",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-11-05",
+      "home": "real madrid",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-11-05",
+      "home": "valencia",
+      "away": "granada",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-11-05",
+      "home": "villarreal",
+      "away": "athletic club",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-11-06",
+      "home": "getafe",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-11-10",
+      "home": "athletic club",
+      "away": "rc celta de vigo",
+      "home_goals": 4,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-11-11",
+      "home": "ca osasuna",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-11",
+      "home": "granada",
+      "away": "getafe",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-11",
+      "home": "rayo vallecano de madrid",
+      "away": "girona",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-11-11",
+      "home": "real madrid",
+      "away": "valencia",
+      "home_goals": 5,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-11",
+      "home": "ud almeria",
+      "away": "real sociedad de futbol",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-11-12",
+      "home": "club atletico de madrid",
+      "away": "villarreal",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-12",
+      "home": "fc barcelona",
+      "away": "deportivo alaves",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-12",
+      "home": "sevilla",
+      "away": "real betis balompie",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-24",
+      "home": "deportivo alaves",
+      "away": "granada",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-25",
+      "home": "club atletico de madrid",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-11-25",
+      "home": "getafe",
+      "away": "ud almeria",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-25",
+      "home": "rayo vallecano de madrid",
+      "away": "fc barcelona",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-25",
+      "home": "valencia",
+      "away": "rc celta de vigo",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-11-26",
+      "home": "cadiz",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-11-26",
+      "home": "real betis balompie",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-11-26",
+      "home": "real sociedad de futbol",
+      "away": "sevilla",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-26",
+      "home": "villarreal",
+      "away": "ca osasuna",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-27",
+      "home": "girona",
+      "away": "athletic club",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-11-29",
+      "home": "rcd mallorca",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-01",
+      "home": "ud las palmas",
+      "away": "getafe",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-02",
+      "home": "athletic club",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 4,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-02",
+      "home": "ca osasuna",
+      "away": "real sociedad de futbol",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-02",
+      "home": "girona",
+      "away": "valencia",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-02",
+      "home": "real madrid",
+      "away": "granada",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-03",
+      "home": "fc barcelona",
+      "away": "club atletico de madrid",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-03",
+      "home": "rcd mallorca",
+      "away": "deportivo alaves",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-03",
+      "home": "sevilla",
+      "away": "villarreal",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-03",
+      "home": "ud almeria",
+      "away": "real betis balompie",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-04",
+      "home": "rc celta de vigo",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-08",
+      "home": "getafe",
+      "away": "valencia",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-09",
+      "home": "deportivo alaves",
+      "away": "ud las palmas",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-09",
+      "home": "rcd mallorca",
+      "away": "sevilla",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-09",
+      "home": "real betis balompie",
+      "away": "real madrid",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-09",
+      "home": "villarreal",
+      "away": "real sociedad de futbol",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-12-10",
+      "home": "cadiz",
+      "away": "ca osasuna",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-10",
+      "home": "club atletico de madrid",
+      "away": "ud almeria",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-10",
+      "home": "fc barcelona",
+      "away": "girona",
+      "home_goals": 2,
+      "away_goals": 4
+    },
+    {
+      "date": "2023-12-11",
+      "home": "granada",
+      "away": "athletic club",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-11",
+      "home": "rayo vallecano de madrid",
+      "away": "rc celta de vigo",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-15",
+      "home": "ca osasuna",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-16",
+      "home": "athletic club",
+      "away": "club atletico de madrid",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-16",
+      "home": "rc celta de vigo",
+      "away": "granada",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-16",
+      "home": "sevilla",
+      "away": "getafe",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-12-16",
+      "home": "valencia",
+      "away": "fc barcelona",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-17",
+      "home": "real madrid",
+      "away": "villarreal",
+      "home_goals": 4,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-17",
+      "home": "real sociedad de futbol",
+      "away": "real betis balompie",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-17",
+      "home": "ud almeria",
+      "away": "rcd mallorca",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-17",
+      "home": "ud las palmas",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-18",
+      "home": "girona",
+      "away": "deportivo alaves",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-19",
+      "home": "club atletico de madrid",
+      "away": "getafe",
+      "home_goals": 3,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-12-19",
+      "home": "granada",
+      "away": "sevilla",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2023-12-19",
+      "home": "rayo vallecano de madrid",
+      "away": "valencia",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-20",
+      "home": "athletic club",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-20",
+      "home": "fc barcelona",
+      "away": "ud almeria",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-12-20",
+      "home": "villarreal",
+      "away": "rc celta de vigo",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-12-21",
+      "home": "cadiz",
+      "away": "real sociedad de futbol",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2023-12-21",
+      "home": "deportivo alaves",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-21",
+      "home": "rcd mallorca",
+      "away": "ca osasuna",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2023-12-21",
+      "home": "real betis balompie",
+      "away": "girona",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2023-12-23",
+      "home": "club atletico de madrid",
+      "away": "sevilla",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-02",
+      "home": "getafe",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-01-02",
+      "home": "real sociedad de futbol",
+      "away": "deportivo alaves",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-02",
+      "home": "valencia",
+      "away": "villarreal",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-03",
+      "home": "girona",
+      "away": "club atletico de madrid",
+      "home_goals": 4,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-01-03",
+      "home": "granada",
+      "away": "cadiz",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-03",
+      "home": "rc celta de vigo",
+      "away": "real betis balompie",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-03",
+      "home": "real madrid",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-04",
+      "home": "ca osasuna",
+      "away": "ud almeria",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-04",
+      "home": "sevilla",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-01-04",
+      "home": "ud las palmas",
+      "away": "fc barcelona",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-01-12",
+      "home": "sevilla",
+      "away": "deportivo alaves",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-01-13",
+      "home": "athletic club",
+      "away": "real sociedad de futbol",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-13",
+      "home": "rcd mallorca",
+      "away": "rc celta de vigo",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-13",
+      "home": "real betis balompie",
+      "away": "granada",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-13",
+      "home": "ud las palmas",
+      "away": "villarreal",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-14",
+      "home": "cadiz",
+      "away": "valencia",
+      "home_goals": 1,
+      "away_goals": 4
+    },
+    {
+      "date": "2024-01-14",
+      "home": "ud almeria",
+      "away": "girona",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-19",
+      "home": "deportivo alaves",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-20",
+      "home": "rayo vallecano de madrid",
+      "away": "ud las palmas",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-01-20",
+      "home": "rc celta de vigo",
+      "away": "real sociedad de futbol",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-20",
+      "home": "valencia",
+      "away": "athletic club",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-20",
+      "home": "villarreal",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-21",
+      "home": "ca osasuna",
+      "away": "getafe",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-01-21",
+      "home": "girona",
+      "away": "sevilla",
+      "home_goals": 5,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-21",
+      "home": "real betis balompie",
+      "away": "fc barcelona",
+      "home_goals": 2,
+      "away_goals": 4
+    },
+    {
+      "date": "2024-01-21",
+      "home": "real madrid",
+      "away": "ud almeria",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-01-22",
+      "home": "granada",
+      "away": "club atletico de madrid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-26",
+      "home": "ud almeria",
+      "away": "deportivo alaves",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-01-27",
+      "home": "fc barcelona",
+      "away": "villarreal",
+      "home_goals": 3,
+      "away_goals": 5
+    },
+    {
+      "date": "2024-01-27",
+      "home": "rcd mallorca",
+      "away": "real betis balompie",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-27",
+      "home": "real sociedad de futbol",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-27",
+      "home": "ud las palmas",
+      "away": "real madrid",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-01-28",
+      "home": "cadiz",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-28",
+      "home": "club atletico de madrid",
+      "away": "valencia",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-28",
+      "home": "rc celta de vigo",
+      "away": "girona",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-28",
+      "home": "sevilla",
+      "away": "ca osasuna",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-29",
+      "home": "getafe",
+      "away": "granada",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-01-31",
+      "home": "club atletico de madrid",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-01-31",
+      "home": "fc barcelona",
+      "away": "ca osasuna",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-01",
+      "home": "getafe",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-02",
+      "home": "athletic club",
+      "away": "rcd mallorca",
+      "home_goals": 4,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-03",
+      "home": "deportivo alaves",
+      "away": "fc barcelona",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-02-03",
+      "home": "girona",
+      "away": "real sociedad de futbol",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-03",
+      "home": "granada",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-03",
+      "home": "valencia",
+      "away": "ud almeria",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-04",
+      "home": "ca osasuna",
+      "away": "rc celta de vigo",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-02-04",
+      "home": "real betis balompie",
+      "away": "getafe",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-04",
+      "home": "real madrid",
+      "away": "club atletico de madrid",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-04",
+      "home": "villarreal",
+      "away": "cadiz",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-05",
+      "home": "rayo vallecano de madrid",
+      "away": "sevilla",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-09",
+      "home": "cadiz",
+      "away": "real betis balompie",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-10",
+      "home": "deportivo alaves",
+      "away": "villarreal",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-10",
+      "home": "real madrid",
+      "away": "girona",
+      "home_goals": 4,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-10",
+      "home": "real sociedad de futbol",
+      "away": "ca osasuna",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-10",
+      "home": "ud las palmas",
+      "away": "valencia",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-11",
+      "home": "fc barcelona",
+      "away": "granada",
+      "home_goals": 3,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-02-11",
+      "home": "getafe",
+      "away": "rc celta de vigo",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-11",
+      "home": "rcd mallorca",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-11",
+      "home": "sevilla",
+      "away": "club atletico de madrid",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-12",
+      "home": "ud almeria",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-16",
+      "home": "villarreal",
+      "away": "getafe",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-17",
+      "home": "ca osasuna",
+      "away": "cadiz",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-17",
+      "home": "club atletico de madrid",
+      "away": "ud las palmas",
+      "home_goals": 5,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-17",
+      "home": "rc celta de vigo",
+      "away": "fc barcelona",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-17",
+      "home": "valencia",
+      "away": "sevilla",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-18",
+      "home": "granada",
+      "away": "ud almeria",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-18",
+      "home": "rayo vallecano de madrid",
+      "away": "real madrid",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-18",
+      "home": "rcd mallorca",
+      "away": "real sociedad de futbol",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-18",
+      "home": "real betis balompie",
+      "away": "deportivo alaves",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-19",
+      "home": "athletic club",
+      "away": "girona",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-23",
+      "home": "real sociedad de futbol",
+      "away": "villarreal",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-02-24",
+      "home": "deportivo alaves",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-24",
+      "home": "fc barcelona",
+      "away": "getafe",
+      "home_goals": 4,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-24",
+      "home": "ud almeria",
+      "away": "club atletico de madrid",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-25",
+      "home": "cadiz",
+      "away": "rc celta de vigo",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-02-25",
+      "home": "real betis balompie",
+      "away": "athletic club",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-25",
+      "home": "real madrid",
+      "away": "sevilla",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-02-25",
+      "home": "ud las palmas",
+      "away": "ca osasuna",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-02-26",
+      "home": "girona",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-01",
+      "home": "rc celta de vigo",
+      "away": "ud almeria",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-02",
+      "home": "getafe",
+      "away": "ud las palmas",
+      "home_goals": 3,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-03-02",
+      "home": "rayo vallecano de madrid",
+      "away": "cadiz",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-03-02",
+      "home": "sevilla",
+      "away": "real sociedad de futbol",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-03-02",
+      "home": "valencia",
+      "away": "real madrid",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-03-03",
+      "home": "athletic club",
+      "away": "fc barcelona",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-03",
+      "home": "club atletico de madrid",
+      "away": "real betis balompie",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-03-03",
+      "home": "rcd mallorca",
+      "away": "girona",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-03",
+      "home": "villarreal",
+      "away": "granada",
+      "home_goals": 5,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-03-04",
+      "home": "ca osasuna",
+      "away": "deportivo alaves",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-08",
+      "home": "fc barcelona",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-09",
+      "home": "cadiz",
+      "away": "club atletico de madrid",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-09",
+      "home": "girona",
+      "away": "ca osasuna",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-09",
+      "home": "granada",
+      "away": "real sociedad de futbol",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-03-09",
+      "home": "valencia",
+      "away": "getafe",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-10",
+      "home": "deportivo alaves",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-10",
+      "home": "real betis balompie",
+      "away": "villarreal",
+      "home_goals": 2,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-03-10",
+      "home": "real madrid",
+      "away": "rc celta de vigo",
+      "home_goals": 4,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-10",
+      "home": "ud las palmas",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-03-11",
+      "home": "ud almeria",
+      "away": "sevilla",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-03-15",
+      "home": "real sociedad de futbol",
+      "away": "cadiz",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-16",
+      "home": "athletic club",
+      "away": "deportivo alaves",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-16",
+      "home": "ca osasuna",
+      "away": "real madrid",
+      "home_goals": 2,
+      "away_goals": 4
+    },
+    {
+      "date": "2024-03-16",
+      "home": "getafe",
+      "away": "girona",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-16",
+      "home": "rcd mallorca",
+      "away": "granada",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-17",
+      "home": "club atletico de madrid",
+      "away": "fc barcelona",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-03-17",
+      "home": "rayo vallecano de madrid",
+      "away": "real betis balompie",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-17",
+      "home": "sevilla",
+      "away": "rc celta de vigo",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-03-17",
+      "home": "ud las palmas",
+      "away": "ud almeria",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-03-17",
+      "home": "villarreal",
+      "away": "valencia",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-29",
+      "home": "cadiz",
+      "away": "granada",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-30",
+      "home": "fc barcelona",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-30",
+      "home": "getafe",
+      "away": "sevilla",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-03-30",
+      "home": "ud almeria",
+      "away": "ca osasuna",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-03-30",
+      "home": "valencia",
+      "away": "rcd mallorca",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-31",
+      "home": "deportivo alaves",
+      "away": "real sociedad de futbol",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-03-31",
+      "home": "girona",
+      "away": "real betis balompie",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-03-31",
+      "home": "rc celta de vigo",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-03-31",
+      "home": "real madrid",
+      "away": "athletic club",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-04-01",
+      "home": "villarreal",
+      "away": "club atletico de madrid",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-04-04",
+      "home": "granada",
+      "away": "valencia",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-12",
+      "home": "real betis balompie",
+      "away": "rc celta de vigo",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-13",
+      "home": "cadiz",
+      "away": "fc barcelona",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-13",
+      "home": "club atletico de madrid",
+      "away": "girona",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-13",
+      "home": "rayo vallecano de madrid",
+      "away": "getafe",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-04-13",
+      "home": "rcd mallorca",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-14",
+      "home": "athletic club",
+      "away": "villarreal",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-14",
+      "home": "granada",
+      "away": "deportivo alaves",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-04-14",
+      "home": "real sociedad de futbol",
+      "away": "ud almeria",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-04-14",
+      "home": "ud las palmas",
+      "away": "sevilla",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-04-15",
+      "home": "ca osasuna",
+      "away": "valencia",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-19",
+      "home": "athletic club",
+      "away": "granada",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-20",
+      "home": "girona",
+      "away": "cadiz",
+      "home_goals": 4,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-20",
+      "home": "rayo vallecano de madrid",
+      "away": "ca osasuna",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-20",
+      "home": "rc celta de vigo",
+      "away": "ud las palmas",
+      "home_goals": 4,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-20",
+      "home": "valencia",
+      "away": "real betis balompie",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-04-21",
+      "home": "deportivo alaves",
+      "away": "club atletico de madrid",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-04-21",
+      "home": "getafe",
+      "away": "real sociedad de futbol",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-21",
+      "home": "real madrid",
+      "away": "fc barcelona",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-04-21",
+      "home": "ud almeria",
+      "away": "villarreal",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-04-22",
+      "home": "sevilla",
+      "away": "rcd mallorca",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-26",
+      "home": "real sociedad de futbol",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-27",
+      "home": "club atletico de madrid",
+      "away": "athletic club",
+      "home_goals": 3,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-27",
+      "home": "deportivo alaves",
+      "away": "rc celta de vigo",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-04-27",
+      "home": "ud almeria",
+      "away": "getafe",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-04-27",
+      "home": "ud las palmas",
+      "away": "girona",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-04-28",
+      "home": "cadiz",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-28",
+      "home": "granada",
+      "away": "ca osasuna",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-04-28",
+      "home": "real betis balompie",
+      "away": "sevilla",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-04-28",
+      "home": "villarreal",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-04-29",
+      "home": "fc barcelona",
+      "away": "valencia",
+      "home_goals": 4,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-03",
+      "home": "getafe",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-04",
+      "home": "girona",
+      "away": "fc barcelona",
+      "home_goals": 4,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-04",
+      "home": "rcd mallorca",
+      "away": "club atletico de madrid",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-04",
+      "home": "real madrid",
+      "away": "cadiz",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-04",
+      "home": "real sociedad de futbol",
+      "away": "ud las palmas",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-05",
+      "home": "ca osasuna",
+      "away": "real betis balompie",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-05",
+      "home": "rayo vallecano de madrid",
+      "away": "ud almeria",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-05",
+      "home": "rc celta de vigo",
+      "away": "villarreal",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-05",
+      "home": "sevilla",
+      "away": "granada",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-05",
+      "home": "valencia",
+      "away": "deportivo alaves",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-10",
+      "home": "deportivo alaves",
+      "away": "girona",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-11",
+      "home": "athletic club",
+      "away": "ca osasuna",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-11",
+      "home": "granada",
+      "away": "real madrid",
+      "home_goals": 0,
+      "away_goals": 4
+    },
+    {
+      "date": "2024-05-11",
+      "home": "rcd mallorca",
+      "away": "ud las palmas",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-11",
+      "home": "villarreal",
+      "away": "sevilla",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-12",
+      "home": "cadiz",
+      "away": "getafe",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-12",
+      "home": "club atletico de madrid",
+      "away": "rc celta de vigo",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-12",
+      "home": "real betis balompie",
+      "away": "ud almeria",
+      "home_goals": 3,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-12",
+      "home": "valencia",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-13",
+      "home": "fc barcelona",
+      "away": "real sociedad de futbol",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-14",
+      "home": "ca osasuna",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-14",
+      "home": "girona",
+      "away": "villarreal",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-14",
+      "home": "real madrid",
+      "away": "deportivo alaves",
+      "home_goals": 5,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-15",
+      "home": "getafe",
+      "away": "club atletico de madrid",
+      "home_goals": 0,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-05-15",
+      "home": "rayo vallecano de madrid",
+      "away": "granada",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-15",
+      "home": "rc celta de vigo",
+      "away": "athletic club",
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-15",
+      "home": "sevilla",
+      "away": "cadiz",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-16",
+      "home": "real sociedad de futbol",
+      "away": "valencia",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-16",
+      "home": "ud almeria",
+      "away": "fc barcelona",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-16",
+      "home": "ud las palmas",
+      "away": "real betis balompie",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-18",
+      "home": "deportivo alaves",
+      "away": "getafe",
+      "home_goals": 1,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-19",
+      "home": "athletic club",
+      "away": "sevilla",
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-19",
+      "home": "cadiz",
+      "away": "ud las palmas",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-19",
+      "home": "club atletico de madrid",
+      "away": "ca osasuna",
+      "home_goals": 1,
+      "away_goals": 4
+    },
+    {
+      "date": "2024-05-19",
+      "home": "fc barcelona",
+      "away": "rayo vallecano de madrid",
+      "home_goals": 3,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-19",
+      "home": "granada",
+      "away": "rc celta de vigo",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-19",
+      "home": "rcd mallorca",
+      "away": "ud almeria",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-19",
+      "home": "real betis balompie",
+      "away": "real sociedad de futbol",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-19",
+      "home": "valencia",
+      "away": "girona",
+      "home_goals": 1,
+      "away_goals": 3
+    },
+    {
+      "date": "2024-05-19",
+      "home": "villarreal",
+      "away": "real madrid",
+      "home_goals": 4,
+      "away_goals": 4
+    },
+    {
+      "date": "2024-05-24",
+      "home": "girona",
+      "away": "granada",
+      "home_goals": 7,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-25",
+      "home": "ca osasuna",
+      "away": "villarreal",
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-25",
+      "home": "rayo vallecano de madrid",
+      "away": "athletic club",
+      "home_goals": 0,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-25",
+      "home": "real madrid",
+      "away": "real betis balompie",
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    {
+      "date": "2024-05-25",
+      "home": "real sociedad de futbol",
+      "away": "club atletico de madrid",
+      "home_goals": 0,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-25",
+      "home": "ud almeria",
+      "away": "cadiz",
+      "home_goals": 6,
+      "away_goals": 1
+    },
+    {
+      "date": "2024-05-26",
+      "home": "getafe",
+      "away": "rcd mallorca",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-26",
+      "home": "rc celta de vigo",
+      "away": "valencia",
+      "home_goals": 2,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-26",
+      "home": "sevilla",
+      "away": "fc barcelona",
+      "home_goals": 1,
+      "away_goals": 2
+    },
+    {
+      "date": "2024-05-26",
+      "home": "ud las palmas",
+      "away": "deportivo alaves",
+      "home_goals": 1,
+      "away_goals": 1
+    }
+  ]
+}
