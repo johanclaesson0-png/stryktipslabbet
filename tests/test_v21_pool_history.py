@@ -9,11 +9,13 @@ from unittest.mock import patch
 
 from tests.test_solo import NOW,sample
 from scripts.collect import parse_draw
+from scripts.analyze import create_analysis
+from scripts.solo import derive as derive_solo
 from scripts.v21_pool_history import (
     currency_int,parse_official,compare,backfill,SCHEMA as POOLS,
 )
 from scripts.v21_calibration import historical_summary,prospective_comparison,build
-from scripts.v20_payout_simulator import SCHEMA as V20
+from scripts.v20_payout_simulator import SCHEMA as V20, build as build_v20
 
 
 def public_result(draw=4978,turnover="33004181,00"):
@@ -29,6 +31,14 @@ def public_result(draw=4978,turnover="33004181,00"):
 
 
 class RealPayoutV21Tests(unittest.TestCase):
+    def test_open_turnover_is_only_observed_so_far(self):
+        raw=sample()
+        raw["draw"]["currentNetSale"]="23000000,00"
+        snap=parse_draw(raw,9999,NOW)
+        self.assertEqual(snap["observed_turnover_so_far_kr"],23000000)
+        self.assertEqual(snap["sales_observed_at_utc"],NOW.isoformat())
+        self.assertNotIn("final_turnover_kr",snap)
+
     def test_official_numeric_and_winner_class_fields(self):
         self.assertEqual(currency_int("33 004 181,00"),33004181)
         self.assertRaises(ValueError,currency_int,"33 004 181,12")
@@ -110,6 +120,24 @@ class RealPayoutV21Tests(unittest.TestCase):
             (d/"preclose.json").write_text(json.dumps(raw))
             reports=prospective_comparison(data,{str(draw):source})
             self.assertEqual(reports["prospective_draws_with_preclose_streck_and_official_winners"],0)
+
+    def test_immutable_v20_preclose_forecast_may_be_settled_after_close(self):
+        raw=sample();raw["sha256"]="replay-sha-9999"
+        base=create_analysis(raw)
+        personal=derive_solo(base,NOW+timedelta(minutes=2))
+        forecast=build_v20(raw,base,personal,
+                           NOW+timedelta(minutes=3),simulations=350)
+        source=parse_official(public_result(9999),9999,NOW+timedelta(days=2))
+        with TemporaryDirectory() as tmp:
+            data=Path(tmp)/"data"
+            folder=data/"snapshots"/"9999";folder.mkdir(parents=True)
+            (folder/"original.json").write_text(json.dumps(raw))
+            (data/"v20_history").mkdir()
+            (data/"v20_history"/"9999.json").write_text(json.dumps(forecast))
+            stats=prospective_comparison(data,{"9999":source})
+            self.assertEqual(stats["correctly_frozen_v20_strategy_draws"],1)
+            self.assertEqual(len(stats["actually_settled_hypothetical_v20_strategies"]),10)
+            self.assertEqual(stats["prospective_draws_with_preclose_streck_and_official_winners"],1)
 
     def test_not_frozen_v20_scenarios_never_count_as_settled_systems(self):
         with TemporaryDirectory() as tmp:
