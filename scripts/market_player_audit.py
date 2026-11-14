@@ -38,6 +38,12 @@ def evaluate_verified_pair(analysis, snapshot, feed, report, result):
         fetched=instant(feed["collected_at_utc"])
         if not frozen<=fetched<=created<close:
             return None,"Spelaruppgift inte observerad efter odds och före spelstopp"
+        if (feed.get("source_snapshot_sha256")!=analysis.get("source_snapshot_sha256")
+            or feed.get("source_observed_at_utc")!=analysis.get("observed_at_utc")
+            or feed.get("draw_number")!=analysis.get("draw_number")
+            or report.get("source_snapshot_sha256")!=analysis.get("source_snapshot_sha256")
+            or report.get("source_observed_at_utc")!=analysis.get("observed_at_utc")):
+            return None,"Spelardata har inte exakt samma tidsfrysta oddsursprung"
         if not valid_snapshot(snapshot,created):
             return None,"Den frysta odds- och streckkällan är ogiltig"
         if (snapshot.get("observed_at_utc")!=analysis["observed_at_utc"]
