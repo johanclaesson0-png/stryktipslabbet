@@ -13,7 +13,8 @@ import math
 from pathlib import Path
 import statistics
 
-from scripts.analyze import correct_rows
+from scripts.analyze import correct_rows,create_analysis
+from scripts.solo import derive as derive_solo
 from scripts.publish import instant,valid_snapshot
 from scripts.v19_evaluation import pick_locked_snapshot,json_doc
 from scripts.v20_payout_simulator import crowds_class_likelihood,POOL_SHARES,RETURN_FRACTION,SCHEMA as V20_SCHEMA
@@ -102,22 +103,49 @@ def frozen_crowd_market(snapshot,source):
 def verify_v20_forecast(data,draw,source):
     """Only V20 predictions already saved BEFORE the official draw ended."""
     candidates=[data/"v20_history"/f"{draw}.json",data/"v20"/"simulator.json"]
-    frozen=pick_locked_snapshot(data,draw,instant(source["verified_at_utc"]))
-    if frozen is None:return None
     accepted=[]
     for path in candidates:
         model=json_doc(path)
         if not isinstance(model,dict) or not model.get("scenarios"):
             continue
         try:
-            if (model.get("schema")!=V20_SCHEMA or model.get("draw_number")!=draw
-                or model.get("source_snapshot_sha256")!=frozen.get("sha256")
-                or model.get("observed_at_utc")!=frozen.get("observed_at_utc")
-                or instant(model["generated_at_utc"])>=instant(frozen["reg_close_time"])
-                or instant(model["generated_at_utc"])<instant(frozen["observed_at_utc"])):
+            if model.get("schema")!=V20_SCHEMA or model.get("draw_number")!=draw:
                 continue
-            accepted.append(model)
-        except (KeyError,TypeError,ValueError,OverflowError):
+            # V20 may have been legitimately saved 17 minutes before close,
+            # so do NOT apply V19's unrelated 30-minute cutoff to it. Match
+            # its original SHA, source time and exact preclose-created timestamp.
+            frozen=None
+            for file in (data/"snapshots"/str(draw)).glob("*.json"):
+                candidate=json_doc(file)
+                if (isinstance(candidate,dict)
+                    and candidate.get("sha256")==model.get("source_snapshot_sha256")
+                    and candidate.get("observed_at_utc")==model.get("observed_at_utc")
+                    and valid_snapshot(candidate,instant(source["verified_at_utc"]))):
+                    frozen=candidate;break
+            if frozen is None:
+                continue
+            if (instant(model["generated_at_utc"])>=instant(frozen["reg_close_time"])
+                or instant(model["generated_at_utc"])<instant(frozen["observed_at_utc"])
+                or model.get("reg_close_time")!=frozen.get("reg_close_time")):
+                continue
+            # Confirm its original (odds-based) strategy was actually the
+            # replayable baseline from the matching preclose raw source.
+            base=create_analysis(frozen)
+            solo=derive_solo(base,generated=instant(model["generated_at_utc"]))
+            by_budget={100:solo["systems"][0],1800:base["systems"][0]}
+            first=model["scenarios"][0]
+            if len(first["budgets"])!=2:
+                continue
+            correct=True
+            for b in first["budgets"]:
+                ref=by_budget.get(b.get("budget"))
+                odds=next((r for r in b["strategies"] if r.get("id")=="odds"),None)
+                if (ref is None or odds is None
+                    or b["exact_cost"]!=ref["cost"]
+                    or odds["choices"]!=ref["choices"]):
+                    correct=False;break
+            if correct:accepted.append(model)
+        except (KeyError,TypeError,ValueError,OverflowError,IndexError):
             continue
     return min(accepted,key=lambda v:v["generated_at_utc"]) if accepted else None
 
@@ -130,17 +158,19 @@ def prospective_comparison(data,draws):
         n=int(draw_id)
         when=instant(entry["verified_at_utc"])
         snap=pick_locked_snapshot(data,n,when)
-        if snap is None:continue
-        result=frozen_crowd_market(snap,entry)
-        if result is None:continue
-        crowd,observed=result
-        likelihood=crowds_class_likelihood(crowd,observed)
-        matched_draws+=1
-        for k in CLASSES:
-            predicted=entry["turnover_kr"]*likelihood[k]
-            actual=entry["classes"][str(k)]["winners"]
-            metrics[k].append({"draw":n,"predicted":predicted,"actual":actual,
-                               "ratio":actual/predicted if predicted>.00001 else None})
+        if snap is not None:
+            result=frozen_crowd_market(snap,entry)
+            if result is not None:
+                crowd,observed=result
+                likelihood=crowds_class_likelihood(crowd,observed)
+                matched_draws+=1
+                for k in CLASSES:
+                    predicted=entry["turnover_kr"]*likelihood[k]
+                    actual=entry["classes"][str(k)]["winners"]
+                    metrics[k].append({"draw":n,"predicted":predicted,"actual":actual,
+                                       "ratio":actual/predicted if predicted>.00001 else None})
+        # Independently settle any originally saved V20 system, even if its
+        # frozen market snapshot was closer than 30 minutes before close.
         model=verify_v20_forecast(data,n,entry)
         if model is None:continue
         # Match the SAME set of prior-saved system choices to the real
