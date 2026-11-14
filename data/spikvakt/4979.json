@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4979,
-  "source_observed_at_utc": "2026-11-14T07:00:43.800604+00:00",
+  "source_observed_at_utc": "2026-11-14T08:58:25.989701+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "source_snapshot_sha256": "e62a5033b12ac55729bc3f72958efae2689a8a1c278165b3df7a719c9f0a390e",
-  "created_at_utc": "2026-11-14T07:00:43.970661+00:00",
+  "source_snapshot_sha256": "5faa4d1c405ddf687ea736b62b2fe80fb5046aa928c468127f601b05779b4f4a",
+  "created_at_utc": "2026-11-14T08:58:26.207104+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -29,7 +29,7 @@
         "1X2",
         "1X2"
       ],
-      "baseline_p13": 0.046003766,
+      "baseline_p13": 0.045228571,
       "baseline_miss_risk_spikes": 1,
       "baseline_x_included": 7,
       "risk_report": {
@@ -61,10 +61,10 @@
             "home": "Österrike",
             "away": "Irland",
             "chosen": "1",
-            "estimated_miss_probability": 0.386123,
+            "estimated_miss_probability": 0.396467,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.230935,
+            "extra_outcome_probability": 0.235525,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -123,7 +123,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.046003766,
+          "estimated_p13": 0.045228571,
           "miss_risk_spikes": 1,
           "x_included": 7
         },
@@ -146,7 +146,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.046003766,
+          "estimated_p13": 0.045228571,
           "miss_risk_spikes": 1,
           "x_included": 7
         }
@@ -170,7 +170,7 @@
         "12",
         "12"
       ],
-      "baseline_p13": 0.006508058,
+      "baseline_p13": 0.006311307,
       "baseline_miss_risk_spikes": 2,
       "baseline_x_included": 2,
       "risk_report": {
@@ -213,10 +213,10 @@
             "home": "Österrike",
             "away": "Irland",
             "chosen": "1",
-            "estimated_miss_probability": 0.386123,
+            "estimated_miss_probability": 0.396467,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.230935,
+            "extra_outcome_probability": 0.235525,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -286,7 +286,7 @@
             "12",
             "12"
           ],
-          "estimated_p13": 0.006508058,
+          "estimated_p13": 0.006311307,
           "miss_risk_spikes": 2,
           "x_included": 2
         },
@@ -309,7 +309,7 @@
             "12",
             "12"
           ],
-          "estimated_p13": 0.006508058,
+          "estimated_p13": 0.006311307,
           "miss_risk_spikes": 2,
           "x_included": 2
         }
