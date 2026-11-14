@@ -1,0 +1,43 @@
+name: V19 – evidensgrind och beslutsmotor
+on:
+  pull_request:
+    paths:
+      - "scripts/v19_evaluation.py"
+      - "scripts/v19_decision.py"
+      - "tests/test_v19_evidence_and_decision.py"
+      - "v19-beslutsstudio.html"
+      - "scripts/publish.py"
+      - ".github/workflows/v19-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/v19_evaluation.py"
+      - "scripts/v19_decision.py"
+      - "tests/test_v19_evidence_and_decision.py"
+      - "v19-beslutsstudio.html"
+      - "scripts/publish.py"
+      - ".github/workflows/v19-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testa V19 och regressionssvit
+        run: python -m unittest discover -s tests -v
+      - name: Bygg V19-rapporter utan API-nycklar
+        run: |
+          python -m scripts.v19_evaluation --outdir data
+          python -m scripts.v19_decision --outdir data
+      - name: Bygg publikationsmapp utan externa spelarkällor
+        run: |
+          python -m scripts.publish
+          test -f .site/v19-beslutsstudio.html
+          test -f .site/data/v19/evidence.json
+          ! test -f .site/data/player_feed/4979.json

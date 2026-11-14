@@ -62,6 +62,10 @@ jobs:
         env:
           MARKET_AUDIT_OUTPUT: data/market_audit/latest.json
         run: python -m scripts.market_player_audit
+      - name: V19 – utvärdera faktorer mot låsta historiska odds och facit
+        run: python -m scripts.v19_evaluation --outdir data
+      - name: V19 – bygg förklarande beslutsstudio (experiment, ingen autoändring)
+        run: python -m scripts.v19_decision --outdir data
       - name: Verifiera några äldre utdelningar från Svenska Spel
         continue-on-error: true
         run: python -m scripts.historical_payouts --outdir data --limit 8

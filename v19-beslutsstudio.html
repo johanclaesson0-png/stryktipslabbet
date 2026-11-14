@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1523"><title>V19 – Beslutsmotorn · Stryktipslabbet</title>
+<style>
+:root{color-scheme:dark;--bg:#091421;--panel:#14273b;--dark:#0d2031;--line:#315069;--ink:#f2f8ff;--muted:#b3cadb;--teal:#8ae4c5;--gold:#f5c781;--blue:#a8d4ff}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse 1100px 500px at 80% -12%,#214d5a,transparent),var(--bg)}
+a{color:var(--blue)}main{max-width:1130px;margin:auto;padding:20px 15px 70px}.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:0 0 28px}
+.brand{font-size:21px;font-weight:900;letter-spacing:-.5px}.brand strong{color:var(--teal)}.navlinks{display:flex;gap:13px;flex-wrap:wrap;font-size:13px}
+.tag{font-size:11px;color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:1.7px}h1{font-size:clamp(29px,6vw,47px);letter-spacing:-1.2px;line-height:1.13;margin:7px 0 12px}
+h2{font-size:22px;line-height:1.3;margin:0 0 13px}h3{font-size:16px;margin:0 0 8px}.lead{font-size:17px;color:#d9e8f1;max-width:820px}.small{font-size:12px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:16px;margin:17px 0}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tile{padding:15px;background:var(--dark);border-radius:12px;border:1px solid var(--line);min-height:105px}.tile b{display:block;font-size:21px;color:var(--teal);margin-top:7px}.tile span{font-size:12px;color:var(--muted)}
+.warn{background:#322c2d;border-left:4px solid var(--gold);border-radius:8px;padding:13px 15px;margin:15px 0;color:#f3e5d1}
+table{border-collapse:collapse;width:100%;font-size:13px}td,th{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:11px;letter-spacing:.2px;color:var(--muted);white-space:nowrap}
+tbody tr:hover{background:#1d3d52}.match{font-weight:700}.muted{color:var(--muted)}.highlight{color:var(--teal);font-weight:750}.rise{color:var(--gold)}.scroll{overflow-x:auto}
+.controls{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-bottom:15px}select{background:#112e43;color:var(--ink);border:1px solid #52809a;border-radius:9px;padding:9px;font:inherit}
+.suffix{font-size:11px;color:var(--muted);margin-top:8px}.evidence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.model{background:var(--dark);padding:15px;border:1px solid var(--line);border-radius:12px}.model p{margin:5px 0 0}.badge{display:inline-block;font-size:11px;color:#efdcaf;border-radius:5px;border:1px solid #786f4d;padding:2px 7px}
+.number{font-variant-numeric:tabular-nums}.empty{border:1px dashed #5a7082;border-radius:11px;padding:15px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:18px 0;font-size:12px;color:var(--muted);margin-top:30px}
+@media(max-width:790px){.grid3,.evidence{grid-template-columns:1fr}.tile{min-height:unset}.card{padding:15px}td,th{padding:9px 6px}.nav{margin-bottom:18px}}
+</style></head><body><main>
+<nav class="nav"><div class="brand">STRYKTIPS<strong>LABBET</strong> ⚽</div>
+<div class="navlinks"><a href="index.html">Startsidan</a><a href="spelvarde-och-spelformer.html">System & värde</a><a href="historiskt-api.html">API-testhistorik</a></div></nav>
+<div class="tag">Version 19 · bevis före beslut</div>
+<h1>Beslutsmotorn</h1>
+<p class="lead">Vilka analyser förbättrar oddsen – och vilka matcher får ett annat spik- eller garderingsval? Jämför alltid original och experiment <strong>till samma radkostnad</strong>.</p>
+<div class="warn"><strong>Ingen automatisk systemändring.</strong> V19 visar bara förhandsfrysta, hypotetiska alternativ. Mer historisk träffsäkerhet eller högre modellberäknad sannolikhet är inte samma sak som bevisat spelvärde.</div>
+<section class="card">
+<h2>Modellernas bevisläge</h2>
+<div class="evidence" id="evidence"><div class="empty">Hämtar revisionsunderlag …</div></div>
+<p class="small" id="evidenceTimestamp"></p>
+</section>
+<section class="card">
+<h2>Aktuell kupong · original mot experiment</h2>
+<div class="grid3" id="overview"><div class="empty">Hämtar tidsfryst kupong …</div></div>
+<p class="small" id="drawTimestamp"></p>
+<div class="controls"><label for="budget">Systembudget</label>
+<select id="budget"><option value="1800">Tipslaget – högst 1 800 kr</option><option value="100">Eget system – högst 100 kr</option></select>
+<label for="order">Visa</label>
+<select id="order"><option value="priority">Viktigast att granska</option><option value="number">Matchordning</option><option value="changed">Enbart ändrade tecken</option></select></div>
+<div id="systemCompare" class="small"></div>
+<div class="scroll"><table aria-label="Stryktipsmatcher – analyser och teckenskillnader">
+<thead><tr><th>Match</th><th>Marknad 1/X/2</th><th>Folket 1/X/2</th><th>Största skillnad</th><th>Original</th><th>Form*</th><th>Streckvärde*</th></tr></thead>
+<tbody id="matchRows"><tr><td colspan="7">Ingen verifierad öppen kupong ännu.</td></tr></tbody></table></div>
+<p class="suffix">* Experimentella tecken. ”—” betyder att en giltig jämförelse saknas. Streck minus odds är en popularitetsindikator, inte garanterad utdelning. Rätt antal rader och kostnad visas för både original och varje alternativ.</p>
+</section>
+<section class="card"><h2>Så blir en faktor godkänd</h2>
+<p>En faktor jämförs med de <strong>faktiskt observerade oddsen</strong> vid en på förhand bestämd tidpunkt. Utvärderingen accepterar bara en modell som skapades på just den oddssnapshoten <strong>före</strong> spelstopp och matchernas officiella facit efteråt.</p>
+<p>För manuell uppflyttning kräver V19 minst <strong>30 avslutade kuponger och 300 jämförbara matcher</strong>, förbättrat Brier- och log-loss, ett positivt 95-procentigt osäkerhetsintervall på kupongnivå samt förbättring även på den sista tredjedelen. Även då aktiveras inget automatiskt.</p>
+<p>De gamla API-skaderapporterna och den femåriga Elo-historiken är fortfarande separata retrospektiva experiment. De får inte blandas ihop med ett faktiskt förhandsfryst oddsbaserat test.</p>
+<p><a href="https://github.com/johanclaesson0-png/stryktipslabbet/blob/main/docs/v19-modellutvardering.md">Läs fullständig metod</a> · <a href="https://github.com/johanclaesson0-png/stryktipslabbet/actions">GitHub-körningar</a></p>
+</section>
+<footer>Ingen automatisk inlämning. Ej finansiell rådgivning. <a href="https://stodlinjen.se/">Stödlinjen</a>. Alla okända förhandsdata lämnas som okända, aldrig som noll.</footer>
+</main>
+<script>
+"use strict";
+let decision=null;
+const budget=document.getElementById("budget");
+const order=document.getElementById("order");
+const pct=p=>Number.isFinite(p)?Math.round(100*p)+" %":"—";
+const decimal=v=>Number.isFinite(v)?Number(v).toFixed(3):"—";
+function node(tag,txt,cls){
+ const x=document.createElement(tag);if(txt!==undefined)x.textContent=String(txt);
+ if(cls)x.className=cls;return x;
+}
+function displayDate(date){
+ try{return new Date(date).toLocaleString("sv-SE",{dateStyle:"medium",timeStyle:"short"})}
+ catch(e){return "okänt"}
+}
+function cell(row,txt,cls){const td=node("td",txt,cls);row.appendChild(td);return td}
+function evidenceBox(row){
+ const card=node("div",undefined,"model");card.appendChild(node("h3",row.label||row.factor));
+ const badge=node("span",row.status||"otillräckligt underlag","badge");
+ card.appendChild(badge);
+ const n=row.matched_matches||0,d=row.matched_draws||0;
+ card.appendChild(node("p",row.factor==="value"?
+    "Verifierade systemomgångar: "+(row.system_rounds||0):
+    "Jämförda matcher: "+n+" · kuponger: "+d));
+ if(row.factor!=="value" && Number.isFinite(row.baseline_brier)&&Number.isFinite(row.factor_brier)){
+   card.appendChild(node("p","Brier: "+decimal(row.baseline_brier)+" → "+decimal(row.factor_brier)));
+ }
+ if(row.factor==="player") card.appendChild(node("p","Källrättigheter och förhandsvalidering krävs.","small"));
+ return card;
+}
+function format3(arr){return Array.isArray(arr)?arr.map(pct).join(" / "):"—"}
+function formatShift(arr){
+ if(!Array.isArray(arr))return "—";
+ let i=0;for(let k=1;k<3;k++)if(Math.abs(arr[k])>Math.abs(arr[i]))i=k;
+ return ("1X2"[i])+" "+(arr[i]>=0?"+":"")+arr[i].toFixed(1)+" p.e.";
+}
+function renderDecision(){
+ const info=document.getElementById("overview"),tbody=document.getElementById("matchRows");
+ info.replaceChildren();tbody.replaceChildren();
+ const drawTimestamp=document.getElementById("drawTimestamp");
+ const sysCompare=document.getElementById("systemCompare");
+ sysCompare.replaceChildren();
+ if(!decision || !Array.isArray(decision.matches)||decision.matches.length!==13){
+    info.appendChild(node("div","Ingen öppen kupong med verifierade tidsfrysta odds just nu.","empty"));
+    tbody.appendChild(node("tr")).appendChild(node("td","Beslutsmotorn visar inga påhittade förslag."));
+    drawTimestamp.textContent="Väntar på ny förhandsfryst observation.";
+    return;
+ }
+ const bs=String(budget.value);
+ const sys=decision.systems.find(s=>String(s.budget)===bs);
+ const tiles=[
+    ["Kupong","Nr "+decision.draw_number],
+    ["Originalsystem",sys?sys.cost+" kr":"Ej tillgängligt"],
+    ["Experimentella faktorer",(decision.models_available||[]).length],
+ ];
+ for(const [label,val] of tiles){
+    const div=node("div",undefined,"tile");
+    div.appendChild(node("span",label));div.appendChild(node("b",val));
+    info.appendChild(div);
+ }
+ drawTimestamp.textContent="Observation: "+displayDate(decision.observed_at_utc)+
+    " · Spelstopp: "+displayDate(decision.reg_close_time)+". Alla alternativ är hypotetiska.";
+ if(sys){
+  sysCompare.appendChild(node("p","Original: "+sys.baseline_choices.join(" · ")+" · "+sys.cost+" kr","small"));
+  for(const ex of sys.experiments){
+   sysCompare.appendChild(node("p",(ex.title||ex.factor)+": "+ex.changes+
+     " ändrade matchtecken · "+sys.cost+" kr · "+ex.status+
+     " · sannolikhetsmassa enligt originalodds "+
+     (100*ex.market_probability_baseline).toFixed(2)+" % → "+
+     (100*ex.market_probability_experiment).toFixed(2)+" %","small"));
+  }
+ }
+ let matches=decision.matches.slice();
+ if(order.value==="priority")matches.sort((a,b)=>b.review_priority-a.review_priority||a.number-b.number);
+ if(order.value==="changed")matches=matches.filter(m=>
+   Object.values(m.experimental_choices||{}).some(e=>e[bs]!==m.baseline_choices[bs]));
+ if(!matches.length){
+  const tr=node("tr");cell(tr,"Inga ändrade tecken i verifierade experimentsystem.");tbody.appendChild(tr);return;
+ }
+ for(const m of matches){
+  const tr=node("tr");
+  cell(tr,String(m.number)+". "+m.home+" – "+m.away,"match");
+  cell(tr,format3(m.market_p),"number");
+  cell(tr,format3(m.crowd_p),"number");
+  cell(tr,formatShift(m.market_minus_crowd_pp),Math.max(...m.market_minus_crowd_pp.map(Math.abs))>=8?"rise":"muted");
+  cell(tr,m.baseline_choices[bs],"highlight");
+  cell(tr,m.experimental_choices.form?.[bs]??"—",
+       m.experimental_choices.form?.[bs]!==undefined&&m.experimental_choices.form[bs]!==m.baseline_choices[bs]?"rise":"");
+  cell(tr,m.experimental_choices.value?.[bs]??"—",
+       m.experimental_choices.value?.[bs]!==undefined&&m.experimental_choices.value[bs]!==m.baseline_choices[bs]?"rise":"");
+  tr.title=m.explanation;
+  tbody.appendChild(tr);
+ }
+}
+async function load(){
+ try{
+  const r=await fetch("./data/v19/evidence.json",{cache:"no-store"});
+  if(!r.ok)throw Error("Ingen revisionsrapport publicerad ännu");
+  const data=await r.json();if(data.schema!=="stryktipslabbet-evidence-gate-v19")throw Error("Fel format");
+  const target=document.getElementById("evidence");target.replaceChildren();
+  for(const factor of data.factors||[])target.appendChild(evidenceBox(factor));
+  document.getElementById("evidenceTimestamp").textContent="Senaste utvärdering: "+displayDate(data.generated_at_utc);
+ }catch(e){document.getElementById("evidence").textContent="Bevisläget saknas ännu: "+e.message}
+ try{
+  const r=await fetch("./data/v19/decision.json",{cache:"no-store"});
+  if(!r.ok)throw Error("Ingen öppen tidsfryst kupong");
+  const data=await r.json();if(data.schema!=="stryktipslabbet-decision-studio-v19")throw Error("Fel format");
+  if(Date.now()>=Date.parse(data.reg_close_time))throw Error("Kupongens spelstopp har passerat");
+  decision=data;
+ }catch(e){decision=null}
+ renderDecision();
+}
+budget.addEventListener("change",renderDecision);
+order.addEventListener("change",renderDecision);
+load();
+</script></body></html>

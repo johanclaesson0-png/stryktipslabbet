@@ -89,6 +89,7 @@ def main():
     shutil.copy2(root / "spelarpaverkan.html", dest / "spelarpaverkan.html")
     shutil.copy2(root / "manuell-spelarkoll.html", dest / "manuell-spelarkoll.html")
     shutil.copy2(root / "historiskt-api.html", dest / "historiskt-api.html")
+    shutil.copy2(root / "v19-beslutsstudio.html", dest / "v19-beslutsstudio.html")
 
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
@@ -110,6 +111,78 @@ def main():
                     json.dumps(public, ensure_ascii=False, indent=2), encoding="utf-8")
         except (OSError, ValueError, TypeError, json.JSONDecodeError):
             pass
+
+    # Version 19: publish only source-validated Svenska Spel-derived decision
+    # comparisons and aggregate evaluation outcomes. Never publish any raw
+    # API-Football injuries/players, even if a local file contains them.
+    from scripts.v19_decision import original_ok as valid_v19_origin
+    evidence_path = root/"data"/"v19"/"evidence.json"
+    try:
+        evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+        if (evidence.get("schema") == "stryktipslabbet-evidence-gate-v19"
+            and isinstance(evidence.get("factors"), list)):
+            safe_keys=("factor","label","status","eligible_for_review",
+                       "matched_draws","matched_matches","baseline_brier",
+                       "factor_brier","baseline_logloss","factor_logloss",
+                       "baseline_top1","factor_top1","brier_gain_ci95",
+                       "system_rounds","system_deltas")
+            safe_factors=[{k:r.get(k) for k in safe_keys}
+                          for r in evidence["factors"]
+                          if isinstance(r,dict) and r.get("factor") in ("form","value")]
+            safe_factors.append({
+                "factor":"player","label":"Spelarfrånvaro utöver odds",
+                "status":"Ej publicerad – källrättigheter och förhandstester krävs",
+                "eligible_for_review":False,"matched_draws":0,
+                "matched_matches":0})
+            public_evidence={
+                "schema":"stryktipslabbet-evidence-gate-v19",
+                "generated_at_utc":evidence["generated_at_utc"],
+                "coverage":evidence.get("coverage",{}),
+                "factors":safe_factors,
+                "policy":evidence.get("policy",{}),
+                "no_automatic_activation":True}
+            target=dest/"data"/"v19"
+            target.mkdir(parents=True,exist_ok=True)
+            (target/"evidence.json").write_text(
+                json.dumps(public_evidence,ensure_ascii=False,indent=2),encoding="utf-8")
+    except (KeyError,TypeError,ValueError,OSError,json.JSONDecodeError):
+        pass
+
+    decision_path=root/"data"/"v19"/"decision.json"
+    try:
+        decision=json.loads(decision_path.read_text(encoding="utf-8"))
+        if decision.get("schema")=="stryktipslabbet-decision-studio-v19":
+            close=instant(decision["reg_close_time"])
+            observed=instant(decision["observed_at_utc"])
+            now_v19=datetime.now(timezone.utc)
+            if observed<=instant(decision["created_at_utc"])<=now_v19<close:
+                draw=decision["draw_number"]
+                base=json.loads((root/"data"/"analysis"/f"{draw}.json").read_text(encoding="utf-8"))
+                source=None
+                for p in (root/"data"/"snapshots"/str(draw)).glob("*.json"):
+                    candidate=json.loads(p.read_text(encoding="utf-8"))
+                    if (candidate.get("observed_at_utc")==observed.isoformat()
+                        and candidate.get("sha256")==decision.get("source_snapshot_sha256")):
+                        source=candidate
+                        break
+                if source is not None and valid_v19_origin(source,base,now_v19):
+                    # No player feed or player-derived proposals are part of
+                    # this output. Match fields come from matched market data.
+                    if (len(decision.get("matches",[]))==13 and
+                        all(m["number"]==b["number"] and
+                            m["home"]==b["home"] and m["away"]==b["away"]
+                            for m,b in zip(decision["matches"],base["matches"]))):
+                        keep=("schema","draw_number","observed_at_utc",
+                              "reg_close_time","created_at_utc","status",
+                              "models_available","factor_evidence","matches",
+                              "systems","review_order","warnings")
+                        public={k:decision.get(k) for k in keep}
+                        folder=dest/"data"/"v19"
+                        folder.mkdir(parents=True,exist_ok=True)
+                        (folder/"decision.json").write_text(
+                            json.dumps(public,ensure_ascii=False,indent=2),encoding="utf-8")
+    except (KeyError,TypeError,ValueError,OSError,OverflowError,json.JSONDecodeError):
+        pass
 
     now = datetime.now(timezone.utc)
     status = {
