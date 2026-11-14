@@ -1,0 +1,28 @@
+name: API-Football – historiskt utfallstest
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/api-football-backtest.yml"
+      - "scripts/api_football_historical_backtest.py"
+      - "tests/test_api_football_historical_backtest.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  historical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Kör isolerade metod- och säkerhetstester
+        run: python -m unittest tests.test_api_football_historical_backtest -v
+      - name: Jämför gamla Stryktipsresultat mot retrospektiva API-skador
+        run: python -m scripts.api_football_historical_backtest
