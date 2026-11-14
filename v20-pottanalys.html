@@ -56,6 +56,7 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:20px;font-si
 <li>Jackpot, ensamvinstgaranti, omfördelning vid för små utdelningar och verkliga samspel mellan spelarnas rader <strong>ingår inte</strong>. Gränsen 15 kr per rad hanteras förenklat.</li>
 <li>Medelutfallet har en simuleringsteknisk felmarginal. Den fångar <strong>inte</strong> osäkerheten i modellens antaganden. Prova därför flera omsättnings- och konkurrensscenarier.</li>
 </ul>
+<p class="small"><a href="v21-verklig-pott.html">Se verklig historisk omsättning och vinnande rader i V21</a></p>
 <p class="small"><a href="https://spela.svenskaspel.se/fotboll/premier-league/stryktipset">Svenska Spels officiella vinstplan</a> · <a href="https://github.com/johanclaesson0-png/stryktipslabbet/blob/main/docs/v20-pottmodell.md">Modell, begränsningar och tester</a></p>
 </section>
 <footer>V20 är ett forskningsexperiment, inte rådgivning eller en prognos över verkligt nettoutfall. Inga insatser eller spel görs här. <a href="https://stodlinjen.se/">Stödlinjen</a>.</footer>
@@ -138,7 +139,14 @@ async function load(){
    el("source-status").textContent="Kupong "+obj.draw_number+
       " · observerad "+new Date(obj.observed_at_utc).toLocaleString("sv-SE")+
       " · spelstopp "+new Date(obj.reg_close_time).toLocaleString("sv-SE")+
-      " · "+obj.simulation_draws+" slumpade kupongutfall. Ingen faktisk omsättning används.";
+      " · "+obj.simulation_draws+" slumpade kupongutfall. "+
+      (Number.isFinite(obj.observed_turnover_so_far_kr)
+        ? "Officiellt observerad omsättning hittills: "+
+          swedishKr(obj.observed_turnover_so_far_kr)+
+          " (inte slutlig; observerad "+
+          new Date(obj.sales_observed_at_utc).toLocaleString("sv-SE")+"). "
+        : "Ingen verifierad förhandsomsättning i denna snapshot. ")+
+      "Omsättningen i scenarierna är fortfarande antaganden.";
  }catch(err){
    report=null;
    el("source-status").textContent="Inga aktiva och verifierade kronoscenarier: "+err.message;
