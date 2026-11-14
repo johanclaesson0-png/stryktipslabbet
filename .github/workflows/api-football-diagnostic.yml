@@ -62,7 +62,16 @@ jobs:
                   print("DIAGNOSTIK: Källa", type(exc).__module__ + "." + type(exc).__qualname__)
                   sys.exit(2)
               if data.get("errors"):
-                  print("RESULTAT: API nekade anropet (orsak redovisas inte för att undvika läckage)")
+                  errors = data["errors"]
+                  # Only safe error-category names; never print vendor text, request headers, or key.
+                  if isinstance(errors, dict):
+                      classes = sorted(str(k)[:48] for k in errors.keys())
+                  elif isinstance(errors, list):
+                      classes = ["list"]
+                  else:
+                      classes = [type(errors).__name__]
+                  print("RESULTAT: API nekade anropet")
+                  print("DIAGNOSTIK: Felkategorier:", ", ".join(classes) or "okänd")
                   sys.exit(3)
               if not isinstance(data.get("response"), list):
                   print("RESULTAT: Oväntat svar")
