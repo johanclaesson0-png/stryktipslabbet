@@ -30,6 +30,9 @@ details{padding:10px 0;border-bottom:1px solid #344c62}summary{cursor:pointer;fo
 <section class="card"><h2>Senaste fem riktiga matcher och spelarfrånvaro</h2><p class="small">Här ser du vilka lag motståndet gällde, slutresultat och när matchen spelades. Skador och avstängningar kräver separata verifierade källor.</p><div id="recent"><p class="small">Hämtar underlaget …</p></div>
 <div class="notice" id="absenceWarning">Frånvarodata: ingen integrerad leverantör ännu. Avsaknad av uppgift betyder inte att en spelare är tillgänglig.</div>
 <p class="small">Källor att kontrollera: <a href="https://www.premierleague.com/en/latest-player-injuries" target="_blank" rel="noopener noreferrer">Premier Leagues skadeöversikt</a> och <a href="https://www.svenskfotboll.se/landslag/herr/" target="_blank" rel="noopener noreferrer">Svenska landslagets truppnyheter</a>. En äldre artikel är inte automatiskt en dagsaktuell status.</p></section>
+<section class="card"><h2>Version 17: nyckelspelare och spelarscenario</h2>
+<p class="small">Jämför oddsbaslinjen med ett separat räkneexempel när verifierad spelarfrånvaro finns. Den här beräkningen är inte kalibrerad och kan dubbelräkna skador som redan syns i oddsen. <a href="./spelarpaverkan.html">Visa fullständig spelarlista och källtäckning</a>.</p>
+<div id="v17"><p class="small">Läser eventuellt publicerad spelardata …</p></div></section>
 <section class="card"><h2>Version 16: jämför spelformerna</h2><p>De här tre spelen har olika antal matcher och olika vinstregler. Därför får de **egna** kuponger och resultat – vi flyttar aldrig över ett Stryktipsfacit.</p>
 <div class="grid"><div class="tile"><span class="pill">13 matcher</span><h3>Stryktipset</h3><p>Eget system cirka 100 kr och lagets upp till 1 800 kr.</p><a href="./spela-sjalv.html">Visa Stryktipsförslag</a></div>
 <div class="tile"><span class="pill">8 matcher</span><h3>Topptipset</h3><p>Endast åtta rätt ger utdelning. Färre matcher kan passa en mindre budget, men vinster är inte garanterade.</p><div id="topptipset"></div></div>
@@ -41,7 +44,7 @@ details{padding:10px 0;border-bottom:1px solid #344c62}summary{cursor:pointer;fo
 const e=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('sv-SE',{maximumFractionDigits:2}),pct=n=>fmt(n*100)+' %',kr=n=>Number(n).toLocaleString('sv-SE')+' kr';
 const mk=(p,t,c,klass)=>{const x=document.createElement(t);x.textContent=c==null?'–':String(c);if(klass)x.className=klass;p.append(x);return x};
 const get=async path=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()};
-let index=[],value=null,details=null,absences=null,deep=null,reviewed=[],draw=null;
+let index=[],value=null,details=null,absences=null,deep=null,reviewed=[],draw=null,playerImpact=null;
 function note(s){e('notice').textContent=s}
 function table(container,headers,rows){
  const wrap=mk(container,'div','','scroll');const t=mk(wrap,'table','');const h=mk(t,'thead','');const tr=mk(h,'tr','');
@@ -143,20 +146,68 @@ function renderRecent(){
  e('absenceWarning').textContent=(reported+reviewed.length)?(reported+reviewed.length)+' källgranskade spelaruppgifter/nyheter finns. Senaste nyheterna kan vara yngre än oddsobservationen och påverkar inte modellen. Kontrollera inför avspark.':
   'Inga källgranskade spelaruppgifter hittades. Det betyder INTE att lagen är skadefria. Automatisk skadeleverantör är ännu inte ansluten.';
 }
+function renderV17(){
+ const area=e('v17');area.replaceChildren();
+ if(!playerImpact || playerImpact.draw_number!==draw){
+  mk(area,'p','Inget licensgodkänt, tidsfryst spelarunderlag publicerat för den här omgången. Ordinarie modeller fungerar som tidigare.','small');return;
+ }
+ mk(area,'p','Kupong '+playerImpact.draw_number+' · datakälla kontrollerad '+
+   new Date(playerImpact.provider_collected_at_utc).toLocaleString('sv-SE')+' · '+
+   playerImpact.coverage.scenario_matches+' av 13 matcher med verifierbart scenario.','small');
+ const entries=playerImpact.matches.filter(m=>m.scenario_p!==null);
+ if(!entries.length){mk(area,'p','Ingen tillräcklig datatäckning för beräknad spelarpåverkan. Okänd är inte skadefri.','small');return}
+ mk(area,'p','Scenariot antar att nyckelspelarnas frånvaro inte redan är inprisad; detta är inte en validerad förbättring av oddsen.','test');
+ const d=mk(area,'details','');mk(d,'summary','Visa 1/X/2 före och efter samt berörda nyckelspelare');
+ table(d,['Match','Odds 1/X/2','Spelar 1/X/2','Skillnad p.e.'],entries.map(m=>[
+  m.number+'. '+m.home+' – '+m.away,
+  m.market_p.map(pct).join(' / '),m.scenario_p.map(pct).join(' / '),
+  m.delta_pp.map(x=>(x>0?'+':'')+fmt(x)).join(' / ')
+ ]));
+ for(const m of entries){
+  const list=[...(m.absences_home||[]).map(x=>x.name+' ('+m.home+', '+x.status+')'),
+              ...(m.absences_away||[]).map(x=>x.name+' ('+m.away+', '+x.status+')')];
+  mk(d,'p',m.number+'. '+(list.length?list.join(', '):'Ingen rapporterad frånvaro i leverantörsunderlaget; kan vara ofullständigt.'),'small');
+ }
+ const grid=mk(area,'div','','grid');
+ for(const s of playerImpact.systems||[]){
+  const tile=mk(grid,'div','','tile');
+  mk(tile,'h3',s.budget_limit===100?'Eget spel – 100 kr':'Tipslag – högst 1 800 kr');
+  mk(tile,'p',kr(s.cost)+' · '+s.changed_matches+' ändrade tecken · '+s.covered_by_player_data+
+     '/13 matcher med spelarscenario','small');
+  mk(tile,'p','Befintligt system: '+pct(s.original_p13_under_scenario)+
+     ' · spelarsystem: '+pct(s.player_p13_under_scenario)+' (båda bedömda med samma experimentella sannolikheter)','small');
+  const detail=mk(tile,'details','');mk(detail,'summary','Jämför tecken, samma radkostnad');
+  table(detail,['Match','Grund','Spelare'],s.player_scenario_choices.map((c,i)=>[
+   (i+1)+'. '+playerImpact.matches[i].home+' – '+playerImpact.matches[i].away,
+   s.source_market_choices[i],c
+  ]));
+  const b=mk(tile,'button','Kopiera spelarscenariot');
+  b.onclick=async()=>{
+   const txt='Stryktipslabbet, experimentellt spelarscenario, omgång '+playerImpact.draw_number+
+    '\n'+s.player_scenario_choices.map((c,i)=>(i+1)+'. '+
+       playerImpact.matches[i].home+' – '+playerImpact.matches[i].away+': '+c).join('\n')+
+    '\nRadkostnad '+kr(s.cost)+' · ej validerad effekt';
+   try{await navigator.clipboard.writeText(txt);b.textContent='Kopierat'}
+   catch{window.prompt('Kopiera system',txt)}
+  };
+ }
+}
 async function showRound(){
  const n=Number(e('round').value);draw=n;
  try{
   const row=index.find(x=>x.draw_number===n);
-  const [a,b,c,d,news]=await Promise.all([
+  const [a,b,c,d,news,impact]=await Promise.all([
      row?.pool_value_available?get('./data/pool_value/'+n+'.json').catch(()=>null):Promise.resolve(null),
      row?.form_available?get('./data/form/features/'+n+'.json').catch(()=>null):Promise.resolve(null),
      row?.player_report_available?get('./data/player_reports/analysis/'+n+'.json').catch(()=>null):Promise.resolve(null),
      row?.match_insights_available?get('./data/match_insights/'+n+'.json').catch(()=>null):Promise.resolve(null),
-     get('./data/player_reports/recent_verified.json').catch(()=>null)]);
+     get('./data/player_reports/recent_verified.json').catch(()=>null),
+     get('./data/player_impact/latest.json').catch(()=>null)]);
   value=a?.draw_number===n?a:null;details=b?.draw_number===n?b:null;absences=c?.draw_number===n?c:null;
   deep=d?.schema==='stryktipslabbet-match-insights-v1'&&d.draw_number===n?d:null;
   reviewed=news?.schema==='stryktipslabbet-reviewed-player-news-public-v1'&&news.applicable_draw_numbers?.includes(n)?news.reports:[];
-  renderValue();renderRecent();
+  playerImpact=impact?.schema==='stryktipslabbet-player-impact-v17'&&impact.draw_number===n?impact:null;
+  renderValue();renderRecent();renderV17();
  }catch(err){note('Kunde inte läsa omgången: '+err.message)}
 }
 async function showGame(game){
