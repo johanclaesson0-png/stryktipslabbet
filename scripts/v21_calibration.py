@@ -48,6 +48,10 @@ def historical_summary(draws):
         sample=[d for d in entries if key in d["classes"]]
         vals=[d["classes"][key]["winners"] for d in sample]
         pays=[d["classes"][key]["payout_per_row_kr"] for d in sample]
+        # Turnover-normalized winner density, only an empirical unconditional
+        # distribution. It is not a preclose, result-conditioned prediction.
+        density=[d["classes"][key]["winners"]*1_000_000/d["turnover_kr"]
+                 for d in sample]
         ratios=[]
         for d in sample:
             w=d["classes"][key]["winners"]
@@ -62,6 +66,9 @@ def historical_summary(draws):
             "winner_rows_median":quantile(vals,.5),
             "winner_rows_p10":quantile(vals,.10),
             "winner_rows_p90":quantile(vals,.90),
+            "winner_rows_per_million_median":quantile(density,.5),
+            "winner_rows_per_million_p10":quantile(density,.1),
+            "winner_rows_per_million_p90":quantile(density,.9),
             "actual_payout_median_kr":quantile(pays,.5),
             "zero_winner_rounds":sum(v==0 for v in vals),
             "zero_payout_rounds":sum(v==0 for v in pays),
