@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#091824"><title>V20 – Pott och utdelning · Stryktipslabbet</title>
+<style>
+:root{color-scheme:dark;--bg:#081623;--panel:#152b3c;--surface:#102336;--line:#32556a;--text:#f0f7fe;--muted:#bbcedb;--green:#8ce2c7;--gold:#f4c987;--link:#bddaff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse 900px 480px at 88% -5%,#24515c,transparent 70%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--link)}main{max-width:1160px;margin:auto;padding:16px 18px 70px}.nav{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:30px}.brand{font-size:21px;font-weight:850;letter-spacing:-.7px}.brand strong{color:var(--green)}.navlinks{display:flex;flex-wrap:wrap;gap:12px;font-size:13px}
+.eyebrow{color:var(--green);font-size:11px;text-transform:uppercase;font-weight:850;letter-spacing:1.5px}h1{font-size:clamp(30px,5.5vw,47px);line-height:1.13;letter-spacing:-1.1px;margin:7px 0 12px}h2{font-size:22px;line-height:1.3;margin:0 0 13px}h3{font-size:17px;margin:0 0 8px}
+.lead{font-size:17px;color:#d6e7f3;max-width:820px}.small{font-size:12px;color:var(--muted)}.card{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:15px;margin:18px 0}.warning{border-left:4px solid var(--gold);padding:14px;background:#33323a;border-radius:8px;margin:15px 0;color:#f7e8d2}
+.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.control{display:flex;flex-direction:column;gap:5px}.control label{font-size:12px;color:var(--muted)}
+select{font:inherit;background:#0d2538;color:var(--text);border:1px solid #54819c;padding:10px;border-radius:10px;width:100%}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.metric{background:var(--surface);padding:15px;border:1px solid var(--line);border-radius:11px}.metric span{font-size:11px;color:var(--muted);display:block}.metric b{font-size:24px;color:var(--green);display:block;margin-top:6px;font-variant-numeric:tabular-nums}.metric .warnval{color:var(--gold)}.metric p{margin:5px 0 0;color:var(--muted);font-size:11px}
+.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}thead th{font-size:11px;color:var(--muted)}tbody tr:hover{background:#234357}.selected{background:#1a4143}
+.good{color:var(--green);font-weight:700}.caution{color:var(--gold)}.note{padding:14px;border-radius:10px;border:1px solid var(--line);background:var(--surface)}
+.rank{display:inline-block;background:#24485d;border-radius:6px;padding:2px 7px;margin-right:7px;color:var(--green);font-weight:750}.empty{border:1px dashed var(--line);padding:20px;border-radius:11px;color:var(--muted)}
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted)}ul{padding-left:20px}li{padding-bottom:5px}
+@media(max-width:780px){.controls{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:15px}th,td{padding:9px 6px;font-size:12px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr}.metric b{font-size:20px}}
+</style></head><body><main>
+<nav class="nav"><div class="brand">STRYKTIPS<strong>LABBET</strong> ⚽</div>
+<div class="navlinks"><a href="index.html">Startsidan</a><a href="v19-beslutsstudio.html">V19 – Beslutsmotorn</a><a href="historiskt-api.html">Historiska tester</a></div></nav>
+<div class="eyebrow">Version 20 · kronor och skrällpotential</div>
+<h1>Vad kan raden ge i kronor?</h1>
+<p class="lead">Simulera möjliga matchresultat, hur populära vinnande rader kan vara och hur samma radbudget fördelas mellan favoriter och underskattade skrällar.</p>
+<div class="warning"><strong>Viktigt:</strong> Kronorna här är <strong>illustrativa scenarioberäkningar</strong>, inte faktisk förväntad utdelning. V20 känner ännu inte den säkert tidsfrysta omsättningen, verkliga vinnarantalet, hur spelarna kombinerat strecken, jackpoten eller effekten av ensamvinstgaranti. Inga system ändras eller lämnas in automatiskt.</div>
+<section class="card">
+<h2>Välj antaganden</h2>
+<div class="controls">
+<div class="control"><label for="budget">Budget</label><select id="budget">
+<option value="1800">Tipslaget – högst 1 800 kr</option><option value="100">Eget system – högst 100 kr</option></select></div>
+<div class="control"><label for="turnover">Antagen omsättning (inte live-data)</label><select id="turnover">
+<option value="5000000">5 miljoner kr</option><option value="15000000" selected>15 miljoner kr</option><option value="30000000">30 miljoner kr</option></select></div>
+<div class="control"><label for="crowd">Antal andra vinnande rader jämfört med modellen</label><select id="crowd">
+<option value="0.5">Hälften så många – optimistiskt</option><option value="1" selected>Modellens mittscenario</option><option value="2">Dubbelt så många – försiktigt</option></select></div>
+</div>
+<p class="small" id="source-status">Hämtar tidsfrysta kuponguppgifter …</p>
+<div id="summary" class="grid"><div class="empty">Ingen öppen simulerad kupong finns ännu.</div></div>
+</section>
+<section class="card">
+<h2>Jämför system till exakt samma kostnad</h2>
+<p class="small">Alla alternativ utgår från samma förhandsfrysta 1/X/2-odds och streck. Kolumnen ”medelnetto” är beräknad på slumpade utfall och illustrativa antaganden, inte en verifierad fördel.</p>
+<div id="strategies" class="tablewrap"><div class="empty">Väntar på kupongunderlag …</div></div>
+<p class="small" id="ranking-note"></p>
+</section>
+<section class="card">
+<h2>Var ligger de intressanta skrällarna?</h2>
+<p>Matchtecken där oddsen antyder högre chans än folkets streck får extra uppmärksamhet. Det är en indikation på att få andra kan ha raden, <strong>inte</strong> att tecknet har högst sannolikhet att inträffa.</p>
+<div class="tablewrap"><table><thead><tr><th>Match</th><th>Tecken</th><th>Odds-chans</th><th>Folket</th><th>Skillnad</th></tr></thead><tbody id="upsets"><tr><td colspan="5">Ingen öppen kupong.</td></tr></tbody></table></div>
+</section>
+<section class="card">
+<h2>Vad beräknas – och vad saknas?</h2>
+<ul>
+<li>Matchresultat slumpas enligt den frysta oddsbaslinjen. Samma utfall används för alla systemalternativ.</li>
+<li>Antalet andra vinnande rader uppskattas från folkets procentfördelning och den <em>antagna</em> omsättningen. Det kräver ett förenklande antagande att strecken i olika matcher valts oberoende.</li>
+<li>65 % av omsättningen läggs som vinstmedel; andelarna 40/15/12/25 % av vinstmedlen avser 13/12/11/10 rätt. Resterande 8 % av vinstmedlen tillhör garantifonden.</li>
+<li>Jackpot, ensamvinstgaranti, omfördelning vid för små utdelningar och verkliga samspel mellan spelarnas rader <strong>ingår inte</strong>. Gränsen 15 kr per rad hanteras förenklat.</li>
+<li>Medelutfallet har en simuleringsteknisk felmarginal. Den fångar <strong>inte</strong> osäkerheten i modellens antaganden. Prova därför flera omsättnings- och konkurrensscenarier.</li>
+</ul>
+<p class="small"><a href="https://spela.svenskaspel.se/fotboll/premier-league/stryktipset">Svenska Spels officiella vinstplan</a> · <a href="https://github.com/johanclaesson0-png/stryktipslabbet/blob/main/docs/v20-pottmodell.md">Modell, begränsningar och tester</a></p>
+</section>
+<footer>V20 är ett forskningsexperiment, inte rådgivning eller en prognos över verkligt nettoutfall. Inga insatser eller spel görs här. <a href="https://stodlinjen.se/">Stödlinjen</a>.</footer>
+</main>
+<script>
+"use strict";
+let report=null;
+const el=id=>document.getElementById(id);
+const swedishKr=x=>Number.isFinite(x)?Math.round(x).toLocaleString("sv-SE")+" kr":"—";
+const pct=x=>Number.isFinite(x)?(100*x).toLocaleString("sv-SE",{maximumFractionDigits:1})+" %":"—";
+const node=(tag,txt,cls)=>{const x=document.createElement(tag);if(txt!==undefined)x.textContent=String(txt);if(cls)x.className=cls;return x};
+function c(row,text,className){let td=node("td",text,className);row.appendChild(td);return td}
+function render(){
+ const summary=el("summary"),out=el("strategies"),ups=el("upsets");
+ summary.replaceChildren();out.replaceChildren();ups.replaceChildren();
+ if(!report||!report.scenarios?.length){
+   summary.appendChild(node("div","Ingen tidsfryst öppen kupong tillgänglig. V20 hittar inte på kronor eller system.","empty"));
+   out.appendChild(node("div","Scenarioanalysen visas när en verifierad kupong är öppen.","empty"));
+   c(ups.appendChild(node("tr")),"Ingen verifierad öppen kupong.");
+   return;
+ }
+ const t=Number(el("turnover").value),mult=Number(el("crowd").value),budget=Number(el("budget").value);
+ const data=report.scenarios.find(s=>s.assumed_turnover_kr===t&&s.crowd_winner_multiplier===mult);
+ const group=data?.budgets?.find(b=>b.budget===budget);
+ if(!group)return;
+ const original=group.strategies.find(x=>x.id==="odds");
+ const best=group.strategies.find(x=>x.id===group.scenario_top_by_estimated_kr);
+ const tiles=[
+   ["Omgång","Nr "+report.draw_number,""],
+   ["Exakt insats",swedishKr(group.exact_cost),""],
+   ["Simulerade utfall",Number(report.simulation_draws).toLocaleString("sv-SE"),""],
+   ["Lägsta / högsta modellnetto",swedishKr(Math.min(...group.strategies.map(x=>x.estimated_mean_net_kr)))+" / "+swedishKr(Math.max(...group.strategies.map(x=>x.estimated_mean_net_kr))),"warnval"],
+ ];
+ for(let [label,val,cls] of tiles){
+   const div=node("div",undefined,"metric");div.appendChild(node("span",label));
+   div.appendChild(node("b",val,cls));summary.appendChild(div);
+ }
+ const table=node("table");
+ const head=node("thead"),tr=node("tr");
+ ["System","Medelnetto*","Positivt netto","13-rättsrad","90:e percentil netto","Ändrade tecken"].forEach(x=>tr.appendChild(node("th",x)));
+ head.appendChild(tr);table.appendChild(head);
+ const body=node("tbody");
+ for(const x of group.strategies){
+   const row=node("tr",undefined,x.id===best.id?"selected":"");
+   c(row,x.id==="odds"?"Oddsbaslinje":x.id.replace("streck_","Skrällprofil ").replaceAll("_",","),x.id==="odds"?"good":"");
+   c(row,swedishKr(x.estimated_mean_net_kr),x.estimated_mean_net_kr>=0?"good":"caution");
+   c(row,pct(x.prob_positive_net));
+   c(row,pct(x.prob_at_least_one_13));
+   c(row,swedishKr(x.p90_net_kr));
+   c(row,x.changed_matches);
+   row.title="Alla system kostar exakt "+group.exact_cost+" kr. Simulerad modell, ej faktisk förväntad vinst.";
+   body.appendChild(row);
+ }
+ table.appendChild(body);out.appendChild(table);
+ el("ranking-note").textContent="* Högst scenarioberäknat medelnetto: "+(best.id==="odds"?"Oddsbaslinje":best.id)+
+ ". Rangordningen kan ändras när du byter antagen omsättning eller hur många andra vinnare modellen antar. "+
+ "Den är inte en bekräftad förbättring. Uppskattat medelnetto för originalsystemet: "+swedishKr(original.estimated_mean_net_kr)+".";
+ for(const x of report.upsets.slice(0,9)){
+   const tr=node("tr");
+   c(tr,x.match+". "+x.home+" – "+x.away);
+   c(tr,x.sign,"good");
+   c(tr,x.market_probability_pct.toLocaleString("sv-SE")+" %");
+   c(tr,x.public_streck_pct.toLocaleString("sv-SE")+" %");
+   c(tr,"+"+x.underplayed_pp.toLocaleString("sv-SE")+" p.e.","good");
+   ups.appendChild(tr);
+ }
+ if(!report.upsets.length)c(ups.appendChild(node("tr")),"Inga identifierade understreckade utfall.");
+}
+async function load(){
+ try{
+   const req=await fetch("./data/v20/simulator.json",{cache:"no-store"});
+   if(!req.ok)throw Error("Scenariofil saknas");
+   const obj=await req.json();
+   if(obj.schema!=="stryktipslabbet-payout-scenarios-v20")throw Error("Okänd datakälla");
+   if(!obj.scenarios?.length || Date.now()>=Date.parse(obj.reg_close_time))
+      throw Error("Kupongen är stängd eller saknar scenario");
+   if(obj.assumptions?.turnover!=="ILLUSTRATIVE; not actual draw turnover")
+      throw Error("Omsättningsantagandet kunde inte verifieras");
+   report=obj;
+   el("source-status").textContent="Kupong "+obj.draw_number+
+      " · observerad "+new Date(obj.observed_at_utc).toLocaleString("sv-SE")+
+      " · spelstopp "+new Date(obj.reg_close_time).toLocaleString("sv-SE")+
+      " · "+obj.simulation_draws+" slumpade kupongutfall. Ingen faktisk omsättning används.";
+ }catch(err){
+   report=null;
+   el("source-status").textContent="Inga aktiva och verifierade kronoscenarier: "+err.message;
+ }
+ render();
+}
+for(const id of ["budget","turnover","crowd"])el(id).addEventListener("change",render);
+load();
+</script></body></html>
