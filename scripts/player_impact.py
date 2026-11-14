@@ -140,9 +140,10 @@ def source_ok(analysis, feed, now):
         if (feed.get("schema") != SCHEMA or
             feed.get("provider") != "API-Football" or
             feed.get("draw_number") != analysis["draw_number"] or
-            feed.get("source_snapshot_sha256") != analysis.get("source_snapshot_sha256") or
+            not isinstance(feed.get("source_snapshot_sha256"), (str, type(None))) or
             feed.get("reg_close_time") != analysis["reg_close_time"] or
-            not observed <= collected <= now < close or
+            instant(feed["source_observed_at_utc"]) > collected or
+            not collected <= now < close or
             (now-collected).total_seconds() > MAX_AGE_HOURS*3600):
             return False
         ms = feed["matches"]
