@@ -8,6 +8,7 @@ import unittest
 from unittest.mock import patch
 
 from tests.test_solo import NOW,sample
+from tests.test_pipeline import sample as raw_draw_sample
 from scripts.collect import parse_draw
 from scripts.analyze import create_analysis
 from scripts.solo import derive as derive_solo
@@ -32,7 +33,7 @@ def public_result(draw=4978,turnover="33004181,00"):
 
 class RealPayoutV21Tests(unittest.TestCase):
     def test_open_turnover_is_only_observed_so_far(self):
-        raw=sample()
+        raw=raw_draw_sample()
         raw["draw"]["currentNetSale"]="23000000,00"
         snap=parse_draw(raw,9999,NOW)
         self.assertEqual(snap["observed_turnover_so_far_kr"],23000000)
