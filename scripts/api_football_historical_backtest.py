@@ -181,7 +181,7 @@ def matched_fixture(draw_date, match, indexes):
     return good[0] if len(good)==1 else None
 
 
-def dataset_from_api(client, rounds):
+def dataset_from_api(client, rounds, batch_index=0, per_group=None, return_catalog=False):
     """Build only joined fixture metadata; never store/transmit provider responses."""
     indexes=defaultdict(list)
     coverage=[]
@@ -236,13 +236,18 @@ def dataset_from_api(client, rounds):
     # Free, but the otherwise documented ids batch filter returns errors.plan.
     # Predefine the sample without inspecting absence or outcome patterns:
     # earliest up to eight score-verified matches from each league and season.
-    per_group = MAX_INJURY_FIXTURES // (len(SEASONS)*len(LEAGUES))
+    if not isinstance(batch_index, int) or batch_index < 0 or batch_index > 40:
+        raise ValueError("Historiskt batch-index måste vara 0–40")
+    if per_group is None:
+        per_group = MAX_INJURY_FIXTURES // (len(SEASONS)*len(LEAGUES))
+    if not 1 <= per_group <= 8:
+        raise ValueError("Högst åtta matcher per liga och säsong/körning")
     selected=set()
     for season in SEASONS:
         for league in LEAGUES:
             eligible={(f["date"],f["id"]) for f in matched.values()
                       if f["season"]==season and f["league"]==league}
-            selected.update(fid for _,fid in sorted(eligible)[:per_group])
+            selected.update(fid for _,fid in sorted(eligible)[batch_index*per_group:(batch_index+1)*per_group])
     matched={k:v for k,v in matched.items() if v["id"] in selected}
     ids_by_date={f["id"]:f["date"] for f in matched.values()}
     fixture_ids=sorted(selected, key=lambda fid:(ids_by_date[fid],fid))
@@ -260,6 +265,8 @@ def dataset_from_api(client, rounds):
         complete.add(fid)
     # A failed fetch is MISSING coverage, never interpreted as zero absences.
     matched={k:v for k,v in matched.items() if v["id"] in complete}
+    if return_catalog:
+        return matched,absence,coverage,indexes
     return matched,absence,coverage
 
 
@@ -365,7 +372,9 @@ def main():
     rounds=read_rounds(ROOT/"data/history/stryktipset-five-years.csv")
     snapshots=elbow_snapshots(rounds)
     client=APIClient(key)
-    matched,absences,coverage=dataset_from_api(client,rounds)
+    batch=int(os.getenv("HISTORICAL_BATCH_INDEX", "0"))
+    matched,absences,coverage=dataset_from_api(client,rounds,batch_index=batch)
+    print("BACKTEST: Historisk batch:", batch, "(urvalet förblir kronologiskt, vikter oförändrade)")
     metrics,draws=results_for(rounds,snapshots,matched,absences)
     summarize(metrics,draws,coverage,client.calls)
     if not metrics:
