@@ -543,12 +543,14 @@ def main():
     from scripts.other_games import (
         SCHEMA as OTHER_SCHEMA, CATEGORIES, distribution as other_distribution
     )
-    v15_count = v15_settled = v16_count = player_count = 0
+    from scripts.player_factor import validate as validate_player_factor
+    v15_count = v15_settled = v16_count = player_count = factor_count = 0
     for row in public_rounds:
         n = row["draw_number"]
         row["pool_value_available"] = False
         row["pool_value_settled"] = False
         row["player_report_available"] = False
+        row["player_factor_available"] = False
         base = base_by_draw.get(n)
         if base is None:
             continue
@@ -609,6 +611,22 @@ def main():
                 player_count += 1
             except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):
                 pass
+        # Experimental, source-bound and exactly budget-matched player scenarios.
+        factor_file = root / "data" / "player_factor" / (str(n)+".json")
+        if row["player_report_available"] and row.get("personal_available") and factor_file.exists() and solo.exists():
+            try:
+                player_report=json.loads(report_path.read_text(encoding="utf-8"))
+                personal=json.loads(solo.read_text(encoding="utf-8"))
+                factor=json.loads(factor_file.read_text(encoding="utf-8"))
+                if validate_player_factor(factor,base,player_report,personal):
+                    target=dest/"data"/"player_factor"/(str(n)+".json")
+                    target.parent.mkdir(parents=True,exist_ok=True)
+                    shutil.copy2(factor_file,target)
+                    row["player_factor_available"]=True
+                    factor_count+=1
+            except (OSError,ValueError,KeyError,TypeError,json.JSONDecodeError):
+                pass
+    status["player_factor_scenarios_published"] = factor_count
     status["v15_analyses_published"] = v15_count
     status["v15_settlements_published"] = v15_settled
     status["player_reports_published"] = player_count
