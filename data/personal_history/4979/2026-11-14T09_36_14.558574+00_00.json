@@ -1,0 +1,89 @@
+{
+  "schema": "stryktipslabbet-personal-100-v1",
+  "draw_number": 4979,
+  "model_version": "market-no-vig-v1",
+  "original_observed_at_utc": "2026-11-14T09:36:14.558574+00:00",
+  "reg_close_time": "2026-11-14T14:59:00+00:00",
+  "created_at_utc": "2026-11-14T09:36:14.679120+00:00",
+  "derived_before_close": true,
+  "source_snapshot_sha256": "3ce28d0b1bce4e87ade44436927004b8d5517a6ad3d28aec83e605ef3f3aae1d",
+  "max_budget": 100,
+  "note": "Hypotetiska system; sannolikheter bygger på normaliserade odds, ingen bekräftad överavkastning.",
+  "systems": [
+    {
+      "key": "balanserad",
+      "name": "Balanserad",
+      "cost": 96,
+      "rows": 96,
+      "choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "1X2",
+        "1",
+        "X2",
+        "1",
+        "12",
+        "1",
+        "12",
+        "12",
+        "12"
+      ],
+      "probability_all_13": 0.006552841,
+      "singles": 7,
+      "doubles": 5,
+      "triples": 1
+    },
+    {
+      "key": "varde",
+      "name": "Streckvärde – experiment",
+      "cost": 96,
+      "rows": 96,
+      "choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "12",
+        "1",
+        "1X2",
+        "1",
+        "12",
+        "12",
+        "12",
+        "12",
+        "2"
+      ],
+      "probability_all_13": 0.005829477,
+      "singles": 7,
+      "doubles": 5,
+      "triples": 1
+    },
+    {
+      "key": "skrall",
+      "name": "Skräll – experiment",
+      "cost": 96,
+      "rows": 96,
+      "choices": [
+        "1",
+        "1",
+        "1",
+        "12",
+        "1X2",
+        "1",
+        "1X",
+        "1",
+        "12",
+        "12",
+        "12",
+        "2",
+        "2"
+      ],
+      "probability_all_13": 0.003315592,
+      "singles": 7,
+      "doubles": 5,
+      "triples": 1
+    }
+  ]
+}

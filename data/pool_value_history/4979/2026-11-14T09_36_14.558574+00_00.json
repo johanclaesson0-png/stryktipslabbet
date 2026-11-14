@@ -1,0 +1,435 @@
+{
+  "schema": "stryktipslabbet-pool-value-v15",
+  "version": "relative-pool-value-2026-11-14-v1",
+  "draw_number": 4979,
+  "observed_at_utc": "2026-11-14T09:36:14.558574+00:00",
+  "source_snapshot_sha256": "3ce28d0b1bce4e87ade44436927004b8d5517a6ad3d28aec83e605ef3f3aae1d",
+  "reg_close_time": "2026-11-14T14:59:00+00:00",
+  "created_at_utc": "2026-11-14T09:36:15.454390+00:00",
+  "crowd_exponent": 0.45,
+  "budget_proposals": [
+    {
+      "budget_limit": 100,
+      "cost": 96,
+      "baseline_choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "1X2",
+        "1",
+        "X2",
+        "1",
+        "12",
+        "1",
+        "12",
+        "12",
+        "12"
+      ],
+      "value_choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "12",
+        "1",
+        "1X2",
+        "1",
+        "12",
+        "12",
+        "12",
+        "12",
+        "2"
+      ],
+      "changes": 4,
+      "baseline": {
+        "probability_cover_all_13": 0.006552841376,
+        "modelled_crowd_cover_mass": 0.016137112401,
+        "relative_concentration_ratio": 0.40607
+      },
+      "value": {
+        "probability_cover_all_13": 0.005829477387,
+        "modelled_crowd_cover_mass": 0.010378034244,
+        "relative_concentration_ratio": 0.56171
+      }
+    },
+    {
+      "budget_limit": 1800,
+      "cost": 1458,
+      "baseline_choices": [
+        "1",
+        "1",
+        "1",
+        "X2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2"
+      ],
+      "value_choices": [
+        "1",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "12",
+        "2"
+      ],
+      "changes": 4,
+      "baseline": {
+        "probability_cover_all_13": 0.046959475389,
+        "modelled_crowd_cover_mass": 0.101785498214,
+        "relative_concentration_ratio": 0.46136
+      },
+      "value": {
+        "probability_cover_all_13": 0.039918525226,
+        "modelled_crowd_cover_mass": 0.056042610624,
+        "relative_concentration_ratio": 0.71229
+      }
+    }
+  ],
+  "matches": [
+    {
+      "number": 1,
+      "home": "Sverige",
+      "away": "Bosnien & Hercegovina",
+      "p_market": [
+        0.655075605,
+        0.205486874,
+        0.139437522
+      ],
+      "p_crowd": [
+        0.74,
+        0.17,
+        0.09
+      ],
+      "market_minus_crowd_pp": [
+        -8.49,
+        3.55,
+        4.94
+      ],
+      "relative_underbetting": [
+        0.885,
+        1.209,
+        1.549
+      ]
+    },
+    {
+      "number": 2,
+      "home": "Portugal",
+      "away": "Danmark",
+      "p_market": [
+        0.643564356,
+        0.205940594,
+        0.15049505
+      ],
+      "p_crowd": [
+        0.66,
+        0.22,
+        0.12
+      ],
+      "market_minus_crowd_pp": [
+        -1.64,
+        -1.41,
+        3.05
+      ],
+      "relative_underbetting": [
+        0.975,
+        0.936,
+        1.254
+      ]
+    },
+    {
+      "number": 3,
+      "home": "Norge",
+      "away": "Wales",
+      "p_market": [
+        0.795093139,
+        0.139709223,
+        0.065197637
+      ],
+      "p_crowd": [
+        0.78,
+        0.13,
+        0.09
+      ],
+      "market_minus_crowd_pp": [
+        1.51,
+        0.97,
+        -2.48
+      ],
+      "relative_underbetting": [
+        1.019,
+        1.075,
+        0.724
+      ]
+    },
+    {
+      "number": 4,
+      "home": "Rumänien",
+      "away": "Polen",
+      "p_market": [
+        0.22794408,
+        0.2484006,
+        0.523655319
+      ],
+      "p_crowd": [
+        0.16,
+        0.22,
+        0.62
+      ],
+      "market_minus_crowd_pp": [
+        6.79,
+        2.84,
+        -9.63
+      ],
+      "relative_underbetting": [
+        1.425,
+        1.129,
+        0.845
+      ]
+    },
+    {
+      "number": 5,
+      "home": "Nordirland",
+      "away": "Ukraina",
+      "p_market": [
+        0.390274121,
+        0.307263435,
+        0.302462444
+      ],
+      "p_crowd": [
+        0.47,
+        0.29,
+        0.24
+      ],
+      "market_minus_crowd_pp": [
+        -7.97,
+        1.73,
+        6.25
+      ],
+      "relative_underbetting": [
+        0.83,
+        1.06,
+        1.26
+      ]
+    },
+    {
+      "number": 6,
+      "home": "Österrike",
+      "away": "Irland",
+      "p_market": [
+        0.603532875,
+        0.235525025,
+        0.1609421
+      ],
+      "p_crowd": [
+        0.71,
+        0.19,
+        0.1
+      ],
+      "market_minus_crowd_pp": [
+        -10.65,
+        4.55,
+        6.09
+      ],
+      "relative_underbetting": [
+        0.85,
+        1.24,
+        1.609
+      ]
+    },
+    {
+      "number": 7,
+      "home": "Georgien",
+      "away": "Ungern",
+      "p_market": [
+        0.295638126,
+        0.310177706,
+        0.394184168
+      ],
+      "p_crowd": [
+        0.21,
+        0.29,
+        0.5
+      ],
+      "market_minus_crowd_pp": [
+        8.56,
+        2.02,
+        -10.58
+      ],
+      "relative_underbetting": [
+        1.408,
+        1.07,
+        0.788
+      ]
+    },
+    {
+      "number": 8,
+      "home": "Milton Keynes Dons",
+      "away": "Burton",
+      "p_market": [
+        0.577963176,
+        0.229775604,
+        0.19226122
+      ],
+      "p_crowd": [
+        0.7,
+        0.19,
+        0.11
+      ],
+      "market_minus_crowd_pp": [
+        -12.2,
+        3.98,
+        8.23
+      ],
+      "relative_underbetting": [
+        0.826,
+        1.209,
+        1.748
+      ]
+    },
+    {
+      "number": 9,
+      "home": "Sheffield W",
+      "away": "Plymouth",
+      "p_market": [
+        0.417872392,
+        0.26624441,
+        0.315883198
+      ],
+      "p_crowd": [
+        0.46,
+        0.25,
+        0.29
+      ],
+      "market_minus_crowd_pp": [
+        -4.21,
+        1.62,
+        2.59
+      ],
+      "relative_underbetting": [
+        0.908,
+        1.065,
+        1.089
+      ]
+    },
+    {
+      "number": 10,
+      "home": "Stockport",
+      "away": "Reading",
+      "p_market": [
+        0.520201935,
+        0.241427052,
+        0.238371013
+      ],
+      "p_crowd": [
+        0.64,
+        0.21,
+        0.15
+      ],
+      "market_minus_crowd_pp": [
+        -11.98,
+        3.14,
+        8.84
+      ],
+      "relative_underbetting": [
+        0.813,
+        1.15,
+        1.589
+      ]
+    },
+    {
+      "number": 11,
+      "home": "Wimbledon",
+      "away": "Blackpool",
+      "p_market": [
+        0.336044904,
+        0.276742862,
+        0.387212235
+      ],
+      "p_crowd": [
+        0.34,
+        0.29,
+        0.37
+      ],
+      "market_minus_crowd_pp": [
+        -0.4,
+        -1.33,
+        1.72
+      ],
+      "relative_underbetting": [
+        0.988,
+        0.954,
+        1.047
+      ]
+    },
+    {
+      "number": 12,
+      "home": "Wigan",
+      "away": "Barnsley",
+      "p_market": [
+        0.407232704,
+        0.255345912,
+        0.337421384
+      ],
+      "p_crowd": [
+        0.54,
+        0.26,
+        0.2
+      ],
+      "market_minus_crowd_pp": [
+        -13.28,
+        -0.47,
+        13.74
+      ],
+      "relative_underbetting": [
+        0.754,
+        0.982,
+        1.687
+      ]
+    },
+    {
+      "number": 13,
+      "home": "Swindon",
+      "away": "Grimsby",
+      "p_market": [
+        0.280643394,
+        0.260879775,
+        0.458476832
+      ],
+      "p_crowd": [
+        0.29,
+        0.31,
+        0.4
+      ],
+      "market_minus_crowd_pp": [
+        -0.94,
+        -4.91,
+        5.85
+      ],
+      "relative_underbetting": [
+        0.968,
+        0.842,
+        1.146
+      ]
+    }
+  ],
+  "warnings": [
+    "Jämförelsen P/st–crowd är en popularitetsindikator, INTE validerad förväntad avkastning.",
+    "Streckmodellen antar oberoende mellan matcher; verkliga kupongrader är korrelerade.",
+    "Omsättning, jackpot, antal vinnande rader och slutlig utdelning är okända före rättning.",
+    "Ingen förändring av insatsgränser eller automatiskt spel."
+  ]
+}

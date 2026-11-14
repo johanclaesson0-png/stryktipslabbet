@@ -35,9 +35,9 @@
         1.43
       ],
       "streck": [
-        9.0,
-        25.0,
-        66.0
+        12.0,
+        24.0,
+        64.0
       ],
       "p": [
         0.117658582,
@@ -56,9 +56,9 @@
         5.5
       ],
       "streck": [
-        83.0,
-        10.0,
-        7.0
+        80.0,
+        12.0,
+        8.0
       ],
       "p": [
         0.598383587,
@@ -77,9 +77,9 @@
         2.17
       ],
       "streck": [
-        25.0,
-        33.0,
-        42.0
+        23.0,
+        30.0,
+        47.0
       ],
       "p": [
         0.289923628,
@@ -98,9 +98,9 @@
         2.88
       ],
       "streck": [
-        41.0,
-        30.0,
-        29.0
+        39.0,
+        29.0,
+        32.0
       ],
       "p": [
         0.422738191,
@@ -113,13 +113,21 @@
       "number": 6,
       "home": "St. Vincent & Grenadines",
       "away": "Belize",
-      "odds": null,
-      "streck": [
-        62.0,
-        22.0,
-        16.0
+      "odds": [
+        1.57,
+        4.0,
+        4.9
       ],
-      "p": null,
+      "streck": [
+        63.0,
+        22.0,
+        15.0
+      ],
+      "p": [
+        0.58380246,
+        0.229142466,
+        0.187055074
+      ],
       "match_start": "2026-11-15T01:00:00+01:00"
     },
     {
@@ -133,8 +141,8 @@
       ],
       "streck": [
         9.0,
-        24.0,
-        67.0
+        23.0,
+        68.0
       ],
       "p": [
         0.147785441,
@@ -148,28 +156,61 @@
       "home": "Nya Zeeland",
       "away": "Indien",
       "odds": [
-        1.3,
-        5.1,
-        9.5
+        1.19,
+        6.75,
+        14.0
       ],
       "streck": [
-        71.0,
-        18.0,
-        11.0
+        79.0,
+        13.0,
+        8.0
       ],
       "p": [
-        0.718522913,
-        0.183152899,
-        0.098324188
+        0.79283512,
+        0.139773895,
+        0.067390985
       ],
       "match_start": "2026-11-15T04:00:00+01:00"
     }
   ],
-  "observed_at_utc": "2026-11-14T10:04:02.963189+00:00",
-  "source_snapshot_sha256": "065d4ee7d6c77751ea2916b95b5d7b63e297f3741c1925aa053ed93072cf80d2",
+  "observed_at_utc": "2026-11-14T13:49:15.509251+00:00",
+  "source_snapshot_sha256": "560f7b7966ad8018e46c4d161fb95bf14cace8d4b9e29cc2f9d0db05ff9ee6c9",
   "reg_close_time": "2026-11-14T21:59:00+00:00",
-  "created_at_utc": "2026-11-14T10:04:02.964140+00:00",
-  "systems": [],
-  "complete_odds": false,
-  "note": "Verklig kupong men otillräckliga odds för systemförslag."
+  "created_at_utc": "2026-11-14T13:49:15.510390+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 81,
+      "choices": [
+        "2",
+        "2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "2",
+        "1"
+      ],
+      "estimated_all_correct": 0.2160332142
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 81,
+      "choices": [
+        "2",
+        "2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "2",
+        "1"
+      ],
+      "estimated_all_correct": 0.2160332142
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
 }

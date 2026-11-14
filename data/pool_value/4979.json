@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-pool-value-v15",
   "version": "relative-pool-value-2026-11-14-v1",
   "draw_number": 4979,
-  "observed_at_utc": "2026-11-14T09:36:14.558574+00:00",
-  "source_snapshot_sha256": "3ce28d0b1bce4e87ade44436927004b8d5517a6ad3d28aec83e605ef3f3aae1d",
+  "observed_at_utc": "2026-11-14T13:49:07.901983+00:00",
+  "source_snapshot_sha256": "f5e0bbfa3947ac177fb264ee3a5c6605b561b9cdfdbbcb01ea4947121dba6a0a",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "created_at_utc": "2026-11-14T09:36:15.454390+00:00",
+  "created_at_utc": "2026-11-14T13:49:09.379335+00:00",
   "crowd_exponent": 0.45,
   "budget_proposals": [
     {
@@ -31,9 +31,9 @@
         "1",
         "1",
         "2",
-        "12",
-        "1",
         "1X2",
+        "1",
+        "12",
         "1",
         "12",
         "12",
@@ -41,16 +41,16 @@
         "12",
         "2"
       ],
-      "changes": 4,
+      "changes": 3,
       "baseline": {
-        "probability_cover_all_13": 0.006552841376,
-        "modelled_crowd_cover_mass": 0.016137112401,
-        "relative_concentration_ratio": 0.40607
+        "probability_cover_all_13": 0.006505201997,
+        "modelled_crowd_cover_mass": 0.018823895765,
+        "relative_concentration_ratio": 0.34558
       },
       "value": {
-        "probability_cover_all_13": 0.005829477387,
-        "modelled_crowd_cover_mass": 0.010378034244,
-        "relative_concentration_ratio": 0.56171
+        "probability_cover_all_13": 0.005761397458,
+        "modelled_crowd_cover_mass": 0.012692562813,
+        "relative_concentration_ratio": 0.45392
       }
     },
     {
@@ -60,13 +60,13 @@
         "1",
         "1",
         "1",
-        "X2",
+        "2",
         "1X2",
         "1",
         "1X2",
         "1",
         "1X2",
-        "1",
+        "1X",
         "1X2",
         "1X2",
         "1X2"
@@ -75,27 +75,27 @@
         "1",
         "1",
         "1",
-        "1X2",
-        "1X2",
-        "1",
+        "2",
         "1X2",
         "1",
         "1X2",
+        "1",
         "1X2",
         "1X2",
-        "12",
-        "2"
+        "1X2",
+        "1X2",
+        "12"
       ],
-      "changes": 4,
+      "changes": 2,
       "baseline": {
-        "probability_cover_all_13": 0.046959475389,
-        "modelled_crowd_cover_mass": 0.101785498214,
-        "relative_concentration_ratio": 0.46136
+        "probability_cover_all_13": 0.046530915253,
+        "modelled_crowd_cover_mass": 0.115139232,
+        "relative_concentration_ratio": 0.40413
       },
       "value": {
-        "probability_cover_all_13": 0.039918525226,
-        "modelled_crowd_cover_mass": 0.056042610624,
-        "relative_concentration_ratio": 0.71229
+        "probability_cover_all_13": 0.045177133471,
+        "modelled_crowd_cover_mass": 0.0934659648,
+        "relative_concentration_ratio": 0.48335
       }
     }
   ],
@@ -110,19 +110,19 @@
         0.139437522
       ],
       "p_crowd": [
-        0.74,
+        0.75,
         0.17,
-        0.09
+        0.08
       ],
       "market_minus_crowd_pp": [
-        -8.49,
+        -9.49,
         3.55,
-        4.94
+        5.94
       ],
       "relative_underbetting": [
-        0.885,
+        0.873,
         1.209,
-        1.549
+        1.743
       ]
     },
     {
@@ -130,24 +130,24 @@
       "home": "Portugal",
       "away": "Danmark",
       "p_market": [
-        0.643564356,
-        0.205940594,
-        0.15049505
+        0.61794734,
+        0.212251478,
+        0.169801182
       ],
       "p_crowd": [
-        0.66,
+        0.67,
         0.22,
-        0.12
+        0.11
       ],
       "market_minus_crowd_pp": [
-        -1.64,
-        -1.41,
-        3.05
+        -5.21,
+        -0.77,
+        5.98
       ],
       "relative_underbetting": [
-        0.975,
-        0.936,
-        1.254
+        0.922,
+        0.965,
+        1.544
       ]
     },
     {
@@ -155,24 +155,24 @@
       "home": "Norge",
       "away": "Wales",
       "p_market": [
-        0.795093139,
-        0.139709223,
-        0.065197637
+        0.767217489,
+        0.148722159,
+        0.084060351
       ],
       "p_crowd": [
-        0.78,
+        0.8,
         0.13,
-        0.09
+        0.07
       ],
       "market_minus_crowd_pp": [
-        1.51,
-        0.97,
-        -2.48
+        -3.28,
+        1.87,
+        1.41
       ],
       "relative_underbetting": [
-        1.019,
-        1.075,
-        0.724
+        0.959,
+        1.144,
+        1.201
       ]
     },
     {
@@ -180,24 +180,24 @@
       "home": "Rumänien",
       "away": "Polen",
       "p_market": [
-        0.22794408,
-        0.2484006,
-        0.523655319
+        0.203360117,
+        0.241490139,
+        0.555149744
       ],
       "p_crowd": [
-        0.16,
-        0.22,
-        0.62
+        0.14,
+        0.21,
+        0.65
       ],
       "market_minus_crowd_pp": [
-        6.79,
-        2.84,
-        -9.63
+        6.34,
+        3.15,
+        -9.49
       ],
       "relative_underbetting": [
-        1.425,
-        1.129,
-        0.845
+        1.453,
+        1.15,
+        0.854
       ]
     },
     {
@@ -205,24 +205,24 @@
       "home": "Nordirland",
       "away": "Ukraina",
       "p_market": [
-        0.390274121,
-        0.307263435,
-        0.302462444
+        0.379803483,
+        0.317540617,
+        0.3026559
       ],
       "p_crowd": [
-        0.47,
+        0.46,
         0.29,
-        0.24
+        0.25
       ],
       "market_minus_crowd_pp": [
-        -7.97,
-        1.73,
-        6.25
+        -8.02,
+        2.75,
+        5.27
       ],
       "relative_underbetting": [
-        0.83,
-        1.06,
-        1.26
+        0.826,
+        1.095,
+        1.211
       ]
     },
     {
@@ -230,24 +230,24 @@
       "home": "Österrike",
       "away": "Irland",
       "p_market": [
-        0.603532875,
-        0.235525025,
-        0.1609421
+        0.59222954,
+        0.241333538,
+        0.166436922
       ],
       "p_crowd": [
-        0.71,
+        0.72,
         0.19,
-        0.1
+        0.09
       ],
       "market_minus_crowd_pp": [
-        -10.65,
-        4.55,
-        6.09
+        -12.78,
+        5.13,
+        7.64
       ],
       "relative_underbetting": [
-        0.85,
-        1.24,
-        1.609
+        0.823,
+        1.27,
+        1.849
       ]
     },
     {
@@ -260,19 +260,19 @@
         0.394184168
       ],
       "p_crowd": [
-        0.21,
+        0.19,
         0.29,
-        0.5
+        0.52
       ],
       "market_minus_crowd_pp": [
-        8.56,
+        10.56,
         2.02,
-        -10.58
+        -12.58
       ],
       "relative_underbetting": [
-        1.408,
+        1.556,
         1.07,
-        0.788
+        0.758
       ]
     },
     {
@@ -280,24 +280,24 @@
       "home": "Milton Keynes Dons",
       "away": "Burton",
       "p_market": [
-        0.577963176,
-        0.229775604,
-        0.19226122
+        0.598324151,
+        0.22102798,
+        0.180647869
       ],
       "p_crowd": [
-        0.7,
-        0.19,
-        0.11
+        0.72,
+        0.18,
+        0.1
       ],
       "market_minus_crowd_pp": [
-        -12.2,
-        3.98,
-        8.23
+        -12.17,
+        4.1,
+        8.06
       ],
       "relative_underbetting": [
-        0.826,
-        1.209,
-        1.748
+        0.831,
+        1.228,
+        1.806
       ]
     },
     {
@@ -305,24 +305,24 @@
       "home": "Sheffield W",
       "away": "Plymouth",
       "p_market": [
-        0.417872392,
-        0.26624441,
-        0.315883198
+        0.410888391,
+        0.271543632,
+        0.317567977
       ],
       "p_crowd": [
-        0.46,
+        0.45,
         0.25,
-        0.29
+        0.3
       ],
       "market_minus_crowd_pp": [
-        -4.21,
-        1.62,
-        2.59
+        -3.91,
+        2.15,
+        1.76
       ],
       "relative_underbetting": [
-        0.908,
-        1.065,
-        1.089
+        0.913,
+        1.086,
+        1.059
       ]
     },
     {
@@ -355,24 +355,24 @@
       "home": "Wimbledon",
       "away": "Blackpool",
       "p_market": [
-        0.336044904,
-        0.276742862,
-        0.387212235
+        0.401809365,
+        0.275357594,
+        0.322833041
       ],
       "p_crowd": [
-        0.34,
-        0.29,
-        0.37
+        0.32,
+        0.3,
+        0.38
       ],
       "market_minus_crowd_pp": [
-        -0.4,
-        -1.33,
-        1.72
+        8.18,
+        -2.46,
+        -5.72
       ],
       "relative_underbetting": [
-        0.988,
-        0.954,
-        1.047
+        1.256,
+        0.918,
+        0.85
       ]
     },
     {
@@ -380,9 +380,9 @@
       "home": "Wigan",
       "away": "Barnsley",
       "p_market": [
-        0.407232704,
-        0.255345912,
-        0.337421384
+        0.423974053,
+        0.255530307,
+        0.32049564
       ],
       "p_crowd": [
         0.54,
@@ -390,14 +390,14 @@
         0.2
       ],
       "market_minus_crowd_pp": [
-        -13.28,
-        -0.47,
-        13.74
+        -11.6,
+        -0.45,
+        12.05
       ],
       "relative_underbetting": [
-        0.754,
-        0.982,
-        1.687
+        0.785,
+        0.983,
+        1.602
       ]
     },
     {
@@ -405,24 +405,24 @@
       "home": "Swindon",
       "away": "Grimsby",
       "p_market": [
-        0.280643394,
-        0.260879775,
-        0.458476832
+        0.280883941,
+        0.260530032,
+        0.458586026
       ],
       "p_crowd": [
-        0.29,
+        0.26,
         0.31,
-        0.4
+        0.43
       ],
       "market_minus_crowd_pp": [
-        -0.94,
-        -4.91,
-        5.85
+        2.09,
+        -4.95,
+        2.86
       ],
       "relative_underbetting": [
-        0.968,
-        0.842,
-        1.146
+        1.08,
+        0.84,
+        1.066
       ]
     }
   ],

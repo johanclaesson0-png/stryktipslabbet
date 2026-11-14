@@ -1,0 +1,135 @@
+{
+  "schema": "stryktipslabbet-evidence-gate-v19",
+  "generated_at_utc": "2026-11-14T13:49:17.891872+00:00",
+  "source_rule": "Latest verified market snapshot at least 30 minutes before draw close",
+  "period_rule": "All model outputs must have been generated before close, from exactly the selected market snapshot",
+  "factors": [
+    {
+      "factor": "form",
+      "label": "Form utöver odds",
+      "status": "otillräckligt underlag",
+      "eligible_for_review": false,
+      "matched_draws": 0,
+      "matched_matches": 0,
+      "baseline_brier": null,
+      "factor_brier": null,
+      "baseline_logloss": null,
+      "factor_logloss": null,
+      "baseline_top1": null,
+      "factor_top1": null,
+      "brier_gain_ci95": null,
+      "system_rounds": 0,
+      "system_deltas": {
+        "100": {
+          "rounds": 0,
+          "changed_systems": 0,
+          "baseline_10plus": 0,
+          "factor_10plus": 0,
+          "baseline_13": 0,
+          "factor_13": 0,
+          "total_net_difference": 0
+        },
+        "1800": {
+          "rounds": 0,
+          "changed_systems": 0,
+          "baseline_10plus": 0,
+          "factor_10plus": 0,
+          "baseline_13": 0,
+          "factor_13": 0,
+          "total_net_difference": 0
+        }
+      }
+    },
+    {
+      "factor": "player",
+      "label": "Spelarfrånvaro utöver odds",
+      "status": "otillräckligt underlag",
+      "eligible_for_review": false,
+      "matched_draws": 0,
+      "matched_matches": 0,
+      "baseline_brier": null,
+      "factor_brier": null,
+      "baseline_logloss": null,
+      "factor_logloss": null,
+      "baseline_top1": null,
+      "factor_top1": null,
+      "brier_gain_ci95": null,
+      "system_rounds": 0,
+      "system_deltas": {
+        "100": {
+          "rounds": 0,
+          "changed_systems": 0,
+          "baseline_10plus": 0,
+          "factor_10plus": 0,
+          "baseline_13": 0,
+          "factor_13": 0,
+          "total_net_difference": 0
+        },
+        "1800": {
+          "rounds": 0,
+          "changed_systems": 0,
+          "baseline_10plus": 0,
+          "factor_10plus": 0,
+          "baseline_13": 0,
+          "factor_13": 0,
+          "total_net_difference": 0
+        }
+      }
+    },
+    {
+      "factor": "value",
+      "label": "Streckvärde i systemval (ej 1/X/2-prognos)",
+      "status": "otillräckligt underlag",
+      "eligible_for_review": false,
+      "matched_draws": 0,
+      "matched_matches": 0,
+      "baseline_brier": null,
+      "factor_brier": null,
+      "baseline_logloss": null,
+      "factor_logloss": null,
+      "baseline_top1": null,
+      "factor_top1": null,
+      "brier_gain_ci95": null,
+      "system_rounds": 0,
+      "system_deltas": {
+        "100": {
+          "rounds": 0,
+          "changed_systems": 0,
+          "baseline_10plus": 0,
+          "factor_10plus": 0,
+          "baseline_13": 0,
+          "factor_13": 0,
+          "total_net_difference": 0
+        },
+        "1800": {
+          "rounds": 0,
+          "changed_systems": 0,
+          "baseline_10plus": 0,
+          "factor_10plus": 0,
+          "baseline_13": 0,
+          "factor_13": 0,
+          "total_net_difference": 0
+        }
+      }
+    }
+  ],
+  "coverage": {
+    "frozen_draws_with_result": 0,
+    "draws_with_form_inputs": 0,
+    "draws_with_player_inputs": 0,
+    "draws_with_value_inputs": 0
+  },
+  "policy": {
+    "min_draws_for_review": 30,
+    "min_matches_for_review": 300,
+    "min_brier_gain_for_review": 0.004,
+    "holdout": "last third of independently observed draw numbers, >=10 draws",
+    "auto_apply_to_systems": false
+  },
+  "warnings": [
+    "Resultatbaserade historiska Elo-tester ingår inte som marknadsbaserad förhandsvalidering.",
+    "Streckvärde är en systemvalsheuristik, inte en alternativ 1/X/2-sannolikhetsmodell.",
+    "Retrospektiva skaderapporter från API-Football utan verifierad förhandstid ingår inte.",
+    "Resultat/utdelning redovisar hypotetiska system med lika radkostnad, aldrig garanterad lönsamhet."
+  ]
+}
