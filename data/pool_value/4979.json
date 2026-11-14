@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-pool-value-v15",
   "version": "relative-pool-value-2026-11-14-v1",
   "draw_number": 4979,
-  "observed_at_utc": "2026-11-14T01:49:12.183018+00:00",
-  "source_snapshot_sha256": "b11301ccb8d8b80db500bf25c57b0d839eec2f8f9f58d399f5fcfd20218875db",
+  "observed_at_utc": "2026-11-14T05:31:57.839848+00:00",
+  "source_snapshot_sha256": "5afdcb561661329e74ecac8fadf100753ff28351500304290bdb15953504f678",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "created_at_utc": "2026-11-14T01:49:13.332015+00:00",
+  "created_at_utc": "2026-11-14T05:31:58.778794+00:00",
   "crowd_exponent": 0.45,
   "budget_proposals": [
     {
@@ -43,14 +43,14 @@
       ],
       "changes": 2,
       "baseline": {
-        "probability_cover_all_13": 0.006680143776,
-        "modelled_crowd_cover_mass": 0.012964003221,
-        "relative_concentration_ratio": 0.51528
+        "probability_cover_all_13": 0.006764538815,
+        "modelled_crowd_cover_mass": 0.013151887326,
+        "relative_concentration_ratio": 0.51434
       },
       "value": {
-        "probability_cover_all_13": 0.006052946499,
-        "modelled_crowd_cover_mass": 0.008982072358,
-        "relative_concentration_ratio": 0.67389
+        "probability_cover_all_13": 0.006129417706,
+        "modelled_crowd_cover_mass": 0.00911224732,
+        "relative_concentration_ratio": 0.67266
       }
     },
     {
@@ -88,14 +88,14 @@
       ],
       "changes": 2,
       "baseline": {
-        "probability_cover_all_13": 0.047120033556,
-        "modelled_crowd_cover_mass": 0.083894903548,
-        "relative_concentration_ratio": 0.56166
+        "probability_cover_all_13": 0.047781714753,
+        "modelled_crowd_cover_mass": 0.085110771715,
+        "relative_concentration_ratio": 0.56141
       },
       "value": {
-        "probability_cover_all_13": 0.04567768244,
-        "modelled_crowd_cover_mass": 0.068913670771,
-        "relative_concentration_ratio": 0.66282
+        "probability_cover_all_13": 0.04631910948,
+        "modelled_crowd_cover_mass": 0.069912419623,
+        "relative_concentration_ratio": 0.66253
       }
     }
   ],
@@ -105,9 +105,9 @@
       "home": "Sverige",
       "away": "Bosnien & Hercegovina",
       "p_market": [
-        0.65158371,
-        0.20361991,
-        0.14479638
+        0.660733549,
+        0.199568501,
+        0.13969795
       ],
       "p_crowd": [
         0.73,
@@ -115,14 +115,14 @@
         0.1
       ],
       "market_minus_crowd_pp": [
-        -7.84,
-        3.36,
-        4.48
+        -6.93,
+        2.96,
+        3.97
       ],
       "relative_underbetting": [
-        0.893,
-        1.198,
-        1.448
+        0.905,
+        1.174,
+        1.397
       ]
     },
     {
@@ -235,19 +235,19 @@
         0.155188139
       ],
       "p_crowd": [
-        0.69,
+        0.7,
         0.19,
-        0.12
+        0.11
       ],
       "market_minus_crowd_pp": [
-        -7.61,
+        -8.61,
         4.09,
-        3.52
+        4.52
       ],
       "relative_underbetting": [
-        0.89,
+        0.877,
         1.215,
-        1.293
+        1.411
       ]
     },
     {
@@ -255,9 +255,9 @@
       "home": "Georgien",
       "away": "Ungern",
       "p_market": [
-        0.279848543,
-        0.317794109,
-        0.402357348
+        0.280849003,
+        0.31361472,
+        0.405536276
       ],
       "p_crowd": [
         0.23,
@@ -265,14 +265,14 @@
         0.48
       ],
       "market_minus_crowd_pp": [
-        4.98,
-        2.78,
-        -7.76
+        5.08,
+        2.36,
+        -7.45
       ],
       "relative_underbetting": [
-        1.217,
-        1.096,
-        0.838
+        1.221,
+        1.081,
+        0.845
       ]
     },
     {

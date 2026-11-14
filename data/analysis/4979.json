@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-frozen-analysis-v1",
   "model_version": "market-no-vig-v1",
   "draw_number": 4979,
-  "observed_at_utc": "2026-11-14T01:49:12.183018+00:00",
+  "observed_at_utc": "2026-11-14T05:31:57.839848+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
   "source": "Svenska Spel publikt API",
-  "source_snapshot_sha256": "b11301ccb8d8b80db500bf25c57b0d839eec2f8f9f58d399f5fcfd20218875db",
+  "source_snapshot_sha256": "5afdcb561661329e74ecac8fadf100753ff28351500304290bdb15953504f678",
   "budget_limit": 1800,
   "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
   "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
@@ -15,9 +15,9 @@
       "home": "Sverige",
       "away": "Bosnien & Hercegovina",
       "odds": [
-        1.5,
-        4.8,
-        6.75
+        1.48,
+        4.9,
+        7.0
       ],
       "streck": [
         73.0,
@@ -25,14 +25,14 @@
         10.0
       ],
       "p": [
-        0.65158371,
-        0.20361991,
-        0.14479638
+        0.660733549,
+        0.199568501,
+        0.13969795
       ],
       "edge": [
-        -0.078416,
-        0.03362,
-        0.044796
+        -0.069266,
+        0.029569,
+        0.039698
       ]
     },
     {
@@ -145,9 +145,9 @@
         6.25
       ],
       "streck": [
-        69.0,
+        70.0,
         19.0,
-        12.0
+        11.0
       ],
       "p": [
         0.613877131,
@@ -155,9 +155,9 @@
         0.155188139
       ],
       "edge": [
-        -0.076123,
+        -0.086123,
         0.040935,
-        0.035188
+        0.045188
       ]
     },
     {
@@ -166,8 +166,8 @@
       "away": "Ungern",
       "odds": [
         3.35,
-        2.95,
-        2.33
+        3.0,
+        2.32
       ],
       "streck": [
         23.0,
@@ -175,14 +175,14 @@
         48.0
       ],
       "p": [
-        0.279848543,
-        0.317794109,
-        0.402357348
+        0.280849003,
+        0.31361472,
+        0.405536276
       ],
       "edge": [
-        0.049849,
-        0.027794,
-        -0.077643
+        0.050849,
+        0.023615,
+        -0.074464
       ]
     },
     {
@@ -358,7 +358,7 @@
         "1X2",
         "1X2"
       ],
-      "p13_estimate": 0.047120034,
+      "p13_estimate": 0.047781715,
       "spikes": 6,
       "half": 1,
       "full": 6
@@ -384,7 +384,7 @@
         "1X2",
         "12"
       ],
-      "p13_estimate": 0.045677682,
+      "p13_estimate": 0.046319109,
       "spikes": 6,
       "half": 1,
       "full": 6
@@ -410,7 +410,7 @@
         "12",
         "2"
       ],
-      "p13_estimate": 0.037097935,
+      "p13_estimate": 0.037618881,
       "spikes": 6,
       "half": 1,
       "full": 6

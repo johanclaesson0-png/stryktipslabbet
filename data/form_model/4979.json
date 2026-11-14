@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4979,
-  "source_observed_at_utc": "2026-11-14T01:49:12.183018+00:00",
-  "source_snapshot_sha256": "b11301ccb8d8b80db500bf25c57b0d839eec2f8f9f58d399f5fcfd20218875db",
-  "form_created_at_utc": "2026-11-14T01:49:12.608806+00:00",
-  "form_sha256": "2fdc0243ddc7b0bf03564775883cc156c9930e7ae965255388b427d06207e43c",
+  "source_observed_at_utc": "2026-11-14T05:31:57.839848+00:00",
+  "source_snapshot_sha256": "5afdcb561661329e74ecac8fadf100753ff28351500304290bdb15953504f678",
+  "form_created_at_utc": "2026-11-14T05:31:58.188401+00:00",
+  "form_sha256": "b7d3323378f88154449e11fe9f968bd572b0190aba954fd2bd7f7a6d977e15be",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "created_at_utc": "2026-11-14T01:49:13.222803+00:00",
+  "created_at_utc": "2026-11-14T05:31:58.692188+00:00",
   "matches_with_form": 11,
   "matches": [
     {
@@ -16,19 +16,19 @@
       "home": "Sverige",
       "away": "Bosnien & Hercegovina",
       "market_p": [
-        0.65158371,
-        0.20361991,
-        0.14479638
+        0.660733549,
+        0.199568501,
+        0.13969795
       ],
       "form_p": [
-        0.662165936,
-        0.19971647,
-        0.138117594
+        0.671154682,
+        0.195652447,
+        0.133192871
       ],
       "delta_pp": [
-        1.06,
+        1.04,
         -0.39,
-        -0.67
+        -0.65
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -172,19 +172,19 @@
       "home": "Georgien",
       "away": "Ungern",
       "market_p": [
-        0.279848543,
-        0.317794109,
-        0.402357348
+        0.280849003,
+        0.31361472,
+        0.405536276
       ],
       "form_p": [
-        0.258961869,
-        0.312759964,
-        0.428278167
+        0.259836646,
+        0.308586195,
+        0.431577159
       ],
       "delta_pp": [
-        -2.09,
+        -2.1,
         -0.5,
-        2.59
+        2.6
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -384,9 +384,9 @@
         "12",
         "12"
       ],
-      "original_market_p13": 0.006680144,
-      "new_form_p13": 0.00775949,
-      "new_market_baseline_p13": 0.006680144,
+      "original_market_p13": 0.006764539,
+      "new_form_p13": 0.007855539,
+      "new_market_baseline_p13": 0.006764539,
       "different_matches": 0
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.047120034,
-      "new_form_p13": 0.053176813,
-      "new_market_baseline_p13": 0.047120034,
+      "original_market_p13": 0.047781715,
+      "new_form_p13": 0.053898676,
+      "new_market_baseline_p13": 0.047781715,
       "different_matches": 0
     }
   ],
