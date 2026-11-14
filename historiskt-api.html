@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d1926"><title>Version 18 – historiska API-tester · Stryktipslabbet</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1927;--panel:#172b3d;--edge:#355366;--text:#f5f9fd;--muted:#bad0df;--mint:#80e1b6;--amber:#f8cc83}
+*{box-sizing:border-box}body{background:radial-gradient(ellipse at 80% 0%,#214d57,transparent 54%),var(--bg);color:var(--text);margin:0;font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1080px;margin:auto;padding:18px 16px 70px}a{color:#b9dbff}.nav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:23px}
+.brand{font-size:20px;font-weight:800;letter-spacing:-.4px}.brand strong{color:var(--mint)}
+h1{font-size:clamp(30px,6vw,47px);line-height:1.1;letter-spacing:-1px;margin:8px 0 16px}h2{font-size:23px;margin:0 0 12px}h3{font-size:17px;margin:12px 0 6px}
+.small{font-size:12px;color:var(--muted)}.lead{font-size:17px;max-width:800px;color:#d5e5ef}
+.panel{border:1px solid var(--edge);border-radius:15px;padding:20px;margin:17px 0;background:var(--panel)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.metric{background:#102638;border:1px solid var(--edge);border-radius:12px;padding:15px}.metric b{display:block;font-size:28px;line-height:1.2;color:var(--mint)}.metric span{color:var(--muted);font-size:12px}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:9px;border-bottom:1px solid var(--edge);text-align:left}th{color:var(--muted);font-size:12px}
+.notice{background:#293849;border-left:4px solid var(--amber);padding:14px;border-radius:8px;margin:16px 0}
+.tag{color:var(--mint);font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:800}
+#market-status{border:1px solid var(--edge);border-radius:10px;padding:15px;background:#112639}
+ul{padding-left:20px}li{margin:5px 0}footer{border-top:1px solid var(--edge);margin-top:30px;padding-top:13px;color:var(--muted);font-size:12px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.panel{padding:15px}table{font-size:12px}th,td{padding:7px 4px}}
+</style></head><body><main>
+<div class="nav"><span class="brand">STRYKTIPS<strong>LABBET</strong> ⚽</span><span>
+<a href="./index.html">Startsidan</a> · <a href="./spelvarde-och-spelformer.html">Värde & system</a> ·
+<a href="./manuell-spelarkoll.html">Manuell spelarkoll</a></span></div>
+<div class="tag">Version 18 · API-Football · transparent backtestning</div>
+<h1>Gör spelarna skillnad?</h1>
+<p class="lead">Vi jämför faktiska Stryktipsresultat med Elo-prognoser, rapporterad spelarfrånvaro och – när underlaget tillåter – originalodds och streck som frysts före spelstopp.</p>
+<div class="notice"><strong>Viktigt:</strong> Det första historiska testet är retrospektivt. API-Footballs gamla skaderapporter har inte verifierade publiceringstider före de spelade matcherna. Resultaten får därför inte användas som bevis för en lönsam förhandsmodell.</div>
+<section class="panel">
+<h2>1. Första historiska testet · 48 matcher</h2>
+<div class="grid">
+<div class="metric"><span>Elo – Brier score</span><b>0,6027</b></div>
+<div class="metric"><span>Med rapporterad frånvaro</span><b>0,5841</b></div>
+<div class="metric"><span>Retrospektiv skillnad</span><b>−3,1 %</b></div>
+</div>
+<p class="small">Premier League och Championship, säsongerna 2022–2024. 48 säkert matchade matcher på åtta kuponger. Lägre Brier score är bättre. De raka favorittecknen gick samtidigt från 30/48 till 29/48 rätt.</p>
+<p>Fortsatta tester görs i <strong>kronologiska, icke överlappande batchar</strong>. Modellvikterna för antal saknade spelare hålls oförändrade, och resultat från olika batchar ska inte beskrivas som en enda validering förrän de sammanställts.</p>
+<p><a href="https://github.com/johanclaesson0-png/stryktipslabbet/actions/workflows/v18-history-expansion.yml">Se de utökade historiska testkörningarna</a></p>
+</section>
+<section class="panel">
+<h2>2. Är den skadade spelaren viktig?</h2>
+<p>En separat modell hämtar spelarens minuter och starter <strong>endast från tidigare matcher</strong>. Den väger ordinarie spelare högre än reserver. Om tidigare data saknas för en rapporterat frånvarande spelare markeras betydelsen som okänd – den sätts inte till noll.</p>
+<p>Den här modellen jämförs mot samma Elo-baslinje och den enklare frånvaromodellen. Den får inte använda ett helt säsongssnitt från en säsong som inte hade avslutats vid matchdagen.</p>
+<p><a href="https://github.com/johanclaesson0-png/stryktipslabbet/actions/workflows/v18-prior-player-weighting.yml">Se tester av speltid och starter</a></p>
+</section>
+<section class="panel">
+<h2>3. Mot verkliga förhandsodds och streck</h2>
+<p>För ett godkänt test krävs tre saker: en tidsstämplad odds- och strecksnapshot före spelstopp; en spelarrapport som också fanns före spelstopp; samt ett senare, verifierat officiellt facit. Alla uppgifter måste höra till samma kupong.</p>
+<div id="market-status" role="status">Kontrollerar verifierade jämförelser …</div>
+<p class="small" id="market-stamp"></p>
+<p>Vårt äldre resultatarkiv på 262 kuponger saknar gamla verifierade förhandsodds och streck. Därför kommer detta test att byggas upp med nya tidsfrysta kuponger och aldrig med efterhandskonstruerade odds.</p>
+</section>
+<section class="panel">
+<h2>Påverkan på systemen</h2>
+<table><thead><tr><th>Första testet (8 kuponger)</th><th>Utan frånvaro</th><th>Med frånvaro</th></tr></thead>
+<tbody>
+<tr><td>96 kr · kuponger med 10-rättsrad</td><td>2</td><td>3</td></tr>
+<tr><td>96 kr · kuponger med 11-rättsrad</td><td>0</td><td>1</td></tr>
+<tr><td>Upp till 1 800 kr · 10-rättsrad</td><td>6</td><td>7</td></tr>
+<tr><td>Upp till 1 800 kr · 11-rättsrad</td><td>4</td><td>3</td></tr>
+</tbody></table>
+<p class="small">Samma exakta kostnad inom varje omgång (1 536 eller 1 728 kr i det stora systemet). Antal kuponger med minst en rad i respektive rättklass. Inte utbetald vinst eller verifierad ROI.</p>
+</section>
+<footer>Version 18 är forskningsstöd. Den ändrar inte ordinarie tips, skickar inga spel och publicerar inga råa API-spelaruppgifter. <a href="https://stodlinjen.se/">Stödlinjen</a>.</footer>
+</main>
+<script>
+'use strict';
+const status=document.getElementById('market-status');
+fetch('./data/market_audit/latest.json',{cache:'no-store'}).then(r=>{
+ if(!r.ok)throw Error('Ingen revisionsrapport publicerad ännu');
+ return r.json();
+}).then(d=>{
+ if(d.schema!=='stryktipslabbet-verified-market-player-audit-v18')
+   throw Error('Okänd revisionsrapport');
+ const n=d.evaluated_matches;
+ if(!n){
+   status.textContent='Ingen verifierad parvis jämförelse ännu. '+d.frozen_market_draws+
+   ' tidsfrysta marknadskuponger, '+d.with_official_settlement+
+   ' med officiellt facit och '+d.with_verifiable_preclose_player_feed+
+   ' med både resultat och spelarrapport. Inget resultat har uppskattats.';
+ } else {
+   status.textContent=n+' matcher på '+d.evaluated_draws+' kuponger har verifierats. '+
+   'Brier marknad: '+d.brier_market+' · med spelardata: '+d.brier_player+
+   '. Detta visar statistiskt utfall, inte garanterat bättre spelvärde.';
+ }
+ document.getElementById('market-stamp').textContent='Kontrollerat: '+
+ new Date(d.generated_at_utc).toLocaleString('sv-SE');
+}).catch(e=>{status.textContent='Ännu ingen verifierad marknadsrevision: '+e.message});
+</script></body></html>
