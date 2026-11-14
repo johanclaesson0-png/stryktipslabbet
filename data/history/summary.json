@@ -1,6 +1,6 @@
 {
   "schema": "stryktipslabbet-five-years-v1",
-  "generated_at_utc": "2026-11-14T05:37:46.925638+00:00",
+  "generated_at_utc": "2026-11-14T05:39:00.779049+00:00",
   "from": "2021-11-13",
   "to": "2026-11-07",
   "rounds": 262,
@@ -387,7 +387,13 @@
           "score_away": 1,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 10000000.0,
+        "12": 38991.0,
+        "11": 2044.0,
+        "10": 459.0
+      }
     },
     {
       "draw": 4717,
@@ -1434,7 +1440,13 @@
           "score_away": 1,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 556423.0,
+        "12": 6831.0,
+        "11": 393.0,
+        "10": 96.0
+      }
     },
     {
       "draw": 4727,
@@ -2481,7 +2493,13 @@
           "score_away": 2,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 7000000.0,
+        "12": 34930.0,
+        "11": 1654.0,
+        "10": 356.0
+      }
     },
     {
       "draw": 4736,
@@ -3528,7 +3546,13 @@
           "score_away": 2,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 0.0,
+        "12": 88294.0,
+        "11": 4155.0,
+        "10": 839.0
+      }
     },
     {
       "draw": 4745,
@@ -4575,7 +4599,13 @@
           "score_away": 0,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 151162.0,
+        "12": 1232.0,
+        "11": 89.0,
+        "10": 27.0
+      }
     },
     {
       "draw": 4754,
@@ -5622,7 +5652,13 @@
           "score_away": 3,
           "played_consistent": true
         }
-      ]
+      ],
+      "official_payouts": {
+        "13": 102822.0,
+        "12": 1345.0,
+        "11": 87.0,
+        "10": 26.0
+      }
     },
     {
       "draw": 4764,
@@ -30788,5 +30824,5 @@
     "Misstänkt lottade/administrativa tecken används för kupongresultat men inte modellens träning eller Brier.",
     "Systemträffar är inte samma sak som kronor i vinst."
   ],
-  "official_payout_draws": 256
+  "official_payout_draws": 262
 }
