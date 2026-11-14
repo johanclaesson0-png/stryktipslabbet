@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4979,
-  "source_observed_at_utc": "2026-11-14T05:31:57.839848+00:00",
-  "source_snapshot_sha256": "5afdcb561661329e74ecac8fadf100753ff28351500304290bdb15953504f678",
-  "form_created_at_utc": "2026-11-14T05:39:30.044955+00:00",
-  "form_sha256": "583cd52da52c32050e119a9e8b991328b69f71023f3ad1724f83889b7923c725",
+  "source_observed_at_utc": "2026-11-14T07:00:43.800604+00:00",
+  "source_snapshot_sha256": "e62a5033b12ac55729bc3f72958efae2689a8a1c278165b3df7a719c9f0a390e",
+  "form_created_at_utc": "2026-11-14T07:00:44.025806+00:00",
+  "form_sha256": "d05d5e85c2553a74a4cb56278469f0c481e6efe5066ac0c2a9fd381b472ab1a3",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "created_at_utc": "2026-11-14T05:39:30.494690+00:00",
+  "created_at_utc": "2026-11-14T07:00:44.488762+00:00",
   "matches_with_form": 11,
   "matches": [
     {
@@ -16,19 +16,19 @@
       "home": "Sverige",
       "away": "Bosnien & Hercegovina",
       "market_p": [
-        0.660733549,
-        0.199568501,
-        0.13969795
+        0.655169667,
+        0.206308746,
+        0.138521587
       ],
       "form_p": [
-        0.671154682,
-        0.195652447,
-        0.133192871
+        0.66561303,
+        0.202293857,
+        0.132093113
       ],
       "delta_pp": [
         1.04,
-        -0.39,
-        -0.65
+        -0.4,
+        -0.64
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -42,19 +42,19 @@
       "home": "Portugal",
       "away": "Danmark",
       "market_p": [
-        0.660733549,
-        0.199568501,
-        0.13969795
+        0.637781629,
+        0.210745234,
+        0.151473137
       ],
       "form_p": [
-        0.683493151,
-        0.190875908,
-        0.125630941
+        0.661379699,
+        0.202063527,
+        0.136556774
       ],
       "delta_pp": [
-        2.28,
+        2.36,
         -0.87,
-        -1.41
+        -1.49
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -172,19 +172,19 @@
       "home": "Georgien",
       "away": "Ungern",
       "market_p": [
-        0.280849003,
-        0.31361472,
-        0.405536276
+        0.292561983,
+        0.317355372,
+        0.390082645
       ],
       "form_p": [
-        0.259836646,
-        0.308586195,
-        0.431577159
+        0.271196333,
+        0.312870284,
+        0.415933383
       ],
       "delta_pp": [
-        -2.1,
-        -0.5,
-        2.6
+        -2.14,
+        -0.45,
+        2.59
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -250,14 +250,14 @@
       "home": "Stockport",
       "away": "Reading",
       "market_p": [
-        0.515541817,
-        0.246917397,
-        0.237540787
+        0.520201935,
+        0.241427052,
+        0.238371013
       ],
       "form_p": [
-        0.515541817,
-        0.246917397,
-        0.237540787
+        0.520201935,
+        0.241427052,
+        0.238371013
       ],
       "delta_pp": [
         0.0,
@@ -302,19 +302,19 @@
       "home": "Wigan",
       "away": "Barnsley",
       "market_p": [
-        0.399798894,
-        0.264655606,
-        0.3355455
+        0.407232704,
+        0.255345912,
+        0.337421384
       ],
       "form_p": [
-        0.410140345,
-        0.26351241,
-        0.326347245
+        0.417690808,
+        0.2541969,
+        0.328112292
       ],
       "delta_pp": [
-        1.03,
+        1.05,
         -0.11,
-        -0.92
+        -0.93
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -384,9 +384,9 @@
         "12",
         "12"
       ],
-      "original_market_p13": 0.006764539,
-      "new_form_p13": 0.007855539,
-      "new_market_baseline_p13": 0.006764539,
+      "original_market_p13": 0.006508058,
+      "new_form_p13": 0.007584757,
+      "new_market_baseline_p13": 0.006508058,
       "different_matches": 0
     },
     {
@@ -396,13 +396,13 @@
         "1",
         "1",
         "1",
-        "2",
+        "X2",
         "1X2",
         "1",
         "1X2",
         "1",
         "1X2",
-        "1X",
+        "1",
         "1X2",
         "1X2",
         "1X2"
@@ -422,10 +422,10 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.047781715,
-      "new_form_p13": 0.053898676,
-      "new_market_baseline_p13": 0.047781715,
-      "different_matches": 0
+      "original_market_p13": 0.046003766,
+      "new_form_p13": 0.051667902,
+      "new_market_baseline_p13": 0.04568374,
+      "different_matches": 2
     }
   ],
   "warning": "Otestad kombination av förhandsodds och form. Värdena är inte kalibrerade och ingen vinstökning är bevisad."

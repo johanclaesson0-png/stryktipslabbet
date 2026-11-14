@@ -1,18 +1,43 @@
 {
   "schema": "stryktipslabbet-player-availability-v1",
   "draw_number": 4979,
-  "source_observed_at_utc": "2026-11-14T05:31:57.839848+00:00",
-  "source_snapshot_sha256": "5afdcb561661329e74ecac8fadf100753ff28351500304290bdb15953504f678",
+  "source_observed_at_utc": "2026-11-14T07:00:43.800604+00:00",
+  "source_snapshot_sha256": "e62a5033b12ac55729bc3f72958efae2689a8a1c278165b3df7a719c9f0a390e",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "created_at_utc": "2026-11-14T05:32:07.146341+00:00",
+  "created_at_utc": "2026-11-14T07:00:52.625275+00:00",
   "matches": [
     {
       "number": 1,
       "home": {
         "side": "home",
         "team": "Sverige",
-        "reported_absences": [],
-        "coverage": "ej verifierat – okänt"
+        "reported_absences": [
+          {
+            "team": "Sverige",
+            "player": "Besfort Zeneli",
+            "status": "out",
+            "publisher": "Svenska Fotbollförbundet",
+            "source_url": "https://www.svenskfotboll.se/nyheter/landslag/2026/11/herrlandslaget-aterbud",
+            "reported_at_utc": "2026-11-09T14:10:00+00:00",
+            "checked_at_utc": "2026-11-14T05:32:34.135Z",
+            "verified_by": "manual_source_review",
+            "notes": "Svenska Fotbollförbundet meddelade att Zeneli missar novemberlandskamperna på grund av skada. Får inte tolkas som skadestatus för klubblaget.",
+            "status_label": "Rapporterad frånvaro"
+          },
+          {
+            "team": "Sverige",
+            "player": "Patrik Wålemark",
+            "status": "out",
+            "publisher": "Svenska Fotbollförbundet",
+            "source_url": "https://www.svenskfotboll.se/nyheter/landslag/2026/11/herrlandslaget-walemark/",
+            "reported_at_utc": "2026-11-12T18:57:00+00:00",
+            "checked_at_utc": "2026-11-14T05:32:34.135Z",
+            "verified_by": "manual_source_review",
+            "notes": "Svenska Fotbollförbundet meddelade att Wålemark missar återstående Nations League-landskamper på grund av skada. Får inte tolkas som skadestatus för klubblaget.",
+            "status_label": "Rapporterad frånvaro"
+          }
+        ],
+        "coverage": "rapporterade uppgifter finns"
       },
       "away": {
         "side": "away",
@@ -202,7 +227,7 @@
       }
     }
   ],
-  "reports_included": 0,
+  "reports_included": 2,
   "coverage_note": "Frånvaro redovisas bara när en källa är kontrollerad. Saknade uppgifter betyder INTE att truppen är skadefri.",
   "model_effect": "Inga spelarskador eller avstängningar används i tipsprognoserna utan ett validerat datamaterial."
 }

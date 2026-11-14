@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4979,
-  "source_observed_at_utc": "2026-11-14T05:31:57.839848+00:00",
+  "source_observed_at_utc": "2026-11-14T07:00:43.800604+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "source_snapshot_sha256": "5afdcb561661329e74ecac8fadf100753ff28351500304290bdb15953504f678",
-  "created_at_utc": "2026-11-14T05:31:58.098414+00:00",
+  "source_snapshot_sha256": "e62a5033b12ac55729bc3f72958efae2689a8a1c278165b3df7a719c9f0a390e",
+  "created_at_utc": "2026-11-14T07:00:43.970661+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -18,31 +18,31 @@
         "1",
         "1",
         "1",
-        "2",
+        "X2",
         "1X2",
         "1",
         "1X2",
         "1",
         "1X2",
-        "1X",
+        "1",
         "1X2",
         "1X2",
         "1X2"
       ],
-      "baseline_p13": 0.047781715,
+      "baseline_p13": 0.046003766,
       "baseline_miss_risk_spikes": 1,
       "baseline_x_included": 7,
       "risk_report": {
         "spikes": [
           {
-            "number": 4,
-            "home": "Rumänien",
-            "away": "Polen",
-            "chosen": "2",
-            "estimated_miss_probability": 0.476345,
+            "number": 10,
+            "home": "Stockport",
+            "away": "Reading",
+            "chosen": "1",
+            "estimated_miss_probability": 0.479798,
             "high_risk": true,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.248401,
+            "extra_outcome_probability": 0.241427,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -68,25 +68,25 @@
             "cost_if_added_without_rebalancing": 2916
           },
           {
-            "number": 1,
-            "home": "Sverige",
-            "away": "Bosnien & Hercegovina",
-            "chosen": "1",
-            "estimated_miss_probability": 0.339266,
-            "high_risk": false,
-            "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.199569,
-            "cost_if_added_without_rebalancing": 2916
-          },
-          {
             "number": 2,
             "home": "Portugal",
             "away": "Danmark",
             "chosen": "1",
-            "estimated_miss_probability": 0.339266,
+            "estimated_miss_probability": 0.362218,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.199569,
+            "extra_outcome_probability": 0.210745,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 1,
+            "home": "Sverige",
+            "away": "Bosnien & Hercegovina",
+            "chosen": "1",
+            "estimated_miss_probability": 0.34483,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.206309,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -112,18 +112,18 @@
             "1",
             "1",
             "1",
-            "2",
+            "X2",
             "1X2",
             "1",
             "1X2",
             "1",
             "1X2",
-            "1X",
+            "1",
             "1X2",
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.047781715,
+          "estimated_p13": 0.046003766,
           "miss_risk_spikes": 1,
           "x_included": 7
         },
@@ -135,18 +135,18 @@
             "1",
             "1",
             "1",
-            "2",
+            "X2",
             "1X2",
             "1",
             "1X2",
             "1",
             "1X2",
-            "1X",
+            "1",
             "1X2",
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.047781715,
+          "estimated_p13": 0.046003766,
           "miss_risk_spikes": 1,
           "x_included": 7
         }
@@ -170,7 +170,7 @@
         "12",
         "12"
       ],
-      "baseline_p13": 0.006764539,
+      "baseline_p13": 0.006508058,
       "baseline_miss_risk_spikes": 2,
       "baseline_x_included": 2,
       "risk_report": {
@@ -180,10 +180,10 @@
             "home": "Stockport",
             "away": "Reading",
             "chosen": "1",
-            "estimated_miss_probability": 0.484458,
+            "estimated_miss_probability": 0.479798,
             "high_risk": true,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.246917,
+            "extra_outcome_probability": 0.241427,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -220,25 +220,25 @@
             "cost_if_added_without_rebalancing": 192
           },
           {
-            "number": 1,
-            "home": "Sverige",
-            "away": "Bosnien & Hercegovina",
-            "chosen": "1",
-            "estimated_miss_probability": 0.339266,
-            "high_risk": false,
-            "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.199569,
-            "cost_if_added_without_rebalancing": 192
-          },
-          {
             "number": 2,
             "home": "Portugal",
             "away": "Danmark",
             "chosen": "1",
-            "estimated_miss_probability": 0.339266,
+            "estimated_miss_probability": 0.362218,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.199569,
+            "extra_outcome_probability": 0.210745,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 1,
+            "home": "Sverige",
+            "away": "Bosnien & Hercegovina",
+            "chosen": "1",
+            "estimated_miss_probability": 0.34483,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.206309,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -286,7 +286,7 @@
             "12",
             "12"
           ],
-          "estimated_p13": 0.006764539,
+          "estimated_p13": 0.006508058,
           "miss_risk_spikes": 2,
           "x_included": 2
         },
@@ -309,7 +309,7 @@
             "12",
             "12"
           ],
-          "estimated_p13": 0.006764539,
+          "estimated_p13": 0.006508058,
           "miss_risk_spikes": 2,
           "x_included": 2
         }
