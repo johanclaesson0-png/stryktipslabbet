@@ -2,11 +2,11 @@
   "schema": "stryktipslabbet-personal-100-v1",
   "draw_number": 4979,
   "model_version": "market-no-vig-v1",
-  "original_observed_at_utc": "2026-11-14T13:49:07.901983+00:00",
+  "original_observed_at_utc": "2026-11-14T14:41:56.503246+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "created_at_utc": "2026-11-14T13:49:08.115740+00:00",
+  "created_at_utc": "2026-11-14T14:41:56.638254+00:00",
   "derived_before_close": true,
-  "source_snapshot_sha256": "f5e0bbfa3947ac177fb264ee3a5c6605b561b9cdfdbbcb01ea4947121dba6a0a",
+  "source_snapshot_sha256": "ebb6ed39383296cd273bbac508c608962cee7fcab616c1ef6cbd6c518a691239",
   "max_budget": 100,
   "note": "Hypotetiska system; sannolikheter bygger på normaliserade odds, ingen bekräftad överavkastning.",
   "systems": [
@@ -30,7 +30,7 @@
         "12",
         "12"
       ],
-      "probability_all_13": 0.006505202,
+      "probability_all_13": 0.007456401,
       "singles": 7,
       "doubles": 5,
       "triples": 1
@@ -38,8 +38,8 @@
     {
       "key": "varde",
       "name": "Streckvärde – experiment",
-      "cost": 96,
-      "rows": 96,
+      "cost": 81,
+      "rows": 81,
       "choices": [
         "1",
         "1",
@@ -47,18 +47,18 @@
         "2",
         "1X2",
         "1",
-        "12",
+        "1X2",
         "1",
-        "12",
+        "1X2",
         "1",
-        "12",
-        "12",
-        "12"
+        "1",
+        "1X2",
+        "2"
       ],
-      "probability_all_13": 0.00637092,
-      "singles": 7,
-      "doubles": 5,
-      "triples": 1
+      "probability_all_13": 0.007196361,
+      "singles": 9,
+      "doubles": 0,
+      "triples": 4
     },
     {
       "key": "skrall",
@@ -69,18 +69,18 @@
         "1",
         "1",
         "1",
-        "2",
+        "12",
         "1X2",
         "1",
-        "1X",
+        "12",
         "1",
         "12",
-        "12",
+        "1",
         "1",
         "12",
         "12"
       ],
-      "probability_all_13": 0.004524049,
+      "probability_all_13": 0.006038524,
       "singles": 7,
       "doubles": 5,
       "triples": 1

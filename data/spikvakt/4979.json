@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4979,
-  "source_observed_at_utc": "2026-11-14T13:49:07.901983+00:00",
+  "source_observed_at_utc": "2026-11-14T14:41:56.503246+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "source_snapshot_sha256": "f5e0bbfa3947ac177fb264ee3a5c6605b561b9cdfdbbcb01ea4947121dba6a0a",
-  "created_at_utc": "2026-11-14T13:49:08.206187+00:00",
+  "source_snapshot_sha256": "ebb6ed39383296cd273bbac508c608962cee7fcab616c1ef6cbd6c518a691239",
+  "created_at_utc": "2026-11-14T14:41:56.700982+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -18,31 +18,31 @@
         "1",
         "1",
         "1",
-        "2",
+        "X2",
         "1X2",
         "1",
         "1X2",
         "1",
         "1X2",
-        "1X",
+        "1",
         "1X2",
         "1X2",
         "1X2"
       ],
-      "baseline_p13": 0.046530915,
+      "baseline_p13": 0.050847804,
       "baseline_miss_risk_spikes": 0,
       "baseline_x_included": 7,
       "risk_report": {
         "spikes": [
           {
-            "number": 4,
-            "home": "Rumänien",
-            "away": "Polen",
-            "chosen": "2",
-            "estimated_miss_probability": 0.44485,
+            "number": 10,
+            "home": "Stockport",
+            "away": "Reading",
+            "chosen": "1",
+            "estimated_miss_probability": 0.437706,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.24149,
+            "extra_outcome_probability": 0.229032,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -61,10 +61,10 @@
             "home": "Milton Keynes Dons",
             "away": "Burton",
             "chosen": "1",
-            "estimated_miss_probability": 0.401676,
+            "estimated_miss_probability": 0.388003,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.221028,
+            "extra_outcome_probability": 0.217757,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -72,10 +72,10 @@
             "home": "Portugal",
             "away": "Danmark",
             "chosen": "1",
-            "estimated_miss_probability": 0.382053,
+            "estimated_miss_probability": 0.376843,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.212251,
+            "extra_outcome_probability": 0.208161,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -112,18 +112,18 @@
             "1",
             "1",
             "1",
-            "2",
+            "X2",
             "1X2",
             "1",
             "1X2",
             "1",
             "1X2",
-            "1X",
+            "1",
             "1X2",
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.046530915,
+          "estimated_p13": 0.050847804,
           "miss_risk_spikes": 0,
           "x_included": 7
         },
@@ -135,18 +135,18 @@
             "1",
             "1",
             "1",
-            "2",
+            "X2",
             "1X2",
             "1",
             "1X2",
             "1",
             "1X2",
-            "1X",
+            "1",
             "1X2",
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.046530915,
+          "estimated_p13": 0.050847804,
           "miss_risk_spikes": 0,
           "x_included": 7
         }
@@ -170,22 +170,11 @@
         "12",
         "12"
       ],
-      "baseline_p13": 0.006505202,
-      "baseline_miss_risk_spikes": 1,
+      "baseline_p13": 0.007456401,
+      "baseline_miss_risk_spikes": 0,
       "baseline_x_included": 2,
       "risk_report": {
         "spikes": [
-          {
-            "number": 10,
-            "home": "Stockport",
-            "away": "Reading",
-            "chosen": "1",
-            "estimated_miss_probability": 0.479798,
-            "high_risk": true,
-            "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.241427,
-            "cost_if_added_without_rebalancing": 192
-          },
           {
             "number": 4,
             "home": "Rumänien",
@@ -195,6 +184,17 @@
             "high_risk": false,
             "suggested_second_sign": "X",
             "extra_outcome_probability": 0.24149,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 10,
+            "home": "Stockport",
+            "away": "Reading",
+            "chosen": "1",
+            "estimated_miss_probability": 0.437706,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.229032,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -213,10 +213,10 @@
             "home": "Milton Keynes Dons",
             "away": "Burton",
             "chosen": "1",
-            "estimated_miss_probability": 0.401676,
+            "estimated_miss_probability": 0.388003,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.221028,
+            "extra_outcome_probability": 0.217757,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -224,10 +224,10 @@
             "home": "Portugal",
             "away": "Danmark",
             "chosen": "1",
-            "estimated_miss_probability": 0.382053,
+            "estimated_miss_probability": 0.376843,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.212251,
+            "extra_outcome_probability": 0.208161,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -253,28 +253,7 @@
             "cost_if_added_without_rebalancing": 192
           }
         ],
-        "possible_draws": [
-          {
-            "number": 11,
-            "home": "Wimbledon",
-            "away": "Blackpool",
-            "x_probability": 0.275358,
-            "crowd_x_percentage": 30.0,
-            "x_minus_crowd_percentage_points": -2.464,
-            "extra_row_cost_to_include_x_alone": 144,
-            "requires_rebalancing": true
-          },
-          {
-            "number": 9,
-            "home": "Sheffield W",
-            "away": "Plymouth",
-            "x_probability": 0.271544,
-            "crowd_x_percentage": 25.0,
-            "x_minus_crowd_percentage_points": 2.154,
-            "extra_row_cost_to_include_x_alone": 144,
-            "requires_rebalancing": true
-          }
-        ]
+        "possible_draws": []
       },
       "experiments": [
         {
@@ -296,8 +275,8 @@
             "12",
             "12"
           ],
-          "estimated_p13": 0.006505202,
-          "miss_risk_spikes": 1,
+          "estimated_p13": 0.007456401,
+          "miss_risk_spikes": 0,
           "x_included": 2
         },
         {
@@ -319,8 +298,8 @@
             "12",
             "12"
           ],
-          "estimated_p13": 0.006505202,
-          "miss_risk_spikes": 1,
+          "estimated_p13": 0.007456401,
+          "miss_risk_spikes": 0,
           "x_included": 2
         }
       ]
