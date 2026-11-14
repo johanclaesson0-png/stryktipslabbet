@@ -38,6 +38,8 @@ jobs:
       - name: Hämta öppna ligamatcher och bygg formtabeller
         continue-on-error: true
         run: python -m scripts.league_history --outdir data --limit 14
+      - name: Fördjupa matchfakta med vilodagar, tabeller och motstånd
+        run: python -m scripts.match_insights --outdir data
       - name: Version 13 – frys historiska odds- och streckrörelser
         run: python -m scripts.market_moves --outdir data
       - name: Version 14 – jämför experimentell formmodell med marknadsmodellen
