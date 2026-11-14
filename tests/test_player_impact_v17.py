@@ -4,6 +4,7 @@ import unittest
 from datetime import timedelta
 
 from scripts.analyze import create_analysis
+from scripts.solo import derive
 from scripts.api_football_adapter import (
     APIClient, candidate_fixtures, english_leagues, get_players, matching_fixture, season_for
 )
@@ -25,6 +26,7 @@ def sample_players():
 class EnglishPlayerImpactTests(unittest.TestCase):
     def setUp(self):
         self.base = create_analysis(sample())
+        self.personal = derive(self.base,NOW)
         self.report_time = NOW + timedelta(minutes=2)
         self.feed = {
             "schema": SCHEMA,
@@ -51,6 +53,34 @@ class EnglishPlayerImpactTests(unittest.TestCase):
                 "injuries_covered": True, "players": sample_players(),
                 "absences": []
             }
+
+
+    def test_equal_cost_100_and_1800_scenario_systems(self):
+        self.feed["matches"][0]["away_feed"]["absences"] = [
+            {"player_id": 1, "status": "out"}
+        ]
+        report = build(self.base, self.feed, self.report_time, personal=self.personal)
+        self.assertEqual(len(report["systems"]), 2)
+        self.assertEqual([s["budget_limit"] for s in report["systems"]],[100,1800])
+        for scenario in report["systems"]:
+            from math import prod
+            self.assertEqual(scenario["cost"],prod(len(c) for c in scenario["source_market_choices"]))
+            self.assertEqual(scenario["cost"],prod(len(c) for c in scenario["player_scenario_choices"]))
+            self.assertEqual(scenario["covered_by_player_data"],1)
+            self.assertEqual(scenario["unknown_matches_using_market_only"],12)
+            self.assertGreater(scenario["player_p13_under_scenario"],0)
+        self.assertEqual(report["matches"][0]["market_p"],self.base["matches"][0]["p"])
+
+    def test_no_scenario_system_when_all_matches_unknown(self):
+        report = build(self.base, self.feed, self.report_time, personal=self.personal)
+        self.assertEqual(report["coverage"]["scenario_matches"],1)
+        self.assertEqual(len(report["systems"]),2)
+        for item in self.feed["matches"]:
+            item["league"] = None
+            item["fixture_id"] = None
+        missing = build(self.base, self.feed, self.report_time, personal=self.personal)
+        self.assertEqual(missing["coverage"]["scenario_matches"],0)
+        self.assertEqual(missing["systems"],[])
 
     def test_many_english_players_are_ranked_not_two_named_examples(self):
         ranked = ranked_players(sample_players())
