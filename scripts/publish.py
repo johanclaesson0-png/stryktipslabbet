@@ -757,6 +757,7 @@ def main():
     except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError):
         pass
 
+    from scripts.player_impact import build as rebuild_player_impact
     # V17: only publish a strictly checked, pre-close, licence-approved report.
     # The public site never receives the provider key or raw JSON responses.
     status["player_impact_published"] = False
@@ -788,6 +789,13 @@ def main():
                     or a["away"] != b["away"] or a["market_p"] != b["p"]
                     for a,b in zip(report["matches"], original["matches"])
                 ):
+                    continue
+                personal_source=root/"data"/"personal"/(str(n)+".json")
+                personal=(json.loads(personal_source.read_text(encoding="utf-8"))
+                          if personal_source.exists() else None)
+                # Reproduce all figures and scenario systems, not just metadata.
+                expected=rebuild_player_impact(original,feed,created=made,personal=personal)
+                if expected != report:
                     continue
                 target = dest / "data" / "player_impact" / "latest.json"
                 target.parent.mkdir(parents=True, exist_ok=True)

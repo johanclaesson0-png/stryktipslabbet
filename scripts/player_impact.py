@@ -12,8 +12,10 @@ import math
 from pathlib import Path
 import sys
 
-from scripts.analyze import valid_analysis
+from scripts.analyze import valid_analysis, selected_signs
 from scripts.collect import write_json
+from scripts.feature_model import optimize_exact
+from scripts.solo import validate as valid_personal
 from scripts.league_history import key_team
 from scripts.publish import instant
 
@@ -159,7 +161,47 @@ def source_ok(analysis, feed, now):
         return False
 
 
-def build(analysis, feed, created=None):
+
+def equal_cost_scenarios(analysis, results, personal):
+    """Compare exactly equal-cost original/player systems; never change the original."""
+    if not valid_personal(personal, analysis):
+        raise ValueError("100-kronorssystemet hör inte till samma kupong")
+    supported = sum(m["scenario_p"] is not None for m in results)
+    if supported == 0:
+        return []
+    # Missing team information retains the published market probability.
+    # It is NOT evidence that any specific player is healthy.
+    probs = [m["scenario_p"] if m["scenario_p"] is not None else m["market_p"]
+             for m in results]
+    signs = "1X2"
+    def cover(choices):
+        out = 1.0
+        for choice, p in zip(choices, probs):
+            out *= sum(p[signs.index(c)] for c in choice)
+        return round(out, 9)
+    scenarios = []
+    for budget, baseline in ((100, personal["systems"][0]),
+                             (1800, analysis["systems"][0])):
+        cost = baseline["cost"]
+        masks = optimize_exact(probs, cost)
+        choices = [selected_signs(mask) for mask in masks]
+        if len(choices) != 13 or math.prod(len(c) for c in choices) != cost:
+            raise ValueError("Spelarscenariot förändrade radkostnaden")
+        scenarios.append({
+            "budget_limit": budget, "cost": cost,
+            "source_market_choices": baseline["choices"],
+            "player_scenario_choices": choices,
+            "changed_matches": sum(a != b for a,b in zip(baseline["choices"],choices)),
+            "covered_by_player_data": supported,
+            "unknown_matches_using_market_only": 13-supported,
+            "original_p13_under_scenario": cover(baseline["choices"]),
+            "player_p13_under_scenario": cover(choices),
+            "experimental": True
+        })
+    return scenarios
+
+
+def build(analysis, feed, created=None, personal=None):
     now = created or datetime.now(timezone.utc)
     if not source_ok(analysis, feed, now):
         raise ValueError("Källan är för gammal, efter spelstopp eller felaktigt matchad")
@@ -204,6 +246,7 @@ def build(analysis, feed, created=None):
         "reg_close_time": analysis["reg_close_time"],
         "created_at_utc": now.isoformat(),
         "matches": results,
+        "systems": equal_cost_scenarios(analysis, results, personal) if personal is not None else [],
         "coverage": {
             "scenario_matches": sum(x["scenario_p"] is not None for x in results),
             "unknown_matches": sum(x["scenario_p"] is None for x in results)
@@ -229,7 +272,10 @@ def main():
             if not source.exists():
                 continue
             feed = json.loads(source.read_text(encoding="utf-8"))
-            report = build(original, feed, now)
+            personal_path=root/"personal"/file.name
+            personal=(json.loads(personal_path.read_text(encoding="utf-8"))
+                      if personal_path.exists() else None)
+            report = build(original, feed, now, personal=personal)
             write_json(root/"player_impact"/file.name, report)
             count += 1
         except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:

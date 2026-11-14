@@ -27,7 +27,7 @@ th:first-child,td:first-child{text-align:left}th{color:var(--mute);font-size:.85
 <p>Spelarenkollen identifierar viktiga spelare i varje match utifrån lagets säsongsstatistik och försöker kontrollera om de kan spela. Den fungerar för Premier League, Championship, League One och League Two när källan verkligen täcker matchen.</p>
 <p class="note">Oddsen är den befintliga baslinjen. ”Om frånvaron inte redan är inprisad” är en <strong>experimentell känslighetsanalys</strong>, inte en bevisat bättre prognos. Okänd status betyder inte att spelaren är tillgänglig. Varken spelinsats eller ordinarie tecken ändras.</p>
 <div class="card" id="status" role="status">Läser källfryst spelarrapport …</div>
-<section id="list"></section>
+<section id="systems" class="card"></section><section id="list"></section>
 </main>
 <script>
 const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -45,6 +45,24 @@ function render(d){
   status.textContent='Kupong '+d.draw_number+' · Marknad observerad '+new Date(d.source_observed_at_utc).toLocaleString('sv-SE')+
     ' · Spelarkälla kontrollerad '+new Date(d.provider_collected_at_utc).toLocaleString('sv-SE')+
     ' · '+d.coverage.scenario_matches+' av 13 matcher med spelarscenario.';
+  const systems=document.querySelector('#systems');
+  if(!Array.isArray(d.systems)||!d.systems.length){
+    systems.innerHTML='<h2>Systemeffekt</h2><p class="note">Ingen fullständig spelarmodell kan jämföras med systemen just nu. Ordinarie modeller och budgetar är oförändrade.</p>';
+  }else{
+    systems.innerHTML='<h2>Samma budget – spelarjusterat system (experiment)</h2>'+
+      '<p class="note">För matcher utan verifierad data behålls marknadens odds. Detta ger ingen validerad fördel.</p>'+
+      d.systems.map(s=>'<details><summary>'+esc(s.budget_limit)+' kr-gräns · '+esc(s.cost)+
+       ' kr i radkostnad · '+esc(s.changed_matches)+' teckenändringar</summary>'+
+       '<p class="note">Grundsystem '+pct(s.original_p13_under_scenario)+
+       ' jämfört med spelarjusterat '+pct(s.player_p13_under_scenario)+
+       ' enligt samma experimentella sannolikheter. '+esc(s.covered_by_player_data)+
+       '/13 matcher har spelarunderlag.</p><div class="tableWrap"><table>'+
+       '<thead><tr><th>Match</th><th>Grund</th><th>Spelare</th></tr></thead><tbody>'+
+       s.player_scenario_choices.map((c,i)=>'<tr><td>'+esc(i+1)+'. '+
+          esc(d.matches[i].home)+' – '+esc(d.matches[i].away)+'</td><td>'+
+          esc(s.source_market_choices[i])+'</td><td>'+esc(c)+'</td></tr>').join('')+
+       '</tbody></table></div></details>').join('');
+  }
   document.querySelector('#list').innerHTML=d.matches.map(m=>{
     let available=m.scenario_p!==null;
     return '<article class="card"><div class="label">Match '+esc(m.number)+(m.league?' · '+esc(m.league):'')+'</div>'+
