@@ -91,6 +91,7 @@ def main():
     shutil.copy2(root / "historiskt-api.html", dest / "historiskt-api.html")
     shutil.copy2(root / "v19-beslutsstudio.html", dest / "v19-beslutsstudio.html")
     shutil.copy2(root / "v20-pottanalys.html", dest / "v20-pottanalys.html")
+    shutil.copy2(root / "v21-verklig-pott.html", dest / "v21-verklig-pott.html")
 
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
@@ -230,6 +231,7 @@ def main():
                             for s in sim["scenarios"])):
                         allowed=("schema","draw_number","observed_at_utc",
                                  "reg_close_time","generated_at_utc","draw_status",
+                                 "observed_turnover_so_far_kr","sales_observed_at_utc",
                                  "simulation_draws","assumptions","scenarios",
                                  "upsets","warnings")
                         public={k:sim.get(k) for k in allowed}
@@ -239,6 +241,46 @@ def main():
                             json.dumps(public,ensure_ascii=False,indent=2),
                             encoding="utf-8")
     except (KeyError,ValueError,TypeError,OSError,OverflowError,json.JSONDecodeError):
+        pass
+
+    # V21: publish public, AFTER-CLOSE official aggregate settlements. Do not
+    # mix with a reconstructed preclose market snapshot or expose raw responses.
+    try:
+        from scripts.v21_calibration import SCHEMA as V21_SCHEMA
+        source=root/"data"/"v21"/"calibration.json"
+        doc=json.loads(source.read_text(encoding="utf-8"))
+        past=doc["historical_actuals"]
+        future=doc["prospective_model_check"]
+        recent=doc["recent_verified_draws"]
+        count=past["draws_with_official_turnover_winners"]
+        if (doc.get("schema")==V21_SCHEMA
+            and type(count) is int and 0<=count<=10000
+            and type(future.get("prospective_draws_with_preclose_streck_and_official_winners")) is int
+            and isinstance(recent,list) and len(recent)<=6
+            and all(type(x.get("turnover_kr")) is int and
+                    100000<=x["turnover_kr"]<=500000000 and
+                    isinstance(x.get("source_url"),str) and
+                    x["source_url"].startswith(
+                     "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/")
+                    for x in recent)):
+            safe_future={
+                "prospective_draws_with_preclose_streck_and_official_winners":
+                    future["prospective_draws_with_preclose_streck_and_official_winners"],
+                "correctly_frozen_v20_strategy_draws":
+                    future["correctly_frozen_v20_strategy_draws"],
+                "class_error":future["class_error"],
+            }
+            clean={"schema":V21_SCHEMA,
+                   "generated_at_utc":doc["generated_at_utc"],
+                   "historical_actuals":past,
+                   "prospective_model_check":safe_future,
+                   "recent_verified_draws":recent,
+                   "status":doc["status"],"warnings":doc["warnings"]}
+            target=dest/"data"/"v21"
+            target.mkdir(parents=True,exist_ok=True)
+            (target/"calibration.json").write_text(
+                json.dumps(clean,ensure_ascii=False,indent=2),encoding="utf-8")
+    except (OSError,ValueError,TypeError,KeyError,OverflowError,json.JSONDecodeError):
         pass
 
     now = datetime.now(timezone.utc)
