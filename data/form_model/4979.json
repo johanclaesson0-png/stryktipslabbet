@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4979,
-  "source_observed_at_utc": "2026-11-14T08:58:25.989701+00:00",
-  "source_snapshot_sha256": "5faa4d1c405ddf687ea736b62b2fe80fb5046aa928c468127f601b05779b4f4a",
-  "form_created_at_utc": "2026-11-14T09:27:54.476312+00:00",
-  "form_sha256": "a91ae87e23a10ed1c39ba9250ce5b88869f05d090ae8497d1ff2e0617c10ff60",
+  "source_observed_at_utc": "2026-11-14T09:36:14.558574+00:00",
+  "source_snapshot_sha256": "3ce28d0b1bce4e87ade44436927004b8d5517a6ad3d28aec83e605ef3f3aae1d",
+  "form_created_at_utc": "2026-11-14T09:36:14.799846+00:00",
+  "form_sha256": "1acde4cfae590e4b9aeacab78c5c02569dde61d3d7626c021b25bee97b88e936",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "created_at_utc": "2026-11-14T09:27:55.336917+00:00",
+  "created_at_utc": "2026-11-14T09:36:15.392285+00:00",
   "matches_with_form": 11,
   "matches": [
     {
@@ -16,19 +16,19 @@
       "home": "Sverige",
       "away": "Bosnien & Hercegovina",
       "market_p": [
-        0.655169667,
-        0.206308746,
-        0.138521587
+        0.655075605,
+        0.205486874,
+        0.139437522
       ],
       "form_p": [
-        0.66561303,
-        0.202293857,
-        0.132093113
+        0.665536111,
+        0.201493623,
+        0.132970266
       ],
       "delta_pp": [
-        1.04,
+        1.05,
         -0.4,
-        -0.64
+        -0.65
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -42,18 +42,18 @@
       "home": "Portugal",
       "away": "Danmark",
       "market_p": [
-        0.637781629,
-        0.210745234,
-        0.151473137
+        0.643564356,
+        0.205940594,
+        0.15049505
       ],
       "form_p": [
-        0.661379699,
-        0.202063527,
-        0.136556774
+        0.667037395,
+        0.197356517,
+        0.135606088
       ],
       "delta_pp": [
-        2.36,
-        -0.87,
+        2.35,
+        -0.86,
         -1.49
       ],
       "data_coverage": "båda",
@@ -198,14 +198,14 @@
       "home": "Milton Keynes Dons",
       "away": "Burton",
       "market_p": [
-        0.561626274,
-        0.23447897,
-        0.203894756
+        0.577963176,
+        0.229775604,
+        0.19226122
       ],
       "form_p": [
-        0.561626274,
-        0.23447897,
-        0.203894756
+        0.577963176,
+        0.229775604,
+        0.19226122
       ],
       "delta_pp": [
         0.0,
@@ -384,9 +384,9 @@
         "12",
         "12"
       ],
-      "original_market_p13": 0.006311307,
-      "new_form_p13": 0.007364307,
-      "new_market_baseline_p13": 0.006311307,
+      "original_market_p13": 0.006552841,
+      "new_form_p13": 0.00764247,
+      "new_market_baseline_p13": 0.006552841,
       "different_matches": 0
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.045228571,
-      "new_form_p13": 0.050834835,
-      "new_market_baseline_p13": 0.044913937,
+      "original_market_p13": 0.046959475,
+      "new_form_p13": 0.05275496,
+      "new_market_baseline_p13": 0.046632801,
       "different_matches": 2
     }
   ],

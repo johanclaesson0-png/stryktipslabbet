@@ -1,0 +1,419 @@
+{
+  "schema": "stryktipslabbet-frozen-analysis-v1",
+  "model_version": "market-no-vig-v1",
+  "draw_number": 4979,
+  "observed_at_utc": "2026-11-14T09:36:14.558574+00:00",
+  "reg_close_time": "2026-11-14T14:59:00+00:00",
+  "source": "Svenska Spel publikt API",
+  "source_snapshot_sha256": "3ce28d0b1bce4e87ade44436927004b8d5517a6ad3d28aec83e605ef3f3aae1d",
+  "budget_limit": 1800,
+  "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
+  "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
+  "matches": [
+    {
+      "number": 1,
+      "home": "Sverige",
+      "away": "Bosnien & Hercegovina",
+      "odds": [
+        1.49,
+        4.75,
+        7.0
+      ],
+      "streck": [
+        74.0,
+        17.0,
+        9.0
+      ],
+      "p": [
+        0.655075605,
+        0.205486874,
+        0.139437522
+      ],
+      "edge": [
+        -0.084924,
+        0.035487,
+        0.049438
+      ]
+    },
+    {
+      "number": 2,
+      "home": "Portugal",
+      "away": "Danmark",
+      "odds": [
+        1.52,
+        4.75,
+        6.5
+      ],
+      "streck": [
+        66.0,
+        22.0,
+        12.0
+      ],
+      "p": [
+        0.643564356,
+        0.205940594,
+        0.15049505
+      ],
+      "edge": [
+        -0.016436,
+        -0.014059,
+        0.030495
+      ]
+    },
+    {
+      "number": 3,
+      "home": "Norge",
+      "away": "Wales",
+      "odds": [
+        1.23,
+        7.0,
+        15.0
+      ],
+      "streck": [
+        78.0,
+        13.0,
+        9.0
+      ],
+      "p": [
+        0.795093139,
+        0.139709223,
+        0.065197637
+      ],
+      "edge": [
+        0.015093,
+        0.009709,
+        -0.024802
+      ]
+    },
+    {
+      "number": 4,
+      "home": "Rumänien",
+      "away": "Polen",
+      "odds": [
+        4.25,
+        3.9,
+        1.85
+      ],
+      "streck": [
+        16.0,
+        22.0,
+        62.0
+      ],
+      "p": [
+        0.22794408,
+        0.2484006,
+        0.523655319
+      ],
+      "edge": [
+        0.067944,
+        0.028401,
+        -0.096345
+      ]
+    },
+    {
+      "number": 5,
+      "home": "Nordirland",
+      "away": "Ukraina",
+      "odds": [
+        2.48,
+        3.15,
+        3.2
+      ],
+      "streck": [
+        47.0,
+        29.0,
+        24.0
+      ],
+      "p": [
+        0.390274121,
+        0.307263435,
+        0.302462444
+      ],
+      "edge": [
+        -0.079726,
+        0.017263,
+        0.062462
+      ]
+    },
+    {
+      "number": 6,
+      "home": "Österrike",
+      "away": "Irland",
+      "odds": [
+        1.6,
+        4.1,
+        6.0
+      ],
+      "streck": [
+        71.0,
+        19.0,
+        10.0
+      ],
+      "p": [
+        0.603532875,
+        0.235525025,
+        0.1609421
+      ],
+      "edge": [
+        -0.106467,
+        0.045525,
+        0.060942
+      ]
+    },
+    {
+      "number": 7,
+      "home": "Georgien",
+      "away": "Ungern",
+      "odds": [
+        3.2,
+        3.05,
+        2.4
+      ],
+      "streck": [
+        21.0,
+        29.0,
+        50.0
+      ],
+      "p": [
+        0.295638126,
+        0.310177706,
+        0.394184168
+      ],
+      "edge": [
+        0.085638,
+        0.020178,
+        -0.105816
+      ]
+    },
+    {
+      "number": 8,
+      "home": "Milton Keynes Dons",
+      "away": "Burton",
+      "odds": [
+        1.63,
+        4.1,
+        4.9
+      ],
+      "streck": [
+        70.0,
+        19.0,
+        11.0
+      ],
+      "p": [
+        0.577963176,
+        0.229775604,
+        0.19226122
+      ],
+      "edge": [
+        -0.122037,
+        0.039776,
+        0.082261
+      ]
+    },
+    {
+      "number": 9,
+      "home": "Sheffield W",
+      "away": "Plymouth",
+      "odds": [
+        2.23,
+        3.5,
+        2.95
+      ],
+      "streck": [
+        46.0,
+        25.0,
+        29.0
+      ],
+      "p": [
+        0.417872392,
+        0.26624441,
+        0.315883198
+      ],
+      "edge": [
+        -0.042128,
+        0.016244,
+        0.025883
+      ]
+    },
+    {
+      "number": 10,
+      "home": "Stockport",
+      "away": "Reading",
+      "odds": [
+        1.81,
+        3.9,
+        3.95
+      ],
+      "streck": [
+        64.0,
+        21.0,
+        15.0
+      ],
+      "p": [
+        0.520201935,
+        0.241427052,
+        0.238371013
+      ],
+      "edge": [
+        -0.119798,
+        0.031427,
+        0.088371
+      ]
+    },
+    {
+      "number": 11,
+      "home": "Wimbledon",
+      "away": "Blackpool",
+      "odds": [
+        2.8,
+        3.4,
+        2.43
+      ],
+      "streck": [
+        34.0,
+        29.0,
+        37.0
+      ],
+      "p": [
+        0.336044904,
+        0.276742862,
+        0.387212235
+      ],
+      "edge": [
+        -0.003955,
+        -0.013257,
+        0.017212
+      ]
+    },
+    {
+      "number": 12,
+      "home": "Wigan",
+      "away": "Barnsley",
+      "odds": [
+        2.32,
+        3.7,
+        2.8
+      ],
+      "streck": [
+        54.0,
+        26.0,
+        20.0
+      ],
+      "p": [
+        0.407232704,
+        0.255345912,
+        0.337421384
+      ],
+      "edge": [
+        -0.132767,
+        -0.004654,
+        0.137421
+      ]
+    },
+    {
+      "number": 13,
+      "home": "Swindon",
+      "away": "Grimsby",
+      "odds": [
+        3.3,
+        3.55,
+        2.02
+      ],
+      "streck": [
+        29.0,
+        31.0,
+        40.0
+      ],
+      "p": [
+        0.280643394,
+        0.260879775,
+        0.458476832
+      ],
+      "edge": [
+        -0.009357,
+        -0.04912,
+        0.058477
+      ]
+    }
+  ],
+  "systems": [
+    {
+      "key": "balanserad",
+      "name": "Balanserad",
+      "selection_exponent": 0.0,
+      "cost": 1458,
+      "rows": 1458,
+      "choices": [
+        "1",
+        "1",
+        "1",
+        "X2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2"
+      ],
+      "p13_estimate": 0.046959475,
+      "spikes": 6,
+      "half": 1,
+      "full": 6
+    },
+    {
+      "key": "varde",
+      "name": "Streckvärde – experiment",
+      "selection_exponent": 0.4,
+      "cost": 1458,
+      "rows": 1458,
+      "choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "12"
+      ],
+      "p13_estimate": 0.045254641,
+      "spikes": 6,
+      "half": 1,
+      "full": 6
+    },
+    {
+      "key": "skrall",
+      "name": "Skräll – experiment",
+      "selection_exponent": 0.85,
+      "cost": 1458,
+      "rows": 1458,
+      "choices": [
+        "1",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1",
+        "1X2",
+        "12",
+        "1X2",
+        "1X2",
+        "1X2",
+        "2",
+        "2"
+      ],
+      "p13_estimate": 0.024105138,
+      "spikes": 6,
+      "half": 1,
+      "full": 6
+    }
+  ]
+}

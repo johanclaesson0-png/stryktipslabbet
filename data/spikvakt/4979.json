@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4979,
-  "source_observed_at_utc": "2026-11-14T08:58:25.989701+00:00",
+  "source_observed_at_utc": "2026-11-14T09:36:14.558574+00:00",
   "reg_close_time": "2026-11-14T14:59:00+00:00",
-  "source_snapshot_sha256": "5faa4d1c405ddf687ea736b62b2fe80fb5046aa928c468127f601b05779b4f4a",
-  "created_at_utc": "2026-11-14T08:58:26.207104+00:00",
+  "source_snapshot_sha256": "3ce28d0b1bce4e87ade44436927004b8d5517a6ad3d28aec83e605ef3f3aae1d",
+  "created_at_utc": "2026-11-14T09:36:14.736313+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -29,7 +29,7 @@
         "1X2",
         "1X2"
       ],
-      "baseline_p13": 0.045228571,
+      "baseline_p13": 0.046959475,
       "baseline_miss_risk_spikes": 1,
       "baseline_x_included": 7,
       "risk_report": {
@@ -50,10 +50,10 @@
             "home": "Milton Keynes Dons",
             "away": "Burton",
             "chosen": "1",
-            "estimated_miss_probability": 0.438374,
+            "estimated_miss_probability": 0.422037,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.234479,
+            "extra_outcome_probability": 0.229776,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -72,10 +72,10 @@
             "home": "Portugal",
             "away": "Danmark",
             "chosen": "1",
-            "estimated_miss_probability": 0.362218,
+            "estimated_miss_probability": 0.356436,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.210745,
+            "extra_outcome_probability": 0.205941,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -83,10 +83,10 @@
             "home": "Sverige",
             "away": "Bosnien & Hercegovina",
             "chosen": "1",
-            "estimated_miss_probability": 0.34483,
+            "estimated_miss_probability": 0.344924,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.206309,
+            "extra_outcome_probability": 0.205487,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -123,7 +123,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.045228571,
+          "estimated_p13": 0.046959475,
           "miss_risk_spikes": 1,
           "x_included": 7
         },
@@ -146,7 +146,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.045228571,
+          "estimated_p13": 0.046959475,
           "miss_risk_spikes": 1,
           "x_included": 7
         }
@@ -170,7 +170,7 @@
         "12",
         "12"
       ],
-      "baseline_p13": 0.006311307,
+      "baseline_p13": 0.006552841,
       "baseline_miss_risk_spikes": 2,
       "baseline_x_included": 2,
       "risk_report": {
@@ -202,10 +202,10 @@
             "home": "Milton Keynes Dons",
             "away": "Burton",
             "chosen": "1",
-            "estimated_miss_probability": 0.438374,
+            "estimated_miss_probability": 0.422037,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.234479,
+            "extra_outcome_probability": 0.229776,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -224,10 +224,10 @@
             "home": "Portugal",
             "away": "Danmark",
             "chosen": "1",
-            "estimated_miss_probability": 0.362218,
+            "estimated_miss_probability": 0.356436,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.210745,
+            "extra_outcome_probability": 0.205941,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -235,10 +235,10 @@
             "home": "Sverige",
             "away": "Bosnien & Hercegovina",
             "chosen": "1",
-            "estimated_miss_probability": 0.34483,
+            "estimated_miss_probability": 0.344924,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.206309,
+            "extra_outcome_probability": 0.205487,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -286,7 +286,7 @@
             "12",
             "12"
           ],
-          "estimated_p13": 0.006311307,
+          "estimated_p13": 0.006552841,
           "miss_risk_spikes": 2,
           "x_included": 2
         },
@@ -309,7 +309,7 @@
             "12",
             "12"
           ],
-          "estimated_p13": 0.006311307,
+          "estimated_p13": 0.006552841,
           "miss_risk_spikes": 2,
           "x_included": 2
         }

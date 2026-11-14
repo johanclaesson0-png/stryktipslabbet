@@ -1,0 +1,432 @@
+{
+  "schema": "stryktipslabbet-form-model-v1",
+  "model_version": "form-overlay-preregistered-2026-11-13-v14",
+  "weight": 0.25,
+  "draw_number": 4979,
+  "source_observed_at_utc": "2026-11-14T08:58:25.989701+00:00",
+  "source_snapshot_sha256": "5faa4d1c405ddf687ea736b62b2fe80fb5046aa928c468127f601b05779b4f4a",
+  "form_created_at_utc": "2026-11-14T09:27:54.476312+00:00",
+  "form_sha256": "a91ae87e23a10ed1c39ba9250ce5b88869f05d090ae8497d1ff2e0617c10ff60",
+  "reg_close_time": "2026-11-14T14:59:00+00:00",
+  "created_at_utc": "2026-11-14T09:27:55.336917+00:00",
+  "matches_with_form": 11,
+  "matches": [
+    {
+      "number": 1,
+      "home": "Sverige",
+      "away": "Bosnien & Hercegovina",
+      "market_p": [
+        0.655169667,
+        0.206308746,
+        0.138521587
+      ],
+      "form_p": [
+        0.66561303,
+        0.202293857,
+        0.132093113
+      ],
+      "delta_pp": [
+        1.04,
+        -0.4,
+        -0.64
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.126667,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 2.0,
+      "away_last5_ppg": 1.6
+    },
+    {
+      "number": 2,
+      "home": "Portugal",
+      "away": "Danmark",
+      "market_p": [
+        0.637781629,
+        0.210745234,
+        0.151473137
+      ],
+      "form_p": [
+        0.661379699,
+        0.202063527,
+        0.136556774
+      ],
+      "delta_pp": [
+        2.36,
+        -0.87,
+        -1.49
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.28,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 2.4,
+      "away_last5_ppg": 1.8
+    },
+    {
+      "number": 3,
+      "home": "Norge",
+      "away": "Wales",
+      "market_p": [
+        0.795093139,
+        0.139709223,
+        0.065197637
+      ],
+      "form_p": [
+        0.802208185,
+        0.136047693,
+        0.061744122
+      ],
+      "delta_pp": [
+        0.71,
+        -0.37,
+        -0.35
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.126667,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 0.6,
+      "away_last5_ppg": 0.6
+    },
+    {
+      "number": 4,
+      "home": "Rumänien",
+      "away": "Polen",
+      "market_p": [
+        0.22794408,
+        0.2484006,
+        0.523655319
+      ],
+      "form_p": [
+        0.213318883,
+        0.243276156,
+        0.543404961
+      ],
+      "delta_pp": [
+        -1.46,
+        -0.51,
+        1.97
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": -0.206667,
+      "reason": "Bortaform starkare än hemmaform",
+      "home_last5_ppg": 0.6,
+      "away_last5_ppg": 1.0
+    },
+    {
+      "number": 5,
+      "home": "Nordirland",
+      "away": "Ukraina",
+      "market_p": [
+        0.390274121,
+        0.307263435,
+        0.302462444
+      ],
+      "form_p": [
+        0.410131896,
+        0.304174509,
+        0.285693595
+      ],
+      "delta_pp": [
+        1.99,
+        -0.31,
+        -1.68
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.213333,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 1.6,
+      "away_last5_ppg": 0.8
+    },
+    {
+      "number": 6,
+      "home": "Österrike",
+      "away": "Irland",
+      "market_p": [
+        0.603532875,
+        0.235525025,
+        0.1609421
+      ],
+      "form_p": [
+        0.619280169,
+        0.229791975,
+        0.150927856
+      ],
+      "delta_pp": [
+        1.57,
+        -0.57,
+        -1.0
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.18,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 1.6,
+      "away_last5_ppg": 1.2
+    },
+    {
+      "number": 7,
+      "home": "Georgien",
+      "away": "Ungern",
+      "market_p": [
+        0.295638126,
+        0.310177706,
+        0.394184168
+      ],
+      "form_p": [
+        0.27400711,
+        0.305748624,
+        0.420244266
+      ],
+      "delta_pp": [
+        -2.16,
+        -0.44,
+        2.61
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": -0.28,
+      "reason": "Bortaform starkare än hemmaform",
+      "home_last5_ppg": 1.0,
+      "away_last5_ppg": 2.0
+    },
+    {
+      "number": 8,
+      "home": "Milton Keynes Dons",
+      "away": "Burton",
+      "market_p": [
+        0.561626274,
+        0.23447897,
+        0.203894756
+      ],
+      "form_p": [
+        0.561626274,
+        0.23447897,
+        0.203894756
+      ],
+      "delta_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "data_coverage": "delvis",
+      "used_form": false,
+      "form_signal": 0.0,
+      "reason": "Otillräckligt jämförbar formdata",
+      "home_last5_ppg": 2.2,
+      "away_last5_ppg": null
+    },
+    {
+      "number": 9,
+      "home": "Sheffield W",
+      "away": "Plymouth",
+      "market_p": [
+        0.417872392,
+        0.26624441,
+        0.315883198
+      ],
+      "form_p": [
+        0.413048316,
+        0.266276842,
+        0.320674842
+      ],
+      "delta_pp": [
+        -0.48,
+        0.0,
+        0.48
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": -0.053333,
+      "reason": "Bortaform starkare än hemmaform",
+      "home_last5_ppg": 1.0,
+      "away_last5_ppg": 1.2
+    },
+    {
+      "number": 10,
+      "home": "Stockport",
+      "away": "Reading",
+      "market_p": [
+        0.520201935,
+        0.241427052,
+        0.238371013
+      ],
+      "form_p": [
+        0.520201935,
+        0.241427052,
+        0.238371013
+      ],
+      "delta_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "data_coverage": "delvis",
+      "used_form": false,
+      "form_signal": 0.0,
+      "reason": "Otillräckligt jämförbar formdata",
+      "home_last5_ppg": null,
+      "away_last5_ppg": 1.0
+    },
+    {
+      "number": 11,
+      "home": "Wimbledon",
+      "away": "Blackpool",
+      "market_p": [
+        0.336044904,
+        0.276742862,
+        0.387212235
+      ],
+      "form_p": [
+        0.349505803,
+        0.276247577,
+        0.37424662
+      ],
+      "delta_pp": [
+        1.35,
+        -0.05,
+        -1.3
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.146667,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 2.0,
+      "away_last5_ppg": 0.8
+    },
+    {
+      "number": 12,
+      "home": "Wigan",
+      "away": "Barnsley",
+      "market_p": [
+        0.407232704,
+        0.255345912,
+        0.337421384
+      ],
+      "form_p": [
+        0.417690808,
+        0.2541969,
+        0.328112292
+      ],
+      "delta_pp": [
+        1.05,
+        -0.11,
+        -0.93
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.106667,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 2.4,
+      "away_last5_ppg": 2.6
+    },
+    {
+      "number": 13,
+      "home": "Swindon",
+      "away": "Grimsby",
+      "market_p": [
+        0.280643394,
+        0.260879775,
+        0.458476832
+      ],
+      "form_p": [
+        0.31979766,
+        0.262328276,
+        0.417874064
+      ],
+      "delta_pp": [
+        3.92,
+        0.14,
+        -4.06
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.446667,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 1.4,
+      "away_last5_ppg": 0.2
+    }
+  ],
+  "budgets": [
+    {
+      "budget_limit": 100,
+      "cost": 96,
+      "original_choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "1X2",
+        "1",
+        "X2",
+        "1",
+        "12",
+        "1",
+        "12",
+        "12",
+        "12"
+      ],
+      "new_choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "1X2",
+        "1",
+        "X2",
+        "1",
+        "12",
+        "1",
+        "12",
+        "12",
+        "12"
+      ],
+      "original_market_p13": 0.006311307,
+      "new_form_p13": 0.007364307,
+      "new_market_baseline_p13": 0.006311307,
+      "different_matches": 0
+    },
+    {
+      "budget_limit": 1800,
+      "cost": 1458,
+      "original_choices": [
+        "1",
+        "1",
+        "1",
+        "X2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2"
+      ],
+      "new_choices": [
+        "1",
+        "1",
+        "1",
+        "2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X",
+        "1X2",
+        "1X2",
+        "1X2"
+      ],
+      "original_market_p13": 0.045228571,
+      "new_form_p13": 0.050834835,
+      "new_market_baseline_p13": 0.044913937,
+      "different_matches": 2
+    }
+  ],
+  "warning": "Otestad kombination av förhandsodds och form. Värdena är inte kalibrerade och ingen vinstökning är bevisad."
+}
