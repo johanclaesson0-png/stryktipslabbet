@@ -1,10 +1,5 @@
 name: V21 – undersök publika resultatsiffror
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/v21-public-pool-probe.yml"
-      - "scripts/v21_pool_history.py"
-      - "tests/test_v21_pool_history.py"
   workflow_dispatch:
 permissions:
   contents: read
