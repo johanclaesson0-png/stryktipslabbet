@@ -58,6 +58,10 @@ jobs:
         run: python -m scripts.api_football_adapter --outdir data
       - name: Version 17 – källfryst spelarkänslighet för 1/X/2
         run: python -m scripts.player_impact --outdir data
+      - name: V18 – kontrollera verkligt tidsfrysta odds mot eventuella spelardata och utfall
+        env:
+          MARKET_AUDIT_OUTPUT: data/market_audit/latest.json
+        run: python -m scripts.market_player_audit
       - name: Verifiera några äldre utdelningar från Svenska Spel
         continue-on-error: true
         run: python -m scripts.historical_payouts --outdir data --limit 8
