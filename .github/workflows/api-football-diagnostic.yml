@@ -29,10 +29,17 @@ jobs:
           if not key:
               print("RESULTAT: APIFOOTBALL_KEY saknas i GitHub Actions Secrets")
               sys.exit(1)
+          import re
+          key = key.strip()
           print("RESULTAT: GitHub Actions har tillgång till APIFOOTBALL_KEY (värdet visas inte)")
+          print("DIAGNOSTIK: Nyckelns format ser rätt ut:", bool(re.fullmatch(r"[0-9a-fA-F]{32}", key)))
+          if not re.fullmatch(r"[0-9a-fA-F]{32}", key):
+              print("DIAGNOSTIK: Secret innehåller sannolikt fel text, extra tecken eller felaktig nyckel.")
+              sys.exit(5)
 
           def get(endpoint, params):
               url = "https://v3.football.api-sports.io/" + endpoint + "?" + urllib.parse.urlencode(params)
+              print("DIAGNOSTIK: Begär endpoint", endpoint)
               req = urllib.request.Request(url, headers={
                   "x-apisports-key": key,
                   "Accept": "application/json",
@@ -52,6 +59,7 @@ jobs:
                       sys.exit(2)
               except Exception as exc:
                   print("RESULTAT: API-anrop misslyckades (" + type(exc).__name__ + ")")
+                  print("DIAGNOSTIK: Källa", type(exc).__module__ + "." + type(exc).__qualname__)
                   sys.exit(2)
               if data.get("errors"):
                   print("RESULTAT: API nekade anropet (orsak redovisas inte för att undvika läckage)")
