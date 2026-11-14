@@ -701,6 +701,30 @@ def main():
     status["v16_officially_settled"] = validated_other_results
 
 
+    # Deeper match context, from results strictly older than the odds snapshot.
+    # This is NOT fed back into the odds/form models without a future trial.
+    from scripts.match_insights import validate as validate_match_insights
+    deep_count = 0
+    for row in public_rounds:
+        n = row["draw_number"]
+        row["match_insights_available"] = False
+        base = base_by_draw.get(n)
+        path = root / "data" / "match_insights" / (str(n) + ".json")
+        if base is None or not path.exists():
+            continue
+        try:
+            deep = json.loads(path.read_text(encoding="utf-8"))
+            if not validate_match_insights(deep, base):
+                continue
+            target = dest / "data" / "match_insights" / (str(n) + ".json")
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, target)
+            row["match_insights_available"] = True
+            deep_count += 1
+        except (KeyError, ValueError, TypeError, OSError, json.JSONDecodeError):
+            continue
+    status["match_insights_published"] = deep_count
+
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
         "generated_at_utc": now.isoformat(),
