@@ -90,6 +90,7 @@ def main():
     shutil.copy2(root / "manuell-spelarkoll.html", dest / "manuell-spelarkoll.html")
     shutil.copy2(root / "historiskt-api.html", dest / "historiskt-api.html")
     shutil.copy2(root / "v19-beslutsstudio.html", dest / "v19-beslutsstudio.html")
+    shutil.copy2(root / "v20-pottanalys.html", dest / "v20-pottanalys.html")
 
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
@@ -182,6 +183,62 @@ def main():
                         (folder/"decision.json").write_text(
                             json.dumps(public,ensure_ascii=False,indent=2),encoding="utf-8")
     except (KeyError,TypeError,ValueError,OSError,OverflowError,json.JSONDecodeError):
+        pass
+
+    # V20: public provider-free hypothetical payout scenarios only while a
+    # verified pre-close market snapshot remains open. Never show 'live'
+    # turnover based on guessed values or export simulated individual rows.
+    try:
+        from scripts.v20_payout_simulator import (
+            SCHEMA as V20_SCHEMA, TURNOVERS as V20_TURNOVERS,
+            CROWD_MULTIPLIERS as V20_CROWD_MULTIPLIERS,
+        )
+        sim_path=root/"data"/"v20"/"simulator.json"
+        sim=json.loads(sim_path.read_text(encoding="utf-8"))
+        check_now=datetime.now(timezone.utc)
+        if sim.get("schema")==V20_SCHEMA and sim.get("scenarios"):
+            draw=sim["draw_number"]
+            observed=instant(sim["observed_at_utc"])
+            close=instant(sim["reg_close_time"])
+            created=instant(sim["generated_at_utc"])
+            if (type(draw) is int and observed<=created<=check_now<close
+                and sim.get("assumptions",{}).get("turnover")=="ILLUSTRATIVE; not actual draw turnover"
+                and sim.get("assumptions",{}).get("guarantee_and_jackpot","").startswith("EXCLUDED")
+                and set((r["assumed_turnover_kr"],r["crowd_winner_multiplier"])
+                        for r in sim["scenarios"]) ==
+                    {(t,m) for t in V20_TURNOVERS for m in V20_CROWD_MULTIPLIERS}):
+                base=json.loads((root/"data"/"analysis"/f"{draw}.json").read_text(encoding="utf-8"))
+                raw=None
+                for source_path in (root/"data"/"snapshots"/str(draw)).glob("*.json"):
+                    candidate=json.loads(source_path.read_text(encoding="utf-8"))
+                    if (candidate.get("observed_at_utc")==sim["observed_at_utc"]
+                        and candidate.get("sha256")==sim["source_snapshot_sha256"]):
+                        raw=candidate;break
+                if raw is not None and valid_v19_origin(raw,base,check_now):
+                    solo=json.loads((root/"data"/"personal"/f"{draw}.json").read_text(encoding="utf-8"))
+                    from scripts.solo import validate as v20_valid_solo
+                    if (v20_valid_solo(solo,base)
+                        and all(len(s["budgets"])==2 and
+                            {b["budget"] for b in s["budgets"]}=={100,1800} and
+                            all(b["exact_cost"]==
+                                (solo["systems"][0]["cost"] if b["budget"]==100
+                                 else base["systems"][0]["cost"])
+                                and len(b["strategies"])==5
+                                and all(math.prod(len(x) for x in strategy["choices"])
+                                        ==b["exact_cost"] for strategy in b["strategies"])
+                                for b in s["budgets"])
+                            for s in sim["scenarios"])):
+                        allowed=("schema","draw_number","observed_at_utc",
+                                 "reg_close_time","generated_at_utc","draw_status",
+                                 "simulation_draws","assumptions","scenarios",
+                                 "upsets","warnings")
+                        public={k:sim.get(k) for k in allowed}
+                        target=dest/"data"/"v20"
+                        target.mkdir(parents=True,exist_ok=True)
+                        (target/"simulator.json").write_text(
+                            json.dumps(public,ensure_ascii=False,indent=2),
+                            encoding="utf-8")
+    except (KeyError,ValueError,TypeError,OSError,OverflowError,json.JSONDecodeError):
         pass
 
     now = datetime.now(timezone.utc)
