@@ -70,7 +70,7 @@ class DeepInsightsTests(unittest.TestCase):
         ix=history_index(self.db)
         t=table_position(self.db,ix,"Home 1","2026-11-12")
         self.assertIsNotNone(t)
-        self.assertIn("inte officiell",t["method"])
+        self.assertIn("ej officiell",t["method"])
         self.assertEqual(t["season"],"2026-27")
         self.assertIsNone(table_position(self.db,ix,"Home 1","2027-05-01"))
 
