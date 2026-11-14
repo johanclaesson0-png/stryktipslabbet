@@ -181,6 +181,22 @@ def matched_fixture(draw_date, match, indexes):
     return good[0] if len(good)==1 else None
 
 
+def choose_history_batch(matched, index, per_group=8):
+    """Chronological nonoverlapping batches, stratified by league and season."""
+    if type(index) is not int or not 0 <= index <= 40:
+        raise ValueError("Batch-index utanför tillåtet intervall")
+    if type(per_group) is not int or not 1 <= per_group <= 8:
+        raise ValueError("Otillåten batchstorlek")
+    selected=set()
+    for season in SEASONS:
+        for league in LEAGUES:
+            candidates={(f["date"],f["id"]) for f in matched.values()
+                        if f["season"]==season and f["league"]==league}
+            selected.update(fid for _,fid in
+                            sorted(candidates)[index*per_group:(index+1)*per_group])
+    return selected
+
+
 def dataset_from_api(client, rounds, batch_index=0, per_group=None, return_catalog=False):
     """Build only joined fixture metadata; never store/transmit provider responses."""
     indexes=defaultdict(list)
@@ -242,12 +258,7 @@ def dataset_from_api(client, rounds, batch_index=0, per_group=None, return_catal
         per_group = MAX_INJURY_FIXTURES // (len(SEASONS)*len(LEAGUES))
     if not 1 <= per_group <= 8:
         raise ValueError("Högst åtta matcher per liga och säsong/körning")
-    selected=set()
-    for season in SEASONS:
-        for league in LEAGUES:
-            eligible={(f["date"],f["id"]) for f in matched.values()
-                      if f["season"]==season and f["league"]==league}
-            selected.update(fid for _,fid in sorted(eligible)[batch_index*per_group:(batch_index+1)*per_group])
+    selected=choose_history_batch(matched,batch_index,per_group)
     matched={k:v for k,v in matched.items() if v["id"] in selected}
     ids_by_date={f["id"]:f["date"] for f in matched.values()}
     fixture_ids=sorted(selected, key=lambda fid:(ids_by_date[fid],fid))
