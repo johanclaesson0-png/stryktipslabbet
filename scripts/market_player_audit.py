@@ -10,6 +10,7 @@ from collections import Counter
 from datetime import datetime,timezone
 import json
 import math
+import os
 from pathlib import Path
 
 from scripts.analyze import valid_analysis, correct_rows
@@ -154,4 +155,10 @@ def audit(root=ROOT):
 
 
 if __name__=="__main__":
-    print(json.dumps(audit(),ensure_ascii=False,sort_keys=True))
+    result=audit()
+    print(json.dumps(result,ensure_ascii=False,sort_keys=True))
+    destination=os.getenv("MARKET_AUDIT_OUTPUT")
+    if destination:
+        p=Path(destination)
+        p.parent.mkdir(parents=True,exist_ok=True)
+        p.write_text(json.dumps(result,ensure_ascii=False,indent=2,sort_keys=True)+"\n",encoding="utf-8")
