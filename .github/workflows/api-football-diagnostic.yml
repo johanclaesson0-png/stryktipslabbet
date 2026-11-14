@@ -40,7 +40,16 @@ jobs:
               })
               try:
                   with urllib.request.urlopen(req, timeout=15) as response:
-                      data = json.load(response)
+                      raw = response.read(300000)
+                      http_status = response.status
+                      content_type = response.headers.get("Content-Type", "").split(";")[0].strip().lower()
+                  try:
+                      data = json.loads(raw)
+                  except json.JSONDecodeError:
+                      print("RESULTAT: API svarade med icke-JSON. HTTP:", http_status,
+                            "| Content-Type:", content_type[:50],
+                            "| Svarsstorlek:", len(raw), "byte")
+                      sys.exit(2)
               except Exception as exc:
                   print("RESULTAT: API-anrop misslyckades (" + type(exc).__name__ + ")")
                   sys.exit(2)
