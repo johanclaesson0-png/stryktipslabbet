@@ -236,6 +236,8 @@ def build(snapshot,base,solo,now,simulations=SAMPLES):
         "source_snapshot_sha256":base.get("source_snapshot_sha256"),
         "observed_at_utc":base["observed_at_utc"],
         "reg_close_time":base["reg_close_time"],
+        "observed_turnover_so_far_kr":snapshot.get("observed_turnover_so_far_kr"),
+        "sales_observed_at_utc":snapshot.get("sales_observed_at_utc"),
         "generated_at_utc":now.isoformat(),
         "draw_status":"hypotetisk utdelningsmodell – faktisk omsättning och vinstutfall okända",
         "simulation_draws":simulations,
@@ -294,6 +296,25 @@ def main():
         except (KeyError,ValueError,TypeError,OverflowError,ZeroDivisionError):
             continue
     target=root/"v20"/"simulator.json"
+    # Preserve the last originally generated pre-close V20 scenario when the
+    # draw changes or closes. The archived source is never generated using
+    # the outcome and may only be used LATER for real after-close calibration.
+    prior=json_doc(target)
+    if isinstance(prior,dict) and prior.get("schema")==SCHEMA and prior.get("scenarios"):
+        try:
+            old_draw=prior["draw_number"]
+            created=instant(prior["generated_at_utc"])
+            closed=instant(prior["reg_close_time"])
+            if (type(old_draw) is int and created<closed and
+                not (result.get("draw_number")==old_draw and result.get("scenarios"))):
+                hist=root/"v20_history"/(str(old_draw)+".json")
+                if not hist.exists():
+                    hist.parent.mkdir(parents=True,exist_ok=True)
+                    hist.write_text(json.dumps(prior,ensure_ascii=False,indent=2)+"\n",
+                                    encoding="utf-8")
+                    print("V20: sparade originalprognos före spelstopp för",old_draw)
+        except (KeyError,TypeError,ValueError,OverflowError):
+            pass
     target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print("V20:",result["draw_status"],"simulerade utfall:",
