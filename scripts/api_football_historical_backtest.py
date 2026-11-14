@@ -252,6 +252,7 @@ def dataset_from_api(client, rounds, batch_index=0, per_group=None, return_catal
     ids_by_date={f["id"]:f["date"] for f in matched.values()}
     fixture_ids=sorted(selected, key=lambda fid:(ids_by_date[fid],fid))
     absence={}
+    injury_players={}
     complete=set()
     for fid in fixture_ids:
         try:
@@ -262,11 +263,13 @@ def dataset_from_api(client, rounds, batch_index=0, per_group=None, return_catal
                   str(exc).split(":")[0],file=sys.stderr)
             break
         absence.update(injury_counts(rows,[fid]))
+        if return_catalog:
+            injury_players[fid] = rows  # ephemeral; never save or print player identities
         complete.add(fid)
     # A failed fetch is MISSING coverage, never interpreted as zero absences.
     matched={k:v for k,v in matched.items() if v["id"] in complete}
     if return_catalog:
-        return matched,absence,coverage,indexes
+        return matched,absence,coverage,indexes,injury_players
     return matched,absence,coverage
 
 
