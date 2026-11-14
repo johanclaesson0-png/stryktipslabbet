@@ -30,7 +30,7 @@ SOURCE = "https://www.api-football.com/documentation_v3"
 SEASONS = (2022, 2023, 2024)
 LEAGUES = ("Premier League", "Championship")
 MAX_CALLS = 65
-MAX_INJURY_FIXTURES = 400
+MAX_INJURY_FIXTURES = 48  # 8 chronological fixtures per supported league-season
 RATE_SECONDS = 6.5
 SIMPLE_ABSENCE_WEIGHT = .045
 QUESTIONABLE_WEIGHT = .018
@@ -232,19 +232,34 @@ def dataset_from_api(client, rounds):
             f=matched_fixture(d["date"],m,indexes)
             if f is not None:
                 matched[(d["draw"],i)]=f
-    fixture_ids=sorted({f["id"] for f in matched.values()})
-    if len(fixture_ids)>MAX_INJURY_FIXTURES:
-        # Deterministic chronological truncation, no selection by outcome.
-        allowed={f["id"] for f in sorted(matched.values(),
-                 key=lambda r:(r["date"],r["id"]))[:MAX_INJURY_FIXTURES]}
-        matched={k:v for k,v in matched.items() if v["id"] in allowed}
-        fixture_ids=sorted(allowed)
+    # Historical endpoint check (14 Nov 2026): individual fixture works for
+    # Free, but the otherwise documented ids batch filter returns errors.plan.
+    # Predefine the sample without inspecting absence or outcome patterns:
+    # earliest up to eight score-verified matches from each league and season.
+    per_group = MAX_INJURY_FIXTURES // (len(SEASONS)*len(LEAGUES))
+    selected=set()
+    for season in SEASONS:
+        for league in LEAGUES:
+            eligible={(f["date"],f["id"]) for f in matched.values()
+                      if f["season"]==season and f["league"]==league}
+            selected.update(fid for _,fid in sorted(eligible)[:per_group])
+    matched={k:v for k,v in matched.items() if v["id"] in selected}
+    ids_by_date={f["id"]:f["date"] for f in matched.values()}
+    fixture_ids=sorted(selected, key=lambda fid:(ids_by_date[fid],fid))
     absence={}
-    for start in range(0,len(fixture_ids),20):
-        batch=fixture_ids[start:start+20]
-        rows=client.get("injuries",{"ids":"-".join(map(str,batch))})
-        # All fetched rows are discarded immediately after safe numeric counting.
-        absence.update(injury_counts(rows,batch))
+    complete=set()
+    for fid in fixture_ids:
+        try:
+            rows=client.get("injuries",{"fixture":fid})
+        except RuntimeError as exc:
+            print("BACKTEST: Skadestatus kunde inte läsas för utvald match. "
+                  "Avbryter återstående API-anrop; feltyp:",
+                  str(exc).split(":")[0],file=sys.stderr)
+            break
+        absence.update(injury_counts(rows,[fid]))
+        complete.add(fid)
+    # A failed fetch is MISSING coverage, never interpreted as zero absences.
+    matched={k:v for k,v in matched.items() if v["id"] in complete}
     return matched,absence,coverage
 
 
