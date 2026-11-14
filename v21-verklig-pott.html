@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#091826"><title>V21 – Verklig omsättning & vinnare · Stryktipslabbet</title>
+<style>
+:root{color-scheme:dark;--bg:#091827;--panel:#162e43;--line:#38596e;--text:#edf7ff;--muted:#b8cede;--accent:#90e8cb;--gold:#ffd392}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse 850px 450px at 83% -3%,#26545a,transparent),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}a{color:#b6dcff}
+main{max-width:1100px;margin:auto;padding:18px 16px 65px}
+nav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-bottom:32px;font-size:13px}
+nav strong{font-size:20px}nav strong span{color:var(--accent)}
+nav .links{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.6px;color:var(--accent);font-weight:800}
+h1{font-size:clamp(31px,6vw,45px);letter-spacing:-1.1px;margin:8px 0 13px;line-height:1.14}h2{font-size:22px;margin:0 0 13px}h3{font-size:17px}
+.lead{font-size:17px;color:#d4e6f2;max-width:880px}
+.card{padding:20px;margin:17px 0;background:var(--panel);border:1px solid var(--line);border-radius:15px}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.metric{border:1px solid var(--line);padding:16px;background:#0d2435;border-radius:11px}
+.metric label{display:block;color:var(--muted);font-size:12px}.metric b{display:block;font-size:26px;font-variant-numeric:tabular-nums;color:var(--accent)}
+.small{font-size:12px;color:var(--muted)}
+.notice{padding:14px;background:#383339;border-left:4px solid var(--gold);border-radius:8px;margin:17px 0}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:right;border-bottom:1px solid var(--line);padding:11px 8px;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:var(--muted)}
+.scroller{overflow-x:auto}.empty{padding:14px;border:1px dashed var(--line);border-radius:9px;color:var(--muted)}
+.tag{font-size:11px;padding:2px 8px;border:1px solid var(--line);border-radius:7px;color:var(--accent)}
+footer{border-top:1px solid var(--line);padding-top:19px;font-size:12px;color:var(--muted);margin-top:30px}
+@media(max-width:720px){.metrics{grid-template-columns:1fr}.card{padding:14px}table{font-size:12px}th,td{padding:8px 5px}}
+</style></head><body><main>
+<nav><strong>STRYKTIPS<span>LABBET</span> ⚽</strong><div class="links">
+<a href="index.html">Startsida</a><a href="v20-pottanalys.html">V20 – Simulator</a><a href="v19-beslutsstudio.html">Beslutsmotor</a></div></nav>
+<div class="kicker">Version 21 · officiella historiska facit</div>
+<h1>Hur många vann – och för hur mycket?</h1>
+<p class="lead">Nu använder vi Svenska Spels publika resultat-API för att samla <strong>faktisk omsättning, antal vinnande rader och utdelning</strong> för de gamla kupongerna. Vi kan mäta hur den enkla pottberäkningen avviker från vad som verkligen betalades ut.</p>
+<div class="notice"><strong>Två olika typer av kunskap:</strong> De historiska beloppen nedan är verkliga officiella efterhandsuppgifter. Men de bevisar inte att V20:s modell kunde ha hittat vinnarna före spelstopp. För det krävs förhandsfrysta odds och streck på <em>samma</em> kupong. Sådan kalibrering visas separat och får status först med minst 20 jämförbara kuponger.</div>
+<section class="card">
+<h2>Historiska officiella uppgifter</h2>
+<div id="summary" class="metrics"><div class="empty">Hämtar officiell historik …</div></div>
+<p class="small" id="loaded"></p>
+</section>
+<section class="card">
+<h2>Vad har vinnande rader faktiskt gett?</h2>
+<div class="scroller"><table><thead><tr><th>Vinstklass</th><th>Median rader</th><th>10:e–90:e percentilen</th><th>Median utdelning/rad</th><th>Jämförda omgångar</th></tr></thead><tbody id="classTable"><tr><td colspan="5">Inga verifierade resultat ännu.</td></tr></tbody></table></div>
+<p class="small">Här visas observerad historisk spridning, inte en prognos om nästa omgång. Potterna kan påverkas av jackpot, garantier och överföringar.</p>
+</section>
+<section class="card">
+<h2>Test mot V20:s konkurrentmodell</h2>
+<div id="audit" class="empty">Kontrollerar om riktiga förhandsfrysta jämförelsepar finns …</div>
+<p class="small">V21 använder först de gamla 262 officiellt kontrollerade utdelningsresultaten. För att kontrollera V20:s antaganden om hur andra tippat måste <strong>verkliga streck före spelstopp</strong> och senare <strong>faktiska vinnarrader</strong> avse samma omgång. Om något saknas redovisas inga konstruerade historiska förhandssannolikheter.</p>
+</section>
+<section class="card">
+<h2>Senast officiellt verifierade kuponger</h2>
+<div class="scroller"><table><thead><tr><th>Omgång</th><th>Omsättning</th><th>13-rättsrader</th><th>13 rätt kr/rad</th><th>12-rättsrader</th><th>11-rättsrader</th><th>10-rättsrader</th></tr></thead><tbody id="recent"><tr><td colspan="7">Inga nya officiella kontroller ännu.</td></tr></tbody></table></div>
+</section>
+<section class="card">
+<h2>Nästa tekniska mål</h2>
+<p>Samla minst 20 avslutade omgångar med <strong>verifierade förhandsstreck från vårt eget arkiv</strong> och officiella vinnarrader, samt spara tidigare beräknade V20-system. Först då kan vi testa om antagandet om hur många andra som vinner håller och vilken systemvariant som faktiskt gav bäst hypotetisk nettoavkastning i kronor.</p>
+<p><a href="https://github.com/johanclaesson0-png/stryktipslabbet/blob/main/docs/v21-officiell-pottkalibrering.md">Metod, källor och begränsningar</a></p>
+</section>
+<footer>Resultatdata = efterhandsfacit. Antagna vinstchanser = forskningsmodell. Ingenting här är en garanti om framtida vinster eller en automatisk spelinstruktion. <a href="https://stodlinjen.se/">Stödlinjen</a>.</footer>
+</main>
+<script>
+"use strict";
+const el=id=>document.getElementById(id);
+const number=x=>Number.isFinite(x)?Math.round(x).toLocaleString("sv-SE"):"—";
+const source=(tag,value)=>{let x=document.createElement(tag);if(value!==undefined)x.textContent=String(value);return x};
+const cell=(r,txt)=>{let c=source("td",txt);r.appendChild(c)};
+async function load(){
+ try{
+ const response=await fetch("./data/v21/calibration.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Ingen verifierad kalibreringsrapport ännu");
+ const d=await response.json();
+ if(d.schema!=="stryktipslabbet-official-calibration-v21")throw Error("Fel rapportversion");
+ const h=d.historical_actuals;
+ const groups=[["Officiella omgångar",number(h.draws_with_official_turnover_winners)],
+ ["Medianomsättning",number(h.turnover_median_kr)+" kr"],
+ ["10:e–90:e percentilen",number(h.turnover_p10_kr)+"–"+number(h.turnover_p90_kr)+" kr"]];
+ el("summary").replaceChildren();
+ for(const [label,val] of groups){let box=source("div");box.className="metric";
+ box.appendChild(source("label",label));box.appendChild(source("b",val));el("summary").appendChild(box)}
+ el("loaded").textContent="Uppdaterad: "+new Date(d.generated_at_utc).toLocaleString("sv-SE")+
+ ". Dessa belopp kommer från avslutade omgångar och är inte frysta odds.";
+ el("classTable").replaceChildren();
+ for(const k of ["13","12","11","10"]){
+  const v=h.by_class?.[k];if(!v)continue;
+  let row=source("tr");
+  [k+" rätt",number(v.winner_rows_median),
+   number(v.winner_rows_p10)+"–"+number(v.winner_rows_p90),
+   number(v.actual_payout_median_kr)+" kr",number(v.rounds_with_winners_data)].forEach(x=>cell(row,x));
+  el("classTable").appendChild(row);
+ }
+ const p=d.prospective_model_check;
+ const audit=el("audit");audit.replaceChildren();
+ audit.appendChild(source("h3","Faktiskt jämförbara förhandstester: "+p.prospective_draws_with_preclose_streck_and_official_winners));
+ audit.appendChild(source("p","V20-system med sparad prognos före spelstopp och senare officiellt facit: "+
+ p.correctly_frozen_v20_strategy_draws+" omgångar."));
+ if(p.prospective_draws_with_preclose_streck_and_official_winners<20)
+   audit.appendChild(source("p","För få för en trovärdig kalibrering av antalet andra vinnande rader. Ingen automatisk korrigering används."));
+ else{
+  for(const k of ["13","12","11","10"]){
+   const x=p.class_error[k];audit.appendChild(source("p",k+" rätt: median faktiskt/oberoende-modell "+
+     (x.actual_to_independent_crowd_ratio_median===null?"—":x.actual_to_independent_crowd_ratio_median)+
+     " baserat på "+x.draws+" omgångar."));
+  }
+ }
+ el("recent").replaceChildren();
+ for(const x of d.recent_verified_draws||[]){
+  const row=source("tr");
+  [x.draw_number,number(x.turnover_kr)+" kr",number(x.winning_rows["13"]),
+   number(x.payouts["13"])+" kr",number(x.winning_rows["12"]),
+   number(x.winning_rows["11"]),number(x.winning_rows["10"])].forEach(t=>cell(row,t));
+  el("recent").appendChild(row);
+ }
+ }catch(e){el("summary").textContent="Verkliga efterhandsdata kunde inte visas: "+e.message}
+}
+load();
+</script></body></html>

@@ -1,0 +1,45 @@
+name: V21 – officiell pott och efterhandskontroll
+on:
+  pull_request:
+    paths:
+      - "scripts/v21_pool_history.py"
+      - "scripts/v21_calibration.py"
+      - "tests/test_v21_pool_history.py"
+      - "scripts/collect.py"
+      - "scripts/publish.py"
+      - "scripts/v20_payout_simulator.py"
+      - ".github/workflows/v21-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/v21_pool_history.py"
+      - "scripts/v21_calibration.py"
+      - "tests/test_v21_pool_history.py"
+      - "scripts/collect.py"
+      - "scripts/publish.py"
+      - "scripts/v20_payout_simulator.py"
+      - ".github/workflows/v21-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testa hela Stryktipslabbet inklusive V21
+        run: python -m unittest discover -s tests -v
+      - name: Skapa säker V21-rapport utan nätverksanrop
+        run: |
+          python -m scripts.v21_pool_history --outdir data --limit 0
+          python -m scripts.v21_calibration --outdir data
+      - name: Bygg säkert publikt underlag
+        run: |
+          python -m scripts.publish
+          test -f .site/v21-verklig-pott.html
+          test -f .site/data/v21/calibration.json
+          ! test -f .site/data/player_feed/4979.json

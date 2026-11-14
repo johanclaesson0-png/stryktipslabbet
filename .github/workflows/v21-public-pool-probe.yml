@@ -1,0 +1,53 @@
+name: V21 – undersök publika resultatsiffror
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/v21-public-pool-probe.yml"
+      - "scripts/v21_pool_history.py"
+      - "tests/test_v21_pool_history.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Läs endast offentliga numeriska fält och fältnamn
+        run: |
+          python - <<'PY'
+          from scripts.collect import fetch
+          for draw in (4978,4977):
+              try:
+                  doc,raw=fetch("/draws/"+str(draw)+"/result")
+                  result=doc.get("result") or {}
+                  print("PROBE:",draw,"result_field_names",sorted(result.keys()))
+                  print("PROBE: scalar_candidates",{k:v for k,v in result.items()
+                    if ("turnover" in k.lower() or "revenue" in k.lower() or
+                        "totalstake" in k.lower() or "sales" in k.lower())
+                    and type(v) in (float,int,str) and len(str(v))<32})
+                  val=result.get("currentNetSale")
+                  print("PROBE: result_currentNetSale",type(val).__name__,repr(val)[:160])
+                  entries=result.get("distribution") or []
+                  if entries and isinstance(entries,list):
+                      print("PROBE: distribution_field_names",sorted(entries[0].keys()))
+                      for x in entries[:4]:
+                          print("PROBE: class",x.get("name"),
+                                "metadata",{k:v for k,v in x.items()
+                                            if type(v) in (int,float,str)
+                                            and len(str(v))<32})
+                  detail,raw2=fetch("/draws/"+str(draw))
+                  d=detail.get("draw") or {}
+                  print("PROBE: historical_draw_keys",sorted(d.keys()))
+                  val=d.get("currentNetSale")
+                  print("PROBE: draw_currentNetSale",type(val).__name__,repr(val)[:160])
+                  print("PROBE: historical_draw_turnover",{k:v for k,v in d.items()
+                     if ("turnover" in k.lower() or "sales" in k.lower())
+                     and type(v) in (int,float,str) and len(str(v))<32})
+              except Exception as e:
+                  print("PROBE: ERROR",draw,type(e).__name__,str(e)[:110])
+          PY

@@ -71,6 +71,11 @@ jobs:
       - name: Verifiera några äldre utdelningar från Svenska Spel
         continue-on-error: true
         run: python -m scripts.historical_payouts --outdir data --limit 8
+      - name: V21 – verifiera verklig omsättning och antal vinnande rader från Svenska Spel
+        continue-on-error: true
+        run: python -m scripts.v21_pool_history --outdir data --limit 24
+      - name: V21 – kalibrera pottfakta och testa tidsfrysta vinnarradsprognoser
+        run: python -m scripts.v21_calibration --outdir data
       - name: Bygg fem års historik och kronologisk analys
         run: python -m scripts.history5 --outdir data
       - name: Spara endast offentliga källobservationer
