@@ -725,6 +725,36 @@ def main():
             continue
     status["match_insights_published"] = deep_count
 
+    # Independently reviewed official player news may be checked *after* the
+    # last frozen odds snapshot. Publish only as NEWS, never as model input.
+    from scripts.player_availability import verify_report
+    reviewed_reports = root / "data" / "player_reports" / "verified.json"
+    status["current_verified_player_news"] = 0
+    try:
+        source = json.loads(reviewed_reports.read_text(encoding="utf-8"))
+        candidates = source.get("reports", [])
+        applicable = source.get("applicable_draw_numbers", [])
+        if (source.get("schema") == "stryktipslabbet-reviewed-player-news-v1"
+            and isinstance(candidates, list) and isinstance(applicable, list)
+            and all(type(n) is int for n in applicable)):
+            good_news = [r for r in candidates if verify_report(r, now)]
+            active = [n for n in applicable if n in base_by_draw]
+            if good_news and active:
+                report = {
+                    "schema": "stryktipslabbet-reviewed-player-news-public-v1",
+                    "reviewed_at_utc": source["reviewed_at_utc"],
+                    "applicable_draw_numbers": active,
+                    "reports": good_news,
+                    "not_model_input": True,
+                    "note": "Efterhandskontrollerade officiella truppnyheter. Kan vara nyare än frysta oddsen och påverkar inte modellen."
+                }
+                target = dest / "data" / "player_reports" / "recent_verified.json"
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+                status["current_verified_player_news"] = len(good_news)
+    except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError):
+        pass
+
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
         "generated_at_utc": now.isoformat(),
