@@ -184,3 +184,31 @@ Alla värden och källor är märkta med observationstid och kopplade till analy
 data/player_reports/verified.json lagrar källgranskningstid, giltigt lag och produktomgång. scripts/player_availability.py fortsätter att skapa frysta spelerstatusrapporter först när kontrollen gjorts före originaloddsobservationen. Om en verifierad nyhet är nyare än observationen kan den visas **separat som källgranskad nyhet**, aldrig som del av den äldre prognosen. Det är inte en automatisk skadeleverantör och innebär inte täckning för andra lag eller matcher. Spelarstatus ska kontrolleras på nytt nära avspark.
 
 tests/test_match_insights.py kontrollerar datumfilter, resttid, inbördes möten, spårbarhet, icke-officiella tabeller och att resultat i framtiden inte kan ändra en äldre förhandsrapport.
+
+## Version 17 integrerad i version 15–16: nyckelspelare och lika dyra system
+
+Den befintliga källkontrollerade modellen i `scripts/player_impact.py` visas också på
+`spelvarde-och-spelformer.html`. Den identifierar viktiga spelare ur verklig
+säsongsstatistik (minuter, starter, mål, assist) och rapporterad frånvaro för
+engelska Premier League, Championship, League One och League Two när API-Football
+har verifierbar täckning. Avsaknad av uppgifter är **okänt**, inte skadefri trupp.
+
+När en licensgodkänd rapport med tillräcklig täckning finns skapas två
+**separata experimentella** spelarjusterade system, ett baserat på det befintliga
+100-kronorssystemet och ett på tipslagets högst 1 800 kr. Båda har **exakt samma
+faktiska radkostnad** som respektive marknadssystem. Matcher utan tillförlitlig
+spelarstatus behåller oddsprognosen. Differenser i 1/X/2 redovisas i
+procentenheter, och det går att kopiera teckenförslagen. Den ordinarie
+version 15-värdemodellen, version 16:s separata Topptips/Europa-kuponger,
+formmodellen och historiska rättningar ändras inte.
+
+Effekterna är en **okallibrerad känslighetsanalys**. Bookmakeroddsen kan redan
+ha tagit hänsyn till skador och avstängningar. Varken originaltecken eller
+insats påverkas, och inget spel lämnas in automatiskt.
+
+Käll- och rättighetskraven för API-Football fortsätter gälla oförändrade:
+`APIFOOTBALL_KEY` i GitHub Actions Secrets samt verifierade rättigheter
+(`PLAYER_DATA_PUBLICATION_APPROVED=1` i Repository Variables). Utan båda
+publiceras inga licensierade spelaruppgifter och ordinarie tipsverktyg fortsätter
+fungera. SportsDataIO är ännu inte autentiserat och ska inte utges för att vara
+en aktiv källa. Test: `python -m unittest discover -s tests -v`.
