@@ -51,6 +51,13 @@ jobs:
         run: python -m scripts.other_games --outdir data
       - name: Kontrollera spelarfrånvaro mot daterade källrapporter
         run: python -m scripts.player_availability --outdir data
+      - name: Version 17 – engelsk nyckelspelardata (endast med nyckel och rättigheter)
+        env:
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+          PLAYER_DATA_PUBLICATION_APPROVED: ${{ vars.PLAYER_DATA_PUBLICATION_APPROVED }}
+        run: python -m scripts.api_football_adapter --outdir data
+      - name: Version 17 – källfryst spelarkänslighet för 1/X/2
+        run: python -m scripts.player_impact --outdir data
       - name: Verifiera några äldre utdelningar från Svenska Spel
         continue-on-error: true
         run: python -m scripts.historical_payouts --outdir data --limit 8
@@ -82,6 +89,8 @@ jobs:
             fi
           fi
       - name: Bygg säker publiceringsmapp
+        env:
+          PLAYER_DATA_PUBLICATION_APPROVED: ${{ vars.PLAYER_DATA_PUBLICATION_APPROVED }}
         run: python -m scripts.publish
       - name: Ladda upp Pages-artefakt
         uses: actions/upload-pages-artifact@v4

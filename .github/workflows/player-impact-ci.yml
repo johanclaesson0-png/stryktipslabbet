@@ -1,0 +1,26 @@
+name: V17 – testa spelarprognoser
+
+on:
+  push:
+    branches:
+      - feature/v17-english-key-players
+  pull_request:
+    paths:
+      - "scripts/player_impact.py"
+      - "scripts/api_football_adapter.py"
+      - "tests/test_player_impact_v17.py"
+      - ".github/workflows/player-impact-ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testa v17 och regressionssviten
+        run: python -m unittest discover -s tests -v

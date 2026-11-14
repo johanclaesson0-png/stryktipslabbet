@@ -10,6 +10,7 @@ import csv
 import json
 import math
 import shutil
+import os
 
 LIVE = "stryktipslabbet-live-snapshot-v7"
 RESULT = "stryktipslabbet-result-v7"
@@ -85,6 +86,7 @@ def main():
     shutil.copy2(root / "datadjup.html", dest / "datadjup.html")
     shutil.copy2(root / "marknad-och-form.html", dest / "marknad-och-form.html")
     shutil.copy2(root / "spelvarde-och-spelformer.html", dest / "spelvarde-och-spelformer.html")
+    shutil.copy2(root / "spelarpaverkan.html", dest / "spelarpaverkan.html")
 
     now = datetime.now(timezone.utc)
     status = {
@@ -754,6 +756,46 @@ def main():
                 status["current_verified_player_news"] = len(good_news)
     except (OSError, ValueError, KeyError, TypeError, json.JSONDecodeError):
         pass
+
+    # V17: only publish a strictly checked, pre-close, licence-approved report.
+    # The public site never receives the provider key or raw JSON responses.
+    status["player_impact_published"] = False
+    if os.getenv("PLAYER_DATA_PUBLICATION_APPROVED") == "1":
+        for source in sorted((root / "data" / "player_impact").glob("*.json"), reverse=True):
+            try:
+                report = json.loads(source.read_text(encoding="utf-8"))
+                n = report["draw_number"]
+                original = base_by_draw.get(n)
+                feed_source = root / "data" / "player_feed" / (str(n) + ".json")
+                feed = json.loads(feed_source.read_text(encoding="utf-8"))
+                if (report.get("schema") != "stryktipslabbet-player-impact-v17"
+                    or not original or feed.get("publication_reviewed") is not True
+                    or report["source_snapshot_sha256"] != original.get("source_snapshot_sha256")
+                    or report["source_observed_at_utc"] != original["observed_at_utc"]
+                    or report["reg_close_time"] != original["reg_close_time"]
+                    or report["provider_collected_at_utc"] != feed["collected_at_utc"]
+                    or len(report["matches"]) != 13):
+                    continue
+                collected = instant(report["provider_collected_at_utc"])
+                made = instant(report["created_at_utc"])
+                close = instant(original["reg_close_time"])
+                observed = instant(original["observed_at_utc"])
+                if not (observed <= made < close and collected <= made < close
+                        and 0 <= (made - collected).total_seconds() <= 36*3600):
+                    continue
+                if any(
+                    a["number"] != b["number"] or a["home"] != b["home"]
+                    or a["away"] != b["away"] or a["market_p"] != b["p"]
+                    for a,b in zip(report["matches"], original["matches"])
+                ):
+                    continue
+                target = dest / "data" / "player_impact" / "latest.json"
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(source, target)
+                status["player_impact_published"] = True
+                break
+            except (OSError, ValueError, TypeError, KeyError, OverflowError, json.JSONDecodeError):
+                continue
 
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",

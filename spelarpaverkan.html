@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stryktipslabbet – Nyckelspelare (v17)</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1420;--panel:#162436;--line:#2b4258;--text:#f4f8fc;--mute:#b4c6d8;--mint:#76e5b2;--warn:#ffcf88}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,Arial,sans-serif}
+main{max-width:1050px;margin:auto;padding:22px 18px 64px}
+a{color:var(--mint)}nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:25px}
+h1{font-size:clamp(1.7rem,5vw,2.5rem);margin-bottom:6px}h2{font-size:1.1rem;margin:.1rem 0 .5rem}
+p{max-width:890px}.note{color:var(--mute);font-size:.93rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px 19px;margin:15px 0}
+.label{color:var(--mint);font-weight:700;text-transform:uppercase;font-size:.72rem;letter-spacing:.07em}
+strong{font-weight:760}.tableWrap{overflow:auto}
+table{border-collapse:collapse;width:100%;min-width:350px}
+th,td{border-bottom:1px solid var(--line);padding:9px;text-align:right}
+th:first-child,td:first-child{text-align:left}th{color:var(--mute);font-size:.85rem}
+.good{color:var(--mint)}.missing{color:var(--warn)}.player{display:inline-block;padding:5px 8px;border-radius:5px;margin:4px 4px 2px 0;background:#223c51;font-size:.9rem}
+.small{font-size:.85rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main>
+<nav><a href="./">Stryktipslabbet</a><a href="./veckans-analys.html">Kupongerna</a><a href="./marknad-och-form.html">Marknad och form</a><a href="./datadjup.html">Datadjup</a></nav>
+<div class="label">Version 17 · Engelska ligor</div>
+<h1>Nyckelspelare & matchprocent</h1>
+<p>Spelarenkollen identifierar viktiga spelare i varje match utifrån lagets säsongsstatistik och försöker kontrollera om de kan spela. Den fungerar för Premier League, Championship, League One och League Two när källan verkligen täcker matchen.</p>
+<p class="note">Oddsen är den befintliga baslinjen. ”Om frånvaron inte redan är inprisad” är en <strong>experimentell känslighetsanalys</strong>, inte en bevisat bättre prognos. Okänd status betyder inte att spelaren är tillgänglig. Varken spelinsats eller ordinarie tecken ändras.</p>
+<div class="card" id="status" role="status">Läser källfryst spelarrapport …</div>
+<section id="list"></section>
+</main>
+<script>
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct=v=>(v*100).toLocaleString("sv-SE",{minimumFractionDigits:1,maximumFractionDigits:1})+" %";
+const diff=v=>!Number.isFinite(v)?"–":(v>0?"+":"")+v.toLocaleString("sv-SE",{minimumFractionDigits:1,maximumFractionDigits:2})+" p.e.";
+const title=p=>esc(p.name)+" · "+(Math.round(p.importance*100))+"/100";
+const roster=(arr,missing)=>{
+  if(!Array.isArray(arr)||!arr.length)return '<p class="note small">Ingen tillförlitlig truppstatistik.</p>';
+  return '<div>'+arr.map(p=>'<span class="player">'+title(p)+'</span>').join('')+'</div>'+
+    (missing.length?'<p class="missing small">Rapporterad frånvaro: '+missing.map(p=>esc(p.name)+' ('+esc(p.status)+')').join(', ')+'</p>':
+    '<p class="note small">Ingen bekräftad frånvaro i aktuell API-rapport – inte samma sak som skadefri trupp.</p>');
+};
+function render(d){
+  const status=document.querySelector('#status');
+  status.textContent='Kupong '+d.draw_number+' · Marknad observerad '+new Date(d.source_observed_at_utc).toLocaleString('sv-SE')+
+    ' · Spelarkälla kontrollerad '+new Date(d.provider_collected_at_utc).toLocaleString('sv-SE')+
+    ' · '+d.coverage.scenario_matches+' av 13 matcher med spelarscenario.';
+  document.querySelector('#list').innerHTML=d.matches.map(m=>{
+    let available=m.scenario_p!==null;
+    return '<article class="card"><div class="label">Match '+esc(m.number)+(m.league?' · '+esc(m.league):'')+'</div>'+
+      '<h2>'+esc(m.home)+' – '+esc(m.away)+'</h2>'+
+      '<div class="tableWrap"><table><thead><tr><th>Prognos</th><th>1</th><th>X</th><th>2</th></tr></thead><tbody>'+
+      '<tr><td>Oddsbaslinje</td>'+m.market_p.map(p=>'<td>'+pct(p)+'</td>').join('')+'</tr>'+
+      (available?'<tr><td>Spelarscenario</td>'+m.scenario_p.map(p=>'<td class="good">'+pct(p)+'</td>').join('')+'</tr>'+
+      '<tr><td>Skillnad</td>'+m.delta_pp.map(p=>'<td>'+diff(p)+'</td>').join('')+'</tr>':
+      '<tr><td colspan="4" class="missing">Spelarscenario saknas – ingen procent gissas.</td></tr>')+
+      '</tbody></table></div><p class="note small">'+esc(m.reason)+'</p>'+
+      (available?'<div class="grid"><div><strong>'+esc(m.home)+' – viktiga spelare</strong>'+
+      roster(m.top_players_home,m.absences_home)+'</div><div><strong>'+esc(m.away)+' – viktiga spelare</strong>'+
+      roster(m.top_players_away,m.absences_away)+'</div></div>':'')+
+      '</article>';
+  }).join('');
+}
+fetch('./data/player_impact/latest.json',{cache:'no-store'})
+ .then(r=>{if(!r.ok)throw Error("Ingen licensgodkänd förhandsrapport publicerad");return r.json()})
+ .then(d=>{if(d.schema!=='stryktipslabbet-player-impact-v17'||!Array.isArray(d.matches)||d.matches.length!==13)throw Error("Felaktig rapport");render(d)})
+ .catch(e=>{document.querySelector('#status').innerHTML='<strong>Ingen publicerad spelardata ännu.</strong><p class="note">'+esc(e.message)+
+ '. Den ordinarie oddsbaserade analysen fungerar fortsatt. API-nyckel och publiceringsrättigheter måste bekräftas innan automatisk data visas.</p>'});
+</script></body></html>
