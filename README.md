@@ -212,3 +212,36 @@ Käll- och rättighetskraven för API-Football fortsätter gälla oförändrade:
 publiceras inga licensierade spelaruppgifter och ordinarie tipsverktyg fortsätter
 fungera. SportsDataIO är ännu inte autentiserat och ska inte utges för att vara
 en aktiv källa. Test: `python -m unittest discover -s tests -v`.
+
+
+## API-alternativ och manuell spelargranskning (november 2026)
+
+**Automatisk källa:** API-Footballs gratisplan ger 100 anrop/dag och
+endpoints för spelare, skador och startelvor, men täckningen varierar.
+Registrera ett konto via https://dashboard.api-football.com/register och
+hämta nyckeln under Account → My Access. Lägg **endast** nyckeln i
+GitHub Actions Secrets som \`APIFOOTBALL_KEY\`. Skicka aldrig nyckeln via
+chatten eller lägg den i JavaScript. Kontrollera leverantörens villkor för
+bettingrelaterad/publicerad data och lägg inte
+\`PLAYER_DATA_PUBLICATION_APPROVED=1\` innan nödvändiga rättigheter klarlagts.
+SportsDataIO:s gratis test täcker främst Champions League och är därför inte
+primär leverantör för engelska ligorna.
+
+**Utan nyckel:** \`manuell-spelarkoll.html\` är en interaktiv
+human-in-the-loop-simulator, baserad på de verkliga, tidsfrysta Svenska
+Spel-prognoser som redan publiceras i Stryktipslabbet. Användaren:
+
+1. Väljer kupong och match.
+2. Kontrollerar spelarnyheter och anger en faktisk HTTPS-källa.
+3. Markerar frånvaro, avstängning, osäkerhet eller tillgänglighet.
+4. Väljer en *subjektiv* betydelse för ett uttryckligt scenario, eller
+   väljer ”okänd” så att ingen kvantifiering görs.
+5. Jämför oddssannolikheter med hypotetiska manuella 1/X/2-ändringar
+   och lika dyra system för 100 respektive max 1 800 kr.
+6. Kan kopiera granskningsanteckningar till ChatGPT för granskning.
+
+Anteckningarna stannar i webbläsarens \`localStorage\`. Inga externa
+API-anrop för spelaruppgifter, ingen GitHub-synkning och ingen uppdatering
+av ursprungsmodellen sker. Beräkningsvikterna är ett illustrativt
+känslighetstest, inte en skattad effekt. Källgranskning som sker efter
+oddsobservationen är *inte* en giltig historisk förhandsprognos.
