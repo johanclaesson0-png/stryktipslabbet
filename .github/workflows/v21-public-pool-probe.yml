@@ -30,6 +30,8 @@ jobs:
                     if ("turnover" in k.lower() or "revenue" in k.lower() or
                         "totalstake" in k.lower() or "sales" in k.lower())
                     and type(v) in (float,int,str) and len(str(v))<32})
+                  val=result.get("currentNetSale")
+                  print("PROBE: result_currentNetSale",type(val).__name__,repr(val)[:160])
                   entries=result.get("distribution") or []
                   if entries and isinstance(entries,list):
                       print("PROBE: distribution_field_names",sorted(entries[0].keys()))
@@ -41,6 +43,8 @@ jobs:
                   detail,raw2=fetch("/draws/"+str(draw))
                   d=detail.get("draw") or {}
                   print("PROBE: historical_draw_keys",sorted(d.keys()))
+                  val=d.get("currentNetSale")
+                  print("PROBE: draw_currentNetSale",type(val).__name__,repr(val)[:160])
                   print("PROBE: historical_draw_turnover",{k:v for k,v in d.items()
                      if ("turnover" in k.lower() or "sales" in k.lower())
                      and type(v) in (int,float,str) and len(str(v))<32})
