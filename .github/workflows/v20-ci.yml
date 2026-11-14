@@ -1,0 +1,39 @@
+name: V20 – pottkalkyl och scenariokontroll
+on:
+  pull_request:
+    paths:
+      - "scripts/v20_payout_simulator.py"
+      - "tests/test_v20_payout_simulator.py"
+      - "v20-pottanalys.html"
+      - "scripts/publish.py"
+      - ".github/workflows/v20-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/v20_payout_simulator.py"
+      - "tests/test_v20_payout_simulator.py"
+      - "v20-pottanalys.html"
+      - "scripts/publish.py"
+      - ".github/workflows/v20-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testa hela Stryktipslabbet och V20-utdelningsmodellen
+        run: python -m unittest discover -s tests -v
+      - name: Kör V20 med begränsad simuleringsmängd
+        run: python -m scripts.v20_payout_simulator --outdir data --simulations 350
+      - name: Verifiera rättighetskontrollerad publicering
+        run: |
+          python -m scripts.publish
+          test -f .site/v20-pottanalys.html
+          ! test -f .site/data/player_feed/4979.json
+          ! test -f .site/data/raw/4979.json
