@@ -1,4 +1,4 @@
-# Stryktipslabbet 16.0
+# Stryktipslabbet 16.1
 
 **Stryktipslabbet** är en svensk mobilanpassad analysapp för Stryktipset, anpassad till ett tipslag med 10 deltagare och ett budgettak på **1 800 kr per omgång**. Den lämnar aldrig in spel.
 
@@ -163,3 +163,24 @@ För att ansluta automatiska skador, avstängningar och laguppställningar behö
 ODDS 1/X/2: marginalnormaliserad marknadssannolikhet för hemma/kryss/borta. FORM 1/X/2: formmodellens experimentella sannolikheter. MARKNADSSYSTEM: grundmodellens valda tecken, till exempel 1X. FORMSYSTEM: formmodellens tecken med samma radkostnad. DATATÄCKNING: om båda lagens tidigare resultat finns i tillräcklig omfattning.
 
 Version 15 och 16 använder inga riktiga spelkonton, lämnar aldrig in pengar och ändrar inte originalsystemets insatsgränser. 18+ – spela ansvarsfullt.
+
+## Version 16.1 – djupare matchdata och verifierad frånvaro
+
+scripts/match_insights.py skapar kompletterande, tidsfrysta matchfakta för kommande Stryktipsomgångar. Endast matcher med matchdatum strikt före originalobservationens datum får användas. Matchkorten under spelvarde-och-spelformer.html visar:
+
+- Tio senaste faktiskt spelade matcherna, datum, resultat, motståndare, hemma/borta/neutral plan.
+- Antal dagar sedan sista verifierade matchen vid oddsobservationen (INTE exakta dagar fram till kickoff), antal spelade matcher senaste 7/14 dagarna.
+- Obesegrad/utan-seger-sviter, hållna nollor och matcher där båda lagen gjorde mål.
+- Motståndarnas genomsnittliga poäng per match i deras fem senaste matcher **före** respektive historiska möte. Måttet är inte ligajusterat.
+- Femtal senaste inbördes möten när källan har dem.
+- För klubblag: härledd tabellplacering från de tillgängliga ligamatcherna, utan poängavdrag eller officiell tabellgaranti.
+
+Alla värden och källor är märkta med observationstid och kopplade till analysens originalhash. Inga av dessa nya beskrivande signaler påverkar ännu modellens sannolikheter, tecken eller insatser; utvärdering på framtida omgångar måste göras först.
+
+**Spelarstatus:** två officiella nyheter från Svenska Fotbollförbundet har granskats för Stryktipsomgång 4979: Besfort Zeneli (9 november 2026) och Patrik Wålemark (12 november 2026) missar landslagssamlingen på grund av skada. Källor:
+- https://www.svenskfotboll.se/nyheter/landslag/2026/11/herrlandslaget-aterbud
+- https://www.svenskfotboll.se/nyheter/landslag/2026/11/herrlandslaget-walemark/
+
+data/player_reports/verified.json lagrar källgranskningstid, giltigt lag och produktomgång. scripts/player_availability.py fortsätter att skapa frysta spelerstatusrapporter först när kontrollen gjorts före originaloddsobservationen. Om en verifierad nyhet är nyare än observationen kan den visas **separat som källgranskad nyhet**, aldrig som del av den äldre prognosen. Det är inte en automatisk skadeleverantör och innebär inte täckning för andra lag eller matcher. Spelarstatus ska kontrolleras på nytt nära avspark.
+
+tests/test_match_insights.py kontrollerar datumfilter, resttid, inbördes möten, spårbarhet, icke-officiella tabeller och att resultat i framtiden inte kan ändra en äldre förhandsrapport.
