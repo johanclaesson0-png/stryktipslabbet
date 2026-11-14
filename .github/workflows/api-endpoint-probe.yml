@@ -1,0 +1,51 @@
+name: API-Football – kontroll av historiska endpoint-behörigheter
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/api-endpoint-probe.yml"]
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+    steps:
+      - name: Kontrollera API-responser utan att skriva ut rådata
+        shell: python
+        run: |
+          import json
+          import os
+          import time
+          from urllib.request import Request,urlopen
+          from urllib.parse import urlencode
+          key=os.getenv("APIFOOTBALL_KEY","")
+          if not key: raise SystemExit("Nyckel saknas")
+          def get(route,params):
+              url="https://v3.football.api-sports.io/"+route+"?"+urlencode(params)
+              req=Request(url,headers={"x-apisports-key":key,"Accept":"application/json"})
+              time.sleep(7)
+              try:
+                  with urlopen(req,timeout=20) as r:
+                      raw=r.read(3000001)
+                  if len(raw)>3000000: return [],"too_large"
+                  d=json.loads(raw)
+                  errors=d.get("errors")
+                  if errors:
+                      types=','.join(str(k) for k in errors) if isinstance(errors,dict) else "other"
+                      return [],"error:"+types[:60]
+                  return d.get("response",[]),"success"
+              except Exception as exc:
+                  return [],"exception:"+type(exc).__name__
+          fixtures,status=get("fixtures",{"league":39,"season":2024,"date":"2024-11-23"})
+          print("PROBE: fixtures:",status,"count",len(fixtures))
+          if not fixtures: raise SystemExit("No historic fixture for probe")
+          f=fixtures[0]["fixture"]["id"]
+          for route,params in [
+              ("injuries",{"fixture":f}),
+              ("injuries",{"ids":str(f)}),
+              ("fixtures/lineups",{"fixture":f}),
+          ]:
+              resp,status=get(route,params)
+              print("PROBE:",route,"params",','.join(params.keys()),"status",status,"records",len(resp))
