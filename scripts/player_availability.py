@@ -117,7 +117,6 @@ def main():
             target=root/"player_reports"/"analysis"/f.name
             scoped=records if not restricted or base["draw_number"] in restricted else []
             extra=(api.get("reports",[]) if api.get("draw_number")==base["draw_number"]
-                    and api.get("source_snapshot_sha256")==base.get("source_snapshot_sha256")
                     and instant(api["checked_at_utc"])<=instant(base["observed_at_utc"]) else [])
             report=build(base,scoped+extra,now)
             # Historical snapshots are never silently overwritten after close.
