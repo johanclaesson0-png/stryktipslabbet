@@ -107,7 +107,17 @@ def parse_draw(doc, expected, fetched):
             "match_start": kickoff,
             "streck_source_updated_at": (e.get("svenskaFolket") or {}).get("date")
         })
+    # This is an observed IN-PROGRESS net sale, not the final turnover.
+    # Preserve its observation timestamp; never retroactively insert into
+    # old preclose snapshots or present it as settled turnover.
+    current_sale=None
+    if draw.get("currentNetSale") is not None:
+        x=number(draw["currentNetSale"])
+        if 0<=x<=500_000_000 and x.is_integer():
+            current_sale=int(x)
     return {
+        "observed_turnover_so_far_kr":current_sale,
+        "sales_observed_at_utc":fetched.isoformat() if current_sale is not None else None,
         "schema": LIVE_SCHEMA, "source": "Svenska Spel publikt API",
         "source_url": BASE + "/draws/" + str(expected),
         "draw_number": expected, "observed_at_utc": fetched.isoformat(),
