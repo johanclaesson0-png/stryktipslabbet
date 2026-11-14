@@ -134,7 +134,6 @@ def audit(root=ROOT):
             feed_p=data/"player_feed"/f"{draw}.json"
             player_p=data/"player_impact"/f"{draw}.json"
             if not feed_p.exists() or not player_p.exists():continue
-            report["with_verifiable_preclose_player_feed"]+=1
             source=None
             for snap_path in (data/"snapshots"/str(draw)).glob("*.json"):
                 candidate=json.loads(snap_path.read_text(encoding="utf-8"))
@@ -144,7 +143,9 @@ def audit(root=ROOT):
             feed=json.loads(feed_p.read_text(encoding="utf-8"))
             player=json.loads(player_p.read_text(encoding="utf-8"))
             performance,why=evaluate_verified_pair(a,source,feed,player,res)
-            if performance:completed.append(performance)
+            if performance:
+                report["with_verifiable_preclose_player_feed"]+=1
+                completed.append(performance)
         except (OSError,ValueError,KeyError,TypeError,json.JSONDecodeError):
             continue
     if completed:
