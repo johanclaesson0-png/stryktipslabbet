@@ -66,6 +66,8 @@ jobs:
         run: python -m scripts.v19_evaluation --outdir data
       - name: V19 – bygg förklarande beslutsstudio (experiment, ingen autoändring)
         run: python -m scripts.v19_decision --outdir data
+      - name: V20 – simulera illustrativ pott och jämför skrällsystem till lika kostnad
+        run: python -m scripts.v20_payout_simulator --outdir data
       - name: Verifiera några äldre utdelningar från Svenska Spel
         continue-on-error: true
         run: python -m scripts.historical_payouts --outdir data --limit 8
