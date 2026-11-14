@@ -1,0 +1,24 @@
+name: Manuell spelarkoll – tester
+on:
+  pull_request:
+    paths:
+      - "manuell-spelarkoll.html"
+      - "spelvarde-och-spelformer.html"
+      - "spelarpaverkan.html"
+      - "tests/test_manual_review_page.py"
+      - ".github/workflows/manual-player-review-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Python, Javascript och regressionsprov
+        run: python -m unittest discover -s tests -v
