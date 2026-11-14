@@ -112,7 +112,7 @@ def candidate_fixtures(client, leagues, close):
                     kickoff = instant(start)
                 except (ValueError, TypeError, OverflowError):
                     continue
-                if not (type(fid) is int and fid > 0 and kickoff > close
+                if not (type(fid) is int and fid > 0 and kickoff >= close
                         and type(home.get("id")) is int and type(away.get("id")) is int):
                     continue
                 if not isinstance(home.get("name"), str) or not isinstance(away.get("name"), str):
