@@ -38,7 +38,7 @@ jobs:
                   return d.get("response",[]),"success"
               except Exception as exc:
                   return [],"exception:"+type(exc).__name__
-          fixtures,status=get("fixtures",{"league":39,"season":2024,"date":"2024-11-23"})
+          fixtures,status=get("fixtures",{"league":39,"season":2024})
           print("PROBE: fixtures:",status,"count",len(fixtures))
           if not fixtures: raise SystemExit("No historic fixture for probe")
           f=fixtures[0]["fixture"]["id"]
