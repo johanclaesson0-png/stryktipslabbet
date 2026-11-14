@@ -116,14 +116,17 @@ function renderRecent(){
     const form=m[side+'_form'];
     const info=mk(card,'details','');mk(info,'summary',m[side]+' · '+(form.last5?.n||0)+' tidigare matcher i urvalet');
     const matches=form.last5_matches||[];
-    if(!matches.length){mk(info,'p','Inga tidigare matcher i ansluten källa.','small');continue}
-    const ul=mk(info,'ul','');
-    matches.forEach(x=>mk(ul,'li',x.date+' · '+(x.venue==='home'?'Hemma':x.venue==='away'?'Borta':'Neutral plan')+
-      ' mot '+x.opponent+' · '+x.goals_for+'–'+x.goals_against+' ('+x.outcome+')'));
+    if(!matches.length)mk(info,'p','Inga tidigare matcher i ansluten källa.','small');
+    else {
+      const ul=mk(info,'ul','');
+      matches.forEach(x=>mk(ul,'li',x.date+' · '+(x.venue==='home'?'Hemma':x.venue==='away'?'Borta':'Neutral plan')+
+        ' mot '+x.opponent+' · '+x.goals_for+'–'+x.goals_against+' ('+x.outcome+')'));
+    }
     let report=absences?.matches?.find(x=>x.number===m.number)?.[side];
     const entries=report?.reported_absences||[];
     if(entries.length)entries.forEach(x=>{
       const p=mk(info,'p',x.player+' · '+x.status_label+' · källa: '+x.publisher+' ('+x.checked_at_utc.slice(0,10)+')','small');
+      if(x.notes)mk(info,'p',x.notes,'small');
       const a=mk(info,'a','Öppna verifierad källa');a.href=x.source_url;a.target='_blank';a.rel='noopener noreferrer';
     });else mk(info,'p','Spelarfrånvaro: ej verifierat – okänt.','small');
   }
