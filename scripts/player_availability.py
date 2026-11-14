@@ -3,7 +3,7 @@
 
 Optional input data/player_reports/verified.json must contain human-reviewed
 source URLs and observation timestamps. No source => UNKNOWN, never available.
-The current model deliberately never changes match probabilities from reports.
+The main market model deliberately never changes; a separate test scenario can be generated.
 """
 import argparse
 from datetime import datetime, timezone
@@ -38,8 +38,16 @@ def verify_report(r, observed):
             return False
         # No real-world proof can be inferred from metadata alone:
         # only externally checked & timestamped reports are admitted.
-        if r.get("verified_by")!="manual_source_review":
-            return False
+        if r.get("verified_by")=="manual_source_review":
+            return True
+        if r.get("verified_by")=="api_football":
+            return (r.get("publisher")=="API-Football" and
+                    r.get("source_url","").startswith("https://v3.football.api-sports.io/injuries?fixture=") and
+                    type(r.get("provider_fixture_id")) is int and r["provider_fixture_id"]>0 and
+                    type(r.get("provider_team_id")) is int and r["provider_team_id"]>0 and
+                    type(r.get("match_number")) is int and 1<=r["match_number"]<=13 and
+                    type(r.get("draw_number")) is int and r["draw_number"]>0)
+        return False
         return True
     except (ValueError,KeyError,TypeError,OverflowError):
         return False
@@ -58,7 +66,9 @@ def build(analysis, records, created=None):
         teams=[]
         for side in ("home","away"):
             chosen=[{**r,"status_label":LABELS[r["status"]]}
-                    for r in accepted if key_team(r["team"])==key_team(m[side])]
+                    for r in accepted if key_team(r["team"])==key_team(m[side]) and
+                    (r.get("draw_number") is None or r["draw_number"]==analysis["draw_number"]) and
+                    (r.get("match_number") is None or r["match_number"]==m["number"])]
             chosen.sort(key=lambda x:(x["status"],x["player"]))
             teams.append({"side":side,"team":m[side],
                           "reported_absences":chosen,
@@ -84,10 +94,20 @@ def main():
     try:
         doc=json.loads(source.read_text(encoding="utf-8"))
         records=doc.get("reports",[])
-        if not isinstance(records,list):
+        restricted=doc.get("applicable_draw_numbers",[])
+        if not isinstance(records,list) or not isinstance(restricted,list):
             raise ValueError("Fel källformat")
     except (OSError,ValueError,TypeError,json.JSONDecodeError):
         records=[]
+    # Do not interpret an API fetch after the market observation as
+    # information that was known when earlier odds were recorded.
+    provider=root/"player_reports"/"provider_latest.json"
+    try:
+        api=json.loads(provider.read_text(encoding="utf-8"))
+        if api.get("schema")!="stryktipslabbet-player-provider-v1":
+            api={}
+    except (OSError,ValueError,TypeError,json.JSONDecodeError):
+        api={}
     n=0
     for f in sorted((root/"analysis").glob("*.json")):
         try:
@@ -95,7 +115,11 @@ def main():
             if now>=instant(base["reg_close_time"]):
                 continue
             target=root/"player_reports"/"analysis"/f.name
-            report=build(base,records,now)
+            scoped=records if not restricted or base["draw_number"] in restricted else []
+            extra=(api.get("reports",[]) if api.get("draw_number")==base["draw_number"]
+                    and api.get("source_snapshot_sha256")==base.get("source_snapshot_sha256")
+                    and instant(api["checked_at_utc"])<=instant(base["observed_at_utc"]) else [])
+            report=build(base,scoped+extra,now)
             # Historical snapshots are never silently overwritten after close.
             if target.exists():
                 old=json.loads(target.read_text(encoding="utf-8"))
