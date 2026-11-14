@@ -49,6 +49,11 @@ jobs:
       - name: Version 16 – hämta och kontrollera Topptipset och Europatipset
         continue-on-error: true
         run: python -m scripts.other_games --outdir data
+      - name: Version 17 – hämta spelarstatus från API-Football om anslutet
+        continue-on-error: true
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: python -m scripts.player_provider --outdir data
       - name: Kontrollera spelarfrånvaro mot daterade källrapporter
         run: python -m scripts.player_availability --outdir data
       - name: Version 17 – engelsk nyckelspelardata (endast med nyckel och rättigheter)
@@ -58,6 +63,8 @@ jobs:
         run: python -m scripts.api_football_adapter --outdir data
       - name: Version 17 – källfryst spelarkänslighet för 1/X/2
         run: python -m scripts.player_impact --outdir data
+      - name: Version 17 – skapa separata spelarjusterade testprognoser
+        run: python -m scripts.player_factor --outdir data
       - name: Verifiera några äldre utdelningar från Svenska Spel
         continue-on-error: true
         run: python -m scripts.historical_payouts --outdir data --limit 8
