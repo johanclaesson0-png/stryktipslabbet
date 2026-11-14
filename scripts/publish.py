@@ -88,6 +88,28 @@ def main():
     shutil.copy2(root / "spelvarde-och-spelformer.html", dest / "spelvarde-och-spelformer.html")
     shutil.copy2(root / "spelarpaverkan.html", dest / "spelarpaverkan.html")
     shutil.copy2(root / "manuell-spelarkoll.html", dest / "manuell-spelarkoll.html")
+    shutil.copy2(root / "historiskt-api.html", dest / "historiskt-api.html")
+
+    # Only validated aggregate market-audit counters go into public Pages.
+    # Never copy feed records, raw player responses, or unreviewed credentials.
+    audited = root / "data" / "market_audit" / "latest.json"
+    if audited.exists():
+        try:
+            src = json.loads(audited.read_text(encoding="utf-8"))
+            counters = ("frozen_market_draws", "with_official_settlement",
+                        "with_verifiable_preclose_player_feed",
+                        "evaluated_draws", "evaluated_matches")
+            if (src.get("schema") == "stryktipslabbet-verified-market-player-audit-v18"
+                and all(type(src.get(key)) is int and src[key]>=0 for key in counters)):
+                allowed = ("schema", "generated_at_utc", "status") + counters + (
+                    "brier_market", "brier_player", "logloss_market", "logloss_player")
+                public = {key:src.get(key) for key in allowed}
+                destination = dest / "data" / "market_audit"
+                destination.mkdir(parents=True, exist_ok=True)
+                (destination / "latest.json").write_text(
+                    json.dumps(public, ensure_ascii=False, indent=2), encoding="utf-8")
+        except (OSError, ValueError, TypeError, json.JSONDecodeError):
+            pass
 
     now = datetime.now(timezone.utc)
     status = {

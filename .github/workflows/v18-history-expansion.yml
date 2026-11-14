@@ -1,0 +1,40 @@
+name: V18 – utöka historisk spelarfrånvaro
+on:
+  schedule:
+    - cron: "21 5 * * 0"
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: "Historisk batch 1–40 (tomt = veckans batch)"
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  historical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+      REQUESTED_BATCH: ${{ inputs.batch }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Kontrollera modell och historisk uppdelning
+        run: python -m unittest tests.test_api_football_historical_backtest tests.test_v18_player_backtests -v
+      - name: Välj nästa icke överlappande historiska urval
+        shell: python
+        run: |
+          import os
+          from datetime import datetime,date,timezone
+          asked=os.environ.get("REQUESTED_BATCH","").strip()
+          week=max(1,(datetime.now(timezone.utc).date()-date(2026,11,15)).days//7+1)
+          index=int(asked) if asked else week
+          if not 1<=index<=40: raise SystemExit("Batch utanför 1–40")
+          with open(os.environ["GITHUB_ENV"],"a") as fp:
+              fp.write("HISTORICAL_BATCH_INDEX="+str(index)+"\n")
+          print("HISTORIK: Batch",index,"(samma vikter som initiala 48 matcher)")
+      - name: Jämför ny historisk grupp utan att publicera API-data
+        run: python -m scripts.api_football_historical_backtest

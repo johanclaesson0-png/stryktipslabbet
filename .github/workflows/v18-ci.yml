@@ -1,0 +1,33 @@
+name: V18 – förhandskontroll av modell och datakvalitet
+on:
+  pull_request:
+    paths:
+      - "scripts/api_football_historical_backtest.py"
+      - "scripts/weighted_player_backtest.py"
+      - "scripts/market_player_audit.py"
+      - "tests/test_v18_player_backtests.py"
+      - ".github/workflows/v18-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/api_football_historical_backtest.py"
+      - "scripts/weighted_player_backtest.py"
+      - "scripts/market_player_audit.py"
+      - "tests/test_v18_player_backtests.py"
+      - ".github/workflows/v18-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testa hela Stryktipslabbet
+        run: python -m unittest discover -s tests -v
+      - name: Kör marknadsrevision utan efterhandsodds
+        run: python -m scripts.market_player_audit

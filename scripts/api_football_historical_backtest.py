@@ -181,7 +181,23 @@ def matched_fixture(draw_date, match, indexes):
     return good[0] if len(good)==1 else None
 
 
-def dataset_from_api(client, rounds):
+def choose_history_batch(matched, index, per_group=8):
+    """Chronological nonoverlapping batches, stratified by league and season."""
+    if type(index) is not int or not 0 <= index <= 40:
+        raise ValueError("Batch-index utanför tillåtet intervall")
+    if type(per_group) is not int or not 1 <= per_group <= 8:
+        raise ValueError("Otillåten batchstorlek")
+    selected=set()
+    for season in SEASONS:
+        for league in LEAGUES:
+            candidates={(f["date"],f["id"]) for f in matched.values()
+                        if f["season"]==season and f["league"]==league}
+            selected.update(fid for _,fid in
+                            sorted(candidates)[index*per_group:(index+1)*per_group])
+    return selected
+
+
+def dataset_from_api(client, rounds, batch_index=0, per_group=None, return_catalog=False):
     """Build only joined fixture metadata; never store/transmit provider responses."""
     indexes=defaultdict(list)
     coverage=[]
@@ -236,17 +252,18 @@ def dataset_from_api(client, rounds):
     # Free, but the otherwise documented ids batch filter returns errors.plan.
     # Predefine the sample without inspecting absence or outcome patterns:
     # earliest up to eight score-verified matches from each league and season.
-    per_group = MAX_INJURY_FIXTURES // (len(SEASONS)*len(LEAGUES))
-    selected=set()
-    for season in SEASONS:
-        for league in LEAGUES:
-            eligible={(f["date"],f["id"]) for f in matched.values()
-                      if f["season"]==season and f["league"]==league}
-            selected.update(fid for _,fid in sorted(eligible)[:per_group])
+    if not isinstance(batch_index, int) or batch_index < 0 or batch_index > 40:
+        raise ValueError("Historiskt batch-index måste vara 0–40")
+    if per_group is None:
+        per_group = MAX_INJURY_FIXTURES // (len(SEASONS)*len(LEAGUES))
+    if not 1 <= per_group <= 8:
+        raise ValueError("Högst åtta matcher per liga och säsong/körning")
+    selected=choose_history_batch(matched,batch_index,per_group)
     matched={k:v for k,v in matched.items() if v["id"] in selected}
     ids_by_date={f["id"]:f["date"] for f in matched.values()}
     fixture_ids=sorted(selected, key=lambda fid:(ids_by_date[fid],fid))
     absence={}
+    injury_players={}
     complete=set()
     for fid in fixture_ids:
         try:
@@ -257,9 +274,13 @@ def dataset_from_api(client, rounds):
                   str(exc).split(":")[0],file=sys.stderr)
             break
         absence.update(injury_counts(rows,[fid]))
+        if return_catalog:
+            injury_players[fid] = rows  # ephemeral; never save or print player identities
         complete.add(fid)
     # A failed fetch is MISSING coverage, never interpreted as zero absences.
     matched={k:v for k,v in matched.items() if v["id"] in complete}
+    if return_catalog:
+        return matched,absence,coverage,indexes,injury_players
     return matched,absence,coverage
 
 
@@ -365,7 +386,9 @@ def main():
     rounds=read_rounds(ROOT/"data/history/stryktipset-five-years.csv")
     snapshots=elbow_snapshots(rounds)
     client=APIClient(key)
-    matched,absences,coverage=dataset_from_api(client,rounds)
+    batch=int(os.getenv("HISTORICAL_BATCH_INDEX", "0"))
+    matched,absences,coverage=dataset_from_api(client,rounds,batch_index=batch)
+    print("BACKTEST: Historisk batch:", batch, "(urvalet förblir kronologiskt, vikter oförändrade)")
     metrics,draws=results_for(rounds,snapshots,matched,absences)
     summarize(metrics,draws,coverage,client.calls)
     if not metrics:

@@ -1,11 +1,5 @@
 name: API-Football – historiskt utfallstest
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/api-football-backtest.yml"
-      - "scripts/api_football_historical_backtest.py"
-      - "tests/test_api_football_historical_backtest.py"
   workflow_dispatch:
 
 permissions:
