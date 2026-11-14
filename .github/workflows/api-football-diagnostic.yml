@@ -78,25 +78,25 @@ jobs:
                   sys.exit(4)
               return data["response"]
 
-          leagues = get("leagues", {"country": "England", "season": "2026"})
+          leagues = get("leagues", {"country": "England", "season": "2024"})
           wanted = {"Premier League", "Championship", "League One", "League Two"}
           found = {}
           for row in leagues:
               league = row.get("league") or {}
               name = league.get("name")
               if name not in wanted: continue
-              season = next((s for s in row.get("seasons", []) if s.get("year") == 2026), None)
+              season = next((s for s in row.get("seasons", []) if s.get("year") == 2024), None)
               if not season: continue
               coverage = season.get("coverage") or {}
               found[name] = {
                   "players": coverage.get("players") is True,
                   "injuries": coverage.get("injuries") is True,
               }
-          print("RESULTAT: API-anslutning lyckades; ligor med 2026-data:", len(found), "/ 4")
+          print("RESULTAT: API-anslutning lyckades; ligor med historiska 2024-data:", len(found), "/ 4")
           for name in sorted(wanted):
               info = found.get(name)
               if info:
                   print("LIGA:", name, "| spelardata:", info["players"], "| skadeuppgifter:", info["injuries"])
               else:
                   print("LIGA:", name, "| ej tillgänglig på detta konto/säsong")
-          print("RESULTAT: Inga spelar-, skade- eller kontouppgifter har publicerats eller sparats.")
+          print("RESULTAT: Historisk API-täckning testad, inte aktuell 2026/27-åtkomst. Inga spelar-, skade- eller kontouppgifter har publicerats eller sparats.")
