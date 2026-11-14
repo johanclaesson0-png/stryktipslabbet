@@ -1,0 +1,40 @@
+name: V18 – nyckelspelare med tidigare speltid
+on:
+  schedule:
+    - cron: "29 5 * * 4"
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: "Historisk viktning, batch 1–40 (tomt = veckans batch)"
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  historical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+      REQUESTED_BATCH: ${{ inputs.batch }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testa strikt tidigare matchstatistik
+        run: python -m unittest tests.test_v18_player_backtests -v
+      - name: Välj ny period
+        shell: python
+        run: |
+          import os
+          from datetime import datetime,date,timezone
+          asked=os.environ.get("REQUESTED_BATCH","").strip()
+          week=max(1,(datetime.now(timezone.utc).date()-date(2026,11,15)).days//7+1)
+          index=int(asked) if asked else week
+          if not 1<=index<=40: raise SystemExit("Batch utanför 1–40")
+          with open(os.environ["GITHUB_ENV"],"a") as fp:
+              fp.write("WEIGHTED_BATCH_INDEX="+str(index)+"\n")
+          print("NYCKELSPELARE: Batch",index,"(en match per liga och säsong)")
+      - name: Jämför historiska startelvor/minuter UTAN framtidsdata
+        run: python -m scripts.weighted_player_backtest
