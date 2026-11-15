@@ -2,285 +2,261 @@
   "schema": "stryktipslabbet-other-game-v16",
   "game": "europatipset",
   "name": "Europatipset",
-  "draw_number": 2625,
-  "reg_close_time": "2026-11-15T13:59:00+00:00",
-  "observed_at_utc": "2026-11-15T07:13:39.249253+00:00",
-  "source_url": "https://api.spela.svenskaspel.se/draw/1/europatipset/draws/2625",
-  "source_snapshot_sha256": "36748a9b224915f38140591eab68c41247f1cfb4e72ac21d3df2cda00fc265f1",
-  "with_valid_odds": 13,
+  "draw_number": 2626,
+  "reg_close_time": "2026-11-17T19:44:00+00:00",
+  "observed_at_utc": "2026-11-15T23:58:10.127015+00:00",
+  "source_url": "https://api.spela.svenskaspel.se/draw/1/europatipset/draws/2626",
+  "source_snapshot_sha256": "9e2ff3ab9a283c81d04191678ef7c0deda2d3f144add5d97af88aaa9ea96e9f1",
+  "with_valid_odds": 10,
   "matches": [
     {
       "number": 1,
-      "home": "Spanien",
-      "away": "England",
+      "home": "Polen",
+      "away": "Sverige",
       "odds": [
-        1.94,
-        3.9,
-        3.8
+        2.23,
+        3.75,
+        3.25
       ],
       "streck": [
-        52.0,
+        22.0,
         29.0,
-        19.0
+        49.0
       ],
       "p": [
-        0.49801734,
-        0.247731702,
-        0.254250958
+        0.438438709,
+        0.260724885,
+        0.300836406
       ],
-      "match_start": "2026-11-15T20:45:00+01:00"
+      "match_start": "2026-11-17T20:45:00+01:00"
     },
     {
       "number": 2,
-      "home": "Frankrike",
-      "away": "Turkiet",
+      "home": "Danmark",
+      "away": "Norge",
       "odds": [
-        1.2,
-        8.5,
-        14.0
+        2.48,
+        3.75,
+        2.75
       ],
       "streck": [
-        91.0,
-        6.0,
-        3.0
+        39.0,
+        26.0,
+        35.0
       ],
       "p": [
-        0.815068493,
-        0.115068493,
-        0.069863014
+        0.390144708,
+        0.2580157,
+        0.351839591
       ],
-      "match_start": "2026-11-15T20:45:00+01:00"
+      "match_start": "2026-11-17T20:45:00+01:00"
     },
     {
       "number": 3,
-      "home": "Kroatien",
-      "away": "Tjeckien",
+      "home": "Wales",
+      "away": "Portugal",
       "odds": [
-        1.53,
-        4.6,
-        6.25
+        8.0,
+        5.1,
+        1.42
       ],
       "streck": [
-        73.0,
-        19.0,
-        8.0
+        10.0,
+        17.0,
+        73.0
       ],
       "p": [
-        0.633951114,
-        0.210857653,
-        0.155191233
+        0.121915087,
+        0.191239352,
+        0.686845561
       ],
-      "match_start": "2026-11-15T20:45:00+01:00"
+      "match_start": "2026-11-17T20:45:00+01:00"
     },
     {
       "number": 4,
-      "home": "Belgien",
-      "away": "Italien",
+      "home": "Bosnien & Hercegovina",
+      "away": "Rumänien",
       "odds": [
-        2.2,
-        3.8,
-        3.15
+        1.98,
+        3.6,
+        3.95
       ],
       "streck": [
-        33.0,
-        28.0,
-        39.0
+        47.0,
+        34.0,
+        19.0
       ],
       "p": [
-        0.439104916,
-        0.254218635,
-        0.306676449
+        0.487503857,
+        0.268127121,
+        0.244369022
       ],
-      "match_start": "2026-11-15T20:45:00+01:00"
+      "match_start": "2026-11-17T20:45:00+01:00"
     },
     {
       "number": 5,
-      "home": "Lettland",
-      "away": "Armenien",
+      "home": "Ukraina",
+      "away": "Georgien",
       "odds": [
-        3.0,
-        3.35,
-        2.32
+        2.2,
+        3.5,
+        3.4
       ],
       "streck": [
-        40.0,
-        29.0,
-        31.0
-      ],
-      "p": [
-        0.31361472,
-        0.280849003,
-        0.405536276
-      ],
-      "match_start": "2026-11-15T15:00:00+01:00"
-    },
-    {
-      "number": 6,
-      "home": "Cypern",
-      "away": "Montenegro",
-      "odds": [
-        3.1,
-        3.3,
-        2.3
-      ],
-      "streck": [
-        28.0,
-        31.0,
-        41.0
-      ],
-      "p": [
-        0.304208417,
-        0.285771543,
-        0.41002004
-      ],
-      "match_start": "2026-11-15T15:00:00+01:00"
-    },
-    {
-      "number": 7,
-      "home": "Eibar",
-      "away": "Cadiz",
-      "odds": [
-        1.65,
-        3.9,
-        4.9
-      ],
-      "streck": [
-        78.0,
-        14.0,
-        8.0
-      ],
-      "p": [
-        0.56824264,
-        0.240410348,
-        0.191347012
-      ],
-      "match_start": "2026-11-15T18:30:00+01:00"
-    },
-    {
-      "number": 8,
-      "home": "Granada",
-      "away": "Las Palmas",
-      "odds": [
-        2.07,
-        3.4,
-        3.5
-      ],
-      "streck": [
-        63.0,
-        23.0,
+        77.0,
+        9.0,
         14.0
       ],
       "p": [
-        0.454493374,
-        0.27670626,
-        0.268800367
+        0.4394387,
+        0.276218612,
+        0.284342688
       ],
-      "match_start": "2026-11-15T16:15:00+01:00"
+      "match_start": "2026-11-17T20:45:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "Ungern",
+      "away": "Nordirland",
+      "odds": [
+        1.95,
+        3.35,
+        4.5
+      ],
+      "streck": [
+        81.0,
+        12.0,
+        7.0
+      ],
+      "p": [
+        0.496173784,
+        0.288817576,
+        0.21500864
+      ],
+      "match_start": "2026-11-17T20:45:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Irland",
+      "away": "Kosovo",
+      "odds": [
+        2.04,
+        3.15,
+        3.95
+      ],
+      "streck": [
+        65.0,
+        22.0,
+        13.0
+      ],
+      "p": [
+        0.462091248,
+        0.299259094,
+        0.238649657
+      ],
+      "match_start": "2026-11-17T20:45:00+01:00"
+    },
+    {
+      "number": 8,
+      "home": "Israel",
+      "away": "Österrike",
+      "odds": [
+        5.0,
+        4.1,
+        1.68
+      ],
+      "streck": [
+        5.0,
+        15.0,
+        80.0
+      ],
+      "p": [
+        0.192466749,
+        0.234715547,
+        0.572817704
+      ],
+      "match_start": "2026-11-17T20:45:00+01:00"
     },
     {
       "number": 9,
-      "home": "Tyskland",
-      "away": "Nederländerna",
+      "home": "Chile",
+      "away": "Colombia",
       "odds": [
-        1.95,
         4.2,
-        3.7
+        3.15,
+        1.96
       ],
       "streck": [
-        49.0,
-        28.0,
-        23.0
+        6.0,
+        12.0,
+        82.0
       ],
       "p": [
-        0.502181289,
-        0.233155599,
-        0.264663112
+        0.223404255,
+        0.29787234,
+        0.478723404
       ],
-      "match_start": "2026-11-16T20:45:00+01:00"
+      "match_start": "2026-11-18T00:00:00+01:00"
     },
     {
       "number": 10,
-      "home": "Grekland",
-      "away": "Serbien",
-      "odds": [
-        1.46,
-        4.75,
-        7.0
-      ],
+      "home": "Häcken",
+      "away": "Manchester City WFC",
+      "odds": null,
       "streck": [
-        75.0,
-        16.0,
-        9.0
+        24.0,
+        14.0,
+        62.0
       ],
-      "p": [
-        0.65965678,
-        0.202757663,
-        0.137585557
-      ],
-      "match_start": "2026-11-16T20:45:00+01:00"
+      "p": null,
+      "match_start": "2026-11-18T18:45:00+01:00"
     },
     {
       "number": 11,
-      "home": "Schweiz",
-      "away": "Skottland",
-      "odds": [
-        1.68,
-        3.8,
-        5.8
-      ],
+      "home": "Real Madrid",
+      "away": "Inter",
+      "odds": null,
       "streck": [
-        79.0,
-        13.0,
-        8.0
+        84.0,
+        6.0,
+        10.0
       ],
-      "p": [
-        0.577447076,
-        0.255292392,
-        0.167260532
-      ],
-      "match_start": "2026-11-16T20:45:00+01:00"
+      "p": null,
+      "match_start": "2026-11-18T18:45:00+01:00"
     },
     {
       "number": 12,
-      "home": "Nordmakedonien",
-      "away": "Slovenien",
-      "odds": [
-        6.0,
-        3.7,
-        1.61
-      ],
+      "home": "Chelsea",
+      "away": "Paris Saint-Germain",
+      "odds": null,
       "streck": [
-        13.0,
-        22.0,
-        65.0
+        40.0,
+        21.0,
+        39.0
       ],
-      "p": [
-        0.157521749,
-        0.255440675,
-        0.587037576
-      ],
-      "match_start": "2026-11-16T20:45:00+01:00"
+      "p": null,
+      "match_start": "2026-11-18T21:00:00+01:00"
     },
     {
       "number": 13,
-      "home": "Kazakstan",
-      "away": "Slovakien",
+      "home": "Coritiba",
+      "away": "Santos",
       "odds": [
-        4.5,
-        3.45,
-        1.83
+        3.3,
+        3.8,
+        2.18
       ],
       "streck": [
-        11.0,
+        43.0,
         21.0,
-        68.0
+        36.0
       ],
       "p": [
-        0.209935658,
-        0.273829119,
-        0.516235224
+        0.295667071,
+        0.256763509,
+        0.44756942
       ],
-      "match_start": "2026-11-16T16:00:00+01:00"
+      "match_start": "2026-11-18T23:30:00+01:00"
     }
   ]
 }
