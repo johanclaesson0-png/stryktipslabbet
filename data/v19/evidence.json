@@ -1,6 +1,6 @@
 {
   "schema": "stryktipslabbet-evidence-gate-v19",
-  "generated_at_utc": "2026-11-14T20:43:19.477944+00:00",
+  "generated_at_utc": "2026-11-15T00:20:26.406131+00:00",
   "source_rule": "Latest verified market snapshot at least 30 minutes before draw close",
   "period_rule": "All model outputs must have been generated before close, from exactly the selected market snapshot",
   "factors": [
@@ -79,7 +79,7 @@
     {
       "factor": "value",
       "label": "Streckvärde i systemval (ej 1/X/2-prognos)",
-      "status": "otillräckligt underlag",
+      "status": "endast experimentella systemjämförelser",
       "eligible_for_review": false,
       "matched_draws": 0,
       "matched_matches": 0,
@@ -90,34 +90,34 @@
       "baseline_top1": null,
       "factor_top1": null,
       "brier_gain_ci95": null,
-      "system_rounds": 0,
+      "system_rounds": 1,
       "system_deltas": {
         "100": {
-          "rounds": 0,
-          "changed_systems": 0,
-          "baseline_10plus": 0,
-          "factor_10plus": 0,
+          "rounds": 1,
+          "changed_systems": 1,
+          "baseline_10plus": 1,
+          "factor_10plus": 1,
           "baseline_13": 0,
           "factor_13": 0,
-          "total_net_difference": 0
+          "total_net_difference": 0.0
         },
         "1800": {
-          "rounds": 0,
-          "changed_systems": 0,
-          "baseline_10plus": 0,
-          "factor_10plus": 0,
+          "rounds": 1,
+          "changed_systems": 1,
+          "baseline_10plus": 1,
+          "factor_10plus": 1,
           "baseline_13": 0,
           "factor_13": 0,
-          "total_net_difference": 0
+          "total_net_difference": 0.0
         }
       }
     }
   ],
   "coverage": {
-    "frozen_draws_with_result": 0,
+    "frozen_draws_with_result": 1,
     "draws_with_form_inputs": 0,
     "draws_with_player_inputs": 0,
-    "draws_with_value_inputs": 0
+    "draws_with_value_inputs": 1
   },
   "policy": {
     "min_draws_for_review": 30,

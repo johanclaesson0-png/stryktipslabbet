@@ -1,0 +1,84 @@
+{
+  "schema": "stryktipslabbet-form-model-settlement-v1",
+  "model_version": "form-overlay-preregistered-2026-11-13-v14",
+  "draw_number": 4979,
+  "source_observed_at_utc": "2026-11-14T14:41:56.503246+00:00",
+  "report_created_at_utc": "2026-11-14T14:41:57.365009+00:00",
+  "form_sha256": "e16dff6058733924f0099ed595d23e5a00d34afe3927aa6cae373d20ce8e4d70",
+  "source_snapshot_sha256": "ebb6ed39383296cd273bbac508c608962cee7fcab616c1ef6cbd6c518a691239",
+  "official_result_sha256": "4f3bc9eaed30d3b04fffe179a703146ffcb1b23c57645f582bfd76a56c686552",
+  "outcome": "1211112111112",
+  "payouts": {
+    "13": 14008.0,
+    "12": 183.0,
+    "11": 0.0,
+    "10": 0.0
+  },
+  "n": 13,
+  "forecast_scores": {
+    "market_brier_sum": 6.18249569,
+    "form_brier_sum": 6.19831058,
+    "market_log_loss_sum": 10.85341396,
+    "form_log_loss_sum": 10.90492019,
+    "market_top_correct": 11,
+    "form_top_correct": 11
+  },
+  "budgets": [
+    {
+      "budget_limit": 100,
+      "market_system": {
+        "cost": 96,
+        "covered_matches": 11,
+        "row_counts": {
+          "10": 7,
+          "11": 1,
+          "12": 0,
+          "13": 0
+        },
+        "paid": 0.0,
+        "net": -96.0
+      },
+      "form_system": {
+        "cost": 96,
+        "covered_matches": 11,
+        "row_counts": {
+          "10": 7,
+          "11": 1,
+          "12": 0,
+          "13": 0
+        },
+        "paid": 0.0,
+        "net": -96.0
+      }
+    },
+    {
+      "budget_limit": 1800,
+      "market_system": {
+        "cost": 1458,
+        "covered_matches": 11,
+        "row_counts": {
+          "10": 24,
+          "11": 2,
+          "12": 0,
+          "13": 0
+        },
+        "paid": 0.0,
+        "net": -1458.0
+      },
+      "form_system": {
+        "cost": 1458,
+        "covered_matches": 11,
+        "row_counts": {
+          "10": 24,
+          "11": 2,
+          "12": 0,
+          "13": 0
+        },
+        "paid": 0.0,
+        "net": -1458.0
+      }
+    }
+  ],
+  "hypothetical": true,
+  "caution": "Ej uppdelat på lottade matcher; modellens prognosfördel ej säkerställd."
+}

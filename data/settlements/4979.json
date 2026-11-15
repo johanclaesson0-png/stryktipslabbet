@@ -1,0 +1,157 @@
+{
+  "schema": "stryktipslabbet-settlement-v1",
+  "draw_number": 4979,
+  "forecast_observed_at_utc": "2026-11-14T14:41:56.503246+00:00",
+  "result_observed_at_utc": "2026-11-15T00:20:12.549216+00:00",
+  "source_snapshot_sha256": "ebb6ed39383296cd273bbac508c608962cee7fcab616c1ef6cbd6c518a691239",
+  "official_result_sha256": "4f3bc9eaed30d3b04fffe179a703146ffcb1b23c57645f582bfd76a56c686552",
+  "outcome": "1211112111112",
+  "payouts": {
+    "13": 14008.0,
+    "12": 183.0,
+    "11": 0.0,
+    "10": 0.0
+  },
+  "systems": [
+    {
+      "key": "balanserad",
+      "name": "Balanserad",
+      "cost": 1458,
+      "correct_rows": {
+        "10": 24,
+        "11": 2,
+        "12": 0,
+        "13": 0
+      },
+      "paid": 0.0,
+      "net": -1458.0
+    },
+    {
+      "key": "varde",
+      "name": "Streckvärde – experiment",
+      "cost": 1458,
+      "correct_rows": {
+        "10": 72,
+        "11": 13,
+        "12": 1,
+        "13": 0
+      },
+      "paid": 183.0,
+      "net": -1275.0
+    },
+    {
+      "key": "skrall",
+      "name": "Skräll – experiment",
+      "cost": 1458,
+      "correct_rows": {
+        "10": 72,
+        "11": 13,
+        "12": 1,
+        "13": 0
+      },
+      "paid": 183.0,
+      "net": -1275.0
+    }
+  ],
+  "forecast_quality": {
+    "n": 13,
+    "top_pick_correct": 11,
+    "mean_brier": 0.4755766,
+    "mean_log_loss": 0.834878,
+    "matches": [
+      {
+        "number": 1,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.18064052,
+        "log_loss": 0.42300462
+      },
+      {
+        "number": 2,
+        "outcome": "2",
+        "predicted": "1",
+        "brier": 1.12274493,
+        "log_loss": 1.77973919
+      },
+      {
+        "number": 3,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.08337212,
+        "log_loss": 0.26498496
+      },
+      {
+        "number": 4,
+        "outcome": "1",
+        "predicted": "2",
+        "brier": 1.00114383,
+        "log_loss": 1.5927769
+      },
+      {
+        "number": 5,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.57707636,
+        "log_loss": 0.96810131
+      },
+      {
+        "number": 6,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.25221987,
+        "log_loss": 0.52386098
+      },
+      {
+        "number": 7,
+        "outcome": "2",
+        "predicted": "2",
+        "brier": 0.55062493,
+        "log_loss": 0.93093705
+      },
+      {
+        "number": 8,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.22694848,
+        "log_loss": 0.49102841
+      },
+      {
+        "number": 9,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.4957626,
+        "log_loss": 0.8543655
+      },
+      {
+        "number": 10,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.28758667,
+        "log_loss": 0.57572993
+      },
+      {
+        "number": 11,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.46581119,
+        "log_loss": 0.8144892
+      },
+      {
+        "number": 12,
+        "outcome": "1",
+        "predicted": "1",
+        "brier": 0.4986634,
+        "log_loss": 0.85478853
+      },
+      {
+        "number": 13,
+        "outcome": "2",
+        "predicted": "2",
+        "brier": 0.43990078,
+        "log_loss": 0.77960738
+      }
+    ]
+  },
+  "hypothetical": true,
+  "note": "Rättat experiment: hypotetiska matematiska system, inga bekräftade spelade insatser."
+}
