@@ -2,6 +2,630 @@
   "schema": "stryktipslabbet-official-pools-v21",
   "source": "https://api.spela.svenskaspel.se/draw/1/stryktipset",
   "draws": {
+    "4781": {
+      "draw_number": 4781,
+      "outcome": "XX11X212X21XX",
+      "turnover_kr": 27904938,
+      "classes": {
+        "13": {
+          "winners": 1,
+          "payout_per_row_kr": 10000000
+        },
+        "12": {
+          "winners": 160,
+          "payout_per_row_kr": 17004
+        },
+        "11": {
+          "winners": 2697,
+          "payout_per_row_kr": 807
+        },
+        "10": {
+          "winners": 25614,
+          "payout_per_row_kr": 177
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4781/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4782": {
+      "draw_number": 4782,
+      "outcome": "22X12X21X22XX",
+      "turnover_kr": 26893244,
+      "classes": {
+        "13": {
+          "winners": 0,
+          "payout_per_row_kr": 0
+        },
+        "12": {
+          "winners": 7,
+          "payout_per_row_kr": 374584
+        },
+        "11": {
+          "winners": 201,
+          "payout_per_row_kr": 10436
+        },
+        "10": {
+          "winners": 2620,
+          "payout_per_row_kr": 1667
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4782/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4783": {
+      "draw_number": 4783,
+      "outcome": "X221212112121",
+      "turnover_kr": 35527057,
+      "classes": {
+        "13": {
+          "winners": 2103,
+          "payout_per_row_kr": 7717
+        },
+        "12": {
+          "winners": 36389,
+          "payout_per_row_kr": 95
+        },
+        "11": {
+          "winners": 263811,
+          "payout_per_row_kr": 0
+        },
+        "10": {
+          "winners": 1097497,
+          "payout_per_row_kr": 0
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4783/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4784": {
+      "draw_number": 4784,
+      "outcome": "11111121212XX",
+      "turnover_kr": 35070743,
+      "classes": {
+        "13": {
+          "winners": 298,
+          "payout_per_row_kr": 59270
+        },
+        "12": {
+          "winners": 5631,
+          "payout_per_row_kr": 607
+        },
+        "11": {
+          "winners": 54871,
+          "payout_per_row_kr": 49
+        },
+        "10": {
+          "winners": 329590,
+          "payout_per_row_kr": 17
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4784/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4785": {
+      "draw_number": 4785,
+      "outcome": "22X111X112221",
+      "turnover_kr": 28857603,
+      "classes": {
+        "13": {
+          "winners": 168,
+          "payout_per_row_kr": 44660
+        },
+        "12": {
+          "winners": 4445,
+          "payout_per_row_kr": 632
+        },
+        "11": {
+          "winners": 52446,
+          "payout_per_row_kr": 42
+        },
+        "10": {
+          "winners": 341970,
+          "payout_per_row_kr": 0
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4785/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4786": {
+      "draw_number": 4786,
+      "outcome": "XXX211212X1XX",
+      "turnover_kr": 32015026,
+      "classes": {
+        "13": {
+          "winners": 26,
+          "payout_per_row_kr": 615384
+        },
+        "12": {
+          "winners": 789,
+          "payout_per_row_kr": 3956
+        },
+        "11": {
+          "winners": 10674,
+          "payout_per_row_kr": 233
+        },
+        "10": {
+          "winners": 83873,
+          "payout_per_row_kr": 62
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4786/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4787": {
+      "draw_number": 4787,
+      "outcome": "1XX22X1111XX2",
+      "turnover_kr": 18337787,
+      "classes": {
+        "13": {
+          "winners": 84,
+          "payout_per_row_kr": 56759
+        },
+        "12": {
+          "winners": 2336,
+          "payout_per_row_kr": 765
+        },
+        "11": {
+          "winners": 27537,
+          "payout_per_row_kr": 51
+        },
+        "10": {
+          "winners": 187284,
+          "payout_per_row_kr": 15
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4787/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4788": {
+      "draw_number": 4788,
+      "outcome": "211X1XX2122X1",
+      "turnover_kr": 31452805,
+      "classes": {
+        "13": {
+          "winners": 13,
+          "payout_per_row_kr": 1000000
+        },
+        "12": {
+          "winners": 410,
+          "payout_per_row_kr": 7479
+        },
+        "11": {
+          "winners": 5314,
+          "payout_per_row_kr": 461
+        },
+        "10": {
+          "winners": 42194,
+          "payout_per_row_kr": 121
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4788/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4789": {
+      "draw_number": 4789,
+      "outcome": "2111222122222",
+      "turnover_kr": 26240289,
+      "classes": {
+        "13": {
+          "winners": 22,
+          "payout_per_row_kr": 310112
+        },
+        "12": {
+          "winners": 632,
+          "payout_per_row_kr": 4048
+        },
+        "11": {
+          "winners": 9183,
+          "payout_per_row_kr": 222
+        },
+        "10": {
+          "winners": 76699,
+          "payout_per_row_kr": 55
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4789/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4790": {
+      "draw_number": 4790,
+      "outcome": "1222211221211",
+      "turnover_kr": 24738996,
+      "classes": {
+        "13": {
+          "winners": 147,
+          "payout_per_row_kr": 43756
+        },
+        "12": {
+          "winners": 4886,
+          "payout_per_row_kr": 493
+        },
+        "11": {
+          "winners": 55445,
+          "payout_per_row_kr": 34
+        },
+        "10": {
+          "winners": 344620,
+          "payout_per_row_kr": 0
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4790/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4791": {
+      "draw_number": 4791,
+      "outcome": "11XX21X112X12",
+      "turnover_kr": 25931561,
+      "classes": {
+        "13": {
+          "winners": 48,
+          "payout_per_row_kr": 224214
+        },
+        "12": {
+          "winners": 1155,
+          "payout_per_row_kr": 2189
+        },
+        "11": {
+          "winners": 13627,
+          "payout_per_row_kr": 148
+        },
+        "10": {
+          "winners": 96624,
+          "payout_per_row_kr": 43
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4791/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4792": {
+      "draw_number": 4792,
+      "outcome": "111X12X12X21X",
+      "turnover_kr": 24350089,
+      "classes": {
+        "13": {
+          "winners": 72,
+          "payout_per_row_kr": 87930
+        },
+        "12": {
+          "winners": 2399,
+          "payout_per_row_kr": 989
+        },
+        "11": {
+          "winners": 29908,
+          "payout_per_row_kr": 63
+        },
+        "10": {
+          "winners": 208131,
+          "payout_per_row_kr": 19
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4792/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4793": {
+      "draw_number": 4793,
+      "outcome": "1121122111X21",
+      "turnover_kr": 23621446,
+      "classes": {
+        "13": {
+          "winners": 1650,
+          "payout_per_row_kr": 3722
+        },
+        "12": {
+          "winners": 31133,
+          "payout_per_row_kr": 73
+        },
+        "11": {
+          "winners": 238632,
+          "payout_per_row_kr": 0
+        },
+        "10": {
+          "winners": 1011366,
+          "payout_per_row_kr": 0
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4793/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4794": {
+      "draw_number": 4794,
+      "outcome": "11X121X1X2111",
+      "turnover_kr": 26251869,
+      "classes": {
+        "13": {
+          "winners": 92,
+          "payout_per_row_kr": 141304
+        },
+        "12": {
+          "winners": 2381,
+          "payout_per_row_kr": 1074
+        },
+        "11": {
+          "winners": 27682,
+          "payout_per_row_kr": 73
+        },
+        "10": {
+          "winners": 188690,
+          "payout_per_row_kr": 22
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4794/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4795": {
+      "draw_number": 4795,
+      "outcome": "1X2XX11111221",
+      "turnover_kr": 20898288,
+      "classes": {
+        "13": {
+          "winners": 18,
+          "payout_per_row_kr": 301864
+        },
+        "12": {
+          "winners": 608,
+          "payout_per_row_kr": 3351
+        },
+        "11": {
+          "winners": 8907,
+          "payout_per_row_kr": 183
+        },
+        "10": {
+          "winners": 75561,
+          "payout_per_row_kr": 44
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4795/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4796": {
+      "draw_number": 4796,
+      "outcome": "11X1112X1X211",
+      "turnover_kr": 28047750,
+      "classes": {
+        "13": {
+          "winners": 71,
+          "payout_per_row_kr": 183098
+        },
+        "12": {
+          "winners": 2084,
+          "payout_per_row_kr": 1312
+        },
+        "11": {
+          "winners": 25339,
+          "payout_per_row_kr": 86
+        },
+        "10": {
+          "winners": 179834,
+          "payout_per_row_kr": 25
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4796/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4797": {
+      "draw_number": 4797,
+      "outcome": "121222XX21111",
+      "turnover_kr": 16829746,
+      "classes": {
+        "13": {
+          "winners": 54,
+          "payout_per_row_kr": 81032
+        },
+        "12": {
+          "winners": 1825,
+          "payout_per_row_kr": 899
+        },
+        "11": {
+          "winners": 22955,
+          "payout_per_row_kr": 57
+        },
+        "10": {
+          "winners": 156169,
+          "payout_per_row_kr": 17
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4797/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4798": {
+      "draw_number": 4798,
+      "outcome": "12112121112XX",
+      "turnover_kr": 14565494,
+      "classes": {
+        "13": {
+          "winners": 800,
+          "payout_per_row_kr": 4733
+        },
+        "12": {
+          "winners": 15430,
+          "payout_per_row_kr": 92
+        },
+        "11": {
+          "winners": 122367,
+          "payout_per_row_kr": 0
+        },
+        "10": {
+          "winners": 531940,
+          "payout_per_row_kr": 0
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4798/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4799": {
+      "draw_number": 4799,
+      "outcome": "X22XX1221X1XX",
+      "turnover_kr": 15025505,
+      "classes": {
+        "13": {
+          "winners": 81,
+          "payout_per_row_kr": 91476
+        },
+        "12": {
+          "winners": 1958,
+          "payout_per_row_kr": 748
+        },
+        "11": {
+          "winners": 20948,
+          "payout_per_row_kr": 55
+        },
+        "10": {
+          "winners": 130941,
+          "payout_per_row_kr": 18
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4799/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4800": {
+      "draw_number": 4800,
+      "outcome": "1X12211211211",
+      "turnover_kr": 12320785,
+      "classes": {
+        "13": {
+          "winners": 21,
+          "payout_per_row_kr": 152543
+        },
+        "12": {
+          "winners": 557,
+          "payout_per_row_kr": 2156
+        },
+        "11": {
+          "winners": 6528,
+          "payout_per_row_kr": 147
+        },
+        "10": {
+          "winners": 49795,
+          "payout_per_row_kr": 40
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4800/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4801": {
+      "draw_number": 4801,
+      "outcome": "12X12XX1121XX",
+      "turnover_kr": 12633553,
+      "classes": {
+        "13": {
+          "winners": 7,
+          "payout_per_row_kr": 469246
+        },
+        "12": {
+          "winners": 501,
+          "payout_per_row_kr": 2458
+        },
+        "11": {
+          "winners": 7557,
+          "payout_per_row_kr": 130
+        },
+        "10": {
+          "winners": 57253,
+          "payout_per_row_kr": 35
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4801/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4802": {
+      "draw_number": 4802,
+      "outcome": "211X2X112X21X",
+      "turnover_kr": 11078697,
+      "classes": {
+        "13": {
+          "winners": 3,
+          "payout_per_row_kr": 960153
+        },
+        "12": {
+          "winners": 94,
+          "payout_per_row_kr": 11491
+        },
+        "11": {
+          "winners": 1268,
+          "payout_per_row_kr": 681
+        },
+        "10": {
+          "winners": 11887,
+          "payout_per_row_kr": 151
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4802/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4803": {
+      "draw_number": 4803,
+      "outcome": "12121112X121X",
+      "turnover_kr": 11988175,
+      "classes": {
+        "13": {
+          "winners": 14,
+          "payout_per_row_kr": 222637
+        },
+        "12": {
+          "winners": 494,
+          "payout_per_row_kr": 2366
+        },
+        "11": {
+          "winners": 6182,
+          "payout_per_row_kr": 151
+        },
+        "10": {
+          "winners": 44553,
+          "payout_per_row_kr": 43
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4803/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
+    "4804": {
+      "draw_number": 4804,
+      "outcome": "112121X1XX111",
+      "turnover_kr": 11900505,
+      "classes": {
+        "13": {
+          "winners": 89,
+          "payout_per_row_kr": 34765
+        },
+        "12": {
+          "winners": 2799,
+          "payout_per_row_kr": 414
+        },
+        "11": {
+          "winners": 37803,
+          "payout_per_row_kr": 24
+        },
+        "10": {
+          "winners": 235053,
+          "payout_per_row_kr": 0
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4804/result",
+      "verified_at_utc": "2026-11-16T06:27:42.691108+00:00",
+      "time_type": "after_final_result_not_preclose"
+    },
     "4806": {
       "draw_number": 4806,
       "outcome": "1X2111X11121X",
@@ -4372,5 +4996,5 @@
     }
   },
   "scope": "Only after-close official turnover/winners/payouts; not preclose forecast inputs",
-  "updated_at_utc": "2026-11-15T23:58:11.662377+00:00"
+  "updated_at_utc": "2026-11-16T06:27:42.691108+00:00"
 }
