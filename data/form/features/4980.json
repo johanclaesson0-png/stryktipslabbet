@@ -1,0 +1,2180 @@
+{
+  "schema": "stryktipslabbet-team-form-v1",
+  "draw_number": 4980,
+  "source_observed_at_utc": "2026-11-17T00:30:38.390967+00:00",
+  "reg_close_time": "2026-11-21T14:59:00+00:00",
+  "source_snapshot_sha256": "be360b0630db46309ffc7655a2f9d68679eec5ed6c236bb1ab7374f249f8dd40",
+  "created_at_utc": "2026-11-17T00:30:38.640916+00:00",
+  "cutoff_date_exclusive": "2026-11-17",
+  "source": "OpenFootball football.json · CC0 1.0",
+  "league_files_read": 79,
+  "complete_matches": 10,
+  "partial_matches": 3,
+  "missing_matches": 0,
+  "matches": [
+    {
+      "number": 1,
+      "home": "Newcastle",
+      "away": "Arsenal",
+      "market_p": [
+        0.163150492,
+        0.225035162,
+        0.611814346
+      ],
+      "streck": [
+        47.0,
+        21.0,
+        32.0
+      ],
+      "home_form": {
+        "canonical_name": "newcastle united",
+        "games_available": 191,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 1.8,
+          "wins": 2,
+          "draws": 2,
+          "losses": 1
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.5,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 1.5,
+          "wins": 4,
+          "draws": 3,
+          "losses": 3
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "hull city",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-14",
+            "opponent": "leeds united",
+            "goals_for": 1,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "bournemouth",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "tottenham hotspur",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "liverpool",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 2.2,
+          "goals_for_per_game": 2.4,
+          "goals_against_per_game": 1.4,
+          "wins": 3,
+          "draws": 2,
+          "losses": 0
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "OVOFV"
+      },
+      "away_form": {
+        "canonical_name": "arsenal",
+        "games_available": 193,
+        "last5": {
+          "n": 5,
+          "points_per_game": 2.4,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 0.8,
+          "wins": 4,
+          "draws": 0,
+          "losses": 1
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 2.7,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 0.5,
+          "wins": 9,
+          "draws": 0,
+          "losses": 1
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "brighton hove albion",
+            "goals_for": 0,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "sunderland",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "chelsea",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "aston villa",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-21",
+            "opponent": "coventry city",
+            "goals_for": 3,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 2.4,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 0.8,
+          "wins": 4,
+          "draws": 0,
+          "losses": 1
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "VVVVF"
+      },
+      "h2h_last5": 5,
+      "coverage": "båda"
+    },
+    {
+      "number": 2,
+      "home": "Chelsea",
+      "away": "Leeds",
+      "market_p": [
+        0.529434163,
+        0.247962836,
+        0.222603001
+      ],
+      "streck": [
+        51.0,
+        24.0,
+        25.0
+      ],
+      "home_form": {
+        "canonical_name": "chelsea",
+        "games_available": 193,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 2.0,
+          "goals_against_per_game": 2.4,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.1,
+          "goals_for_per_game": 1.5,
+          "goals_against_per_game": 2.2,
+          "wins": 3,
+          "draws": 2,
+          "losses": 5
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-18",
+            "opponent": "brentford",
+            "goals_for": 0,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "hull city",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "arsenal",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-30",
+            "opponent": "brighton hove albion",
+            "goals_for": 4,
+            "goals_against": 3,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-24",
+            "opponent": "fulham",
+            "goals_for": 3,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 2.0,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
+        },
+        "last_match_date": "2026-09-18",
+        "form_last5": "VVFOF"
+      },
+      "away_form": {
+        "canonical_name": "leeds united",
+        "games_available": 209,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.2,
+          "wins": 2,
+          "draws": 2,
+          "losses": 1
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.9,
+          "goals_for_per_game": 1.7,
+          "goals_against_per_game": 1.0,
+          "wins": 5,
+          "draws": 4,
+          "losses": 1
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-14",
+            "opponent": "newcastle united",
+            "goals_for": 4,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "brighton hove albion",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-30",
+            "opponent": "brentford",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "nottingham forest",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-05-24",
+            "opponent": "west ham united",
+            "goals_for": 0,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 1.4,
+          "wins": 1,
+          "draws": 3,
+          "losses": 1
+        },
+        "last_match_date": "2026-09-14",
+        "form_last5": "FVOOV"
+      },
+      "h2h_last5": 5,
+      "coverage": "båda"
+    },
+    {
+      "number": 3,
+      "home": "Tottenham",
+      "away": "Ipswich",
+      "market_p": [
+        0.625515504,
+        0.213491161,
+        0.160993335
+      ],
+      "streck": [
+        48.0,
+        24.0,
+        28.0
+      ],
+      "home_form": {
+        "canonical_name": "tottenham",
+        "games_available": 0,
+        "last5": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last10": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last5_matches": [],
+        "venue5": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last_match_date": null,
+        "form_last5": null
+      },
+      "away_form": {
+        "canonical_name": "ipswich town",
+        "games_available": 132,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 2.2,
+          "wins": 2,
+          "draws": 0,
+          "losses": 3
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 1.8,
+          "wins": 4,
+          "draws": 2,
+          "losses": 4
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "everton",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "crystal palace",
+            "goals_for": 3,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-04",
+            "opponent": "liverpool",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-30",
+            "opponent": "manchester united",
+            "goals_for": 2,
+            "goals_against": 5,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "sunderland",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 2.2,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "VFFVF"
+      },
+      "h2h_last5": 0,
+      "coverage": "delvis"
+    },
+    {
+      "number": 4,
+      "home": "Aston Villa",
+      "away": "Sunderland",
+      "market_p": [
+        0.536134403,
+        0.247029016,
+        0.216836581
+      ],
+      "streck": [
+        48.0,
+        26.0,
+        26.0
+      ],
+      "home_form": {
+        "canonical_name": "aston villa",
+        "games_available": 191,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 2.0,
+          "wins": 2,
+          "draws": 0,
+          "losses": 3
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.3,
+          "goals_for_per_game": 1.7,
+          "goals_against_per_game": 2.0,
+          "wins": 4,
+          "draws": 1,
+          "losses": 5
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "tottenham hotspur",
+            "goals_for": 3,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "nottingham forest",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "arsenal",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "brighton hove albion",
+            "goals_for": 0,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-05-24",
+            "opponent": "manchester city",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 2.0,
+          "goals_against_per_game": 2.0,
+          "wins": 2,
+          "draws": 0,
+          "losses": 3
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "VFFFV"
+      },
+      "away_form": {
+        "canonical_name": "sunderland",
+        "games_available": 182,
+        "last5": {
+          "n": 5,
+          "points_per_game": 0.8,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 2.0,
+          "wins": 1,
+          "draws": 1,
+          "losses": 3
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.1,
+          "goals_for_per_game": 1.5,
+          "goals_against_per_game": 2.2,
+          "wins": 3,
+          "draws": 2,
+          "losses": 5
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-20",
+            "opponent": "manchester city",
+            "goals_for": 3,
+            "goals_against": 5,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "arsenal",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "brentford",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-30",
+            "opponent": "fulham",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "ipswich town",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.0,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 2.0,
+          "wins": 1,
+          "draws": 2,
+          "losses": 2
+        },
+        "last_match_date": "2026-09-20",
+        "form_last5": "FVOFF"
+      },
+      "h2h_last5": 2,
+      "coverage": "båda"
+    },
+    {
+      "number": 5,
+      "home": "Bournemouth",
+      "away": "Nottingham",
+      "market_p": [
+        0.488550894,
+        0.264081564,
+        0.247367541
+      ],
+      "streck": [
+        45.0,
+        28.0,
+        27.0
+      ],
+      "home_form": {
+        "canonical_name": "bournemouth",
+        "games_available": 198,
+        "last5": {
+          "n": 5,
+          "points_per_game": 0.6,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 1.6,
+          "wins": 0,
+          "draws": 3,
+          "losses": 2
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.2,
+          "wins": 2,
+          "draws": 6,
+          "losses": 2
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-20",
+            "opponent": "liverpool",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "brentford",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "newcastle united",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "everton",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-23",
+            "opponent": "manchester city",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.0,
+          "wins": 1,
+          "draws": 3,
+          "losses": 1
+        },
+        "last_match_date": "2026-09-20",
+        "form_last5": "FOOOF"
+      },
+      "away_form": {
+        "canonical_name": "nottingham forest",
+        "games_available": 202,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.0,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 1.2,
+          "wins": 1,
+          "draws": 2,
+          "losses": 2
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.5,
+          "goals_for_per_game": 2.0,
+          "goals_against_per_game": 1.2,
+          "wins": 4,
+          "draws": 3,
+          "losses": 3
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "coventry city",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "aston villa",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "liverpool",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "leeds united",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-05-24",
+            "opponent": "bournemouth",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 2.0,
+          "goals_for_per_game": 2.8,
+          "goals_against_per_game": 1.4,
+          "wins": 3,
+          "draws": 1,
+          "losses": 1
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "OFOVF"
+      },
+      "h2h_last5": 5,
+      "coverage": "båda"
+    },
+    {
+      "number": 6,
+      "home": "Coventry",
+      "away": "Crystal Palace",
+      "market_p": [
+        0.395324598,
+        0.272334723,
+        0.332340679
+      ],
+      "streck": [
+        45.0,
+        26.0,
+        29.0
+      ],
+      "home_form": {
+        "canonical_name": "coventry",
+        "games_available": 0,
+        "last5": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last10": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last5_matches": [],
+        "venue5": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last_match_date": null,
+        "form_last5": null
+      },
+      "away_form": {
+        "canonical_name": "crystal palace",
+        "games_available": 188,
+        "last5": {
+          "n": 5,
+          "points_per_game": 0.6,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 2.6,
+          "wins": 1,
+          "draws": 0,
+          "losses": 4
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 0.5,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 2.6,
+          "wins": 1,
+          "draws": 2,
+          "losses": 7
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-12",
+            "opponent": "ipswich town",
+            "goals_for": 2,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "fulham",
+            "goals_for": 3,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-28",
+            "opponent": "manchester city",
+            "goals_for": 1,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "everton",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.1"
+          },
+          {
+            "date": "2026-05-24",
+            "opponent": "arsenal",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.1"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 0.8,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 2.4,
+          "wins": 1,
+          "draws": 1,
+          "losses": 3
+        },
+        "last_match_date": "2026-09-12",
+        "form_last5": "FFFVF"
+      },
+      "h2h_last5": 0,
+      "coverage": "delvis"
+    },
+    {
+      "number": 7,
+      "home": "Bolton",
+      "away": "Portsmouth",
+      "market_p": [
+        0.338752188,
+        0.271955982,
+        0.389291829
+      ],
+      "streck": [
+        42.0,
+        26.0,
+        32.0
+      ],
+      "home_form": {
+        "canonical_name": "bolton wanderers",
+        "games_available": 75,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 2.6,
+          "wins": 2,
+          "draws": 0,
+          "losses": 3
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 1.7,
+          "wins": 5,
+          "draws": 1,
+          "losses": 4
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-20",
+            "opponent": "norwich city",
+            "goals_for": 4,
+            "goals_against": 3,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "cardiff city",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-08",
+            "opponent": "west ham united",
+            "goals_for": 2,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "millwall",
+            "goals_for": 0,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "sheffield united",
+            "goals_for": 2,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.0,
+          "wins": 3,
+          "draws": 0,
+          "losses": 2
+        },
+        "last_match_date": "2026-09-20",
+        "form_last5": "FFFVV"
+      },
+      "away_form": {
+        "canonical_name": "portsmouth",
+        "games_available": 96,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 1.4,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.5,
+          "goals_against_per_game": 1.7,
+          "wins": 4,
+          "draws": 2,
+          "losses": 4
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "blackburn rovers",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "cardiff city",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "derby county",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "bristol city",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "lincoln city",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 1.8,
+          "wins": 3,
+          "draws": 0,
+          "losses": 2
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "VFFVO"
+      },
+      "h2h_last5": 0,
+      "coverage": "båda"
+    },
+    {
+      "number": 8,
+      "home": "Lincoln",
+      "away": "Wrexham",
+      "market_p": [
+        0.33442623,
+        0.285245902,
+        0.380327869
+      ],
+      "streck": [
+        43.0,
+        27.0,
+        30.0
+      ],
+      "home_form": {
+        "canonical_name": "lincoln city",
+        "games_available": 75,
+        "last5": {
+          "n": 5,
+          "points_per_game": 2.0,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 0.6,
+          "wins": 3,
+          "draws": 1,
+          "losses": 1
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.0,
+          "goals_for_per_game": 0.8,
+          "goals_against_per_game": 1.2,
+          "wins": 3,
+          "draws": 1,
+          "losses": 6
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "swansea city",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-15",
+            "opponent": "bristol city",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "preston north end",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "southampton",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "bolton wanderers",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 0.4,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 1.8,
+          "wins": 0,
+          "draws": 2,
+          "losses": 3
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "VOVVF"
+      },
+      "away_form": {
+        "canonical_name": "wrexham",
+        "games_available": 97,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 2.0,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.3,
+          "goals_for_per_game": 1.3,
+          "goals_against_per_game": 1.7,
+          "wins": 3,
+          "draws": 4,
+          "losses": 3
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "southampton",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-11",
+            "opponent": "west ham united",
+            "goals_for": 0,
+            "goals_against": 6,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-08",
+            "opponent": "burnley",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "millwall",
+            "goals_for": 3,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-08-28",
+            "opponent": "birmingham city",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 2.0,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "FVOFV"
+      },
+      "h2h_last5": 2,
+      "coverage": "båda"
+    },
+    {
+      "number": 9,
+      "home": "Middlesbrough",
+      "away": "Bristol City",
+      "market_p": [
+        0.689266516,
+        0.182070401,
+        0.128663083
+      ],
+      "streck": [
+        47.0,
+        25.0,
+        28.0
+      ],
+      "home_form": {
+        "canonical_name": "middlesbrough",
+        "games_available": 238,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 2.0,
+          "goals_against_per_game": 1.6,
+          "wins": 2,
+          "draws": 3,
+          "losses": 0
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 1.3,
+          "wins": 4,
+          "draws": 4,
+          "losses": 2
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "birmingham city",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-15",
+            "opponent": "millwall",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "norwich city",
+            "goals_for": 4,
+            "goals_against": 3,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "queens park rangers",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "burnley",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 2.6,
+          "goals_for_per_game": 3.2,
+          "goals_against_per_game": 1.6,
+          "wins": 4,
+          "draws": 1,
+          "losses": 0
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "OVVOO"
+      },
+      "away_form": {
+        "canonical_name": "bristol city",
+        "games_available": 236,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.4,
+          "wins": 3,
+          "draws": 0,
+          "losses": 2
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.4,
+          "wins": 5,
+          "draws": 1,
+          "losses": 4
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-18",
+            "opponent": "watford",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-15",
+            "opponent": "lincoln city",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "southampton",
+            "goals_for": 1,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "burnley",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "preston north end",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 2.0,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
+        },
+        "last_match_date": "2026-09-18",
+        "form_last5": "VVFFV"
+      },
+      "h2h_last5": 5,
+      "coverage": "båda"
+    },
+    {
+      "number": 10,
+      "home": "Sheffield U",
+      "away": "Watford",
+      "market_p": [
+        0.582043178,
+        0.235656506,
+        0.182300316
+      ],
+      "streck": [
+        47.0,
+        26.0,
+        27.0
+      ],
+      "home_form": {
+        "canonical_name": "sheffield united",
+        "games_available": 232,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.8,
+          "wins": 2,
+          "draws": 0,
+          "losses": 3
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.3,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 1.8,
+          "wins": 4,
+          "draws": 1,
+          "losses": 5
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "stoke city",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-13",
+            "opponent": "wolverhampton wanderers",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-08",
+            "opponent": "blackburn rovers",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "norwich city",
+            "goals_for": 1,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "bolton wanderers",
+            "goals_for": 3,
+            "goals_against": 2,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 0.6,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 2.4,
+          "wins": 1,
+          "draws": 0,
+          "losses": 4
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "VFVFF"
+      },
+      "away_form": {
+        "canonical_name": "watford",
+        "games_available": 228,
+        "last5": {
+          "n": 5,
+          "points_per_game": 0.6,
+          "goals_for_per_game": 0.6,
+          "goals_against_per_game": 1.4,
+          "wins": 1,
+          "draws": 0,
+          "losses": 4
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 0.8,
+          "goals_for_per_game": 0.8,
+          "goals_against_per_game": 1.9,
+          "wins": 2,
+          "draws": 2,
+          "losses": 6
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-18",
+            "opponent": "bristol city",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "stoke city",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-08",
+            "opponent": "preston north end",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "west bromwich albion",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "swansea city",
+            "goals_for": 0,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 0.2,
+          "goals_for_per_game": 0.4,
+          "goals_against_per_game": 2.0,
+          "wins": 0,
+          "draws": 1,
+          "losses": 4
+        },
+        "last_match_date": "2026-09-18",
+        "form_last5": "FFVFF"
+      },
+      "h2h_last5": 5,
+      "coverage": "båda"
+    },
+    {
+      "number": 11,
+      "home": "Stoke",
+      "away": "Birmingham",
+      "market_p": [
+        0.334867445,
+        0.273553688,
+        0.391578867
+      ],
+      "streck": [
+        43.0,
+        27.0,
+        30.0
+      ],
+      "home_form": {
+        "canonical_name": "stoke",
+        "games_available": 0,
+        "last5": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last10": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last5_matches": [],
+        "venue5": {
+          "n": 0,
+          "points_per_game": null,
+          "goals_for_per_game": null,
+          "goals_against_per_game": null,
+          "wins": 0,
+          "draws": 0,
+          "losses": 0
+        },
+        "last_match_date": null,
+        "form_last5": null
+      },
+      "away_form": {
+        "canonical_name": "birmingham city",
+        "games_available": 236,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.6,
+          "goals_against_per_game": 1.6,
+          "wins": 1,
+          "draws": 3,
+          "losses": 1
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.7,
+          "goals_for_per_game": 1.7,
+          "goals_against_per_game": 1.4,
+          "wins": 4,
+          "draws": 5,
+          "losses": 1
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "middlesbrough",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "derby county",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-09",
+            "opponent": "norwich city",
+            "goals_for": 1,
+            "goals_against": 2,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "wolverhampton wanderers",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "southampton",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.2,
+          "wins": 2,
+          "draws": 2,
+          "losses": 1
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "OOFVO"
+      },
+      "h2h_last5": 0,
+      "coverage": "delvis"
+    },
+    {
+      "number": 12,
+      "home": "Swansea",
+      "away": "West Bromwich",
+      "market_p": [
+        0.371294852,
+        0.283931357,
+        0.344773791
+      ],
+      "streck": [
+        44.0,
+        26.0,
+        30.0
+      ],
+      "home_form": {
+        "canonical_name": "swansea city",
+        "games_available": 235,
+        "last5": {
+          "n": 5,
+          "points_per_game": 2.4,
+          "goals_for_per_game": 2.2,
+          "goals_against_per_game": 1.0,
+          "wins": 4,
+          "draws": 0,
+          "losses": 1
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 2.2,
+          "goals_for_per_game": 2.0,
+          "goals_against_per_game": 1.1,
+          "wins": 7,
+          "draws": 1,
+          "losses": 2
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "lincoln city",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "burnley",
+            "goals_for": 3,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-08",
+            "opponent": "southampton",
+            "goals_for": 1,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "watford",
+            "goals_for": 2,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "derby county",
+            "goals_for": 3,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 2.0,
+          "goals_for_per_game": 2.2,
+          "goals_against_per_game": 1.2,
+          "wins": 3,
+          "draws": 1,
+          "losses": 1
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "VVFVV"
+      },
+      "away_form": {
+        "canonical_name": "west bromwich albion",
+        "games_available": 234,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 0.8,
+          "goals_against_per_game": 0.6,
+          "wins": 2,
+          "draws": 2,
+          "losses": 1
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.7,
+          "goals_for_per_game": 1.4,
+          "goals_against_per_game": 1.0,
+          "wins": 5,
+          "draws": 2,
+          "losses": 3
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-20",
+            "opponent": "wolverhampton wanderers",
+            "goals_for": 0,
+            "goals_against": 1,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "queens park rangers",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-09",
+            "opponent": "derby county",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "watford",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "charlton athletic",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "home",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.2,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 1.4,
+          "wins": 2,
+          "draws": 0,
+          "losses": 3
+        },
+        "last_match_date": "2026-09-20",
+        "form_last5": "OVVOF"
+      },
+      "h2h_last5": 5,
+      "coverage": "båda"
+    },
+    {
+      "number": 13,
+      "home": "Wolverhampton",
+      "away": "Charlton",
+      "market_p": [
+        0.722183829,
+        0.175950242,
+        0.10186593
+      ],
+      "streck": [
+        48.0,
+        27.0,
+        25.0
+      ],
+      "home_form": {
+        "canonical_name": "wolverhampton wanderers",
+        "games_available": 195,
+        "last5": {
+          "n": 5,
+          "points_per_game": 2.0,
+          "goals_for_per_game": 2.0,
+          "goals_against_per_game": 1.4,
+          "wins": 3,
+          "draws": 1,
+          "losses": 1
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.6,
+          "goals_for_per_game": 1.7,
+          "goals_against_per_game": 1.5,
+          "wins": 4,
+          "draws": 4,
+          "losses": 2
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-20",
+            "opponent": "west bromwich albion",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-13",
+            "opponent": "sheffield united",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "birmingham city",
+            "goals_for": 2,
+            "goals_against": 2,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-01",
+            "opponent": "west ham united",
+            "goals_for": 2,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "stoke city",
+            "goals_for": 4,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 1.8,
+          "goals_for_per_game": 1.8,
+          "goals_against_per_game": 1.0,
+          "wins": 2,
+          "draws": 3,
+          "losses": 0
+        },
+        "last_match_date": "2026-09-20",
+        "form_last5": "VFOVV"
+      },
+      "away_form": {
+        "canonical_name": "charlton athletic",
+        "games_available": 96,
+        "last5": {
+          "n": 5,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 1.8,
+          "wins": 2,
+          "draws": 1,
+          "losses": 2
+        },
+        "last10": {
+          "n": 10,
+          "points_per_game": 1.4,
+          "goals_for_per_game": 1.2,
+          "goals_against_per_game": 1.7,
+          "wins": 4,
+          "draws": 2,
+          "losses": 4
+        },
+        "last5_matches": [
+          {
+            "date": "2026-09-19",
+            "opponent": "cardiff city",
+            "goals_for": 1,
+            "goals_against": 3,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-05",
+            "opponent": "stoke city",
+            "goals_for": 0,
+            "goals_against": 4,
+            "outcome": "F",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-09-02",
+            "opponent": "west bromwich albion",
+            "goals_for": 1,
+            "goals_against": 1,
+            "outcome": "O",
+            "venue": "away",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-08-29",
+            "opponent": "preston north end",
+            "goals_for": 1,
+            "goals_against": 0,
+            "outcome": "V",
+            "venue": "home",
+            "competition": "en.2"
+          },
+          {
+            "date": "2026-08-22",
+            "opponent": "west ham united",
+            "goals_for": 2,
+            "goals_against": 1,
+            "outcome": "V",
+            "venue": "away",
+            "competition": "en.2"
+          }
+        ],
+        "venue5": {
+          "n": 5,
+          "points_per_game": 0.8,
+          "goals_for_per_game": 1.0,
+          "goals_against_per_game": 2.4,
+          "wins": 1,
+          "draws": 1,
+          "losses": 3
+        },
+        "last_match_date": "2026-09-19",
+        "form_last5": "VVOFF"
+      },
+      "h2h_last5": 0,
+      "coverage": "båda"
+    }
+  ],
+  "note": "Hemma-/bortaform enbart från tidigare daterade ligamatcher; inga skador, lineups eller oddsmodeller är bekräftade."
+}
