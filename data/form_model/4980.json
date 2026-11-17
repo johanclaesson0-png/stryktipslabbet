@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4980,
-  "source_observed_at_utc": "2026-11-17T08:30:46.439130+00:00",
-  "source_snapshot_sha256": "626184b5f7159a328d16871c5a9c0b57589885a2a097e0c5b2e9c85c68381a5e",
-  "form_created_at_utc": "2026-11-17T08:30:46.740759+00:00",
-  "form_sha256": "f398217941b8e31a9546fb02009cb4d7ee6dafaa94baf8c5cf31d5f51666b888",
+  "source_observed_at_utc": "2026-11-17T17:53:44.848218+00:00",
+  "source_snapshot_sha256": "479d8fc50ff8c9f70d8e027098747e67ffa10ed5ca60ace3a3443cf0cba0fe4e",
+  "form_created_at_utc": "2026-11-17T17:53:45.222251+00:00",
+  "form_sha256": "b00018bb0f461fae541bf1ea8169d12d9334508de595172b9018a8bc3e387ad1",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
-  "created_at_utc": "2026-11-17T08:30:47.507733+00:00",
+  "created_at_utc": "2026-11-17T17:53:46.147080+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -16,17 +16,17 @@
       "home": "Newcastle",
       "away": "Arsenal",
       "market_p": [
-        0.163150492,
-        0.225035162,
-        0.611814346
+        0.163568773,
+        0.223048327,
+        0.6133829
       ],
       "form_p": [
-        0.148925622,
-        0.217188136,
-        0.633886242
+        0.149294087,
+        0.215251339,
+        0.635454574
       ],
       "delta_pp": [
-        -1.42,
+        -1.43,
         -0.78,
         2.21
       ],
@@ -42,19 +42,19 @@
       "home": "Chelsea",
       "away": "Leeds",
       "market_p": [
-        0.529434163,
-        0.247962836,
-        0.222603001
+        0.528082981,
+        0.247330004,
+        0.224587015
       ],
       "form_p": [
-        0.520030898,
-        0.249341877,
-        0.230627225
+        0.518655999,
+        0.248682648,
+        0.232661353
       ],
       "delta_pp": [
         -0.94,
         0.14,
-        0.8
+        0.81
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -94,19 +94,19 @@
       "home": "Aston Villa",
       "away": "Sunderland",
       "market_p": [
-        0.536134403,
-        0.247029016,
-        0.216836581
+        0.534771425,
+        0.247754863,
+        0.217473713
       ],
       "form_p": [
-        0.543732642,
-        0.244980492,
-        0.211286866
+        0.542372933,
+        0.245710551,
+        0.211916516
       ],
       "delta_pp": [
         0.76,
         -0.2,
-        -0.55
+        -0.56
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -384,9 +384,9 @@
         "12",
         "1"
       ],
-      "original_market_p13": 0.006527756,
-      "new_form_p13": 0.007095774,
-      "new_market_baseline_p13": 0.006527756,
+      "original_market_p13": 0.006511194,
+      "new_form_p13": 0.007076782,
+      "new_market_baseline_p13": 0.006511194,
       "different_matches": 0
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1"
       ],
-      "original_market_p13": 0.046213027,
-      "new_form_p13": 0.051142888,
-      "new_market_baseline_p13": 0.046213027,
+      "original_market_p13": 0.046095778,
+      "new_form_p13": 0.051006004,
+      "new_market_baseline_p13": 0.046095778,
       "different_matches": 0
     }
   ],
