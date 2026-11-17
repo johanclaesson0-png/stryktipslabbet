@@ -1,110 +1,249 @@
 {
   "schema": "stryktipslabbet-official-calibration-v21",
-  "generated_at_utc": "2026-11-17T00:31:10.945928+00:00",
+  "generated_at_utc": "2026-11-17T08:31:28.945083+00:00",
   "historical_actuals": {
-    "draws_with_official_turnover_winners": 240,
-    "turnover_median_kr": 24774166.0,
+    "draws_with_official_turnover_winners": 263,
+    "turnover_median_kr": 24842681.0,
     "turnover_p10_kr": 13219761.0,
     "turnover_p90_kr": 32139988.0,
     "by_class": {
       "10": {
-        "rounds_with_winners_data": 240,
-        "winner_rows_median": 86808.0,
+        "rounds_with_winners_data": 263,
+        "winner_rows_median": 84795.0,
         "winner_rows_p10": 14672.0,
-        "winner_rows_p90": 521298.0,
-        "winner_rows_per_million_median": 3957.189,
-        "winner_rows_per_million_p10": 693.575,
-        "winner_rows_per_million_p90": 26276.992,
-        "actual_payout_median_kr": 42.0,
+        "winner_rows_p90": 536984.0,
+        "winner_rows_per_million_median": 3726.116,
+        "winner_rows_per_million_p10": 654.292,
+        "winner_rows_per_million_p90": 26548.308,
+        "actual_payout_median_kr": 43.0,
         "zero_winner_rounds": 0,
-        "zero_payout_rounds": 51,
+        "zero_payout_rounds": 58,
         "observed_vs_simple_pool_ratio_median": 0.994,
         "allocation_ratio_scope": "Retrospective accounting only; includes jackpots and guarantees"
       },
       "11": {
-        "rounds_with_winners_data": 240,
-        "winner_rows_median": 11433.0,
+        "rounds_with_winners_data": 263,
+        "winner_rows_median": 11404.0,
         "winner_rows_p10": 1595.0,
-        "winner_rows_p90": 105477.0,
-        "winner_rows_per_million_median": 525.499,
-        "winner_rows_per_million_p10": 80.497,
-        "winner_rows_per_million_p90": 5602.96,
-        "actual_payout_median_kr": 151.0,
+        "winner_rows_p90": 112266.0,
+        "winner_rows_per_million_median": 507.215,
+        "winner_rows_per_million_p10": 74.521,
+        "winner_rows_per_million_p90": 5830.071,
+        "actual_payout_median_kr": 153.0,
         "zero_winner_rounds": 0,
-        "zero_payout_rounds": 26,
+        "zero_payout_rounds": 29,
         "observed_vs_simple_pool_ratio_median": 0.998,
         "allocation_ratio_scope": "Retrospective accounting only; includes jackpots and guarantees"
       },
       "12": {
-        "rounds_with_winners_data": 240,
-        "winner_rows_median": 880.0,
+        "rounds_with_winners_data": 263,
+        "winner_rows_median": 872.0,
         "winner_rows_p10": 94.0,
-        "winner_rows_p90": 11672.0,
-        "winner_rows_per_million_median": 39.656,
-        "winner_rows_per_million_p10": 5.734,
+        "winner_rows_p90": 15001.0,
+        "winner_rows_per_million_median": 38.849,
+        "winner_rows_per_million_p10": 4.267,
         "winner_rows_per_million_p90": 689.01,
-        "actual_payout_median_kr": 2506.0,
+        "actual_payout_median_kr": 2509.0,
         "zero_winner_rounds": 0,
         "zero_payout_rounds": 0,
         "observed_vs_simple_pool_ratio_median": 1.0,
         "allocation_ratio_scope": "Retrospective accounting only; includes jackpots and guarantees"
       },
       "13": {
-        "rounds_with_winners_data": 240,
-        "winner_rows_median": 30.0,
+        "rounds_with_winners_data": 263,
+        "winner_rows_median": 29.0,
         "winner_rows_p10": 2.0,
-        "winner_rows_p90": 615.0,
-        "winner_rows_per_million_median": 1.328,
-        "winner_rows_per_million_p10": 0.116,
+        "winner_rows_p90": 687.0,
+        "winner_rows_per_million_median": 1.302,
+        "winner_rows_per_million_p10": 0.089,
         "winner_rows_per_million_p90": 30.827,
-        "actual_payout_median_kr": 201029.0,
-        "zero_winner_rounds": 11,
-        "zero_payout_rounds": 11,
+        "actual_payout_median_kr": 200081.0,
+        "zero_winner_rounds": 13,
+        "zero_payout_rounds": 13,
         "observed_vs_simple_pool_ratio_median": 1.0,
         "allocation_ratio_scope": "Retrospective accounting only; includes jackpots and guarantees"
       }
     }
   },
   "prospective_model_check": {
-    "prospective_draws_with_preclose_streck_and_official_winners": 0,
+    "prospective_draws_with_preclose_streck_and_official_winners": 1,
     "class_error": {
       "10": {
-        "draws": 0,
-        "predicted_winners_median": null,
-        "actual_winners_median": null,
-        "actual_to_independent_crowd_ratio_median": null,
-        "log10_error_mae": null,
+        "draws": 1,
+        "predicted_winners_median": 515028.233,
+        "actual_winners_median": 554617.0,
+        "actual_to_independent_crowd_ratio_median": 1.077,
+        "log10_error_mae": 0.03216,
         "reliable_for_multiplier_calibration": false
       },
       "11": {
-        "draws": 0,
-        "predicted_winners_median": null,
-        "actual_winners_median": null,
-        "actual_to_independent_crowd_ratio_median": null,
-        "log10_error_mae": null,
+        "draws": 1,
+        "predicted_winners_median": 102120.301,
+        "actual_winners_median": 107745.0,
+        "actual_to_independent_crowd_ratio_median": 1.055,
+        "log10_error_mae": 0.02328,
         "reliable_for_multiplier_calibration": false
       },
       "12": {
-        "draws": 0,
-        "predicted_winners_median": null,
-        "actual_winners_median": null,
-        "actual_to_independent_crowd_ratio_median": null,
-        "log10_error_mae": null,
+        "draws": 1,
+        "predicted_winners_median": 10775.07,
+        "actual_winners_median": 9814.0,
+        "actual_to_independent_crowd_ratio_median": 0.911,
+        "log10_error_mae": 0.04057,
         "reliable_for_multiplier_calibration": false
       },
       "13": {
-        "draws": 0,
-        "predicted_winners_median": null,
-        "actual_winners_median": null,
-        "actual_to_independent_crowd_ratio_median": null,
-        "log10_error_mae": null,
+        "draws": 1,
+        "predicted_winners_median": 453.133,
+        "actual_winners_median": 343.0,
+        "actual_to_independent_crowd_ratio_median": 0.757,
+        "log10_error_mae": 0.12063,
         "reliable_for_multiplier_calibration": false
       }
     },
-    "correctly_frozen_v20_strategy_draws": 0,
-    "actually_settled_hypothetical_v20_strategies": []
+    "correctly_frozen_v20_strategy_draws": 1,
+    "actually_settled_hypothetical_v20_strategies": [
+      {
+        "draw_number": 4979,
+        "budget": 100,
+        "variant": "odds",
+        "cost": 96,
+        "actual_net_kr": -96,
+        "actual_paid_kr": 0,
+        "rows_10": 7,
+        "rows_11": 1,
+        "rows_12": 0,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 100,
+        "variant": "streck_0_25",
+        "cost": 96,
+        "actual_net_kr": -96,
+        "actual_paid_kr": 0,
+        "rows_10": 7,
+        "rows_11": 1,
+        "rows_12": 0,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 100,
+        "variant": "streck_0_45",
+        "cost": 96,
+        "actual_net_kr": -96,
+        "actual_paid_kr": 0,
+        "rows_10": 7,
+        "rows_11": 1,
+        "rows_12": 0,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 100,
+        "variant": "streck_0_7",
+        "cost": 96,
+        "actual_net_kr": -96,
+        "actual_paid_kr": 0,
+        "rows_10": 12,
+        "rows_11": 2,
+        "rows_12": 0,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 100,
+        "variant": "streck_1_0",
+        "cost": 96,
+        "actual_net_kr": -96,
+        "actual_paid_kr": 0,
+        "rows_10": 12,
+        "rows_11": 2,
+        "rows_12": 0,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 1800,
+        "variant": "odds",
+        "cost": 1458,
+        "actual_net_kr": -1458,
+        "actual_paid_kr": 0,
+        "rows_10": 24,
+        "rows_11": 2,
+        "rows_12": 0,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 1800,
+        "variant": "streck_0_25",
+        "cost": 1458,
+        "actual_net_kr": -1458,
+        "actual_paid_kr": 0,
+        "rows_10": 24,
+        "rows_11": 2,
+        "rows_12": 0,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 1800,
+        "variant": "streck_0_45",
+        "cost": 1458,
+        "actual_net_kr": -1275,
+        "actual_paid_kr": 183,
+        "rows_10": 72,
+        "rows_11": 13,
+        "rows_12": 1,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 1800,
+        "variant": "streck_0_7",
+        "cost": 1458,
+        "actual_net_kr": -1275,
+        "actual_paid_kr": 183,
+        "rows_10": 72,
+        "rows_11": 13,
+        "rows_12": 1,
+        "rows_13": 0
+      },
+      {
+        "draw_number": 4979,
+        "budget": 1800,
+        "variant": "streck_1_0",
+        "cost": 1458,
+        "actual_net_kr": -1275,
+        "actual_paid_kr": 183,
+        "rows_10": 72,
+        "rows_11": 13,
+        "rows_12": 1,
+        "rows_13": 0
+      }
+    ]
   },
   "recent_verified_draws": [
+    {
+      "draw_number": 4979,
+      "turnover_kr": 18480906,
+      "winning_rows": {
+        "10": 554617,
+        "11": 107745,
+        "12": 9814,
+        "13": 343
+      },
+      "payouts": {
+        "10": 0,
+        "11": 0,
+        "12": 183,
+        "13": 14008
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4979/result",
+      "time_type": "officiellt resultat efter avslut"
+    },
     {
       "draw_number": 4978,
       "turnover_kr": 33004181,
@@ -193,24 +332,6 @@
         "13": 46731
       },
       "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4974/result",
-      "time_type": "officiellt resultat efter avslut"
-    },
-    {
-      "draw_number": 4973,
-      "turnover_kr": 17551924,
-      "winning_rows": {
-        "10": 177671,
-        "11": 27557,
-        "12": 2323,
-        "13": 77
-      },
-      "payouts": {
-        "10": 16,
-        "11": 49,
-        "12": 736,
-        "13": 59266
-      },
-      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4973/result",
       "time_type": "officiellt resultat efter avslut"
     }
   ],

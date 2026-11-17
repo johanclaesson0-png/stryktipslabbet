@@ -8,26 +8,42 @@
       "number": 1,
       "home": "Chelsea",
       "away": "Paris Saint-Germain",
-      "odds": null,
-      "streck": [
-        52.0,
-        25.0,
-        23.0
+      "odds": [
+        1.29,
+        5.5,
+        9.0
       ],
-      "p": null,
+      "streck": [
+        54.0,
+        25.0,
+        21.0
+      ],
+      "p": [
+        0.725753244,
+        0.170222124,
+        0.104024632
+      ],
       "match_start": "2026-11-18T21:00:00+01:00"
     },
     {
       "number": 2,
       "home": "Juventus",
       "away": "Oud-Heverlee Leuven",
-      "odds": null,
-      "streck": [
-        79.0,
-        17.0,
-        4.0
+      "odds": [
+        1.27,
+        5.75,
+        10.0
       ],
-      "p": null,
+      "streck": [
+        80.0,
+        15.0,
+        5.0
+      ],
+      "p": [
+        0.741911551,
+        0.163865682,
+        0.094222767
+      ],
       "match_start": "2026-11-18T21:00:00+01:00"
     },
     {
@@ -40,9 +56,9 @@
         2.2
       ],
       "streck": [
-        23.0,
-        35.0,
-        42.0
+        25.0,
+        34.0,
+        41.0
       ],
       "p": [
         0.296875,
@@ -61,9 +77,9 @@
         5.1
       ],
       "streck": [
-        52.0,
-        33.0,
-        15.0
+        50.0,
+        32.0,
+        18.0
       ],
       "p": [
         0.578231293,
@@ -82,9 +98,9 @@
         2.4
       ],
       "streck": [
-        33.0,
+        32.0,
         30.0,
-        37.0
+        38.0
       ],
       "p": [
         0.330418605,
@@ -103,9 +119,9 @@
         12.5
       ],
       "streck": [
-        74.0,
-        16.0,
-        10.0
+        70.0,
+        22.0,
+        8.0
       ],
       "p": [
         0.772411826,
@@ -124,9 +140,9 @@
         4.1
       ],
       "streck": [
-        53.0,
-        30.0,
-        17.0
+        46.0,
+        31.0,
+        23.0
       ],
       "p": [
         0.496790673,
@@ -145,9 +161,9 @@
         3.05
       ],
       "streck": [
-        35.0,
-        32.0,
-        33.0
+        34.0,
+        31.0,
+        35.0
       ],
       "p": [
         0.417769551,
@@ -157,11 +173,44 @@
       "match_start": "2026-11-19T01:30:00+01:00"
     }
   ],
-  "observed_at_utc": "2026-11-17T00:30:44.506452+00:00",
-  "source_snapshot_sha256": "95943fdf9f70e161b4401315e721bee9c7dea90c349049f18333a83083a88cba",
+  "observed_at_utc": "2026-11-17T08:30:54.451543+00:00",
+  "source_snapshot_sha256": "e6ed1b34b82615ad20af7058a8256591167c2b4cfa158122c2b9fa3fb34150ac",
   "reg_close_time": "2026-11-18T19:59:00+00:00",
-  "created_at_utc": "2026-11-17T00:30:44.507218+00:00",
-  "systems": [],
-  "complete_odds": false,
-  "note": "Verklig kupong men otillräckliga odds för systemförslag."
+  "created_at_utc": "2026-11-17T08:30:54.452719+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 81,
+      "choices": [
+        "1",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2"
+      ],
+      "estimated_all_correct": 0.2404870108
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 81,
+      "choices": [
+        "1",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2"
+      ],
+      "estimated_all_correct": 0.2404870108
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
 }
