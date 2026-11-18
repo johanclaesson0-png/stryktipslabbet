@@ -14,9 +14,9 @@
         2.75
       ],
       "streck": [
-        56.0,
-        28.0,
-        16.0
+        53.0,
+        30.0,
+        17.0
       ],
       "p": [
         0.416313731,
@@ -35,9 +35,9 @@
         3.7
       ],
       "streck": [
-        87.0,
+        88.0,
         6.0,
-        7.0
+        6.0
       ],
       "p": [
         0.500627021,
@@ -56,9 +56,9 @@
         3.15
       ],
       "streck": [
-        64.0,
-        14.0,
-        22.0
+        60.0,
+        15.0,
+        25.0
       ],
       "p": [
         0.395632205,
@@ -77,9 +77,9 @@
         4.2
       ],
       "streck": [
-        58.0,
-        29.0,
-        13.0
+        62.0,
+        26.0,
+        12.0
       ],
       "p": [
         0.550928051,
@@ -98,9 +98,9 @@
         5.3
       ],
       "streck": [
-        66.0,
-        25.0,
-        9.0
+        70.0,
+        22.0,
+        8.0
       ],
       "p": [
         0.584063295,
@@ -119,8 +119,8 @@
         5.75
       ],
       "streck": [
-        52.0,
-        32.0,
+        55.0,
+        29.0,
         16.0
       ],
       "p": [
@@ -140,9 +140,9 @@
         6.75
       ],
       "streck": [
-        81.0,
-        12.0,
-        7.0
+        83.0,
+        11.0,
+        6.0
       ],
       "p": [
         0.627651537,
@@ -155,21 +155,62 @@
       "number": 8,
       "home": "East Bengal",
       "away": "SC Delhi",
-      "odds": null,
-      "streck": [
-        42.0,
-        25.0,
-        33.0
+      "odds": [
+        1.36,
+        4.5,
+        6.4
       ],
-      "p": null,
+      "streck": [
+        41.0,
+        27.0,
+        32.0
+      ],
+      "p": [
+        0.660187053,
+        0.199523198,
+        0.140289749
+      ],
       "match_start": "2026-11-20T12:30:00+01:00"
     }
   ],
-  "observed_at_utc": "2026-11-18T00:57:21.410239+00:00",
-  "source_snapshot_sha256": "fc0ab6f9b77a010b0cc2fbbfbabed48948193a2e05d2029d07e7ac1743b36dc8",
+  "observed_at_utc": "2026-11-18T08:32:33.201667+00:00",
+  "source_snapshot_sha256": "ae68049a5cd8c96302471947302b2420fdd6b9781e34e68b0a3f692c4052ed79",
   "reg_close_time": "2026-11-20T00:29:00+00:00",
-  "created_at_utc": "2026-11-18T00:57:21.411404+00:00",
-  "systems": [],
-  "complete_odds": false,
-  "note": "Verklig kupong men otillräckliga odds för systemförslag."
+  "created_at_utc": "2026-11-18T08:32:33.202591+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 81,
+      "choices": [
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "estimated_all_correct": 0.1472626997
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 96,
+      "choices": [
+        "12",
+        "X2",
+        "1X2",
+        "12",
+        "12",
+        "1",
+        "1X",
+        "1"
+      ],
+      "estimated_all_correct": 0.0778106104
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
 }
