@@ -1,11 +1,11 @@
 {
-  "observed_turnover_so_far_kr": 1065333,
-  "sales_observed_at_utc": "2026-11-18T08:32:25.697444+00:00",
+  "observed_turnover_so_far_kr": 1464268,
+  "sales_observed_at_utc": "2026-11-18T17:34:55.060974+00:00",
   "schema": "stryktipslabbet-live-snapshot-v7",
   "source": "Svenska Spel publikt API",
   "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4980",
   "draw_number": 4980,
-  "observed_at_utc": "2026-11-18T08:32:25.697444+00:00",
+  "observed_at_utc": "2026-11-18T17:34:55.060974+00:00",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
   "draw_state": "Open",
   "matches": [
@@ -16,15 +16,15 @@
       "odds": [
         6.0,
         4.4,
-        1.6
+        1.58
       ],
       "streck": [
-        32.0,
-        22.0,
-        46.0
+        27.0,
+        23.0,
+        50.0
       ],
       "match_start": "2026-11-21T18:30:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 2,
@@ -36,46 +36,46 @@
         4.35
       ],
       "streck": [
-        57.0,
+        59.0,
         24.0,
-        19.0
+        17.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 3,
       "home": "Tottenham",
       "away": "Ipswich",
       "odds": [
-        1.57,
+        1.56,
         4.6,
         6.1
       ],
       "streck": [
-        61.0,
+        63.0,
         20.0,
-        19.0
+        17.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 4,
       "home": "Aston Villa",
       "away": "Sunderland",
       "odds": [
-        1.83,
+        1.81,
         3.95,
-        4.5
+        4.6
       ],
       "streck": [
-        59.0,
+        62.0,
         22.0,
-        19.0
+        16.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 5,
@@ -87,29 +87,29 @@
         3.95
       ],
       "streck": [
-        52.0,
+        54.0,
         26.0,
-        22.0
+        20.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 6,
       "home": "Coventry",
       "away": "Crystal Palace",
       "odds": [
-        2.43,
+        2.48,
         3.65,
-        2.95
+        2.9
       ],
       "streck": [
-        44.0,
-        25.0,
+        43.0,
+        26.0,
         31.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 7,
@@ -121,29 +121,29 @@
         2.48
       ],
       "streck": [
-        38.0,
+        37.0,
         28.0,
-        34.0
+        35.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 8,
       "home": "Lincoln",
       "away": "Wrexham",
       "odds": [
-        2.9,
-        3.4,
+        2.88,
+        3.45,
         2.55
       ],
       "streck": [
-        37.0,
-        29.0,
-        34.0
+        36.0,
+        28.0,
+        36.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 9,
@@ -155,12 +155,12 @@
         7.5
       ],
       "streck": [
-        62.0,
+        65.0,
         19.0,
-        19.0
+        16.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 10,
@@ -172,21 +172,38 @@
         5.3
       ],
       "streck": [
-        58.0,
-        23.0,
-        19.0
+        60.0,
+        22.0,
+        18.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 11,
       "home": "Stoke",
       "away": "Birmingham",
       "odds": [
-        2.9,
+        2.88,
         3.55,
         2.48
+      ],
+      "streck": [
+        40.0,
+        27.0,
+        33.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 12,
+      "home": "Swansea",
+      "away": "West Bromwich",
+      "odds": [
+        2.63,
+        3.45,
+        2.8
       ],
       "streck": [
         41.0,
@@ -194,24 +211,7 @@
         32.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
-    },
-    {
-      "number": 12,
-      "home": "Swansea",
-      "away": "West Bromwich",
-      "odds": [
-        2.6,
-        3.4,
-        2.8
-      ],
-      "streck": [
-        42.0,
-        27.0,
-        31.0
-      ],
-      "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     },
     {
       "number": 13,
@@ -223,13 +223,13 @@
         10.0
       ],
       "streck": [
-        64.0,
-        20.0,
-        16.0
+        68.0,
+        19.0,
+        13.0
       ],
       "match_start": "2026-11-21T16:00:00+01:00",
-      "streck_source_updated_at": "2026-11-18T09:32:18.368+01:00"
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
     }
   ],
-  "sha256": "b0c06902e7f989a29a0ce737810ba37b93d146aa939315424a115689edad3ed4"
+  "sha256": "43734e9e14b88e6230d6d8330052fbdae9edf3d1a8fbb0fffd7b8d2ff56f85f6"
 }

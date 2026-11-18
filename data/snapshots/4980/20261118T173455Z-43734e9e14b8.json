@@ -1,0 +1,235 @@
+{
+  "observed_turnover_so_far_kr": 1464268,
+  "sales_observed_at_utc": "2026-11-18T17:34:55.060974+00:00",
+  "schema": "stryktipslabbet-live-snapshot-v7",
+  "source": "Svenska Spel publikt API",
+  "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4980",
+  "draw_number": 4980,
+  "observed_at_utc": "2026-11-18T17:34:55.060974+00:00",
+  "reg_close_time": "2026-11-21T14:59:00+00:00",
+  "draw_state": "Open",
+  "matches": [
+    {
+      "number": 1,
+      "home": "Newcastle",
+      "away": "Arsenal",
+      "odds": [
+        6.0,
+        4.4,
+        1.58
+      ],
+      "streck": [
+        27.0,
+        23.0,
+        50.0
+      ],
+      "match_start": "2026-11-21T18:30:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 2,
+      "home": "Chelsea",
+      "away": "Leeds",
+      "odds": [
+        1.85,
+        3.95,
+        4.35
+      ],
+      "streck": [
+        59.0,
+        24.0,
+        17.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 3,
+      "home": "Tottenham",
+      "away": "Ipswich",
+      "odds": [
+        1.56,
+        4.6,
+        6.1
+      ],
+      "streck": [
+        63.0,
+        20.0,
+        17.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Aston Villa",
+      "away": "Sunderland",
+      "odds": [
+        1.81,
+        3.95,
+        4.6
+      ],
+      "streck": [
+        62.0,
+        22.0,
+        16.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 5,
+      "home": "Bournemouth",
+      "away": "Nottingham",
+      "odds": [
+        2.0,
+        3.7,
+        3.95
+      ],
+      "streck": [
+        54.0,
+        26.0,
+        20.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 6,
+      "home": "Coventry",
+      "away": "Crystal Palace",
+      "odds": [
+        2.48,
+        3.65,
+        2.9
+      ],
+      "streck": [
+        43.0,
+        26.0,
+        31.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Bolton",
+      "away": "Portsmouth",
+      "odds": [
+        2.85,
+        3.55,
+        2.48
+      ],
+      "streck": [
+        37.0,
+        28.0,
+        35.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 8,
+      "home": "Lincoln",
+      "away": "Wrexham",
+      "odds": [
+        2.88,
+        3.45,
+        2.55
+      ],
+      "streck": [
+        36.0,
+        28.0,
+        36.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 9,
+      "home": "Middlesbrough",
+      "away": "Bristol City",
+      "odds": [
+        1.4,
+        5.3,
+        7.5
+      ],
+      "streck": [
+        65.0,
+        19.0,
+        16.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 10,
+      "home": "Sheffield U",
+      "away": "Watford",
+      "odds": [
+        1.66,
+        4.1,
+        5.3
+      ],
+      "streck": [
+        60.0,
+        22.0,
+        18.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 11,
+      "home": "Stoke",
+      "away": "Birmingham",
+      "odds": [
+        2.88,
+        3.55,
+        2.48
+      ],
+      "streck": [
+        40.0,
+        27.0,
+        33.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 12,
+      "home": "Swansea",
+      "away": "West Bromwich",
+      "odds": [
+        2.63,
+        3.45,
+        2.8
+      ],
+      "streck": [
+        41.0,
+        27.0,
+        32.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    },
+    {
+      "number": 13,
+      "home": "Wolverhampton",
+      "away": "Charlton",
+      "odds": [
+        1.34,
+        5.6,
+        10.0
+      ],
+      "streck": [
+        68.0,
+        19.0,
+        13.0
+      ],
+      "match_start": "2026-11-21T16:00:00+01:00",
+      "streck_source_updated_at": "2026-11-18T18:33:55.221+01:00"
+    }
+  ],
+  "sha256": "43734e9e14b88e6230d6d8330052fbdae9edf3d1a8fbb0fffd7b8d2ff56f85f6"
+}
