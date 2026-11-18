@@ -1,0 +1,216 @@
+{
+  "schema": "stryktipslabbet-other-game-analysis-v16",
+  "game": "topptipset",
+  "name": "Topptipset",
+  "draw_number": 4452,
+  "matches": [
+    {
+      "number": 1,
+      "home": "Athletic Bilbao",
+      "away": "Espanyol",
+      "odds": [
+        1.5,
+        4.6,
+        7.0
+      ],
+      "streck": [
+        73.0,
+        19.0,
+        8.0
+      ],
+      "p": [
+        0.649193548,
+        0.211693548,
+        0.139112903
+      ],
+      "match_start": "2026-11-20T21:00:00+01:00"
+    },
+    {
+      "number": 2,
+      "home": "Bayern München",
+      "away": "Köln",
+      "odds": [
+        1.1,
+        13.0,
+        21.0
+      ],
+      "streck": [
+        93.0,
+        5.0,
+        2.0
+      ],
+      "p": [
+        0.879510309,
+        0.074420103,
+        0.046069588
+      ],
+      "match_start": "2026-11-20T20:30:00+01:00"
+    },
+    {
+      "number": 3,
+      "home": "Troyes",
+      "away": "Le Havre",
+      "odds": [
+        2.18,
+        3.6,
+        3.5
+      ],
+      "streck": [
+        43.0,
+        32.0,
+        25.0
+      ],
+      "p": [
+        0.448749911,
+        0.271743002,
+        0.279507087
+      ],
+      "match_start": "2026-11-20T20:45:00+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Barnsley",
+      "away": "Sheffield W",
+      "odds": [
+        2.8,
+        3.7,
+        2.28
+      ],
+      "streck": [
+        26.0,
+        28.0,
+        46.0
+      ],
+      "p": [
+        0.3350278,
+        0.253534551,
+        0.411437649
+      ],
+      "match_start": "2026-11-20T21:00:00+01:00"
+    },
+    {
+      "number": 5,
+      "home": "Southend",
+      "away": "Boreham Wood",
+      "odds": [
+        2.9,
+        3.7,
+        2.1
+      ],
+      "streck": [
+        26.0,
+        33.0,
+        41.0
+      ],
+      "p": [
+        0.315982107,
+        0.247661651,
+        0.436356242
+      ],
+      "match_start": "2026-11-20T20:45:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "Cercle Brügge",
+      "away": "Westerlo",
+      "odds": [
+        2.0,
+        4.0,
+        3.5
+      ],
+      "streck": [
+        43.0,
+        29.0,
+        28.0
+      ],
+      "p": [
+        0.482758621,
+        0.24137931,
+        0.275862069
+      ],
+      "match_start": "2026-11-20T20:45:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Verona",
+      "away": "Cesena",
+      "odds": [
+        1.62,
+        3.85,
+        5.25
+      ],
+      "streck": [
+        52.0,
+        30.0,
+        18.0
+      ],
+      "p": [
+        0.578251727,
+        0.243316311,
+        0.178431962
+      ],
+      "match_start": "2026-11-20T20:30:00+01:00"
+    },
+    {
+      "number": 8,
+      "home": "FC Andorra",
+      "away": "Leganes",
+      "odds": [
+        1.87,
+        3.55,
+        4.0
+      ],
+      "streck": [
+        36.0,
+        31.0,
+        33.0
+      ],
+      "p": [
+        0.501438989,
+        0.264138284,
+        0.234422727
+      ],
+      "match_start": "2026-11-20T20:30:00+01:00"
+    }
+  ],
+  "observed_at_utc": "2026-11-18T23:36:36.194326+00:00",
+  "source_snapshot_sha256": "de75edc77960359c9f9a8521e443b692b6449b46101f01647f30e3724c64a72a",
+  "reg_close_time": "2026-11-20T19:29:00+00:00",
+  "created_at_utc": "2026-11-18T23:36:36.195113+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 81,
+      "choices": [
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1",
+        "1"
+      ],
+      "estimated_all_correct": 0.1655579983
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 81,
+      "choices": [
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1",
+        "1"
+      ],
+      "estimated_all_correct": 0.1655579983
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
+}
