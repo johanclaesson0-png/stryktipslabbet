@@ -1,10 +1,10 @@
 {
   "schema": "stryktipslabbet-decision-studio-v19",
   "draw_number": 4980,
-  "observed_at_utc": "2026-11-19T13:55:29.108262+00:00",
+  "observed_at_utc": "2026-11-19T22:09:23.397041+00:00",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
-  "source_snapshot_sha256": "e70caa2c69193ae69f9ff895bce3a2f7601516a9007ad1518ba9a3dcc90d9450",
-  "created_at_utc": "2026-11-19T13:55:39.092239+00:00",
+  "source_snapshot_sha256": "7a1d35343c876dc9ce8bc42977b009741849d5092e0bef30b7e231e9ba02b5f5",
+  "created_at_utc": "2026-11-19T22:09:32.160526+00:00",
   "status": "förhandsfryst – experimentella alternativ, ingen automatisk ändring",
   "models_available": [
     "form",
@@ -26,14 +26,14 @@
         0.618006
       ],
       "crowd_p": [
-        0.23,
-        0.23,
-        0.54
+        0.22,
+        0.22,
+        0.56
       ],
       "market_minus_crowd_pp": [
-        -6.99,
-        -0.81,
-        7.8
+        -5.99,
+        0.19,
+        5.8
       ],
       "form_delta_pp": [
         -1.4,
@@ -56,7 +56,7 @@
           "1800": "2"
         }
       },
-      "review_priority": 8.68,
+      "review_priority": 6.87,
       "explanation": "Inga stora skillnader mellan tillgängliga analyser."
     },
     {
@@ -64,9 +64,9 @@
       "home": "Chelsea",
       "away": "Leeds",
       "market_p": [
-        0.529434,
-        0.247963,
-        0.222603
+        0.497285,
+        0.257803,
+        0.244913
       ],
       "crowd_p": [
         0.6,
@@ -74,20 +74,20 @@
         0.15
       ],
       "market_minus_crowd_pp": [
-        -7.06,
-        -0.2,
-        7.26
+        -10.27,
+        0.78,
+        9.49
       ],
       "form_delta_pp": [
-        -0.94,
-        0.14,
-        0.8
+        -0.95,
+        0.11,
+        0.85
       ],
       "most_likely_sign": "1",
-      "market_favourite_prob_pct": 52.9,
+      "market_favourite_prob_pct": 49.7,
       "baseline_choices": {
         "100": "1",
-        "1800": "1X"
+        "1800": "1X2"
       },
       "experimental_choices": {
         "form": {
@@ -95,31 +95,31 @@
           "1800": "1X"
         },
         "value": {
-          "100": "1",
-          "1800": "1"
+          "100": "12",
+          "1800": "12"
         }
       },
-      "review_priority": 10.14,
-      "explanation": "Experimenten väljer andra tecken – jämför, men byt inte automatiskt."
+      "review_priority": 18.15,
+      "explanation": "Marknad och folket skiljer sig tydligt; granska spiken/garderingen."
     },
     {
       "number": 3,
       "home": "Tottenham",
       "away": "Ipswich",
       "market_p": [
-        0.628514,
-        0.211782,
-        0.159704
+        0.627011,
+        0.212639,
+        0.16035
       ],
       "crowd_p": [
-        0.67,
+        0.68,
         0.19,
-        0.14
+        0.13
       ],
       "market_minus_crowd_pp": [
-        -4.15,
-        2.18,
-        1.97
+        -5.3,
+        2.26,
+        3.04
       ],
       "form_delta_pp": [
         0.0,
@@ -127,7 +127,7 @@
         0.0
       ],
       "most_likely_sign": "1",
-      "market_favourite_prob_pct": 62.9,
+      "market_favourite_prob_pct": 62.7,
       "baseline_choices": {
         "100": "1",
         "1800": "1"
@@ -142,7 +142,7 @@
           "1800": "1"
         }
       },
-      "review_priority": 4.15,
+      "review_priority": 5.3,
       "explanation": "Inga stora skillnader mellan tillgängliga analyser."
     },
     {
@@ -150,19 +150,19 @@
       "home": "Aston Villa",
       "away": "Sunderland",
       "market_p": [
-        0.54387,
-        0.247839,
-        0.208291
+        0.546941,
+        0.244756,
+        0.208303
       ],
       "crowd_p": [
-        0.65,
-        0.21,
-        0.14
+        0.67,
+        0.2,
+        0.13
       ],
       "market_minus_crowd_pp": [
-        -10.61,
-        3.78,
-        6.83
+        -12.31,
+        4.48,
+        7.83
       ],
       "form_delta_pp": [
         0.75,
@@ -170,7 +170,7 @@
         -0.54
       ],
       "most_likely_sign": "1",
-      "market_favourite_prob_pct": 54.4,
+      "market_favourite_prob_pct": 54.7,
       "baseline_choices": {
         "100": "1",
         "1800": "1"
@@ -182,10 +182,10 @@
         },
         "value": {
           "100": "1",
-          "1800": "1X"
+          "1800": "1"
         }
       },
-      "review_priority": 13.41,
+      "review_priority": 12.61,
       "explanation": "Marknad och folket skiljer sig tydligt; granska spiken/garderingen."
     },
     {
@@ -193,9 +193,9 @@
       "home": "Bournemouth",
       "away": "Nottingham",
       "market_p": [
-        0.482947,
-        0.263663,
-        0.25339
+        0.494315,
+        0.260999,
+        0.244686
       ],
       "crowd_p": [
         0.57,
@@ -203,20 +203,20 @@
         0.18
       ],
       "market_minus_crowd_pp": [
-        -8.71,
-        1.37,
-        7.34
+        -7.57,
+        1.1,
+        6.47
       ],
       "form_delta_pp": [
         -1.25,
-        0.12,
-        1.13
+        0.14,
+        1.11
       ],
       "most_likely_sign": "1",
-      "market_favourite_prob_pct": 48.3,
+      "market_favourite_prob_pct": 49.4,
       "baseline_choices": {
         "100": "1X",
-        "1800": "1X2"
+        "1800": "1X"
       },
       "experimental_choices": {
         "form": {
@@ -224,31 +224,31 @@
           "1800": "1X2"
         },
         "value": {
-          "100": "12",
+          "100": "1",
           "1800": "1X2"
         }
       },
-      "review_priority": 11.71,
-      "explanation": "Marknad och folket skiljer sig tydligt; granska spiken/garderingen."
+      "review_priority": 15.57,
+      "explanation": "Experimenten väljer andra tecken – jämför, men byt inte automatiskt."
     },
     {
       "number": 6,
       "home": "Coventry",
       "away": "Crystal Palace",
       "market_p": [
-        0.399722,
-        0.268306,
-        0.331972
+        0.389667,
+        0.274413,
+        0.33592
       ],
       "crowd_p": [
-        0.43,
-        0.26,
+        0.42,
+        0.27,
         0.31
       ],
       "market_minus_crowd_pp": [
         -3.03,
-        0.83,
-        2.2
+        0.44,
+        2.59
       ],
       "form_delta_pp": [
         0.0,
@@ -256,7 +256,7 @@
         0.0
       ],
       "most_likely_sign": "1",
-      "market_favourite_prob_pct": 40.0,
+      "market_favourite_prob_pct": 39.0,
       "baseline_choices": {
         "100": "12",
         "1800": "1X2"
@@ -284,14 +284,14 @@
         0.389292
       ],
       "crowd_p": [
-        0.35,
+        0.34,
         0.29,
-        0.36
+        0.37
       ],
       "market_minus_crowd_pp": [
-        -1.12,
+        -0.12,
         -1.8,
-        2.93
+        1.93
       ],
       "form_delta_pp": [
         -0.69,
@@ -314,7 +314,7 @@
           "1800": "1X2"
         }
       },
-      "review_priority": 3.24,
+      "review_priority": 2.24,
       "explanation": "Inga stora skillnader mellan tillgängliga analyser."
     },
     {
@@ -322,29 +322,29 @@
       "home": "Lincoln",
       "away": "Wrexham",
       "market_p": [
-        0.33736,
-        0.281622,
-        0.381018
+        0.334426,
+        0.285246,
+        0.380328
       ],
       "crowd_p": [
-        0.34,
-        0.28,
-        0.38
+        0.32,
+        0.29,
+        0.39
       ],
       "market_minus_crowd_pp": [
-        -0.26,
-        0.16,
-        0.1
+        1.44,
+        -0.48,
+        -0.97
       ],
       "form_delta_pp": [
-        0.55,
+        0.54,
         -0.02,
-        -0.53
+        -0.52
       ],
       "most_likely_sign": "2",
-      "market_favourite_prob_pct": 38.1,
+      "market_favourite_prob_pct": 38.0,
       "baseline_choices": {
-        "100": "12",
+        "100": "1X2",
         "1800": "1X2"
       },
       "experimental_choices": {
@@ -357,7 +357,7 @@
           "1800": "1X2"
         }
       },
-      "review_priority": 2.98,
+      "review_priority": 4.16,
       "explanation": "Experimenten väljer andra tecken – jämför, men byt inte automatiskt."
     },
     {
@@ -370,14 +370,14 @@
         0.128663
       ],
       "crowd_p": [
-        0.69,
-        0.17,
-        0.14
+        0.71,
+        0.16,
+        0.13
       ],
       "market_minus_crowd_pp": [
-        -0.07,
-        1.21,
-        -1.13
+        -2.07,
+        2.21,
+        -0.13
       ],
       "form_delta_pp": [
         0.84,
@@ -400,7 +400,7 @@
           "1800": "1"
         }
       },
-      "review_priority": 1.54,
+      "review_priority": 2.54,
       "explanation": "Inga stora skillnader mellan tillgängliga analyser."
     },
     {
@@ -408,27 +408,27 @@
       "home": "Sheffield U",
       "away": "Watford",
       "market_p": [
-        0.582043,
-        0.235657,
-        0.1823
+        0.593662,
+        0.230398,
+        0.17594
       ],
       "crowd_p": [
-        0.63,
-        0.21,
-        0.16
+        0.65,
+        0.2,
+        0.15
       ],
       "market_minus_crowd_pp": [
-        -4.8,
-        2.57,
-        2.23
+        -5.63,
+        3.04,
+        2.59
       ],
       "form_delta_pp": [
-        1.51,
-        -0.49,
-        -1.02
+        1.5,
+        -0.5,
+        -1.0
       ],
       "most_likely_sign": "1",
-      "market_favourite_prob_pct": 58.2,
+      "market_favourite_prob_pct": 59.4,
       "baseline_choices": {
         "100": "1",
         "1800": "1"
@@ -443,7 +443,7 @@
           "1800": "1"
         }
       },
-      "review_priority": 5.4,
+      "review_priority": 6.23,
       "explanation": "Inga stora skillnader mellan tillgängliga analyser."
     },
     {
@@ -456,13 +456,13 @@
         0.39067
       ],
       "crowd_p": [
-        0.39,
-        0.28,
+        0.38,
+        0.29,
         0.33
       ],
       "market_minus_crowd_pp": [
-        -5.36,
-        -0.71,
+        -4.36,
+        -1.71,
         6.07
       ],
       "form_delta_pp": [
@@ -499,14 +499,14 @@
         0.347677
       ],
       "crowd_p": [
-        0.39,
+        0.38,
         0.27,
-        0.34
+        0.35
       ],
       "market_minus_crowd_pp": [
-        -1.98,
+        -0.98,
         1.22,
-        0.77
+        -0.23
       ],
       "form_delta_pp": [
         2.45,
@@ -516,7 +516,7 @@
       "most_likely_sign": "1",
       "market_favourite_prob_pct": 37.0,
       "baseline_choices": {
-        "100": "1X2",
+        "100": "12",
         "1800": "1X2"
       },
       "experimental_choices": {
@@ -529,7 +529,7 @@
           "1800": "1X2"
         }
       },
-      "review_priority": 5.47,
+      "review_priority": 4.7,
       "explanation": "Experimenten väljer andra tecken – jämför, men byt inte automatiskt."
     },
     {
@@ -537,27 +537,27 @@
       "home": "Wolverhampton",
       "away": "Charlton",
       "market_p": [
-        0.728181,
-        0.174243,
-        0.097576
+        0.718336,
+        0.179584,
+        0.102079
       ],
       "crowd_p": [
-        0.72,
-        0.17,
-        0.11
+        0.75,
+        0.15,
+        0.1
       ],
       "market_minus_crowd_pp": [
-        0.82,
-        0.42,
-        -1.24
+        -3.17,
+        2.96,
+        0.21
       ],
       "form_delta_pp": [
-        1.76,
-        -0.8,
-        -0.95
+        1.8,
+        -0.81,
+        -0.99
       ],
       "most_likely_sign": "1",
-      "market_favourite_prob_pct": 72.8,
+      "market_favourite_prob_pct": 71.8,
       "baseline_choices": {
         "100": "1",
         "1800": "1"
@@ -572,7 +572,7 @@
           "1800": "1"
         }
       },
-      "review_priority": 1.94,
+      "review_priority": 3.89,
       "explanation": "Inga stora skillnader mellan tillgängliga analyser."
     }
   ],
@@ -588,11 +588,11 @@
         "1X",
         "12",
         "12",
-        "12",
-        "1",
-        "1",
-        "12",
         "1X2",
+        "1",
+        "1",
+        "12",
+        "12",
         "1"
       ],
       "experiments": [
@@ -615,10 +615,10 @@
             "12",
             "1"
           ],
-          "changes": 2,
+          "changes": 0,
           "same_cost": true,
-          "market_probability_baseline": 0.00678754,
-          "market_probability_experiment": 0.006782338,
+          "market_probability_baseline": 0.00645127,
+          "market_probability_experiment": 0.00645127,
           "activated": false
         },
         {
@@ -627,10 +627,10 @@
           "status": "endast experimentella systemjämförelser",
           "choices": [
             "2",
-            "1",
-            "1",
-            "1",
             "12",
+            "1",
+            "1",
+            "1",
             "12",
             "12",
             "12",
@@ -640,10 +640,10 @@
             "1X2",
             "1"
           ],
-          "changes": 1,
+          "changes": 4,
           "same_cost": true,
-          "market_probability_baseline": 0.00678754,
-          "market_probability_experiment": 0.00669415,
+          "market_probability_baseline": 0.00645127,
+          "market_probability_experiment": 0.006274409,
           "activated": false
         }
       ]
@@ -653,10 +653,10 @@
       "cost": 1458,
       "baseline_choices": [
         "2",
-        "1X",
-        "1",
-        "1",
         "1X2",
+        "1",
+        "1",
+        "1X",
         "1X2",
         "1X2",
         "1X2",
@@ -686,10 +686,10 @@
             "1X2",
             "1"
           ],
-          "changes": 0,
+          "changes": 2,
           "same_cost": true,
-          "market_probability_baseline": 0.047976318,
-          "market_probability_experiment": 0.047976318,
+          "market_probability_baseline": 0.047053342,
+          "market_probability_experiment": 0.04703923,
           "activated": false
         },
         {
@@ -698,9 +698,9 @@
           "status": "endast experimentella systemjämförelser",
           "choices": [
             "2",
+            "12",
             "1",
             "1",
-            "1X",
             "1X2",
             "1X2",
             "1X2",
@@ -713,27 +713,27 @@
           ],
           "changes": 2,
           "same_cost": true,
-          "market_probability_baseline": 0.047976318,
-          "market_probability_experiment": 0.047562729,
+          "market_probability_baseline": 0.047053342,
+          "market_probability_experiment": 0.04623622,
           "activated": false
         }
       ]
     }
   ],
   "review_order": [
-    4,
-    5,
     2,
+    5,
+    4,
     1,
-    11,
-    12,
     10,
+    11,
     3,
-    7,
-    6,
+    12,
     8,
     13,
-    9
+    6,
+    9,
+    7
   ],
   "warnings": [
     "Streck−marknad i procentenheter är inte verifierat vinstvärde.",
