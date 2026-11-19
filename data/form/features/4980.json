@@ -1,11 +1,11 @@
 {
   "schema": "stryktipslabbet-team-form-v1",
   "draw_number": 4980,
-  "source_observed_at_utc": "2026-11-18T23:36:29.683333+00:00",
+  "source_observed_at_utc": "2026-11-19T13:55:29.108262+00:00",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
-  "source_snapshot_sha256": "dd09bf5419b7c9ba83f2b7ff6710b16931dd6342a13392174f2d6e252cde82a0",
-  "created_at_utc": "2026-11-19T04:31:44.885690+00:00",
-  "cutoff_date_exclusive": "2026-11-18",
+  "source_snapshot_sha256": "e70caa2c69193ae69f9ff895bce3a2f7601516a9007ad1518ba9a3dcc90d9450",
+  "created_at_utc": "2026-11-19T13:55:29.419673+00:00",
+  "cutoff_date_exclusive": "2026-11-19",
   "source": "OpenFootball football.json · CC0 1.0",
   "league_files_read": 79,
   "complete_matches": 10,
@@ -17,14 +17,14 @@
       "home": "Newcastle",
       "away": "Arsenal",
       "market_p": [
-        0.162308554,
-        0.221329847,
-        0.616361599
+        0.160073682,
+        0.221920332,
+        0.618005987
       ],
       "streck": [
-        27.0,
-        22.0,
-        51.0
+        23.0,
+        23.0,
+        54.0
       ],
       "home_form": {
         "canonical_name": "newcastle united",
@@ -194,14 +194,14 @@
       "home": "Chelsea",
       "away": "Leeds",
       "market_p": [
-        0.528082981,
-        0.247330004,
-        0.224587015
+        0.529434163,
+        0.247962836,
+        0.222603001
       ],
       "streck": [
-        59.0,
-        24.0,
-        17.0
+        60.0,
+        25.0,
+        15.0
       ],
       "home_form": {
         "canonical_name": "chelsea",
@@ -371,14 +371,14 @@
       "home": "Tottenham",
       "away": "Ipswich",
       "market_p": [
-        0.627011083,
-        0.212638541,
-        0.160350375
+        0.628513831,
+        0.211781834,
+        0.159704334
       ],
       "streck": [
-        64.0,
-        20.0,
-        16.0
+        67.0,
+        19.0,
+        14.0
       ],
       "home_form": {
         "canonical_name": "tottenham",
@@ -502,14 +502,14 @@
       "home": "Aston Villa",
       "away": "Sunderland",
       "market_p": [
-        0.540042502,
-        0.247462514,
-        0.212494984
+        0.543869928,
+        0.247839461,
+        0.208290611
       ],
       "streck": [
-        63.0,
+        65.0,
         21.0,
-        16.0
+        14.0
       ],
       "home_form": {
         "canonical_name": "aston villa",
@@ -679,14 +679,14 @@
       "home": "Bournemouth",
       "away": "Nottingham",
       "market_p": [
-        0.488550894,
-        0.264081564,
-        0.247367541
+        0.48294684,
+        0.26366287,
+        0.25339029
       ],
       "streck": [
-        55.0,
-        26.0,
-        19.0
+        57.0,
+        25.0,
+        18.0
       ],
       "home_form": {
         "canonical_name": "bournemouth",
@@ -856,9 +856,9 @@
       "home": "Coventry",
       "away": "Crystal Palace",
       "market_p": [
-        0.394535764,
-        0.268068135,
-        0.337396101
+        0.399721578,
+        0.268306265,
+        0.331972158
       ],
       "streck": [
         43.0,
@@ -992,8 +992,8 @@
         0.389291829
       ],
       "streck": [
-        36.0,
-        28.0,
+        35.0,
+        29.0,
         36.0
       ],
       "home_form": {
@@ -1169,9 +1169,9 @@
         0.381018119
       ],
       "streck": [
-        35.0,
-        29.0,
-        36.0
+        34.0,
+        28.0,
+        38.0
       ],
       "home_form": {
         "canonical_name": "lincoln city",
@@ -1346,9 +1346,9 @@
         0.128663083
       ],
       "streck": [
-        66.0,
-        18.0,
-        16.0
+        69.0,
+        17.0,
+        14.0
       ],
       "home_form": {
         "canonical_name": "middlesbrough",
@@ -1523,9 +1523,9 @@
         0.182300316
       ],
       "streck": [
-        61.0,
-        22.0,
-        17.0
+        63.0,
+        21.0,
+        16.0
       ],
       "home_form": {
         "canonical_name": "sheffield united",
@@ -1700,8 +1700,8 @@
         0.390670376
       ],
       "streck": [
-        40.0,
-        27.0,
+        39.0,
+        28.0,
         33.0
       ],
       "home_form": {
@@ -1831,9 +1831,9 @@
         0.347676981
       ],
       "streck": [
-        40.0,
+        39.0,
         27.0,
-        33.0
+        34.0
       ],
       "home_form": {
         "canonical_name": "swansea city",
@@ -2008,9 +2008,9 @@
         0.097576199
       ],
       "streck": [
-        69.0,
-        19.0,
-        12.0
+        72.0,
+        17.0,
+        11.0
       ],
       "home_form": {
         "canonical_name": "wolverhampton wanderers",

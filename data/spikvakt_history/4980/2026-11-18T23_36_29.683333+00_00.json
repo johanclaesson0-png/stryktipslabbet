@@ -1,0 +1,340 @@
+{
+  "schema": "stryktipslabbet-spikvakt-v1",
+  "version": "spikvakt-fixed-2026-11-13-v1",
+  "draw_number": 4980,
+  "source_observed_at_utc": "2026-11-18T23:36:29.683333+00:00",
+  "reg_close_time": "2026-11-21T14:59:00+00:00",
+  "source_snapshot_sha256": "dd09bf5419b7c9ba83f2b7ff6710b16931dd6342a13392174f2d6e252cde82a0",
+  "created_at_utc": "2026-11-18T23:36:29.863549+00:00",
+  "spike_threshold": 0.55,
+  "x_threshold": 0.27,
+  "safe_penalty": 0.85,
+  "draw_bonus": 0.9,
+  "budgets": [
+    {
+      "budget": 1800,
+      "baseline_cost": 1458,
+      "baseline_choices": [
+        "2",
+        "1X",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1"
+      ],
+      "baseline_p13": 0.047277367,
+      "baseline_miss_risk_spikes": 1,
+      "baseline_x_included": 7,
+      "risk_report": {
+        "spikes": [
+          {
+            "number": 4,
+            "home": "Aston Villa",
+            "away": "Sunderland",
+            "chosen": "1",
+            "estimated_miss_probability": 0.459957,
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.247463,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 10,
+            "home": "Sheffield U",
+            "away": "Watford",
+            "chosen": "1",
+            "estimated_miss_probability": 0.417957,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.235657,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 1,
+            "home": "Newcastle",
+            "away": "Arsenal",
+            "chosen": "2",
+            "estimated_miss_probability": 0.383638,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.22133,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 3,
+            "home": "Tottenham",
+            "away": "Ipswich",
+            "chosen": "1",
+            "estimated_miss_probability": 0.372989,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.212639,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 9,
+            "home": "Middlesbrough",
+            "away": "Bristol City",
+            "chosen": "1",
+            "estimated_miss_probability": 0.310733,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.18207,
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 13,
+            "home": "Wolverhampton",
+            "away": "Charlton",
+            "chosen": "1",
+            "estimated_miss_probability": 0.271819,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.174243,
+            "cost_if_added_without_rebalancing": 2916
+          }
+        ],
+        "possible_draws": []
+      },
+      "experiments": [
+        {
+          "key": "safe",
+          "name": "Färre osäkra spikar (test)",
+          "cost": 1458,
+          "choices": [
+            "2",
+            "1X",
+            "1",
+            "1",
+            "1X2",
+            "1X2",
+            "1X2",
+            "1X2",
+            "1",
+            "1",
+            "1X2",
+            "1X2",
+            "1"
+          ],
+          "estimated_p13": 0.047277367,
+          "miss_risk_spikes": 1,
+          "x_included": 7
+        },
+        {
+          "key": "draw",
+          "name": "Titta extra på kryss (test)",
+          "cost": 1458,
+          "choices": [
+            "2",
+            "1X",
+            "1",
+            "1",
+            "1X2",
+            "1X2",
+            "1X2",
+            "1X2",
+            "1",
+            "1",
+            "1X2",
+            "1X2",
+            "1"
+          ],
+          "estimated_p13": 0.047277367,
+          "miss_risk_spikes": 1,
+          "x_included": 7
+        }
+      ]
+    },
+    {
+      "budget": 100,
+      "baseline_cost": 96,
+      "baseline_choices": [
+        "2",
+        "1",
+        "1",
+        "1",
+        "1X",
+        "12",
+        "12",
+        "12",
+        "1",
+        "1",
+        "12",
+        "1X2",
+        "1"
+      ],
+      "baseline_p13": 0.006744805,
+      "baseline_miss_risk_spikes": 2,
+      "baseline_x_included": 2,
+      "risk_report": {
+        "spikes": [
+          {
+            "number": 2,
+            "home": "Chelsea",
+            "away": "Leeds",
+            "chosen": "1",
+            "estimated_miss_probability": 0.471917,
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.24733,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 4,
+            "home": "Aston Villa",
+            "away": "Sunderland",
+            "chosen": "1",
+            "estimated_miss_probability": 0.459957,
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.247463,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 10,
+            "home": "Sheffield U",
+            "away": "Watford",
+            "chosen": "1",
+            "estimated_miss_probability": 0.417957,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.235657,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 1,
+            "home": "Newcastle",
+            "away": "Arsenal",
+            "chosen": "2",
+            "estimated_miss_probability": 0.383638,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.22133,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 3,
+            "home": "Tottenham",
+            "away": "Ipswich",
+            "chosen": "1",
+            "estimated_miss_probability": 0.372989,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.212639,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 9,
+            "home": "Middlesbrough",
+            "away": "Bristol City",
+            "chosen": "1",
+            "estimated_miss_probability": 0.310733,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.18207,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
+            "number": 13,
+            "home": "Wolverhampton",
+            "away": "Charlton",
+            "chosen": "1",
+            "estimated_miss_probability": 0.271819,
+            "high_risk": false,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.174243,
+            "cost_if_added_without_rebalancing": 192
+          }
+        ],
+        "possible_draws": [
+          {
+            "number": 8,
+            "home": "Lincoln",
+            "away": "Wrexham",
+            "x_probability": 0.281622,
+            "crowd_x_percentage": 29.0,
+            "x_minus_crowd_percentage_points": -0.838,
+            "extra_row_cost_to_include_x_alone": 144,
+            "requires_rebalancing": true
+          },
+          {
+            "number": 11,
+            "home": "Stoke",
+            "away": "Birmingham",
+            "x_probability": 0.272919,
+            "crowd_x_percentage": 27.0,
+            "x_minus_crowd_percentage_points": 0.292,
+            "extra_row_cost_to_include_x_alone": 144,
+            "requires_rebalancing": true
+          },
+          {
+            "number": 7,
+            "home": "Bolton",
+            "away": "Portsmouth",
+            "x_probability": 0.271956,
+            "crowd_x_percentage": 28.0,
+            "x_minus_crowd_percentage_points": -0.804,
+            "extra_row_cost_to_include_x_alone": 144,
+            "requires_rebalancing": true
+          }
+        ]
+      },
+      "experiments": [
+        {
+          "key": "safe",
+          "name": "Färre osäkra spikar (test)",
+          "cost": 96,
+          "choices": [
+            "2",
+            "1",
+            "1",
+            "1",
+            "1X",
+            "12",
+            "12",
+            "12",
+            "1",
+            "1",
+            "12",
+            "1X2",
+            "1"
+          ],
+          "estimated_p13": 0.006744805,
+          "miss_risk_spikes": 2,
+          "x_included": 2
+        },
+        {
+          "key": "draw",
+          "name": "Titta extra på kryss (test)",
+          "cost": 96,
+          "choices": [
+            "2",
+            "1",
+            "1",
+            "1",
+            "1X",
+            "12",
+            "12",
+            "12",
+            "1",
+            "1",
+            "12",
+            "1X2",
+            "1"
+          ],
+          "estimated_p13": 0.006744805,
+          "miss_risk_spikes": 2,
+          "x_included": 2
+        }
+      ]
+    }
+  ],
+  "disclaimer": "Experiment på förhandsodds, inte tränad förbättring eller påvisat spelvärde."
+}
