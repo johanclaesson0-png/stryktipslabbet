@@ -1,0 +1,419 @@
+{
+  "schema": "stryktipslabbet-frozen-analysis-v1",
+  "model_version": "market-no-vig-v1",
+  "draw_number": 4980,
+  "observed_at_utc": "2026-11-20T19:16:13.478819+00:00",
+  "reg_close_time": "2026-11-21T14:59:00+00:00",
+  "source": "Svenska Spel publikt API",
+  "source_snapshot_sha256": "35fa03b5c847f60be497afc9369e7d1172173f2c8fae1e288309b835a708a8e2",
+  "budget_limit": 1800,
+  "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
+  "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
+  "matches": [
+    {
+      "number": 1,
+      "home": "Newcastle",
+      "away": "Arsenal",
+      "odds": [
+        6.4,
+        4.4,
+        1.57
+      ],
+      "streck": [
+        16.0,
+        22.0,
+        62.0
+      ],
+      "p": [
+        0.153116411,
+        0.22271478,
+        0.624168809
+      ],
+      "edge": [
+        -0.006884,
+        0.002715,
+        0.004169
+      ]
+    },
+    {
+      "number": 2,
+      "home": "Chelsea",
+      "away": "Leeds",
+      "odds": [
+        1.96,
+        3.75,
+        4.1
+      ],
+      "streck": [
+        59.0,
+        26.0,
+        15.0
+      ],
+      "p": [
+        0.499821202,
+        0.261239882,
+        0.238938916
+      ],
+      "edge": [
+        -0.090179,
+        0.00124,
+        0.088939
+      ]
+    },
+    {
+      "number": 3,
+      "home": "Tottenham",
+      "away": "Ipswich",
+      "odds": [
+        1.53,
+        4.7,
+        6.5
+      ],
+      "streck": [
+        71.0,
+        18.0,
+        11.0
+      ],
+      "p": [
+        0.640649247,
+        0.208551776,
+        0.150798977
+      ],
+      "edge": [
+        -0.069351,
+        0.028552,
+        0.040799
+      ]
+    },
+    {
+      "number": 4,
+      "home": "Aston Villa",
+      "away": "Sunderland",
+      "odds": [
+        1.82,
+        4.0,
+        4.5
+      ],
+      "streck": [
+        70.0,
+        19.0,
+        11.0
+      ],
+      "p": [
+        0.53779504,
+        0.244696743,
+        0.217508216
+      ],
+      "edge": [
+        -0.162205,
+        0.054697,
+        0.107508
+      ]
+    },
+    {
+      "number": 5,
+      "home": "Bournemouth",
+      "away": "Nottingham",
+      "odds": [
+        1.98,
+        3.7,
+        4.0
+      ],
+      "streck": [
+        58.0,
+        25.0,
+        17.0
+      ],
+      "p": [
+        0.492578047,
+        0.26359582,
+        0.243826133
+      ],
+      "edge": [
+        -0.087422,
+        0.013596,
+        0.073826
+      ]
+    },
+    {
+      "number": 6,
+      "home": "Coventry",
+      "away": "Crystal Palace",
+      "odds": [
+        2.63,
+        3.4,
+        2.88
+      ],
+      "streck": [
+        41.0,
+        27.0,
+        32.0
+      ],
+      "p": [
+        0.372200514,
+        0.287908045,
+        0.339891442
+      ],
+      "edge": [
+        -0.037799,
+        0.017908,
+        0.019891
+      ]
+    },
+    {
+      "number": 7,
+      "home": "Bolton",
+      "away": "Portsmouth",
+      "odds": [
+        2.85,
+        3.5,
+        2.5
+      ],
+      "streck": [
+        33.0,
+        29.0,
+        38.0
+      ],
+      "p": [
+        0.338491296,
+        0.275628627,
+        0.385880077
+      ],
+      "edge": [
+        0.008491,
+        -0.014371,
+        0.00588
+      ]
+    },
+    {
+      "number": 8,
+      "home": "Lincoln",
+      "away": "Wrexham",
+      "odds": [
+        2.9,
+        3.4,
+        2.55
+      ],
+      "streck": [
+        28.0,
+        30.0,
+        42.0
+      ],
+      "p": [
+        0.33442623,
+        0.285245902,
+        0.380327869
+      ],
+      "edge": [
+        0.054426,
+        -0.014754,
+        -0.039672
+      ]
+    },
+    {
+      "number": 9,
+      "home": "Middlesbrough",
+      "away": "Bristol City",
+      "odds": [
+        1.38,
+        5.3,
+        8.0
+      ],
+      "streck": [
+        75.0,
+        14.0,
+        11.0
+      ],
+      "p": [
+        0.697896435,
+        0.18171643,
+        0.120387135
+      ],
+      "edge": [
+        -0.052104,
+        0.041716,
+        0.010387
+      ]
+    },
+    {
+      "number": 10,
+      "home": "Sheffield U",
+      "away": "Watford",
+      "odds": [
+        1.63,
+        4.25,
+        5.5
+      ],
+      "streck": [
+        70.0,
+        19.0,
+        11.0
+      ],
+      "p": [
+        0.595275992,
+        0.228305851,
+        0.176418158
+      ],
+      "edge": [
+        -0.104724,
+        0.038306,
+        0.066418
+      ]
+    },
+    {
+      "number": 11,
+      "home": "Stoke",
+      "away": "Birmingham",
+      "odds": [
+        2.9,
+        3.4,
+        2.5
+      ],
+      "streck": [
+        36.0,
+        31.0,
+        33.0
+      ],
+      "p": [
+        0.331901601,
+        0.283092542,
+        0.385005857
+      ],
+      "edge": [
+        -0.028098,
+        -0.026907,
+        0.055006
+      ]
+    },
+    {
+      "number": 12,
+      "home": "Swansea",
+      "away": "West Bromwich",
+      "odds": [
+        2.6,
+        3.45,
+        2.8
+      ],
+      "streck": [
+        34.0,
+        28.0,
+        38.0
+      ],
+      "p": [
+        0.372829024,
+        0.280972597,
+        0.346198379
+      ],
+      "edge": [
+        0.032829,
+        0.000973,
+        -0.033802
+      ]
+    },
+    {
+      "number": 13,
+      "home": "Wolverhampton",
+      "away": "Charlton",
+      "odds": [
+        1.35,
+        5.4,
+        9.5
+      ],
+      "streck": [
+        80.0,
+        13.0,
+        7.0
+      ],
+      "p": [
+        0.718336484,
+        0.179584121,
+        0.102079395
+      ],
+      "edge": [
+        -0.081664,
+        0.049584,
+        0.032079
+      ]
+    }
+  ],
+  "systems": [
+    {
+      "key": "balanserad",
+      "name": "Balanserad",
+      "selection_exponent": 0.0,
+      "cost": 1458,
+      "rows": 1458,
+      "choices": [
+        "2",
+        "1X",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1"
+      ],
+      "p13_estimate": 0.048842284,
+      "spikes": 6,
+      "half": 1,
+      "full": 6
+    },
+    {
+      "key": "varde",
+      "name": "Streckvärde – experiment",
+      "selection_exponent": 0.4,
+      "cost": 1458,
+      "rows": 1458,
+      "choices": [
+        "2",
+        "12",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1"
+      ],
+      "p13_estimate": 0.047411084,
+      "spikes": 6,
+      "half": 1,
+      "full": 6
+    },
+    {
+      "key": "skrall",
+      "name": "Skräll – experiment",
+      "selection_exponent": 0.85,
+      "cost": 1728,
+      "rows": 1728,
+      "choices": [
+        "2",
+        "12",
+        "1",
+        "1X2",
+        "12",
+        "1X2",
+        "12",
+        "12",
+        "1",
+        "1X",
+        "12",
+        "1X2",
+        "1"
+      ],
+      "p13_estimate": 0.033338708,
+      "spikes": 4,
+      "half": 6,
+      "full": 3
+    }
+  ]
+}
