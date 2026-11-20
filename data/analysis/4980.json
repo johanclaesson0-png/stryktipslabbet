@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-frozen-analysis-v1",
   "model_version": "market-no-vig-v1",
   "draw_number": 4980,
-  "observed_at_utc": "2026-11-19T22:09:23.397041+00:00",
+  "observed_at_utc": "2026-11-20T03:14:22.159276+00:00",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
   "source": "Svenska Spel publikt API",
-  "source_snapshot_sha256": "7a1d35343c876dc9ce8bc42977b009741849d5092e0bef30b7e231e9ba02b5f5",
+  "source_snapshot_sha256": "73ef09cceb825ddcde38d6d3a3f507002530642ee1fc80074a1f135e56aef7f7",
   "budget_limit": 1800,
   "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
   "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
@@ -20,9 +20,9 @@
         1.58
       ],
       "streck": [
+        21.0,
         22.0,
-        22.0,
-        56.0
+        57.0
       ],
       "p": [
         0.160073682,
@@ -30,9 +30,9 @@
         0.618005987
       ],
       "edge": [
-        -0.059926,
+        -0.049926,
         0.00192,
-        0.058006
+        0.048006
       ]
     },
     {
@@ -245,9 +245,9 @@
         5.5
       ],
       "streck": [
-        65.0,
+        66.0,
         20.0,
-        15.0
+        14.0
       ],
       "p": [
         0.59366246,
@@ -255,9 +255,9 @@
         0.175939966
       ],
       "edge": [
-        -0.056338,
+        -0.066338,
         0.030398,
-        0.02594
+        0.03594
       ]
     },
     {
@@ -295,8 +295,8 @@
         2.8
       ],
       "streck": [
-        38.0,
-        27.0,
+        37.0,
+        28.0,
         35.0
       ],
       "p": [
@@ -305,8 +305,8 @@
         0.347676981
       ],
       "edge": [
-        -0.00985,
-        0.012173,
+        0.00015,
+        0.002173,
         -0.002323
       ]
     },

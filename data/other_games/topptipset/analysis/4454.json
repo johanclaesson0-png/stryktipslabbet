@@ -1,0 +1,216 @@
+{
+  "schema": "stryktipslabbet-other-game-analysis-v16",
+  "game": "topptipset",
+  "name": "Topptipset",
+  "draw_number": 4454,
+  "matches": [
+    {
+      "number": 1,
+      "home": "AIK",
+      "away": "Degerfors",
+      "odds": [
+        2.28,
+        3.7,
+        3.15
+      ],
+      "streck": [
+        56.0,
+        24.0,
+        20.0
+      ],
+      "p": [
+        0.427345727,
+        0.263337367,
+        0.309316907
+      ],
+      "match_start": "2026-11-21T15:00:00+01:00"
+    },
+    {
+      "number": 2,
+      "home": "Mjällby",
+      "away": "Malmö",
+      "odds": [
+        3.4,
+        3.45,
+        2.25
+      ],
+      "streck": [
+        23.0,
+        28.0,
+        49.0
+      ],
+      "p": [
+        0.285990605,
+        0.281845814,
+        0.432163581
+      ],
+      "match_start": "2026-11-21T15:00:00+01:00"
+    },
+    {
+      "number": 3,
+      "home": "GAIS",
+      "away": "Västerås",
+      "odds": [
+        1.96,
+        3.85,
+        3.9
+      ],
+      "streck": [
+        55.0,
+        26.0,
+        19.0
+      ],
+      "p": [
+        0.497103129,
+        0.253070684,
+        0.249826188
+      ],
+      "match_start": "2026-11-21T17:30:00+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Sirius",
+      "away": "Djurgården",
+      "odds": [
+        2.4,
+        3.8,
+        2.9
+      ],
+      "streck": [
+        43.0,
+        26.0,
+        31.0
+      ],
+      "p": [
+        0.406642066,
+        0.256826568,
+        0.336531365
+      ],
+      "match_start": "2026-11-22T14:00:00+01:00"
+    },
+    {
+      "number": 5,
+      "home": "Häcken",
+      "away": "Elfsborg",
+      "odds": [
+        1.9,
+        3.9,
+        4.1
+      ],
+      "streck": [
+        62.0,
+        22.0,
+        16.0
+      ],
+      "p": [
+        0.512664315,
+        0.249759538,
+        0.237576146
+      ],
+      "match_start": "2026-11-22T14:00:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "Brommapojkarna",
+      "away": "Halmstad",
+      "odds": [
+        2.25,
+        3.7,
+        3.2
+      ],
+      "streck": [
+        46.0,
+        26.0,
+        28.0
+      ],
+      "p": [
+        0.432669468,
+        0.263109812,
+        0.30422072
+      ],
+      "match_start": "2026-11-22T16:30:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Hammarby",
+      "away": "IFK Göteborg",
+      "odds": [
+        1.28,
+        6.25,
+        12.0
+      ],
+      "streck": [
+        79.0,
+        14.0,
+        7.0
+      ],
+      "p": [
+        0.762505083,
+        0.156161041,
+        0.081333876
+      ],
+      "match_start": "2026-11-23T19:00:00+01:00"
+    },
+    {
+      "number": 8,
+      "home": "Örgryte",
+      "away": "Kalmar",
+      "odds": [
+        3.4,
+        3.6,
+        2.2
+      ],
+      "streck": [
+        42.0,
+        28.0,
+        30.0
+      ],
+      "p": [
+        0.286541245,
+        0.270622287,
+        0.442836469
+      ],
+      "match_start": "2026-11-23T19:00:00+01:00"
+    }
+  ],
+  "observed_at_utc": "2026-11-20T03:14:29.605425+00:00",
+  "source_snapshot_sha256": "3d13a956698db4db74966a22d1334c5083fc0a59be6cf24684e66da0d706c2de",
+  "reg_close_time": "2026-11-21T13:59:00+00:00",
+  "created_at_utc": "2026-11-20T03:14:29.606422+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 96,
+      "choices": [
+        "12",
+        "1X2",
+        "1X",
+        "12",
+        "1",
+        "12",
+        "1",
+        "12"
+      ],
+      "estimated_all_correct": 0.0862882798
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 96,
+      "choices": [
+        "12",
+        "1X2",
+        "12",
+        "12",
+        "12",
+        "12",
+        "1",
+        "2"
+      ],
+      "estimated_all_correct": 0.0763357014
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
+}

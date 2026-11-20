@@ -2,180 +2,180 @@
   "schema": "stryktipslabbet-other-game-v16",
   "game": "topptipset",
   "name": "Topptipset",
-  "draw_number": 4451,
-  "reg_close_time": "2026-11-20T00:29:00+00:00",
-  "observed_at_utc": "2026-11-19T22:09:26.862824+00:00",
-  "source_url": "https://api.spela.svenskaspel.se/draw/1/topptipset/draws/4451",
-  "source_snapshot_sha256": "db1121eb9697014de77235cde6c735f6c9c3ac04b0bf8fc42a1e25d1d815bff7",
+  "draw_number": 4452,
+  "reg_close_time": "2026-11-20T19:29:00+00:00",
+  "observed_at_utc": "2026-11-20T03:14:26.281124+00:00",
+  "source_url": "https://api.spela.svenskaspel.se/draw/1/topptipset/draws/4452",
+  "source_snapshot_sha256": "c1c5233729c11d992f38fcc6f380c58b4ae091ab4444514428f25ab968f8dafb",
   "with_valid_odds": 8,
   "matches": [
     {
       "number": 1,
-      "home": "Orlando City",
-      "away": "Cincinnati",
+      "home": "Athletic Bilbao",
+      "away": "Espanyol",
       "odds": [
-        2.4,
-        4.2,
-        2.63
-      ],
-      "streck": [
-        37.0,
-        29.0,
-        34.0
-      ],
-      "p": [
-        0.402580363,
-        0.230045922,
-        0.367373715
-      ],
-      "match_start": "2026-11-20T01:30:00+01:00"
-    },
-    {
-      "number": 2,
-      "home": "Seattle Sounders",
-      "away": "Real Salt Lake",
-      "odds": [
-        1.96,
-        4.0,
-        3.7
-      ],
-      "streck": [
-        51.0,
-        23.0,
-        26.0
-      ],
-      "p": [
-        0.49511575,
-        0.242606718,
-        0.262277532
-      ],
-      "match_start": "2026-11-20T04:00:00+01:00"
-    },
-    {
-      "number": 3,
-      "home": "Sao Paulo",
-      "away": "Fluminense",
-      "odds": [
-        2.45,
-        3.35,
-        3.15
-      ],
-      "streck": [
-        38.0,
-        28.0,
-        34.0
-      ],
-      "p": [
-        0.398545935,
-        0.291473893,
-        0.309980172
-      ],
-      "match_start": "2026-11-20T01:30:00+01:00"
-    },
-    {
-      "number": 4,
-      "home": "Western Sydney",
-      "away": "Adelaide",
-      "odds": [
-        1.67,
-        4.0,
-        4.2
-      ],
-      "streck": [
-        60.0,
-        23.0,
-        17.0
-      ],
-      "p": [
-        0.550928051,
-        0.230012461,
-        0.219059487
-      ],
-      "match_start": "2026-11-20T09:40:00+01:00"
-    },
-    {
-      "number": 5,
-      "home": "Kashima Antlers",
-      "away": "Shimizu S-Pulse",
-      "odds": [
-        1.5,
-        4.1,
-        6.0
-      ],
-      "streck": [
-        76.0,
-        16.0,
-        8.0
-      ],
-      "p": [
-        0.618867925,
-        0.226415094,
-        0.154716981
-      ],
-      "match_start": "2026-11-20T11:00:00+01:00"
-    },
-    {
-      "number": 6,
-      "home": "Kashiwa Reysol",
-      "away": "JEF United Chiba",
-      "odds": [
-        1.54,
-        4.1,
-        5.75
-      ],
-      "streck": [
-        81.0,
-        11.0,
-        8.0
-      ],
-      "p": [
-        0.608481313,
-        0.228551518,
-        0.162967169
-      ],
-      "match_start": "2026-11-20T11:00:00+01:00"
-    },
-    {
-      "number": 7,
-      "home": "Vissel Kobe",
-      "away": "Mito Hollyhock",
-      "odds": [
-        1.42,
-        4.3,
+        1.48,
+        4.5,
         7.5
       ],
       "streck": [
-        79.0,
-        14.0,
-        7.0
+        71.0,
+        21.0,
+        8.0
       ],
       "p": [
-        0.658082684,
-        0.217320328,
-        0.124596988
+        0.65521258,
+        0.215492137,
+        0.129295282
       ],
-      "match_start": "2026-11-20T11:00:00+01:00"
+      "match_start": "2026-11-20T21:00:00+01:00"
+    },
+    {
+      "number": 2,
+      "home": "Bayern München",
+      "away": "Köln",
+      "odds": [
+        1.09,
+        15.0,
+        23.0
+      ],
+      "streck": [
+        93.0,
+        5.0,
+        2.0
+      ],
+      "p": [
+        0.892810931,
+        0.064877594,
+        0.042311475
+      ],
+      "match_start": "2026-11-20T20:30:00+01:00"
+    },
+    {
+      "number": 3,
+      "home": "Troyes",
+      "away": "Le Havre",
+      "odds": [
+        2.18,
+        3.55,
+        3.5
+      ],
+      "streck": [
+        47.0,
+        31.0,
+        22.0
+      ],
+      "p": [
+        0.447038929,
+        0.274519681,
+        0.27844139
+      ],
+      "match_start": "2026-11-20T20:45:00+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Barnsley",
+      "away": "Sheffield W",
+      "odds": [
+        2.95,
+        3.75,
+        2.17
+      ],
+      "streck": [
+        25.0,
+        29.0,
+        46.0
+      ],
+      "p": [
+        0.31785247,
+        0.250043943,
+        0.432103588
+      ],
+      "match_start": "2026-11-20T21:00:00+01:00"
+    },
+    {
+      "number": 5,
+      "home": "Southend",
+      "away": "Boreham Wood",
+      "odds": [
+        2.88,
+        3.75,
+        2.1
+      ],
+      "streck": [
+        27.0,
+        32.0,
+        41.0
+      ],
+      "p": [
+        0.318529305,
+        0.244630506,
+        0.436840189
+      ],
+      "match_start": "2026-11-20T20:45:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "Cercle Brügge",
+      "away": "Westerlo",
+      "odds": [
+        2.02,
+        4.0,
+        3.45
+      ],
+      "streck": [
+        44.0,
+        30.0,
+        26.0
+      ],
+      "p": [
+        0.478352803,
+        0.241568165,
+        0.280079032
+      ],
+      "match_start": "2026-11-20T20:45:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Verona",
+      "away": "Cesena",
+      "odds": [
+        1.6,
+        3.9,
+        5.25
+      ],
+      "streck": [
+        60.0,
+        27.0,
+        13.0
+      ],
+      "p": [
+        0.583084152,
+        0.239214011,
+        0.177701837
+      ],
+      "match_start": "2026-11-20T20:30:00+01:00"
     },
     {
       "number": 8,
-      "home": "East Bengal",
-      "away": "SC Delhi",
+      "home": "FC Andorra",
+      "away": "Leganes",
       "odds": [
-        1.36,
-        4.5,
-        6.4
+        1.95,
+        3.5,
+        3.75
       ],
       "streck": [
-        56.0,
-        26.0,
-        18.0
+        40.0,
+        29.0,
+        31.0
       ],
       "p": [
-        0.660187053,
-        0.199523198,
-        0.140289749
+        0.481430536,
+        0.268225585,
+        0.250343879
       ],
-      "match_start": "2026-11-20T12:30:00+01:00"
+      "match_start": "2026-11-20T20:30:00+01:00"
     }
   ]
 }

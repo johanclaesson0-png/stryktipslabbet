@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-pool-value-v15",
   "version": "relative-pool-value-2026-11-14-v1",
   "draw_number": 4980,
-  "observed_at_utc": "2026-11-19T22:09:23.397041+00:00",
-  "source_snapshot_sha256": "7a1d35343c876dc9ce8bc42977b009741849d5092e0bef30b7e231e9ba02b5f5",
+  "observed_at_utc": "2026-11-20T03:14:22.159276+00:00",
+  "source_snapshot_sha256": "73ef09cceb825ddcde38d6d3a3f507002530642ee1fc80074a1f135e56aef7f7",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
-  "created_at_utc": "2026-11-19T22:09:24.696626+00:00",
+  "created_at_utc": "2026-11-20T03:14:23.250096+00:00",
   "crowd_exponent": 0.45,
   "budget_proposals": [
     {
@@ -44,13 +44,13 @@
       "changes": 4,
       "baseline": {
         "probability_cover_all_13": 0.006451269633,
-        "modelled_crowd_cover_mass": 0.01167164935,
-        "relative_concentration_ratio": 0.55273
+        "modelled_crowd_cover_mass": 0.011897597582,
+        "relative_concentration_ratio": 0.54223
       },
       "value": {
         "probability_cover_all_13": 0.006274408854,
-        "modelled_crowd_cover_mass": 0.009863674599,
-        "relative_concentration_ratio": 0.63611
+        "modelled_crowd_cover_mass": 0.010194270286,
+        "relative_concentration_ratio": 0.61548
       }
     },
     {
@@ -89,13 +89,13 @@
       "changes": 2,
       "baseline": {
         "probability_cover_all_13": 0.047053342132,
-        "modelled_crowd_cover_mass": 0.07241333736,
-        "relative_concentration_ratio": 0.64979
+        "modelled_crowd_cover_mass": 0.074840377788,
+        "relative_concentration_ratio": 0.62872
       },
       "value": {
         "probability_cover_all_13": 0.046236220272,
-        "modelled_crowd_cover_mass": 0.066231711,
-        "relative_concentration_ratio": 0.6981
+        "modelled_crowd_cover_mass": 0.06845156505,
+        "relative_concentration_ratio": 0.67546
       }
     }
   ],
@@ -110,19 +110,19 @@
         0.618005987
       ],
       "p_crowd": [
+        0.21,
         0.22,
-        0.22,
-        0.56
+        0.57
       ],
       "market_minus_crowd_pp": [
-        -5.99,
+        -4.99,
         0.19,
-        5.8
+        4.8
       ],
       "relative_underbetting": [
-        0.728,
+        0.762,
         1.009,
-        1.104
+        1.084
       ]
     },
     {
@@ -335,19 +335,19 @@
         0.175939966
       ],
       "p_crowd": [
-        0.65,
+        0.66,
         0.2,
-        0.15
+        0.14
       ],
       "market_minus_crowd_pp": [
-        -5.63,
+        -6.63,
         3.04,
-        2.59
+        3.59
       ],
       "relative_underbetting": [
-        0.913,
+        0.899,
         1.152,
-        1.173
+        1.257
       ]
     },
     {
@@ -385,18 +385,18 @@
         0.347676981
       ],
       "p_crowd": [
-        0.38,
-        0.27,
+        0.37,
+        0.28,
         0.35
       ],
       "market_minus_crowd_pp": [
-        -0.98,
-        1.22,
+        0.02,
+        0.22,
         -0.23
       ],
       "relative_underbetting": [
-        0.974,
-        1.045,
+        1.0,
+        1.008,
         0.993
       ]
     },
