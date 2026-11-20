@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4980,
-  "source_observed_at_utc": "2026-11-20T03:14:22.159276+00:00",
+  "source_observed_at_utc": "2026-11-20T11:44:09.446914+00:00",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
-  "source_snapshot_sha256": "73ef09cceb825ddcde38d6d3a3f507002530642ee1fc80074a1f135e56aef7f7",
-  "created_at_utc": "2026-11-20T03:14:22.381488+00:00",
+  "source_snapshot_sha256": "410fc7856b46ca9fdca61fd3a502c7d018020e90bec1e08a78b9f04320bbddd1",
+  "created_at_utc": "2026-11-20T11:44:10.023286+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -16,10 +16,10 @@
       "baseline_cost": 1458,
       "baseline_choices": [
         "2",
-        "1X2",
-        "1",
-        "1",
         "1X",
+        "1",
+        "1",
+        "1X2",
         "1X2",
         "1X2",
         "1X2",
@@ -29,7 +29,7 @@
         "1X2",
         "1"
       ],
-      "baseline_p13": 0.047053342,
+      "baseline_p13": 0.048435462,
       "baseline_miss_risk_spikes": 1,
       "baseline_x_included": 7,
       "risk_report": {
@@ -39,10 +39,10 @@
             "home": "Aston Villa",
             "away": "Sunderland",
             "chosen": "1",
-            "estimated_miss_probability": 0.453059,
+            "estimated_miss_probability": 0.456233,
             "high_risk": true,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.244756,
+            "extra_outcome_probability": 0.238727,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -72,10 +72,10 @@
             "home": "Tottenham",
             "away": "Ipswich",
             "chosen": "1",
-            "estimated_miss_probability": 0.372989,
+            "estimated_miss_probability": 0.368641,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.212639,
+            "extra_outcome_probability": 0.208214,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -83,10 +83,10 @@
             "home": "Middlesbrough",
             "away": "Bristol City",
             "chosen": "1",
-            "estimated_miss_probability": 0.310733,
+            "estimated_miss_probability": 0.302104,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.18207,
+            "extra_outcome_probability": 0.181716,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -110,10 +110,10 @@
           "cost": 1458,
           "choices": [
             "2",
-            "1X2",
-            "1",
-            "1",
             "1X",
+            "1",
+            "1",
+            "1X2",
             "1X2",
             "1X2",
             "1X2",
@@ -123,7 +123,7 @@
             "1X2",
             "1"
           ],
-          "estimated_p13": 0.047053342,
+          "estimated_p13": 0.048435462,
           "miss_risk_spikes": 1,
           "x_included": 7
         },
@@ -133,10 +133,10 @@
           "cost": 1458,
           "choices": [
             "2",
-            "1X2",
-            "1",
-            "1",
             "1X",
+            "1",
+            "1",
+            "1X2",
             "1X2",
             "1X2",
             "1X2",
@@ -146,7 +146,7 @@
             "1X2",
             "1"
           ],
-          "estimated_p13": 0.047053342,
+          "estimated_p13": 0.048435462,
           "miss_risk_spikes": 1,
           "x_included": 7
         }
@@ -170,7 +170,7 @@
         "12",
         "1"
       ],
-      "baseline_p13": 0.00645127,
+      "baseline_p13": 0.006568,
       "baseline_miss_risk_spikes": 2,
       "baseline_x_included": 2,
       "risk_report": {
@@ -180,10 +180,10 @@
             "home": "Chelsea",
             "away": "Leeds",
             "chosen": "1",
-            "estimated_miss_probability": 0.502715,
+            "estimated_miss_probability": 0.490421,
             "high_risk": true,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.257803,
+            "extra_outcome_probability": 0.257471,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -191,10 +191,10 @@
             "home": "Aston Villa",
             "away": "Sunderland",
             "chosen": "1",
-            "estimated_miss_probability": 0.453059,
+            "estimated_miss_probability": 0.456233,
             "high_risk": true,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.244756,
+            "extra_outcome_probability": 0.238727,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -224,10 +224,10 @@
             "home": "Tottenham",
             "away": "Ipswich",
             "chosen": "1",
-            "estimated_miss_probability": 0.372989,
+            "estimated_miss_probability": 0.368641,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.212639,
+            "extra_outcome_probability": 0.208214,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -235,10 +235,10 @@
             "home": "Middlesbrough",
             "away": "Bristol City",
             "chosen": "1",
-            "estimated_miss_probability": 0.310733,
+            "estimated_miss_probability": 0.302104,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.18207,
+            "extra_outcome_probability": 0.181716,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -265,22 +265,22 @@
             "requires_rebalancing": true
           },
           {
-            "number": 6,
-            "home": "Coventry",
-            "away": "Crystal Palace",
-            "x_probability": 0.274413,
-            "crowd_x_percentage": 27.0,
-            "x_minus_crowd_percentage_points": 0.441,
+            "number": 11,
+            "home": "Stoke",
+            "away": "Birmingham",
+            "x_probability": 0.279492,
+            "crowd_x_percentage": 30.0,
+            "x_minus_crowd_percentage_points": -2.051,
             "extra_row_cost_to_include_x_alone": 144,
             "requires_rebalancing": true
           },
           {
-            "number": 11,
-            "home": "Stoke",
-            "away": "Birmingham",
-            "x_probability": 0.272919,
-            "crowd_x_percentage": 29.0,
-            "x_minus_crowd_percentage_points": -1.708,
+            "number": 6,
+            "home": "Coventry",
+            "away": "Crystal Palace",
+            "x_probability": 0.279489,
+            "crowd_x_percentage": 27.0,
+            "x_minus_crowd_percentage_points": 0.949,
             "extra_row_cost_to_include_x_alone": 144,
             "requires_rebalancing": true
           },
@@ -288,9 +288,9 @@
             "number": 7,
             "home": "Bolton",
             "away": "Portsmouth",
-            "x_probability": 0.271956,
+            "x_probability": 0.275629,
             "crowd_x_percentage": 29.0,
-            "x_minus_crowd_percentage_points": -1.804,
+            "x_minus_crowd_percentage_points": -1.437,
             "extra_row_cost_to_include_x_alone": 144,
             "requires_rebalancing": true
           }
@@ -316,7 +316,7 @@
             "12",
             "1"
           ],
-          "estimated_p13": 0.00645127,
+          "estimated_p13": 0.006568,
           "miss_risk_spikes": 2,
           "x_included": 2
         },
@@ -339,7 +339,7 @@
             "12",
             "1"
           ],
-          "estimated_p13": 0.00645127,
+          "estimated_p13": 0.006568,
           "miss_risk_spikes": 2,
           "x_included": 2
         }
