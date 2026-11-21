@@ -1,0 +1,76 @@
+{
+  "schema": "stryktipslabbet-pool-value-settlement-v15",
+  "version": "relative-pool-value-2026-11-14-v1",
+  "draw_number": 4980,
+  "source_snapshot_sha256": "8c88fe095b323f8fd489625d17f2d3cc87b7661b9b214bb77087ded158f3b63d",
+  "report_created_at_utc": "2026-11-21T08:17:09.798551+00:00",
+  "official_result_sha256": "b9023210ef27db52d4ffc2f3e47210382e975111d4014e80a9ff85402cdd1ba8",
+  "outcome": "X21X11X2111X1",
+  "payouts": {
+    "13": 81632.0,
+    "12": 779.0,
+    "11": 54.0,
+    "10": 17.0
+  },
+  "hypothetical": true,
+  "budget_results": [
+    {
+      "budget_limit": 100,
+      "systems": [
+        {
+          "key": "baseline",
+          "cost": 96,
+          "rows_by_correct": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "paid": 0.0,
+          "net": -96.0
+        },
+        {
+          "key": "value",
+          "cost": 96,
+          "rows_by_correct": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "paid": 0.0,
+          "net": -96.0
+        }
+      ]
+    },
+    {
+      "budget_limit": 1800,
+      "systems": [
+        {
+          "key": "baseline",
+          "cost": 1458,
+          "rows_by_correct": {
+            "10": 13,
+            "11": 1,
+            "12": 0,
+            "13": 0
+          },
+          "paid": 275.0,
+          "net": -1183.0
+        },
+        {
+          "key": "value",
+          "cost": 1458,
+          "rows_by_correct": {
+            "10": 13,
+            "11": 1,
+            "12": 0,
+            "13": 0
+          },
+          "paid": 275.0,
+          "net": -1183.0
+        }
+      ]
+    }
+  ]
+}

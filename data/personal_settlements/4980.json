@@ -1,0 +1,56 @@
+{
+  "schema": "stryktipslabbet-personal-settlement-v1",
+  "draw_number": 4980,
+  "source_observed_at_utc": "2026-11-21T08:17:08.908554+00:00",
+  "source_snapshot_sha256": "8c88fe095b323f8fd489625d17f2d3cc87b7661b9b214bb77087ded158f3b63d",
+  "result_sha256": "b9023210ef27db52d4ffc2f3e47210382e975111d4014e80a9ff85402cdd1ba8",
+  "outcome": "X21X11X2111X1",
+  "payouts": {
+    "13": 81632.0,
+    "12": 779.0,
+    "11": 54.0,
+    "10": 17.0
+  },
+  "hypothetical": true,
+  "systems": [
+    {
+      "key": "balanserad",
+      "name": "Balanserad",
+      "cost": 96,
+      "count_by_correct": {
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0
+      },
+      "paid": 0.0,
+      "net": -96.0
+    },
+    {
+      "key": "varde",
+      "name": "Streckvärde – experiment",
+      "cost": 96,
+      "count_by_correct": {
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0
+      },
+      "paid": 0.0,
+      "net": -96.0
+    },
+    {
+      "key": "skrall",
+      "name": "Skräll – experiment",
+      "cost": 96,
+      "count_by_correct": {
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0
+      },
+      "paid": 0.0,
+      "net": -96.0
+    }
+  ]
+}

@@ -6839,8 +6839,34 @@
       "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4979/result",
       "verified_at_utc": "2026-11-17T08:31:00.977522+00:00",
       "time_type": "after_final_result_not_preclose"
+    },
+    "4980": {
+      "draw_number": 4980,
+      "outcome": "X21X11X2111X1",
+      "turnover_kr": 30942943,
+      "classes": {
+        "13": {
+          "winners": 153,
+          "payout_per_row_kr": 81632
+        },
+        "12": {
+          "winners": 3868,
+          "payout_per_row_kr": 779
+        },
+        "11": {
+          "winners": 44160,
+          "payout_per_row_kr": 54
+        },
+        "10": {
+          "winners": 289503,
+          "payout_per_row_kr": 17
+        }
+      },
+      "source_url": "https://api.spela.svenskaspel.se/draw/1/stryktipset/draws/4980/result",
+      "verified_at_utc": "2026-11-21T21:39:28.764850+00:00",
+      "time_type": "after_final_result_not_preclose"
     }
   },
   "scope": "Only after-close official turnover/winners/payouts; not preclose forecast inputs",
-  "updated_at_utc": "2026-11-21T16:12:51.741075+00:00"
+  "updated_at_utc": "2026-11-21T21:39:28.764850+00:00"
 }

@@ -1,42 +1,42 @@
 {
   "schema": "stryktipslabbet-evidence-gate-v19",
-  "generated_at_utc": "2026-11-21T16:12:51.346343+00:00",
+  "generated_at_utc": "2026-11-21T21:39:28.329376+00:00",
   "source_rule": "Latest verified market snapshot at least 30 minutes before draw close",
   "period_rule": "All model outputs must have been generated before close, from exactly the selected market snapshot",
   "factors": [
     {
       "factor": "form",
       "label": "Form utöver odds",
-      "status": "otillräckligt underlag",
+      "status": "ingen påvisad förbättring",
       "eligible_for_review": false,
-      "matched_draws": 0,
-      "matched_matches": 0,
-      "baseline_brier": null,
-      "factor_brier": null,
-      "baseline_logloss": null,
-      "factor_logloss": null,
-      "baseline_top1": null,
-      "factor_top1": null,
+      "matched_draws": 1,
+      "matched_matches": 10,
+      "baseline_brier": 0.581117,
+      "factor_brier": 0.583453,
+      "baseline_logloss": 0.971211,
+      "factor_logloss": 0.971377,
+      "baseline_top1": 0.5,
+      "factor_top1": 0.5,
       "brier_gain_ci95": null,
-      "system_rounds": 0,
+      "system_rounds": 1,
       "system_deltas": {
         "100": {
-          "rounds": 0,
+          "rounds": 1,
           "changed_systems": 0,
           "baseline_10plus": 0,
           "factor_10plus": 0,
           "baseline_13": 0,
           "factor_13": 0,
-          "total_net_difference": 0
+          "total_net_difference": 0.0
         },
         "1800": {
-          "rounds": 0,
+          "rounds": 1,
           "changed_systems": 0,
-          "baseline_10plus": 0,
-          "factor_10plus": 0,
+          "baseline_10plus": 1,
+          "factor_10plus": 1,
           "baseline_13": 0,
           "factor_13": 0,
-          "total_net_difference": 0
+          "total_net_difference": 0.0
         }
       }
     },
@@ -90,11 +90,11 @@
       "baseline_top1": null,
       "factor_top1": null,
       "brier_gain_ci95": null,
-      "system_rounds": 1,
+      "system_rounds": 2,
       "system_deltas": {
         "100": {
-          "rounds": 1,
-          "changed_systems": 1,
+          "rounds": 2,
+          "changed_systems": 2,
           "baseline_10plus": 1,
           "factor_10plus": 1,
           "baseline_13": 0,
@@ -102,10 +102,10 @@
           "total_net_difference": 0.0
         },
         "1800": {
-          "rounds": 1,
+          "rounds": 2,
           "changed_systems": 1,
-          "baseline_10plus": 1,
-          "factor_10plus": 1,
+          "baseline_10plus": 2,
+          "factor_10plus": 2,
           "baseline_13": 0,
           "factor_13": 0,
           "total_net_difference": 0.0
@@ -114,10 +114,10 @@
     }
   ],
   "coverage": {
-    "frozen_draws_with_result": 1,
-    "draws_with_form_inputs": 0,
+    "frozen_draws_with_result": 2,
+    "draws_with_form_inputs": 1,
     "draws_with_player_inputs": 0,
-    "draws_with_value_inputs": 1
+    "draws_with_value_inputs": 2
   },
   "policy": {
     "min_draws_for_review": 30,

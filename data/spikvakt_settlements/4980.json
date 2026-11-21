@@ -1,0 +1,97 @@
+{
+  "schema": "stryktipslabbet-spikvakt-settlement-v1",
+  "version": "spikvakt-fixed-2026-11-13-v1",
+  "draw_number": 4980,
+  "source_observed_at_utc": "2026-11-21T08:17:08.908554+00:00",
+  "report_created_at_utc": "2026-11-21T08:17:09.089445+00:00",
+  "source_snapshot_sha256": "8c88fe095b323f8fd489625d17f2d3cc87b7661b9b214bb77087ded158f3b63d",
+  "result_sha256": "b9023210ef27db52d4ffc2f3e47210382e975111d4014e80a9ff85402cdd1ba8",
+  "result_outcome": "X21X11X2111X1",
+  "hypothetical": true,
+  "budgets": [
+    {
+      "budget": 1800,
+      "baseline": {
+        "covered_matches": 11,
+        "rows_by_correct": {
+          "10": 13,
+          "11": 1,
+          "12": 0,
+          "13": 0
+        },
+        "paid": 275.0,
+        "net": -1183.0
+      },
+      "experiments": [
+        {
+          "key": "safe",
+          "cost": 1458,
+          "covered_matches": 11,
+          "rows_by_correct": {
+            "10": 13,
+            "11": 1,
+            "12": 0,
+            "13": 0
+          },
+          "paid": 275.0,
+          "net": -1183.0
+        },
+        {
+          "key": "draw",
+          "cost": 1458,
+          "covered_matches": 11,
+          "rows_by_correct": {
+            "10": 13,
+            "11": 1,
+            "12": 0,
+            "13": 0
+          },
+          "paid": 275.0,
+          "net": -1183.0
+        }
+      ]
+    },
+    {
+      "budget": 100,
+      "baseline": {
+        "covered_matches": 8,
+        "rows_by_correct": {
+          "10": 0,
+          "11": 0,
+          "12": 0,
+          "13": 0
+        },
+        "paid": 0.0,
+        "net": -96.0
+      },
+      "experiments": [
+        {
+          "key": "safe",
+          "cost": 96,
+          "covered_matches": 8,
+          "rows_by_correct": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "paid": 0.0,
+          "net": -96.0
+        },
+        {
+          "key": "draw",
+          "cost": 96,
+          "covered_matches": 8,
+          "rows_by_correct": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "paid": 0.0,
+          "net": -96.0
+        }
+      ]
+    }
+  ]
+}
