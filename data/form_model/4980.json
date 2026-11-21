@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4980,
-  "source_observed_at_utc": "2026-11-20T19:16:13.478819+00:00",
-  "source_snapshot_sha256": "35fa03b5c847f60be497afc9369e7d1172173f2c8fae1e288309b835a708a8e2",
-  "form_created_at_utc": "2026-11-20T19:16:13.717454+00:00",
-  "form_sha256": "83a5a5a3a8c6cbe82dde73280c64992d2526a12f4fee763c3791003e172912d3",
+  "source_observed_at_utc": "2026-11-21T00:50:39.967587+00:00",
+  "source_snapshot_sha256": "8b2ca9cb7d9ea823c47b4f70fc252aad4f9d4ae8d3e79c873c1603eeaf11a912",
+  "form_created_at_utc": "2026-11-21T00:50:40.307448+00:00",
+  "form_sha256": "b555d1525e937f724a14c83f8151d18620e617348ac5098347f3391d6cfdabe5",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
-  "created_at_utc": "2026-11-20T19:16:14.267348+00:00",
+  "created_at_utc": "2026-11-21T00:50:41.172288+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -94,14 +94,14 @@
       "home": "Aston Villa",
       "away": "Sunderland",
       "market_p": [
-        0.53779504,
-        0.244696743,
-        0.217508216
+        0.534771425,
+        0.247754863,
+        0.217473713
       ],
       "form_p": [
-        0.545402806,
-        0.242661326,
-        0.211935868
+        0.542372933,
+        0.245710551,
+        0.211916516
       ],
       "delta_pp": [
         0.76,
@@ -120,19 +120,19 @@
       "home": "Bournemouth",
       "away": "Nottingham",
       "market_p": [
-        0.492578047,
-        0.26359582,
-        0.243826133
+        0.490805796,
+        0.266245336,
+        0.242948869
       ],
       "form_p": [
-        0.480130911,
-        0.264971646,
-        0.254897443
+        0.478394459,
+        0.267629965,
+        0.253975576
       ],
       "delta_pp": [
         -1.24,
         0.14,
-        1.11
+        1.1
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -146,14 +146,14 @@
       "home": "Coventry",
       "away": "Crystal Palace",
       "market_p": [
-        0.372200514,
-        0.287908045,
-        0.339891442
+        0.368842588,
+        0.291771003,
+        0.339386409
       ],
       "form_p": [
-        0.372200514,
-        0.287908045,
-        0.339891442
+        0.368842588,
+        0.291771003,
+        0.339386409
       ],
       "delta_pp": [
         0.0,
@@ -384,9 +384,9 @@
         "12",
         "1"
       ],
-      "original_market_p13": 0.006473502,
-      "new_form_p13": 0.007014433,
-      "new_market_baseline_p13": 0.006473502,
+      "original_market_p13": 0.006444574,
+      "new_form_p13": 0.006984096,
+      "new_market_baseline_p13": 0.006444574,
       "different_matches": 0
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1"
       ],
-      "original_market_p13": 0.048842284,
-      "new_form_p13": 0.05388897,
-      "new_market_baseline_p13": 0.048842284,
+      "original_market_p13": 0.048567681,
+      "new_form_p13": 0.053589601,
+      "new_market_baseline_p13": 0.048567681,
       "different_matches": 0
     }
   ],
