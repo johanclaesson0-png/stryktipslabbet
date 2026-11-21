@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4980,
-  "source_observed_at_utc": "2026-11-21T00:50:39.967587+00:00",
+  "source_observed_at_utc": "2026-11-21T08:17:08.908554+00:00",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
-  "source_snapshot_sha256": "8b2ca9cb7d9ea823c47b4f70fc252aad4f9d4ae8d3e79c873c1603eeaf11a912",
-  "created_at_utc": "2026-11-21T00:50:40.220437+00:00",
+  "source_snapshot_sha256": "8c88fe095b323f8fd489625d17f2d3cc87b7661b9b214bb77087ded158f3b63d",
+  "created_at_utc": "2026-11-21T08:17:09.089445+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -16,10 +16,10 @@
       "baseline_cost": 1458,
       "baseline_choices": [
         "2",
-        "1X",
-        "1",
-        "1",
         "1X2",
+        "1",
+        "1",
+        "1X",
         "1X2",
         "1X2",
         "1X2",
@@ -29,7 +29,7 @@
         "1X2",
         "1"
       ],
-      "baseline_p13": 0.048567681,
+      "baseline_p13": 0.049906268,
       "baseline_miss_risk_spikes": 1,
       "baseline_x_included": 7,
       "risk_report": {
@@ -39,10 +39,10 @@
             "home": "Aston Villa",
             "away": "Sunderland",
             "chosen": "1",
-            "estimated_miss_probability": 0.465229,
+            "estimated_miss_probability": 0.453059,
             "high_risk": true,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.247755,
+            "extra_outcome_probability": 0.244756,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -61,10 +61,10 @@
             "home": "Newcastle",
             "away": "Arsenal",
             "chosen": "2",
-            "estimated_miss_probability": 0.375831,
+            "estimated_miss_probability": 0.378116,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.222715,
+            "extra_outcome_probability": 0.221899,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -110,10 +110,10 @@
           "cost": 1458,
           "choices": [
             "2",
-            "1X",
-            "1",
-            "1",
             "1X2",
+            "1",
+            "1",
+            "1X",
             "1X2",
             "1X2",
             "1X2",
@@ -123,7 +123,7 @@
             "1X2",
             "1"
           ],
-          "estimated_p13": 0.048567681,
+          "estimated_p13": 0.049906268,
           "miss_risk_spikes": 1,
           "x_included": 7
         },
@@ -133,10 +133,10 @@
           "cost": 1458,
           "choices": [
             "2",
-            "1X",
-            "1",
-            "1",
             "1X2",
+            "1",
+            "1",
+            "1X",
             "1X2",
             "1X2",
             "1X2",
@@ -146,7 +146,7 @@
             "1X2",
             "1"
           ],
-          "estimated_p13": 0.048567681,
+          "estimated_p13": 0.049906268,
           "miss_risk_spikes": 1,
           "x_included": 7
         }
@@ -157,10 +157,10 @@
       "baseline_cost": 96,
       "baseline_choices": [
         "2",
-        "1",
-        "1",
-        "1",
         "1X",
+        "1",
+        "1",
+        "1",
         "1X2",
         "12",
         "12",
@@ -170,20 +170,20 @@
         "12",
         "1"
       ],
-      "baseline_p13": 0.006444574,
+      "baseline_p13": 0.00643659,
       "baseline_miss_risk_spikes": 2,
       "baseline_x_included": 2,
       "risk_report": {
         "spikes": [
           {
-            "number": 2,
-            "home": "Chelsea",
-            "away": "Leeds",
+            "number": 5,
+            "home": "Bournemouth",
+            "away": "Nottingham",
             "chosen": "1",
-            "estimated_miss_probability": 0.500179,
+            "estimated_miss_probability": 0.496533,
             "high_risk": true,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.26124,
+            "extra_outcome_probability": 0.26398,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -191,10 +191,10 @@
             "home": "Aston Villa",
             "away": "Sunderland",
             "chosen": "1",
-            "estimated_miss_probability": 0.465229,
+            "estimated_miss_probability": 0.453059,
             "high_risk": true,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.247755,
+            "extra_outcome_probability": 0.244756,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -213,10 +213,10 @@
             "home": "Newcastle",
             "away": "Arsenal",
             "chosen": "2",
-            "estimated_miss_probability": 0.375831,
+            "estimated_miss_probability": 0.378116,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.222715,
+            "extra_outcome_probability": 0.221899,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -258,9 +258,9 @@
             "number": 8,
             "home": "Lincoln",
             "away": "Wrexham",
-            "x_probability": 0.285246,
+            "x_probability": 0.288692,
             "crowd_x_percentage": 30.0,
-            "x_minus_crowd_percentage_points": -1.475,
+            "x_minus_crowd_percentage_points": -1.131,
             "extra_row_cost_to_include_x_alone": 144,
             "requires_rebalancing": true
           },
@@ -268,9 +268,9 @@
             "number": 11,
             "home": "Stoke",
             "away": "Birmingham",
-            "x_probability": 0.283093,
+            "x_probability": 0.285246,
             "crowd_x_percentage": 31.0,
-            "x_minus_crowd_percentage_points": -2.691,
+            "x_minus_crowd_percentage_points": -2.475,
             "extra_row_cost_to_include_x_alone": 144,
             "requires_rebalancing": true
           },
@@ -303,10 +303,10 @@
           "cost": 96,
           "choices": [
             "2",
-            "1",
-            "1",
-            "1",
             "1X",
+            "1",
+            "1",
+            "1",
             "1X2",
             "12",
             "12",
@@ -316,7 +316,7 @@
             "12",
             "1"
           ],
-          "estimated_p13": 0.006444574,
+          "estimated_p13": 0.00643659,
           "miss_risk_spikes": 2,
           "x_included": 2
         },
@@ -326,10 +326,10 @@
           "cost": 96,
           "choices": [
             "2",
-            "1",
-            "1",
-            "1",
             "1X",
+            "1",
+            "1",
+            "1",
             "1X2",
             "12",
             "12",
@@ -339,7 +339,7 @@
             "12",
             "1"
           ],
-          "estimated_p13": 0.006444574,
+          "estimated_p13": 0.00643659,
           "miss_risk_spikes": 2,
           "x_included": 2
         }

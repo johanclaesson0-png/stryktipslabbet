@@ -2,11 +2,11 @@
   "schema": "stryktipslabbet-personal-100-v1",
   "draw_number": 4980,
   "model_version": "market-no-vig-v1",
-  "original_observed_at_utc": "2026-11-21T00:50:39.967587+00:00",
+  "original_observed_at_utc": "2026-11-21T08:17:08.908554+00:00",
   "reg_close_time": "2026-11-21T14:59:00+00:00",
-  "created_at_utc": "2026-11-21T00:50:40.140080+00:00",
+  "created_at_utc": "2026-11-21T08:17:09.033966+00:00",
   "derived_before_close": true,
-  "source_snapshot_sha256": "8b2ca9cb7d9ea823c47b4f70fc252aad4f9d4ae8d3e79c873c1603eeaf11a912",
+  "source_snapshot_sha256": "8c88fe095b323f8fd489625d17f2d3cc87b7661b9b214bb77087ded158f3b63d",
   "max_budget": 100,
   "note": "Hypotetiska system; sannolikheter bygger på normaliserade odds, ingen bekräftad överavkastning.",
   "systems": [
@@ -17,10 +17,10 @@
       "rows": 96,
       "choices": [
         "2",
-        "1",
-        "1",
-        "1",
         "1X",
+        "1",
+        "1",
+        "1",
         "1X2",
         "12",
         "12",
@@ -30,7 +30,7 @@
         "12",
         "1"
       ],
-      "probability_all_13": 0.006444574,
+      "probability_all_13": 0.00643659,
       "singles": 7,
       "doubles": 5,
       "triples": 1
@@ -55,7 +55,7 @@
         "12",
         "1"
       ],
-      "probability_all_13": 0.006175433,
+      "probability_all_13": 0.006312534,
       "singles": 7,
       "doubles": 5,
       "triples": 1
@@ -76,11 +76,11 @@
         "12",
         "1",
         "1",
-        "2",
         "12",
+        "1",
         "1"
       ],
-      "probability_all_13": 0.004665121,
+      "probability_all_13": 0.004519755,
       "singles": 7,
       "doubles": 5,
       "triples": 1
