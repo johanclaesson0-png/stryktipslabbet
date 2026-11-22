@@ -14,9 +14,9 @@
         5.1
       ],
       "streck": [
-        65.0,
-        22.0,
-        13.0
+        68.0,
+        20.0,
+        12.0
       ],
       "p": [
         0.605852195,
@@ -35,9 +35,9 @@
         4.3
       ],
       "streck": [
-        74.0,
-        12.0,
-        14.0
+        69.0,
+        14.0,
+        17.0
       ],
       "p": [
         0.478170122,
@@ -57,8 +57,8 @@
       ],
       "streck": [
         25.0,
-        21.0,
-        54.0
+        25.0,
+        50.0
       ],
       "p": [
         0.41790343,
@@ -78,8 +78,8 @@
       ],
       "streck": [
         68.0,
-        11.0,
-        21.0
+        16.0,
+        16.0
       ],
       "p": [
         0.458821409,
@@ -98,9 +98,9 @@
         3.0
       ],
       "streck": [
-        44.0,
-        38.0,
-        18.0
+        45.0,
+        33.0,
+        22.0
       ],
       "p": [
         0.423387097,
@@ -113,47 +113,104 @@
       "number": 6,
       "home": "Al Ain FC",
       "away": "Esteghlal",
-      "odds": null,
-      "streck": [
-        63.0,
-        29.0,
-        8.0
+      "odds": [
+        1.58,
+        3.9,
+        5.4
       ],
-      "p": null,
+      "streck": [
+        65.0,
+        25.0,
+        10.0
+      ],
+      "p": [
+        0.589025004,
+        0.238630643,
+        0.172344353
+      ],
       "match_start": "2026-11-23T17:00:00+01:00"
     },
     {
       "number": 7,
       "home": "Al-Shamal",
       "away": "Al Ahli",
-      "odds": null,
-      "streck": [
-        23.0,
-        5.0,
-        72.0
+      "odds": [
+        3.75,
+        3.8,
+        1.85
       ],
-      "p": null,
+      "streck": [
+        21.0,
+        13.0,
+        66.0
+      ],
+      "p": [
+        0.249136174,
+        0.245858067,
+        0.505005759
+      ],
       "match_start": "2026-11-23T17:00:00+01:00"
     },
     {
       "number": 8,
       "home": "Tractor Sport Club",
       "away": "Al-Wasl FC",
-      "odds": null,
-      "streck": [
-        57.0,
-        27.0,
-        16.0
+      "odds": [
+        3.45,
+        3.35,
+        2.08
       ],
-      "p": null,
+      "streck": [
+        54.0,
+        31.0,
+        15.0
+      ],
+      "p": [
+        0.271112581,
+        0.279205494,
+        0.449681925
+      ],
       "match_start": "2026-11-23T17:00:00+01:00"
     }
   ],
-  "observed_at_utc": "2026-11-22T01:35:50.065660+00:00",
-  "source_snapshot_sha256": "0abf430d8a2f44a6d6ca9e60d8f549f8e0487359fcd2429696f871d2044f3d2e",
+  "observed_at_utc": "2026-11-22T08:51:11.716429+00:00",
+  "source_snapshot_sha256": "2c75d5d96425560fa46e322a6058d8a6bb2a39276a2fba4882cfcb695fce06b4",
   "reg_close_time": "2026-11-22T23:06:00+00:00",
-  "created_at_utc": "2026-11-22T01:35:50.066695+00:00",
-  "systems": [],
-  "complete_odds": false,
-  "note": "Verklig kupong men otillräckliga odds för systemförslag."
+  "created_at_utc": "2026-11-22T08:51:11.717025+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 96,
+      "choices": [
+        "1",
+        "1X",
+        "12",
+        "12",
+        "12",
+        "1",
+        "12",
+        "1X2"
+      ],
+      "estimated_all_correct": 0.0862511839
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 81,
+      "choices": [
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2",
+        "1",
+        "1X2",
+        "2"
+      ],
+      "estimated_all_correct": 0.0670628156
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
 }
