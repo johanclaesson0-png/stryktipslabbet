@@ -1,10 +1,10 @@
 {
   "schema": "stryktipslabbet-team-form-v1",
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-23T03:08:39.907708+00:00",
+  "source_observed_at_utc": "2026-11-23T12:37:50.996189+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "60103410a9cd06511e73bd0bc65aa90b08ed761b49d0ce17c9a638044a352e61",
-  "created_at_utc": "2026-11-23T03:08:40.193588+00:00",
+  "source_snapshot_sha256": "52db44c71a524ab7656bef56b29c9cd3387cc71ddea4587b036d75189dbdebab",
+  "created_at_utc": "2026-11-23T12:37:51.276626+00:00",
   "cutoff_date_exclusive": "2026-11-23",
   "source": "OpenFootball football.json · CC0 1.0",
   "league_files_read": 79,
@@ -17,14 +17,14 @@
       "home": "Ipswich",
       "away": "Aston Villa",
       "market_p": [
-        0.280536843,
-        0.24502585,
-        0.474437307
+        0.276303597,
+        0.245219442,
+        0.478476961
       ],
       "streck": [
-        51.0,
+        48.0,
         22.0,
-        27.0
+        30.0
       ],
       "home_form": {
         "canonical_name": "ipswich town",
@@ -194,13 +194,13 @@
       "home": "Manchester United",
       "away": "Brentford",
       "market_p": [
-        0.483159618,
-        0.244637781,
-        0.272202601
+        0.486486486,
+        0.243243243,
+        0.27027027
       ],
       "streck": [
-        49.0,
-        25.0,
+        50.0,
+        24.0,
         26.0
       ],
       "home_form": {
@@ -371,14 +371,14 @@
       "home": "Leeds",
       "away": "Coventry",
       "market_p": [
-        0.611584123,
-        0.227365392,
-        0.161050486
+        0.633253951,
+        0.216713574,
+        0.150032475
       ],
       "streck": [
-        46.0,
-        24.0,
-        30.0
+        52.0,
+        22.0,
+        26.0
       ],
       "home_form": {
         "canonical_name": "leeds united",
@@ -507,9 +507,9 @@
         0.166321568
       ],
       "streck": [
-        46.0,
-        26.0,
-        28.0
+        51.0,
+        24.0,
+        25.0
       ],
       "home_form": {
         "canonical_name": "birmingham city",
@@ -684,8 +684,8 @@
         0.302579439
       ],
       "streck": [
-        43.0,
-        28.0,
+        44.0,
+        27.0,
         29.0
       ],
       "home_form": {
@@ -862,8 +862,8 @@
       ],
       "streck": [
         46.0,
-        25.0,
-        29.0
+        26.0,
+        28.0
       ],
       "home_form": {
         "canonical_name": "millwall",
@@ -1038,9 +1038,9 @@
         0.261117527
       ],
       "streck": [
-        43.0,
-        26.0,
-        31.0
+        47.0,
+        25.0,
+        28.0
       ],
       "home_form": {
         "canonical_name": "west bromwich albion",
@@ -1216,8 +1216,8 @@
       ],
       "streck": [
         44.0,
-        27.0,
-        29.0
+        28.0,
+        28.0
       ],
       "home_form": {
         "canonical_name": "queens park rangers",
@@ -1387,14 +1387,14 @@
       "home": "West Ham",
       "away": "Stoke",
       "market_p": [
-        0.661052963,
-        0.201070276,
-        0.137876761
+        0.648773006,
+        0.207055215,
+        0.144171779
       ],
       "streck": [
-        45.0,
-        25.0,
-        30.0
+        47.0,
+        24.0,
+        29.0
       ],
       "home_form": {
         "canonical_name": "west ham",
@@ -1472,14 +1472,14 @@
       "home": "Wrexham",
       "away": "Portsmouth",
       "market_p": [
-        0.447519868,
-        0.280186352,
-        0.272293779
+        0.461106656,
+        0.280673617,
+        0.258219727
       ],
       "streck": [
-        46.0,
+        48.0,
         26.0,
-        28.0
+        26.0
       ],
       "home_form": {
         "canonical_name": "wrexham",
@@ -1654,9 +1654,9 @@
         0.21339207
       ],
       "streck": [
-        44.0,
+        46.0,
         26.0,
-        30.0
+        28.0
       ],
       "home_form": {
         "canonical_name": "luton town",
@@ -1826,14 +1826,14 @@
       "home": "Sheffield W",
       "away": "Reading",
       "market_p": [
-        0.403329065,
-        0.261043534,
-        0.335627401
+        0.40436457,
+        0.260590501,
+        0.335044929
       ],
       "streck": [
-        45.0,
-        26.0,
-        29.0
+        47.0,
+        25.0,
+        28.0
       ],
       "home_form": {
         "canonical_name": "sheffield wednesday",
@@ -2008,9 +2008,9 @@
         0.342360756
       ],
       "streck": [
-        44.0,
+        43.0,
         28.0,
-        28.0
+        29.0
       ],
       "home_form": {
         "canonical_name": "wycombe",
