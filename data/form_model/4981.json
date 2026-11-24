@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-23T12:37:50.996189+00:00",
-  "source_snapshot_sha256": "52db44c71a524ab7656bef56b29c9cd3387cc71ddea4587b036d75189dbdebab",
-  "form_created_at_utc": "2026-11-23T12:37:51.276626+00:00",
-  "form_sha256": "6a97a668ee3b930de901e5e5760b6dfd24a09a57a5b8a03688953a75c1a620b8",
+  "source_observed_at_utc": "2026-11-24T00:23:39.531823+00:00",
+  "source_snapshot_sha256": "32006e3ad440c7c0f7ba0c57ffadd29a1959cceb02df27b849398a7b3aaba649",
+  "form_created_at_utc": "2026-11-24T00:23:39.879820+00:00",
+  "form_sha256": "c0cb626b48bee877704d9257da43df96c9552adc649e888006a57c75b926b035",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-23T12:37:51.966847+00:00",
+  "created_at_utc": "2026-11-24T00:23:42.932302+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -42,19 +42,19 @@
       "home": "Manchester United",
       "away": "Brentford",
       "market_p": [
-        0.486486486,
-        0.243243243,
-        0.27027027
+        0.479697318,
+        0.244645632,
+        0.27565705
       ],
       "form_p": [
-        0.484037761,
-        0.243442897,
-        0.272519342
+        0.477244514,
+        0.244826814,
+        0.277928672
       ],
       "delta_pp": [
-        -0.24,
+        -0.25,
         0.02,
-        0.22
+        0.23
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -94,19 +94,19 @@
       "home": "Birmingham",
       "away": "Bolton",
       "market_p": [
-        0.614436365,
-        0.219242067,
-        0.166321568
+        0.625569736,
+        0.21547402,
+        0.158956244
       ],
       "form_p": [
-        0.61974638,
-        0.217452712,
-        0.162800908
+        0.630797529,
+        0.21365498,
+        0.155547491
       ],
       "delta_pp": [
-        0.53,
+        0.52,
         -0.18,
-        -0.35
+        -0.34
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -250,18 +250,18 @@
       "home": "Wrexham",
       "away": "Portsmouth",
       "market_p": [
-        0.461106656,
-        0.280673617,
-        0.258219727
+        0.4529416,
+        0.285086772,
+        0.261971628
       ],
       "form_p": [
-        0.452294843,
-        0.28143384,
-        0.266271317
+        0.444159248,
+        0.285777507,
+        0.270063245
       ],
       "delta_pp": [
         -0.88,
-        0.08,
+        0.07,
         0.81
       ],
       "data_coverage": "båda",
@@ -384,9 +384,9 @@
         "12",
         "1X2"
       ],
-      "original_market_p13": 0.003231729,
-      "new_form_p13": 0.003555736,
-      "new_market_baseline_p13": 0.003093857,
+      "original_market_p13": 0.003227959,
+      "new_form_p13": 0.003549907,
+      "new_market_baseline_p13": 0.003090248,
       "different_matches": 2
     },
     {
@@ -402,9 +402,9 @@
         "1X2",
         "1X2",
         "1",
-        "1X",
-        "1",
         "1X2",
+        "1",
+        "12",
         "1X2"
       ],
       "new_choices": [
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.023655903,
-      "new_form_p13": 0.026008543,
-      "new_market_baseline_p13": 0.023479634,
+      "original_market_p13": 0.023672526,
+      "new_form_p13": 0.026100793,
+      "new_market_baseline_p13": 0.023571469,
       "different_matches": 3
     }
   ],

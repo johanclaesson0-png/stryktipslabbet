@@ -1,0 +1,216 @@
+{
+  "schema": "stryktipslabbet-other-game-analysis-v16",
+  "game": "topptipset",
+  "name": "Topptipset",
+  "draw_number": 4462,
+  "matches": [
+    {
+      "number": 1,
+      "home": "San Jose Earthquakes",
+      "away": "Houston Dynamo",
+      "odds": [
+        2.18,
+        3.7,
+        3.3
+      ],
+      "streck": [
+        66.0,
+        18.0,
+        16.0
+      ],
+      "p": [
+        0.444484893,
+        0.261885693,
+        0.293629414
+      ],
+      "match_start": "2026-11-25T04:00:00+01:00"
+    },
+    {
+      "number": 2,
+      "home": "Millonarios",
+      "away": "Bucaramanga",
+      "odds": [
+        1.47,
+        4.25,
+        6.75
+      ],
+      "streck": [
+        47.0,
+        35.0,
+        18.0
+      ],
+      "p": [
+        0.639525163,
+        0.221200468,
+        0.139274369
+      ],
+      "match_start": "2026-11-25T00:20:00+01:00"
+    },
+    {
+      "number": 3,
+      "home": "América De Cali",
+      "away": "Deportivo Cali",
+      "odds": [
+        1.96,
+        3.4,
+        3.85
+      ],
+      "streck": [
+        54.0,
+        30.0,
+        16.0
+      ],
+      "p": [
+        0.479487179,
+        0.276410256,
+        0.244102564
+      ],
+      "match_start": "2026-11-25T02:30:00+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Mito Hollyhock",
+      "away": "Tokyo Verdy",
+      "odds": [
+        2.7,
+        3.05,
+        2.65
+      ],
+      "streck": [
+        35.0,
+        26.0,
+        39.0
+      ],
+      "p": [
+        0.34433912,
+        0.304824795,
+        0.350836085
+      ],
+      "match_start": "2026-11-25T11:00:00+01:00"
+    },
+    {
+      "number": 5,
+      "home": "Fagiano Okayama",
+      "away": "Shimizu S-Pulse",
+      "odds": [
+        1.98,
+        3.3,
+        3.8
+      ],
+      "streck": [
+        63.0,
+        23.0,
+        14.0
+      ],
+      "p": [
+        0.47146402,
+        0.282878412,
+        0.245657568
+      ],
+      "match_start": "2026-11-25T11:00:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "JEF United Chiba",
+      "away": "Nagoya Grampus",
+      "odds": [
+        3.15,
+        3.5,
+        2.14
+      ],
+      "streck": [
+        16.0,
+        34.0,
+        50.0
+      ],
+      "p": [
+        0.296563193,
+        0.266906874,
+        0.436529933
+      ],
+      "match_start": "2026-11-25T11:00:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "FC Tokyo",
+      "away": "Sanfrecce Hiroshima",
+      "odds": [
+        2.48,
+        3.55,
+        2.6
+      ],
+      "streck": [
+        43.0,
+        16.0,
+        41.0
+      ],
+      "p": [
+        0.377011682,
+        0.263377175,
+        0.359611143
+      ],
+      "match_start": "2026-11-25T11:00:00+01:00"
+    },
+    {
+      "number": 8,
+      "home": "Avispa Fukuoka",
+      "away": "Yokohama F Marinos",
+      "odds": [
+        2.6,
+        3.25,
+        2.65
+      ],
+      "streck": [
+        40.0,
+        30.0,
+        30.0
+      ],
+      "p": [
+        0.359565807,
+        0.287652646,
+        0.352781547
+      ],
+      "match_start": "2026-11-25T11:00:00+01:00"
+    }
+  ],
+  "observed_at_utc": "2026-11-24T00:23:47.582139+00:00",
+  "source_snapshot_sha256": "a8d73191ddb12dbebe1621ac498075a381316e8381eb4d8a5702d314439d5fd4",
+  "reg_close_time": "2026-11-24T23:19:00+00:00",
+  "created_at_utc": "2026-11-24T00:23:47.583275+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 96,
+      "choices": [
+        "12",
+        "1",
+        "1",
+        "1X2",
+        "1X",
+        "12",
+        "12",
+        "12"
+      ],
+      "estimated_all_correct": 0.0656784556
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 96,
+      "choices": [
+        "12",
+        "1",
+        "1",
+        "1X2",
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "estimated_all_correct": 0.0624377423
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
+}

@@ -2,12 +2,12 @@
   "schema": "stryktipslabbet-market-moves-v1",
   "version": "movement-observed-v13-20261113",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-23T12:37:50.996189+00:00",
+  "observed_at_utc": "2026-11-24T00:23:39.531823+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "52db44c71a524ab7656bef56b29c9cd3387cc71ddea4587b036d75189dbdebab",
-  "created_at_utc": "2026-11-23T12:37:51.900986+00:00",
+  "source_snapshot_sha256": "32006e3ad440c7c0f7ba0c57ffadd29a1959cceb02df27b849398a7b3aaba649",
+  "created_at_utc": "2026-11-24T00:23:42.850222+00:00",
   "first_observation_at_utc": "2026-11-23T03:08:39.907708+00:00",
-  "observation_count": 2,
+  "observation_count": 3,
   "source_observations": [
     {
       "at_utc": "2026-11-23T03:08:39.907708+00:00",
@@ -16,6 +16,10 @@
     {
       "at_utc": "2026-11-23T12:37:50.996189+00:00",
       "snapshot_sha256": "52db44c71a524ab7656bef56b29c9cd3387cc71ddea4587b036d75189dbdebab"
+    },
+    {
+      "at_utc": "2026-11-24T00:23:39.531823+00:00",
+      "snapshot_sha256": "32006e3ad440c7c0f7ba0c57ffadd29a1959cceb02df27b849398a7b3aaba649"
     }
   ],
   "matches": [
@@ -59,6 +63,24 @@
             4.0,
             2.05
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.276303597,
+            0.245219442,
+            0.478476961
+          ],
+          "streck": [
+            45.0,
+            23.0,
+            32.0
+          ],
+          "odds": [
+            3.55,
+            4.0,
+            2.05
+          ]
         }
       ],
       "market_delta_pp": [
@@ -67,14 +89,14 @@
         0.4
       ],
       "streck_delta_pp": [
-        -3.0,
-        0.0,
-        3.0
+        -6.0,
+        1.0,
+        5.0
       ],
       "largest_movement_sign": "1",
       "largest_abs_market_movement_pp": 0.42,
       "notable_market_movement": false,
-      "notable_crowd_movement": false
+      "notable_crowd_movement": true
     },
     {
       "number": 2,
@@ -116,12 +138,30 @@
             4.0,
             3.6
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.479697318,
+            0.244645632,
+            0.27565705
+          ],
+          "streck": [
+            50.0,
+            24.0,
+            26.0
+          ],
+          "odds": [
+            2.04,
+            4.0,
+            3.55
+          ]
         }
       ],
       "market_delta_pp": [
-        0.33,
-        -0.14,
-        -0.19
+        -0.35,
+        0.0,
+        0.35
       ],
       "streck_delta_pp": [
         1.0,
@@ -129,7 +169,7 @@
         0.0
       ],
       "largest_movement_sign": "1",
-      "largest_abs_market_movement_pp": 0.33,
+      "largest_abs_market_movement_pp": 0.35,
       "notable_market_movement": false,
       "notable_crowd_movement": false
     },
@@ -173,6 +213,24 @@
             4.5,
             6.5
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.633253951,
+            0.216713574,
+            0.150032475
+          ],
+          "streck": [
+            55.0,
+            21.0,
+            24.0
+          ],
+          "odds": [
+            1.54,
+            4.5,
+            6.5
+          ]
         }
       ],
       "market_delta_pp": [
@@ -181,9 +239,9 @@
         -1.1
       ],
       "streck_delta_pp": [
-        6.0,
-        -2.0,
-        -4.0
+        9.0,
+        -3.0,
+        -6.0
       ],
       "largest_movement_sign": "1",
       "largest_abs_market_movement_pp": 2.17,
@@ -230,20 +288,38 @@
             4.4,
             5.8
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.625569736,
+            0.21547402,
+            0.158956244
+          ],
+          "streck": [
+            55.0,
+            22.0,
+            23.0
+          ],
+          "odds": [
+            1.55,
+            4.5,
+            6.1
+          ]
         }
       ],
       "market_delta_pp": [
-        0.0,
-        0.0,
-        0.0
+        1.11,
+        -0.38,
+        -0.74
       ],
       "streck_delta_pp": [
-        5.0,
-        -2.0,
-        -3.0
+        9.0,
+        -4.0,
+        -5.0
       ],
       "largest_movement_sign": "1",
-      "largest_abs_market_movement_pp": 0.0,
+      "largest_abs_market_movement_pp": 1.11,
       "notable_market_movement": false,
       "notable_crowd_movement": true
     },
@@ -272,6 +348,24 @@
         },
         {
           "at_utc": "2026-11-23T12:37:50.996189+00:00",
+          "p": [
+            0.424672897,
+            0.272747664,
+            0.302579439
+          ],
+          "streck": [
+            44.0,
+            27.0,
+            29.0
+          ],
+          "odds": [
+            2.28,
+            3.55,
+            3.2
+          ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
           "p": [
             0.424672897,
             0.272747664,
@@ -344,6 +438,24 @@
             3.7,
             3.35
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.447577952,
+            0.26249842,
+            0.289923628
+          ],
+          "streck": [
+            47.0,
+            26.0,
+            27.0
+          ],
+          "odds": [
+            2.17,
+            3.7,
+            3.35
+          ]
         }
       ],
       "market_delta_pp": [
@@ -352,9 +464,9 @@
         0.0
       ],
       "streck_delta_pp": [
-        0.0,
         1.0,
-        -1.0
+        1.0,
+        -2.0
       ],
       "largest_movement_sign": "1",
       "largest_abs_market_movement_pp": 0.0,
@@ -401,6 +513,24 @@
             3.55,
             3.7
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.466731811,
+            0.272150662,
+            0.261117527
+          ],
+          "streck": [
+            49.0,
+            24.0,
+            27.0
+          ],
+          "odds": [
+            2.07,
+            3.55,
+            3.7
+          ]
         }
       ],
       "market_delta_pp": [
@@ -409,14 +539,14 @@
         0.0
       ],
       "streck_delta_pp": [
-        4.0,
-        -1.0,
-        -3.0
+        6.0,
+        -2.0,
+        -4.0
       ],
       "largest_movement_sign": "1",
       "largest_abs_market_movement_pp": 0.0,
       "notable_market_movement": false,
-      "notable_crowd_movement": false
+      "notable_crowd_movement": true
     },
     {
       "number": 8,
@@ -443,6 +573,24 @@
         },
         {
           "at_utc": "2026-11-23T12:37:50.996189+00:00",
+          "p": [
+            0.45715002,
+            0.261934606,
+            0.280915374
+          ],
+          "streck": [
+            44.0,
+            28.0,
+            28.0
+          ],
+          "odds": [
+            2.12,
+            3.7,
+            3.45
+          ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
           "p": [
             0.45715002,
             0.261934606,
@@ -515,6 +663,24 @@
             4.7,
             6.75
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.648773006,
+            0.207055215,
+            0.144171779
+          ],
+          "streck": [
+            48.0,
+            24.0,
+            28.0
+          ],
+          "odds": [
+            1.5,
+            4.7,
+            6.75
+          ]
         }
       ],
       "market_delta_pp": [
@@ -523,9 +689,9 @@
         0.63
       ],
       "streck_delta_pp": [
-        2.0,
+        3.0,
         -1.0,
-        -1.0
+        -2.0
       ],
       "largest_movement_sign": "1",
       "largest_abs_market_movement_pp": 1.23,
@@ -572,12 +738,30 @@
             3.45,
             3.75
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.4529416,
+            0.285086772,
+            0.261971628
+          ],
+          "streck": [
+            48.0,
+            26.0,
+            26.0
+          ],
+          "odds": [
+            2.14,
+            3.4,
+            3.7
+          ]
         }
       ],
       "market_delta_pp": [
-        1.36,
-        0.05,
-        -1.41
+        0.54,
+        0.49,
+        -1.03
       ],
       "streck_delta_pp": [
         2.0,
@@ -585,7 +769,7 @@
         -2.0
       ],
       "largest_movement_sign": "2",
-      "largest_abs_market_movement_pp": 1.41,
+      "largest_abs_market_movement_pp": 1.03,
       "notable_market_movement": false,
       "notable_crowd_movement": false
     },
@@ -629,6 +813,24 @@
             3.85,
             4.4
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.542731278,
+            0.243876652,
+            0.21339207
+          ],
+          "streck": [
+            47.0,
+            26.0,
+            27.0
+          ],
+          "odds": [
+            1.73,
+            3.85,
+            4.4
+          ]
         }
       ],
       "market_delta_pp": [
@@ -637,9 +839,9 @@
         0.0
       ],
       "streck_delta_pp": [
-        2.0,
+        3.0,
         0.0,
-        -2.0
+        -3.0
       ],
       "largest_movement_sign": "1",
       "largest_abs_market_movement_pp": 0.0,
@@ -686,6 +888,24 @@
             3.6,
             2.8
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.40436457,
+            0.260590501,
+            0.335044929
+          ],
+          "streck": [
+            49.0,
+            25.0,
+            26.0
+          ],
+          "odds": [
+            2.32,
+            3.6,
+            2.8
+          ]
         }
       ],
       "market_delta_pp": [
@@ -694,9 +914,9 @@
         -0.06
       ],
       "streck_delta_pp": [
-        2.0,
+        4.0,
         -1.0,
-        -1.0
+        -3.0
       ],
       "largest_movement_sign": "1",
       "largest_abs_market_movement_pp": 0.1,
@@ -743,6 +963,24 @@
             3.35,
             2.75
           ]
+        },
+        {
+          "at_utc": "2026-11-24T00:23:39.531823+00:00",
+          "p": [
+            0.376596832,
+            0.281042412,
+            0.342360756
+          ],
+          "streck": [
+            42.0,
+            28.0,
+            30.0
+          ],
+          "odds": [
+            2.5,
+            3.35,
+            2.75
+          ]
         }
       ],
       "market_delta_pp": [
@@ -751,9 +989,9 @@
         0.0
       ],
       "streck_delta_pp": [
-        -1.0,
+        -2.0,
         0.0,
-        1.0
+        2.0
       ],
       "largest_movement_sign": "1",
       "largest_abs_market_movement_pp": 0.0,

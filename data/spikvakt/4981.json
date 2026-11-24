@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-23T12:37:50.996189+00:00",
+  "source_observed_at_utc": "2026-11-24T00:23:39.531823+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "52db44c71a524ab7656bef56b29c9cd3387cc71ddea4587b036d75189dbdebab",
-  "created_at_utc": "2026-11-23T12:37:51.203208+00:00",
+  "source_snapshot_sha256": "32006e3ad440c7c0f7ba0c57ffadd29a1959cceb02df27b849398a7b3aaba649",
+  "created_at_utc": "2026-11-24T00:23:39.793605+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -24,14 +24,14 @@
         "1X2",
         "1X2",
         "1",
-        "1X",
-        "1",
         "1X2",
+        "1",
+        "12",
         "1X2"
       ],
-      "baseline_p13": 0.023655903,
+      "baseline_p13": 0.023672526,
       "baseline_miss_risk_spikes": 3,
-      "baseline_x_included": 7,
+      "baseline_x_included": 6,
       "risk_report": {
         "spikes": [
           {
@@ -50,10 +50,10 @@
             "home": "Manchester United",
             "away": "Brentford",
             "chosen": "1",
-            "estimated_miss_probability": 0.513514,
+            "estimated_miss_probability": 0.520303,
             "high_risk": true,
             "suggested_second_sign": "2",
-            "extra_outcome_probability": 0.27027,
+            "extra_outcome_probability": 0.275657,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -72,10 +72,10 @@
             "home": "Birmingham",
             "away": "Bolton",
             "chosen": "1",
-            "estimated_miss_probability": 0.385564,
+            "estimated_miss_probability": 0.37443,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.219242,
+            "extra_outcome_probability": 0.215474,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -118,14 +118,14 @@
             "1X2",
             "1X2",
             "1",
-            "1X",
-            "1",
             "1X2",
+            "1",
+            "12",
             "1X2"
           ],
-          "estimated_p13": 0.023655903,
+          "estimated_p13": 0.023672526,
           "miss_risk_spikes": 3,
-          "x_included": 7
+          "x_included": 6
         },
         {
           "key": "draw",
@@ -141,14 +141,14 @@
             "1X2",
             "1X2",
             "1",
-            "1X",
-            "1",
             "1X2",
+            "1",
+            "12",
             "1X2"
           ],
-          "estimated_p13": 0.023655903,
+          "estimated_p13": 0.023672526,
           "miss_risk_spikes": 3,
-          "x_included": 7
+          "x_included": 6
         }
       ]
     },
@@ -170,7 +170,7 @@
         "12",
         "1X2"
       ],
-      "baseline_p13": 0.003231729,
+      "baseline_p13": 0.003227959,
       "baseline_miss_risk_spikes": 4,
       "baseline_x_included": 2,
       "risk_report": {
@@ -202,10 +202,10 @@
             "home": "Manchester United",
             "away": "Brentford",
             "chosen": "1",
-            "estimated_miss_probability": 0.513514,
+            "estimated_miss_probability": 0.520303,
             "high_risk": true,
             "suggested_second_sign": "2",
-            "extra_outcome_probability": 0.27027,
+            "extra_outcome_probability": 0.275657,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -224,10 +224,10 @@
             "home": "Birmingham",
             "away": "Bolton",
             "chosen": "1",
-            "estimated_miss_probability": 0.385564,
+            "estimated_miss_probability": 0.37443,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.219242,
+            "extra_outcome_probability": 0.215474,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -269,8 +269,8 @@
             "home": "West Bromwich",
             "away": "Bristol City",
             "x_probability": 0.272151,
-            "crowd_x_percentage": 25.0,
-            "x_minus_crowd_percentage_points": 2.215,
+            "crowd_x_percentage": 24.0,
+            "x_minus_crowd_percentage_points": 3.215,
             "extra_row_cost_to_include_x_alone": 192,
             "requires_rebalancing": true
           }
@@ -296,7 +296,7 @@
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003231729,
+          "estimated_p13": 0.003227959,
           "miss_risk_spikes": 4,
           "x_included": 2
         },
@@ -319,7 +319,7 @@
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003231729,
+          "estimated_p13": 0.003227959,
           "miss_risk_spikes": 4,
           "x_included": 2
         }
