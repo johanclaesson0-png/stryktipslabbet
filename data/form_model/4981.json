@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-24T10:26:40.866642+00:00",
-  "source_snapshot_sha256": "9128c7a7ed773651deef9667708de2d2cfe6d082ba76ee2ad56afe9698f6d162",
-  "form_created_at_utc": "2026-11-24T10:26:41.235844+00:00",
-  "form_sha256": "836c545d19aa02708e0b93c32200d8e891c1a95804aeb7454059e97df3cf2458",
+  "source_observed_at_utc": "2026-11-24T20:53:16.564988+00:00",
+  "source_snapshot_sha256": "211c2777cb2aa262ce5f4389e4f2f9409817d9c74f1380f726b9c111d818caeb",
+  "form_created_at_utc": "2026-11-24T20:53:17.305423+00:00",
+  "form_sha256": "bb135e009ced15043712760027e956200d326fd73758b06617bd50000c0efbe7",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-24T10:26:42.260047+00:00",
+  "created_at_utc": "2026-11-24T20:53:18.000147+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -16,18 +16,18 @@
       "home": "Ipswich",
       "away": "Aston Villa",
       "market_p": [
-        0.267558528,
-        0.244147157,
-        0.488294314
+        0.27027027,
+        0.243243243,
+        0.486486486
       ],
       "form_p": [
-        0.271476222,
-        0.244506207,
-        0.484017571
+        0.274212805,
+        0.243587759,
+        0.482199436
       ],
       "delta_pp": [
         0.39,
-        0.04,
+        0.03,
         -0.43
       ],
       "data_coverage": "båda",
@@ -42,18 +42,18 @@
       "home": "Manchester United",
       "away": "Brentford",
       "market_p": [
-        0.479697318,
-        0.244645632,
-        0.27565705
+        0.452818239,
+        0.25079164,
+        0.29639012
       ],
       "form_p": [
-        0.477244514,
-        0.244826814,
-        0.277928672
+        0.45036198,
+        0.250898882,
+        0.298739138
       ],
       "delta_pp": [
         -0.25,
-        0.02,
+        0.01,
         0.23
       ],
       "data_coverage": "båda",
@@ -68,14 +68,14 @@
       "home": "Leeds",
       "away": "Coventry",
       "market_p": [
-        0.633253951,
-        0.216713574,
-        0.150032475
+        0.637757823,
+        0.212123798,
+        0.15011838
       ],
       "form_p": [
-        0.633253951,
-        0.216713574,
-        0.150032475
+        0.637757823,
+        0.212123798,
+        0.15011838
       ],
       "delta_pp": [
         0.0,
@@ -356,7 +356,7 @@
       "cost": 96,
       "original_choices": [
         "2",
-        "1",
+        "12",
         "1",
         "1",
         "12",
@@ -364,7 +364,7 @@
         "1",
         "12",
         "1",
-        "1X",
+        "1",
         "1",
         "12",
         "1X2"
@@ -384,48 +384,48 @@
         "12",
         "1X2"
       ],
-      "original_market_p13": 0.003074199,
-      "new_form_p13": 0.003363819,
-      "new_market_baseline_p13": 0.002937792,
+      "original_market_p13": 0.003005579,
+      "new_form_p13": 0.00334788,
+      "new_market_baseline_p13": 0.002923748,
       "different_matches": 2
     },
     {
       "budget_limit": 1800,
-      "cost": 1458,
+      "cost": 1728,
       "original_choices": [
-        "2",
-        "1",
-        "1",
-        "1",
-        "1X2",
-        "1X2",
-        "1X2",
-        "1X2",
-        "1",
-        "1X",
-        "1",
-        "1X2",
-        "1X2"
-      ],
-      "new_choices": [
-        "2",
+        "12",
         "12",
         "1",
         "1",
         "1X2",
         "1X2",
+        "1X",
+        "12",
         "1",
-        "1X2",
+        "1X",
         "1",
-        "1X2",
-        "1",
-        "1X2",
+        "12",
         "1X2"
       ],
-      "original_market_p13": 0.0225028,
-      "new_form_p13": 0.024480456,
-      "new_market_baseline_p13": 0.022185732,
-      "different_matches": 3
+      "new_choices": [
+        "12",
+        "12",
+        "1",
+        "1",
+        "1X2",
+        "12",
+        "1X",
+        "12",
+        "1",
+        "1X2",
+        "1",
+        "12",
+        "1X2"
+      ],
+      "original_market_p13": 0.022119721,
+      "new_form_p13": 0.024361132,
+      "new_market_baseline_p13": 0.021884113,
+      "different_matches": 2
     }
   ],
   "warning": "Otestad kombination av förhandsodds och form. Värdena är inte kalibrerade och ingen vinstökning är bevisad."

@@ -1,0 +1,216 @@
+{
+  "schema": "stryktipslabbet-other-game-analysis-v16",
+  "game": "topptipset",
+  "name": "Topptipset",
+  "draw_number": 4463,
+  "matches": [
+    {
+      "number": 1,
+      "home": "Atletico Mineiro",
+      "away": "Corinthians",
+      "odds": [
+        2.43,
+        3.5,
+        3.1
+      ],
+      "streck": [
+        68.0,
+        19.0,
+        13.0
+      ],
+      "p": [
+        0.403525736,
+        0.280162154,
+        0.316312109
+      ],
+      "match_start": "2026-11-26T00:00:00+01:00"
+    },
+    {
+      "number": 2,
+      "home": "Boca Juniors",
+      "away": "Independiente Rivadavia",
+      "odds": [
+        1.58,
+        4.0,
+        7.0
+      ],
+      "streck": [
+        77.0,
+        9.0,
+        14.0
+      ],
+      "p": [
+        0.6170119,
+        0.2437197,
+        0.1392684
+      ],
+      "match_start": "2026-11-26T01:00:00+01:00"
+    },
+    {
+      "number": 3,
+      "home": "Santa Fe",
+      "away": "Once Caldas",
+      "odds": [
+        2.2,
+        3.25,
+        3.3
+      ],
+      "streck": [
+        66.0,
+        22.0,
+        12.0
+      ],
+      "p": [
+        0.426695842,
+        0.288840263,
+        0.284463895
+      ],
+      "match_start": "2026-11-26T00:20:00+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Atlético Nacional",
+      "away": "Independiente Medellin",
+      "odds": [
+        1.77,
+        3.6,
+        4.6
+      ],
+      "streck": [
+        83.0,
+        6.0,
+        11.0
+      ],
+      "p": [
+        0.532921413,
+        0.262019695,
+        0.205058892
+      ],
+      "match_start": "2026-11-26T02:30:00+01:00"
+    },
+    {
+      "number": 5,
+      "home": "FC Kairat Almaty",
+      "away": "Mjällby",
+      "odds": [
+        2.28,
+        3.6,
+        3.2
+      ],
+      "streck": [
+        42.0,
+        35.0,
+        23.0
+      ],
+      "p": [
+        0.426287744,
+        0.269982238,
+        0.303730018
+      ],
+      "match_start": "2026-11-26T16:30:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "Celta de Vigo",
+      "away": "Bournemouth",
+      "odds": [
+        3.8,
+        3.6,
+        2.08
+      ],
+      "streck": [
+        23.0,
+        30.0,
+        47.0
+      ],
+      "p": [
+        0.257567419,
+        0.27187672,
+        0.470555861
+      ],
+      "match_start": "2026-11-26T18:45:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Olympiakos",
+      "away": "Milan",
+      "odds": [
+        2.8,
+        3.55,
+        2.6
+      ],
+      "streck": [
+        26.0,
+        39.0,
+        35.0
+      ],
+      "p": [
+        0.348960302,
+        0.275236295,
+        0.375803403
+      ],
+      "match_start": "2026-11-26T18:45:00+01:00"
+    },
+    {
+      "number": 8,
+      "home": "Dinamo Zagreb",
+      "away": "Bayer Leverkusen",
+      "odds": [
+        4.4,
+        4.35,
+        1.77
+      ],
+      "streck": [
+        13.0,
+        26.0,
+        61.0
+      ],
+      "p": [
+        0.222352177,
+        0.224907949,
+        0.552739874
+      ],
+      "match_start": "2026-11-26T18:45:00+01:00"
+    }
+  ],
+  "observed_at_utc": "2026-11-24T20:53:23.604847+00:00",
+  "source_snapshot_sha256": "1720b6b9101c7e7a3ef8ae30ab3adac04dd6dbcb575cf7f0b9ddc23cd2df4ef6",
+  "reg_close_time": "2026-11-25T22:59:00+00:00",
+  "created_at_utc": "2026-11-24T20:53:23.608070+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 81,
+      "choices": [
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "2",
+        "1X2",
+        "2"
+      ],
+      "estimated_all_correct": 0.0855241355
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 96,
+      "choices": [
+        "X2",
+        "1X",
+        "1X2",
+        "1X",
+        "12",
+        "2",
+        "12",
+        "2"
+      ],
+      "estimated_all_correct": 0.0561637708
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
+}
