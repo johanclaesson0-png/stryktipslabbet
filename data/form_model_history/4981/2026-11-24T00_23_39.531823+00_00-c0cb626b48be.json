@@ -1,0 +1,432 @@
+{
+  "schema": "stryktipslabbet-form-model-v1",
+  "model_version": "form-overlay-preregistered-2026-11-13-v14",
+  "weight": 0.25,
+  "draw_number": 4981,
+  "source_observed_at_utc": "2026-11-24T00:23:39.531823+00:00",
+  "source_snapshot_sha256": "32006e3ad440c7c0f7ba0c57ffadd29a1959cceb02df27b849398a7b3aaba649",
+  "form_created_at_utc": "2026-11-24T00:23:39.879820+00:00",
+  "form_sha256": "c0cb626b48bee877704d9257da43df96c9552adc649e888006a57c75b926b035",
+  "reg_close_time": "2026-11-28T14:59:00+00:00",
+  "created_at_utc": "2026-11-24T00:23:42.932302+00:00",
+  "matches_with_form": 10,
+  "matches": [
+    {
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "market_p": [
+        0.276303597,
+        0.245219442,
+        0.478476961
+      ],
+      "form_p": [
+        0.280288906,
+        0.24552713,
+        0.474183964
+      ],
+      "delta_pp": [
+        0.4,
+        0.03,
+        -0.43
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.046667,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 1.2,
+      "away_last5_ppg": 1.2
+    },
+    {
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "market_p": [
+        0.479697318,
+        0.244645632,
+        0.27565705
+      ],
+      "form_p": [
+        0.477244514,
+        0.244826814,
+        0.277928672
+      ],
+      "delta_pp": [
+        -0.25,
+        0.02,
+        0.23
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": -0.026667,
+      "reason": "Bortaform starkare än hemmaform",
+      "home_last5_ppg": 1.0,
+      "away_last5_ppg": 1.8
+    },
+    {
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "market_p": [
+        0.633253951,
+        0.216713574,
+        0.150032475
+      ],
+      "form_p": [
+        0.633253951,
+        0.216713574,
+        0.150032475
+      ],
+      "delta_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "data_coverage": "delvis",
+      "used_form": false,
+      "form_signal": 0.0,
+      "reason": "Otillräckligt jämförbar formdata",
+      "home_last5_ppg": 1.6,
+      "away_last5_ppg": null
+    },
+    {
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "market_p": [
+        0.625569736,
+        0.21547402,
+        0.158956244
+      ],
+      "form_p": [
+        0.630797529,
+        0.21365498,
+        0.155547491
+      ],
+      "delta_pp": [
+        0.52,
+        -0.18,
+        -0.34
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.06,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 1.2,
+      "away_last5_ppg": 1.2
+    },
+    {
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "market_p": [
+        0.424672897,
+        0.272747664,
+        0.302579439
+      ],
+      "form_p": [
+        0.428542293,
+        0.272167389,
+        0.299290318
+      ],
+      "delta_pp": [
+        0.39,
+        -0.06,
+        -0.33
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.04,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 0.8,
+      "away_last5_ppg": 0.6
+    },
+    {
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "market_p": [
+        0.447577952,
+        0.26249842,
+        0.289923628
+      ],
+      "form_p": [
+        0.469101298,
+        0.25868551,
+        0.272213192
+      ],
+      "delta_pp": [
+        2.15,
+        -0.38,
+        -1.77
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.22,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 1.0,
+      "away_last5_ppg": 0.6
+    },
+    {
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "market_p": [
+        0.466731811,
+        0.272150662,
+        0.261117527
+      ],
+      "form_p": [
+        0.471234542,
+        0.271209144,
+        0.257556314
+      ],
+      "delta_pp": [
+        0.45,
+        -0.09,
+        -0.36
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.046667,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 1.6,
+      "away_last5_ppg": 1.8
+    },
+    {
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "market_p": [
+        0.45715002,
+        0.261934606,
+        0.280915374
+      ],
+      "form_p": [
+        0.45715002,
+        0.261934606,
+        0.280915374
+      ],
+      "delta_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.0,
+      "reason": "Liknande form hos lagen",
+      "home_last5_ppg": 1.6,
+      "away_last5_ppg": 1.2
+    },
+    {
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "market_p": [
+        0.648773006,
+        0.207055215,
+        0.144171779
+      ],
+      "form_p": [
+        0.648773006,
+        0.207055215,
+        0.144171779
+      ],
+      "delta_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "data_coverage": "saknas",
+      "used_form": false,
+      "form_signal": 0.0,
+      "reason": "Otillräckligt jämförbar formdata",
+      "home_last5_ppg": null,
+      "away_last5_ppg": null
+    },
+    {
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "market_p": [
+        0.4529416,
+        0.285086772,
+        0.261971628
+      ],
+      "form_p": [
+        0.444159248,
+        0.285777507,
+        0.270063245
+      ],
+      "delta_pp": [
+        -0.88,
+        0.07,
+        0.81
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": -0.1,
+      "reason": "Bortaform starkare än hemmaform",
+      "home_last5_ppg": 1.4,
+      "away_last5_ppg": 1.4
+    },
+    {
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "market_p": [
+        0.542731278,
+        0.243876652,
+        0.21339207
+      ],
+      "form_p": [
+        0.593569193,
+        0.228865703,
+        0.177565104
+      ],
+      "delta_pp": [
+        5.08,
+        -1.5,
+        -3.58
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": 0.546667,
+      "reason": "Hemmaform starkare än bortaform",
+      "home_last5_ppg": 3.0,
+      "away_last5_ppg": 1.2
+    },
+    {
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "market_p": [
+        0.40436457,
+        0.260590501,
+        0.335044929
+      ],
+      "form_p": [
+        0.40436457,
+        0.260590501,
+        0.335044929
+      ],
+      "delta_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "data_coverage": "båda",
+      "used_form": true,
+      "form_signal": -0.0,
+      "reason": "Liknande form hos lagen",
+      "home_last5_ppg": 1.0,
+      "away_last5_ppg": 1.0
+    },
+    {
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "market_p": [
+        0.376596832,
+        0.281042412,
+        0.342360756
+      ],
+      "form_p": [
+        0.376596832,
+        0.281042412,
+        0.342360756
+      ],
+      "delta_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "data_coverage": "saknas",
+      "used_form": false,
+      "form_signal": 0.0,
+      "reason": "Otillräckligt jämförbar formdata",
+      "home_last5_ppg": null,
+      "away_last5_ppg": null
+    }
+  ],
+  "budgets": [
+    {
+      "budget_limit": 100,
+      "cost": 96,
+      "original_choices": [
+        "2",
+        "1",
+        "1",
+        "1",
+        "12",
+        "12",
+        "1",
+        "12",
+        "1",
+        "1X",
+        "1",
+        "12",
+        "1X2"
+      ],
+      "new_choices": [
+        "12",
+        "1",
+        "1",
+        "1",
+        "12",
+        "1",
+        "1",
+        "12",
+        "1",
+        "1X",
+        "1",
+        "12",
+        "1X2"
+      ],
+      "original_market_p13": 0.003227959,
+      "new_form_p13": 0.003549907,
+      "new_market_baseline_p13": 0.003090248,
+      "different_matches": 2
+    },
+    {
+      "budget_limit": 1800,
+      "cost": 1458,
+      "original_choices": [
+        "2",
+        "1",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "12",
+        "1X2"
+      ],
+      "new_choices": [
+        "12",
+        "1",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2"
+      ],
+      "original_market_p13": 0.023672526,
+      "new_form_p13": 0.026100793,
+      "new_market_baseline_p13": 0.023571469,
+      "different_matches": 3
+    }
+  ],
+  "warning": "Otestad kombination av förhandsodds och form. Värdena är inte kalibrerade och ingen vinstökning är bevisad."
+}
