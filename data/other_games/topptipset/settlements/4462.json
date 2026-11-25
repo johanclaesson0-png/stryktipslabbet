@@ -1,0 +1,33 @@
+{
+  "schema": "stryktipslabbet-other-game-settlement-v16",
+  "game": "topptipset",
+  "draw_number": 4462,
+  "source_snapshot_sha256": "8e0d7a91cc560830efccd1b93fd6054052fb5f8c37fe9aec9f28e6816637cc92",
+  "official_result_sha256": "8f5591bf3f81096911af7c9ea8059cd975665b73fac5bdd0aedf00c1cb599488",
+  "observed_at_utc": "2026-11-24T20:53:20.509654+00:00",
+  "outcome": "111112X2",
+  "payouts": {
+    "8": 645.0
+  },
+  "hypothetical": true,
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 96,
+      "all_correct_rows": 0,
+      "covered_matches": 7,
+      "paid": 0.0,
+      "net": -96.0
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 96,
+      "all_correct_rows": 0,
+      "covered_matches": 7,
+      "paid": 0.0,
+      "net": -96.0
+    }
+  ]
+}
