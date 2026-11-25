@@ -92,6 +92,7 @@ def main():
     shutil.copy2(root / "v19-beslutsstudio.html", dest / "v19-beslutsstudio.html")
     shutil.copy2(root / "v20-pottanalys.html", dest / "v20-pottanalys.html")
     shutil.copy2(root / "v21-verklig-pott.html", dest / "v21-verklig-pott.html")
+    shutil.copy2(root / "v22-radoptimering.html", dest / "v22-radoptimering.html")
 
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
@@ -999,6 +1000,20 @@ def main():
                 break
             except (OSError, ValueError, TypeError, KeyError, OverflowError, json.JSONDecodeError):
                 continue
+
+    # V22: only current, source-matched, pre-close hypothetical comparisons.
+    from scripts.v22_rows import valid_report as valid_v22_report
+    try:
+        n = status["latest_draw_number"]
+        base = base_by_draw[n]
+        path = root / "data" / "v22" / (str(n)+".json")
+        report = json.loads(path.read_text(encoding="utf-8"))
+        if approved_analysis(base) and valid_v22_report(report,base,now):
+            target=dest/"data"/"v22"/path.name
+            target.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(path,target)
+    except (KeyError,TypeError,ValueError,OSError,json.JSONDecodeError):
+        pass
 
     manifest = {
         "schema": "stryktipslabbet-public-analysis-index-v1",
