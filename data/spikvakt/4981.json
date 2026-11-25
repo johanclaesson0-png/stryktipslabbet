@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-24T20:53:16.564988+00:00",
+  "source_observed_at_utc": "2026-11-25T04:11:06.219482+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "211c2777cb2aa262ce5f4389e4f2f9409817d9c74f1380f726b9c111d818caeb",
-  "created_at_utc": "2026-11-24T20:53:17.230403+00:00",
+  "source_snapshot_sha256": "b642891f4deee3719c692713318c4868ed8c7a7b62d95afcbcfdf091ddce4f31",
+  "created_at_utc": "2026-11-25T04:11:06.405671+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -13,27 +13,38 @@
   "budgets": [
     {
       "budget": 1800,
-      "baseline_cost": 1728,
+      "baseline_cost": 1458,
       "baseline_choices": [
-        "12",
+        "2",
         "12",
         "1",
         "1",
         "1X2",
         "1X2",
-        "1X",
-        "12",
         "1",
-        "1X",
+        "1X2",
         "1",
-        "12",
+        "1X2",
+        "1",
+        "1X2",
         "1X2"
       ],
-      "baseline_p13": 0.022119721,
-      "baseline_miss_risk_spikes": 1,
-      "baseline_x_included": 5,
+      "baseline_p13": 0.025873414,
+      "baseline_miss_risk_spikes": 3,
+      "baseline_x_included": 6,
       "risk_report": {
         "spikes": [
+          {
+            "number": 1,
+            "home": "Ipswich",
+            "away": "Aston Villa",
+            "chosen": "2",
+            "estimated_miss_probability": 0.513514,
+            "high_risk": true,
+            "suggested_second_sign": "1",
+            "extra_outcome_probability": 0.27027,
+            "cost_if_added_without_rebalancing": 2916
+          },
           {
             "number": 11,
             "home": "Luton",
@@ -43,18 +54,29 @@
             "high_risk": true,
             "suggested_second_sign": "X",
             "extra_outcome_probability": 0.243877,
-            "cost_if_added_without_rebalancing": 3456
+            "cost_if_added_without_rebalancing": 2916
+          },
+          {
+            "number": 7,
+            "home": "West Bromwich",
+            "away": "Bristol City",
+            "chosen": "1",
+            "estimated_miss_probability": 0.453101,
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.251432,
+            "cost_if_added_without_rebalancing": 2916
           },
           {
             "number": 9,
             "home": "West Ham",
             "away": "Stoke",
             "chosen": "1",
-            "estimated_miss_probability": 0.400574,
+            "estimated_miss_probability": 0.400545,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.221856,
-            "cost_if_added_without_rebalancing": 3456
+            "extra_outcome_probability": 0.220708,
+            "cost_if_added_without_rebalancing": 2916
           },
           {
             "number": 4,
@@ -65,7 +87,7 @@
             "high_risk": false,
             "suggested_second_sign": "X",
             "extra_outcome_probability": 0.215474,
-            "cost_if_added_without_rebalancing": 3456
+            "cost_if_added_without_rebalancing": 2916
           },
           {
             "number": 3,
@@ -76,7 +98,7 @@
             "high_risk": false,
             "suggested_second_sign": "X",
             "extra_outcome_probability": 0.212124,
-            "cost_if_added_without_rebalancing": 3456
+            "cost_if_added_without_rebalancing": 2916
           }
         ],
         "possible_draws": []
@@ -85,48 +107,48 @@
         {
           "key": "safe",
           "name": "Färre osäkra spikar (test)",
-          "cost": 1728,
+          "cost": 1458,
           "choices": [
-            "12",
+            "2",
             "12",
             "1",
             "1",
             "1X2",
             "1X2",
-            "1X",
-            "12",
             "1",
-            "1X",
+            "1X2",
             "1",
-            "12",
+            "1X2",
+            "1",
+            "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.022119721,
-          "miss_risk_spikes": 1,
-          "x_included": 5
+          "estimated_p13": 0.025873414,
+          "miss_risk_spikes": 3,
+          "x_included": 6
         },
         {
           "key": "draw",
           "name": "Titta extra på kryss (test)",
-          "cost": 1728,
+          "cost": 1458,
           "choices": [
-            "12",
+            "2",
             "12",
             "1",
             "1",
             "1X2",
             "1X2",
-            "1X",
-            "12",
             "1",
-            "1X",
+            "1X2",
             "1",
-            "12",
+            "1X2",
+            "1",
+            "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.022119721,
-          "miss_risk_spikes": 1,
-          "x_included": 5
+          "estimated_p13": 0.025873414,
+          "miss_risk_spikes": 3,
+          "x_included": 6
         }
       ]
     },
@@ -148,7 +170,7 @@
         "12",
         "1X2"
       ],
-      "baseline_p13": 0.003005579,
+      "baseline_p13": 0.003534263,
       "baseline_miss_risk_spikes": 4,
       "baseline_x_included": 1,
       "risk_report": {
@@ -162,17 +184,6 @@
             "high_risk": true,
             "suggested_second_sign": "X",
             "extra_outcome_probability": 0.280383,
-            "cost_if_added_without_rebalancing": 192
-          },
-          {
-            "number": 7,
-            "home": "West Bromwich",
-            "away": "Bristol City",
-            "chosen": "1",
-            "estimated_miss_probability": 0.533268,
-            "high_risk": true,
-            "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.272151,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -198,14 +209,25 @@
             "cost_if_added_without_rebalancing": 192
           },
           {
+            "number": 7,
+            "home": "West Bromwich",
+            "away": "Bristol City",
+            "chosen": "1",
+            "estimated_miss_probability": 0.453101,
+            "high_risk": true,
+            "suggested_second_sign": "X",
+            "extra_outcome_probability": 0.251432,
+            "cost_if_added_without_rebalancing": 192
+          },
+          {
             "number": 9,
             "home": "West Ham",
             "away": "Stoke",
             "chosen": "1",
-            "estimated_miss_probability": 0.400574,
+            "estimated_miss_probability": 0.400545,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.221856,
+            "extra_outcome_probability": 0.220708,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -241,26 +263,6 @@
             "x_minus_crowd_percentage_points": 2.038,
             "extra_row_cost_to_include_x_alone": 192,
             "requires_rebalancing": true
-          },
-          {
-            "number": 5,
-            "home": "Derby",
-            "away": "Watford",
-            "x_probability": 0.272748,
-            "crowd_x_percentage": 29.0,
-            "x_minus_crowd_percentage_points": -1.725,
-            "extra_row_cost_to_include_x_alone": 144,
-            "requires_rebalancing": true
-          },
-          {
-            "number": 7,
-            "home": "West Bromwich",
-            "away": "Bristol City",
-            "x_probability": 0.272151,
-            "crowd_x_percentage": 22.0,
-            "x_minus_crowd_percentage_points": 5.215,
-            "extra_row_cost_to_include_x_alone": 192,
-            "requires_rebalancing": true
           }
         ]
       },
@@ -284,7 +286,7 @@
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003005579,
+          "estimated_p13": 0.003534263,
           "miss_risk_spikes": 4,
           "x_included": 1
         },
@@ -307,7 +309,7 @@
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.002983995,
+          "estimated_p13": 0.003508882,
           "miss_risk_spikes": 4,
           "x_included": 2
         }
