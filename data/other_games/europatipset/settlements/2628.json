@@ -1,0 +1,54 @@
+{
+  "schema": "stryktipslabbet-other-game-settlement-v16",
+  "game": "europatipset",
+  "draw_number": 2628,
+  "source_snapshot_sha256": "ae055f772de749f6a795542c2af4445db0a01a0e02556244c37b77e8971e485c",
+  "official_result_sha256": "d38edb7cb90113a1e2eee13cb18494ace7289ecaf0ccd639cd6a8c03c130cb57",
+  "observed_at_utc": "2026-11-25T14:21:33.593129+00:00",
+  "outcome": "X2X1112122211",
+  "payouts": {
+    "13": 15919.0,
+    "12": 382.0,
+    "11": 19.0,
+    "10": 0.0
+  },
+  "hypothetical": true,
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 96,
+      "all_correct_rows": 0,
+      "covered_matches": 10,
+      "paid": 0.0,
+      "net": -96.0
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 96,
+      "all_correct_rows": 0,
+      "covered_matches": 10,
+      "paid": 0.0,
+      "net": -96.0
+    },
+    {
+      "budget_limit": 1800,
+      "profile": "balanserad",
+      "cost": 1458,
+      "all_correct_rows": 0,
+      "covered_matches": 10,
+      "paid": 0.0,
+      "net": -1458.0
+    },
+    {
+      "budget_limit": 1800,
+      "profile": "streckvarde",
+      "cost": 1458,
+      "all_correct_rows": 0,
+      "covered_matches": 11,
+      "paid": 19.0,
+      "net": -1439.0
+    }
+  ]
+}

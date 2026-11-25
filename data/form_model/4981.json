@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-25T14:21:26.498478+00:00",
-  "source_snapshot_sha256": "2418157be8e24271ccd97909432ab2ce0f7c95542cda5361119b7ba28f32cde6",
-  "form_created_at_utc": "2026-11-25T14:21:26.835252+00:00",
-  "form_sha256": "3800740f451f001eb63e513b8bb1de9a3436cd021d409f9c89243d3f7739a2e9",
+  "source_observed_at_utc": "2026-11-25T22:06:08.810525+00:00",
+  "source_snapshot_sha256": "124708b0e6ece6bd782ba417b1085b07dbc179f9e9fa841d6046c085ce762945",
+  "form_created_at_utc": "2026-11-25T22:06:09.501132+00:00",
+  "form_sha256": "14a9a001fc2b1de5a0a2d405f4e41eb3460020b591d489094a3647f30ef9d06b",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-25T14:21:27.686428+00:00",
+  "created_at_utc": "2026-11-25T22:06:10.204482+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -146,14 +146,14 @@
       "home": "Millwall",
       "away": "Burnley",
       "market_p": [
-        0.444838563,
-        0.265684402,
-        0.289477035
+        0.445974286,
+        0.265140877,
+        0.288884836
       ],
       "form_p": [
-        0.466300461,
-        0.261864686,
-        0.271834853
+        0.467444843,
+        0.261303184,
+        0.271251973
       ],
       "delta_pp": [
         2.15,
@@ -224,14 +224,14 @@
       "home": "West Ham",
       "away": "Stoke",
       "market_p": [
-        0.600940867,
-        0.219889726,
-        0.179169407
+        0.605381166,
+        0.215246637,
+        0.179372197
       ],
       "form_p": [
-        0.600940867,
-        0.219889726,
-        0.179169407
+        0.605381166,
+        0.215246637,
+        0.179372197
       ],
       "delta_pp": [
         0.0,
@@ -384,9 +384,9 @@
         "12",
         "1X2"
       ],
-      "original_market_p13": 0.003628471,
-      "new_form_p13": 0.004027979,
-      "new_market_baseline_p13": 0.003523298,
+      "original_market_p13": 0.003657987,
+      "new_form_p13": 0.0040677,
+      "new_market_baseline_p13": 0.003558393,
       "different_matches": 2
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.02663944,
-      "new_form_p13": 0.02934579,
-      "new_market_baseline_p13": 0.02663944,
+      "original_market_p13": 0.026836276,
+      "new_form_p13": 0.029562623,
+      "new_market_baseline_p13": 0.026836276,
       "different_matches": 0
     }
   ],
