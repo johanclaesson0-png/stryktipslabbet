@@ -76,6 +76,8 @@ jobs:
         run: python -m scripts.v21_pool_history --outdir data --limit 24
       - name: V21 – kalibrera pottfakta och testa tidsfrysta vinnarradsprognoser
         run: python -m scripts.v21_calibration --outdir data
+      - name: V22 – exakt radtäckning och kontroll av datakvalitet
+        run: python -m scripts.v22_rows --outdir data
       - name: Bygg fem års historik och kronologisk analys
         run: python -m scripts.history5 --outdir data
       - name: Spara endast offentliga källobservationer
