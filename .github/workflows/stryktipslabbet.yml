@@ -78,6 +78,8 @@ jobs:
         run: python -m scripts.v21_calibration --outdir data
       - name: V22 – exakt radtäckning och kontroll av datakvalitet
         run: python -m scripts.v22_rows --outdir data
+      - name: V23 – simulera utdelning för individuella rader
+        run: python -m scripts.v23_rows_payout --outdir data
       - name: Bygg fem års historik och kronologisk analys
         run: python -m scripts.history5 --outdir data
       - name: Spara endast offentliga källobservationer
