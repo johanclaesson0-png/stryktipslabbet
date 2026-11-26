@@ -80,6 +80,8 @@ jobs:
         run: python -m scripts.v22_rows --outdir data
       - name: V23 – simulera utdelning för individuella rader
         run: python -m scripts.v23_rows_payout --outdir data
+      - name: V24 – sammanställ och frys källgranskade expertval
+        run: python -m scripts.v24_experts --outdir data
       - name: Bygg fem års historik och kronologisk analys
         run: python -m scripts.history5 --outdir data
       - name: Spara endast offentliga källobservationer
