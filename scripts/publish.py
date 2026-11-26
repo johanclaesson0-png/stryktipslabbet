@@ -94,6 +94,7 @@ def main():
     shutil.copy2(root / "v21-verklig-pott.html", dest / "v21-verklig-pott.html")
     shutil.copy2(root / "v22-radoptimering.html", dest / "v22-radoptimering.html")
     shutil.copy2(root / "v23-matchanalys.html", dest / "v23-matchanalys.html")
+    shutil.copy2(root / "v24-expertbarometer.html", dest / "v24-expertbarometer.html")
 
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
@@ -1043,6 +1044,41 @@ def main():
                     target=dest/"data"/"v23_context"/source.name
                     target.parent.mkdir(parents=True,exist_ok=True)
                     shutil.copy2(cpath,target)
+    except (KeyError,TypeError,ValueError,OSError,json.JSONDecodeError):
+        pass
+
+    # V24: publish only attributable validated expert observations.
+    from scripts.v24_experts import validate_panel, summarize, settle as v24_settle
+    try:
+        panel_path=root/"data"/"v24"/"panel.json"
+        panel=validate_panel(json.loads(panel_path.read_text(encoding="utf-8")))
+        target=dest/"data"/"v24"
+        (target/"reports").mkdir(parents=True,exist_ok=True)
+        shutil.copy2(panel_path,target/"panel.json")
+        reports=[]
+        for path in sorted((root/"data"/"v24"/"reports").glob("*.json"),reverse=True):
+            try:
+                n=int(path.stem)
+                base=base_by_draw[n]
+                r=json.loads(path.read_text(encoding="utf-8"))
+                created=instant(r["created_at_utc"])
+                if created>now or not approved_analysis(base):continue
+                # Historical and live reports must match the original frozen odds
+                # and the exact observation set available at report creation.
+                if r["market_observed_at"]!=base["observed_at_utc"]:continue
+                doc=json.loads((root/"data"/"v24_inputs"/path.name).read_text(encoding="utf-8"))
+                if summarize(base,doc,panel,created)!=r:continue
+                shutil.copy2(path,target/"reports"/path.name)
+                reports.append({"draw_number":n,"mode":r["mode"]})
+                if r["mode"]=="prospective" and n in verified_result_draws:
+                    official=json.loads((root/"data"/"results"/path.name).read_text(encoding="utf-8"))
+                    scored=v24_settle(r,official)
+                    out=target/"settlements"/path.name
+                    out.parent.mkdir(parents=True,exist_ok=True)
+                    out.write_text(json.dumps(scored,ensure_ascii=False,indent=2),encoding="utf-8")
+            except (OSError,KeyError,ValueError,TypeError,OverflowError,json.JSONDecodeError):
+                continue
+        (target/"index.json").write_text(json.dumps({"reports":reports},ensure_ascii=False,indent=2),encoding="utf-8")
     except (KeyError,TypeError,ValueError,OSError,json.JSONDecodeError):
         pass
 
