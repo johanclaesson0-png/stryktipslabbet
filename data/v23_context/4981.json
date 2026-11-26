@@ -1,0 +1,298 @@
+{
+  "schema": "stryktipslabbet-reviewed-context-v23",
+  "draw_number": 4981,
+  "review_date": "2026-11-26",
+  "reg_close_time": "2026-11-28T14:59:00+00:00",
+  "method": "Manuell källgranskning: aritmetiskt medel av marginalrensade 1X2-odds (Pinnacle, 1xBet, 888sport), ej samtidiga direkta bookmakeravläsningar. Härledda måldifferenser från senaste fem matcher och xG-differenser från tio matcher enligt extern matchöversikt, ej verifierad fullständig ligahistorik. Källornas exakta observationstider varierar; översikten är en engångsgranskning, inte livefeed.",
+  "form_note": "Formvärden är nya kompletterande kontextmått, inte ersättning för fullständig daterad matchhistorik. Används inte automatiskt i prognosen.",
+  "injury_source": "https://stryktipsetdata.se/skador",
+  "lineups_source": "https://spela.svenskaspel.se/stryktipset/systemspel/laguppstallning",
+  "matches": [
+    {
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "source": "https://tipsaudit.com/match/19800/ipswich-vs-aston-villa-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.27825229,
+        0.24543417,
+        0.47631354
+      ],
+      "form_goal_difference_per_game": [
+        -0.8,
+        -1.2
+      ],
+      "xg_difference_per_game": [
+        -0.81,
+        -0.09
+      ],
+      "injury_note": "Villa: två rapporterade osäkra/frånvarande i matchrapport; ingen officiell bekräftelse.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "source": "https://tipsaudit.com/match/19770/manchester-united-vs-brentford-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.45585994,
+        0.24841224,
+        0.29572781
+      ],
+      "form_goal_difference_per_game": [
+        -1.6,
+        0.6
+      ],
+      "xg_difference_per_game": [
+        -0.73,
+        0.04
+      ],
+      "injury_note": "Fem rapporterade skador/osäkra; listan innehåller även motstridiga långtidsnoteringar. Kontrollera klubbkällor.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "source": "https://tipsaudit.com/match/19769/leeds-vs-coventry-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.64654576,
+        0.20447496,
+        0.14897928
+      ],
+      "form_goal_difference_per_game": [
+        0.4,
+        -0.4
+      ],
+      "xg_difference_per_game": [
+        0.34,
+        -0.47
+      ],
+      "injury_note": "Tre aktuella rapporterade Coventry-frånvaror; inte officiellt bekräftat.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "source": "https://tipsaudit.com/match/19733/birmingham-vs-bolton-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.61575069,
+        0.21658643,
+        0.16766288
+      ],
+      "form_goal_difference_per_game": [
+        1.4,
+        -0.8
+      ],
+      "xg_difference_per_game": [
+        0.5,
+        -0.37
+      ],
+      "injury_note": "Bolton hade flera noterade frånvaror inför 25/11; status för 28/11 ej verifierad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "source": "https://tipsaudit.com/match/19738/derby-vs-watford-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.42234047,
+        0.28509993,
+        0.29255961
+      ],
+      "form_goal_difference_per_game": [
+        -2,
+        -1
+      ],
+      "xg_difference_per_game": [
+        -1.05,
+        -0.94
+      ],
+      "injury_note": "Watford hade fyra noterade frånvaror inför 25/11; status för 28/11 ej verifierad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "source": "https://tipsaudit.com/match/19734/millwall-vs-burnley-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.44381921,
+        0.26411253,
+        0.29206826
+      ],
+      "form_goal_difference_per_game": [
+        -1,
+        -0.6
+      ],
+      "xg_difference_per_game": [
+        0.01,
+        -0.54
+      ],
+      "injury_note": "Ingen matchspecifik bekräftad frånvarolista granskad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "source": "https://tipsaudit.com/match/19736/west-brom-vs-bristol-city-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.54807972,
+        0.25366693,
+        0.19825334
+      ],
+      "form_goal_difference_per_game": [
+        1.4,
+        -1.4
+      ],
+      "xg_difference_per_game": [
+        0.85,
+        0.02
+      ],
+      "injury_note": "West Brom hade tre noterade frånvaror inför 25/11; status för 28/11 ej verifierad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "source": "https://tipsaudit.com/match/19739/qpr-vs-sheffield-utd-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.47270197,
+        0.26552893,
+        0.2617691
+      ],
+      "form_goal_difference_per_game": [
+        -0.2,
+        1
+      ],
+      "xg_difference_per_game": [
+        0.68,
+        0.47
+      ],
+      "injury_note": "Ingen matchspecifik bekräftad frånvarolista granskad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "source": "https://tipsaudit.com/match/19732/west-ham-vs-stoke-city-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.57950638,
+        0.22082041,
+        0.19967321
+      ],
+      "form_goal_difference_per_game": [
+        -0.8,
+        1.2
+      ],
+      "xg_difference_per_game": [
+        0.65,
+        -0.12
+      ],
+      "injury_note": "Ingen matchspecifik bekräftad frånvarolista granskad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "source": "https://tipsaudit.com/match/19742/wrexham-vs-portsmouth-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.44844991,
+        0.28999415,
+        0.26155594
+      ],
+      "form_goal_difference_per_game": [
+        0.4,
+        0.4
+      ],
+      "xg_difference_per_game": [
+        0.02,
+        -0.46
+      ],
+      "injury_note": "Ingen matchspecifik bekräftad frånvarolista granskad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "source": "https://tipsaudit.com/match/19748/luton-vs-oxford-united-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.53582848,
+        0.23692231,
+        0.22724922
+      ],
+      "form_goal_difference_per_game": [
+        1.6,
+        0.6
+      ],
+      "xg_difference_per_game": [
+        0.97,
+        0.34
+      ],
+      "injury_note": "Ingen matchspecifik bekräftad frånvarolista granskad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "source": "https://tipsaudit.com/match/19745/sheffield-wednesday-vs-reading-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.38647254,
+        0.2586668,
+        0.35486066
+      ],
+      "form_goal_difference_per_game": [
+        -0.2,
+        0
+      ],
+      "xg_difference_per_game": [
+        -0.33,
+        0.56
+      ],
+      "injury_note": "Ingen matchspecifik bekräftad frånvarolista granskad.",
+      "lineup_status": "Inte verifierad före publicering."
+    },
+    {
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "source": "https://tipsaudit.com/match/19747/wycombe-vs-bradford-2026-11-28",
+      "bookmakers": 3,
+      "consensus": [
+        0.42612739,
+        0.27241528,
+        0.30145733
+      ],
+      "form_goal_difference_per_game": [
+        0.6,
+        1.8
+      ],
+      "xg_difference_per_game": [
+        -0.2,
+        0.59
+      ],
+      "injury_note": "Ingen matchspecifik bekräftad frånvarolista granskad.",
+      "lineup_status": "Inte verifierad före publicering."
+    }
+  ]
+}
