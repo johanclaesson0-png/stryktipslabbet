@@ -54,8 +54,8 @@ def accepted(doc,base,panel,now):
             if src and (src>=close or src>seen):continue
             if mode=="prospective" and (seen>=close or not src or r["evidence"] not in
                 ("article_timestamp","article_date_upper_bound","archive_recorded","direct_preclose")):continue
-            if mode=="retrospective" and r["evidence"] not in
-                ("article_timestamp","article_date_upper_bound","archive_recorded","postclose_page"):continue
+            if (mode=="retrospective" and r["evidence"] not in
+                ("article_timestamp","article_date_upper_bound","archive_recorded","postclose_page")):continue
             choices[(r["id"],r["number"],r["type"])].append((seen,r))
         except (KeyError,ValueError,TypeError,OverflowError):continue
     result=[]
