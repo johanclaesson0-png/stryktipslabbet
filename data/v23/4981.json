@@ -1,31 +1,31 @@
 {
   "schema": "stryktipslabbet-v23-row-payout-v1",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-26T05:28:43.258969+00:00",
+  "observed_at_utc": "2026-11-26T15:47:55.989822+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-26T05:29:05.191728+00:00",
-  "source_snapshot_sha256": "2d27a13cb4eab832e27c4ad8707376b0d254601d12deccebb4018c3136ee0fbc",
-  "v22_created_at_utc": "2026-11-26T05:28:57.960321+00:00",
+  "created_at_utc": "2026-11-26T15:48:14.089809+00:00",
+  "source_snapshot_sha256": "3e22a0c81164bc3f17fc76f6720f3fcf1385728dad6050d30d191244530e3726",
+  "v22_created_at_utc": "2026-11-26T15:48:07.652504+00:00",
   "simulation_draws": 6000,
   "hypothetical": true,
   "comparisons": [
     {
       "id": "m",
       "cost": 1458,
-      "p13_market": 0.0265049176,
+      "p13_market": 0.025617686,
       "p13_external_context": 0.0242551825
     },
     {
       "id": "same_cost",
       "cost": 1458,
-      "p13_market": 0.0364418985,
-      "p13_external_context": 0.0340630174
+      "p13_market": 0.0353364719,
+      "p13_external_context": 0.0340781171
     },
     {
       "id": "full_budget",
       "cost": 1800,
-      "p13_market": 0.0421561104,
-      "p13_external_context": 0.0393954378
+      "p13_market": 0.0408913981,
+      "p13_external_context": 0.0394045257
     }
   ],
   "scenarios": [
@@ -36,40 +36,40 @@
         {
           "id": "m",
           "cost": 1458,
-          "mean_net_kr": 1200,
-          "mean_paid_kr": 2658,
-          "median_net_kr": -1265,
-          "prob_positive_net": 0.239,
-          "prob_zero_payout": 0.281,
+          "mean_net_kr": 857,
+          "mean_paid_kr": 2315,
+          "median_net_kr": -1273,
+          "prob_positive_net": 0.221,
+          "prob_zero_payout": 0.286167,
           "sampling_only_ci95_net_kr": [
-            909,
-            1491
+            601,
+            1114
           ]
         },
         {
           "id": "same_cost",
           "cost": 1458,
-          "mean_net_kr": 1027,
-          "mean_paid_kr": 2485,
-          "median_net_kr": -991,
-          "prob_positive_net": 0.313333,
-          "prob_zero_payout": 0.352,
+          "mean_net_kr": 655,
+          "mean_paid_kr": 2113,
+          "median_net_kr": -1020,
+          "prob_positive_net": 0.298167,
+          "prob_zero_payout": 0.3575,
           "sampling_only_ci95_net_kr": [
-            857,
-            1197
+            513,
+            796
           ]
         },
         {
           "id": "full_budget",
           "cost": 1800,
-          "mean_net_kr": 1285,
-          "mean_paid_kr": 3085,
-          "median_net_kr": -1145,
-          "prob_positive_net": 0.320167,
-          "prob_zero_payout": 0.321333,
+          "mean_net_kr": 820,
+          "mean_paid_kr": 2620,
+          "median_net_kr": -1190,
+          "prob_positive_net": 0.305,
+          "prob_zero_payout": 0.328333,
           "sampling_only_ci95_net_kr": [
-            1083,
-            1487
+            652,
+            988
           ]
         }
       ]
@@ -81,310 +81,310 @@
         {
           "id": "m",
           "cost": 1458,
-          "mean_net_kr": -192,
-          "mean_paid_kr": 1266,
-          "median_net_kr": -1376,
-          "prob_positive_net": 0.128333,
-          "prob_zero_payout": 0.283667,
+          "mean_net_kr": -369,
+          "mean_paid_kr": 1089,
+          "median_net_kr": -1383,
+          "prob_positive_net": 0.1135,
+          "prob_zero_payout": 0.292667,
           "sampling_only_ci95_net_kr": [
-            -339,
-            -45
-          ]
-        },
-        {
-          "id": "same_cost",
-          "cost": 1458,
-          "mean_net_kr": -325,
-          "mean_paid_kr": 1133,
-          "median_net_kr": -1230,
-          "prob_positive_net": 0.170167,
-          "prob_zero_payout": 0.352,
-          "sampling_only_ci95_net_kr": [
-            -404,
-            -246
-          ]
-        },
-        {
-          "id": "full_budget",
-          "cost": 1800,
-          "mean_net_kr": -384,
-          "mean_paid_kr": 1416,
-          "median_net_kr": -1485,
-          "prob_positive_net": 0.1745,
-          "prob_zero_payout": 0.321333,
-          "sampling_only_ci95_net_kr": [
-            -478,
-            -289
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 5000000,
-      "crowd_multiplier": 2.0,
-      "systems": [
-        {
-          "id": "m",
-          "cost": 1458,
-          "mean_net_kr": -914,
-          "mean_paid_kr": 544,
-          "median_net_kr": -1425,
-          "prob_positive_net": 0.05,
-          "prob_zero_payout": 0.340333,
-          "sampling_only_ci95_net_kr": [
-            -984,
-            -843
-          ]
-        },
-        {
-          "id": "same_cost",
-          "cost": 1458,
-          "mean_net_kr": -1001,
-          "mean_paid_kr": 457,
-          "median_net_kr": -1382,
-          "prob_positive_net": 0.055667,
-          "prob_zero_payout": 0.384167,
-          "sampling_only_ci95_net_kr": [
-            -1038,
-            -964
-          ]
-        },
-        {
-          "id": "full_budget",
-          "cost": 1800,
-          "mean_net_kr": -1222,
-          "mean_paid_kr": 578,
-          "median_net_kr": -1695,
-          "prob_positive_net": 0.059167,
-          "prob_zero_payout": 0.345333,
-          "sampling_only_ci95_net_kr": [
-            -1267,
-            -1178
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 15000000,
-      "crowd_multiplier": 0.5,
-      "systems": [
-        {
-          "id": "m",
-          "cost": 1458,
-          "mean_net_kr": 1243,
-          "mean_paid_kr": 2701,
-          "median_net_kr": -1265,
-          "prob_positive_net": 0.2395,
-          "prob_zero_payout": 0.281,
-          "sampling_only_ci95_net_kr": [
-            941,
-            1546
-          ]
-        },
-        {
-          "id": "same_cost",
-          "cost": 1458,
-          "mean_net_kr": 1044,
-          "mean_paid_kr": 2502,
-          "median_net_kr": -991,
-          "prob_positive_net": 0.313333,
-          "prob_zero_payout": 0.352,
-          "sampling_only_ci95_net_kr": [
-            872,
-            1217
-          ]
-        },
-        {
-          "id": "full_budget",
-          "cost": 1800,
-          "mean_net_kr": 1310,
-          "mean_paid_kr": 3110,
-          "median_net_kr": -1145,
-          "prob_positive_net": 0.320167,
-          "prob_zero_payout": 0.321333,
-          "sampling_only_ci95_net_kr": [
-            1104,
-            1515
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 15000000,
-      "crowd_multiplier": 1.0,
-      "systems": [
-        {
-          "id": "m",
-          "cost": 1458,
-          "mean_net_kr": -181,
-          "mean_paid_kr": 1277,
-          "median_net_kr": -1376,
-          "prob_positive_net": 0.128333,
-          "prob_zero_payout": 0.283667,
-          "sampling_only_ci95_net_kr": [
-            -331,
-            -30
-          ]
-        },
-        {
-          "id": "same_cost",
-          "cost": 1458,
-          "mean_net_kr": -321,
-          "mean_paid_kr": 1137,
-          "median_net_kr": -1230,
-          "prob_positive_net": 0.170333,
-          "prob_zero_payout": 0.352,
-          "sampling_only_ci95_net_kr": [
-            -401,
-            -241
-          ]
-        },
-        {
-          "id": "full_budget",
-          "cost": 1800,
-          "mean_net_kr": -378,
-          "mean_paid_kr": 1422,
-          "median_net_kr": -1485,
-          "prob_positive_net": 0.1745,
-          "prob_zero_payout": 0.321333,
-          "sampling_only_ci95_net_kr": [
-            -473,
-            -283
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 15000000,
-      "crowd_multiplier": 2.0,
-      "systems": [
-        {
-          "id": "m",
-          "cost": 1458,
-          "mean_net_kr": -911,
-          "mean_paid_kr": 547,
-          "median_net_kr": -1425,
-          "prob_positive_net": 0.05,
-          "prob_zero_payout": 0.340333,
-          "sampling_only_ci95_net_kr": [
-            -982,
-            -840
-          ]
-        },
-        {
-          "id": "same_cost",
-          "cost": 1458,
-          "mean_net_kr": -1000,
-          "mean_paid_kr": 458,
-          "median_net_kr": -1382,
-          "prob_positive_net": 0.055667,
-          "prob_zero_payout": 0.384167,
-          "sampling_only_ci95_net_kr": [
-            -1038,
-            -963
-          ]
-        },
-        {
-          "id": "full_budget",
-          "cost": 1800,
-          "mean_net_kr": -1221,
-          "mean_paid_kr": 579,
-          "median_net_kr": -1695,
-          "prob_positive_net": 0.059333,
-          "prob_zero_payout": 0.345333,
-          "sampling_only_ci95_net_kr": [
-            -1266,
-            -1176
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 30000000,
-      "crowd_multiplier": 0.5,
-      "systems": [
-        {
-          "id": "m",
-          "cost": 1458,
-          "mean_net_kr": 1255,
-          "mean_paid_kr": 2713,
-          "median_net_kr": -1265,
-          "prob_positive_net": 0.239833,
-          "prob_zero_payout": 0.281,
-          "sampling_only_ci95_net_kr": [
-            949,
-            1561
-          ]
-        },
-        {
-          "id": "same_cost",
-          "cost": 1458,
-          "mean_net_kr": 1048,
-          "mean_paid_kr": 2506,
-          "median_net_kr": -991,
-          "prob_positive_net": 0.313333,
-          "prob_zero_payout": 0.352,
-          "sampling_only_ci95_net_kr": [
-            875,
-            1222
-          ]
-        },
-        {
-          "id": "full_budget",
-          "cost": 1800,
-          "mean_net_kr": 1316,
-          "mean_paid_kr": 3116,
-          "median_net_kr": -1145,
-          "prob_positive_net": 0.320167,
-          "prob_zero_payout": 0.321333,
-          "sampling_only_ci95_net_kr": [
-            1109,
-            1522
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 30000000,
-      "crowd_multiplier": 1.0,
-      "systems": [
-        {
-          "id": "m",
-          "cost": 1458,
-          "mean_net_kr": -178,
-          "mean_paid_kr": 1280,
-          "median_net_kr": -1376,
-          "prob_positive_net": 0.128333,
-          "prob_zero_payout": 0.283667,
-          "sampling_only_ci95_net_kr": [
-            -329,
-            -27
-          ]
-        },
-        {
-          "id": "same_cost",
-          "cost": 1458,
-          "mean_net_kr": -320,
-          "mean_paid_kr": 1138,
-          "median_net_kr": -1230,
-          "prob_positive_net": 0.170333,
-          "prob_zero_payout": 0.352,
-          "sampling_only_ci95_net_kr": [
-            -400,
+            -498,
             -240
           ]
         },
         {
+          "id": "same_cost",
+          "cost": 1458,
+          "mean_net_kr": -512,
+          "mean_paid_kr": 946,
+          "median_net_kr": -1251,
+          "prob_positive_net": 0.142833,
+          "prob_zero_payout": 0.358,
+          "sampling_only_ci95_net_kr": [
+            -578,
+            -447
+          ]
+        },
+        {
           "id": "full_budget",
           "cost": 1800,
-          "mean_net_kr": -377,
-          "mean_paid_kr": 1423,
-          "median_net_kr": -1485,
-          "prob_positive_net": 0.1745,
-          "prob_zero_payout": 0.321333,
+          "mean_net_kr": -618,
+          "mean_paid_kr": 1182,
+          "median_net_kr": -1515,
+          "prob_positive_net": 0.1475,
+          "prob_zero_payout": 0.328667,
           "sampling_only_ci95_net_kr": [
-            -472,
-            -281
+            -696,
+            -540
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 5000000,
+      "crowd_multiplier": 2.0,
+      "systems": [
+        {
+          "id": "m",
+          "cost": 1458,
+          "mean_net_kr": -993,
+          "mean_paid_kr": 465,
+          "median_net_kr": -1427,
+          "prob_positive_net": 0.044167,
+          "prob_zero_payout": 0.363167,
+          "sampling_only_ci95_net_kr": [
+            -1054,
+            -931
+          ]
+        },
+        {
+          "id": "same_cost",
+          "cost": 1458,
+          "mean_net_kr": -1079,
+          "mean_paid_kr": 379,
+          "median_net_kr": -1399,
+          "prob_positive_net": 0.0465,
+          "prob_zero_payout": 0.404333,
+          "sampling_only_ci95_net_kr": [
+            -1110,
+            -1048
+          ]
+        },
+        {
+          "id": "full_budget",
+          "cost": 1800,
+          "mean_net_kr": -1321,
+          "mean_paid_kr": 479,
+          "median_net_kr": -1710,
+          "prob_positive_net": 0.049833,
+          "prob_zero_payout": 0.364333,
+          "sampling_only_ci95_net_kr": [
+            -1358,
+            -1285
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 15000000,
+      "crowd_multiplier": 0.5,
+      "systems": [
+        {
+          "id": "m",
+          "cost": 1458,
+          "mean_net_kr": 891,
+          "mean_paid_kr": 2349,
+          "median_net_kr": -1273,
+          "prob_positive_net": 0.221,
+          "prob_zero_payout": 0.286167,
+          "sampling_only_ci95_net_kr": [
+            625,
+            1157
+          ]
+        },
+        {
+          "id": "same_cost",
+          "cost": 1458,
+          "mean_net_kr": 667,
+          "mean_paid_kr": 2125,
+          "median_net_kr": -1020,
+          "prob_positive_net": 0.298333,
+          "prob_zero_payout": 0.3575,
+          "sampling_only_ci95_net_kr": [
+            524,
+            810
+          ]
+        },
+        {
+          "id": "full_budget",
+          "cost": 1800,
+          "mean_net_kr": 837,
+          "mean_paid_kr": 2637,
+          "median_net_kr": -1190,
+          "prob_positive_net": 0.305167,
+          "prob_zero_payout": 0.328333,
+          "sampling_only_ci95_net_kr": [
+            667,
+            1007
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 15000000,
+      "crowd_multiplier": 1.0,
+      "systems": [
+        {
+          "id": "m",
+          "cost": 1458,
+          "mean_net_kr": -361,
+          "mean_paid_kr": 1097,
+          "median_net_kr": -1383,
+          "prob_positive_net": 0.1135,
+          "prob_zero_payout": 0.292667,
+          "sampling_only_ci95_net_kr": [
+            -492,
+            -229
+          ]
+        },
+        {
+          "id": "same_cost",
+          "cost": 1458,
+          "mean_net_kr": -509,
+          "mean_paid_kr": 949,
+          "median_net_kr": -1251,
+          "prob_positive_net": 0.143167,
+          "prob_zero_payout": 0.358,
+          "sampling_only_ci95_net_kr": [
+            -575,
+            -444
+          ]
+        },
+        {
+          "id": "full_budget",
+          "cost": 1800,
+          "mean_net_kr": -614,
+          "mean_paid_kr": 1186,
+          "median_net_kr": -1515,
+          "prob_positive_net": 0.147667,
+          "prob_zero_payout": 0.328667,
+          "sampling_only_ci95_net_kr": [
+            -692,
+            -536
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 15000000,
+      "crowd_multiplier": 2.0,
+      "systems": [
+        {
+          "id": "m",
+          "cost": 1458,
+          "mean_net_kr": -991,
+          "mean_paid_kr": 467,
+          "median_net_kr": -1427,
+          "prob_positive_net": 0.044167,
+          "prob_zero_payout": 0.363167,
+          "sampling_only_ci95_net_kr": [
+            -1052,
+            -929
+          ]
+        },
+        {
+          "id": "same_cost",
+          "cost": 1458,
+          "mean_net_kr": -1078,
+          "mean_paid_kr": 380,
+          "median_net_kr": -1399,
+          "prob_positive_net": 0.046667,
+          "prob_zero_payout": 0.404333,
+          "sampling_only_ci95_net_kr": [
+            -1109,
+            -1047
+          ]
+        },
+        {
+          "id": "full_budget",
+          "cost": 1800,
+          "mean_net_kr": -1321,
+          "mean_paid_kr": 479,
+          "median_net_kr": -1710,
+          "prob_positive_net": 0.049833,
+          "prob_zero_payout": 0.364333,
+          "sampling_only_ci95_net_kr": [
+            -1357,
+            -1284
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 30000000,
+      "crowd_multiplier": 0.5,
+      "systems": [
+        {
+          "id": "m",
+          "cost": 1458,
+          "mean_net_kr": 900,
+          "mean_paid_kr": 2358,
+          "median_net_kr": -1273,
+          "prob_positive_net": 0.221,
+          "prob_zero_payout": 0.286167,
+          "sampling_only_ci95_net_kr": [
+            631,
+            1169
+          ]
+        },
+        {
+          "id": "same_cost",
+          "cost": 1458,
+          "mean_net_kr": 670,
+          "mean_paid_kr": 2128,
+          "median_net_kr": -1020,
+          "prob_positive_net": 0.298333,
+          "prob_zero_payout": 0.3575,
+          "sampling_only_ci95_net_kr": [
+            526,
+            813
+          ]
+        },
+        {
+          "id": "full_budget",
+          "cost": 1800,
+          "mean_net_kr": 841,
+          "mean_paid_kr": 2641,
+          "median_net_kr": -1190,
+          "prob_positive_net": 0.305167,
+          "prob_zero_payout": 0.328333,
+          "sampling_only_ci95_net_kr": [
+            671,
+            1012
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 30000000,
+      "crowd_multiplier": 1.0,
+      "systems": [
+        {
+          "id": "m",
+          "cost": 1458,
+          "mean_net_kr": -359,
+          "mean_paid_kr": 1099,
+          "median_net_kr": -1383,
+          "prob_positive_net": 0.1135,
+          "prob_zero_payout": 0.292667,
+          "sampling_only_ci95_net_kr": [
+            -491,
+            -226
+          ]
+        },
+        {
+          "id": "same_cost",
+          "cost": 1458,
+          "mean_net_kr": -509,
+          "mean_paid_kr": 949,
+          "median_net_kr": -1251,
+          "prob_positive_net": 0.143167,
+          "prob_zero_payout": 0.358,
+          "sampling_only_ci95_net_kr": [
+            -575,
+            -443
+          ]
+        },
+        {
+          "id": "full_budget",
+          "cost": 1800,
+          "mean_net_kr": -613,
+          "mean_paid_kr": 1187,
+          "median_net_kr": -1515,
+          "prob_positive_net": 0.147833,
+          "prob_zero_payout": 0.328667,
+          "sampling_only_ci95_net_kr": [
+            -692,
+            -535
           ]
         }
       ]
@@ -396,40 +396,40 @@
         {
           "id": "m",
           "cost": 1458,
-          "mean_net_kr": -910,
-          "mean_paid_kr": 548,
-          "median_net_kr": -1425,
-          "prob_positive_net": 0.05,
-          "prob_zero_payout": 0.340333,
+          "mean_net_kr": -990,
+          "mean_paid_kr": 468,
+          "median_net_kr": -1427,
+          "prob_positive_net": 0.044167,
+          "prob_zero_payout": 0.363167,
           "sampling_only_ci95_net_kr": [
-            -981,
-            -839
+            -1052,
+            -928
           ]
         },
         {
           "id": "same_cost",
           "cost": 1458,
-          "mean_net_kr": -1000,
-          "mean_paid_kr": 458,
-          "median_net_kr": -1382,
-          "prob_positive_net": 0.055667,
-          "prob_zero_payout": 0.384167,
+          "mean_net_kr": -1078,
+          "mean_paid_kr": 380,
+          "median_net_kr": -1399,
+          "prob_positive_net": 0.046667,
+          "prob_zero_payout": 0.404333,
           "sampling_only_ci95_net_kr": [
-            -1038,
-            -963
+            -1109,
+            -1047
           ]
         },
         {
           "id": "full_budget",
           "cost": 1800,
-          "mean_net_kr": -1221,
-          "mean_paid_kr": 579,
-          "median_net_kr": -1695,
-          "prob_positive_net": 0.059333,
-          "prob_zero_payout": 0.345333,
+          "mean_net_kr": -1320,
+          "mean_paid_kr": 480,
+          "median_net_kr": -1710,
+          "prob_positive_net": 0.049833,
+          "prob_zero_payout": 0.364333,
           "sampling_only_ci95_net_kr": [
-            -1265,
-            -1176
+            -1357,
+            -1283
           ]
         }
       ]
