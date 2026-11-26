@@ -93,6 +93,7 @@ def main():
     shutil.copy2(root / "v20-pottanalys.html", dest / "v20-pottanalys.html")
     shutil.copy2(root / "v21-verklig-pott.html", dest / "v21-verklig-pott.html")
     shutil.copy2(root / "v22-radoptimering.html", dest / "v22-radoptimering.html")
+    shutil.copy2(root / "v23-matchanalys.html", dest / "v23-matchanalys.html")
 
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
@@ -1012,6 +1013,36 @@ def main():
             target=dest/"data"/"v22"/path.name
             target.parent.mkdir(parents=True,exist_ok=True)
             shutil.copy2(path,target)
+    except (KeyError,TypeError,ValueError,OSError,json.JSONDecodeError):
+        pass
+
+    # V23: source-linked manual context and hypothetical V22 row payouts.
+    from scripts.v23_rows_payout import SCHEMA as V23_SCHEMA, validate_context
+    try:
+        n=status["latest_draw_number"]
+        base=base_by_draw[n]
+        if approved_analysis(base) and now<instant(base["reg_close_time"]):
+            v22_path=dest/"data"/"v22"/(str(n)+".json")
+            v22=json.loads(v22_path.read_text(encoding="utf-8"))
+            source=root/"data"/"v23"/(str(n)+".json")
+            report=json.loads(source.read_text(encoding="utf-8"))
+            if (report["schema"]==V23_SCHEMA and report["hypothetical"] is True
+                and report["draw_number"]==n and report["observed_at_utc"]==base["observed_at_utc"]
+                and report["reg_close_time"]==base["reg_close_time"]
+                and report["source_snapshot_sha256"]==base["source_snapshot_sha256"]
+                and report["v22_created_at_utc"]==v22["created_at_utc"]
+                and instant(base["observed_at_utc"])<=instant(report["created_at_utc"])<=now
+                and len(report["scenarios"])==9
+                and [(s["id"],s["cost"]) for s in report["comparisons"]]==[(s["id"],s["cost"]) for s in v22["systems"]]):
+                target=dest/"data"/"v23"/source.name
+                target.parent.mkdir(parents=True,exist_ok=True)
+                shutil.copy2(source,target)
+                cpath=root/"data"/"v23_context"/source.name
+                ctx=json.loads(cpath.read_text(encoding="utf-8"))
+                if validate_context(ctx,base) and report["context_review_date"]==ctx["review_date"]:
+                    target=dest/"data"/"v23_context"/source.name
+                    target.parent.mkdir(parents=True,exist_ok=True)
+                    shutil.copy2(cpath,target)
     except (KeyError,TypeError,ValueError,OSError,json.JSONDecodeError):
         pass
 
