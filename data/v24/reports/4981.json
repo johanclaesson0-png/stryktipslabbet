@@ -2,12 +2,12 @@
   "schema": "v24-expert-barometer-v1",
   "draw_number": 4981,
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-27T18:11:31.872484+00:00",
-  "market_observed_at": "2026-11-27T18:11:07.720091+00:00",
+  "created_at_utc": "2026-11-27T19:58:33.191006+00:00",
+  "market_observed_at": "2026-11-27T19:58:12.756649+00:00",
   "mode": "prospective",
   "candidate_count": 50,
-  "sources_with_data": 16,
-  "observations": 100,
+  "sources_with_data": 29,
+  "observations": 204,
   "matches": [
     {
       "number": 1,
@@ -78,11 +78,11 @@
         },
         "result_site": {
           "individual": {
-            "n": 1,
+            "n": 3,
             "votes": [
               0.0,
               0.0,
-              1.0
+              3.0
             ],
             "shares": [
               0.0,
@@ -92,11 +92,11 @@
             "disagreement": 0.0
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
               0.0,
               0.0,
-              1.0
+              3.0
             ],
             "shares": [
               0.0,
@@ -138,24 +138,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -190,32 +198,32 @@
         },
         "system_human": {
           "individual": {
-            "n": 3,
+            "n": 5,
             "votes": [
               0.5,
               1.0,
-              1.5
+              3.5
             ],
             "shares": [
-              0.166667,
-              0.333333,
-              0.5
+              0.1,
+              0.2,
+              0.7
             ],
-            "disagreement": 0.5
+            "disagreement": 0.3
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
               0.166667,
               0.333333,
-              0.5
+              2.5
             ],
             "shares": [
-              0.166667,
-              0.333333,
-              0.5
+              0.055556,
+              0.111111,
+              0.833333
             ],
-            "disagreement": 0.5
+            "disagreement": 0.166667
           }
         },
         "system_editorial": {
@@ -269,9 +277,9 @@
       "home": "Manchester United",
       "away": "Brentford",
       "market": [
-        0.455410953,
-        0.247881911,
-        0.296707136
+        0.448482061,
+        0.250689972,
+        0.300827967
       ],
       "streck": [
         47.0,
@@ -281,9 +289,9 @@
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 1,
+            "n": 2,
             "votes": [
-              1.0,
+              2.0,
               0.0,
               0.0
             ],
@@ -295,9 +303,9 @@
             "disagreement": 0.0
           },
           "publisher": {
-            "n": 1,
+            "n": 2,
             "votes": [
-              1.0,
+              2.0,
               0.0,
               0.0
             ],
@@ -333,32 +341,32 @@
         },
         "result_site": {
           "individual": {
-            "n": 2,
+            "n": 4,
             "votes": [
-              2.0,
+              3.0,
               0.0,
-              0.0
+              1.0
             ],
             "shares": [
-              1.0,
+              0.75,
               0.0,
-              0.0
+              0.25
             ],
-            "disagreement": 0.0
+            "disagreement": 0.25
           },
           "publisher": {
-            "n": 2,
+            "n": 4,
             "votes": [
-              2.0,
+              3.0,
               0.0,
-              0.0
+              1.0
             ],
             "shares": [
-              1.0,
+              0.75,
               0.0,
-              0.0
+              0.25
             ],
-            "disagreement": 0.0
+            "disagreement": 0.25
           }
         },
         "first_human": {
@@ -393,24 +401,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -445,32 +461,32 @@
         },
         "system_human": {
           "individual": {
-            "n": 3,
+            "n": 5,
             "votes": [
-              0.5,
-              1.5,
-              1.0
+              1.333333,
+              1.833333,
+              1.833333
             ],
             "shares": [
-              0.166667,
-              0.5,
-              0.333333
+              0.266667,
+              0.366667,
+              0.366667
             ],
-            "disagreement": 0.5
+            "disagreement": 0.633333
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              0.166667,
-              0.5,
-              0.333333
+              1.0,
+              0.833333,
+              1.166667
             ],
             "shares": [
-              0.166667,
-              0.5,
-              0.333333
+              0.333333,
+              0.277778,
+              0.388889
             ],
-            "disagreement": 0.5
+            "disagreement": 0.611111
           }
         },
         "system_editorial": {
@@ -588,9 +604,9 @@
         },
         "result_site": {
           "individual": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              1.0,
+              3.0,
               0.0,
               0.0
             ],
@@ -602,9 +618,9 @@
             "disagreement": 0.0
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              1.0,
+              3.0,
               0.0,
               0.0
             ],
@@ -648,24 +664,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -700,54 +724,62 @@
         },
         "system_human": {
           "individual": {
-            "n": 4,
+            "n": 6,
             "votes": [
-              2.333333,
-              1.333333,
-              0.333333
+              3.166667,
+              2.166667,
+              0.666667
             ],
             "shares": [
-              0.583333,
-              0.333333,
-              0.083333
-            ],
-            "disagreement": 0.416667
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              1.444444,
-              0.444444,
+              0.527778,
+              0.361111,
               0.111111
             ],
-            "shares": [
-              0.722222,
-              0.222222,
-              0.055556
+            "disagreement": 0.472222
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              2.277778,
+              1.277778,
+              0.444444
             ],
-            "disagreement": 0.277778
+            "shares": [
+              0.569444,
+              0.319444,
+              0.111111
+            ],
+            "disagreement": 0.430556
           }
         },
         "system_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "system_site": {
@@ -784,16 +816,16 @@
         0.158313154
       ],
       "streck": [
-        77.0,
+        78.0,
         13.0,
-        10.0
+        9.0
       ],
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 2,
+            "n": 3,
             "votes": [
-              2.0,
+              3.0,
               0.0,
               0.0
             ],
@@ -805,9 +837,9 @@
             "disagreement": 0.0
           },
           "publisher": {
-            "n": 2,
+            "n": 3,
             "votes": [
-              2.0,
+              3.0,
               0.0,
               0.0
             ],
@@ -843,24 +875,32 @@
         },
         "result_site": {
           "individual": {
-            "n": 0,
+            "n": 5,
             "votes": [
-              0.0,
+              5.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 5,
             "votes": [
-              0.0,
+              5.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_human": {
@@ -895,24 +935,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -947,54 +995,62 @@
         },
         "system_human": {
           "individual": {
-            "n": 3,
+            "n": 5,
             "votes": [
-              1.833333,
-              0.833333,
-              0.333333
+              3.166667,
+              1.166667,
+              0.666667
             ],
             "shares": [
-              0.611111,
-              0.277778,
-              0.111111
+              0.633333,
+              0.233333,
+              0.133333
             ],
-            "disagreement": 0.388889
+            "disagreement": 0.366667
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
+              1.944444,
               0.611111,
-              0.277778,
-              0.111111
+              0.444444
             ],
             "shares": [
-              0.611111,
-              0.277778,
-              0.111111
+              0.648148,
+              0.203704,
+              0.148148
             ],
-            "disagreement": 0.388889
+            "disagreement": 0.351852
           }
         },
         "system_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
-              0.0,
-              0.0
+              0.333333,
+              0.333333,
+              0.333333
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "disagreement": 0.666667
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
-              0.0,
-              0.0
+              0.333333,
+              0.333333,
+              0.333333
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "disagreement": 0.666667
           }
         },
         "system_site": {
@@ -1082,32 +1138,32 @@
         },
         "result_site": {
           "individual": {
-            "n": 1,
+            "n": 6,
             "votes": [
+              5.0,
               1.0,
-              0.0,
               0.0
             ],
             "shares": [
-              1.0,
-              0.0,
+              0.833333,
+              0.166667,
               0.0
             ],
-            "disagreement": 0.0
+            "disagreement": 0.166667
           },
           "publisher": {
-            "n": 1,
+            "n": 6,
             "votes": [
+              5.0,
               1.0,
-              0.0,
               0.0
             ],
             "shares": [
-              1.0,
-              0.0,
+              0.833333,
+              0.166667,
               0.0
             ],
-            "disagreement": 0.0
+            "disagreement": 0.166667
           }
         },
         "first_human": {
@@ -1142,24 +1198,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -1194,32 +1258,32 @@
         },
         "system_human": {
           "individual": {
-            "n": 3,
+            "n": 5,
             "votes": [
-              1.333333,
-              0.833333,
-              0.833333
+              2.166667,
+              1.666667,
+              1.166667
             ],
             "shares": [
-              0.444444,
-              0.277778,
-              0.277778
+              0.433333,
+              0.333333,
+              0.233333
             ],
-            "disagreement": 0.555556
+            "disagreement": 0.566667
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              0.444444,
-              0.277778,
-              0.277778
+              1.277778,
+              1.111111,
+              0.611111
             ],
             "shares": [
-              0.444444,
-              0.277778,
-              0.277778
+              0.425926,
+              0.37037,
+              0.203704
             ],
-            "disagreement": 0.555556
+            "disagreement": 0.574074
           }
         },
         "system_editorial": {
@@ -1329,24 +1393,32 @@
         },
         "result_site": {
           "individual": {
-            "n": 0,
+            "n": 5,
             "votes": [
-              0.0,
-              0.0,
+              4.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.8,
+              0.2,
+              0.0
+            ],
+            "disagreement": 0.2
           },
           "publisher": {
-            "n": 0,
+            "n": 5,
             "votes": [
-              0.0,
-              0.0,
+              4.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.8,
+              0.2,
+              0.0
+            ],
+            "disagreement": 0.2
           }
         },
         "first_human": {
@@ -1381,24 +1453,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -1433,32 +1513,32 @@
         },
         "system_human": {
           "individual": {
-            "n": 3,
+            "n": 5,
             "votes": [
-              2.333333,
-              0.333333,
-              0.333333
+              3.333333,
+              0.833333,
+              0.833333
             ],
             "shares": [
-              0.777778,
-              0.111111,
-              0.111111
+              0.666667,
+              0.166667,
+              0.166667
             ],
-            "disagreement": 0.222222
+            "disagreement": 0.333333
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              0.777778,
-              0.111111,
-              0.111111
+              1.777778,
+              0.611111,
+              0.611111
             ],
             "shares": [
-              0.777778,
-              0.111111,
-              0.111111
+              0.592593,
+              0.203704,
+              0.203704
             ],
-            "disagreement": 0.222222
+            "disagreement": 0.407407
           }
         },
         "system_editorial": {
@@ -1524,24 +1604,32 @@
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "result_editorial": {
@@ -1568,24 +1656,32 @@
         },
         "result_site": {
           "individual": {
-            "n": 0,
+            "n": 5,
             "votes": [
-              0.0,
+              5.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 5,
             "votes": [
-              0.0,
+              5.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_human": {
@@ -1620,24 +1716,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -1672,32 +1776,32 @@
         },
         "system_human": {
           "individual": {
-            "n": 3,
+            "n": 5,
             "votes": [
-              1.0,
-              1.0,
+              2.5,
+              1.5,
               1.0
             ],
             "shares": [
-              0.333333,
-              0.333333,
-              0.333333
+              0.5,
+              0.3,
+              0.2
             ],
-            "disagreement": 0.666667
+            "disagreement": 0.5
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              0.333333,
-              0.333333,
+              1.833333,
+              0.833333,
               0.333333
             ],
             "shares": [
-              0.333333,
-              0.333333,
-              0.333333
+              0.611111,
+              0.277778,
+              0.111111
             ],
-            "disagreement": 0.666667
+            "disagreement": 0.388889
           }
         },
         "system_editorial": {
@@ -1751,9 +1855,9 @@
       "home": "Queens Park Rangers",
       "away": "Sheffield U",
       "market": [
-        0.455269253,
-        0.260856977,
-        0.28387377
+        0.465532518,
+        0.261704767,
+        0.272762715
       ],
       "streck": [
         45.0,
@@ -1763,24 +1867,32 @@
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "result_editorial": {
@@ -1807,24 +1919,32 @@
         },
         "result_site": {
           "individual": {
-            "n": 0,
+            "n": 5,
             "votes": [
+              4.0,
               0.0,
-              0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.8,
+              0.0,
+              0.2
+            ],
+            "disagreement": 0.2
           },
           "publisher": {
-            "n": 0,
+            "n": 5,
             "votes": [
+              4.0,
               0.0,
-              0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.8,
+              0.0,
+              0.2
+            ],
+            "disagreement": 0.2
           }
         },
         "first_human": {
@@ -1859,24 +1979,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -1911,32 +2039,32 @@
         },
         "system_human": {
           "individual": {
+            "n": 6,
+            "votes": [
+              3.333333,
+              1.333333,
+              1.333333
+            ],
+            "shares": [
+              0.555556,
+              0.222222,
+              0.222222
+            ],
+            "disagreement": 0.444444
+          },
+          "publisher": {
             "n": 4,
             "votes": [
-              2.0,
-              1.0,
+              2.333333,
+              0.666667,
               1.0
             ],
             "shares": [
-              0.5,
-              0.25,
+              0.583333,
+              0.166667,
               0.25
             ],
-            "disagreement": 0.5
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              1.0,
-              0.333333,
-              0.666667
-            ],
-            "shares": [
-              0.5,
-              0.166667,
-              0.333333
-            ],
-            "disagreement": 0.5
+            "disagreement": 0.416667
           }
         },
         "system_editorial": {
@@ -1990,9 +2118,9 @@
       "home": "West Ham",
       "away": "Stoke",
       "market": [
-        0.570873786,
-        0.231067961,
-        0.198058252
+        0.566234498,
+        0.236161218,
+        0.197604284
       ],
       "streck": [
         51.0,
@@ -2002,32 +2130,32 @@
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 1,
+            "n": 2,
             "votes": [
               1.0,
               0.0,
-              0.0
+              1.0
             ],
             "shares": [
-              1.0,
+              0.5,
               0.0,
-              0.0
+              0.5
             ],
-            "disagreement": 0.0
+            "disagreement": 0.5
           },
           "publisher": {
-            "n": 1,
+            "n": 2,
             "votes": [
               1.0,
               0.0,
-              0.0
+              1.0
             ],
             "shares": [
-              1.0,
+              0.5,
               0.0,
-              0.0
+              0.5
             ],
-            "disagreement": 0.0
+            "disagreement": 0.5
           }
         },
         "result_editorial": {
@@ -2054,32 +2182,32 @@
         },
         "result_site": {
           "individual": {
-            "n": 1,
+            "n": 6,
             "votes": [
+              4.0,
               1.0,
-              0.0,
-              0.0
+              1.0
             ],
             "shares": [
-              1.0,
-              0.0,
-              0.0
+              0.666667,
+              0.166667,
+              0.166667
             ],
-            "disagreement": 0.0
+            "disagreement": 0.333333
           },
           "publisher": {
-            "n": 1,
+            "n": 6,
             "votes": [
+              4.0,
               1.0,
-              0.0,
-              0.0
+              1.0
             ],
             "shares": [
-              1.0,
-              0.0,
-              0.0
+              0.666667,
+              0.166667,
+              0.166667
             ],
-            "disagreement": 0.0
+            "disagreement": 0.333333
           }
         },
         "first_human": {
@@ -2114,24 +2242,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -2166,54 +2302,62 @@
         },
         "system_human": {
           "individual": {
-            "n": 5,
+            "n": 7,
             "votes": [
-              4.5,
+              6.5,
               0.5,
               0.0
             ],
             "shares": [
-              0.9,
-              0.1,
+              0.928571,
+              0.071429,
               0.0
             ],
-            "disagreement": 0.1
+            "disagreement": 0.071429
           },
           "publisher": {
-            "n": 2,
+            "n": 4,
             "votes": [
-              1.833333,
+              3.833333,
               0.166667,
               0.0
             ],
             "shares": [
-              0.916667,
-              0.083333,
+              0.958333,
+              0.041667,
               0.0
             ],
-            "disagreement": 0.083333
+            "disagreement": 0.041667
           }
         },
         "system_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "system_site": {
@@ -2250,31 +2394,39 @@
         0.273391813
       ],
       "streck": [
-        55.0,
-        27.0,
+        56.0,
+        26.0,
         18.0
       ],
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "result_editorial": {
@@ -2301,24 +2453,32 @@
         },
         "result_site": {
           "individual": {
-            "n": 0,
+            "n": 5,
             "votes": [
-              0.0,
+              5.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 5,
             "votes": [
-              0.0,
+              5.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_human": {
@@ -2353,24 +2513,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -2405,32 +2573,32 @@
         },
         "system_human": {
           "individual": {
-            "n": 3,
+            "n": 5,
             "votes": [
-              1.166667,
-              1.166667,
+              2.666667,
+              1.666667,
               0.666667
             ],
             "shares": [
-              0.388889,
-              0.388889,
-              0.222222
+              0.533333,
+              0.333333,
+              0.133333
             ],
-            "disagreement": 0.611111
+            "disagreement": 0.466667
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              0.388889,
-              0.388889,
+              1.888889,
+              0.888889,
               0.222222
             ],
             "shares": [
-              0.388889,
-              0.388889,
-              0.222222
+              0.62963,
+              0.296296,
+              0.074074
             ],
-            "disagreement": 0.611111
+            "disagreement": 0.37037
           }
         },
         "system_editorial": {
@@ -2518,31 +2686,39 @@
         },
         "result_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "result_site": {
           "individual": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              1.0,
+              3.0,
               0.0,
               0.0
             ],
@@ -2554,9 +2730,9 @@
             "disagreement": 0.0
           },
           "publisher": {
-            "n": 1,
+            "n": 3,
             "votes": [
-              1.0,
+              3.0,
               0.0,
               0.0
             ],
@@ -2600,24 +2776,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -2652,32 +2836,32 @@
         },
         "system_human": {
           "individual": {
-            "n": 4,
+            "n": 6,
             "votes": [
-              3.5,
-              0.5,
+              5.0,
+              1.0,
               0.0
             ],
             "shares": [
-              0.875,
-              0.125,
-              0.0
-            ],
-            "disagreement": 0.125
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              1.833333,
+              0.833333,
               0.166667,
               0.0
             ],
-            "shares": [
-              0.916667,
-              0.083333,
+            "disagreement": 0.166667
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              3.333333,
+              0.666667,
               0.0
             ],
-            "disagreement": 0.083333
+            "shares": [
+              0.833333,
+              0.166667,
+              0.0
+            ],
+            "disagreement": 0.166667
           }
         },
         "system_editorial": {
@@ -2736,75 +2920,99 @@
         0.335044929
       ],
       "streck": [
-        55.0,
+        56.0,
         23.0,
-        22.0
+        21.0
       ],
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 0,
+            "n": 3,
             "votes": [
-              0.0,
+              3.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 3,
             "votes": [
-              0.0,
+              3.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "result_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "result_site": {
           "individual": {
-            "n": 0,
+            "n": 3,
             "votes": [
-              0.0,
+              3.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 3,
             "votes": [
-              0.0,
+              3.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_human": {
@@ -2839,24 +3047,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -2891,32 +3107,32 @@
         },
         "system_human": {
           "individual": {
-            "n": 4,
+            "n": 6,
             "votes": [
-              1.0,
               2.0,
-              1.0
+              2.5,
+              1.5
             ],
             "shares": [
-              0.25,
-              0.5,
+              0.333333,
+              0.416667,
               0.25
             ],
-            "disagreement": 0.5
+            "disagreement": 0.583333
           },
           "publisher": {
-            "n": 2,
+            "n": 4,
             "votes": [
-              0.333333,
-              1.0,
-              0.666667
+              1.333333,
+              1.5,
+              1.166667
             ],
             "shares": [
-              0.166667,
-              0.5,
-              0.333333
+              0.333333,
+              0.375,
+              0.291667
             ],
-            "disagreement": 0.5
+            "disagreement": 0.625
           }
         },
         "system_editorial": {
@@ -3004,46 +3220,62 @@
         },
         "result_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
               0.0,
-              0.0
+              1.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
           }
         },
         "result_site": {
           "individual": {
-            "n": 0,
+            "n": 3,
             "votes": [
-              0.0,
-              0.0,
+              2.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.666667,
+              0.333333,
+              0.0
+            ],
+            "disagreement": 0.333333
           },
           "publisher": {
-            "n": 0,
+            "n": 3,
             "votes": [
-              0.0,
-              0.0,
+              2.0,
+              1.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.666667,
+              0.333333,
+              0.0
+            ],
+            "disagreement": 0.333333
           }
         },
         "first_human": {
@@ -3078,24 +3310,32 @@
         },
         "first_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "first_site": {
@@ -3130,54 +3370,62 @@
         },
         "system_human": {
           "individual": {
-            "n": 4,
+            "n": 6,
             "votes": [
-              2.666667,
-              0.666667,
+              4.166667,
+              1.166667,
               0.666667
             ],
             "shares": [
-              0.666667,
-              0.166667,
-              0.166667
+              0.694444,
+              0.194444,
+              0.111111
             ],
-            "disagreement": 0.333333
+            "disagreement": 0.305556
           },
           "publisher": {
-            "n": 2,
+            "n": 4,
             "votes": [
-              1.555556,
-              0.222222,
+              3.055556,
+              0.722222,
               0.222222
             ],
             "shares": [
-              0.777778,
-              0.111111,
-              0.111111
+              0.763889,
+              0.180556,
+              0.055556
             ],
-            "disagreement": 0.222222
+            "disagreement": 0.236111
           }
         },
         "system_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
-              0.0,
-              0.0
+              0.333333,
+              0.333333,
+              0.333333
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "disagreement": 0.666667
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
-              0.0,
-              0.0
+              0.333333,
+              0.333333,
+              0.333333
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "disagreement": 0.666667
           }
         },
         "system_site": {
@@ -3206,6 +3454,351 @@
     }
   ],
   "picks": [
+    {
+      "id": "accumulatorbonus",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/championship/2026-11-27/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/championship/2026-11-27/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/championship/2026-11-27/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/championship/2026-11-27/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/championship/2026-11-27/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/championship/2026-11-27/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/championship/2026-11-27/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/league-one/2026-11-26/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/league-one/2026-11-26/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "accumulatorbonus",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.accumulatorbonus.com/accumulator-tips/league-one/2026-11-26/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "AccumulatorBonus",
+      "kind": "site",
+      "group": "accumulatorbonus.com"
+    },
+    {
+      "id": "amrouni",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "system",
+      "sign": "2",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "system",
+      "sign": "1",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "system",
+      "sign": "1",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "system",
+      "sign": "1",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "system",
+      "sign": "1",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
+    {
+      "id": "amrouni",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://tipper.se/stryktipset",
+      "source_at": "2026-11-27T13:48:00+01:00",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "article_timestamp",
+      "name": "Jonas Amrouni",
+      "kind": "human",
+      "group": "tipper.se"
+    },
     {
       "id": "axel",
       "number": 1,
@@ -3657,6 +4250,81 @@
       "group": "footballwhispers.com"
     },
     {
+      "id": "delahunt",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thescottishsun.co.uk/sport/17123877/jim-delahunt-weekend-acca-rangers-celtic-scottish-cup/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jim Delahunt",
+      "kind": "human",
+      "group": "thescottishsun.co.uk"
+    },
+    {
+      "id": "delahunt",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thescottishsun.co.uk/sport/17123877/jim-delahunt-weekend-acca-rangers-celtic-scottish-cup/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jim Delahunt",
+      "kind": "human",
+      "group": "thescottishsun.co.uk"
+    },
+    {
+      "id": "delahunt",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.thescottishsun.co.uk/sport/17123877/jim-delahunt-weekend-acca-rangers-celtic-scottish-cup/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jim Delahunt",
+      "kind": "human",
+      "group": "thescottishsun.co.uk"
+    },
+    {
+      "id": "delahunt",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thescottishsun.co.uk/sport/17123877/jim-delahunt-weekend-acca-rangers-celtic-scottish-cup/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jim Delahunt",
+      "kind": "human",
+      "group": "thescottishsun.co.uk"
+    },
+    {
+      "id": "delahunt",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thescottishsun.co.uk/sport/17123877/jim-delahunt-weekend-acca-rangers-celtic-scottish-cup/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jim Delahunt",
+      "kind": "human",
+      "group": "thescottishsun.co.uk"
+    },
+    {
       "id": "dybban",
       "number": 9,
       "home": "West Ham",
@@ -3715,6 +4383,381 @@
       "name": "Simon Lindell",
       "kind": "human",
       "group": "aftonbladet.se"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "2",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "2",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "result",
+      "sign": "1",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "X",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "X",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "1",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "X",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "result",
+      "sign": "1",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "result",
+      "sign": "1",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballpredictions",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "result",
+      "sign": "X",
+      "source": "https://footballpredictions.com/betting-tips/?date=28-11-2026",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "FootballPredictions.com",
+      "kind": "site",
+      "group": "footballpredictions.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "2",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "2",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
+    },
+    {
+      "id": "footballsimulator",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://thefootballsimulator.com/football-predictions/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Football Simulator",
+      "kind": "site",
+      "group": "thefootballsimulator.com"
     },
     {
       "id": "giordano",
@@ -3972,6 +5015,51 @@
       "group": "aftonbladet.se"
     },
     {
+      "id": "livescore",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.livescore.com/en/news/football/england-league-one/league-one-predictions-all-11-week-17-games/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "LiveScore (redaktion)",
+      "kind": "editorial",
+      "group": "livescore.com"
+    },
+    {
+      "id": "livescore",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.livescore.com/en/news/football/england-league-one/league-one-predictions-all-11-week-17-games/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "LiveScore (redaktion)",
+      "kind": "editorial",
+      "group": "livescore.com"
+    },
+    {
+      "id": "livescore",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.livescore.com/en/news/football/england-league-one/league-one-predictions-all-11-week-17-games/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "LiveScore (redaktion)",
+      "kind": "editorial",
+      "group": "livescore.com"
+    },
+    {
       "id": "mansilla",
       "number": 4,
       "home": "Birmingham",
@@ -4182,6 +5270,261 @@
       "group": "bettingstugan.se"
     },
     {
+      "id": "reducering",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "system",
+      "sign": "1",
+      "source": "https://www.reducering.se/blog/stryktipset/6b088e5ca67adb02b9af2a53",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Team Reducering",
+      "kind": "editorial",
+      "group": "reducering.se"
+    },
+    {
+      "id": "reducering",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://www.reducering.se/blog/stryktipset/6b088e5ca67adb02b9af2a53",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Team Reducering",
+      "kind": "editorial",
+      "group": "reducering.se"
+    },
+    {
+      "id": "reducering",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "system",
+      "sign": "1",
+      "source": "https://www.reducering.se/blog/stryktipset/6b088e5ca67adb02b9af2a53",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Team Reducering",
+      "kind": "editorial",
+      "group": "reducering.se"
+    },
+    {
+      "id": "reducering",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://www.reducering.se/blog/stryktipset/6b088e5ca67adb02b9af2a53",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Team Reducering",
+      "kind": "editorial",
+      "group": "reducering.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "system",
+      "sign": "2",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "system",
+      "sign": "12",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "system",
+      "sign": "1",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "system",
+      "sign": "12",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "system",
+      "sign": "1",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "system",
+      "sign": "1",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "system",
+      "sign": "1",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "system",
+      "sign": "X2",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
+      "id": "ronngren",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "system",
+      "sign": "1",
+      "source": "https://hurbra.se/stryktipset-28-november-2026/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Jörgen Rönngren",
+      "kind": "human",
+      "group": "hurbra.se"
+    },
+    {
       "id": "sandeback",
       "number": 3,
       "home": "Leeds",
@@ -4225,6 +5568,156 @@
       "name": "Ulrik Sandebäck",
       "kind": "human",
       "group": "aftonbladet.se"
+    },
+    {
+      "id": "sarwar",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thestatszone.com/birmingham-vs-bolton-preview-prediction-242867",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Alex Sarwar",
+      "kind": "human",
+      "group": "thestatszone.com"
+    },
+    {
+      "id": "sarwar",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.thestatszone.com/qpr-vs-sheffield-utd-preview-prediction-242888",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Alex Sarwar",
+      "kind": "human",
+      "group": "thestatszone.com"
+    },
+    {
+      "id": "sarwar",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thestatszone.com/sheffield-wednesday-vs-reading-preview-prediction-242965",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Alex Sarwar",
+      "kind": "human",
+      "group": "thestatszone.com"
+    },
+    {
+      "id": "soccerstat",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://soccerstat.co.uk/predictions/championship/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Soccerstat",
+      "kind": "site",
+      "group": "soccerstat.co.uk"
+    },
+    {
+      "id": "soccerstat",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://soccerstat.co.uk/predictions/championship/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Soccerstat",
+      "kind": "site",
+      "group": "soccerstat.co.uk"
+    },
+    {
+      "id": "soccerstat",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "1",
+      "source": "https://soccerstat.co.uk/predictions/championship/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Soccerstat",
+      "kind": "site",
+      "group": "soccerstat.co.uk"
+    },
+    {
+      "id": "soccerstat",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://soccerstat.co.uk/predictions/championship/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Soccerstat",
+      "kind": "site",
+      "group": "soccerstat.co.uk"
+    },
+    {
+      "id": "soccerstat",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "1",
+      "source": "https://soccerstat.co.uk/predictions/championship/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Soccerstat",
+      "kind": "site",
+      "group": "soccerstat.co.uk"
+    },
+    {
+      "id": "soccerstat",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "1",
+      "source": "https://soccerstat.co.uk/predictions/championship/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Soccerstat",
+      "kind": "site",
+      "group": "soccerstat.co.uk"
+    },
+    {
+      "id": "soccerstat",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "result",
+      "sign": "1",
+      "source": "https://soccerstat.co.uk/predictions/championship/",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Soccerstat",
+      "kind": "site",
+      "group": "soccerstat.co.uk"
     },
     {
       "id": "spelkanalen",
@@ -4465,6 +5958,321 @@
       "name": "Speltips.se",
       "kind": "site",
       "group": "speltips.se"
+    },
+    {
+      "id": "thepundit",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thepundit.io/championship-2026-2027/picks",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Pundit",
+      "kind": "site",
+      "group": "thepundit.io"
+    },
+    {
+      "id": "thepundit",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thepundit.io/championship-2026-2027/picks",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Pundit",
+      "kind": "site",
+      "group": "thepundit.io"
+    },
+    {
+      "id": "thepundit",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thepundit.io/championship-2026-2027/picks",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Pundit",
+      "kind": "site",
+      "group": "thepundit.io"
+    },
+    {
+      "id": "thepundit",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thepundit.io/championship-2026-2027/picks",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Pundit",
+      "kind": "site",
+      "group": "thepundit.io"
+    },
+    {
+      "id": "thepundit",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thepundit.io/championship-2026-2027/picks",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Pundit",
+      "kind": "site",
+      "group": "thepundit.io"
+    },
+    {
+      "id": "thepundit",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.thepundit.io/championship-2026-2027/picks",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Pundit",
+      "kind": "site",
+      "group": "thepundit.io"
+    },
+    {
+      "id": "thepundit",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.thepundit.io/championship-2026-2027/picks",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "The Pundit",
+      "kind": "site",
+      "group": "thepundit.io"
+    },
+    {
+      "id": "tt",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "first",
+      "sign": "2",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "first",
+      "sign": "2",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "first",
+      "sign": "1",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "first",
+      "sign": "1",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "first",
+      "sign": "2",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "first",
+      "sign": "1",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "first",
+      "sign": "2",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "first",
+      "sign": "X",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "first",
+      "sign": "X",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "first",
+      "sign": "1",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "first",
+      "sign": "1",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "first",
+      "sign": "2",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "tt",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "first",
+      "sign": "1",
+      "source": "https://tipsxtra.se/Stryktipset/2026-48/2026-11-28",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "TT",
+      "kind": "editorial",
+      "group": "tt"
+    },
+    {
+      "id": "varley",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.sportsmole.co.uk/football/sheffield-wednesday/preview/sheff-weds-vs-reading-prediction-team-news-lineups_609944.html",
+      "source_at": "2026-11-27T19:57:04.701Z",
+      "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Sam Varley",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
     },
     {
       "id": "victor",

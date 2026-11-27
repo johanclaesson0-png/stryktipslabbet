@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-27T18:11:07.720091+00:00",
-  "source_snapshot_sha256": "edd4d27e801adcf326453a933405aa94618fa1613e490235807eb42f277262a0",
-  "form_created_at_utc": "2026-11-27T18:59:03.475399+00:00",
-  "form_sha256": "0a71f084fb71f96ca53546e2a9bfe069a993bb8ff68ed8572348104253d454d2",
+  "source_observed_at_utc": "2026-11-27T19:58:12.756649+00:00",
+  "source_snapshot_sha256": "a0c3baf9a6a459cb4f410e2ece8b5efbf253cddcbf4f76c3a53be35cb3dbe48e",
+  "form_created_at_utc": "2026-11-27T19:58:13.054373+00:00",
+  "form_sha256": "a0b0f2480ed9d03d462cbfc01085a901cd5643c7c60b710f0440bfa85932f7bb",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-27T18:59:04.333603+00:00",
+  "created_at_utc": "2026-11-27T19:58:13.986891+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -42,14 +42,14 @@
       "home": "Manchester United",
       "away": "Brentford",
       "market_p": [
-        0.455410953,
-        0.247881911,
-        0.296707136
+        0.448482061,
+        0.250689972,
+        0.300827967
       ],
       "form_p": [
-        0.452946426,
-        0.247991081,
-        0.299062493
+        0.446023164,
+        0.250782461,
+        0.303194375
       ],
       "delta_pp": [
         -0.25,
@@ -198,14 +198,14 @@
       "home": "Queens Park Rangers",
       "away": "Sheffield U",
       "market_p": [
-        0.455269253,
-        0.260856977,
-        0.28387377
+        0.465532518,
+        0.261704767,
+        0.272762715
       ],
       "form_p": [
-        0.455269253,
-        0.260856977,
-        0.28387377
+        0.465532518,
+        0.261704767,
+        0.272762715
       ],
       "delta_pp": [
         0.0,
@@ -224,14 +224,14 @@
       "home": "West Ham",
       "away": "Stoke",
       "market_p": [
-        0.570873786,
-        0.231067961,
-        0.198058252
+        0.566234498,
+        0.236161218,
+        0.197604284
       ],
       "form_p": [
-        0.570873786,
-        0.231067961,
-        0.198058252
+        0.566234498,
+        0.236161218,
+        0.197604284
       ],
       "delta_pp": [
         0.0,
@@ -384,9 +384,9 @@
         "12",
         "1X2"
       ],
-      "original_market_p13": 0.003295766,
-      "new_form_p13": 0.003709504,
-      "new_market_baseline_p13": 0.003247299,
+      "original_market_p13": 0.003330197,
+      "new_form_p13": 0.003661496,
+      "new_market_baseline_p13": 0.003205204,
       "different_matches": 2
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.025256664,
-      "new_form_p13": 0.027820804,
-      "new_market_baseline_p13": 0.025256664,
+      "original_market_p13": 0.024957882,
+      "new_form_p13": 0.027492286,
+      "new_market_baseline_p13": 0.024957882,
       "different_matches": 0
     }
   ],
