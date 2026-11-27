@@ -17,7 +17,12 @@ def read(path):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
 
 def instant(s):
-    return datetime.fromisoformat(s.replace("Z", "+00:00"))
+    if not isinstance(s, str):
+        raise ValueError("Missing timestamp")
+    value = datetime.fromisoformat(s.replace("Z", "+00:00"))
+    if value.tzinfo is None:
+        raise ValueError("Missing timezone")
+    return value
 
 def valid_pick(p, close, mode):
     try:
