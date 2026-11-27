@@ -18,7 +18,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: forecastrecord-api-${{ github.ref }}
+  group: forecastrecord-import
   cancel-in-progress: false
 jobs:
   review:
@@ -42,9 +42,16 @@ jobs:
           fi
           if [ "$EVENT" = pull_request ]; then args+=(--limit 2); fi
           python -m scripts.v25_forecastrecord_api "${args[@]}"
+      - name: Historical incremental review
+        if: github.event_name == 'pull_request'
+        run: |
+          sleep 7
+          python -m scripts.v25_forecastrecord_api --draw 4980 --skip-covered --limit 7 --output forecastrecord-historical-review.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: forecastrecord-api-review
-          path: forecastrecord-api-review.json
+          path: |
+            forecastrecord-api-review.json
+            forecastrecord-historical-review.json
           retention-days: 30
