@@ -135,9 +135,9 @@
       "home": "Real Sociedad",
       "away": "Sevilla",
       "odds": [
-        2.18,
+        2.16,
         3.75,
-        3.35
+        3.4
       ],
       "streck": [
         65.0,
@@ -145,9 +145,9 @@
         15.0
       ],
       "p": [
-        0.448012696,
-        0.260444714,
-        0.29154259
+        0.452223877,
+        0.260480953,
+        0.287295169
       ],
       "match_start": "2026-11-29T21:00:00+01:00"
     },
@@ -203,9 +203,9 @@
         1.33
       ],
       "streck": [
-        6.0,
+        7.0,
         12.0,
-        82.0
+        81.0
       ],
       "p": [
         0.102241249,
@@ -278,10 +278,10 @@
       "match_start": "2026-11-29T15:00:00+01:00"
     }
   ],
-  "observed_at_utc": "2026-11-27T18:11:15.201480+00:00",
-  "source_snapshot_sha256": "4c358909f27bc18f83e7c3f3dad99d19d0b1f98ac3f4ae1168da746fc7ed14f3",
+  "observed_at_utc": "2026-11-27T18:59:11.796195+00:00",
+  "source_snapshot_sha256": "1538dec330386e93c6c52e48788bc8b846c5849af4d3698445c515901d263241",
   "reg_close_time": "2026-11-29T13:59:00+00:00",
-  "created_at_utc": "2026-11-27T18:11:15.202841+00:00",
+  "created_at_utc": "2026-11-27T18:59:11.797592+00:00",
   "systems": [
     {
       "budget_limit": 100,
@@ -302,7 +302,7 @@
         "1",
         "1X"
       ],
-      "estimated_all_correct": 0.0032480828
+      "estimated_all_correct": 0.0032479236
     },
     {
       "budget_limit": 100,
@@ -323,7 +323,7 @@
         "12",
         "1"
       ],
-      "estimated_all_correct": 0.0031446409
+      "estimated_all_correct": 0.0031444868
     },
     {
       "budget_limit": 1800,
@@ -344,7 +344,7 @@
         "12",
         "1X2"
       ],
-      "estimated_all_correct": 0.0229786979
+      "estimated_all_correct": 0.0229786978
     },
     {
       "budget_limit": 1800,
