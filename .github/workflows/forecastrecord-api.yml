@@ -18,7 +18,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: forecastrecord-import
+  group: forecastrecord-api-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   review:
