@@ -100,6 +100,7 @@ def main():
         shutil.copy2(root/"v28-experiment.html",dest/"v28-experiment.html")
 
     shutil.copy2(root/"infor-spelstopp.html",dest/"infor-spelstopp.html")
+    shutil.copy2(root/"truppkoll.html",dest/"truppkoll.html")
 
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
@@ -439,6 +440,24 @@ def main():
             doc=v33_read(root/"data"/"v31"/"prospective_review.json")
             out=dest/"data"/"v33"/"latest.json"
             payload=v33_compare(current,doc,now)
+            out.parent.mkdir(parents=True,exist_ok=True)
+            out.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8")
+    except (StopIteration,KeyError,ValueError,TypeError,OSError):
+        pass
+
+    # V34 publishes only matched, pre-cutoff manual facts and explicitly
+    # permission-approved provider facts. No changes to V33 probabilities.
+    try:
+        from scripts.v34_team_news import build as v34_build
+        from scripts.v25_history import read as v34_read
+        if status["snapshot_usable_now"]:
+            n=status["latest_draw_number"]
+            current=next(x for x in report_index if x["draw_number"]==n and x["observed_at_utc"]==status["latest_observed_at_utc"])
+            snap=v34_read(root/"data"/"latest.json")
+            manual=v34_read(root/"data"/"v34"/"manual"/f"{n}.json")
+            provider=v34_read(root/"data"/"v34"/"provider"/f"{n}.json") if os.getenv("PLAYER_DATA_PUBLICATION_APPROVED")=="1" else None
+            payload=v34_build(current,snap,manual,provider,now)
+            out=dest/"data"/"v34"/"latest.json"
             out.parent.mkdir(parents=True,exist_ok=True)
             out.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8")
     except (StopIteration,KeyError,ValueError,TypeError,OSError):

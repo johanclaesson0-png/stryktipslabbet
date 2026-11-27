@@ -1,0 +1,38 @@
+name: V34 – team news readiness
+on:
+  pull_request:
+    paths:
+      - 'scripts/v34_team_news.py'
+      - 'tests/test_v34_team_news.py'
+      - 'truppkoll.html'
+      - 'scripts/publish.py'
+      - '.github/workflows/stryktipslabbet.yml'
+      - '.github/workflows/v34-team-news.yml'
+      - 'data/v34/manual/**'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check configuration without revealing credentials
+        env:
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+          PLAYER_DATA_PUBLICATION_APPROVED: ${{ vars.PLAYER_DATA_PUBLICATION_APPROVED }}
+        run: python -m scripts.v34_team_news --check-config
+      - run: python -m unittest discover -s tests -p 'test_v34_team_news.py'
+      - run: python -m scripts.publish
+      - name: Verify actual published data
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('.site/data/v34/latest.json')
+          d=json.loads(p.read_text())
+          assert len(d['matches'])==13 and d['model_effect'].startswith('0;')
+          assert pathlib.Path('.site/truppkoll.html').is_file()
+          print('V34 READY',d['draw_number'],d['coverage'],d['provider_status'])
+          PY
