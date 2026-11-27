@@ -1,5 +1,5 @@
 # V24 – expertbarometer
-50 kandidater, inte 50 bevisat oberoende experter. Registret anger källgrupp och typ (namn/pseudonym, redaktion, prognossajt). Regional etikett avser primär källa, inte medborgarskap.
+Mål: 50 aktiva källor. Registret kan utökas över 50 kandidater (61 efter 27 november 2026). Det är inte 50 bevisat oberoende experter. Det historiska rapportfältet candidate_count=50 behålls som täckningsmål för reproducerbarhet. Registret anger källgrupp och typ (namn/pseudonym, redaktion, prognossajt). Regional etikett avser primär källa, inte medborgarskap.
 
 ## Pilot
 4980: efterhandsgranskning av daterade svenska artiklar och Forecast Records individuella 90-minutersval. Källans registreringstid måste vara före Stryktipsets gemensamma spelstopp, inte bara matchstart. TT:s arkivsida saknar oberoende tidstämpel; markeras postclose_page. Ingen retrospektiv observation räknas som faktiskt fryst. Endast uttryckliga tecken, inte oddsmarknader som DNB, handicap eller kombinerade spel. Artikelförstaval är ofta streckvärdesval, inte ren sannolikhetsprognos. Systemförslag redovisas separat, en delad röst för garderingar. Victor och Poolarn är samma publicistgrupp; namn räknas också separat, men gruppmåttet reducerar övervikt. Syndikering mellan olika grupper kan kvarstå. Ingen modelljustering.
