@@ -18,6 +18,23 @@ class ImportTests(unittest.TestCase):
             bad=deepcopy(doc);bad["evidence_items"][0][key]=value
             self.assertEqual(extract(bad,spec,base,official,now)[0],[])
         with self.assertRaises(ValueError):extract(doc,spec,base,{"outcome":"2"},now)
+        pending=deepcopy(doc)
+        pending["event"]["status"]="scheduled"
+        pending["event"]["scoreline"]=None
+        e=pending["evidence_items"][0]
+        e["authorship"]=None
+        e["source_info"]={"url":"https://www.test.example/article","material_removed":False}
+        e["url"]=None
+        identity=pending["match_summary"]["who_predicted_what"][0]
+        identity.update({"url":None,"recorded_at":e["dates"]["detected_at"],"before_kickoff":True})
+        preclose=datetime(2026,11,14,13,tzinfo=timezone.utc)
+        picks,_=extract(pending,spec,base,None,preclose)
+        self.assertEqual(len(picks),1)
+        self.assertEqual(picks[0]["publisher"],"test.example")
+        with self.assertRaises(ValueError):extract(pending,spec,base,None,now)
+        identity["author_url"]="/sources/test/products/editorial/"
+        e["url"]="/sources/test/products/editorial/picks/1/"
+        self.assertEqual(extract(pending,spec,base,None,preclose)[0][0]["kind"],"site")
 
 if __name__=="__main__":
     unittest.main()
