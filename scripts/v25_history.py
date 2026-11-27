@@ -45,6 +45,34 @@ def blend(p, shares, weight):
 def losses(p, actual):
     return sum((v - int(i == actual))**2 for i,v in enumerate(p)), -math.log(max(p[actual], 1e-15))
 
+def strict_scope(entries, matches, panel, close):
+    """Use the machine-imported result market instead of legacy manual
+    Forecast Record transcriptions, only for covered, validated positions."""
+    scope = set()
+    for doc in entries:
+        if doc.get("schema") != "v25-imported-v1" or doc.get("mode") != "retrospective":
+            continue
+        if instant(doc["reg_close_time"]) != close:
+            raise ValueError("Imported cutoff mismatch")
+        positions = doc["covered_positions"]
+        if len(set(positions)) != len(positions) or any(type(n) != int or not 1 <= n <= len(matches) for n in positions):
+            raise ValueError("Invalid import scope")
+        observed = set()
+        keys = set()
+        for p in doc["picks"]:
+            n = p["number"]
+            k = (p["id"], n)
+            if n not in positions or k in keys or p["id"] not in panel or p["type"] != "result" or p["evidence"] != "archive_recorded" or not p["source"].startswith("https://forecastrecord.com/football/matches/") or not valid_pick(p, close, "retrospective"):
+                raise ValueError("Invalid strict import row")
+            if (p["home"], p["away"]) != (matches[n-1]["home"], matches[n-1]["away"]):
+                raise ValueError("Imported fixture mismatch")
+            keys.add(k)
+            observed.add(n)
+        if observed != set(positions) or scope.intersection(positions):
+            raise ValueError("Empty or overlapping import scope")
+        scope.update(positions)
+    return scope
+
 def evaluate(data):
     archive = {x["draw"]: x for x in read(data/"history/summary.json")["archive"]}
     pools = read(data/"history/official_pools.json")["draws"]
@@ -58,7 +86,7 @@ def evaluate(data):
         league_profiles[mode] = defaultdict(lambda: {"n":0,"hits":0})
         metrics[mode] = {str(w): {"n":0,"brier_sum":0.0,"logloss_sum":0.0} for w in WEIGHTS}
     docs = {}
-    for root in (data/"v25/recovered", data/"v24/reports"):
+    for root in (data/"v25/recovered", data/"v24/reports", data/"v25/imported"):
         for path in sorted(root.glob("*.json")):
             doc = read(path)
             docs.setdefault(doc["draw_number"], []).append(doc)
@@ -80,8 +108,11 @@ def evaluate(data):
         actuals = official["outcome"]
         if any(x not in SIGNS for x in actuals) or len(matches) != 13:
             continue
+        strict = strict_scope(entries, matches, panel, close)
         for mode in ("retrospective", "prospective"):
             votes = defaultdict(list)
+            replaced = 0
+            machine_count = 0
             for doc in entries:
                 if doc["mode"] != mode or instant(doc["reg_close_time"]) != close:
                     continue
@@ -96,6 +127,12 @@ def evaluate(data):
                         continue
                     if draw in archive and not archive[draw]["matches"][n-1].get("played_consistent",False):
                         continue
+                    imported = doc.get("schema") == "v25-imported-v1"
+                    if mode == "retrospective" and not imported and n in strict and p["type"] == "result" and p["source"].startswith("https://forecastrecord.com/"):
+                        replaced += 1
+                        continue
+                    if imported:
+                        machine_count += 1
                     votes[(p["id"],n,p["type"])].append(p)
             accepted = []
             for key, observations in votes.items():
@@ -104,7 +141,7 @@ def evaluate(data):
                     accepted.append(observations[0])
             if not accepted:
                 continue
-            coverage.append({"draw":draw,"mode":mode,"observations":len(accepted),"sources":len({p["id"] for p in accepted}),"odds_available":has_odds})
+            coverage.append({"draw":draw,"mode":mode,"observations":len(accepted),"sources":len({p["id"] for p in accepted}),"odds_available":has_odds,"machine_imported":machine_count,"legacy_rows_superseded":replaced})
             groups = defaultdict(lambda: defaultdict(list))
             for p in accepted:
                 n = p["number"]
@@ -123,8 +160,10 @@ def evaluate(data):
                     r["odds_n"] += 1
                     r["odds_hits"] += int(SIGNS[max(range(3),key=lambda i:odds[i])] == actual)
                     if p["type"] == "result" and panel[p["id"]]["kind"] == "human":
-                        groups[n][panel[p["id"]]["group"]].append(SIGNS.index(p["sign"]))
+                        groups[n][p.get("publisher_group",panel[p["id"]]["group"])].append(SIGNS.index(p["sign"]))
             for n, publishers in groups.items():
+                if len(publishers) < 2:
+                    continue
                 p = matches[n-1]["p"]
                 shares = [sum(v.count(i)/len(v) for v in publishers.values())/len(publishers) for i in range(3)]
                 actual = SIGNS.index(actuals[n-1])
@@ -137,7 +176,7 @@ def evaluate(data):
     return {"schema":"v25-history-audit-v1","created_at_utc":datetime.now(timezone.utc).isoformat(),
             "coverage":coverage,"league_profiles":{m:[{"id":i,"league":l,**v} for (i,l),v in sorted(r.items())] for m,r in league_profiles.items()},"profiles":{m:[{"id":i,"type":t,**v} for (i,t),v in sorted(r.items())] for m,r in profiles.items()},
             "fixed_weight_experiments":{m:[{"weight":float(w),"matches":v["n"],"brier":v["brier_sum"]/v["n"] if v["n"] else None,"log_loss":v["logloss_sum"]/v["n"] if v["n"] else None} for w,v in r.items()] for m,r in metrics.items()},
-            "warning":"Retrospective source timestamps do not prove article versions were frozen. Fixed weights are descriptive, not trained or validated. Community and system/first picks excluded from probability experiment. No production change."}
+            "warning":"Retrospective source timestamps do not prove article versions were frozen. Strict machine imports supersede earlier Forecast Record transcriptions on covered match positions only; earlier unconfirmed rows remain in source files. Fixed weights are descriptive, not trained or validated. At least two publisher groups per probability test; community and system/first picks excluded. No production change."}
 
 def main():
     ap=argparse.ArgumentParser()
