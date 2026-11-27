@@ -1,0 +1,48 @@
+{
+  "schema": "v31-canonical-review-v1",
+  "historical_coupon": 909,
+  "historical_positions": 89,
+  "historical_identities": 188,
+  "historical_human_identities": 97,
+  "by_draw": {
+    "4973": 7,
+    "4974": 41,
+    "4975": 66,
+    "4976": 134,
+    "4977": 196,
+    "4978": 164,
+    "4979": 107,
+    "4980": 194
+  },
+  "current_review": 18,
+  "external_league": 154,
+  "excluded_late": 9,
+  "sources": {
+    "initial": {
+      "artifact_id": 15233213903,
+      "filename": "forecastrecord-review.json",
+      "sha256": "41821ba467243fac2a362dc1ceebb90d992c7ac4b23b55d97969d7bf19de6425"
+    },
+    "incremental": {
+      "artifact_id": 15234058123,
+      "filename": "forecastrecord-historical-review.json",
+      "sha256": "44167b70af17776333b5c53e0e8cd98d1dcb68d1d3de83b200a7b2314be661cf"
+    },
+    "bulk": {
+      "artifact_id": 15235445280,
+      "filename": "september-review.json",
+      "sha256": "e80e4a6189225a859e7f84a4450c7e5a7848b9bbfcaaec3d937f756817980b35"
+    },
+    "metadata": {
+      "artifact_id": 15235172093,
+      "filename": "official-metadata-review.json",
+      "sha256": "b4e7eadb58eda1e9d191c35e09e67a42962ada346cb8affb0718f3f20a2e2cef"
+    },
+    "league": {
+      "artifact_id": 15235356325,
+      "filename": "league-review.json",
+      "sha256": "0b18f66a95a99f161cd54a053fb2a25b8e708ab8245f759bcf244ff8997a4d9b"
+    }
+  },
+  "warning": "Retrospective data. Older rounds have no verified preclose odds. External league results are from provider. No production or model-training integration."
+}
