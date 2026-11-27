@@ -96,6 +96,9 @@ def main():
     shutil.copy2(root / "v23-matchanalys.html", dest / "v23-matchanalys.html")
     shutil.copy2(root / "v24-expertbarometer.html", dest / "v24-expertbarometer.html")
 
+    if (root/"v28-experiment.html").is_file():
+        shutil.copy2(root/"v28-experiment.html",dest/"v28-experiment.html")
+
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
     audited = root / "data" / "market_audit" / "latest.json"
@@ -1070,6 +1073,25 @@ def main():
                 if summarize(base,doc,panel,created)!=r:continue
                 shutil.copy2(path,target/"reports"/path.name)
                 reports.append({"draw_number":n,"mode":r["mode"]})
+                # Separate community aggregate, not additive expert identities.
+                from scripts.v28_shadow import community_rows, preview
+                from scripts.v25_history import read as v25_read
+                community=v25_read(root/"data"/"v24"/"community"/path.name)
+                accepted_community=community_rows(community,r,now)
+                if accepted_community:
+                    out=target/"community"/path.name
+                    out.parent.mkdir(parents=True,exist_ok=True)
+                    safe={**community,"matches":list(accepted_community.values())}
+                    out.write_text(json.dumps(safe,ensure_ascii=False,indent=2),encoding="utf-8")
+                if r["mode"]=="prospective":
+                    try:
+                        form=v25_read(root/"data"/"form_model"/path.name)
+                        shadow=preview(r,base,form,community,now)
+                        out=dest/"data"/"v28"/path.name
+                        out.parent.mkdir(parents=True,exist_ok=True)
+                        out.write_text(json.dumps(shadow,ensure_ascii=False,indent=2),encoding="utf-8")
+                    except (KeyError,TypeError,ValueError,OSError):
+                        pass
                 if r["mode"]=="prospective" and n in verified_result_draws:
                     official=json.loads((root/"data"/"results"/path.name).read_text(encoding="utf-8"))
                     scored=v24_settle(r,official)
@@ -1080,6 +1102,16 @@ def main():
                 continue
         (target/"index.json").write_text(json.dumps({"reports":reports},ensure_ascii=False,indent=2),encoding="utf-8")
     except (KeyError,TypeError,ValueError,OSError,json.JSONDecodeError):
+        pass
+
+    # V25 historical audit is an explicitly retrospective/experimental aggregate.
+    try:
+        from scripts.v25_history import evaluate as v25_evaluate
+        audit=v25_evaluate(root/"data")
+        out=dest/"data"/"v25"/"audit.json"
+        out.parent.mkdir(parents=True,exist_ok=True)
+        out.write_text(json.dumps(audit,ensure_ascii=False,indent=2),encoding="utf-8")
+    except (KeyError,TypeError,ValueError,OSError):
         pass
 
     manifest = {
