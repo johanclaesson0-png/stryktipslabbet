@@ -31,6 +31,12 @@ jobs:
         run: python scripts/collect.py --outdir data
       - name: Skapa och frys tre system per observerad kupong
         run: python -m scripts.analyze --outdir data
+      - name: V34 – fånga aktuella truppnyheter före spelstopp
+        env:
+          APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
+          PLAYER_DATA_PUBLICATION_APPROVED: ${{ vars.PLAYER_DATA_PUBLICATION_APPROVED }}
+        continue-on-error: true
+        run: python -m scripts.v34_team_news --outdir data
       - name: Bygg och rätta personliga 100-kronorssystem
         run: python -m scripts.solo --outdir data
       - name: Frys Spikvakt och jämför garderingar utan facit
@@ -55,7 +61,22 @@ jobs:
         env:
           APIFOOTBALL_KEY: ${{ secrets.APIFOOTBALL_KEY }}
           PLAYER_DATA_PUBLICATION_APPROVED: ${{ vars.PLAYER_DATA_PUBLICATION_APPROVED }}
-        run: python -m scripts.api_football_adapter --outdir data
+        run: |
+          # Reserve the provider budget for V34's two matchday attempts.
+          # On other days keep the existing V17 roster/statistics collection.
+          python - <<'PY'
+          import json,os,sys
+          from datetime import datetime,timezone
+          from scripts.v25_history import instant
+          from pathlib import Path
+          p=Path('data/latest.json')
+          if p.exists() and os.getenv('APIFOOTBALL_KEY') and os.getenv('PLAYER_DATA_PUBLICATION_APPROVED')=='1':
+              d=json.loads(p.read_text()); close=instant(d['reg_close_time'])
+              if datetime.now(timezone.utc).date()==close.date():
+                  print('V17: matchday requests reserved for V34'); sys.exit(0)
+          import subprocess
+          sys.exit(subprocess.call([sys.executable,'-m','scripts.api_football_adapter','--outdir','data']))
+          PY
       - name: Version 17 – källfryst spelarkänslighet för 1/X/2
         run: python -m scripts.player_impact --outdir data
       - name: V18 – kontrollera verkligt tidsfrysta odds mot eventuella spelardata och utfall
