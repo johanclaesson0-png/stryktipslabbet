@@ -1,0 +1,30 @@
+name: V25 – expert history
+on:
+  pull_request:
+    paths:
+      - 'scripts/v25_history.py'
+      - 'tests/test_v25_history.py'
+      - 'scripts/v28_shadow.py'
+      - 'tests/test_v28_shadow.py'
+      - 'scripts/publish.py'
+      - 'v28-experiment.html'
+      - 'data/v25/**'
+      - '.github/workflows/v25-history.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_v25_history.py'
+      - run: python -m unittest discover -s tests -p 'test_v28_shadow.py'
+      - run: python -m scripts.v25_history --outdir data
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v25-history-audit
+          path: data/v25/audit.json
