@@ -1,0 +1,32 @@
+name: V33 – two-model comparison
+on:
+  pull_request:
+    paths:
+      - 'scripts/v33_submission.py'
+      - 'scripts/publish.py'
+      - 'infor-spelstopp.html'
+      - 'tests/test_v33_submission.py'
+      - '.github/workflows/v33-comparison.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_v33_submission.py'
+      - run: python -m scripts.publish
+      - name: Check generated current comparison
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('.site/data/v33/latest.json')
+          d=json.loads(p.read_text())
+          assert d['production_expert_weight']==0
+          assert len(d['rows'])==13 and d['market']['cost']<=1800 and d['expert']['cost']<=1800
+          assert pathlib.Path('.site/infor-spelstopp.html').is_file()
+          print('V33',d['draw_number'],d['observations'],d['identities'],d['expert_eligible_matches'],d['market']['cost'],d['expert']['cost'],d['market']['choices']==d['expert']['choices'])
+          PY
