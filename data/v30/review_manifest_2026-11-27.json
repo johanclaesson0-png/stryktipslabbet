@@ -1,0 +1,48 @@
+{
+  "schema": "v25-v30-review-manifest-v1",
+  "notes": "Counts from downloaded GitHub Actions artifacts, not estimates. The 617 kickoff-only rows are NOT verified Stryktips coupon observations: official metadata fixture mismatch. V30 provider scores are not independently verified. 18 current observations remain separate from legacy V24; 30 verified-cutoff retrospective rows added to draw 4979. Raw source artifacts contain record links and timestamps, no third-party quotes. Artifacts subject to GitHub retention.",
+  "artifacts": [
+    {
+      "id": 15235445280,
+      "run": 46074859360,
+      "sha256": "b4bbcf67ac08dbda2906f533eacda22c2a8daace6afbf886b831d90c6796515f",
+      "rows": 665,
+      "distinct_external_ids": 161,
+      "unique_record_ids": 665,
+      "by_status": {
+        "prospective_review": 18,
+        "verified_coupon": 30,
+        "kickoff_only": 617
+      },
+      "kickoff_only_by_draw": {
+        "4973": 7,
+        "4974": 41,
+        "4975": 66,
+        "4976": 135,
+        "4977": 201,
+        "4978": 167
+      },
+      "kickoff_only_match_positions": 63,
+      "missing_or_failed": "4972 catalog HTTP 404; 4973 incomplete catalog; 4978 two absent fixtures"
+    },
+    {
+      "id": 15235356325,
+      "run": 46075285699,
+      "sha256": "a0549d93aa398e0d0d732d24821589640db30813a501bda190b62b29640a1098",
+      "rows": 154,
+      "distinct_external_ids": 78,
+      "unique_record_ids": 154,
+      "human_external_ids": 53,
+      "processed_matches": 43,
+      "matches_with_rows": 21,
+      "by_league": {
+        "Premier League": 97,
+        "EFL Championship": 0,
+        "EFL League One": 45,
+        "EFL League Two": 12
+      },
+      "errors": 2
+    }
+  ],
+  "source": "https://forecastrecord.com/api/"
+}

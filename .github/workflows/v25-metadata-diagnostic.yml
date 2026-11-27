@@ -1,0 +1,27 @@
+name: V25 – historical metadata diagnostic
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/v25_metadata_diagnostic.py'
+      - 'tests/test_v25_metadata_diagnostic.py'
+      - '.github/workflows/v25-metadata-diagnostic.yml'
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_v25_metadata_diagnostic.py'
+      - run: python -m scripts.v25_metadata_diagnostic
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: official-metadata-review
+          path: official-metadata-review.json
+          retention-days: 30
