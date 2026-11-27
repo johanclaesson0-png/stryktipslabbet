@@ -1,0 +1,6 @@
+# Forecast Record API connection
+Public JSON exports, no credentials required: https://forecastrecord.com/api/
+The discovery step uses the published match catalog and exact date + explicit team aliases. Missing/ambiguous fixtures are reported, not guessed. The catalog may be incomplete; this is not a claim of 100% coverage.
+`python -m scripts.v25_forecastrecord_api --draw 4980` for historical odds-linked reviews, or without draw for the latest preclose coupon. On the upcoming coupon the extractor requires actual reading before the cutoff and kickoff, plus a scheduled event status. Historical review additionally checks final result. Only attributable explicit 90-minute 1X2 claims. Review files contain no third-party quotations.
+Friday 18:15 UTC and Saturday 10:15 UTC GitHub Actions scheduled review, up to 14 calls per run and 7 seconds between request starts; max 10 scheduled runs per month (140 calls). Manual, legacy workflow and external calls are extra and need to be tracked against the shared 1,000/month limit. Stops on HTTP 401/403/429. No credential setup, paid plan or automatic odds change.
+Run artifacts remain review data pending alias reconciliation, provenance review and deduplication. No automated transfer to V24/V25; no claim that unreviewed sources are verified. The scheduled task requires GitHub Actions enabled and a merged workflow.
