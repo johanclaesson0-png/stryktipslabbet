@@ -19,10 +19,10 @@ KINDS=("result","first","system")
 SIGNS="1X2"
 
 def validate_panel(doc):
-    if doc["schema"]!="v24-panel-v1" or doc["target"]!=50 or len(doc["panel"])!=50:
-        raise ValueError("Expected 50 candidate sources")
+    if doc["schema"]!="v24-panel-v1" or doc["target"]!=50 or not 50<=len(doc["panel"])<=500:
+        raise ValueError("Expected at least 50 candidate sources")
     p={x["id"]:x for x in doc["panel"]}
-    if len(p)!=50 or any(x["kind"] not in ("human","editorial","site") or not x["group"] for x in p.values()):
+    if len(p)!=len(doc["panel"]) or any(x["kind"] not in ("human","editorial","site") or not x["group"] for x in p.values()):
         raise ValueError("Invalid source registry")
     return p
 
