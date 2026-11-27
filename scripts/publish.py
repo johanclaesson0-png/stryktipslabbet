@@ -99,6 +99,8 @@ def main():
     if (root/"v28-experiment.html").is_file():
         shutil.copy2(root/"v28-experiment.html",dest/"v28-experiment.html")
 
+    shutil.copy2(root/"infor-spelstopp.html",dest/"infor-spelstopp.html")
+
     # Only validated aggregate market-audit counters go into public Pages.
     # Never copy feed records, raw player responses, or unreviewed credentials.
     audited = root / "data" / "market_audit" / "latest.json"
@@ -426,6 +428,21 @@ def main():
             "settled": paid,
             "current": instant(item["reg_close_time"]) > now,
         })
+
+    # V33: separately labelled current scenarios, using only V31 machine review
+    # and the approved latest market snapshot. Never use legacy V24 picks here.
+    try:
+        from scripts.v33_submission import compare as v33_compare
+        from scripts.v25_history import read as v33_read
+        if status["snapshot_usable_now"]:
+            current=next(x for x in report_index if x["draw_number"]==status["latest_draw_number"] and x["observed_at_utc"]==status["latest_observed_at_utc"])
+            doc=v33_read(root/"data"/"v31"/"prospective_review.json")
+            out=dest/"data"/"v33"/"latest.json"
+            payload=v33_compare(current,doc,now)
+            out.parent.mkdir(parents=True,exist_ok=True)
+            out.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8")
+    except (StopIteration,KeyError,ValueError,TypeError,OSError):
+        pass
 
     # 100-kronorssystem publiceras bara när de kan jämföras med en redan
     # godkänd förhandsanalys. Ingen utbetalning gissas eller rekonstrueras.
