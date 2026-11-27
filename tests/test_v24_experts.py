@@ -24,3 +24,12 @@ class ExpertTests(unittest.TestCase):
         rows=[{"id":"a","group":"g","sign":"1X"},{"id":"b","group":"g","sign":"2"}]
         self.assertEqual(counts(rows,True)["shares"],[.25,.25,.5])
         self.assertEqual(counts([],True)["shares"],None)
+
+class ExpandedPanelTests(unittest.TestCase):
+    def test_61_candidates_allowed(self):
+        from scripts.v24_experts import validate_panel
+        rows=[{"id":str(i),"kind":"human","group":"test"} for i in range(61)]
+        self.assertEqual(len(validate_panel({"schema":"v24-panel-v1","target":50,"panel":rows})),61)
+        rows[-1]=rows[0]
+        with self.assertRaises(ValueError):
+            validate_panel({"schema":"v24-panel-v1","target":50,"panel":rows})
