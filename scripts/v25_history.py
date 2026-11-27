@@ -49,9 +49,13 @@ def evaluate(data):
     archive = {x["draw"]: x for x in read(data/"history/summary.json")["archive"]}
     pools = read(data/"history/official_pools.json")["draws"]
     panel = {x["id"]:x for x in read(data/"v24/panel.json")["panel"]}
-    profiles, metrics, coverage = {}, {}, []
+    extra = read(data/"v25/sources.json") or {"panel": []}
+    for source in extra["panel"]:
+        panel.setdefault(source["id"], source)
+    profiles, metrics, coverage, league_profiles = {}, {}, [], {}
     for mode in ("retrospective", "prospective"):
         profiles[mode] = defaultdict(lambda: {"n":0,"hits":0,"fractional_hits":0.0,"odds_n":0,"odds_hits":0})
+        league_profiles[mode] = defaultdict(lambda: {"n":0,"hits":0})
         metrics[mode] = {str(w): {"n":0,"brier_sum":0.0,"logloss_sum":0.0} for w in WEIGHTS}
     docs = {}
     for root in (data/"v25/recovered", data/"v24/reports"):
@@ -107,6 +111,10 @@ def evaluate(data):
                 actual = actuals[n-1]
                 k = (p["id"],p["type"])
                 r = profiles[mode][k]
+                if p.get("league") and p["type"] == "result":
+                    lp = league_profiles[mode][(p["id"],p["league"])]
+                    lp["n"] += 1
+                    lp["hits"] += int(actual in p["sign"])
                 r["n"] += 1
                 r["hits"] += int(actual in p["sign"])
                 r["fractional_hits"] += int(actual in p["sign"])/len(p["sign"])
@@ -127,7 +135,7 @@ def evaluate(data):
                     r["brier_sum"] += b
                     r["logloss_sum"] += l
     return {"schema":"v25-history-audit-v1","created_at_utc":datetime.now(timezone.utc).isoformat(),
-            "coverage":coverage,"profiles":{m:[{"id":i,"type":t,**v} for (i,t),v in sorted(r.items())] for m,r in profiles.items()},
+            "coverage":coverage,"league_profiles":{m:[{"id":i,"league":l,**v} for (i,l),v in sorted(r.items())] for m,r in league_profiles.items()},"profiles":{m:[{"id":i,"type":t,**v} for (i,t),v in sorted(r.items())] for m,r in profiles.items()},
             "fixed_weight_experiments":{m:[{"weight":float(w),"matches":v["n"],"brier":v["brier_sum"]/v["n"] if v["n"] else None,"log_loss":v["logloss_sum"]/v["n"] if v["n"] else None} for w,v in r.items()] for m,r in metrics.items()},
             "warning":"Retrospective source timestamps do not prove article versions were frozen. Fixed weights are descriptive, not trained or validated. Community and system/first picks excluded from probability experiment. No production change."}
 
