@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-26T15:47:55.989822+00:00",
+  "source_observed_at_utc": "2026-11-27T00:35:05.999272+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "3e22a0c81164bc3f17fc76f6720f3fcf1385728dad6050d30d191244530e3726",
-  "created_at_utc": "2026-11-26T15:47:56.205114+00:00",
+  "source_snapshot_sha256": "9dbec7927a51f31a245a7719fecc8006c4e55d2fff75b36922a75760d7586da5",
+  "created_at_utc": "2026-11-27T00:35:06.263968+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -29,7 +29,7 @@
         "1X2",
         "1X2"
       ],
-      "baseline_p13": 0.025617686,
+      "baseline_p13": 0.02499467,
       "baseline_miss_risk_spikes": 2,
       "baseline_x_included": 6,
       "risk_report": {
@@ -72,10 +72,10 @@
             "home": "West Ham",
             "away": "Stoke",
             "chosen": "1",
-            "estimated_miss_probability": 0.41212,
+            "estimated_miss_probability": 0.429126,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.225582,
+            "extra_outcome_probability": 0.231068,
             "cost_if_added_without_rebalancing": 2916
           },
           {
@@ -94,10 +94,10 @@
             "home": "Leeds",
             "away": "Coventry",
             "chosen": "1",
-            "estimated_miss_probability": 0.35688,
+            "estimated_miss_probability": 0.353829,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.217232,
+            "extra_outcome_probability": 0.213517,
             "cost_if_added_without_rebalancing": 2916
           }
         ],
@@ -123,7 +123,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.025617686,
+          "estimated_p13": 0.02499467,
           "miss_risk_spikes": 2,
           "x_included": 6
         },
@@ -146,7 +146,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.025617686,
+          "estimated_p13": 0.02499467,
           "miss_risk_spikes": 2,
           "x_included": 6
         }
@@ -170,7 +170,7 @@
         "12",
         "1X2"
       ],
-      "baseline_p13": 0.003472495,
+      "baseline_p13": 0.003388044,
       "baseline_miss_risk_spikes": 3,
       "baseline_x_included": 1,
       "risk_report": {
@@ -224,10 +224,10 @@
             "home": "West Ham",
             "away": "Stoke",
             "chosen": "1",
-            "estimated_miss_probability": 0.41212,
+            "estimated_miss_probability": 0.429126,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.225582,
+            "extra_outcome_probability": 0.231068,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -246,10 +246,10 @@
             "home": "Leeds",
             "away": "Coventry",
             "chosen": "1",
-            "estimated_miss_probability": 0.35688,
+            "estimated_miss_probability": 0.353829,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.217232,
+            "extra_outcome_probability": 0.213517,
             "cost_if_added_without_rebalancing": 192
           }
         ],
@@ -296,7 +296,7 @@
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003472495,
+          "estimated_p13": 0.003388044,
           "miss_risk_spikes": 3,
           "x_included": 1
         },
@@ -319,7 +319,7 @@
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003472495,
+          "estimated_p13": 0.003388044,
           "miss_risk_spikes": 3,
           "x_included": 1
         }

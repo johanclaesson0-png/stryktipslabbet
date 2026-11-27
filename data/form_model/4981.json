@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-26T15:47:55.989822+00:00",
-  "source_snapshot_sha256": "3e22a0c81164bc3f17fc76f6720f3fcf1385728dad6050d30d191244530e3726",
-  "form_created_at_utc": "2026-11-26T15:47:56.281448+00:00",
-  "form_sha256": "3b54b9cd70fca848febddc82fbeba12812377f6e7f6c5f5742e7918dd6200401",
+  "source_observed_at_utc": "2026-11-27T00:35:05.999272+00:00",
+  "source_snapshot_sha256": "9dbec7927a51f31a245a7719fecc8006c4e55d2fff75b36922a75760d7586da5",
+  "form_created_at_utc": "2026-11-27T00:35:06.356201+00:00",
+  "form_sha256": "6b6db0ff77d2734f6e0d3ec9666892c7247690c896834327da33e4cc90ae8981",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-26T15:47:56.969652+00:00",
+  "created_at_utc": "2026-11-27T00:35:07.263889+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -68,14 +68,14 @@
       "home": "Leeds",
       "away": "Coventry",
       "market_p": [
-        0.643119641,
-        0.217231523,
-        0.139648836
+        0.646171135,
+        0.213517419,
+        0.140311446
       ],
       "form_p": [
-        0.643119641,
-        0.217231523,
-        0.139648836
+        0.646171135,
+        0.213517419,
+        0.140311446
       ],
       "delta_pp": [
         0.0,
@@ -224,14 +224,14 @@
       "home": "West Ham",
       "away": "Stoke",
       "market_p": [
-        0.587879585,
-        0.225581701,
-        0.186538714
+        0.570873786,
+        0.231067961,
+        0.198058252
       ],
       "form_p": [
-        0.587879585,
-        0.225581701,
-        0.186538714
+        0.570873786,
+        0.231067961,
+        0.198058252
       ],
       "delta_pp": [
         0.0,
@@ -384,9 +384,9 @@
         "12",
         "1X2"
       ],
-      "original_market_p13": 0.003472495,
-      "new_form_p13": 0.003861679,
-      "new_market_baseline_p13": 0.003377951,
+      "original_market_p13": 0.003388044,
+      "new_form_p13": 0.003767764,
+      "new_market_baseline_p13": 0.0032958,
       "different_matches": 2
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.025617686,
-      "new_form_p13": 0.028221126,
-      "new_market_baseline_p13": 0.025617686,
+      "original_market_p13": 0.02499467,
+      "new_form_p13": 0.027534795,
+      "new_market_baseline_p13": 0.02499467,
       "different_matches": 0
     }
   ],
