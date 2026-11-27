@@ -13,6 +13,8 @@ class TestV25(unittest.TestCase):
         close=datetime(2026,11,14,15,tzinfo=timezone.utc)
         p={"source_at":"2026-11-13T12:00:00Z","observed_at":"2026-11-15T12:00:00Z","source":"https://example.com","sign":"1","type":"result","evidence":"article_timestamp"}
         self.assertTrue(valid_pick(p,close,"retrospective"))
+        self.assertFalse(valid_pick(dict(p,source_at=None),close,"retrospective"))
+        self.assertFalse(valid_pick(dict(p,source_at="2026-11-13T12:00:00"),close,"retrospective"))
         self.assertFalse(valid_pick(p,close,"prospective"))
         self.assertFalse(valid_pick(dict(p,source_at="2026-11-14T15:00:00Z"),close,"retrospective"))
         self.assertFalse(valid_pick(dict(p,sign="1X"),close,"retrospective"))
