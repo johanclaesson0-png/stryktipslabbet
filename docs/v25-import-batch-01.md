@@ -1,0 +1,8 @@
+# Verified import batch 1
+Forecast Record source attribution is included in every observation. Actual review artifact:
+https://github.com/johanclaesson0-png/stryktipslabbet/actions/runs/46072677119 (artifact 15233213903).
+225 accepted rows on 13 match positions, 92 distinct Forecast Record identities. Stored source times rounded up to the next second from the detected timestamp; observed times copied from the artifact. No quotes or raw third-party content.
+The identity map reuses prior aliases and adds new sources to V25 only. Anonymous/uncertain author identities are conservatively treated as editorial, not named humans. Publisher grouping clusters SportyTrader editions and uncertain Telegram authors.
+For covered retrospective positions the strict machine-imported 1X2 rows supersede manual Forecast Record rows, rather than adding both; original source files remain unchanged. A row absent from this stricter extraction is not necessarily false, but it is not confirmed by this import. Other source articles and other match positions remain retrospective, not independently verified.
+No modification to the production probability model. The paired comparison requires at least two human publisher groups. New profile and observation counts are historical, not active current-round expert counts.
+The API documentation (https://forecastrecord.com/api/) states 1,000 requests/month and 10/minute on the public plan and requires attribution. Future imports must respect both limits and review identity aliases before incorporating data.
