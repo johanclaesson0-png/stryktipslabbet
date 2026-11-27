@@ -1,0 +1,42 @@
+name: V32 – historical opening odds and readiness
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/v32_*.py'
+      - 'tests/test_v32_opening_odds.py'
+      - '.github/workflows/v32-opening-odds.yml'
+permissions:
+  contents: read
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_v32_opening_odds.py'
+      - run: python -m scripts.v32_readiness
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v32-readiness
+          path: v32-readiness.json
+  historical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    concurrency:
+      group: forecastrecord-import
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_v32_opening_odds.py'
+      - run: python -m scripts.v32_opening_odds --limit 63
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v32-opening-review
+          path: v32-opening-review.json
