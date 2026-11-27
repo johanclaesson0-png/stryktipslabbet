@@ -89,6 +89,7 @@ def main():
     p.add_argument("--draw",type=int)
     p.add_argument("--limit",type=int,default=13)
     p.add_argument("--output",default="forecastrecord-api-review.json")
+    p.add_argument("--skip-covered",action="store_true")
     args=p.parse_args()
     if not 1<=args.limit<=13:
         p.error("Limit must be 1–13")
@@ -106,6 +107,11 @@ def main():
     report={"schema":"forecastrecord-api-review-v1","draw_number":draw,"mode":"retrospective" if official else "prospective_review","cutoff":base["reg_close_time"],"matches":[],"rows":[],"errors":[]}
     catalog=client.get(BASE+"/football/matches/")
     specs,missing=discover(catalog,base)
+    if args.skip_covered:
+        prior=read(data/"v25/imported"/f"{draw}.json") or {}
+        covered=set(prior.get("covered_positions",[]))
+        specs=[s for s in specs if s["number"] not in covered]
+        report["already_covered"]=sorted(covered)
     report["missing"]=missing
     print("DISCOVERY",draw,len(specs),"missing",len(missing),flush=True)
     for spec in specs[:args.limit]:
