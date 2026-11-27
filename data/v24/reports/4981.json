@@ -2,12 +2,12 @@
   "schema": "v24-expert-barometer-v1",
   "draw_number": 4981,
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-27T19:58:33.191006+00:00",
-  "market_observed_at": "2026-11-27T19:58:12.756649+00:00",
+  "created_at_utc": "2026-11-27T21:40:47.079026+00:00",
+  "market_observed_at": "2026-11-27T21:40:27.205605+00:00",
   "mode": "prospective",
   "candidate_count": 50,
-  "sources_with_data": 29,
-  "observations": 204,
+  "sources_with_data": 60,
+  "observations": 279,
   "matches": [
     {
       "number": 1,
@@ -19,36 +19,36 @@
         0.484001076
       ],
       "streck": [
-        23.0,
+        22.0,
         27.0,
-        50.0
+        51.0
       ],
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 3,
+            "n": 10,
             "votes": [
-              0.0,
               1.0,
-              2.0
+              3.0,
+              6.0
             ],
             "shares": [
-              0.0,
-              0.333333,
-              0.666667
+              0.1,
+              0.3,
+              0.6
             ],
-            "disagreement": 0.333333
+            "disagreement": 0.4
           },
           "publisher": {
-            "n": 3,
+            "n": 8,
             "votes": [
-              0.0,
-              1.0,
-              2.0
+              0.333333,
+              2.333333,
+              5.333333
             ],
             "shares": [
-              0.0,
-              0.333333,
+              0.041667,
+              0.291667,
               0.666667
             ],
             "disagreement": 0.333333
@@ -198,54 +198,62 @@
         },
         "system_human": {
           "individual": {
-            "n": 5,
+            "n": 6,
             "votes": [
               0.5,
               1.0,
-              3.5
+              4.5
             ],
             "shares": [
-              0.1,
-              0.2,
-              0.7
+              0.083333,
+              0.166667,
+              0.75
             ],
-            "disagreement": 0.3
+            "disagreement": 0.25
           },
           "publisher": {
-            "n": 3,
+            "n": 4,
             "votes": [
               0.166667,
               0.333333,
-              2.5
+              3.5
             ],
             "shares": [
-              0.055556,
-              0.111111,
-              0.833333
+              0.041667,
+              0.083333,
+              0.875
             ],
-            "disagreement": 0.166667
+            "disagreement": 0.125
           }
         },
         "system_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
-              0.0
+              0.5,
+              0.5
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.5,
+              0.5
+            ],
+            "disagreement": 0.5
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
               0.0,
-              0.0,
-              0.0
+              0.5,
+              0.5
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.0,
+              0.5,
+              0.5
+            ],
+            "disagreement": 0.5
           }
         },
         "system_site": {
@@ -289,32 +297,32 @@
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 2,
+            "n": 8,
             "votes": [
+              4.0,
               2.0,
-              0.0,
-              0.0
+              2.0
             ],
             "shares": [
-              1.0,
-              0.0,
-              0.0
+              0.5,
+              0.25,
+              0.25
             ],
-            "disagreement": 0.0
+            "disagreement": 0.5
           },
           "publisher": {
-            "n": 2,
+            "n": 6,
             "votes": [
-              2.0,
-              0.0,
-              0.0
+              3.333333,
+              1.333333,
+              1.333333
             ],
             "shares": [
-              1.0,
-              0.0,
-              0.0
+              0.555556,
+              0.222222,
+              0.222222
             ],
-            "disagreement": 0.0
+            "disagreement": 0.444444
           }
         },
         "result_editorial": {
@@ -461,54 +469,62 @@
         },
         "system_human": {
           "individual": {
-            "n": 5,
+            "n": 6,
             "votes": [
-              1.333333,
               1.833333,
-              1.833333
+              1.833333,
+              2.333333
             ],
             "shares": [
-              0.266667,
-              0.366667,
-              0.366667
-            ],
-            "disagreement": 0.633333
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              1.0,
-              0.833333,
-              1.166667
-            ],
-            "shares": [
-              0.333333,
-              0.277778,
+              0.305556,
+              0.305556,
               0.388889
             ],
             "disagreement": 0.611111
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              1.5,
+              0.833333,
+              1.666667
+            ],
+            "shares": [
+              0.375,
+              0.208333,
+              0.416667
+            ],
+            "disagreement": 0.583333
           }
         },
         "system_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
-              0.0,
-              0.0
+              0.333333,
+              0.333333,
+              0.333333
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "disagreement": 0.666667
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
-              0.0,
-              0.0
+              0.333333,
+              0.333333,
+              0.333333
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "disagreement": 0.666667
           }
         },
         "system_site": {
@@ -552,32 +568,32 @@
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 1,
+            "n": 6,
             "votes": [
+              4.0,
               1.0,
-              0.0,
-              0.0
+              1.0
             ],
             "shares": [
-              1.0,
-              0.0,
-              0.0
+              0.666667,
+              0.166667,
+              0.166667
             ],
-            "disagreement": 0.0
+            "disagreement": 0.333333
           },
           "publisher": {
-            "n": 1,
+            "n": 4,
             "votes": [
-              1.0,
-              0.0,
-              0.0
+              3.333333,
+              0.333333,
+              0.333333
             ],
             "shares": [
-              1.0,
-              0.0,
-              0.0
+              0.833333,
+              0.083333,
+              0.083333
             ],
-            "disagreement": 0.0
+            "disagreement": 0.166667
           }
         },
         "result_editorial": {
@@ -660,6 +676,1903 @@
               0.0
             ],
             "disagreement": 0.0
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 7,
+            "votes": [
+              3.5,
+              2.5,
+              1.0
+            ],
+            "shares": [
+              0.5,
+              0.357143,
+              0.142857
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              2.611111,
+              1.611111,
+              0.777778
+            ],
+            "shares": [
+              0.522222,
+              0.322222,
+              0.155556
+            ],
+            "disagreement": 0.477778
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_site": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        }
+      }
+    },
+    {
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "market": [
+        0.627084571,
+        0.214602275,
+        0.158313154
+      ],
+      "streck": [
+        78.0,
+        13.0,
+        9.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 6,
+            "votes": [
+              6.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 6,
+            "votes": [
+              6.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 5,
+            "votes": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              1.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              1.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "disagreement": 0.5
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 7,
+            "votes": [
+              4.666667,
+              1.666667,
+              0.666667
+            ],
+            "shares": [
+              0.666667,
+              0.238095,
+              0.095238
+            ],
+            "disagreement": 0.333333
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              2.541667,
+              1.041667,
+              0.416667
+            ],
+            "shares": [
+              0.635417,
+              0.260417,
+              0.104167
+            ],
+            "disagreement": 0.364583
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 3,
+            "votes": [
+              2.333333,
+              0.333333,
+              0.333333
+            ],
+            "shares": [
+              0.777778,
+              0.111111,
+              0.111111
+            ],
+            "disagreement": 0.222222
+          },
+          "publisher": {
+            "n": 3,
+            "votes": [
+              2.333333,
+              0.333333,
+              0.333333
+            ],
+            "shares": [
+              0.777778,
+              0.111111,
+              0.111111
+            ],
+            "disagreement": 0.222222
+          }
+        },
+        "system_site": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        }
+      }
+    },
+    {
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "market": [
+        0.426659024,
+        0.274023261,
+        0.299317715
+      ],
+      "streck": [
+        41.0,
+        29.0,
+        30.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 4,
+            "votes": [
+              3.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.75,
+              0.0,
+              0.25
+            ],
+            "disagreement": 0.25
+          },
+          "publisher": {
+            "n": 3,
+            "votes": [
+              2.5,
+              0.0,
+              0.5
+            ],
+            "shares": [
+              0.833333,
+              0.0,
+              0.166667
+            ],
+            "disagreement": 0.166667
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 6,
+            "votes": [
+              5.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.833333,
+              0.166667,
+              0.0
+            ],
+            "disagreement": 0.166667
+          },
+          "publisher": {
+            "n": 6,
+            "votes": [
+              5.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.833333,
+              0.166667,
+              0.0
+            ],
+            "disagreement": 0.166667
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 6,
+            "votes": [
+              2.5,
+              2.0,
+              1.5
+            ],
+            "shares": [
+              0.416667,
+              0.333333,
+              0.25
+            ],
+            "disagreement": 0.583333
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              1.611111,
+              1.444444,
+              0.944444
+            ],
+            "shares": [
+              0.402778,
+              0.361111,
+              0.236111
+            ],
+            "disagreement": 0.597222
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.5,
+              0.5
+            ],
+            "shares": [
+              0.0,
+              0.5,
+              0.5
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.5,
+              0.5
+            ],
+            "shares": [
+              0.0,
+              0.5,
+              0.5
+            ],
+            "disagreement": 0.5
+          }
+        },
+        "system_site": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        }
+      }
+    },
+    {
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "market": [
+        0.445974286,
+        0.265140877,
+        0.288884836
+      ],
+      "streck": [
+        51.0,
+        29.0,
+        20.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 4,
+            "votes": [
+              2.0,
+              1.0,
+              1.0
+            ],
+            "shares": [
+              0.5,
+              0.25,
+              0.25
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              1.333333,
+              0.333333,
+              0.333333
+            ],
+            "shares": [
+              0.666667,
+              0.166667,
+              0.166667
+            ],
+            "disagreement": 0.333333
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 5,
+            "votes": [
+              4.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.8,
+              0.2,
+              0.0
+            ],
+            "disagreement": 0.2
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              4.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.8,
+              0.2,
+              0.0
+            ],
+            "disagreement": 0.2
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              1.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.5,
+              0.0,
+              0.5
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              1.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.5,
+              0.0,
+              0.5
+            ],
+            "disagreement": 0.5
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 6,
+            "votes": [
+              3.666667,
+              1.166667,
+              1.166667
+            ],
+            "shares": [
+              0.611111,
+              0.194444,
+              0.194444
+            ],
+            "disagreement": 0.388889
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              2.111111,
+              0.944444,
+              0.944444
+            ],
+            "shares": [
+              0.527778,
+              0.236111,
+              0.236111
+            ],
+            "disagreement": 0.472222
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "shares": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "shares": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "disagreement": 0.5
+          }
+        },
+        "system_site": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        }
+      }
+    },
+    {
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "market": [
+        0.550070522,
+        0.248236953,
+        0.201692525
+      ],
+      "streck": [
+        71.0,
+        16.0,
+        13.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 4,
+            "votes": [
+              4.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              4.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 5,
+            "votes": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 7,
+            "votes": [
+              4.0,
+              2.0,
+              1.0
+            ],
+            "shares": [
+              0.571429,
+              0.285714,
+              0.142857
+            ],
+            "disagreement": 0.428571
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              2.5,
+              1.25,
+              0.25
+            ],
+            "shares": [
+              0.625,
+              0.3125,
+              0.0625
+            ],
+            "disagreement": 0.375
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_site": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        }
+      }
+    },
+    {
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "market": [
+        0.465532518,
+        0.261704767,
+        0.272762715
+      ],
+      "streck": [
+        45.0,
+        30.0,
+        25.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 4,
+            "votes": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "shares": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 4,
+            "votes": [
+              2.0,
+              2.0,
+              0.0
+            ],
+            "shares": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "disagreement": 0.5
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 5,
+            "votes": [
+              4.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.8,
+              0.0,
+              0.2
+            ],
+            "disagreement": 0.2
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              4.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.8,
+              0.0,
+              0.2
+            ],
+            "disagreement": 0.2
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              1.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.5,
+              0.0,
+              0.5
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              1.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.5,
+              0.0,
+              0.5
+            ],
+            "disagreement": 0.5
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 7,
+            "votes": [
+              3.833333,
+              1.833333,
+              1.333333
+            ],
+            "shares": [
+              0.547619,
+              0.261905,
+              0.190476
+            ],
+            "disagreement": 0.452381
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              2.833333,
+              1.166667,
+              1.0
+            ],
+            "shares": [
+              0.566667,
+              0.233333,
+              0.2
+            ],
+            "disagreement": 0.433333
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_site": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        }
+      }
+    },
+    {
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "market": [
+        0.566234498,
+        0.236161218,
+        0.197604284
+      ],
+      "streck": [
+        51.0,
+        22.0,
+        27.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 7,
+            "votes": [
+              2.0,
+              2.0,
+              3.0
+            ],
+            "shares": [
+              0.285714,
+              0.285714,
+              0.428571
+            ],
+            "disagreement": 0.571429
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              1.333333,
+              1.333333,
+              2.333333
+            ],
+            "shares": [
+              0.266667,
+              0.266667,
+              0.466667
+            ],
+            "disagreement": 0.533333
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 6,
+            "votes": [
+              4.0,
+              1.0,
+              1.0
+            ],
+            "shares": [
+              0.666667,
+              0.166667,
+              0.166667
+            ],
+            "disagreement": 0.333333
+          },
+          "publisher": {
+            "n": 6,
+            "votes": [
+              4.0,
+              1.0,
+              1.0
+            ],
+            "shares": [
+              0.666667,
+              0.166667,
+              0.166667
+            ],
+            "disagreement": 0.333333
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 9,
+            "votes": [
+              7.833333,
+              0.833333,
+              0.333333
+            ],
+            "shares": [
+              0.87037,
+              0.092593,
+              0.037037
+            ],
+            "disagreement": 0.12963
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              4.708333,
+              0.208333,
+              0.083333
+            ],
+            "shares": [
+              0.941667,
+              0.041667,
+              0.016667
+            ],
+            "disagreement": 0.058333
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              1.333333,
+              0.333333,
+              0.333333
+            ],
+            "shares": [
+              0.666667,
+              0.166667,
+              0.166667
+            ],
+            "disagreement": 0.333333
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              1.333333,
+              0.333333,
+              0.333333
+            ],
+            "shares": [
+              0.666667,
+              0.166667,
+              0.166667
+            ],
+            "disagreement": 0.333333
+          }
+        },
+        "system_site": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        }
+      }
+    },
+    {
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "market": [
+        0.441154971,
+        0.285453216,
+        0.273391813
+      ],
+      "streck": [
+        56.0,
+        26.0,
+        18.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 3,
+            "votes": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "shares": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "disagreement": 0.666667
+          },
+          "publisher": {
+            "n": 3,
+            "votes": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "shares": [
+              0.333333,
+              0.333333,
+              0.333333
+            ],
+            "disagreement": 0.666667
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 5,
+            "votes": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              5.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              1.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              1.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.5,
+              0.5,
+              0.0
+            ],
+            "disagreement": 0.5
           }
         },
         "first_editorial": {
@@ -740,1353 +2653,46 @@
           "publisher": {
             "n": 4,
             "votes": [
-              2.277778,
-              1.277778,
-              0.444444
-            ],
-            "shares": [
-              0.569444,
-              0.319444,
-              0.111111
-            ],
-            "disagreement": 0.430556
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 4,
-      "home": "Birmingham",
-      "away": "Bolton",
-      "market": [
-        0.627084571,
-        0.214602275,
-        0.158313154
-      ],
-      "streck": [
-        78.0,
-        13.0,
-        9.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 3,
-            "votes": [
-              3.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              3.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              5.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 5,
-            "votes": [
-              5.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_human": {
-          "individual": {
-            "n": 2,
-            "votes": [
-              1.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.5,
-              0.5,
-              0.0
-            ],
-            "disagreement": 0.5
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              1.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.5,
-              0.5,
-              0.0
-            ],
-            "disagreement": 0.5
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              3.166667,
-              1.166667,
-              0.666667
-            ],
-            "shares": [
-              0.633333,
-              0.233333,
-              0.133333
-            ],
-            "disagreement": 0.366667
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              1.944444,
-              0.611111,
-              0.444444
-            ],
-            "shares": [
-              0.648148,
-              0.203704,
-              0.148148
-            ],
-            "disagreement": 0.351852
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              0.333333,
-              0.333333,
-              0.333333
-            ],
-            "shares": [
-              0.333333,
-              0.333333,
-              0.333333
-            ],
-            "disagreement": 0.666667
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.333333,
-              0.333333,
-              0.333333
-            ],
-            "shares": [
-              0.333333,
-              0.333333,
-              0.333333
-            ],
-            "disagreement": 0.666667
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 5,
-      "home": "Derby",
-      "away": "Watford",
-      "market": [
-        0.426659024,
-        0.274023261,
-        0.299317715
-      ],
-      "streck": [
-        41.0,
-        29.0,
-        30.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 6,
-            "votes": [
-              5.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.833333,
-              0.166667,
-              0.0
-            ],
-            "disagreement": 0.166667
-          },
-          "publisher": {
-            "n": 6,
-            "votes": [
-              5.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.833333,
-              0.166667,
-              0.0
-            ],
-            "disagreement": 0.166667
-          }
-        },
-        "first_human": {
-          "individual": {
-            "n": 2,
-            "votes": [
-              2.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              2.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              2.166667,
-              1.666667,
-              1.166667
-            ],
-            "shares": [
-              0.433333,
-              0.333333,
-              0.233333
-            ],
-            "disagreement": 0.566667
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              1.277778,
-              1.111111,
-              0.611111
-            ],
-            "shares": [
-              0.425926,
-              0.37037,
-              0.203704
-            ],
-            "disagreement": 0.574074
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 6,
-      "home": "Millwall",
-      "away": "Burnley",
-      "market": [
-        0.445974286,
-        0.265140877,
-        0.288884836
-      ],
-      "streck": [
-        51.0,
-        29.0,
-        20.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              4.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.8,
-              0.2,
-              0.0
-            ],
-            "disagreement": 0.2
-          },
-          "publisher": {
-            "n": 5,
-            "votes": [
-              4.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.8,
-              0.2,
-              0.0
-            ],
-            "disagreement": 0.2
-          }
-        },
-        "first_human": {
-          "individual": {
-            "n": 2,
-            "votes": [
-              1.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.5,
-              0.0,
-              0.5
-            ],
-            "disagreement": 0.5
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              1.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.5,
-              0.0,
-              0.5
-            ],
-            "disagreement": 0.5
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              3.333333,
-              0.833333,
-              0.833333
-            ],
-            "shares": [
-              0.666667,
-              0.166667,
-              0.166667
-            ],
-            "disagreement": 0.333333
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              1.777778,
-              0.611111,
-              0.611111
-            ],
-            "shares": [
-              0.592593,
-              0.203704,
-              0.203704
-            ],
-            "disagreement": 0.407407
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 7,
-      "home": "West Bromwich",
-      "away": "Bristol City",
-      "market": [
-        0.550070522,
-        0.248236953,
-        0.201692525
-      ],
-      "streck": [
-        71.0,
-        16.0,
-        13.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              5.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 5,
-            "votes": [
-              5.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_human": {
-          "individual": {
-            "n": 2,
-            "votes": [
-              2.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              2.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              2.5,
-              1.5,
-              1.0
-            ],
-            "shares": [
-              0.5,
-              0.3,
-              0.2
-            ],
-            "disagreement": 0.5
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              1.833333,
-              0.833333,
-              0.333333
-            ],
-            "shares": [
-              0.611111,
-              0.277778,
-              0.111111
-            ],
-            "disagreement": 0.388889
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 8,
-      "home": "Queens Park Rangers",
-      "away": "Sheffield U",
-      "market": [
-        0.465532518,
-        0.261704767,
-        0.272762715
-      ],
-      "streck": [
-        45.0,
-        30.0,
-        25.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              4.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.8,
-              0.0,
-              0.2
-            ],
-            "disagreement": 0.2
-          },
-          "publisher": {
-            "n": 5,
-            "votes": [
-              4.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.8,
-              0.0,
-              0.2
-            ],
-            "disagreement": 0.2
-          }
-        },
-        "first_human": {
-          "individual": {
-            "n": 2,
-            "votes": [
-              1.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.5,
-              0.0,
-              0.5
-            ],
-            "disagreement": 0.5
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              1.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.5,
-              0.0,
-              0.5
-            ],
-            "disagreement": 0.5
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 6,
-            "votes": [
-              3.333333,
-              1.333333,
-              1.333333
-            ],
-            "shares": [
-              0.555556,
-              0.222222,
+              2.388889,
+              1.388889,
               0.222222
             ],
-            "disagreement": 0.444444
-          },
-          "publisher": {
-            "n": 4,
-            "votes": [
-              2.333333,
-              0.666667,
-              1.0
-            ],
             "shares": [
-              0.583333,
-              0.166667,
-              0.25
+              0.597222,
+              0.347222,
+              0.055556
             ],
-            "disagreement": 0.416667
+            "disagreement": 0.402778
           }
         },
         "system_editorial": {
           "individual": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 0,
+            "n": 1,
             "votes": [
-              0.0,
+              1.0,
               0.0,
               0.0
             ],
-            "shares": null,
-            "disagreement": null
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
           }
         },
         "system_site": {
@@ -2114,52 +2720,262 @@
       }
     },
     {
-      "number": 9,
-      "home": "West Ham",
-      "away": "Stoke",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
       "market": [
-        0.566234498,
-        0.236161218,
-        0.197604284
+        0.542731278,
+        0.243876652,
+        0.21339207
       ],
       "streck": [
-        51.0,
-        22.0,
-        27.0
+        60.0,
+        23.0,
+        17.0
       ],
       "metrics": {
         "result_human": {
           "individual": {
-            "n": 2,
+            "n": 1,
             "votes": [
-              1.0,
               0.0,
-              1.0
+              1.0,
+              0.0
             ],
             "shares": [
-              0.5,
               0.0,
-              0.5
+              1.0,
+              0.0
             ],
-            "disagreement": 0.5
+            "disagreement": 0.0
           },
           "publisher": {
-            "n": 2,
+            "n": 1,
             "votes": [
-              1.0,
               0.0,
-              1.0
+              1.0,
+              0.0
             ],
             "shares": [
-              0.5,
               0.0,
-              0.5
+              1.0,
+              0.0
             ],
-            "disagreement": 0.5
+            "disagreement": 0.0
           }
         },
         "result_editorial": {
           "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 3,
+            "votes": [
+              3.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 3,
+            "votes": [
+              3.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              2.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 8,
+            "votes": [
+              6.333333,
+              1.333333,
+              0.333333
+            ],
+            "shares": [
+              0.791667,
+              0.166667,
+              0.041667
+            ],
+            "disagreement": 0.208333
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              4.208333,
+              0.708333,
+              0.083333
+            ],
+            "shares": [
+              0.841667,
+              0.141667,
+              0.016667
+            ],
+            "disagreement": 0.158333
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_site": {
+          "individual": {
             "n": 0,
             "votes": [
               0.0,
@@ -2179,33 +2995,389 @@
             "shares": null,
             "disagreement": null
           }
+        }
+      }
+    },
+    {
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "market": [
+        0.40436457,
+        0.260590501,
+        0.335044929
+      ],
+      "streck": [
+        55.0,
+        23.0,
+        22.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 3,
+            "votes": [
+              3.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 3,
+            "votes": [
+              3.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
         },
         "result_site": {
           "individual": {
-            "n": 6,
+            "n": 3,
             "votes": [
-              4.0,
+              3.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
               1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 3,
+            "votes": [
+              3.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_human": {
+          "individual": {
+            "n": 2,
+            "votes": [
+              1.0,
+              0.0,
               1.0
             ],
             "shares": [
+              0.5,
+              0.0,
+              0.5
+            ],
+            "disagreement": 0.5
+          },
+          "publisher": {
+            "n": 2,
+            "votes": [
+              1.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.5,
+              0.0,
+              0.5
+            ],
+            "disagreement": 0.5
+          }
+        },
+        "first_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "first_site": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_human": {
+          "individual": {
+            "n": 7,
+            "votes": [
+              2.333333,
+              2.833333,
+              1.833333
+            ],
+            "shares": [
+              0.333333,
+              0.404762,
+              0.261905
+            ],
+            "disagreement": 0.595238
+          },
+          "publisher": {
+            "n": 5,
+            "votes": [
+              1.666667,
+              1.833333,
+              1.5
+            ],
+            "shares": [
+              0.333333,
+              0.366667,
+              0.3
+            ],
+            "disagreement": 0.633333
+          }
+        },
+        "system_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "shares": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "system_site": {
+          "individual": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          },
+          "publisher": {
+            "n": 0,
+            "votes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "shares": null,
+            "disagreement": null
+          }
+        }
+      }
+    },
+    {
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "market": [
+        0.408011869,
+        0.28189911,
+        0.310089021
+      ],
+      "streck": [
+        33.0,
+        33.0,
+        34.0
+      ],
+      "metrics": {
+        "result_human": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "result_editorial": {
+          "individual": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          },
+          "publisher": {
+            "n": 1,
+            "votes": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "shares": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "disagreement": 0.0
+          }
+        },
+        "result_site": {
+          "individual": {
+            "n": 3,
+            "votes": [
+              2.0,
+              1.0,
+              0.0
+            ],
+            "shares": [
               0.666667,
-              0.166667,
-              0.166667
+              0.333333,
+              0.0
             ],
             "disagreement": 0.333333
           },
           "publisher": {
-            "n": 6,
+            "n": 3,
             "votes": [
-              4.0,
+              2.0,
               1.0,
-              1.0
+              0.0
             ],
             "shares": [
               0.666667,
-              0.166667,
-              0.166667
+              0.333333,
+              0.0
             ],
             "disagreement": 0.333333
           }
@@ -2244,13 +3416,13 @@
           "individual": {
             "n": 1,
             "votes": [
-              0.0,
               1.0,
+              0.0,
               0.0
             ],
             "shares": [
-              0.0,
               1.0,
+              0.0,
               0.0
             ],
             "disagreement": 0.0
@@ -2258,13 +3430,13 @@
           "publisher": {
             "n": 1,
             "votes": [
-              0.0,
               1.0,
+              0.0,
               0.0
             ],
             "shares": [
-              0.0,
               1.0,
+              0.0,
               0.0
             ],
             "disagreement": 0.0
@@ -2304,1128 +3476,60 @@
           "individual": {
             "n": 7,
             "votes": [
-              6.5,
-              0.5,
-              0.0
+              4.5,
+              1.5,
+              1.0
             ],
             "shares": [
-              0.928571,
-              0.071429,
-              0.0
+              0.642857,
+              0.214286,
+              0.142857
             ],
-            "disagreement": 0.071429
+            "disagreement": 0.357143
           },
           "publisher": {
-            "n": 4,
+            "n": 5,
             "votes": [
-              3.833333,
-              0.166667,
-              0.0
+              3.388889,
+              1.055556,
+              0.555556
             ],
             "shares": [
-              0.958333,
-              0.041667,
-              0.0
+              0.677778,
+              0.211111,
+              0.111111
             ],
-            "disagreement": 0.041667
+            "disagreement": 0.322222
           }
         },
         "system_editorial": {
           "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 10,
-      "home": "Wrexham",
-      "away": "Portsmouth",
-      "market": [
-        0.441154971,
-        0.285453216,
-        0.273391813
-      ],
-      "streck": [
-        56.0,
-        26.0,
-        18.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              5.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 5,
-            "votes": [
-              5.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_human": {
-          "individual": {
             "n": 2,
             "votes": [
-              1.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.5,
-              0.5,
-              0.0
-            ],
-            "disagreement": 0.5
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              1.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.5,
-              0.5,
-              0.0
-            ],
-            "disagreement": 0.5
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 5,
-            "votes": [
-              2.666667,
-              1.666667,
-              0.666667
-            ],
-            "shares": [
-              0.533333,
               0.333333,
-              0.133333
-            ],
-            "disagreement": 0.466667
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              1.888889,
-              0.888889,
-              0.222222
-            ],
-            "shares": [
-              0.62963,
-              0.296296,
-              0.074074
-            ],
-            "disagreement": 0.37037
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 11,
-      "home": "Luton",
-      "away": "Oxford",
-      "market": [
-        0.542731278,
-        0.243876652,
-        0.21339207
-      ],
-      "streck": [
-        59.0,
-        23.0,
-        18.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.0,
-              1.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 3,
-            "votes": [
-              3.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              3.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_human": {
-          "individual": {
-            "n": 2,
-            "votes": [
-              2.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              2.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 6,
-            "votes": [
-              5.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
               0.833333,
+              0.833333
+            ],
+            "shares": [
               0.166667,
-              0.0
-            ],
-            "disagreement": 0.166667
-          },
-          "publisher": {
-            "n": 4,
-            "votes": [
-              3.333333,
-              0.666667,
-              0.0
-            ],
-            "shares": [
-              0.833333,
-              0.166667,
-              0.0
-            ],
-            "disagreement": 0.166667
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 12,
-      "home": "Sheffield W",
-      "away": "Reading",
-      "market": [
-        0.40436457,
-        0.260590501,
-        0.335044929
-      ],
-      "streck": [
-        56.0,
-        23.0,
-        21.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 3,
-            "votes": [
-              3.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              3.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 3,
-            "votes": [
-              3.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              3.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_human": {
-          "individual": {
-            "n": 2,
-            "votes": [
-              1.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.5,
-              0.0,
-              0.5
-            ],
-            "disagreement": 0.5
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              1.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.5,
-              0.0,
-              0.5
-            ],
-            "disagreement": 0.5
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 6,
-            "votes": [
-              2.0,
-              2.5,
-              1.5
-            ],
-            "shares": [
-              0.333333,
               0.416667,
-              0.25
+              0.416667
             ],
             "disagreement": 0.583333
           },
           "publisher": {
-            "n": 4,
-            "votes": [
-              1.333333,
-              1.5,
-              1.166667
-            ],
-            "shares": [
-              0.333333,
-              0.375,
-              0.291667
-            ],
-            "disagreement": 0.625
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "system_site": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        }
-      }
-    },
-    {
-      "number": 13,
-      "home": "Wycombe",
-      "away": "Bradford",
-      "market": [
-        0.408011869,
-        0.28189911,
-        0.310089021
-      ],
-      "streck": [
-        32.0,
-        33.0,
-        35.0
-      ],
-      "metrics": {
-        "result_human": {
-          "individual": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          },
-          "publisher": {
-            "n": 0,
-            "votes": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "shares": null,
-            "disagreement": null
-          }
-        },
-        "result_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "shares": [
-              0.0,
-              0.0,
-              1.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "result_site": {
-          "individual": {
-            "n": 3,
-            "votes": [
-              2.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.666667,
-              0.333333,
-              0.0
-            ],
-            "disagreement": 0.333333
-          },
-          "publisher": {
-            "n": 3,
-            "votes": [
-              2.0,
-              1.0,
-              0.0
-            ],
-            "shares": [
-              0.666667,
-              0.333333,
-              0.0
-            ],
-            "disagreement": 0.333333
-          }
-        },
-        "first_human": {
-          "individual": {
             "n": 2,
             "votes": [
-              2.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 2,
-            "votes": [
-              2.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "first_site": {
-          "individual": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "shares": [
-              1.0,
-              0.0,
-              0.0
-            ],
-            "disagreement": 0.0
-          }
-        },
-        "system_human": {
-          "individual": {
-            "n": 6,
-            "votes": [
-              4.166667,
-              1.166667,
-              0.666667
-            ],
-            "shares": [
-              0.694444,
-              0.194444,
-              0.111111
-            ],
-            "disagreement": 0.305556
-          },
-          "publisher": {
-            "n": 4,
-            "votes": [
-              3.055556,
-              0.722222,
-              0.222222
-            ],
-            "shares": [
-              0.763889,
-              0.180556,
-              0.055556
-            ],
-            "disagreement": 0.236111
-          }
-        },
-        "system_editorial": {
-          "individual": {
-            "n": 1,
-            "votes": [
               0.333333,
-              0.333333,
-              0.333333
+              0.833333,
+              0.833333
             ],
             "shares": [
-              0.333333,
-              0.333333,
-              0.333333
+              0.166667,
+              0.416667,
+              0.416667
             ],
-            "disagreement": 0.666667
-          },
-          "publisher": {
-            "n": 1,
-            "votes": [
-              0.333333,
-              0.333333,
-              0.333333
-            ],
-            "shares": [
-              0.333333,
-              0.333333,
-              0.333333
-            ],
-            "disagreement": 0.666667
+            "disagreement": 0.583333
           }
         },
         "system_site": {
@@ -3800,6 +3904,36 @@
       "group": "tipper.se"
     },
     {
+      "id": "anthonyeadson",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.squawka.com/en/news/previews/ipswich-vs-aston-villa-predictions-betting-tips-28-11-26/",
+      "source_at": "2026-11-27T20:04:57Z",
+      "observed_at": "2026-11-27T20:04:57Z",
+      "evidence": "direct_preclose",
+      "name": "Anthony Eadson",
+      "kind": "human",
+      "group": "squawka.com"
+    },
+    {
+      "id": "anthonyeadson",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.squawka.com/en/news/previews/manchester-united-vs-brentford-predictions-betting-tips-28-11-26/",
+      "source_at": "2026-11-27T20:04:57Z",
+      "observed_at": "2026-11-27T20:04:57Z",
+      "evidence": "direct_preclose",
+      "name": "Anthony Eadson",
+      "kind": "human",
+      "group": "squawka.com"
+    },
+    {
       "id": "axel",
       "number": 1,
       "home": "Ipswich",
@@ -4040,6 +4174,111 @@
       "group": "livetipsportal.com"
     },
     {
+      "id": "benhorlock",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://forecastrecord.com/football/matches/derby-county-vs-watford-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Ben Horlock",
+      "kind": "human",
+      "group": "betvictor.com"
+    },
+    {
+      "id": "benhorlock",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "1",
+      "source": "https://forecastrecord.com/football/matches/queens-park-rangers-vs-sheffield-united-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Ben Horlock",
+      "kind": "human",
+      "group": "betvictor.com"
+    },
+    {
+      "id": "benhorlock",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "2",
+      "source": "https://forecastrecord.com/football/matches/west-ham-united-vs-stoke-city-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Ben Horlock",
+      "kind": "human",
+      "group": "betvictor.com"
+    },
+    {
+      "id": "bensully",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.sportsmole.co.uk/football/wrexham/preview/wrexham-vs-portsmouth-prediction-team-news-lineups_609916.html",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Ben Sully",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
+    },
+    {
+      "id": "bossepetersson",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "system",
+      "sign": "1",
+      "source": "https://bettingstugan.se/nyheter/stryktipset-experternas-basta-spikar-och-skrallar-infor-jackpotomgangen",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Bosse Petersson",
+      "kind": "human",
+      "group": "bettingstugan.se"
+    },
+    {
+      "id": "bossepetersson",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://bettingstugan.se/nyheter/stryktipset-experternas-basta-spikar-och-skrallar-infor-jackpotomgangen",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Bosse Petersson",
+      "kind": "human",
+      "group": "bettingstugan.se"
+    },
+    {
+      "id": "calumburrowes",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.sportsmole.co.uk/football/luton-town/preview/luton-vs-oxford-utd-prediction-team-news-lineups_609895.html",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Calum Burrowes",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
+    },
+    {
       "id": "campione",
       "number": 1,
       "home": "Ipswich",
@@ -4235,6 +4474,66 @@
       "group": "bettingstugan.se"
     },
     {
+      "id": "carterwhite",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://forecastrecord.com/football/matches/birmingham-city-vs-bolton-wanderers-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Carter White",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
+    },
+    {
+      "id": "carterwhite",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.sportsmole.co.uk/football/millwall/preview/millwall-vs-burnley-prediction-team-news-lineups_609903.html",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Carter White",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
+    },
+    {
+      "id": "carterwhite",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://forecastrecord.com/football/matches/west-bromwich-albion-vs-bristol-city-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Carter White",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
+    },
+    {
+      "id": "carterwhite",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "X",
+      "source": "https://forecastrecord.com/football/matches/west-ham-united-vs-stoke-city-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Carter White",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
+    },
+    {
       "id": "clancy",
       "number": 1,
       "home": "Ipswich",
@@ -4248,6 +4547,36 @@
       "name": "Adam Clancy",
       "kind": "human",
       "group": "footballwhispers.com"
+    },
+    {
+      "id": "couturiaux",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://forecastrecord.com/football/matches/west-bromwich-albion-vs-bristol-city-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Baptiste Couturiaux",
+      "kind": "human",
+      "group": "sportytrader.com"
+    },
+    {
+      "id": "darrenplant",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.sportsmole.co.uk/football/derby-county/preview/derby-vs-watford-prediction-team-news-lineups_609888.html",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Darren Plant",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
     },
     {
       "id": "delahunt",
@@ -4760,6 +5089,21 @@
       "group": "thefootballsimulator.com"
     },
     {
+      "id": "gamblingcabin",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "system",
+      "sign": "1",
+      "source": "https://helgarderat.se/speltips/stryktipskronikan-28e-november/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "GamblingCabin (Helgarderat)",
+      "kind": "editorial",
+      "group": "gamblingcabin.se"
+    },
+    {
       "id": "giordano",
       "number": 4,
       "home": "Birmingham",
@@ -4805,6 +5149,21 @@
       "group": "skysports.com"
     },
     {
+      "id": "kenleyward",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://forecastrecord.com/football/matches/birmingham-city-vs-bolton-wanderers-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Kenley Ward",
+      "kind": "human",
+      "group": "dailysports.net"
+    },
+    {
       "id": "ladbrokesau",
       "number": 2,
       "home": "Manchester United",
@@ -4818,6 +5177,36 @@
       "name": "Ladbrokes AU",
       "kind": "site",
       "group": "ladbrokes.com.au"
+    },
+    {
+      "id": "limpar",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "system",
+      "sign": "1",
+      "source": "https://bettingstugan.se/nyheter/stryktipset-experternas-basta-spikar-och-skrallar-infor-jackpotomgangen",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Anders Limpar",
+      "kind": "human",
+      "group": "bettingstugan.se"
+    },
+    {
+      "id": "limpar",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://bettingstugan.se/nyheter/stryktipset-experternas-basta-spikar-och-skrallar-infor-jackpotomgangen",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Anders Limpar",
+      "kind": "human",
+      "group": "bettingstugan.se"
     },
     {
       "id": "liss",
@@ -5075,6 +5464,546 @@
       "group": "forecastrecord.com"
     },
     {
+      "id": "michaelpettersson",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.betting.se/speltips/manchester-united-brentford-28-11-2026",
+      "source_at": "2026-11-27T20:04:57Z",
+      "observed_at": "2026-11-27T20:04:57Z",
+      "evidence": "direct_preclose",
+      "name": "Michael Pettersson",
+      "kind": "human",
+      "group": "betting.se"
+    },
+    {
+      "id": "milica",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "result",
+      "sign": "1",
+      "source": "https://forecastrecord.com/football/matches/leeds-united-vs-coventry-city-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Milica",
+      "kind": "human",
+      "group": "svijetkladjenja.com"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "system",
+      "sign": "X2",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "system",
+      "sign": "1",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "system",
+      "sign": "1",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "system",
+      "sign": "X2",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "system",
+      "sign": "1",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "system",
+      "sign": "1",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "system",
+      "sign": "1",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "system",
+      "sign": "1",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "system",
+      "sign": "1",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "oddscentralen",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "system",
+      "sign": "X2",
+      "source": "https://oddscentralen.se/stryktipset-vecka-48-2026-tips-spikar-analys/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Oddscentralen",
+      "kind": "editorial",
+      "group": "oddscentralen.se"
+    },
+    {
+      "id": "olbg_benaldo1981",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Millwall_v_Burnley/1?event_id=2049425",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Benaldo1981",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_benaldo1981",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/West_Ham_v_Stoke/1?event_id=2049428",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Benaldo1981",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_dave1962",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Derby_v_Watford/1?event_id=2049424",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Dave1962",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_dave1962",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Millwall_v_Burnley/1?event_id=2049425",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Dave1962",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_dave1962",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/QPR_v_Sheff_Utd/1?event_id=2049426",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Dave1962",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_dave1962",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Wrexham_v_Portsmouth/1?event_id=2049430",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Dave1962",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_delboy980",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/West_Ham_v_Stoke/1?event_id=2049428",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Delboy980",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_ewanvrs",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Man_Utd_v_Brentford/1?event_id=2047654",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "ewanvrs",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_maverickone",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Leeds_v_Coventry/1?event_id=2047651",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "maverickone",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_meoldmate",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Man_Utd_v_Brentford/1?event_id=2047654",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "meoldmate",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_nezeji300",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Ipswich_v_Aston_Villa/1?event_id=2047653",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Nezeji300",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_nezeji300",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Leeds_v_Coventry/1?event_id=2047651",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Nezeji300",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_nezeji300",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Millwall_v_Burnley/1?event_id=2049425",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Nezeji300",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_nezeji300",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/West_Ham_v_Stoke/1?event_id=2049428",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Nezeji300",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_oliverl",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Ipswich_v_Aston_Villa/1?event_id=2047653",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "OliverL",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_oliverl",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Man_Utd_v_Brentford/1?event_id=2047654",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "OliverL",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_pekkatartu",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Leeds_v_Coventry/1?event_id=2047651",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "pekkatartu",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_risto123",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Derby_v_Watford/1?event_id=2049424",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "risto123",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_ryancarbo96",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/Birmingham_v_Bolton/1?event_id=2049420",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "RyanCarbo96",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_tommytucker",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Premier_League/Ipswich_v_Aston_Villa/1?event_id=2047653",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "tommytucker",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
+      "id": "olbg_toofanexpress",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.olbg.com/betting-tips/Football/UK/England_Championship/West_Brom_v_Bristol_City/1?event_id=2049427",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "ToofanExpress",
+      "kind": "human",
+      "group": "olbg.com"
+    },
+    {
       "id": "poolarn",
       "number": 1,
       "home": "Ipswich",
@@ -5328,6 +6257,201 @@
       "name": "Team Reducering",
       "kind": "editorial",
       "group": "reducering.se"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "system",
+      "sign": "2",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "system",
+      "sign": "12",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "type": "system",
+      "sign": "1",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "type": "system",
+      "sign": "1X",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "type": "system",
+      "sign": "1",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
+    },
+    {
+      "id": "rok_bjornen",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "system",
+      "sign": "1X2",
+      "source": "https://www.rekatochklart.com/tips/stryktipset/stryktipset-tips-28-11/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "RoK_Bjornen",
+      "kind": "human",
+      "group": "rekatochklart.com"
     },
     {
       "id": "ronngren",
@@ -5960,6 +7084,66 @@
       "group": "speltips.se"
     },
     {
+      "id": "sutton",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "X",
+      "source": "https://www.myfootballfacts.com/play/predictor/tipsters/chris-sutton/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Chris Sutton",
+      "kind": "human",
+      "group": "bbc.com"
+    },
+    {
+      "id": "sutton",
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.myfootballfacts.com/play/predictor/tipsters/chris-sutton/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Chris Sutton",
+      "kind": "human",
+      "group": "bbc.com"
+    },
+    {
+      "id": "sutton",
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "type": "result",
+      "sign": "1",
+      "source": "https://www.myfootballfacts.com/play/predictor/tipsters/chris-sutton/",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
+      "evidence": "direct_preclose",
+      "name": "Chris Sutton",
+      "kind": "human",
+      "group": "bbc.com"
+    },
+    {
+      "id": "tamhaswoods",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "2",
+      "source": "https://news.paddypower.com/football/premier-league/2026/11/27/ipswich-v-aston-villa-tips-bet-builder-sat-28-nov/",
+      "source_at": "2026-11-27T20:04:57Z",
+      "observed_at": "2026-11-27T20:04:57Z",
+      "evidence": "direct_preclose",
+      "name": "Tamhas Woods",
+      "kind": "human",
+      "group": "paddypower.com"
+    },
+    {
       "id": "thepundit",
       "number": 4,
       "home": "Birmingham",
@@ -6063,6 +7247,21 @@
       "name": "The Pundit",
       "kind": "site",
       "group": "thepundit.io"
+    },
+    {
+      "id": "tipsterio_max",
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "type": "result",
+      "sign": "2",
+      "source": "https://forecastrecord.com/football/matches/ipswich-town-vs-aston-villa-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Max (Tipsterio)",
+      "kind": "human",
+      "group": "tipsterio.de"
     },
     {
       "id": "tt",
@@ -6261,6 +7460,21 @@
     },
     {
       "id": "varley",
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "type": "result",
+      "sign": "X",
+      "source": "https://forecastrecord.com/football/matches/queens-park-rangers-vs-sheffield-united-2026-11-28/",
+      "source_at": "2026-11-27T20:03:23Z",
+      "observed_at": "2026-11-27T20:03:23Z",
+      "evidence": "direct_preclose",
+      "name": "Sam Varley",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
+    },
+    {
+      "id": "varley",
       "number": 12,
       "home": "Sheffield W",
       "away": "Reading",
@@ -6269,6 +7483,21 @@
       "source": "https://www.sportsmole.co.uk/football/sheffield-wednesday/preview/sheff-weds-vs-reading-prediction-team-news-lineups_609944.html",
       "source_at": "2026-11-27T19:57:04.701Z",
       "observed_at": "2026-11-27T19:57:04.701Z",
+      "evidence": "direct_preclose",
+      "name": "Sam Varley",
+      "kind": "human",
+      "group": "sportsmole.co.uk"
+    },
+    {
+      "id": "varley",
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "type": "result",
+      "sign": "2",
+      "source": "https://www.sportsmole.co.uk/football/wycombe-wanderers/preview/wycombe-vs-bradford-prediction-team-news-lineups_609947.html",
+      "source_at": "2026-11-27T19:59:49Z",
+      "observed_at": "2026-11-27T19:59:49Z",
       "evidence": "direct_preclose",
       "name": "Sam Varley",
       "kind": "human",

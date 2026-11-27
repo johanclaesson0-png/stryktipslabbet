@@ -1,10 +1,10 @@
 {
   "schema": "stryktipslabbet-decision-studio-v19",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-27T19:58:12.756649+00:00",
+  "observed_at_utc": "2026-11-27T21:40:27.205605+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "a0c3baf9a6a459cb4f410e2ece8b5efbf253cddcbf4f76c3a53be35cb3dbe48e",
-  "created_at_utc": "2026-11-27T19:58:20.401411+00:00",
+  "source_snapshot_sha256": "29851026875f0f3fd0f645784f83e60e7c30844bf276734e1464c803b49b4261",
+  "created_at_utc": "2026-11-27T21:40:34.437515+00:00",
   "status": "förhandsfryst – experimentella alternativ, ingen automatisk ändring",
   "models_available": [
     "form",
@@ -26,14 +26,14 @@
         0.484001
       ],
       "crowd_p": [
-        0.23,
+        0.22,
         0.27,
-        0.5
+        0.51
       ],
       "market_minus_crowd_pp": [
-        4.16,
+        5.16,
         -2.56,
-        -1.6
+        -2.6
       ],
       "form_delta_pp": [
         0.39,
@@ -53,11 +53,11 @@
         },
         "value": {
           "100": "2",
-          "1800": "2"
+          "1800": "12"
         }
       },
-      "review_priority": 4.33,
-      "explanation": "Inga stora skillnader mellan tillgängliga analyser."
+      "review_priority": 7.83,
+      "explanation": "Experimenten väljer andra tecken – jämför, men byt inte automatiskt."
     },
     {
       "number": 2,
@@ -311,10 +311,10 @@
         },
         "value": {
           "100": "1",
-          "1800": "1X"
+          "1800": "1"
         }
       },
-      "review_priority": 18.67,
+      "review_priority": 16.17,
       "explanation": "Marknad och folket skiljer sig tydligt; granska spiken/garderingen."
     },
     {
@@ -456,14 +456,14 @@
         0.213392
       ],
       "crowd_p": [
-        0.59,
+        0.6,
         0.23,
-        0.18
+        0.17
       ],
       "market_minus_crowd_pp": [
-        -4.73,
+        -5.73,
         1.39,
-        3.34
+        4.34
       ],
       "form_delta_pp": [
         5.08,
@@ -486,7 +486,7 @@
           "1800": "1"
         }
       },
-      "review_priority": 6.76,
+      "review_priority": 7.76,
       "explanation": "Inga stora skillnader mellan tillgängliga analyser."
     },
     {
@@ -499,14 +499,14 @@
         0.335045
       ],
       "crowd_p": [
-        0.56,
+        0.55,
         0.23,
-        0.21
+        0.22
       ],
       "market_minus_crowd_pp": [
-        -15.56,
+        -14.56,
         3.06,
-        12.5
+        11.5
       ],
       "form_delta_pp": [
         0.0,
@@ -529,7 +529,7 @@
           "1800": "1X2"
         }
       },
-      "review_priority": 15.56,
+      "review_priority": 14.56,
       "explanation": "Marknad och folket skiljer sig tydligt; granska spiken/garderingen."
     },
     {
@@ -542,14 +542,14 @@
         0.310089
       ],
       "crowd_p": [
-        0.32,
         0.33,
-        0.35
+        0.33,
+        0.34
       ],
       "market_minus_crowd_pp": [
-        8.8,
+        7.8,
         -4.81,
-        -3.99
+        -2.99
       ],
       "form_delta_pp": [
         0.0,
@@ -572,8 +572,8 @@
           "1800": "1X2"
         }
       },
-      "review_priority": 11.3,
-      "explanation": "Marknad och folket skiljer sig tydligt; granska spiken/garderingen."
+      "review_priority": 10.3,
+      "explanation": "Experimenten väljer andra tecken – jämför, men byt inte automatiskt."
     }
   ],
   "systems": [
@@ -697,13 +697,13 @@
           "title": "Streckvärdescenario",
           "status": "endast experimentella systemjämförelser",
           "choices": [
-            "2",
+            "12",
             "1X2",
             "1",
             "1",
             "1X2",
             "1X2",
-            "1X",
+            "1",
             "1",
             "1",
             "1X2",
@@ -714,7 +714,7 @@
           "changes": 3,
           "same_cost": true,
           "market_probability_baseline": 0.024957882,
-          "market_probability_experiment": 0.022503394,
+          "market_probability_experiment": 0.02420639,
           "activated": false
         }
       ]
@@ -722,17 +722,17 @@
   ],
   "review_order": [
     7,
-    12,
     4,
     10,
+    12,
     6,
-    13,
     3,
+    13,
     8,
-    9,
-    11,
-    2,
     1,
+    11,
+    9,
+    2,
     5
   ],
   "warnings": [

@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-frozen-analysis-v1",
   "model_version": "market-no-vig-v1",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-27T19:58:12.756649+00:00",
+  "observed_at_utc": "2026-11-27T21:40:27.205605+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
   "source": "Svenska Spel publikt API",
-  "source_snapshot_sha256": "a0c3baf9a6a459cb4f410e2ece8b5efbf253cddcbf4f76c3a53be35cb3dbe48e",
+  "source_snapshot_sha256": "29851026875f0f3fd0f645784f83e60e7c30844bf276734e1464c803b49b4261",
   "budget_limit": 1800,
   "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
   "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
@@ -20,9 +20,9 @@
         2.02
       ],
       "streck": [
-        23.0,
+        22.0,
         27.0,
-        50.0
+        51.0
       ],
       "p": [
         0.271578381,
@@ -30,9 +30,9 @@
         0.484001076
       ],
       "edge": [
-        0.041578,
+        0.051578,
         -0.025579,
-        -0.015999
+        -0.025999
       ]
     },
     {
@@ -270,9 +270,9 @@
         4.4
       ],
       "streck": [
-        59.0,
+        60.0,
         23.0,
-        18.0
+        17.0
       ],
       "p": [
         0.542731278,
@@ -280,9 +280,9 @@
         0.21339207
       ],
       "edge": [
-        -0.047269,
+        -0.057269,
         0.013877,
-        0.033392
+        0.043392
       ]
     },
     {
@@ -295,9 +295,9 @@
         2.8
       ],
       "streck": [
-        56.0,
+        55.0,
         23.0,
-        21.0
+        22.0
       ],
       "p": [
         0.40436457,
@@ -305,9 +305,9 @@
         0.335044929
       ],
       "edge": [
-        -0.155635,
+        -0.145635,
         0.030591,
-        0.125045
+        0.115045
       ]
     },
     {
@@ -320,9 +320,9 @@
         3.0
       ],
       "streck": [
-        32.0,
         33.0,
-        35.0
+        33.0,
+        34.0
       ],
       "p": [
         0.408011869,
@@ -330,9 +330,9 @@
         0.310089021
       ],
       "edge": [
-        0.088012,
+        0.078012,
         -0.048101,
-        -0.039911
+        -0.029911
       ]
     }
   ],
