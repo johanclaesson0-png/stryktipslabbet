@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-frozen-analysis-v1",
   "model_version": "market-no-vig-v1",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-27T21:40:27.205605+00:00",
+  "observed_at_utc": "2026-11-27T22:48:41.161886+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
   "source": "Svenska Spel publikt API",
-  "source_snapshot_sha256": "29851026875f0f3fd0f645784f83e60e7c30844bf276734e1464c803b49b4261",
+  "source_snapshot_sha256": "9135109260270aedd226968986ba2900828670cbda01b73322f89f5c68b3d414",
   "budget_limit": 1800,
   "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
   "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
@@ -15,9 +15,9 @@
       "home": "Ipswich",
       "away": "Aston Villa",
       "odds": [
-        3.6,
+        3.75,
         4.0,
-        2.02
+        1.97
       ],
       "streck": [
         22.0,
@@ -25,14 +25,14 @@
         51.0
       ],
       "p": [
-        0.271578381,
-        0.244420543,
-        0.484001076
+        0.260345255,
+        0.244073676,
+        0.495581069
       ],
       "edge": [
-        0.051578,
-        -0.025579,
-        -0.025999
+        0.040345,
+        -0.025926,
+        -0.014419
       ]
     },
     {
@@ -145,9 +145,9 @@
         3.35
       ],
       "streck": [
-        51.0,
+        52.0,
         29.0,
-        20.0
+        19.0
       ],
       "p": [
         0.445974286,
@@ -155,9 +155,9 @@
         0.288884836
       ],
       "edge": [
-        -0.064026,
+        -0.074026,
         -0.024859,
-        0.088885
+        0.098885
       ]
     },
     {
@@ -295,8 +295,8 @@
         2.8
       ],
       "streck": [
-        55.0,
-        23.0,
+        56.0,
+        22.0,
         22.0
       ],
       "p": [
@@ -305,8 +305,8 @@
         0.335044929
       ],
       "edge": [
-        -0.145635,
-        0.030591,
+        -0.155635,
+        0.040591,
         0.115045
       ]
     },
@@ -320,9 +320,9 @@
         3.0
       ],
       "streck": [
+        32.0,
         33.0,
-        33.0,
-        34.0
+        35.0
       ],
       "p": [
         0.408011869,
@@ -330,9 +330,9 @@
         0.310089021
       ],
       "edge": [
-        0.078012,
+        0.088012,
         -0.048101,
-        -0.029911
+        -0.039911
       ]
     }
   ],
@@ -358,7 +358,7 @@
         "1X2",
         "1X2"
       ],
-      "p13_estimate": 0.024957882,
+      "p13_estimate": 0.025555013,
       "spikes": 6,
       "half": 1,
       "full": 6
@@ -384,7 +384,7 @@
         "1X2",
         "12"
       ],
-      "p13_estimate": 0.022029923,
+      "p13_estimate": 0.022040037,
       "spikes": 4,
       "half": 6,
       "full": 3
@@ -410,7 +410,7 @@
         "1X2",
         "1"
       ],
-      "p13_estimate": 0.015278378,
+      "p13_estimate": 0.015285392,
       "spikes": 4,
       "half": 6,
       "full": 3

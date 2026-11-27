@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-27T21:40:27.205605+00:00",
-  "source_snapshot_sha256": "29851026875f0f3fd0f645784f83e60e7c30844bf276734e1464c803b49b4261",
-  "form_created_at_utc": "2026-11-27T22:38:33.742334+00:00",
-  "form_sha256": "5d683d3cb835decd898e23dae568b48ee0320f59c5bd5a1047434f0f9e1970a0",
+  "source_observed_at_utc": "2026-11-27T22:48:41.161886+00:00",
+  "source_snapshot_sha256": "9135109260270aedd226968986ba2900828670cbda01b73322f89f5c68b3d414",
+  "form_created_at_utc": "2026-11-27T22:48:41.452767+00:00",
+  "form_sha256": "e65ae329fa51153b18cd3faf4ef6ce433406f285b8e81739627f164363d656be",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-27T22:38:34.251384+00:00",
+  "created_at_utc": "2026-11-27T22:48:42.160714+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -16,18 +16,18 @@
       "home": "Ipswich",
       "away": "Aston Villa",
       "market_p": [
-        0.271578381,
-        0.244420543,
-        0.484001076
+        0.260345255,
+        0.244073676,
+        0.495581069
       ],
       "form_p": [
-        0.275528246,
-        0.244756287,
-        0.479715467
+        0.264202124,
+        0.244474068,
+        0.491323808
       ],
       "delta_pp": [
         0.39,
-        0.03,
+        0.04,
         -0.43
       ],
       "data_coverage": "båda",
@@ -384,9 +384,9 @@
         "12",
         "1X2"
       ],
-      "original_market_p13": 0.003330197,
-      "new_form_p13": 0.003661496,
-      "new_market_baseline_p13": 0.003205204,
+      "original_market_p13": 0.003409873,
+      "new_form_p13": 0.003750099,
+      "new_market_baseline_p13": 0.00328189,
       "different_matches": 2
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.024957882,
-      "new_form_p13": 0.027492286,
-      "new_market_baseline_p13": 0.024957882,
+      "original_market_p13": 0.025555013,
+      "new_form_p13": 0.028157555,
+      "new_market_baseline_p13": 0.025555013,
       "different_matches": 0
     }
   ],

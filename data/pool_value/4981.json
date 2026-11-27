@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-pool-value-v15",
   "version": "relative-pool-value-2026-11-14-v1",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-27T21:40:27.205605+00:00",
-  "source_snapshot_sha256": "29851026875f0f3fd0f645784f83e60e7c30844bf276734e1464c803b49b4261",
+  "observed_at_utc": "2026-11-27T22:48:41.161886+00:00",
+  "source_snapshot_sha256": "9135109260270aedd226968986ba2900828670cbda01b73322f89f5c68b3d414",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-27T21:40:28.333886+00:00",
+  "created_at_utc": "2026-11-27T22:48:42.234944+00:00",
   "crowd_exponent": 0.45,
   "budget_proposals": [
     {
@@ -43,14 +43,14 @@
       ],
       "changes": 2,
       "baseline": {
-        "probability_cover_all_13": 0.003330196505,
-        "modelled_crowd_cover_mass": 0.007055912694,
-        "relative_concentration_ratio": 0.47197
+        "probability_cover_all_13": 0.003409873295,
+        "modelled_crowd_cover_mass": 0.007147547924,
+        "relative_concentration_ratio": 0.47707
       },
       "value": {
-        "probability_cover_all_13": 0.003291205793,
-        "modelled_crowd_cover_mass": 0.005765196957,
-        "relative_concentration_ratio": 0.57087
+        "probability_cover_all_13": 0.003369949709,
+        "modelled_crowd_cover_mass": 0.005840069645,
+        "relative_concentration_ratio": 0.57704
       }
     },
     {
@@ -72,13 +72,13 @@
         "1X2"
       ],
       "value_choices": [
-        "12",
+        "2",
         "1X2",
         "1",
         "1",
         "1X2",
         "1X2",
-        "1",
+        "1X",
         "1",
         "1",
         "1X2",
@@ -88,14 +88,14 @@
       ],
       "changes": 3,
       "baseline": {
-        "probability_cover_all_13": 0.024957882177,
+        "probability_cover_all_13": 0.025555013289,
         "modelled_crowd_cover_mass": 0.04926283596,
-        "relative_concentration_ratio": 0.50663
+        "relative_concentration_ratio": 0.51875
       },
       "value": {
-        "probability_cover_all_13": 0.024206389782,
-        "modelled_crowd_cover_mass": 0.042308082648,
-        "relative_concentration_ratio": 0.57215
+        "probability_cover_all_13": 0.023041800526,
+        "modelled_crowd_cover_mass": 0.036218592072,
+        "relative_concentration_ratio": 0.63619
       }
     }
   ],
@@ -105,9 +105,9 @@
       "home": "Ipswich",
       "away": "Aston Villa",
       "p_market": [
-        0.271578381,
-        0.244420543,
-        0.484001076
+        0.260345255,
+        0.244073676,
+        0.495581069
       ],
       "p_crowd": [
         0.22,
@@ -115,14 +115,14 @@
         0.51
       ],
       "market_minus_crowd_pp": [
-        5.16,
-        -2.56,
-        -2.6
+        4.03,
+        -2.59,
+        -1.44
       ],
       "relative_underbetting": [
-        1.234,
-        0.905,
-        0.949
+        1.183,
+        0.904,
+        0.972
       ]
     },
     {
@@ -235,19 +235,19 @@
         0.288884836
       ],
       "p_crowd": [
-        0.51,
+        0.52,
         0.29,
-        0.2
+        0.19
       ],
       "market_minus_crowd_pp": [
-        -6.4,
+        -7.4,
         -2.49,
-        8.89
+        9.89
       ],
       "relative_underbetting": [
-        0.874,
+        0.858,
         0.914,
-        1.444
+        1.52
       ]
     },
     {
@@ -385,18 +385,18 @@
         0.335044929
       ],
       "p_crowd": [
-        0.55,
-        0.23,
+        0.56,
+        0.22,
         0.22
       ],
       "market_minus_crowd_pp": [
-        -14.56,
-        3.06,
+        -15.56,
+        4.06,
         11.5
       ],
       "relative_underbetting": [
-        0.735,
-        1.133,
+        0.722,
+        1.185,
         1.523
       ]
     },
@@ -410,19 +410,19 @@
         0.310089021
       ],
       "p_crowd": [
+        0.32,
         0.33,
-        0.33,
-        0.34
+        0.35
       ],
       "market_minus_crowd_pp": [
-        7.8,
+        8.8,
         -4.81,
-        -2.99
+        -3.99
       ],
       "relative_underbetting": [
-        1.236,
+        1.275,
         0.854,
-        0.912
+        0.886
       ]
     }
   ],
