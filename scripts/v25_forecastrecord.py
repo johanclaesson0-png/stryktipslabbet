@@ -35,13 +35,18 @@ def extract(doc, spec, base, official, now):
         raise ValueError("Unexpected export schema or canonical URL")
     ev=doc["event"]
     kickoff=instant(ev["starts_at"])
-    if norm(ev["display_name"])!=norm(spec["display"]) or kickoff.date().isoformat()!=spec["date"] or ev.get("status")!="finished":
-        raise ValueError("Fixture mismatch or not finished")
-    score=ev["scoreline"].split("-")
-    h,a=map(int,score)
-    sign="1" if h>a else "2" if h<a else "X"
-    if sign!=official["outcome"][spec["number"]-1]:
-        raise ValueError("Official result mismatch")
+    if norm(ev["display_name"])!=norm(spec["display"]) or kickoff.date().isoformat()!=spec["date"]:
+        raise ValueError("Fixture mismatch")
+    if official is None:
+        if now>=min(close,kickoff) or ev.get("status") not in ("scheduled","upcoming","not_started"):
+            raise ValueError("Not a preclose upcoming fixture")
+    else:
+        if ev.get("status")!="finished":
+            raise ValueError("Fixture not finished")
+        h,a=map(int,ev["scoreline"].split("-"))
+        sign="1" if h>a else "2" if h<a else "X"
+        if sign!=official["outcome"][spec["number"]-1]:
+            raise ValueError("Official result mismatch")
     match=base["matches"][spec["number"]-1]
     if match["number"]!=spec["number"] or base["draw_number"]!=spec["draw"]:
         raise ValueError("Wrong coupon position")
