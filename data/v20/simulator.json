@@ -2,12 +2,12 @@
   "schema": "stryktipslabbet-payout-scenarios-v20",
   "source_rule": "Actual verified pre-close Svenska Spel match odds and crowd",
   "draw_number": 4981,
-  "source_snapshot_sha256": "891aaa18e70502a69e0838cc57743b1bf41bf426d1603bfef959491113f5a55f",
-  "observed_at_utc": "2026-11-27T09:06:17.834586+00:00",
+  "source_snapshot_sha256": "edd4d27e801adcf326453a933405aa94618fa1613e490235807eb42f277262a0",
+  "observed_at_utc": "2026-11-27T18:11:07.720091+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "observed_turnover_so_far_kr": 3220047,
-  "sales_observed_at_utc": "2026-11-27T09:06:17.834586+00:00",
-  "generated_at_utc": "2026-11-27T09:06:28.600247+00:00",
+  "observed_turnover_so_far_kr": 5238062,
+  "sales_observed_at_utc": "2026-11-27T18:11:07.720091+00:00",
+  "generated_at_utc": "2026-11-27T18:11:16.017234+00:00",
   "draw_status": "hypotetisk utdelningsmodell – faktisk omsättning och vinstutfall okända",
   "simulation_draws": 6000,
   "assumptions": {
@@ -41,10 +41,21 @@
       "home": "Sheffield W",
       "away": "Reading",
       "sign": "2",
-      "market_probability_pct": 35.0,
+      "market_probability_pct": 33.5,
       "public_streck_pct": 22.0,
-      "underplayed_pp": 13.0,
-      "relative_underplay": 1.59,
+      "underplayed_pp": 11.5,
+      "relative_underplay": 1.52,
+      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
+    },
+    {
+      "match": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "sign": "2",
+      "market_probability_pct": 27.3,
+      "public_streck_pct": 18.0,
+      "underplayed_pp": 9.3,
+      "relative_underplay": 1.52,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
@@ -53,9 +64,9 @@
       "away": "Burnley",
       "sign": "2",
       "market_probability_pct": 28.9,
-      "public_streck_pct": 21.0,
-      "underplayed_pp": 7.9,
-      "relative_underplay": 1.37,
+      "public_streck_pct": 20.0,
+      "underplayed_pp": 8.9,
+      "relative_underplay": 1.44,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
@@ -64,20 +75,9 @@
       "away": "Bristol City",
       "sign": "X",
       "market_probability_pct": 24.8,
-      "public_streck_pct": 17.0,
-      "underplayed_pp": 7.8,
-      "relative_underplay": 1.46,
-      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
-    },
-    {
-      "match": 4,
-      "home": "Birmingham",
-      "away": "Bolton",
-      "sign": "X",
-      "market_probability_pct": 21.5,
-      "public_streck_pct": 14.0,
-      "underplayed_pp": 7.5,
-      "relative_underplay": 1.53,
+      "public_streck_pct": 16.0,
+      "underplayed_pp": 8.8,
+      "relative_underplay": 1.55,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
@@ -86,31 +86,20 @@
       "away": "Bradford",
       "sign": "1",
       "market_probability_pct": 40.8,
-      "public_streck_pct": 34.0,
-      "underplayed_pp": 6.8,
-      "relative_underplay": 1.2,
+      "public_streck_pct": 32.0,
+      "underplayed_pp": 8.8,
+      "relative_underplay": 1.28,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
-      "match": 10,
-      "home": "Wrexham",
-      "away": "Portsmouth",
-      "sign": "2",
-      "market_probability_pct": 25.5,
-      "public_streck_pct": 20.0,
-      "underplayed_pp": 5.5,
-      "relative_underplay": 1.27,
-      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
-    },
-    {
-      "match": 3,
-      "home": "Leeds",
-      "away": "Coventry",
+      "match": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
       "sign": "X",
-      "market_probability_pct": 21.4,
-      "public_streck_pct": 16.0,
-      "underplayed_pp": 5.4,
-      "relative_underplay": 1.33,
+      "market_probability_pct": 21.5,
+      "public_streck_pct": 13.0,
+      "underplayed_pp": 8.5,
+      "relative_underplay": 1.65,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
@@ -119,9 +108,20 @@
       "away": "Bristol City",
       "sign": "2",
       "market_probability_pct": 20.2,
+      "public_streck_pct": 13.0,
+      "underplayed_pp": 7.2,
+      "relative_underplay": 1.55,
+      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
+    },
+    {
+      "match": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "sign": "X",
+      "market_probability_pct": 21.2,
       "public_streck_pct": 15.0,
-      "underplayed_pp": 5.2,
-      "relative_underplay": 1.34,
+      "underplayed_pp": 6.2,
+      "relative_underplay": 1.41,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
@@ -130,20 +130,9 @@
       "away": "Bolton",
       "sign": "2",
       "market_probability_pct": 15.8,
-      "public_streck_pct": 12.0,
-      "underplayed_pp": 3.8,
-      "relative_underplay": 1.32,
-      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
-    },
-    {
-      "match": 12,
-      "home": "Sheffield W",
-      "away": "Reading",
-      "sign": "X",
-      "market_probability_pct": 26.2,
-      "public_streck_pct": 23.0,
-      "underplayed_pp": 3.2,
-      "relative_underplay": 1.14,
+      "public_streck_pct": 10.0,
+      "underplayed_pp": 5.8,
+      "relative_underplay": 1.58,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
@@ -151,65 +140,10 @@
       "home": "Leeds",
       "away": "Coventry",
       "sign": "2",
-      "market_probability_pct": 14.0,
-      "public_streck_pct": 11.0,
-      "underplayed_pp": 3.0,
-      "relative_underplay": 1.28,
-      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
-    },
-    {
-      "match": 2,
-      "home": "Manchester United",
-      "away": "Brentford",
-      "sign": "2",
-      "market_probability_pct": 29.7,
-      "public_streck_pct": 27.0,
-      "underplayed_pp": 2.7,
-      "relative_underplay": 1.1,
-      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
-    },
-    {
-      "match": 8,
-      "home": "Queens Park Rangers",
-      "away": "Sheffield U",
-      "sign": "2",
-      "market_probability_pct": 28.4,
-      "public_streck_pct": 26.0,
-      "underplayed_pp": 2.4,
-      "relative_underplay": 1.09,
-      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
-    },
-    {
-      "match": 5,
-      "home": "Derby",
-      "away": "Watford",
-      "sign": "1",
-      "market_probability_pct": 42.5,
-      "public_streck_pct": 41.0,
-      "underplayed_pp": 1.5,
-      "relative_underplay": 1.04,
-      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
-    },
-    {
-      "match": 1,
-      "home": "Ipswich",
-      "away": "Aston Villa",
-      "sign": "2",
-      "market_probability_pct": 48.4,
-      "public_streck_pct": 47.0,
-      "underplayed_pp": 1.4,
-      "relative_underplay": 1.03,
-      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
-    },
-    {
-      "match": 11,
-      "home": "Luton",
-      "away": "Oxford",
-      "sign": "2",
-      "market_probability_pct": 21.3,
-      "public_streck_pct": 20.0,
-      "underplayed_pp": 1.3,
-      "relative_underplay": 1.07,
+      "market_probability_pct": 13.9,
+      "public_streck_pct": 9.0,
+      "underplayed_pp": 4.9,
+      "relative_underplay": 1.55,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
@@ -218,20 +152,86 @@
       "away": "Aston Villa",
       "sign": "1",
       "market_probability_pct": 27.2,
-      "public_streck_pct": 26.0,
-      "underplayed_pp": 1.2,
+      "public_streck_pct": 23.0,
+      "underplayed_pp": 4.2,
+      "relative_underplay": 1.18,
+      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
+    },
+    {
+      "match": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "sign": "2",
+      "market_probability_pct": 28.4,
+      "public_streck_pct": 25.0,
+      "underplayed_pp": 3.4,
+      "relative_underplay": 1.14,
+      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
+    },
+    {
+      "match": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "sign": "2",
+      "market_probability_pct": 21.3,
+      "public_streck_pct": 18.0,
+      "underplayed_pp": 3.3,
+      "relative_underplay": 1.19,
+      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
+    },
+    {
+      "match": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "sign": "X",
+      "market_probability_pct": 26.1,
+      "public_streck_pct": 23.0,
+      "underplayed_pp": 3.1,
+      "relative_underplay": 1.13,
+      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
+    },
+    {
+      "match": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "sign": "2",
+      "market_probability_pct": 29.7,
+      "public_streck_pct": 28.0,
+      "underplayed_pp": 1.7,
+      "relative_underplay": 1.06,
+      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
+    },
+    {
+      "match": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "sign": "1",
+      "market_probability_pct": 42.7,
+      "public_streck_pct": 41.0,
+      "underplayed_pp": 1.7,
       "relative_underplay": 1.04,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     },
     {
-      "match": 9,
-      "home": "West Ham",
-      "away": "Stoke",
+      "match": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
       "sign": "X",
-      "market_probability_pct": 23.1,
-      "public_streck_pct": 22.0,
-      "underplayed_pp": 1.1,
-      "relative_underplay": 1.05,
+      "market_probability_pct": 28.5,
+      "public_streck_pct": 27.0,
+      "underplayed_pp": 1.5,
+      "relative_underplay": 1.06,
+      "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
+    },
+    {
+      "match": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "sign": "X",
+      "market_probability_pct": 24.4,
+      "public_streck_pct": 23.0,
+      "underplayed_pp": 1.4,
+      "relative_underplay": 1.06,
       "note": "Underskattat i strecken enligt odds, inte bevisad vinstchans i kronor"
     }
   ],
@@ -243,7 +243,7 @@
         {
           "budget": 100,
           "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
+          "scenario_top_by_estimated_kr": "streck_1_0",
           "strategies": [
             {
               "id": "odds",
@@ -256,61 +256,29 @@
                 "12",
                 "12",
                 "1",
-                "12",
                 "1",
                 "1",
+                "1X",
                 "1",
                 "12",
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 134,
-              "estimated_mean_net_kr": 38,
+              "estimated_mean_paid_kr": 116,
+              "estimated_mean_net_kr": 20,
               "median_net_kr": -96,
-              "p90_net_kr": 133,
-              "prob_positive_net": 0.17283,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
+              "p90_net_kr": 113,
+              "prob_positive_net": 0.168,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
               "simulated_mean_se_kr": 12,
               "sampling_only_ci95_kr": [
-                15,
-                62
+                -4,
+                43
               ]
             },
             {
               "id": "streck_0_25",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 134,
-              "estimated_mean_net_kr": 38,
-              "median_net_kr": -96,
-              "p90_net_kr": 133,
-              "prob_positive_net": 0.17283,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 12,
-              "sampling_only_ci95_kr": [
-                15,
-                62
-              ]
-            },
-            {
-              "id": "streck_0_45",
               "cost": 96,
               "choices": [
                 "2",
@@ -327,18 +295,50 @@
                 "12",
                 "12"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 151,
-              "estimated_mean_net_kr": 55,
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 131,
+              "estimated_mean_net_kr": 35,
               "median_net_kr": -96,
-              "p90_net_kr": 159,
-              "prob_positive_net": 0.1835,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
-              "simulated_mean_se_kr": 14,
+              "p90_net_kr": 129,
+              "prob_positive_net": 0.173,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 12,
               "sampling_only_ci95_kr": [
-                26,
-                83
+                12,
+                57
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 192,
+              "estimated_mean_net_kr": 96,
+              "median_net_kr": -96,
+              "p90_net_kr": 135,
+              "prob_positive_net": 0.16467,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 32,
+              "sampling_only_ci95_kr": [
+                34,
+                158
               ]
             },
             {
@@ -352,25 +352,25 @@
                 "12",
                 "12",
                 "1X",
-                "12",
+                "1",
                 "1",
                 "1X2",
                 "1",
-                "2",
+                "12",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 408,
-              "estimated_mean_net_kr": 312,
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 211,
+              "estimated_mean_net_kr": 115,
               "median_net_kr": -96,
-              "p90_net_kr": 134,
-              "prob_positive_net": 0.14617,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 103,
+              "p90_net_kr": 128,
+              "prob_positive_net": 0.15833,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 48,
               "sampling_only_ci95_kr": [
-                110,
-                514
+                21,
+                209
               ]
             },
             {
@@ -380,8 +380,8 @@
                 "2",
                 "12",
                 "1",
+                "1X",
                 "1",
-                "12",
                 "12",
                 "1X",
                 "12",
@@ -391,18 +391,18 @@
                 "2",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 408,
-              "estimated_mean_net_kr": 312,
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 367,
+              "estimated_mean_net_kr": 271,
               "median_net_kr": -96,
-              "p90_net_kr": 134,
-              "prob_positive_net": 0.14617,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 103,
+              "p90_net_kr": 81,
+              "prob_positive_net": 0.1265,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 84,
               "sampling_only_ci95_kr": [
-                110,
-                514
+                107,
+                436
               ]
             }
           ]
@@ -431,17 +431,17 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 2054,
-              "estimated_mean_net_kr": 596,
+              "estimated_mean_paid_kr": 1836,
+              "estimated_mean_net_kr": 378,
               "median_net_kr": -1284,
-              "p90_net_kr": 2479,
-              "prob_positive_net": 0.20783,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 117,
+              "p90_net_kr": 2189,
+              "prob_positive_net": 0.19633,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 105,
               "sampling_only_ci95_kr": [
-                366,
-                826
+                173,
+                584
               ]
             },
             {
@@ -463,17 +463,17 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 2054,
-              "estimated_mean_net_kr": 596,
+              "estimated_mean_paid_kr": 1836,
+              "estimated_mean_net_kr": 378,
               "median_net_kr": -1284,
-              "p90_net_kr": 2479,
-              "prob_positive_net": 0.20783,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 117,
+              "p90_net_kr": 2189,
+              "prob_positive_net": 0.19633,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 105,
               "sampling_only_ci95_kr": [
-                366,
-                826
+                173,
+                584
               ]
             },
             {
@@ -485,9 +485,9 @@
                 "1",
                 "1",
                 "1X2",
-                "12",
-                "1",
                 "1X2",
+                "1",
+                "12",
                 "1",
                 "1X2",
                 "1",
@@ -495,17 +495,17 @@
                 "1X2"
               ],
               "changed_matches": 2,
-              "estimated_mean_paid_kr": 2040,
-              "estimated_mean_net_kr": 582,
-              "median_net_kr": -1293,
-              "p90_net_kr": 2447,
-              "prob_positive_net": 0.2085,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
-              "simulated_mean_se_kr": 112,
+              "estimated_mean_paid_kr": 1769,
+              "estimated_mean_net_kr": 311,
+              "median_net_kr": -1291,
+              "p90_net_kr": 2135,
+              "prob_positive_net": 0.18933,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 98,
               "sampling_only_ci95_kr": [
-                362,
-                801
+                120,
+                503
               ]
             },
             {
@@ -518,26 +518,26 @@
                 "1",
                 "1X2",
                 "1X2",
-                "1X",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "1X2",
                 "1"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 2756,
-              "estimated_mean_net_kr": 1298,
-              "median_net_kr": -1336,
-              "p90_net_kr": 2479,
-              "prob_positive_net": 0.18867,
-              "prob_at_least_10_correct": 0.68417,
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 3149,
+              "estimated_mean_net_kr": 1691,
+              "median_net_kr": -1359,
+              "p90_net_kr": 2417,
+              "prob_positive_net": 0.1785,
+              "prob_at_least_10_correct": 0.65967,
               "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 214,
+              "simulated_mean_se_kr": 267,
               "sampling_only_ci95_kr": [
-                878,
-                1718
+                1168,
+                2213
               ]
             },
             {
@@ -547,29 +547,29 @@
                 "2",
                 "1X2",
                 "1",
-                "1X",
                 "1X2",
                 "1X2",
                 "1X2",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "2",
                 "1"
               ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 4208,
-              "estimated_mean_net_kr": 2750,
-              "median_net_kr": -1404,
-              "p90_net_kr": 2005,
-              "prob_positive_net": 0.1655,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 472,
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 4093,
+              "estimated_mean_net_kr": 2635,
+              "median_net_kr": -1421,
+              "p90_net_kr": 1746,
+              "prob_positive_net": 0.14867,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 486,
               "sampling_only_ci95_kr": [
-                1825,
-                3676
+                1684,
+                3587
               ]
             }
           ]
@@ -583,7 +583,7 @@
         {
           "budget": 100,
           "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
+          "scenario_top_by_estimated_kr": "streck_1_0",
           "strategies": [
             {
               "id": "odds",
@@ -596,61 +596,29 @@
                 "12",
                 "12",
                 "1",
-                "12",
                 "1",
                 "1",
+                "1X",
                 "1",
                 "12",
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 58,
-              "estimated_mean_net_kr": -38,
+              "estimated_mean_paid_kr": 49,
+              "estimated_mean_net_kr": -47,
               "median_net_kr": -96,
-              "p90_net_kr": -23,
-              "prob_positive_net": 0.07717,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
+              "p90_net_kr": -27,
+              "prob_positive_net": 0.07317,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
               "simulated_mean_se_kr": 6,
               "sampling_only_ci95_kr": [
-                -50,
-                -27
+                -58,
+                -36
               ]
             },
             {
               "id": "streck_0_25",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 58,
-              "estimated_mean_net_kr": -38,
-              "median_net_kr": -96,
-              "p90_net_kr": -23,
-              "prob_positive_net": 0.07717,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 6,
-              "sampling_only_ci95_kr": [
-                -50,
-                -27
-              ]
-            },
-            {
-              "id": "streck_0_45",
               "cost": 96,
               "choices": [
                 "2",
@@ -667,326 +635,18 @@
                 "12",
                 "12"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 67,
-              "estimated_mean_net_kr": -29,
-              "median_net_kr": -96,
-              "p90_net_kr": -13,
-              "prob_positive_net": 0.08867,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
-              "simulated_mean_se_kr": 7,
-              "sampling_only_ci95_kr": [
-                -43,
-                -15
-              ]
-            },
-            {
-              "id": "streck_0_7",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1X",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 210,
-              "estimated_mean_net_kr": 114,
-              "median_net_kr": -96,
-              "p90_net_kr": -17,
-              "prob_positive_net": 0.092,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 58,
-              "sampling_only_ci95_kr": [
-                0,
-                228
-              ]
-            },
-            {
-              "id": "streck_1_0",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1X",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 210,
-              "estimated_mean_net_kr": 114,
-              "median_net_kr": -96,
-              "p90_net_kr": -17,
-              "prob_positive_net": 0.092,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 58,
-              "sampling_only_ci95_kr": [
-                0,
-                228
-              ]
-            }
-          ]
-        },
-        {
-          "budget": 1800,
-          "exact_cost": 1458,
-          "scenario_top_by_estimated_kr": "streck_1_0",
-          "strategies": [
-            {
-              "id": "odds",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 955,
-              "estimated_mean_net_kr": -503,
-              "median_net_kr": -1388,
-              "p90_net_kr": 91,
-              "prob_positive_net": 0.10233,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 59,
-              "sampling_only_ci95_kr": [
-                -618,
-                -388
-              ]
-            },
-            {
-              "id": "streck_0_25",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 955,
-              "estimated_mean_net_kr": -503,
-              "median_net_kr": -1388,
-              "p90_net_kr": 91,
-              "prob_positive_net": 0.10233,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 59,
-              "sampling_only_ci95_kr": [
-                -618,
-                -388
-              ]
-            },
-            {
-              "id": "streck_0_45",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1",
-                "1X2",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
               "changed_matches": 2,
-              "estimated_mean_paid_kr": 947,
-              "estimated_mean_net_kr": -511,
-              "median_net_kr": -1390,
-              "p90_net_kr": 131,
-              "prob_positive_net": 0.10417,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
-              "simulated_mean_se_kr": 56,
-              "sampling_only_ci95_kr": [
-                -620,
-                -402
-              ]
-            },
-            {
-              "id": "streck_0_7",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1X",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1"
-              ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 1354,
-              "estimated_mean_net_kr": -104,
-              "median_net_kr": -1414,
-              "p90_net_kr": 276,
-              "prob_positive_net": 0.10817,
-              "prob_at_least_10_correct": 0.68417,
-              "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 115,
-              "sampling_only_ci95_kr": [
-                -329,
-                121
-              ]
-            },
-            {
-              "id": "streck_1_0",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1X",
-                "1X2",
-                "1X2",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 2276,
-              "estimated_mean_net_kr": 818,
-              "median_net_kr": -1433,
-              "p90_net_kr": 68,
-              "prob_positive_net": 0.10117,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 291,
-              "sampling_only_ci95_kr": [
-                248,
-                1388
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 5000000,
-      "crowd_winner_multiplier": 2.0,
-      "budgets": [
-        {
-          "budget": 100,
-          "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
-          "strategies": [
-            {
-              "id": "odds",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 22,
-              "estimated_mean_net_kr": -74,
+              "estimated_mean_paid_kr": 57,
+              "estimated_mean_net_kr": -39,
               "median_net_kr": -96,
-              "p90_net_kr": -67,
-              "prob_positive_net": 0.03267,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 3,
+              "p90_net_kr": -18,
+              "prob_positive_net": 0.08267,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 6,
               "sampling_only_ci95_kr": [
-                -79,
-                -68
-              ]
-            },
-            {
-              "id": "streck_0_25",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 22,
-              "estimated_mean_net_kr": -74,
-              "median_net_kr": -96,
-              "p90_net_kr": -67,
-              "prob_positive_net": 0.03267,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 3,
-              "sampling_only_ci95_kr": [
-                -79,
-                -68
+                -50,
+                -28
               ]
             },
             {
@@ -1000,25 +660,25 @@
                 "12",
                 "12",
                 "1",
-                "1",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "12",
-                "12"
+                "1"
               ],
               "changed_matches": 3,
-              "estimated_mean_paid_kr": 27,
-              "estimated_mean_net_kr": -69,
+              "estimated_mean_paid_kr": 89,
+              "estimated_mean_net_kr": -7,
               "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.03517,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
-              "simulated_mean_se_kr": 3,
+              "p90_net_kr": -19,
+              "prob_positive_net": 0.08517,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 16,
               "sampling_only_ci95_kr": [
-                -76,
-                -63
+                -39,
+                25
               ]
             },
             {
@@ -1032,160 +692,160 @@
                 "12",
                 "12",
                 "1X",
-                "12",
+                "1",
                 "1",
                 "1X2",
                 "1",
-                "2",
+                "12",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 103,
-              "estimated_mean_net_kr": 7,
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 101,
+              "estimated_mean_net_kr": 5,
               "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.053,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 31,
-              "sampling_only_ci95_kr": [
-                -55,
-                68
-              ]
-            },
-            {
-              "id": "streck_1_0",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1X",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 103,
-              "estimated_mean_net_kr": 7,
-              "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.053,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 31,
-              "sampling_only_ci95_kr": [
-                -55,
-                68
-              ]
-            }
-          ]
-        },
-        {
-          "budget": 1800,
-          "exact_cost": 1458,
-          "scenario_top_by_estimated_kr": "streck_1_0",
-          "strategies": [
-            {
-              "id": "odds",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 405,
-              "estimated_mean_net_kr": -1053,
-              "median_net_kr": -1428,
-              "p90_net_kr": -849,
-              "prob_positive_net": 0.03783,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 28,
-              "sampling_only_ci95_kr": [
-                -1107,
-                -998
-              ]
-            },
-            {
-              "id": "streck_0_25",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 405,
-              "estimated_mean_net_kr": -1053,
-              "median_net_kr": -1428,
-              "p90_net_kr": -849,
-              "prob_positive_net": 0.03783,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 28,
-              "sampling_only_ci95_kr": [
-                -1107,
-                -998
-              ]
-            },
-            {
-              "id": "streck_0_45",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1",
-                "1X2",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 2,
-              "estimated_mean_paid_kr": 404,
-              "estimated_mean_net_kr": -1054,
-              "median_net_kr": -1429,
-              "p90_net_kr": -840,
-              "prob_positive_net": 0.04033,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
+              "p90_net_kr": -16,
+              "prob_positive_net": 0.0895,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
               "simulated_mean_se_kr": 26,
               "sampling_only_ci95_kr": [
-                -1106,
-                -1002
+                -45,
+                56
+              ]
+            },
+            {
+              "id": "streck_1_0",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1X",
+                "1",
+                "12",
+                "1X",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "2",
+                "1"
+              ],
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 187,
+              "estimated_mean_net_kr": 91,
+              "median_net_kr": -96,
+              "p90_net_kr": -29,
+              "prob_positive_net": 0.083,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 45,
+              "sampling_only_ci95_kr": [
+                3,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "budget": 1800,
+          "exact_cost": 1458,
+          "scenario_top_by_estimated_kr": "streck_1_0",
+          "strategies": [
+            {
+              "id": "odds",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 846,
+              "estimated_mean_net_kr": -612,
+              "median_net_kr": -1390,
+              "p90_net_kr": -162,
+              "prob_positive_net": 0.0935,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 52,
+              "sampling_only_ci95_kr": [
+                -715,
+                -510
+              ]
+            },
+            {
+              "id": "streck_0_25",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 846,
+              "estimated_mean_net_kr": -612,
+              "median_net_kr": -1390,
+              "p90_net_kr": -162,
+              "prob_positive_net": 0.0935,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 52,
+              "sampling_only_ci95_kr": [
+                -715,
+                -510
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 815,
+              "estimated_mean_net_kr": -643,
+              "median_net_kr": -1394,
+              "p90_net_kr": -213,
+              "prob_positive_net": 0.09283,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 48,
+              "sampling_only_ci95_kr": [
+                -738,
+                -549
               ]
             },
             {
@@ -1198,26 +858,26 @@
                 "1",
                 "1X2",
                 "1X2",
-                "1X",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "1X2",
                 "1"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 623,
-              "estimated_mean_net_kr": -835,
-              "median_net_kr": -1437,
-              "p90_net_kr": -775,
-              "prob_positive_net": 0.05183,
-              "prob_at_least_10_correct": 0.68417,
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 1579,
+              "estimated_mean_net_kr": 121,
+              "median_net_kr": -1420,
+              "p90_net_kr": 245,
+              "prob_positive_net": 0.10567,
+              "prob_at_least_10_correct": 0.65967,
               "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 59,
+              "simulated_mean_se_kr": 146,
               "sampling_only_ci95_kr": [
-                -950,
-                -720
+                -165,
+                407
               ]
             },
             {
@@ -1227,29 +887,29 @@
                 "2",
                 "1X2",
                 "1",
-                "1X",
                 "1X2",
                 "1X2",
                 "1X2",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "2",
                 "1"
               ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 1168,
-              "estimated_mean_net_kr": -290,
-              "median_net_kr": -1458,
-              "p90_net_kr": -818,
-              "prob_positive_net": 0.05517,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 168,
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 2242,
+              "estimated_mean_net_kr": 784,
+              "median_net_kr": -1441,
+              "p90_net_kr": -113,
+              "prob_positive_net": 0.09617,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 309,
               "sampling_only_ci95_kr": [
-                -619,
-                39
+                179,
+                1390
               ]
             }
           ]
@@ -1257,13 +917,13 @@
       ]
     },
     {
-      "assumed_turnover_kr": 15000000,
-      "crowd_winner_multiplier": 0.5,
+      "assumed_turnover_kr": 5000000,
+      "crowd_winner_multiplier": 2.0,
       "budgets": [
         {
           "budget": 100,
           "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
+          "scenario_top_by_estimated_kr": "streck_1_0",
           "strategies": [
             {
               "id": "odds",
@@ -1276,61 +936,29 @@
                 "12",
                 "12",
                 "1",
-                "12",
                 "1",
                 "1",
+                "1X",
                 "1",
                 "12",
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 135,
-              "estimated_mean_net_kr": 39,
+              "estimated_mean_paid_kr": 19,
+              "estimated_mean_net_kr": -77,
               "median_net_kr": -96,
-              "p90_net_kr": 133,
-              "prob_positive_net": 0.17283,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 12,
+              "p90_net_kr": -69,
+              "prob_positive_net": 0.02667,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 3,
               "sampling_only_ci95_kr": [
-                15,
-                63
+                -82,
+                -71
               ]
             },
             {
               "id": "streck_0_25",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 135,
-              "estimated_mean_net_kr": 39,
-              "median_net_kr": -96,
-              "p90_net_kr": 133,
-              "prob_positive_net": 0.17283,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 12,
-              "sampling_only_ci95_kr": [
-                15,
-                63
-              ]
-            },
-            {
-              "id": "streck_0_45",
               "cost": 96,
               "choices": [
                 "2",
@@ -1347,50 +975,1102 @@
                 "12",
                 "12"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 151,
-              "estimated_mean_net_kr": 55,
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 23,
+              "estimated_mean_net_kr": -73,
               "median_net_kr": -96,
-              "p90_net_kr": 160,
-              "prob_positive_net": 0.1835,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
+              "p90_net_kr": -65,
+              "prob_positive_net": 0.03217,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 3,
+              "sampling_only_ci95_kr": [
+                -79,
+                -68
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 39,
+              "estimated_mean_net_kr": -57,
+              "median_net_kr": -96,
+              "p90_net_kr": -64,
+              "prob_positive_net": 0.03817,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 8,
+              "sampling_only_ci95_kr": [
+                -73,
+                -41
+              ]
+            },
+            {
+              "id": "streck_0_7",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1X",
+                "1",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 46,
+              "estimated_mean_net_kr": -50,
+              "median_net_kr": -96,
+              "p90_net_kr": -64,
+              "prob_positive_net": 0.044,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 13,
+              "sampling_only_ci95_kr": [
+                -77,
+                -24
+              ]
+            },
+            {
+              "id": "streck_1_0",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1X",
+                "1",
+                "12",
+                "1X",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "2",
+                "1"
+              ],
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 92,
+              "estimated_mean_net_kr": -4,
+              "median_net_kr": -96,
+              "p90_net_kr": -70,
+              "prob_positive_net": 0.04617,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 23,
+              "sampling_only_ci95_kr": [
+                -50,
+                42
+              ]
+            }
+          ]
+        },
+        {
+          "budget": 1800,
+          "exact_cost": 1458,
+          "scenario_top_by_estimated_kr": "streck_1_0",
+          "strategies": [
+            {
+              "id": "odds",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 358,
+              "estimated_mean_net_kr": -1100,
+              "median_net_kr": -1429,
+              "p90_net_kr": -882,
+              "prob_positive_net": 0.035,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 25,
+              "sampling_only_ci95_kr": [
+                -1148,
+                -1051
+              ]
+            },
+            {
+              "id": "streck_0_25",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 358,
+              "estimated_mean_net_kr": -1100,
+              "median_net_kr": -1429,
+              "p90_net_kr": -882,
+              "prob_positive_net": 0.035,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 25,
+              "sampling_only_ci95_kr": [
+                -1148,
+                -1051
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 345,
+              "estimated_mean_net_kr": -1113,
+              "median_net_kr": -1430,
+              "p90_net_kr": -892,
+              "prob_positive_net": 0.0355,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 23,
+              "sampling_only_ci95_kr": [
+                -1159,
+                -1068
+              ]
+            },
+            {
+              "id": "streck_0_7",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1X2",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1"
+              ],
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 750,
+              "estimated_mean_net_kr": -708,
+              "median_net_kr": -1441,
+              "p90_net_kr": -769,
+              "prob_positive_net": 0.0535,
+              "prob_at_least_10_correct": 0.65967,
+              "prob_at_least_one_13": 0.02033,
+              "simulated_mean_se_kr": 76,
+              "sampling_only_ci95_kr": [
+                -857,
+                -559
+              ]
+            },
+            {
+              "id": "streck_1_0",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2",
+                "1X2",
+                "1X2",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "2",
+                "1"
+              ],
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 1174,
+              "estimated_mean_net_kr": -284,
+              "median_net_kr": -1458,
+              "p90_net_kr": -835,
+              "prob_positive_net": 0.0565,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 185,
+              "sampling_only_ci95_kr": [
+                -647,
+                79
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 15000000,
+      "crowd_winner_multiplier": 0.5,
+      "budgets": [
+        {
+          "budget": 100,
+          "exact_cost": 96,
+          "scenario_top_by_estimated_kr": "streck_1_0",
+          "strategies": [
+            {
+              "id": "odds",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "1",
+                "1",
+                "1X",
+                "1",
+                "12",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 116,
+              "estimated_mean_net_kr": 20,
+              "median_net_kr": -96,
+              "p90_net_kr": 113,
+              "prob_positive_net": 0.168,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 12,
+              "sampling_only_ci95_kr": [
+                -3,
+                43
+              ]
+            },
+            {
+              "id": "streck_0_25",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "1",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "12"
+              ],
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 131,
+              "estimated_mean_net_kr": 35,
+              "median_net_kr": -96,
+              "p90_net_kr": 129,
+              "prob_positive_net": 0.173,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 12,
+              "sampling_only_ci95_kr": [
+                12,
+                58
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 195,
+              "estimated_mean_net_kr": 99,
+              "median_net_kr": -96,
+              "p90_net_kr": 136,
+              "prob_positive_net": 0.16467,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 33,
+              "sampling_only_ci95_kr": [
+                34,
+                163
+              ]
+            },
+            {
+              "id": "streck_0_7",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1X",
+                "1",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 217,
+              "estimated_mean_net_kr": 121,
+              "median_net_kr": -96,
+              "p90_net_kr": 128,
+              "prob_positive_net": 0.15833,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 53,
+              "sampling_only_ci95_kr": [
+                18,
+                225
+              ]
+            },
+            {
+              "id": "streck_1_0",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1X",
+                "1",
+                "12",
+                "1X",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "2",
+                "1"
+              ],
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 387,
+              "estimated_mean_net_kr": 291,
+              "median_net_kr": -96,
+              "p90_net_kr": 81,
+              "prob_positive_net": 0.1265,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 93,
+              "sampling_only_ci95_kr": [
+                110,
+                473
+              ]
+            }
+          ]
+        },
+        {
+          "budget": 1800,
+          "exact_cost": 1458,
+          "scenario_top_by_estimated_kr": "streck_1_0",
+          "strategies": [
+            {
+              "id": "odds",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 1858,
+              "estimated_mean_net_kr": 400,
+              "median_net_kr": -1284,
+              "p90_net_kr": 2194,
+              "prob_positive_net": 0.19633,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 108,
+              "sampling_only_ci95_kr": [
+                188,
+                612
+              ]
+            },
+            {
+              "id": "streck_0_25",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 1858,
+              "estimated_mean_net_kr": 400,
+              "median_net_kr": -1284,
+              "p90_net_kr": 2194,
+              "prob_positive_net": 0.19633,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 108,
+              "sampling_only_ci95_kr": [
+                188,
+                612
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 1788,
+              "estimated_mean_net_kr": 330,
+              "median_net_kr": -1291,
+              "p90_net_kr": 2141,
+              "prob_positive_net": 0.18933,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 100,
+              "sampling_only_ci95_kr": [
+                133,
+                527
+              ]
+            },
+            {
+              "id": "streck_0_7",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1X2",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1"
+              ],
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 3312,
+              "estimated_mean_net_kr": 1854,
+              "median_net_kr": -1359,
+              "p90_net_kr": 2425,
+              "prob_positive_net": 0.17867,
+              "prob_at_least_10_correct": 0.65967,
+              "prob_at_least_one_13": 0.02033,
+              "simulated_mean_se_kr": 304,
+              "sampling_only_ci95_kr": [
+                1258,
+                2449
+              ]
+            },
+            {
+              "id": "streck_1_0",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2",
+                "1X2",
+                "1X2",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "2",
+                "1"
+              ],
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 4759,
+              "estimated_mean_net_kr": 3301,
+              "median_net_kr": -1421,
+              "p90_net_kr": 1751,
+              "prob_positive_net": 0.14883,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 693,
+              "sampling_only_ci95_kr": [
+                1942,
+                4659
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 15000000,
+      "crowd_winner_multiplier": 1.0,
+      "budgets": [
+        {
+          "budget": 100,
+          "exact_cost": 96,
+          "scenario_top_by_estimated_kr": "streck_1_0",
+          "strategies": [
+            {
+              "id": "odds",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "1",
+                "1",
+                "1X",
+                "1",
+                "12",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 49,
+              "estimated_mean_net_kr": -47,
+              "median_net_kr": -96,
+              "p90_net_kr": -27,
+              "prob_positive_net": 0.07333,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 6,
+              "sampling_only_ci95_kr": [
+                -58,
+                -36
+              ]
+            },
+            {
+              "id": "streck_0_25",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "1",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "12"
+              ],
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 57,
+              "estimated_mean_net_kr": -39,
+              "median_net_kr": -96,
+              "p90_net_kr": -18,
+              "prob_positive_net": 0.08283,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 6,
+              "sampling_only_ci95_kr": [
+                -50,
+                -28
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 90,
+              "estimated_mean_net_kr": -6,
+              "median_net_kr": -96,
+              "p90_net_kr": -19,
+              "prob_positive_net": 0.08533,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 17,
+              "sampling_only_ci95_kr": [
+                -39,
+                26
+              ]
+            },
+            {
+              "id": "streck_0_7",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1X",
+                "1",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 103,
+              "estimated_mean_net_kr": 7,
+              "median_net_kr": -96,
+              "p90_net_kr": -16,
+              "prob_positive_net": 0.08967,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 27,
+              "sampling_only_ci95_kr": [
+                -46,
+                60
+              ]
+            },
+            {
+              "id": "streck_1_0",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1X",
+                "1",
+                "12",
+                "1X",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "2",
+                "1"
+              ],
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 193,
+              "estimated_mean_net_kr": 97,
+              "median_net_kr": -96,
+              "p90_net_kr": -29,
+              "prob_positive_net": 0.083,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 48,
+              "sampling_only_ci95_kr": [
+                4,
+                190
+              ]
+            }
+          ]
+        },
+        {
+          "budget": 1800,
+          "exact_cost": 1458,
+          "scenario_top_by_estimated_kr": "streck_1_0",
+          "strategies": [
+            {
+              "id": "odds",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 851,
+              "estimated_mean_net_kr": -607,
+              "median_net_kr": -1390,
+              "p90_net_kr": -161,
+              "prob_positive_net": 0.09367,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 53,
+              "sampling_only_ci95_kr": [
+                -711,
+                -503
+              ]
+            },
+            {
+              "id": "streck_0_25",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 851,
+              "estimated_mean_net_kr": -607,
+              "median_net_kr": -1390,
+              "p90_net_kr": -161,
+              "prob_positive_net": 0.09367,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 53,
+              "sampling_only_ci95_kr": [
+                -711,
+                -503
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 819,
+              "estimated_mean_net_kr": -639,
+              "median_net_kr": -1394,
+              "p90_net_kr": -212,
+              "prob_positive_net": 0.093,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 49,
+              "sampling_only_ci95_kr": [
+                -735,
+                -542
+              ]
+            },
+            {
+              "id": "streck_0_7",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1X2",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1"
+              ],
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 1626,
+              "estimated_mean_net_kr": 168,
+              "median_net_kr": -1420,
+              "p90_net_kr": 246,
+              "prob_positive_net": 0.10583,
+              "prob_at_least_10_correct": 0.65967,
+              "prob_at_least_one_13": 0.02033,
+              "simulated_mean_se_kr": 158,
+              "sampling_only_ci95_kr": [
+                -141,
+                477
+              ]
+            },
+            {
+              "id": "streck_1_0",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2",
+                "1X2",
+                "1X2",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "2",
+                "1"
+              ],
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 2500,
+              "estimated_mean_net_kr": 1042,
+              "median_net_kr": -1441,
+              "p90_net_kr": -111,
+              "prob_positive_net": 0.09633,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 402,
+              "sampling_only_ci95_kr": [
+                254,
+                1830
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assumed_turnover_kr": 15000000,
+      "crowd_winner_multiplier": 2.0,
+      "budgets": [
+        {
+          "budget": 100,
+          "exact_cost": 96,
+          "scenario_top_by_estimated_kr": "streck_1_0",
+          "strategies": [
+            {
+              "id": "odds",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "1",
+                "1",
+                "1X",
+                "1",
+                "12",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 19,
+              "estimated_mean_net_kr": -77,
+              "median_net_kr": -96,
+              "p90_net_kr": -69,
+              "prob_positive_net": 0.02667,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 3,
+              "sampling_only_ci95_kr": [
+                -82,
+                -71
+              ]
+            },
+            {
+              "id": "streck_0_25",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "1",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "12"
+              ],
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 23,
+              "estimated_mean_net_kr": -73,
+              "median_net_kr": -96,
+              "p90_net_kr": -65,
+              "prob_positive_net": 0.03217,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 3,
+              "sampling_only_ci95_kr": [
+                -79,
+                -68
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 39,
+              "estimated_mean_net_kr": -57,
+              "median_net_kr": -96,
+              "p90_net_kr": -64,
+              "prob_positive_net": 0.03817,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 8,
+              "sampling_only_ci95_kr": [
+                -73,
+                -41
+              ]
+            },
+            {
+              "id": "streck_0_7",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1X",
+                "1",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 46,
+              "estimated_mean_net_kr": -50,
+              "median_net_kr": -96,
+              "p90_net_kr": -64,
+              "prob_positive_net": 0.044,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
               "simulated_mean_se_kr": 14,
               "sampling_only_ci95_kr": [
-                27,
-                84
-              ]
-            },
-            {
-              "id": "streck_0_7",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1X",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 439,
-              "estimated_mean_net_kr": 343,
-              "median_net_kr": -96,
-              "p90_net_kr": 134,
-              "prob_positive_net": 0.14617,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 123,
-              "sampling_only_ci95_kr": [
-                103,
-                583
+                -77,
+                -23
               ]
             },
             {
@@ -1400,8 +2080,8 @@
                 "2",
                 "12",
                 "1",
+                "1X",
                 "1",
-                "12",
                 "12",
                 "1X",
                 "12",
@@ -1411,358 +2091,18 @@
                 "2",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 439,
-              "estimated_mean_net_kr": 343,
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 93,
+              "estimated_mean_net_kr": -3,
               "median_net_kr": -96,
-              "p90_net_kr": 134,
-              "prob_positive_net": 0.14617,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 123,
-              "sampling_only_ci95_kr": [
-                103,
-                583
-              ]
-            }
-          ]
-        },
-        {
-          "budget": 1800,
-          "exact_cost": 1458,
-          "scenario_top_by_estimated_kr": "streck_1_0",
-          "strategies": [
-            {
-              "id": "odds",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 2081,
-              "estimated_mean_net_kr": 623,
-              "median_net_kr": -1284,
-              "p90_net_kr": 2484,
-              "prob_positive_net": 0.20783,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 121,
-              "sampling_only_ci95_kr": [
-                385,
-                861
-              ]
-            },
-            {
-              "id": "streck_0_25",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 2081,
-              "estimated_mean_net_kr": 623,
-              "median_net_kr": -1284,
-              "p90_net_kr": 2484,
-              "prob_positive_net": 0.20783,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 121,
-              "sampling_only_ci95_kr": [
-                385,
-                861
-              ]
-            },
-            {
-              "id": "streck_0_45",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1",
-                "1X2",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 2,
-              "estimated_mean_paid_kr": 2064,
-              "estimated_mean_net_kr": 606,
-              "median_net_kr": -1293,
-              "p90_net_kr": 2452,
-              "prob_positive_net": 0.2085,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
-              "simulated_mean_se_kr": 116,
-              "sampling_only_ci95_kr": [
-                380,
-                833
-              ]
-            },
-            {
-              "id": "streck_0_7",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1X",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1"
-              ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 2856,
-              "estimated_mean_net_kr": 1398,
-              "median_net_kr": -1336,
-              "p90_net_kr": 2484,
-              "prob_positive_net": 0.18867,
-              "prob_at_least_10_correct": 0.68417,
-              "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 238,
-              "sampling_only_ci95_kr": [
-                932,
-                1864
-              ]
-            },
-            {
-              "id": "streck_1_0",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1X",
-                "1X2",
-                "1X2",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 4800,
-              "estimated_mean_net_kr": 3342,
-              "median_net_kr": -1404,
-              "p90_net_kr": 2010,
-              "prob_positive_net": 0.1655,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 638,
-              "sampling_only_ci95_kr": [
-                2091,
-                4594
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 15000000,
-      "crowd_winner_multiplier": 1.0,
-      "budgets": [
-        {
-          "budget": 100,
-          "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
-          "strategies": [
-            {
-              "id": "odds",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 58,
-              "estimated_mean_net_kr": -38,
-              "median_net_kr": -96,
-              "p90_net_kr": -23,
-              "prob_positive_net": 0.07717,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 6,
+              "p90_net_kr": -70,
+              "prob_positive_net": 0.04617,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 24,
               "sampling_only_ci95_kr": [
                 -50,
-                -26
-              ]
-            },
-            {
-              "id": "streck_0_25",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 58,
-              "estimated_mean_net_kr": -38,
-              "median_net_kr": -96,
-              "p90_net_kr": -23,
-              "prob_positive_net": 0.07717,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 6,
-              "sampling_only_ci95_kr": [
-                -50,
-                -26
-              ]
-            },
-            {
-              "id": "streck_0_45",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "1",
-                "1",
-                "1X2",
-                "1",
-                "12",
-                "12"
-              ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 67,
-              "estimated_mean_net_kr": -29,
-              "median_net_kr": -96,
-              "p90_net_kr": -13,
-              "prob_positive_net": 0.08867,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
-              "simulated_mean_se_kr": 7,
-              "sampling_only_ci95_kr": [
-                -43,
-                -15
-              ]
-            },
-            {
-              "id": "streck_0_7",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1X",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 219,
-              "estimated_mean_net_kr": 123,
-              "median_net_kr": -96,
-              "p90_net_kr": -17,
-              "prob_positive_net": 0.092,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 65,
-              "sampling_only_ci95_kr": [
-                -3,
-                250
-              ]
-            },
-            {
-              "id": "streck_1_0",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1X",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 219,
-              "estimated_mean_net_kr": 123,
-              "median_net_kr": -96,
-              "p90_net_kr": -17,
-              "prob_positive_net": 0.092,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 65,
-              "sampling_only_ci95_kr": [
-                -3,
-                250
+                44
               ]
             }
           ]
@@ -1791,421 +2131,81 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 962,
-              "estimated_mean_net_kr": -496,
-              "median_net_kr": -1388,
-              "p90_net_kr": 98,
-              "prob_positive_net": 0.1025,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 60,
-              "sampling_only_ci95_kr": [
-                -613,
-                -379
-              ]
-            },
-            {
-              "id": "streck_0_25",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 962,
-              "estimated_mean_net_kr": -496,
-              "median_net_kr": -1388,
-              "p90_net_kr": 98,
-              "prob_positive_net": 0.1025,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 60,
-              "sampling_only_ci95_kr": [
-                -613,
-                -379
-              ]
-            },
-            {
-              "id": "streck_0_45",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1",
-                "1X2",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 2,
-              "estimated_mean_paid_kr": 954,
-              "estimated_mean_net_kr": -504,
-              "median_net_kr": -1390,
-              "p90_net_kr": 133,
-              "prob_positive_net": 0.10417,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
-              "simulated_mean_se_kr": 57,
-              "sampling_only_ci95_kr": [
-                -615,
-                -393
-              ]
-            },
-            {
-              "id": "streck_0_7",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1X",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1"
-              ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 1383,
-              "estimated_mean_net_kr": -75,
-              "median_net_kr": -1414,
-              "p90_net_kr": 282,
-              "prob_positive_net": 0.10833,
-              "prob_at_least_10_correct": 0.68417,
-              "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 122,
-              "sampling_only_ci95_kr": [
-                -315,
-                164
-              ]
-            },
-            {
-              "id": "streck_1_0",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1X",
-                "1X2",
-                "1X2",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 2489,
-              "estimated_mean_net_kr": 1031,
-              "median_net_kr": -1433,
-              "p90_net_kr": 70,
-              "prob_positive_net": 0.10133,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 357,
-              "sampling_only_ci95_kr": [
-                331,
-                1731
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "assumed_turnover_kr": 15000000,
-      "crowd_winner_multiplier": 2.0,
-      "budgets": [
-        {
-          "budget": 100,
-          "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
-          "strategies": [
-            {
-              "id": "odds",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 22,
-              "estimated_mean_net_kr": -74,
-              "median_net_kr": -96,
-              "p90_net_kr": -67,
-              "prob_positive_net": 0.03267,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 3,
-              "sampling_only_ci95_kr": [
-                -79,
-                -68
-              ]
-            },
-            {
-              "id": "streck_0_25",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 22,
-              "estimated_mean_net_kr": -74,
-              "median_net_kr": -96,
-              "p90_net_kr": -67,
-              "prob_positive_net": 0.03267,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 3,
-              "sampling_only_ci95_kr": [
-                -79,
-                -68
-              ]
-            },
-            {
-              "id": "streck_0_45",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "1",
-                "1",
-                "1X2",
-                "1",
-                "12",
-                "12"
-              ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 27,
-              "estimated_mean_net_kr": -69,
-              "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.03517,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
-              "simulated_mean_se_kr": 3,
-              "sampling_only_ci95_kr": [
-                -76,
-                -63
-              ]
-            },
-            {
-              "id": "streck_0_7",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1X",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 105,
-              "estimated_mean_net_kr": 9,
-              "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.053,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 33,
-              "sampling_only_ci95_kr": [
-                -56,
-                74
-              ]
-            },
-            {
-              "id": "streck_1_0",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1X",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "2",
-                "1"
-              ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 105,
-              "estimated_mean_net_kr": 9,
-              "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.053,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 33,
-              "sampling_only_ci95_kr": [
-                -56,
-                74
-              ]
-            }
-          ]
-        },
-        {
-          "budget": 1800,
-          "exact_cost": 1458,
-          "scenario_top_by_estimated_kr": "streck_1_0",
-          "strategies": [
-            {
-              "id": "odds",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 408,
-              "estimated_mean_net_kr": -1050,
-              "median_net_kr": -1428,
-              "p90_net_kr": -849,
-              "prob_positive_net": 0.03817,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 28,
-              "sampling_only_ci95_kr": [
-                -1106,
-                -995
-              ]
-            },
-            {
-              "id": "streck_0_25",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "1X2",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 408,
-              "estimated_mean_net_kr": -1050,
-              "median_net_kr": -1428,
-              "p90_net_kr": -849,
-              "prob_positive_net": 0.03817,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 28,
-              "sampling_only_ci95_kr": [
-                -1106,
-                -995
-              ]
-            },
-            {
-              "id": "streck_0_45",
-              "cost": 1458,
-              "choices": [
-                "2",
-                "1X2",
-                "1",
-                "1",
-                "1X2",
-                "12",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1",
-                "1X2",
-                "1X2"
-              ],
-              "changed_matches": 2,
-              "estimated_mean_paid_kr": 406,
-              "estimated_mean_net_kr": -1052,
+              "estimated_mean_paid_kr": 360,
+              "estimated_mean_net_kr": -1098,
               "median_net_kr": -1429,
-              "p90_net_kr": -840,
-              "prob_positive_net": 0.0405,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
-              "simulated_mean_se_kr": 27,
+              "p90_net_kr": -882,
+              "prob_positive_net": 0.035,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 25,
               "sampling_only_ci95_kr": [
-                -1105,
-                -1000
+                -1147,
+                -1049
+              ]
+            },
+            {
+              "id": "streck_0_25",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 0,
+              "estimated_mean_paid_kr": 360,
+              "estimated_mean_net_kr": -1098,
+              "median_net_kr": -1429,
+              "p90_net_kr": -882,
+              "prob_positive_net": 0.035,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 25,
+              "sampling_only_ci95_kr": [
+                -1147,
+                -1049
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 1458,
+              "choices": [
+                "2",
+                "1X2",
+                "1",
+                "1",
+                "1X2",
+                "1X2",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "1X2",
+                "1X2"
+              ],
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 346,
+              "estimated_mean_net_kr": -1112,
+              "median_net_kr": -1430,
+              "p90_net_kr": -892,
+              "prob_positive_net": 0.0355,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 23,
+              "sampling_only_ci95_kr": [
+                -1158,
+                -1067
               ]
             },
             {
@@ -2218,26 +2218,26 @@
                 "1",
                 "1X2",
                 "1X2",
-                "1X",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "1X2",
                 "1"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 630,
-              "estimated_mean_net_kr": -828,
-              "median_net_kr": -1437,
-              "p90_net_kr": -774,
-              "prob_positive_net": 0.052,
-              "prob_at_least_10_correct": 0.68417,
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 763,
+              "estimated_mean_net_kr": -695,
+              "median_net_kr": -1441,
+              "p90_net_kr": -769,
+              "prob_positive_net": 0.0535,
+              "prob_at_least_10_correct": 0.65967,
               "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 61,
+              "simulated_mean_se_kr": 80,
               "sampling_only_ci95_kr": [
-                -947,
-                -708
+                -851,
+                -539
               ]
             },
             {
@@ -2247,29 +2247,29 @@
                 "2",
                 "1X2",
                 "1",
-                "1X",
                 "1X2",
                 "1X2",
                 "1X2",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "2",
                 "1"
               ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 1235,
-              "estimated_mean_net_kr": -223,
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 1261,
+              "estimated_mean_net_kr": -197,
               "median_net_kr": -1458,
-              "p90_net_kr": -818,
-              "prob_positive_net": 0.05533,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 190,
+              "p90_net_kr": -835,
+              "prob_positive_net": 0.0565,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 221,
               "sampling_only_ci95_kr": [
-                -596,
-                150
+                -629,
+                236
               ]
             }
           ]
@@ -2283,7 +2283,7 @@
         {
           "budget": 100,
           "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
+          "scenario_top_by_estimated_kr": "streck_1_0",
           "strategies": [
             {
               "id": "odds",
@@ -2296,61 +2296,29 @@
                 "12",
                 "12",
                 "1",
-                "12",
                 "1",
                 "1",
+                "1X",
                 "1",
                 "12",
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 135,
-              "estimated_mean_net_kr": 39,
+              "estimated_mean_paid_kr": 116,
+              "estimated_mean_net_kr": 20,
               "median_net_kr": -96,
-              "p90_net_kr": 133,
-              "prob_positive_net": 0.17283,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
+              "p90_net_kr": 113,
+              "prob_positive_net": 0.168,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
               "simulated_mean_se_kr": 12,
               "sampling_only_ci95_kr": [
-                15,
-                63
+                -3,
+                44
               ]
             },
             {
               "id": "streck_0_25",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 135,
-              "estimated_mean_net_kr": 39,
-              "median_net_kr": -96,
-              "p90_net_kr": 133,
-              "prob_positive_net": 0.17283,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 12,
-              "sampling_only_ci95_kr": [
-                15,
-                63
-              ]
-            },
-            {
-              "id": "streck_0_45",
               "cost": 96,
               "choices": [
                 "2",
@@ -2367,18 +2335,50 @@
                 "12",
                 "12"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 151,
-              "estimated_mean_net_kr": 55,
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 131,
+              "estimated_mean_net_kr": 35,
               "median_net_kr": -96,
-              "p90_net_kr": 160,
-              "prob_positive_net": 0.1835,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
-              "simulated_mean_se_kr": 15,
+              "p90_net_kr": 129,
+              "prob_positive_net": 0.173,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 12,
               "sampling_only_ci95_kr": [
-                27,
-                84
+                12,
+                58
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 196,
+              "estimated_mean_net_kr": 100,
+              "median_net_kr": -96,
+              "p90_net_kr": 136,
+              "prob_positive_net": 0.16467,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 33,
+              "sampling_only_ci95_kr": [
+                34,
+                165
               ]
             },
             {
@@ -2392,25 +2392,25 @@
                 "12",
                 "12",
                 "1X",
-                "12",
+                "1",
                 "1",
                 "1X2",
                 "1",
-                "2",
+                "12",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 449,
-              "estimated_mean_net_kr": 353,
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 219,
+              "estimated_mean_net_kr": 123,
               "median_net_kr": -96,
-              "p90_net_kr": 134,
-              "prob_positive_net": 0.14617,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 129,
+              "p90_net_kr": 129,
+              "prob_positive_net": 0.15833,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 54,
               "sampling_only_ci95_kr": [
-                99,
-                607
+                17,
+                230
               ]
             },
             {
@@ -2420,8 +2420,8 @@
                 "2",
                 "12",
                 "1",
+                "1X",
                 "1",
-                "12",
                 "12",
                 "1X",
                 "12",
@@ -2431,18 +2431,18 @@
                 "2",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 449,
-              "estimated_mean_net_kr": 353,
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 393,
+              "estimated_mean_net_kr": 297,
               "median_net_kr": -96,
-              "p90_net_kr": 134,
-              "prob_positive_net": 0.14617,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 129,
+              "p90_net_kr": 81,
+              "prob_positive_net": 0.1265,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 95,
               "sampling_only_ci95_kr": [
-                99,
-                607
+                110,
+                484
               ]
             }
           ]
@@ -2471,17 +2471,17 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 2088,
-              "estimated_mean_net_kr": 630,
+              "estimated_mean_paid_kr": 1864,
+              "estimated_mean_net_kr": 406,
               "median_net_kr": -1284,
-              "p90_net_kr": 2485,
-              "prob_positive_net": 0.20783,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 123,
+              "p90_net_kr": 2195,
+              "prob_positive_net": 0.19633,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 109,
               "sampling_only_ci95_kr": [
-                390,
-                871
+                192,
+                620
               ]
             },
             {
@@ -2503,17 +2503,17 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 2088,
-              "estimated_mean_net_kr": 630,
+              "estimated_mean_paid_kr": 1864,
+              "estimated_mean_net_kr": 406,
               "median_net_kr": -1284,
-              "p90_net_kr": 2485,
-              "prob_positive_net": 0.20783,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 123,
+              "p90_net_kr": 2195,
+              "prob_positive_net": 0.19633,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 109,
               "sampling_only_ci95_kr": [
-                390,
-                871
+                192,
+                620
               ]
             },
             {
@@ -2525,9 +2525,9 @@
                 "1",
                 "1",
                 "1X2",
-                "12",
-                "1",
                 "1X2",
+                "1",
+                "12",
                 "1",
                 "1X2",
                 "1",
@@ -2535,17 +2535,17 @@
                 "1X2"
               ],
               "changed_matches": 2,
-              "estimated_mean_paid_kr": 2071,
-              "estimated_mean_net_kr": 613,
-              "median_net_kr": -1293,
-              "p90_net_kr": 2454,
-              "prob_positive_net": 0.2085,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
-              "simulated_mean_se_kr": 117,
+              "estimated_mean_paid_kr": 1793,
+              "estimated_mean_net_kr": 335,
+              "median_net_kr": -1291,
+              "p90_net_kr": 2143,
+              "prob_positive_net": 0.18933,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 101,
               "sampling_only_ci95_kr": [
-                384,
-                841
+                137,
+                534
               ]
             },
             {
@@ -2558,26 +2558,26 @@
                 "1",
                 "1X2",
                 "1X2",
-                "1X",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "1X2",
                 "1"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 2885,
-              "estimated_mean_net_kr": 1427,
-              "median_net_kr": -1336,
-              "p90_net_kr": 2485,
-              "prob_positive_net": 0.18867,
-              "prob_at_least_10_correct": 0.68417,
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 3361,
+              "estimated_mean_net_kr": 1903,
+              "median_net_kr": -1359,
+              "p90_net_kr": 2427,
+              "prob_positive_net": 0.17867,
+              "prob_at_least_10_correct": 0.65967,
               "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 245,
+              "simulated_mean_se_kr": 316,
               "sampling_only_ci95_kr": [
-                946,
-                1908
+                1283,
+                2523
               ]
             },
             {
@@ -2587,29 +2587,29 @@
                 "2",
                 "1X2",
                 "1",
-                "1X",
                 "1X2",
                 "1X2",
                 "1X2",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "2",
                 "1"
               ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 5037,
-              "estimated_mean_net_kr": 3579,
-              "median_net_kr": -1404,
-              "p90_net_kr": 2011,
-              "prob_positive_net": 0.1655,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 714,
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 5052,
+              "estimated_mean_net_kr": 3594,
+              "median_net_kr": -1421,
+              "p90_net_kr": 1752,
+              "prob_positive_net": 0.14883,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 804,
               "sampling_only_ci95_kr": [
-                2179,
-                4979
+                2018,
+                5170
               ]
             }
           ]
@@ -2623,7 +2623,7 @@
         {
           "budget": 100,
           "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
+          "scenario_top_by_estimated_kr": "streck_1_0",
           "strategies": [
             {
               "id": "odds",
@@ -2636,61 +2636,29 @@
                 "12",
                 "12",
                 "1",
-                "12",
                 "1",
                 "1",
+                "1X",
                 "1",
                 "12",
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 58,
-              "estimated_mean_net_kr": -38,
+              "estimated_mean_paid_kr": 49,
+              "estimated_mean_net_kr": -47,
               "median_net_kr": -96,
-              "p90_net_kr": -23,
-              "prob_positive_net": 0.07717,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
+              "p90_net_kr": -27,
+              "prob_positive_net": 0.07333,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
               "simulated_mean_se_kr": 6,
               "sampling_only_ci95_kr": [
-                -50,
-                -26
+                -58,
+                -35
               ]
             },
             {
               "id": "streck_0_25",
-              "cost": 96,
-              "choices": [
-                "2",
-                "12",
-                "1",
-                "1",
-                "12",
-                "12",
-                "1",
-                "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
-              ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 58,
-              "estimated_mean_net_kr": -38,
-              "median_net_kr": -96,
-              "p90_net_kr": -23,
-              "prob_positive_net": 0.07717,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
-              "simulated_mean_se_kr": 6,
-              "sampling_only_ci95_kr": [
-                -50,
-                -26
-              ]
-            },
-            {
-              "id": "streck_0_45",
               "cost": 96,
               "choices": [
                 "2",
@@ -2707,18 +2675,50 @@
                 "12",
                 "12"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 67,
-              "estimated_mean_net_kr": -29,
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 57,
+              "estimated_mean_net_kr": -39,
               "median_net_kr": -96,
-              "p90_net_kr": -13,
-              "prob_positive_net": 0.08867,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
-              "simulated_mean_se_kr": 7,
+              "p90_net_kr": -18,
+              "prob_positive_net": 0.08283,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 6,
               "sampling_only_ci95_kr": [
-                -43,
-                -15
+                -50,
+                -28
+              ]
+            },
+            {
+              "id": "streck_0_45",
+              "cost": 96,
+              "choices": [
+                "2",
+                "12",
+                "1",
+                "1",
+                "12",
+                "12",
+                "1",
+                "12",
+                "1",
+                "1X2",
+                "1",
+                "12",
+                "1"
+              ],
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 90,
+              "estimated_mean_net_kr": -6,
+              "median_net_kr": -96,
+              "p90_net_kr": -19,
+              "prob_positive_net": 0.08533,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 17,
+              "sampling_only_ci95_kr": [
+                -39,
+                27
               ]
             },
             {
@@ -2732,25 +2732,25 @@
                 "12",
                 "12",
                 "1X",
-                "12",
+                "1",
                 "1",
                 "1X2",
                 "1",
-                "2",
+                "12",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 222,
-              "estimated_mean_net_kr": 126,
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 103,
+              "estimated_mean_net_kr": 7,
               "median_net_kr": -96,
-              "p90_net_kr": -17,
-              "prob_positive_net": 0.092,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 67,
+              "p90_net_kr": -16,
+              "prob_positive_net": 0.08967,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 28,
               "sampling_only_ci95_kr": [
-                -4,
-                257
+                -46,
+                61
               ]
             },
             {
@@ -2760,8 +2760,8 @@
                 "2",
                 "12",
                 "1",
+                "1X",
                 "1",
-                "12",
                 "12",
                 "1X",
                 "12",
@@ -2771,18 +2771,18 @@
                 "2",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 222,
-              "estimated_mean_net_kr": 126,
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 194,
+              "estimated_mean_net_kr": 98,
               "median_net_kr": -96,
-              "p90_net_kr": -17,
-              "prob_positive_net": 0.092,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 67,
+              "p90_net_kr": -29,
+              "prob_positive_net": 0.083,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 48,
               "sampling_only_ci95_kr": [
-                -4,
-                257
+                4,
+                193
               ]
             }
           ]
@@ -2811,17 +2811,17 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 964,
-              "estimated_mean_net_kr": -494,
-              "median_net_kr": -1388,
-              "p90_net_kr": 99,
-              "prob_positive_net": 0.1025,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 60,
+              "estimated_mean_paid_kr": 853,
+              "estimated_mean_net_kr": -605,
+              "median_net_kr": -1390,
+              "p90_net_kr": -161,
+              "prob_positive_net": 0.09367,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 53,
               "sampling_only_ci95_kr": [
-                -612,
-                -377
+                -709,
+                -500
               ]
             },
             {
@@ -2843,17 +2843,17 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 964,
-              "estimated_mean_net_kr": -494,
-              "median_net_kr": -1388,
-              "p90_net_kr": 99,
-              "prob_positive_net": 0.1025,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 60,
+              "estimated_mean_paid_kr": 853,
+              "estimated_mean_net_kr": -605,
+              "median_net_kr": -1390,
+              "p90_net_kr": -161,
+              "prob_positive_net": 0.09367,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 53,
               "sampling_only_ci95_kr": [
-                -612,
-                -377
+                -709,
+                -500
               ]
             },
             {
@@ -2865,9 +2865,9 @@
                 "1",
                 "1",
                 "1X2",
-                "12",
-                "1",
                 "1X2",
+                "1",
+                "12",
                 "1",
                 "1X2",
                 "1",
@@ -2875,17 +2875,17 @@
                 "1X2"
               ],
               "changed_matches": 2,
-              "estimated_mean_paid_kr": 955,
-              "estimated_mean_net_kr": -503,
-              "median_net_kr": -1390,
-              "p90_net_kr": 133,
-              "prob_positive_net": 0.10417,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
-              "simulated_mean_se_kr": 57,
+              "estimated_mean_paid_kr": 820,
+              "estimated_mean_net_kr": -638,
+              "median_net_kr": -1394,
+              "p90_net_kr": -212,
+              "prob_positive_net": 0.093,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 49,
               "sampling_only_ci95_kr": [
-                -614,
-                -391
+                -734,
+                -541
               ]
             },
             {
@@ -2898,26 +2898,26 @@
                 "1",
                 "1X2",
                 "1X2",
-                "1X",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "1X2",
                 "1"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 1390,
-              "estimated_mean_net_kr": -68,
-              "median_net_kr": -1414,
-              "p90_net_kr": 282,
-              "prob_positive_net": 0.10833,
-              "prob_at_least_10_correct": 0.68417,
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 1639,
+              "estimated_mean_net_kr": 181,
+              "median_net_kr": -1420,
+              "p90_net_kr": 247,
+              "prob_positive_net": 0.10583,
+              "prob_at_least_10_correct": 0.65967,
               "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 124,
+              "simulated_mean_se_kr": 161,
               "sampling_only_ci95_kr": [
-                -311,
-                176
+                -134,
+                497
               ]
             },
             {
@@ -2927,29 +2927,29 @@
                 "2",
                 "1X2",
                 "1",
-                "1X",
                 "1X2",
                 "1X2",
                 "1X2",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "2",
                 "1"
               ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 2561,
-              "estimated_mean_net_kr": 1103,
-              "median_net_kr": -1433,
-              "p90_net_kr": 70,
-              "prob_positive_net": 0.10133,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 381,
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 2596,
+              "estimated_mean_net_kr": 1138,
+              "median_net_kr": -1441,
+              "p90_net_kr": -111,
+              "prob_positive_net": 0.09633,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 442,
               "sampling_only_ci95_kr": [
-                355,
-                1851
+                272,
+                2004
               ]
             }
           ]
@@ -2963,7 +2963,7 @@
         {
           "budget": 100,
           "exact_cost": 96,
-          "scenario_top_by_estimated_kr": "streck_0_7",
+          "scenario_top_by_estimated_kr": "streck_1_0",
           "strategies": [
             {
               "id": "odds",
@@ -2976,25 +2976,25 @@
                 "12",
                 "12",
                 "1",
-                "12",
                 "1",
                 "1",
+                "1X",
                 "1",
                 "12",
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 22,
-              "estimated_mean_net_kr": -74,
+              "estimated_mean_paid_kr": 19,
+              "estimated_mean_net_kr": -77,
               "median_net_kr": -96,
-              "p90_net_kr": -67,
-              "prob_positive_net": 0.03267,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
+              "p90_net_kr": -69,
+              "prob_positive_net": 0.02667,
+              "prob_at_least_10_correct": 0.29583,
+              "prob_at_least_one_13": 0.00233,
               "simulated_mean_se_kr": 3,
               "sampling_only_ci95_kr": [
-                -79,
-                -68
+                -82,
+                -71
               ]
             },
             {
@@ -3008,21 +3008,21 @@
                 "12",
                 "12",
                 "1",
+                "1",
+                "1",
+                "1X2",
+                "1",
                 "12",
-                "1",
-                "1",
-                "1",
-                "12",
-                "1X2"
+                "12"
               ],
-              "changed_matches": 0,
-              "estimated_mean_paid_kr": 22,
-              "estimated_mean_net_kr": -74,
+              "changed_matches": 2,
+              "estimated_mean_paid_kr": 23,
+              "estimated_mean_net_kr": -73,
               "median_net_kr": -96,
-              "p90_net_kr": -67,
-              "prob_positive_net": 0.03267,
-              "prob_at_least_10_correct": 0.29233,
-              "prob_at_least_one_13": 0.003,
+              "p90_net_kr": -65,
+              "prob_positive_net": 0.03217,
+              "prob_at_least_10_correct": 0.29533,
+              "prob_at_least_one_13": 0.00233,
               "simulated_mean_se_kr": 3,
               "sampling_only_ci95_kr": [
                 -79,
@@ -3040,25 +3040,25 @@
                 "12",
                 "12",
                 "1",
-                "1",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "12",
-                "12"
+                "1"
               ],
               "changed_matches": 3,
-              "estimated_mean_paid_kr": 27,
-              "estimated_mean_net_kr": -69,
+              "estimated_mean_paid_kr": 39,
+              "estimated_mean_net_kr": -57,
               "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.03517,
-              "prob_at_least_10_correct": 0.294,
-              "prob_at_least_one_13": 0.0025,
-              "simulated_mean_se_kr": 3,
+              "p90_net_kr": -64,
+              "prob_positive_net": 0.03817,
+              "prob_at_least_10_correct": 0.28167,
+              "prob_at_least_one_13": 0.00333,
+              "simulated_mean_se_kr": 8,
               "sampling_only_ci95_kr": [
-                -76,
-                -63
+                -73,
+                -41
               ]
             },
             {
@@ -3072,25 +3072,25 @@
                 "12",
                 "12",
                 "1X",
-                "12",
+                "1",
                 "1",
                 "1X2",
                 "1",
-                "2",
+                "12",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 106,
-              "estimated_mean_net_kr": 10,
+              "changed_matches": 3,
+              "estimated_mean_paid_kr": 46,
+              "estimated_mean_net_kr": -50,
               "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.053,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 34,
+              "p90_net_kr": -64,
+              "prob_positive_net": 0.044,
+              "prob_at_least_10_correct": 0.277,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 14,
               "sampling_only_ci95_kr": [
-                -56,
-                76
+                -77,
+                -23
               ]
             },
             {
@@ -3100,8 +3100,8 @@
                 "2",
                 "12",
                 "1",
+                "1X",
                 "1",
-                "12",
                 "12",
                 "1X",
                 "12",
@@ -3111,18 +3111,18 @@
                 "2",
                 "1"
               ],
-              "changed_matches": 4,
-              "estimated_mean_paid_kr": 106,
-              "estimated_mean_net_kr": 10,
+              "changed_matches": 7,
+              "estimated_mean_paid_kr": 93,
+              "estimated_mean_net_kr": -3,
               "median_net_kr": -96,
-              "p90_net_kr": -63,
-              "prob_positive_net": 0.053,
-              "prob_at_least_10_correct": 0.2405,
-              "prob_at_least_one_13": 0.00283,
-              "simulated_mean_se_kr": 34,
+              "p90_net_kr": -70,
+              "prob_positive_net": 0.04617,
+              "prob_at_least_10_correct": 0.223,
+              "prob_at_least_one_13": 0.00233,
+              "simulated_mean_se_kr": 24,
               "sampling_only_ci95_kr": [
-                -56,
-                76
+                -50,
+                45
               ]
             }
           ]
@@ -3151,17 +3151,17 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 408,
-              "estimated_mean_net_kr": -1050,
-              "median_net_kr": -1428,
-              "p90_net_kr": -849,
-              "prob_positive_net": 0.03817,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 28,
+              "estimated_mean_paid_kr": 360,
+              "estimated_mean_net_kr": -1098,
+              "median_net_kr": -1429,
+              "p90_net_kr": -882,
+              "prob_positive_net": 0.035,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 25,
               "sampling_only_ci95_kr": [
-                -1105,
-                -995
+                -1147,
+                -1049
               ]
             },
             {
@@ -3183,17 +3183,17 @@
                 "1X2"
               ],
               "changed_matches": 0,
-              "estimated_mean_paid_kr": 408,
-              "estimated_mean_net_kr": -1050,
-              "median_net_kr": -1428,
-              "p90_net_kr": -849,
-              "prob_positive_net": 0.03817,
-              "prob_at_least_10_correct": 0.70883,
-              "prob_at_least_one_13": 0.023,
-              "simulated_mean_se_kr": 28,
+              "estimated_mean_paid_kr": 360,
+              "estimated_mean_net_kr": -1098,
+              "median_net_kr": -1429,
+              "p90_net_kr": -882,
+              "prob_positive_net": 0.035,
+              "prob_at_least_10_correct": 0.7105,
+              "prob_at_least_one_13": 0.02317,
+              "simulated_mean_se_kr": 25,
               "sampling_only_ci95_kr": [
-                -1105,
-                -995
+                -1147,
+                -1049
               ]
             },
             {
@@ -3205,9 +3205,9 @@
                 "1",
                 "1",
                 "1X2",
-                "12",
-                "1",
                 "1X2",
+                "1",
+                "12",
                 "1",
                 "1X2",
                 "1",
@@ -3215,17 +3215,17 @@
                 "1X2"
               ],
               "changed_matches": 2,
-              "estimated_mean_paid_kr": 406,
-              "estimated_mean_net_kr": -1052,
-              "median_net_kr": -1429,
-              "p90_net_kr": -840,
-              "prob_positive_net": 0.0405,
-              "prob_at_least_10_correct": 0.7035,
-              "prob_at_least_one_13": 0.0235,
-              "simulated_mean_se_kr": 27,
+              "estimated_mean_paid_kr": 346,
+              "estimated_mean_net_kr": -1112,
+              "median_net_kr": -1430,
+              "p90_net_kr": -892,
+              "prob_positive_net": 0.0355,
+              "prob_at_least_10_correct": 0.704,
+              "prob_at_least_one_13": 0.02167,
+              "simulated_mean_se_kr": 23,
               "sampling_only_ci95_kr": [
-                -1105,
-                -1000
+                -1158,
+                -1066
               ]
             },
             {
@@ -3238,26 +3238,26 @@
                 "1",
                 "1X2",
                 "1X2",
-                "1X",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "1X2",
                 "1"
               ],
-              "changed_matches": 3,
-              "estimated_mean_paid_kr": 632,
-              "estimated_mean_net_kr": -826,
-              "median_net_kr": -1437,
-              "p90_net_kr": -774,
-              "prob_positive_net": 0.052,
-              "prob_at_least_10_correct": 0.68417,
+              "changed_matches": 4,
+              "estimated_mean_paid_kr": 766,
+              "estimated_mean_net_kr": -692,
+              "median_net_kr": -1441,
+              "p90_net_kr": -769,
+              "prob_positive_net": 0.0535,
+              "prob_at_least_10_correct": 0.65967,
               "prob_at_least_one_13": 0.02033,
-              "simulated_mean_se_kr": 61,
+              "simulated_mean_se_kr": 80,
               "sampling_only_ci95_kr": [
-                -946,
-                -705
+                -850,
+                -534
               ]
             },
             {
@@ -3267,29 +3267,29 @@
                 "2",
                 "1X2",
                 "1",
-                "1X",
                 "1X2",
                 "1X2",
                 "1X2",
                 "1X2",
+                "12",
                 "1",
                 "1X2",
                 "1",
                 "2",
                 "1"
               ],
-              "changed_matches": 5,
-              "estimated_mean_paid_kr": 1256,
-              "estimated_mean_net_kr": -202,
+              "changed_matches": 6,
+              "estimated_mean_paid_kr": 1290,
+              "estimated_mean_net_kr": -168,
               "median_net_kr": -1458,
-              "p90_net_kr": -818,
-              "prob_positive_net": 0.05533,
-              "prob_at_least_10_correct": 0.616,
-              "prob_at_least_one_13": 0.01433,
-              "simulated_mean_se_kr": 197,
+              "p90_net_kr": -835,
+              "prob_positive_net": 0.0565,
+              "prob_at_least_10_correct": 0.576,
+              "prob_at_least_one_13": 0.01217,
+              "simulated_mean_se_kr": 233,
               "sampling_only_ci95_kr": [
-                -589,
-                184
+                -625,
+                288
               ]
             }
           ]

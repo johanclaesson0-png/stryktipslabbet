@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-27T09:06:17.834586+00:00",
+  "source_observed_at_utc": "2026-11-27T18:11:07.720091+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "891aaa18e70502a69e0838cc57743b1bf41bf426d1603bfef959491113f5a55f",
-  "created_at_utc": "2026-11-27T09:06:17.995098+00:00",
+  "source_snapshot_sha256": "edd4d27e801adcf326453a933405aa94618fa1613e490235807eb42f277262a0",
+  "created_at_utc": "2026-11-27T18:11:08.007493+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -29,7 +29,7 @@
         "1X2",
         "1X2"
       ],
-      "baseline_p13": 0.025024294,
+      "baseline_p13": 0.025256664,
       "baseline_miss_risk_spikes": 2,
       "baseline_x_included": 6,
       "risk_report": {
@@ -94,10 +94,10 @@
             "home": "Leeds",
             "away": "Coventry",
             "chosen": "1",
-            "estimated_miss_probability": 0.353829,
+            "estimated_miss_probability": 0.350806,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.213517,
+            "extra_outcome_probability": 0.211694,
             "cost_if_added_without_rebalancing": 2916
           }
         ],
@@ -123,7 +123,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.025024294,
+          "estimated_p13": 0.025256664,
           "miss_risk_spikes": 2,
           "x_included": 6
         },
@@ -146,7 +146,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.025024294,
+          "estimated_p13": 0.025256664,
           "miss_risk_spikes": 2,
           "x_included": 6
         }
@@ -163,27 +163,27 @@
         "12",
         "12",
         "1",
-        "12",
         "1",
         "1",
+        "1X",
         "1",
         "12",
         "1X2"
       ],
-      "baseline_p13": 0.003409281,
+      "baseline_p13": 0.003295766,
       "baseline_miss_risk_spikes": 3,
-      "baseline_x_included": 1,
+      "baseline_x_included": 2,
       "risk_report": {
         "spikes": [
           {
-            "number": 10,
-            "home": "Wrexham",
-            "away": "Portsmouth",
+            "number": 8,
+            "home": "Queens Park Rangers",
+            "away": "Sheffield U",
             "chosen": "1",
-            "estimated_miss_probability": 0.534941,
+            "estimated_miss_probability": 0.544731,
             "high_risk": true,
-            "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.280383,
+            "suggested_second_sign": "2",
+            "extra_outcome_probability": 0.283874,
             "cost_if_added_without_rebalancing": 192
           },
           {
@@ -246,31 +246,21 @@
             "home": "Leeds",
             "away": "Coventry",
             "chosen": "1",
-            "estimated_miss_probability": 0.353829,
+            "estimated_miss_probability": 0.350806,
             "high_risk": false,
             "suggested_second_sign": "X",
-            "extra_outcome_probability": 0.213517,
+            "extra_outcome_probability": 0.211694,
             "cost_if_added_without_rebalancing": 192
           }
         ],
         "possible_draws": [
           {
-            "number": 10,
-            "home": "Wrexham",
-            "away": "Portsmouth",
-            "x_probability": 0.280383,
-            "crowd_x_percentage": 27.0,
-            "x_minus_crowd_percentage_points": 1.038,
-            "extra_row_cost_to_include_x_alone": 192,
-            "requires_rebalancing": true
-          },
-          {
             "number": 5,
             "home": "Derby",
             "away": "Watford",
-            "x_probability": 0.272748,
+            "x_probability": 0.274023,
             "crowd_x_percentage": 29.0,
-            "x_minus_crowd_percentage_points": -1.725,
+            "x_minus_crowd_percentage_points": -1.598,
             "extra_row_cost_to_include_x_alone": 144,
             "requires_rebalancing": true
           }
@@ -289,16 +279,16 @@
             "12",
             "12",
             "1",
-            "12",
             "1",
             "1",
+            "1X",
             "1",
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003409281,
+          "estimated_p13": 0.003295766,
           "miss_risk_spikes": 3,
-          "x_included": 1
+          "x_included": 2
         },
         {
           "key": "draw",
@@ -312,16 +302,16 @@
             "12",
             "12",
             "1",
-            "12",
             "1",
             "1",
+            "1X",
             "1",
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003409281,
+          "estimated_p13": 0.003295766,
           "miss_risk_spikes": 3,
-          "x_included": 1
+          "x_included": 2
         }
       ]
     }
