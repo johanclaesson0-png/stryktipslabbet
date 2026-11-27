@@ -45,7 +45,7 @@ def valid_entry(r,m,close,now,provider=False):
         if not reported<=observed<=now or observed>=min(close,instant(m["kickoff"])) or now-observed>timedelta(hours=36):return False
         if not https(r["source_url"]) or not text(r["publisher"]):return False
         if provider:
-            if r["review_method"]!="provider_feed" or r["publisher"]!="API-Football" or r["source_url"]!=DOCS or type(r["fixture_id"])!=int:return False
+            if r["review_method"]!="provider_feed" or r["publisher"]!="API-Football" or r["source_url"]!=DOCS or type(r["fixture_id"])!=int or r["fixture_id"]<=0:return False
         elif r["review_method"]!="manual_source_review":return False
         if r["type"]=="lineup":
             names=r["players"]
@@ -63,6 +63,7 @@ def build(base,snap,manual,provider,now):
         if doc.get("schema")!=SCHEMA or doc.get("draw_number")!=base["draw_number"] or instant(doc["reg_close_time"])!=close or (is_provider and doc.get("publication_reviewed") is not True):
             rejected+=len(doc.get("entries",[]));continue
         for r in doc["entries"]:
+            if not isinstance(r,dict):rejected+=1;continue
             m=ms.get(r.get("number"))
             if m and valid_entry(r,m,close,now,is_provider):rows.append(r)
             else:rejected+=1
@@ -112,7 +113,9 @@ def collect(base,snap,client,now,late):
                     if len(sides)!=1:continue
                     p=r.get("player") or {};typ=str(p.get("type","")).lower();reason=str(p.get("reason") or "")[:180]
                     status="suspended" if typ=="missing fixture" and "suspend" in reason.lower() else "out" if typ=="missing fixture" else "doubtful" if typ=="questionable" else None
-                    if status and text(p.get("name")):entries.append({**common(m,f,sides[0],at),"type":"absence","player":p["name"],"status":status,"reason":reason})
+                    if status and text(p.get("name")):
+                        entry={**common(m,f,sides[0],at),"type":"absence","player":p["name"],"status":status,"reason":reason}
+                        if valid_entry(entry,m,close,at,True):entries.append(entry)
             except (OSError,ValueError,KeyError,TypeError) as e:errors.append({"number":n,"reason":"injury_fetch_failed","class":type(e).__name__})
         if late and instant(m["kickoff"])-now<=timedelta(minutes=90):
             try:
@@ -140,7 +143,7 @@ def main():
     if not base:return
     path=data/"v34"/"provider"/f'{snap["draw_number"]}.json'
     old=read(path) or {}
-    phase="late" if timedelta(minutes=7)<=close-now<=timedelta(minutes=50) else "morning" if timedelta(hours=2)<=close-now<=timedelta(hours=8) else None
+    phase="late" if timedelta(minutes=3)<=close-now<=timedelta(minutes=20) else "morning" if timedelta(hours=2)<=close-now<=timedelta(hours=8) else None
     if not phase or phase in old.get("attempted_phases",[]):return
     if not key or not rights:
         print("V34: provider inactive, manual input remains available");return
