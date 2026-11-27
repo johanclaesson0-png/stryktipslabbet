@@ -19,7 +19,7 @@ KINDS=("result","first","system")
 SIGNS="1X2"
 
 def validate_panel(doc):
-    if doc["schema"]!="v24-panel-v1" or doc["target"]!=50 or not 50<=len(doc["panel"])<=500:
+    if doc["schema"]!="v24-panel-v1" or doc["target"] not in (50,100) or not 50<=len(doc["panel"])<=500:
         raise ValueError("Expected at least 50 candidate sources")
     p={x["id"]:x for x in doc["panel"]}
     if len(p)!=len(doc["panel"]) or any(x["kind"] not in ("human","editorial","site") or not x["group"] for x in p.values()):
