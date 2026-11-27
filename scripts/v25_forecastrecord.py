@@ -89,8 +89,9 @@ def extract(doc, spec, base, official, now):
             if not isinstance(publisher,str) or not publisher.strip():
                 raise ValueError("publisher")
             proof=e.get("url")
-            if official is None and proof is None and original_host and identity.get("url") is None and identity.get("before_kickoff") is True and instant(identity["recorded_at"])==ts:
-                record_url=spec["url"]
+            direct_evidence = "/evidence/?pick="+e["observation_id"]
+            if official is None and proof in (None,direct_evidence) and original_host and identity.get("url") is None and identity.get("before_kickoff") is True and instant(identity["recorded_at"])==ts:
+                record_url=urljoin(BASE,proof) if proof else spec["url"]
             elif isinstance(proof,str) and proof.startswith(path):
                 record_url=urljoin(BASE,proof)
             else:
