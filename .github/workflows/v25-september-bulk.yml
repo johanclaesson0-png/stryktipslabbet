@@ -1,0 +1,30 @@
+name: V25 – september bulk review
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/v25_september_bulk.py'
+      - 'tests/test_v25_september_bulk.py'
+      - '.github/workflows/v25-september-bulk.yml'
+permissions:
+  contents: read
+concurrency:
+  group: forecastrecord-import
+  cancel-in-progress: false
+jobs:
+  bulk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_v25_september_bulk.py'
+      - run: python -m scripts.v25_september_bulk --budget 130
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: september-review
+          path: september-review.json
+          retention-days: 30
