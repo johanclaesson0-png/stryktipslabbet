@@ -4,6 +4,12 @@ on:
   pull_request:
     paths:
       - 'scripts/v29_*.py'
+      - 'data/v25/imported/**'
+      - 'data/v25/sources.json'
+      - 'data/v24/panel.json'
+      - 'data/results/**'
+      - 'data/analysis/**'
+      - 'data/form_model/**'
       - 'tests/test_v29_research.py'
       - '.github/workflows/v29-research.yml'
 permissions:
