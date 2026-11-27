@@ -72,18 +72,30 @@ def extract(doc, spec, base, official, now):
             identity=by_id[e["observation_id"]]
             author=identity["author"]
             path=identity["author_url"]
-            if not re.fullmatch(r"/(?:authors|sources)/[a-z0-9-]+/",path) or not isinstance(author,str) or not author.strip():
+            identity_pattern = r"/(?:authors|sources)/[a-z0-9-]+/"
+            if official is None:
+                identity_pattern = r"/(?:authors/[a-z0-9-]+|sources/[a-z0-9-]+(?:/products/[a-z0-9-]+)?)/"
+            if not isinstance(path,str) or not re.fullmatch(identity_pattern,path) or not isinstance(author,str) or not author.strip():
                 raise ValueError("identity")
             auth=e.get("authorship") or {}
             if auth.get("excluded_from_individual_summaries"):
                 raise ValueError("attribution")
             publisher=auth.get("publisher")
+            original=(e.get("source_info") or {}).get("url")
+            original_url=urlsplit(original) if isinstance(original,str) else None
+            original_host=original_url.hostname if original_url and original_url.scheme=="https" and not original_url.username else None
+            if official is None and not publisher:
+                publisher=original_host.removeprefix("www.") if original_host else None
             if not isinstance(publisher,str) or not publisher.strip():
                 raise ValueError("publisher")
-            proof=e["url"]
-            if not isinstance(proof,str) or not proof.startswith(path):
+            proof=e.get("url")
+            if official is None and proof is None and original_host and identity.get("url") is None and identity.get("before_kickoff") is True and instant(identity["recorded_at"])==ts:
+                record_url=spec["url"]
+            elif isinstance(proof,str) and proof.startswith(path):
+                record_url=urljoin(BASE,proof)
+            else:
                 raise ValueError("proof path")
-            candidates[path].append({"external_id":path,"name":author,"publisher":publisher,"kind":"human" if path.startswith("/authors/") else "site","number":spec["number"],"home":match["home"],"away":match["away"],"type":"result","sign":claim["choice_key"].upper(),"source":spec["url"],"record_url":urljoin(BASE,proof),"source_at":ts.isoformat(),"observed_at":now.isoformat(),"evidence":"archive_recorded","league":ev["competition_name"],"record_id":e["observation_id"]})
+            candidates[path].append({"external_id":path,"name":author,"publisher":publisher,"kind":"human" if path.startswith("/authors/") else "site","number":spec["number"],"home":match["home"],"away":match["away"],"type":"result","sign":claim["choice_key"].upper(),"source":spec["url"],"record_url":record_url,"source_at":ts.isoformat(),"observed_at":now.isoformat(),"evidence":"archive_recorded","league":ev["competition_name"],"record_id":e["observation_id"]})
         except (KeyError,TypeError,ValueError) as exc:
             rejected[str(exc) if isinstance(exc,ValueError) else "missing field"]+=1
     rows=[]
