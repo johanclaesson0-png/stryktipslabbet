@@ -9,7 +9,7 @@ from scripts.v25_forecastrecord_api import team
 
 ARTIFACTS={
 "initial":(15233213903,"forecastrecord-review.json","41821ba467243fac2a362dc1ceebb90d992c7ac4b23b55d97969d7bf19de6425"),
-"incremental":(15234058123,"forecastrecord-historical-review.json","44167b70af17776333b5c53e0e8cd98d1d3de83b200a7b2314be661cf"),
+"incremental":(15234058123,"forecastrecord-historical-review.json","44167b70af17776333b5c53e0e8cd98d1dcb68d1d3de83b200a7b2314be661cf"),
 "bulk":(15235445280,"september-review.json","e80e4a6189225a859e7f84a4450c7e5a7848b9bbfcaaec3d937f756817980b35"),
 "metadata":(15235172093,"official-metadata-review.json","b4e7eadb58eda1e9d191c35e09e67a42962ada346cb8affb0718f3f20a2e2cef"),
 "league":(15235356325,"league-review.json","0b18f66a95a99f161cd54a053fb2a25b8e708ab8245f759bcf244ff8997a4d9b")}
