@@ -1,0 +1,30 @@
+name: V30 – separate league expert history
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/v30_league_history.py'
+      - 'tests/test_v30_league_history.py'
+      - '.github/workflows/v30-league-history.yml'
+permissions:
+  contents: read
+concurrency:
+  group: forecastrecord-import
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_v30_league_history.py'
+      - run: python -m scripts.v30_league_history --budget 64
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: league-review
+          path: league-review.json
+          retention-days: 30
