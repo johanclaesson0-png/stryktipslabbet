@@ -9,9 +9,6 @@ on:
       - '.github/workflows/v25-forecastrecord.yml'
 permissions:
   contents: read
-concurrency:
-  group: forecastrecord-import
-  cancel-in-progress: false
 jobs:
   import:
     runs-on: ubuntu-latest
@@ -22,9 +19,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -p 'test_v25_forecastrecord.py'
-      - run: python -m scripts.v25_forecastrecord --limit 13
+      - if: github.event_name == 'workflow_dispatch'
+        run: python -m scripts.v25_forecastrecord --limit 13
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: github.event_name == 'workflow_dispatch' && always()
         with:
           name: forecastrecord-review
           path: forecastrecord-review.json
