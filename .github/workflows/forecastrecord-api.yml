@@ -1,0 +1,57 @@
+name: Forecast Record API – kupongimport
+on:
+  workflow_dispatch:
+    inputs:
+      draw:
+        description: 'Omgång (tomt = aktuell kupong)'
+        required: false
+        type: string
+  schedule:
+    - cron: '15 18 * * 5'
+    - cron: '15 10 * * 6'
+  pull_request:
+    paths:
+      - 'scripts/v25_forecastrecord_api.py'
+      - 'scripts/v25_forecastrecord.py'
+      - 'tests/test_v25_forecastrecord_api.py'
+      - '.github/workflows/forecastrecord-api.yml'
+permissions:
+  contents: read
+concurrency:
+  group: forecastrecord-import
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_v25_forecastrecord*.py'
+      - name: Public API review
+        env:
+          DRAW: ${{ inputs.draw }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          args=()
+          if [ -n "$DRAW" ]; then
+            [[ "$DRAW" =~ ^[0-9]+$ ]] || exit 1
+            args+=(--draw "$DRAW")
+          fi
+          if [ "$EVENT" = pull_request ]; then args+=(--limit 2); fi
+          python -m scripts.v25_forecastrecord_api "${args[@]}"
+      - name: Historical incremental review
+        if: github.event_name == 'pull_request'
+        run: |
+          sleep 7
+          python -m scripts.v25_forecastrecord_api --draw 4980 --skip-covered --limit 7 --output forecastrecord-historical-review.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: forecastrecord-api-review
+          path: |
+            forecastrecord-api-review.json
+            forecastrecord-historical-review.json
+          retention-days: 30

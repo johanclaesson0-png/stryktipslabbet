@@ -35,13 +35,18 @@ def extract(doc, spec, base, official, now):
         raise ValueError("Unexpected export schema or canonical URL")
     ev=doc["event"]
     kickoff=instant(ev["starts_at"])
-    if norm(ev["display_name"])!=norm(spec["display"]) or kickoff.date().isoformat()!=spec["date"] or ev.get("status")!="finished":
-        raise ValueError("Fixture mismatch or not finished")
-    score=ev["scoreline"].split("-")
-    h,a=map(int,score)
-    sign="1" if h>a else "2" if h<a else "X"
-    if sign!=official["outcome"][spec["number"]-1]:
-        raise ValueError("Official result mismatch")
+    if norm(ev["display_name"])!=norm(spec["display"]) or kickoff.date().isoformat()!=spec["date"]:
+        raise ValueError("Fixture mismatch")
+    if official is None:
+        if now>=min(close,kickoff) or ev.get("status") not in ("scheduled","upcoming","not_started"):
+            raise ValueError("Not a preclose upcoming fixture")
+    else:
+        if ev.get("status")!="finished":
+            raise ValueError("Fixture not finished")
+        h,a=map(int,ev["scoreline"].split("-"))
+        sign="1" if h>a else "2" if h<a else "X"
+        if sign!=official["outcome"][spec["number"]-1]:
+            raise ValueError("Official result mismatch")
     match=base["matches"][spec["number"]-1]
     if match["number"]!=spec["number"] or base["draw_number"]!=spec["draw"]:
         raise ValueError("Wrong coupon position")
@@ -67,18 +72,31 @@ def extract(doc, spec, base, official, now):
             identity=by_id[e["observation_id"]]
             author=identity["author"]
             path=identity["author_url"]
-            if not re.fullmatch(r"/(?:authors|sources)/[a-z0-9-]+/",path) or not isinstance(author,str) or not author.strip():
+            identity_pattern = r"/(?:authors|sources)/[a-z0-9-]+/"
+            if official is None:
+                identity_pattern = r"/(?:authors/[a-z0-9-]+|sources/[a-z0-9-]+(?:/products/[a-z0-9-]+)?)/"
+            if not isinstance(path,str) or not re.fullmatch(identity_pattern,path) or not isinstance(author,str) or not author.strip():
                 raise ValueError("identity")
             auth=e.get("authorship") or {}
             if auth.get("excluded_from_individual_summaries"):
                 raise ValueError("attribution")
             publisher=auth.get("publisher")
+            original=(e.get("source_info") or {}).get("url")
+            original_url=urlsplit(original) if isinstance(original,str) else None
+            original_host=original_url.hostname if original_url and original_url.scheme=="https" and not original_url.username else None
+            if official is None and not publisher:
+                publisher=original_host.removeprefix("www.") if original_host else None
             if not isinstance(publisher,str) or not publisher.strip():
                 raise ValueError("publisher")
-            proof=e["url"]
-            if not isinstance(proof,str) or not proof.startswith(path):
+            proof=e.get("url")
+            direct_evidence = "/evidence/?pick="+e["observation_id"]
+            if official is None and proof in (None,direct_evidence) and original_host and identity.get("url") is None and identity.get("before_kickoff") is True and instant(identity["recorded_at"])==ts:
+                record_url=urljoin(BASE,proof) if proof else spec["url"]
+            elif isinstance(proof,str) and proof.startswith(path):
+                record_url=urljoin(BASE,proof)
+            else:
                 raise ValueError("proof path")
-            candidates[path].append({"external_id":path,"name":author,"publisher":publisher,"kind":"human" if path.startswith("/authors/") else "site","number":spec["number"],"home":match["home"],"away":match["away"],"type":"result","sign":claim["choice_key"].upper(),"source":spec["url"],"record_url":urljoin(BASE,proof),"source_at":ts.isoformat(),"observed_at":now.isoformat(),"evidence":"archive_recorded","league":ev["competition_name"],"record_id":e["observation_id"]})
+            candidates[path].append({"external_id":path,"name":author,"publisher":publisher,"kind":"human" if path.startswith("/authors/") else "site","number":spec["number"],"home":match["home"],"away":match["away"],"type":"result","sign":claim["choice_key"].upper(),"source":spec["url"],"record_url":record_url,"source_at":ts.isoformat(),"observed_at":now.isoformat(),"evidence":"archive_recorded","league":ev["competition_name"],"record_id":e["observation_id"]})
         except (KeyError,TypeError,ValueError) as exc:
             rejected[str(exc) if isinstance(exc,ValueError) else "missing field"]+=1
     rows=[]
