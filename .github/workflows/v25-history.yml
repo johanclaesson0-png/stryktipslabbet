@@ -4,6 +4,10 @@ on:
     paths:
       - 'scripts/v25_history.py'
       - 'tests/test_v25_history.py'
+      - 'scripts/v28_shadow.py'
+      - 'tests/test_v28_shadow.py'
+      - 'scripts/publish.py'
+      - 'v28-experiment.html'
       - 'data/v25/**'
       - '.github/workflows/v25-history.yml'
   workflow_dispatch:
@@ -18,6 +22,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -p 'test_v25_history.py'
+      - run: python -m unittest discover -s tests -p 'test_v28_shadow.py'
       - run: python -m scripts.v25_history --outdir data
       - uses: actions/upload-artifact@v4
         with:
