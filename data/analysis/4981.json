@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-frozen-analysis-v1",
   "model_version": "market-no-vig-v1",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-28T12:13:20.985507+00:00",
+  "observed_at_utc": "2026-11-28T13:27:37.393485+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
   "source": "Svenska Spel publikt API",
-  "source_snapshot_sha256": "4523b4591f8753dc972f20a4f7b96ccea42bc68207c44ed85704e44c5c8dff34",
+  "source_snapshot_sha256": "27775f2dc3b6f825ae60e91e6ed8b8cc3500e17aa26fb61fd023afee7876b6b1",
   "budget_limit": 1800,
   "p_definition": "1/odds normaliserat per match, inte validerad egen matchmodell",
   "system_profiles_note": "Streck- och skrällval är heuristiska experiment, inte bevisat värde eller förväntad avkastning.",
@@ -40,24 +40,24 @@
       "home": "Manchester United",
       "away": "Brentford",
       "odds": [
-        2.23,
-        3.9,
-        3.15
+        2.35,
+        3.85,
+        2.95
       ],
       "streck": [
         47.0,
-        25.0,
-        28.0
+        24.0,
+        29.0
       ],
       "p": [
-        0.438648171,
-        0.250816775,
-        0.310535054
+        0.415454961,
+        0.253589392,
+        0.330955647
       ],
       "edge": [
-        -0.031352,
-        0.000817,
-        0.030535
+        -0.054545,
+        0.013589,
+        0.040956
       ]
     },
     {
@@ -170,9 +170,9 @@
         4.9
       ],
       "streck": [
-        72.0,
+        71.0,
         16.0,
-        12.0
+        13.0
       ],
       "p": [
         0.550561798,
@@ -180,9 +180,9 @@
         0.197752809
       ],
       "edge": [
-        -0.169438,
+        -0.159438,
         0.091685,
-        0.077753
+        0.067753
       ]
     },
     {
@@ -295,9 +295,9 @@
         2.65
       ],
       "streck": [
-        55.0,
+        54.0,
         22.0,
-        23.0
+        24.0
       ],
       "p": [
         0.385805278,
@@ -305,9 +305,9 @@
         0.35377616
       ],
       "edge": [
-        -0.164195,
+        -0.154195,
         0.040419,
-        0.123776
+        0.113776
       ]
     },
     {
@@ -358,7 +358,7 @@
         "1X2",
         "1X2"
       ],
-      "p13_estimate": 0.024076202,
+      "p13_estimate": 0.0239871,
       "spikes": 6,
       "half": 1,
       "full": 6
@@ -384,7 +384,7 @@
         "1X2",
         "12"
       ],
-      "p13_estimate": 0.021489372,
+      "p13_estimate": 0.021409843,
       "spikes": 4,
       "half": 6,
       "full": 3
@@ -402,15 +402,15 @@
         "1X",
         "1X2",
         "12",
-        "1X2",
+        "1X",
         "1",
         "1",
         "1X2",
-        "12",
-        "2",
+        "1",
+        "1X2",
         "12"
       ],
-      "p13_estimate": 0.011173681,
+      "p13_estimate": 0.018119987,
       "spikes": 4,
       "half": 6,
       "full": 3

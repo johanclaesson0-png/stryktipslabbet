@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-pool-value-v15",
   "version": "relative-pool-value-2026-11-14-v1",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-28T12:13:20.985507+00:00",
-  "source_snapshot_sha256": "4523b4591f8753dc972f20a4f7b96ccea42bc68207c44ed85704e44c5c8dff34",
+  "observed_at_utc": "2026-11-28T13:27:37.393485+00:00",
+  "source_snapshot_sha256": "27775f2dc3b6f825ae60e91e6ed8b8cc3500e17aa26fb61fd023afee7876b6b1",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-28T12:13:22.203031+00:00",
+  "created_at_utc": "2026-11-28T13:27:38.802906+00:00",
   "crowd_exponent": 0.45,
   "budget_proposals": [
     {
@@ -43,14 +43,14 @@
       ],
       "changes": 4,
       "baseline": {
-        "probability_cover_all_13": 0.00321076146,
-        "modelled_crowd_cover_mass": 0.009051768384,
-        "relative_concentration_ratio": 0.35471
+        "probability_cover_all_13": 0.003198878904,
+        "modelled_crowd_cover_mass": 0.009045063371,
+        "relative_concentration_ratio": 0.35366
       },
       "value": {
-        "probability_cover_all_13": 0.002934326908,
-        "modelled_crowd_cover_mass": 0.005351716944,
-        "relative_concentration_ratio": 0.5483
+        "probability_cover_all_13": 0.002923467396,
+        "modelled_crowd_cover_mass": 0.005347752709,
+        "relative_concentration_ratio": 0.54667
       }
     },
     {
@@ -88,14 +88,14 @@
       ],
       "changes": 3,
       "baseline": {
-        "probability_cover_all_13": 0.024076202104,
-        "modelled_crowd_cover_mass": 0.061420878288,
-        "relative_concentration_ratio": 0.39199
+        "probability_cover_all_13": 0.023987099619,
+        "modelled_crowd_cover_mass": 0.061375381341,
+        "relative_concentration_ratio": 0.39083
       },
       "value": {
         "probability_cover_all_13": 0.023473443288,
-        "modelled_crowd_cover_mass": 0.047615804692,
-        "relative_concentration_ratio": 0.49298
+        "modelled_crowd_cover_mass": 0.046954474071,
+        "relative_concentration_ratio": 0.49992
       }
     }
   ],
@@ -130,24 +130,24 @@
       "home": "Manchester United",
       "away": "Brentford",
       "p_market": [
-        0.438648171,
-        0.250816775,
-        0.310535054
+        0.415454961,
+        0.253589392,
+        0.330955647
       ],
       "p_crowd": [
         0.47,
-        0.25,
-        0.28
+        0.24,
+        0.29
       ],
       "market_minus_crowd_pp": [
-        -3.14,
-        0.08,
-        3.05
+        -5.45,
+        1.36,
+        4.1
       ],
       "relative_underbetting": [
-        0.933,
-        1.003,
-        1.109
+        0.884,
+        1.057,
+        1.141
       ]
     },
     {
@@ -260,19 +260,19 @@
         0.197752809
       ],
       "p_crowd": [
-        0.72,
+        0.71,
         0.16,
-        0.12
+        0.13
       ],
       "market_minus_crowd_pp": [
-        -16.94,
+        -15.94,
         9.17,
-        7.78
+        6.78
       ],
       "relative_underbetting": [
-        0.765,
+        0.775,
         1.573,
-        1.648
+        1.521
       ]
     },
     {
@@ -385,19 +385,19 @@
         0.35377616
       ],
       "p_crowd": [
-        0.55,
+        0.54,
         0.22,
-        0.23
+        0.24
       ],
       "market_minus_crowd_pp": [
-        -16.42,
+        -15.42,
         4.04,
-        12.38
+        11.38
       ],
       "relative_underbetting": [
-        0.701,
+        0.714,
         1.184,
-        1.538
+        1.474
       ]
     },
     {

@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-28T12:13:20.985507+00:00",
-  "source_snapshot_sha256": "4523b4591f8753dc972f20a4f7b96ccea42bc68207c44ed85704e44c5c8dff34",
-  "form_created_at_utc": "2026-11-28T12:14:13.766331+00:00",
-  "form_sha256": "bbf7a1ac9baeaf1a727e3e1d8f9e11b79117a758a7f9d307ca25378cc0482b99",
+  "source_observed_at_utc": "2026-11-28T13:27:37.393485+00:00",
+  "source_snapshot_sha256": "27775f2dc3b6f825ae60e91e6ed8b8cc3500e17aa26fb61fd023afee7876b6b1",
+  "form_created_at_utc": "2026-11-28T13:27:37.836260+00:00",
+  "form_sha256": "06eb5719a3fb464a5d8e96b7d43f80a4afd13d183be456b5b9db65d9c69d39b2",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-28T12:14:14.492097+00:00",
+  "created_at_utc": "2026-11-28T13:27:38.718471+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -42,19 +42,19 @@
       "home": "Manchester United",
       "away": "Brentford",
       "market_p": [
-        0.438648171,
-        0.250816775,
-        0.310535054
+        0.415454961,
+        0.253589392,
+        0.330955647
       ],
       "form_p": [
-        0.436186345,
-        0.250876617,
-        0.312937038
+        0.413004035,
+        0.253576666,
+        0.333419299
       ],
       "delta_pp": [
         -0.25,
-        0.01,
-        0.24
+        -0.0,
+        0.25
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -384,9 +384,9 @@
         "12",
         "12"
       ],
-      "original_market_p13": 0.003210761,
-      "new_form_p13": 0.003564567,
-      "new_market_baseline_p13": 0.003086083,
+      "original_market_p13": 0.003198879,
+      "new_form_p13": 0.003551719,
+      "new_market_baseline_p13": 0.003074662,
       "different_matches": 4
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.024076202,
-      "new_form_p13": 0.026519527,
-      "new_market_baseline_p13": 0.024076202,
+      "original_market_p13": 0.0239871,
+      "new_form_p13": 0.026423943,
+      "new_market_baseline_p13": 0.0239871,
       "different_matches": 0
     }
   ],

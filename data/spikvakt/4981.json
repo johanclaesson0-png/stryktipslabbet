@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-spikvakt-v1",
   "version": "spikvakt-fixed-2026-11-13-v1",
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-28T12:13:20.985507+00:00",
+  "source_observed_at_utc": "2026-11-28T13:27:37.393485+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "4523b4591f8753dc972f20a4f7b96ccea42bc68207c44ed85704e44c5c8dff34",
-  "created_at_utc": "2026-11-28T12:13:21.276504+00:00",
+  "source_snapshot_sha256": "27775f2dc3b6f825ae60e91e6ed8b8cc3500e17aa26fb61fd023afee7876b6b1",
+  "created_at_utc": "2026-11-28T13:27:37.741304+00:00",
   "spike_threshold": 0.55,
   "x_threshold": 0.27,
   "safe_penalty": 0.85,
@@ -29,7 +29,7 @@
         "1X2",
         "1X2"
       ],
-      "baseline_p13": 0.024076202,
+      "baseline_p13": 0.0239871,
       "baseline_miss_risk_spikes": 3,
       "baseline_x_included": 6,
       "risk_report": {
@@ -123,7 +123,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.024076202,
+          "estimated_p13": 0.0239871,
           "miss_risk_spikes": 3,
           "x_included": 6
         },
@@ -146,7 +146,7 @@
             "1X2",
             "1X2"
           ],
-          "estimated_p13": 0.024076202,
+          "estimated_p13": 0.0239871,
           "miss_risk_spikes": 3,
           "x_included": 6
         }
@@ -170,7 +170,7 @@
         "12",
         "1X2"
       ],
-      "baseline_p13": 0.003210761,
+      "baseline_p13": 0.003198879,
       "baseline_miss_risk_spikes": 4,
       "baseline_x_included": 2,
       "risk_report": {
@@ -286,7 +286,7 @@
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003210761,
+          "estimated_p13": 0.003198879,
           "miss_risk_spikes": 4,
           "x_included": 2
         },
@@ -309,7 +309,7 @@
             "12",
             "1X2"
           ],
-          "estimated_p13": 0.003210761,
+          "estimated_p13": 0.003198879,
           "miss_risk_spikes": 4,
           "x_included": 2
         }
