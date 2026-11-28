@@ -114,9 +114,9 @@
       "home": "Millwall",
       "away": "Burnley",
       "odds": [
-        2.17,
+        2.16,
         3.65,
-        3.35
+        3.4
       ],
       "streck": [
         48.0,
@@ -124,9 +124,9 @@
         20.0
       ],
       "p": [
-        0.445974286,
-        0.265140877,
-        0.288884836
+        0.449019466,
+        0.265721109,
+        0.285259425
       ],
       "match_start": "2026-11-28T16:00:00+01:00"
     },
@@ -173,10 +173,10 @@
       "match_start": "2026-11-28T16:00:00+01:00"
     }
   ],
-  "observed_at_utc": "2026-11-28T10:26:40.551118+00:00",
-  "source_snapshot_sha256": "5adfdf5e2992139e58cf166b8ec66c843a5eb0fccd7fb52d0731e0b93ac5973f",
+  "observed_at_utc": "2026-11-28T10:46:46.980394+00:00",
+  "source_snapshot_sha256": "35431c53c113083a78c99458bd0a93aa03dd18fdcee8d2f8d113e904b24c7c59",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-28T10:26:40.552312+00:00",
+  "created_at_utc": "2026-11-28T10:46:46.981582+00:00",
   "systems": [
     {
       "budget_limit": 100,
@@ -192,7 +192,7 @@
         "1",
         "1X2"
       ],
-      "estimated_all_correct": 0.1088086868
+      "estimated_all_correct": 0.1088086869
     },
     {
       "budget_limit": 100,
@@ -208,7 +208,7 @@
         "1X",
         "12"
       ],
-      "estimated_all_correct": 0.1006737282
+      "estimated_all_correct": 0.1005942381
     }
   ],
   "complete_odds": true,
