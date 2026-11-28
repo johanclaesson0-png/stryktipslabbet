@@ -1,10 +1,10 @@
 {
   "schema": "stryktipslabbet-decision-studio-v19",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-27T22:48:41.161886+00:00",
+  "observed_at_utc": "2026-11-28T01:59:11.435621+00:00",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "source_snapshot_sha256": "9135109260270aedd226968986ba2900828670cbda01b73322f89f5c68b3d414",
-  "created_at_utc": "2026-11-27T22:53:13.904536+00:00",
+  "source_snapshot_sha256": "3997bbe1d6c965dc2469b36dda20d9471b10627fa21e122ee2f95edc6f37a8cc",
+  "created_at_utc": "2026-11-28T01:59:20.219312+00:00",
   "status": "förhandsfryst – experimentella alternativ, ingen automatisk ändring",
   "models_available": [
     "form",
@@ -241,14 +241,14 @@
         0.288885
       ],
       "crowd_p": [
-        0.52,
+        0.51,
         0.29,
-        0.19
+        0.2
       ],
       "market_minus_crowd_pp": [
-        -7.4,
+        -6.4,
         -2.49,
-        9.89
+        8.89
       ],
       "form_delta_pp": [
         2.15,
@@ -271,7 +271,7 @@
           "1800": "1X2"
         }
       },
-      "review_priority": 13.25,
+      "review_priority": 12.25,
       "explanation": "Marknad och folket skiljer sig tydligt; granska spiken/garderingen."
     },
     {
