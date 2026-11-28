@@ -28,7 +28,7 @@ def compare(base,doc,now,budget=1800):
         for id,rr in claims.items():
             if len({r["sign"] for r in rr})!=1:continue
             r=min(rr,key=lambda r:r["observed_at"]); ids.add(id); nclaims+=1
-            sources.append({"name":r["name"],"kind":r["kind"],"sign":r["sign"],"source":r["source"]})
+            sources.append({"name":r["name"],"kind":r["kind"],"sign":r["sign"],"source":r["source"],"observed_at":r["observed_at"],"publisher":r["publisher"]})
             if r["kind"]!="human":continue
             k=r["publisher"].strip().lower()
             if not k:continue
@@ -37,7 +37,7 @@ def compare(base,doc,now,budget=1800):
             j=SIGNS.index(r["sign"]);groups[k].append(j);votes[j]+=1
         q=[sum(v.count(i)/len(v) for v in groups.values())/len(groups) for i in range(3)] if len(groups)>=2 else None
         scenario=[.95*x+.05*y for x,y in zip(p,q)] if q else p
-        rows.append({"number":n,"home":m["home"],"away":m["away"],"p":p,"streck":m["streck"],"scenario":scenario,"human_votes":votes,"groups":len(groups),"sources":sources})
+        rows.append({"number":n,"home":m["home"],"away":m["away"],"p":p,"streck":m["streck"],"scenario":scenario,"human_votes":votes,"groups":len(groups),"publisher_votes":{k:[v.count(i)/len(v) for i in range(3)] for k,v in groups.items()},"sources":sources})
     def scenario(key):
         cost,masks=optimize([r[key] for r in rows],budget)
         return {"cost":cost,"choices":[selected_signs(m) for m in masks],"p13_market":evaluate_probability(masks,[r["p"] for r in rows]),"p13_scenario":evaluate_probability(masks,[r[key] for r in rows])}
