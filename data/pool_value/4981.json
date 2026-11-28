@@ -2,10 +2,10 @@
   "schema": "stryktipslabbet-pool-value-v15",
   "version": "relative-pool-value-2026-11-14-v1",
   "draw_number": 4981,
-  "observed_at_utc": "2026-11-28T11:32:29.435375+00:00",
-  "source_snapshot_sha256": "451df6ec5a13c4f7e7d0d218a07b32b6729113f124719dc28db1e0f20676aa92",
+  "observed_at_utc": "2026-11-28T12:13:20.985507+00:00",
+  "source_snapshot_sha256": "4523b4591f8753dc972f20a4f7b96ccea42bc68207c44ed85704e44c5c8dff34",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-28T11:32:30.656521+00:00",
+  "created_at_utc": "2026-11-28T12:13:22.203031+00:00",
   "crowd_exponent": 0.45,
   "budget_proposals": [
     {
@@ -44,8 +44,8 @@
       "changes": 4,
       "baseline": {
         "probability_cover_all_13": 0.00321076146,
-        "modelled_crowd_cover_mass": 0.008890129663,
-        "relative_concentration_ratio": 0.36116
+        "modelled_crowd_cover_mass": 0.009051768384,
+        "relative_concentration_ratio": 0.35471
       },
       "value": {
         "probability_cover_all_13": 0.002934326908,
@@ -89,8 +89,8 @@
       "changes": 3,
       "baseline": {
         "probability_cover_all_13": 0.024076202104,
-        "modelled_crowd_cover_mass": 0.06032407689,
-        "relative_concentration_ratio": 0.39911
+        "modelled_crowd_cover_mass": 0.061420878288,
+        "relative_concentration_ratio": 0.39199
       },
       "value": {
         "probability_cover_all_13": 0.023473443288,
@@ -110,19 +110,19 @@
         0.482156803
       ],
       "p_crowd": [
-        0.19,
+        0.18,
         0.26,
-        0.55
+        0.56
       ],
       "market_minus_crowd_pp": [
-        8.44,
+        9.44,
         -1.65,
-        -6.78
+        -7.78
       ],
       "relative_underbetting": [
-        1.444,
+        1.524,
         0.936,
-        0.877
+        0.861
       ]
     },
     {
@@ -161,18 +161,18 @@
       ],
       "p_crowd": [
         0.77,
-        0.15,
-        0.08
+        0.16,
+        0.07
       ],
       "market_minus_crowd_pp": [
         -11.64,
-        5.72,
-        5.91
+        4.72,
+        6.91
       ],
       "relative_underbetting": [
         0.849,
-        1.381,
-        1.739
+        1.295,
+        1.988
       ]
     },
     {
@@ -286,18 +286,18 @@
       ],
       "p_crowd": [
         0.44,
-        0.31,
-        0.25
+        0.3,
+        0.26
       ],
       "market_minus_crowd_pp": [
         2.55,
-        -4.83,
-        2.28
+        -3.83,
+        1.28
       ],
       "relative_underbetting": [
         1.058,
-        0.844,
-        1.091
+        0.872,
+        1.049
       ]
     },
     {

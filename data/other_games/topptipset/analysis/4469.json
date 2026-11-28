@@ -1,0 +1,216 @@
+{
+  "schema": "stryktipslabbet-other-game-analysis-v16",
+  "game": "topptipset",
+  "name": "Topptipset",
+  "draw_number": 4469,
+  "matches": [
+    {
+      "number": 1,
+      "home": "Cincinnati",
+      "away": "Nashville",
+      "odds": [
+        3.05,
+        3.9,
+        2.2
+      ],
+      "streck": [
+        64.0,
+        14.0,
+        22.0
+      ],
+      "p": [
+        0.315615229,
+        0.246827294,
+        0.437557477
+      ],
+      "match_start": "2026-11-29T00:30:00+01:00"
+    },
+    {
+      "number": 2,
+      "home": "Los Angeles FC",
+      "away": "Saint Louis City SC",
+      "odds": [
+        1.65,
+        4.4,
+        5.0
+      ],
+      "streck": [
+        72.0,
+        12.0,
+        16.0
+      ],
+      "p": [
+        0.586510264,
+        0.219941349,
+        0.193548387
+      ],
+      "match_start": "2026-11-29T02:30:00+01:00"
+    },
+    {
+      "number": 3,
+      "home": "Portland Timbers",
+      "away": "FC Dallas",
+      "odds": [
+        2.1,
+        4.0,
+        3.3
+      ],
+      "streck": [
+        51.0,
+        28.0,
+        21.0
+      ],
+      "p": [
+        0.462670873,
+        0.242902208,
+        0.294426919
+      ],
+      "match_start": "2026-11-29T04:30:00+01:00"
+    },
+    {
+      "number": 4,
+      "home": "Botafogo RJ",
+      "away": "Bahia",
+      "odds": [
+        2.16,
+        3.85,
+        3.35
+      ],
+      "streck": [
+        55.0,
+        22.0,
+        23.0
+      ],
+      "p": [
+        0.453347159,
+        0.254345419,
+        0.292307422
+      ],
+      "match_start": "2026-11-29T01:00:00+01:00"
+    },
+    {
+      "number": 5,
+      "home": "Santa Fe",
+      "away": "Atlético Nacional",
+      "odds": [
+        2.8,
+        3.2,
+        2.55
+      ],
+      "streck": [
+        40.0,
+        28.0,
+        32.0
+      ],
+      "p": [
+        0.336356142,
+        0.294311624,
+        0.369332234
+      ],
+      "match_start": "2026-11-29T01:30:00+01:00"
+    },
+    {
+      "number": 6,
+      "home": "Atlas",
+      "away": "Toluca",
+      "odds": [
+        3.2,
+        3.8,
+        2.18
+      ],
+      "streck": [
+        20.0,
+        27.0,
+        53.0
+      ],
+      "p": [
+        0.302115244,
+        0.254412837,
+        0.443471918
+      ],
+      "match_start": "2026-11-29T02:00:00+01:00"
+    },
+    {
+      "number": 7,
+      "home": "Club América",
+      "away": "Monterrey",
+      "odds": [
+        2.33,
+        3.15,
+        3.45
+      ],
+      "streck": [
+        36.0,
+        30.0,
+        34.0
+      ],
+      "p": [
+        0.414070984,
+        0.306281077,
+        0.27964794
+      ],
+      "match_start": "2026-11-29T04:10:00+01:00"
+    },
+    {
+      "number": 8,
+      "home": "Mito Hollyhock",
+      "away": "V-Varen Nagasaki",
+      "odds": [
+        2.65,
+        3.2,
+        2.6
+      ],
+      "streck": [
+        54.0,
+        22.0,
+        24.0
+      ],
+      "p": [
+        0.351203039,
+        0.290840017,
+        0.357956944
+      ],
+      "match_start": "2026-11-29T06:00:00+01:00"
+    }
+  ],
+  "observed_at_utc": "2026-11-28T12:13:26.422524+00:00",
+  "source_snapshot_sha256": "a69446011b63fe9e02f1df25370269147d2aa7dfb6fe1974d537267f37491ea2",
+  "reg_close_time": "2026-11-28T23:29:00+00:00",
+  "created_at_utc": "2026-11-28T12:13:26.423545+00:00",
+  "systems": [
+    {
+      "budget_limit": 100,
+      "profile": "balanserad",
+      "cost": 96,
+      "choices": [
+        "12",
+        "1",
+        "1",
+        "12",
+        "1X2",
+        "12",
+        "1X",
+        "12"
+      ],
+      "estimated_all_correct": 0.0580453569
+    },
+    {
+      "budget_limit": 100,
+      "profile": "streckvarde",
+      "cost": 96,
+      "choices": [
+        "2",
+        "1",
+        "12",
+        "12",
+        "1X2",
+        "12",
+        "1X",
+        "X2"
+      ],
+      "estimated_all_correct": 0.0504838453
+    }
+  ],
+  "complete_odds": true,
+  "note": "Hypotetiska matematiska system; ej inlämnade och ingen bevisad överavkastning."
+}
