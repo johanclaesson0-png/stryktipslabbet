@@ -1,0 +1,435 @@
+{
+  "schema": "stryktipslabbet-pool-value-v15",
+  "version": "relative-pool-value-2026-11-14-v1",
+  "draw_number": 4981,
+  "observed_at_utc": "2026-11-28T10:26:34.162661+00:00",
+  "source_snapshot_sha256": "10547a2e22ab9733591b93530a5029e27ac4d270914e94bfd0f367b0d1c1ee63",
+  "reg_close_time": "2026-11-28T14:59:00+00:00",
+  "created_at_utc": "2026-11-28T10:26:37.243185+00:00",
+  "crowd_exponent": 0.45,
+  "budget_proposals": [
+    {
+      "budget_limit": 100,
+      "cost": 96,
+      "baseline_choices": [
+        "2",
+        "12",
+        "1",
+        "1",
+        "12",
+        "12",
+        "1",
+        "1",
+        "1",
+        "1X",
+        "1",
+        "12",
+        "1X2"
+      ],
+      "value_choices": [
+        "12",
+        "12",
+        "1",
+        "1",
+        "1",
+        "12",
+        "1",
+        "1",
+        "1",
+        "1X2",
+        "1",
+        "12",
+        "12"
+      ],
+      "changes": 4,
+      "baseline": {
+        "probability_cover_all_13": 0.003240049529,
+        "modelled_crowd_cover_mass": 0.008624580335,
+        "relative_concentration_ratio": 0.37568
+      },
+      "value": {
+        "probability_cover_all_13": 0.002961093384,
+        "modelled_crowd_cover_mass": 0.005351716944,
+        "relative_concentration_ratio": 0.5533
+      }
+    },
+    {
+      "budget_limit": 1800,
+      "cost": 1458,
+      "baseline_choices": [
+        "2",
+        "12",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2"
+      ],
+      "value_choices": [
+        "12",
+        "1X2",
+        "1",
+        "1",
+        "1X2",
+        "1X2",
+        "1",
+        "1",
+        "1",
+        "1X2",
+        "1",
+        "1X2",
+        "1X2"
+      ],
+      "changes": 3,
+      "baseline": {
+        "probability_cover_all_13": 0.024276637941,
+        "modelled_crowd_cover_mass": 0.059227275492,
+        "relative_concentration_ratio": 0.40989
+      },
+      "value": {
+        "probability_cover_all_13": 0.02377255994,
+        "modelled_crowd_cover_mass": 0.047615804692,
+        "relative_concentration_ratio": 0.49926
+      }
+    }
+  ],
+  "matches": [
+    {
+      "number": 1,
+      "home": "Ipswich",
+      "away": "Aston Villa",
+      "p_market": [
+        0.274354012,
+        0.243489185,
+        0.482156803
+      ],
+      "p_crowd": [
+        0.2,
+        0.26,
+        0.54
+      ],
+      "market_minus_crowd_pp": [
+        7.44,
+        -1.65,
+        -5.78
+      ],
+      "relative_underbetting": [
+        1.372,
+        0.936,
+        0.893
+      ]
+    },
+    {
+      "number": 2,
+      "home": "Manchester United",
+      "away": "Brentford",
+      "p_market": [
+        0.419839698,
+        0.254084804,
+        0.326075498
+      ],
+      "p_crowd": [
+        0.47,
+        0.25,
+        0.28
+      ],
+      "market_minus_crowd_pp": [
+        -5.02,
+        0.41,
+        4.61
+      ],
+      "relative_underbetting": [
+        0.893,
+        1.016,
+        1.165
+      ]
+    },
+    {
+      "number": 3,
+      "home": "Leeds",
+      "away": "Coventry",
+      "p_market": [
+        0.653646713,
+        0.207219915,
+        0.139133372
+      ],
+      "p_crowd": [
+        0.77,
+        0.15,
+        0.08
+      ],
+      "market_minus_crowd_pp": [
+        -11.64,
+        5.72,
+        5.91
+      ],
+      "relative_underbetting": [
+        0.849,
+        1.381,
+        1.739
+      ]
+    },
+    {
+      "number": 4,
+      "home": "Birmingham",
+      "away": "Bolton",
+      "p_market": [
+        0.627084571,
+        0.214602275,
+        0.158313154
+      ],
+      "p_crowd": [
+        0.79,
+        0.13,
+        0.08
+      ],
+      "market_minus_crowd_pp": [
+        -16.29,
+        8.46,
+        7.83
+      ],
+      "relative_underbetting": [
+        0.794,
+        1.651,
+        1.979
+      ]
+    },
+    {
+      "number": 5,
+      "home": "Derby",
+      "away": "Watford",
+      "p_market": [
+        0.426659024,
+        0.274023261,
+        0.299317715
+      ],
+      "p_crowd": [
+        0.41,
+        0.28,
+        0.31
+      ],
+      "market_minus_crowd_pp": [
+        1.67,
+        -0.6,
+        -1.07
+      ],
+      "relative_underbetting": [
+        1.041,
+        0.979,
+        0.966
+      ]
+    },
+    {
+      "number": 6,
+      "home": "Millwall",
+      "away": "Burnley",
+      "p_market": [
+        0.445974286,
+        0.265140877,
+        0.288884836
+      ],
+      "p_crowd": [
+        0.52,
+        0.29,
+        0.19
+      ],
+      "market_minus_crowd_pp": [
+        -7.4,
+        -2.49,
+        9.89
+      ],
+      "relative_underbetting": [
+        0.858,
+        0.914,
+        1.52
+      ]
+    },
+    {
+      "number": 7,
+      "home": "West Bromwich",
+      "away": "Bristol City",
+      "p_market": [
+        0.550561798,
+        0.251685393,
+        0.197752809
+      ],
+      "p_crowd": [
+        0.72,
+        0.16,
+        0.12
+      ],
+      "market_minus_crowd_pp": [
+        -16.94,
+        9.17,
+        7.78
+      ],
+      "relative_underbetting": [
+        0.765,
+        1.573,
+        1.648
+      ]
+    },
+    {
+      "number": 8,
+      "home": "Queens Park Rangers",
+      "away": "Sheffield U",
+      "p_market": [
+        0.465532518,
+        0.261704767,
+        0.272762715
+      ],
+      "p_crowd": [
+        0.44,
+        0.31,
+        0.25
+      ],
+      "market_minus_crowd_pp": [
+        2.55,
+        -4.83,
+        2.28
+      ],
+      "relative_underbetting": [
+        1.058,
+        0.844,
+        1.091
+      ]
+    },
+    {
+      "number": 9,
+      "home": "West Ham",
+      "away": "Stoke",
+      "p_market": [
+        0.551125704,
+        0.24249531,
+        0.206378987
+      ],
+      "p_crowd": [
+        0.53,
+        0.22,
+        0.25
+      ],
+      "market_minus_crowd_pp": [
+        2.11,
+        2.25,
+        -4.36
+      ],
+      "relative_underbetting": [
+        1.04,
+        1.102,
+        0.826
+      ]
+    },
+    {
+      "number": 10,
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "p_market": [
+        0.441154971,
+        0.285453216,
+        0.273391813
+      ],
+      "p_crowd": [
+        0.57,
+        0.26,
+        0.17
+      ],
+      "market_minus_crowd_pp": [
+        -12.88,
+        2.55,
+        10.34
+      ],
+      "relative_underbetting": [
+        0.774,
+        1.098,
+        1.608
+      ]
+    },
+    {
+      "number": 11,
+      "home": "Luton",
+      "away": "Oxford",
+      "p_market": [
+        0.542731278,
+        0.243876652,
+        0.21339207
+      ],
+      "p_crowd": [
+        0.63,
+        0.22,
+        0.15
+      ],
+      "market_minus_crowd_pp": [
+        -8.73,
+        2.39,
+        6.34
+      ],
+      "relative_underbetting": [
+        0.861,
+        1.109,
+        1.423
+      ]
+    },
+    {
+      "number": 12,
+      "home": "Sheffield W",
+      "away": "Reading",
+      "p_market": [
+        0.385805278,
+        0.260418562,
+        0.35377616
+      ],
+      "p_crowd": [
+        0.55,
+        0.22,
+        0.23
+      ],
+      "market_minus_crowd_pp": [
+        -16.42,
+        4.04,
+        12.38
+      ],
+      "relative_underbetting": [
+        0.701,
+        1.184,
+        1.538
+      ]
+    },
+    {
+      "number": 13,
+      "home": "Wycombe",
+      "away": "Bradford",
+      "p_market": [
+        0.407625228,
+        0.279862097,
+        0.312512675
+      ],
+      "p_crowd": [
+        0.33,
+        0.34,
+        0.33
+      ],
+      "market_minus_crowd_pp": [
+        7.76,
+        -6.01,
+        -1.75
+      ],
+      "relative_underbetting": [
+        1.235,
+        0.823,
+        0.947
+      ]
+    }
+  ],
+  "warnings": [
+    "Jämförelsen P/st–crowd är en popularitetsindikator, INTE validerad förväntad avkastning.",
+    "Streckmodellen antar oberoende mellan matcher; verkliga kupongrader är korrelerade.",
+    "Omsättning, jackpot, antal vinnande rader och slutlig utdelning är okända före rättning.",
+    "Ingen förändring av insatsgränser eller automatiskt spel."
+  ]
+}

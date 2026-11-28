@@ -3,12 +3,12 @@
   "model_version": "form-overlay-preregistered-2026-11-13-v14",
   "weight": 0.25,
   "draw_number": 4981,
-  "source_observed_at_utc": "2026-11-28T10:26:34.162661+00:00",
-  "source_snapshot_sha256": "10547a2e22ab9733591b93530a5029e27ac4d270914e94bfd0f367b0d1c1ee63",
-  "form_created_at_utc": "2026-11-28T10:46:43.469173+00:00",
-  "form_sha256": "32a178e3f1a2a7c4224b99625b026cef6725cca6232cbcf9773130398e2110fb",
+  "source_observed_at_utc": "2026-11-28T11:32:29.435375+00:00",
+  "source_snapshot_sha256": "451df6ec5a13c4f7e7d0d218a07b32b6729113f124719dc28db1e0f20676aa92",
+  "form_created_at_utc": "2026-11-28T11:32:29.851426+00:00",
+  "form_sha256": "80dfbb1c638c4ce30d5060ebfb3be3489a6d4a15470c0145715c01a2566e4771",
   "reg_close_time": "2026-11-28T14:59:00+00:00",
-  "created_at_utc": "2026-11-28T10:46:44.160524+00:00",
+  "created_at_utc": "2026-11-28T11:32:30.585430+00:00",
   "matches_with_form": 10,
   "matches": [
     {
@@ -42,18 +42,18 @@
       "home": "Manchester United",
       "away": "Brentford",
       "market_p": [
-        0.419839698,
-        0.254084804,
-        0.326075498
+        0.438648171,
+        0.250816775,
+        0.310535054
       ],
       "form_p": [
-        0.417388874,
-        0.254087864,
-        0.328523262
+        0.436186345,
+        0.250876617,
+        0.312937038
       ],
       "delta_pp": [
         -0.25,
-        0.0,
+        0.01,
         0.24
       ],
       "data_coverage": "båda",
@@ -146,19 +146,19 @@
       "home": "Millwall",
       "away": "Burnley",
       "market_p": [
-        0.445974286,
-        0.265140877,
-        0.288884836
+        0.449019466,
+        0.265721109,
+        0.285259425
       ],
       "form_p": [
-        0.467444843,
-        0.261303184,
-        0.271251973
+        0.470467497,
+        0.261780909,
+        0.267751594
       ],
       "delta_pp": [
-        2.15,
-        -0.38,
-        -1.76
+        2.14,
+        -0.39,
+        -1.75
       ],
       "data_coverage": "båda",
       "used_form": true,
@@ -224,14 +224,14 @@
       "home": "West Ham",
       "away": "Stoke",
       "market_p": [
-        0.551125704,
-        0.24249531,
-        0.206378987
+        0.544191201,
+        0.245230465,
+        0.210578334
       ],
       "form_p": [
-        0.551125704,
-        0.24249531,
-        0.206378987
+        0.544191201,
+        0.245230465,
+        0.210578334
       ],
       "delta_pp": [
         0.0,
@@ -384,9 +384,9 @@
         "12",
         "12"
       ],
-      "original_market_p13": 0.00324005,
-      "new_form_p13": 0.00357142,
-      "new_market_baseline_p13": 0.003090671,
+      "original_market_p13": 0.003210761,
+      "new_form_p13": 0.003564567,
+      "new_market_baseline_p13": 0.003086083,
       "different_matches": 4
     },
     {
@@ -422,9 +422,9 @@
         "1X2",
         "1X2"
       ],
-      "original_market_p13": 0.024276638,
-      "new_form_p13": 0.02674233,
-      "new_market_baseline_p13": 0.024276638,
+      "original_market_p13": 0.024076202,
+      "new_form_p13": 0.026519527,
+      "new_market_baseline_p13": 0.024076202,
       "different_matches": 0
     }
   ],
